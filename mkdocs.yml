@@ -1,0 +1,36 @@
+site_name: MZmine 3 Documentation
+site_url: https://mzmine.github.io/MZmine_documentation/
+edit_uri: https://github.com/mzmine/mzmine_documentation/edit/main/docs/
+repo_name: mzmine/mzmine_documentation
+repo_url: https://github.com/mzmine/mzmine_documentation
+
+nav:
+  - Home page: home_MZminewiki.md
+  - Main window overview: Main-window-overview.md
+  - LC-MS workflow: lcms-workflow.md
+  - LC-IMS-MS workflow: Ion-mobility-data-processing-workflow.md
+  - Raw data visualisation: Raw-data-visualisation.md
+theme:
+  name: material
+
+plugins:
+  - search
+  - git-authors:
+      show_contribution: true
+  - git-revision-date-localized:
+      type: datetime
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.superfences:
+      # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
