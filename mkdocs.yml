@@ -1,11 +1,11 @@
 site_name: MZmine 3 Documentation
-site_url: https://mzmine.github.io/MZmine_documentation/
+site_url: https://mzmine.github.io/mzmine_documentation/
 edit_uri: https://github.com/mzmine/mzmine_documentation/edit/main/docs/
 repo_name: mzmine/mzmine_documentation
 repo_url: https://github.com/mzmine/mzmine_documentation
 
 nav:
-  - Home page: home_MZminewiki.md
+  - Home page: index.md
   - Main window overview: Main-window-overview.md
   - LC-MS workflow: lcms-workflow.md
   - LC-IMS-MS workflow: Ion-mobility-data-processing-workflow.md
