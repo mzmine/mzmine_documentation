@@ -1,0 +1,702 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://mzmine.github.io/MZmine_documentation/Ion-mobility-data-processing-workflow/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.2">
+    
+    
+      
+        <title>LC-IMS-MS workflow - MZmine 3 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.24c991ad.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#supported-formats" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MZmine 3 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LC-IMS-MS workflow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/mzmine/mzmine_documentation/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mzmine/mzmine_documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    MZmine 3 Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/mzmine/mzmine_documentation/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mzmine/mzmine_documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../home_MZminewiki.md" class="md-nav__link">
+        Home page
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Main-window-overview/" class="md-nav__link">
+        Main window overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lcms-workflow/" class="md-nav__link">
+        LC-MS workflow
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        LC-IMS-MS workflow
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Raw-data-visualisation/" class="md-nav__link">
+        Raw data visualisation
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mzmine/mzmine_documentation/edit/main/docs/Ion-mobility-data-processing-workflow.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="supported-formats">Supported formats<a class="headerlink" href="#supported-formats" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Vendor formats:
+*<ul>
+<li>.tdf (Native Bruker LC-IMS-MS and MALDI-IMS-MSI format)
+*</li>
+<li>.tsf (Native Bruker MALDI-IMS-MS (single shot) format)</li>
+</ul>
+</li>
+<li>.mzML
+*<ul>
+<li>Created via <a href="https://proteowizard.sourceforge.io/download.html">MSConvert</a> from native Bruker
+  data
+*</li>
+<li>Created via <a href="https://proteowizard.sourceforge.io/download.html">MSConvert</a> from native Waters
+  data</li>
+</ul>
+</li>
+</ul>
+<p><strong>Note</strong>: mzML via MSConvert from Agilent raw data can be imported, but certain restrictions might
+hinder processsing workflows due to the nature of the raw data format.</p>
+<hr />
+<h1 id="background-information-and-terminology">Background information and terminology<a class="headerlink" href="#background-information-and-terminology" title="Permanent link">&para;</a></h1>
+<p>Since ion mobility spectrometry (IMS) resolved data is more complex due to the additional dimension
+when compared to regular LC-MS data, some terms shall be clarified before going into details of the
+processing steps.</p>
+<h2 id="mobility-separation-and-data-format">Mobility separation and data format<a class="headerlink" href="#mobility-separation-and-data-format" title="Permanent link">&para;</a></h2>
+<p>Ion mobility separation usually occurs on the millisecond timescale, fitting nicely in-between
+liquid chromatography (LC) (few seconds per chromatographic peak) and mass spectra acquisition of
+TOF instruments (several micro seconds). Therefore, the mobility dimension can be resolved by
+acquiring multiple spectra during a mobility separation (e.g. 1000 spectra per 100 ms). This leads
+to multiple mass spectra acquired at one IMS accumulation. Thus, at one retention time, multiple
+spectra are acquired. A detailed comparison of LC-MS and LC-IMS-MS raw data can be
+found <a href="#graphical-comparison-of-lc-ms-and-lc-ims-ms-data">here</a>.</p>
+<h2 id="frames-and-mobility-scans">Frames and Mobility Scans<a class="headerlink" href="#frames-and-mobility-scans" title="Permanent link">&para;</a></h2>
+<p>During one IMS accumulation and separation, multiple mass spectra are acquired to resolve the
+mobility dimension. All mass spectra acquired during one mobility separation are termed "<em>mobility
+scans</em>" in MZmine. The agglomerate of all mobility scans for one IMS accumulation are called
+"<em>frame</em>". All <em>mobility scans</em> of a single <em>frame</em> can be summed, to represent a single mass
+spectrum as in classic LC-MS.</p>
+<h2 id="mobilograms">Mobilograms<a class="headerlink" href="#mobilograms" title="Permanent link">&para;</a></h2>
+<p>A "<em>mobilogram</em>" represents the intensity of an m/z or m/z range along the mobility axis. A
+<em>mobilogram</em> may be build from multiple frames and summed or built from a single frame.</p>
+<p><img alt="mobilogram" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/mobilogram.png" /></p>
+<h2 id="ion-mobility-traces">Ion mobility traces<a class="headerlink" href="#ion-mobility-traces" title="Permanent link">&para;</a></h2>
+<p>An "<em>ion mobility trace</em>" basically represents a mobility resolved extracted ion chromatogram (EIC).</p>
+<p><img alt="trace" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/trace.png" /></p>
+<hr />
+<h1 id="raw-data-processing">Raw data processing<a class="headerlink" href="#raw-data-processing" title="Permanent link">&para;</a></h1>
+<h2 id="raw-data-import">Raw data import<a class="headerlink" href="#raw-data-import" title="Permanent link">&para;</a></h2>
+<p>As any other data format, ion mobility data can be imported via the main menu <strong>Raw data methods →
+Raw data import</strong>. Note that multiple .tdf data folders can be dropped into the
+<strong>MS data (advanced)</strong> dialog. The Bruker TDF import can only select a single folder. When using
+the <strong>MS data (advanced)</strong> dialog, inexperienced users should deactivate the direct mass detection
+steps, since they alter the raw data on the import. Mass detection is then performend, when the
+scans are loaded and only peaks above the noise level are imported.</p>
+<p>Alternatively, you can simply drag &amp; drop the raw data into the raw data list of the main window.</p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391336-5722d04c-91c0-4c77-88db-00325e8ff41b.png" /> <img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391465-c61eece6-0720-459f-8b2b-511021d7a058.png" /></p>
+<h2 id="mass-detection">Mass detection<a class="headerlink" href="#mass-detection" title="Permanent link">&para;</a></h2>
+<p>The mass detection steps perform noise filtering (by a threshold) and centroiding of profile raw
+data. Native Bruker raw data is already centroided, therefore the centroid mass detector should be
+used. Waters .mzML raw data might come as profile data, which requires a different mass detector
+such as <strong>exact mass</strong>.</p>
+<p>The mass detection is launched via <strong>Raw data methods → Mass detection → Mass detection</strong> ([1] in
+the figure). In the dropdown menu [2], an applicable mass detector should be chosen and configured
+via the <strong>Setup</strong> button [2]. By selecting the <em>Show preview</em> checkbox, a scan can be selected to
+adjust the noise level. Note that a mobility scan should be selected to determine the noise level.
+However, the same noise level will be applied to frames, too.</p>
+<p>The output of the mass detection step, can be referred to as <strong>mass list</strong>, since it will only
+contain a list of selected m/z values.</p>
+<p><img alt="Mass detection" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/massdetection.png" /></p>
+<h3 id="setting-the-noise-level">Setting the noise level<a class="headerlink" href="#setting-the-noise-level" title="Permanent link">&para;</a></h3>
+<p>Choose the noise level to detect (= red dot) actual peaks but filter out detector noise. The
+detector noise is usually determined by a lot of signals of the same intensity.</p>
+<h2 id="mobility-scan-merging">Mobility scan merging<a class="headerlink" href="#mobility-scan-merging" title="Permanent link">&para;</a></h2>
+<p>If a .mzML file is imported, the merged frame spectrum must be created via the <strong>File merging →
+Mobility scan merging</strong> module. This is required to gain access to MZmine's regular LC-MS
+functionality. This step uses the centroided and thresholded data produced by
+the <a href="#Mass-detection">mass detection</a>
+step.</p>
+<p><strong>This step is not required when importing native Bruker .tdf or .tsf data from .d folders.</strong>
+When importing native Bruker data, a merged spectrum for the frame is created automatically by the
+vendor library.</p>
+<h1 id="feature-detection-workflows">Feature detection workflows<a class="headerlink" href="#feature-detection-workflows" title="Permanent link">&para;</a></h1>
+<p>Ion mobility data can be processed in MZmine 3 in two ways. The first few steps are different for
+the two workflows.</p>
+<ol>
+<li>LC-IMS-MS workflow via <strong>Ion mobility trace builder / Recursive IMS builder</strong><ul>
+<li>directly build ion mobility traces (rt and mobility dimension)</li>
+<li>smoothing (optional)</li>
+<li>resolve retention time dimension</li>
+<li>smoothing (optional)</li>
+<li>resolve mobility dimension</li>
+<li>smoothing (optional)</li>
+</ul>
+</li>
+<li>Regular LC-MS workflow via <strong>ADAP Chromatogram builder and IMS expander</strong><ul>
+<li>build extracted ion chromatograms (rt dimension) from frame spectra<ul>
+<li>requires merged frame spectra (see <a href="#Mobility-scan-merging">mobility scan merging</a>)</li>
+</ul>
+</li>
+<li>smoothing (optional)</li>
+<li>resolve retention time dimension</li>
+<li>expand features into mobility dimension</li>
+<li>smoothing (optional)</li>
+<li>resolve mobility dimension</li>
+<li>smoothing (optional)</li>
+</ul>
+</li>
+</ol>
+<p>While these lists might seem fairly similar, there are some differences in the processing approach.
+The LC-IMS-MS workflow builds ion mobility traces from the data in the mobility scans, whilst the
+LC-MS workflow builds EICs from the summed frames. Imagine setting the noise level to 200 and occurs
+in 15 mobility scans with an intensity of 180 and in 20 with &gt; 200, but the ion mobility trace
+builder required at least 25 data points. At the same time, the ADAP chromatogram builder was set to
+a minimum highest intensity of 1000 in a frame, which might have been reached due to summed
+intensities.<br />
+Since intensities are summed to build frames, the LC-MS workflow can be more sensitive to less
+abundant compounds whilst the LC-IMS-MS workflow will directly detect ion mobility traces and be
+less susceptible to noise. For .mzML data, this might not make a significant impact, because the
+frame is built from the thresholded mass list. This means that the main impact on sensitivity for
+low intense compounds is made by the user's noise level selection. However, for native Bruker raw
+data, the summed frame is automatically built via the functionality of the vendor library without
+the user's influence. Therefore, the more low abundant compounds might be detected, if the LC-MS
+workflow is chosen.</p>
+<h2 id="lc-ims-ms-workflow">LC-IMS-MS workflow<a class="headerlink" href="#lc-ims-ms-workflow" title="Permanent link">&para;</a></h2>
+<p>The LC-IMS-MS workflow will directly build <a href="#Ion-mobility-traces">ion mobility traces</a> from the raw
+data in the mobility scans. This workflow does not necessarily require summed frame spectra.
+However, if extracted ion chromatograms shall be visualized via
+the <a href="../Raw-data-visualisation/#Chromatogram-plot">Chromatogram visualizer</a>, the frame intensities
+are used. In case these are not present, the chromatograms will be blank. Note that feature
+intensities from the LC-IMS-MS workflow might not exactly match the frame chromatograms due to
+summing being executed prior to thresholding (for native Bruker data). Furthermore, multiple isomers
+might hide behind a single chromatographic peak.</p>
+<h3 id="ion-mobility-trace-builder">Ion mobility trace builder<a class="headerlink" href="#ion-mobility-trace-builder" title="Permanent link">&para;</a></h3>
+<p>The <strong>Ion mobility trace builder</strong> will build <a href="#Ion-mobility-traces">ion mobility traces</a> from the
+raw data. Alternatively, the <strong>Recursive IMS builder</strong> can be used, which requires less ram but
+takes longer.</p>
+<p>The <strong>Ion mobility trace builder</strong> is found under <strong>Feature detection → LC-IMS-MS → Ion mobility
+trace builder</strong>.</p>
+<p><img alt="imstracebuilder-dialog" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/imstracebuilderdialog.png" /></p>
+<h4 id="scan-selection">Scan selection<a class="headerlink" href="#scan-selection" title="Permanent link">&para;</a></h4>
+<p>The scan selection parameter specifies the scans that shall be processed for feature detection.
+Usually, setting the ms level to 1 is sufficient. If a calibration segment is present, it can be cut
+out via the retention time filter in the scan selection.</p>
+<h4 id="mz-tolerance">m/z tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
+<p>The <strong>m/z tolerance</strong> specifies the scan-to-scan tolerance for ion mobility traces. This tolerance
+window may need to be set higher that for classic LC-MS feature detection (e.g. to 0.005 m/z and
+15-20 ppm instead of 10 ppm) due to lower intensities therefore less accuracy in individual mobility
+scans compared to LC-MS scans. Note that the overall accuracy is achieved via LC-IMS-MS is the same
+due to the higher number of scans.</p>
+<h4 id="minimum-consecutive-retention-time-data-points">Minimum consecutive retention time data points<a class="headerlink" href="#minimum-consecutive-retention-time-data-points" title="Permanent link">&para;</a></h4>
+<p>This parameter specifies the number of consecutive detections of the same m/z value in a
+chromatographic peak (rt dimension only). This means that a single m/z has to be detected in, e.g, 5
+frames with an intensity higher than zero. This parameter helps to filter noise. Consecutive
+detections in the mobility dimension do not affect this parameter. Usually no less than 5 should be
+set here if the MS1 acquisition rate is sufficient.</p>
+<h4 id="minimum-total-signals">Minimum total signals<a class="headerlink" href="#minimum-total-signals" title="Permanent link">&para;</a></h4>
+<p>Specifies the total number of peaks in the mobility dimension in all mobility scans. Every "dot" in
+an ion mobility trace represents a single datapoint. (
+see <a href="#Ion mobility traces">ion mobility traces</a>)</p>
+<h4 id="advanced-parameters">Advanced parameters<a class="headerlink" href="#advanced-parameters" title="Permanent link">&para;</a></h4>
+<p>For most applications, these parameters do not need to set/altered. For high mobility resolved data
+the mobilograms might become noisy due to less ions reaching the detector at the same time. By
+default, the number of binned scans is set to cover about 0.0008 Vs/cm^2 per bin. The effect of
+binning can be
+seen <a href="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/binnedmobilogram.png">here</a>
+. If you are unsure about the nature of your data, you can perform trace building with the standard
+parameters and apply/preview the binning afterwards via the <strong>Feature detection → Mobilogram
+binning</strong> module.</p>
+<h4 id="processing-result">Processing result<a class="headerlink" href="#processing-result" title="Permanent link">&para;</a></h4>
+<p>After performing ion mobiltiy trace detection, a feature list is created in the feature list tab
+(see <a href="../Main-window-overview/#ms-data-files-and-feature-lists-tab">feature lists tab</a>). In the
+feature table, multiple columns are created. The displayed columns can be set via the button on the
+right of the feature table ([1]).</p>
+<p><img alt="featuretable" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/featuretable.png" /></p>
+<p>The <strong>shapes</strong> displays an EIC of the ion mobility trace (intensities summed in rt dimension). The
+<strong>mobilograms</strong> column shows a mobilogram for the ion mobility trace (intensities summed in mobility
+dimension). The shapes and projections can be smoothed and resolved. However, the ion mobility trace
+is always represented by the raw data and remains unaltered. After resolving, the shapes and
+mobilograms have to be recalculated from the raw data, which is why the smoothing is lost after
+resolving.</p>
+<h3 id="smoothing-in-retention-time-dimension-optional">Smoothing in retention time dimension (optional)<a class="headerlink" href="#smoothing-in-retention-time-dimension-optional" title="Permanent link">&para;</a></h3>
+<p>The necessity of smoothing in RT dimension is determined by the noisiness of chromatographic peaks.
+These can be influenced by the overall spray stability, instrument accumulation times, transfer
+efficiency and many more.</p>
+<p>The number of data points to be smoothed in rt dimension can be set at [1]. Note that the correct
+preview dimension is selected at [2].</p>
+<p>For large batch modes, the <strong>Remove original feature list</strong> parameter should be selected. While
+parameters are being optimised, this is not recommended, because removing a feature list cannot be
+undone.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/smoothingdialog.png" /></p>
+<h3 id="resolving-in-retention-time-dimension">Resolving in retention time dimension<a class="headerlink" href="#resolving-in-retention-time-dimension" title="Permanent link">&para;</a></h3>
+<p>Here, the <strong>Feature detection → Resolving → Local minimum resolver</strong> is used. However, the <strong>ADAP
+resolver</strong> also produces great results, but takes longer to process.</p>
+<p>Resolving traces/chromatograms into individual features, is one of the most crucial steps of data
+processing. Well optimised parameters [1] can lead to recognition of all good features in a "good"
+EICs [2] and to few noise recognised as feature in EIC that also contains chromatographic noise
+[3].<br />
+On the other hand, poorly optimised parameters [4] can still lead to recognition of all features in
+a good EIC [5], but recognise a lot of noise as feature in a noisy EIC [6].<br />
+Therefore, we recommend optimising the parameters on good EICs and checking the results of these
+parameters with a noisy EIC. Most of the time, a noisy EIC can be found by sorting the feature table
+by decreasing area.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/chromatogramresolving.png" /></p>
+<h4 id="msms-scan-paring">MS/MS scan paring<a class="headerlink" href="#msms-scan-paring" title="Permanent link">&para;</a></h4>
+<p>Selecting this parameter will pair DDA MS/MS spectra to the resolved features. This is optional at
+this stage, because it will be executed again during resolving in the mobility dimension.</p>
+<h4 id="dimension">Dimension<a class="headerlink" href="#dimension" title="Permanent link">&para;</a></h4>
+<p>The dimension to be resolved can be selected here. Select <em>Retention time</em> for now.</p>
+<h4 id="chromatographic-threshold">Chromatographic threshold<a class="headerlink" href="#chromatographic-threshold" title="Permanent link">&para;</a></h4>
+<p>This parameter is crucial for removing noise from chromatograms. If this parameter is set to, e.g.,
+50, the lowest 50 % of intensities will be removed. Since the <em>all</em> retention time in the data file
+are used for this determination, this value should be rather high (e.g., 95 %) to begin with and
+only lowered if necessary.</p>
+<h4 id="search-minimum-rt-range-min">Search minimum rt range (min)<a class="headerlink" href="#search-minimum-rt-range-min" title="Permanent link">&para;</a></h4>
+<p>Determines the step size that will be scanned for individual peaks. Setting this value too low, can
+cause peak edges to be cut off, setting it too high might lead to incomplete separation of narrowly
+eluting compounds.</p>
+<h4 id="minimum-relative-height">Minimum relative height<a class="headerlink" href="#minimum-relative-height" title="Permanent link">&para;</a></h4>
+<p>Determines the minimum relative intensity of a individual feature in relation to the highest
+intensity in the chromatogram. May lead to discrimination of low intensity features.</p>
+<h4 id="minimum-absolute-height">Minimum absolute height<a class="headerlink" href="#minimum-absolute-height" title="Permanent link">&para;</a></h4>
+<p>Determines the minimum absolute intensity of a feature to be recognised by the algorithm. This
+parameter depends on what you want to detect, the instrument and detector type. Usually, Orbitrap
+instruments report higher intensities that TOF instruments. However, the noise level is also higher
+for Orbitrap than for TOF instruments. For TOF instruments 1E3 or even 5E2 can be appropriate,
+whilst Orbitraps can require 1E5 or 5E4.</p>
+<h4 id="min-ration-of-peak-topedge">Min ration of peak top/edge<a class="headerlink" href="#min-ration-of-peak-topedge" title="Permanent link">&para;</a></h4>
+<p>Describes the minimum ratio of the highest point of a peak to the lowest point of a peak. This
+mostly affects detection of low intensity and not-baseline-resolved signals and should be optimised
+using such a signal as an example.</p>
+<h4 id="peak-duration-range">Peak duration range<a class="headerlink" href="#peak-duration-range" title="Permanent link">&para;</a></h4>
+<p>Describes valid peak lengths. Can be used to filter out very short or long noise signals.</p>
+<h4 id="minimum-number-of-data-points">Minimum number of data points<a class="headerlink" href="#minimum-number-of-data-points" title="Permanent link">&para;</a></h4>
+<p>Can be used in addition to <strong>Peak duration range</strong> to filter out noise. Should be set no lower than
+5 in most cases.</p>
+<h3 id="smoothing-in-mobility-dimension-optional">Smoothing  in mobility dimension (optional)<a class="headerlink" href="#smoothing-in-mobility-dimension-optional" title="Permanent link">&para;</a></h3>
+<p>After resolving a feature in RT dimension, the mobilograms will be recalculated from the from the
+raw data (the resolved ion mobility trace). Therefore, a smoothing step is necessary if the data
+requires it. The smoothing dialog is opened via <strong>Feature detection → Smoothing</strong></p>
+<p>Select to smooth the mobility dimension [1] and select it as preview dimension [2]. The filter with
+depends on the number of spectra acquired in the observed mobility range. Usually, a value between 5
+and 15 should be appropriate.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/mobilitysmoothing.png" /></p>
+<h3 id="resolving-in-mobility-dimension">Resolving in mobility dimension<a class="headerlink" href="#resolving-in-mobility-dimension" title="Permanent link">&para;</a></h3>
+<p>In general, the same principles apply as in the retention time resolving step. However, a few
+differences shall be noted. In the screenshot you can also see, that the resolved mobilograms are
+recalculated from the raw data and previously apply smoothing steps are therefore lost and must be
+reapplied if necessary.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/mobilityresolving.png" /></p>
+<h4 id="dimension_1">Dimension<a class="headerlink" href="#dimension_1" title="Permanent link">&para;</a></h4>
+<p>Mobility has to be selected as a dimension to resolve mobilograms [1].</p>
+<h4 id="chromatographic-threshold_1">Chromatographic threshold<a class="headerlink" href="#chromatographic-threshold_1" title="Permanent link">&para;</a></h4>
+<p>Since there are less scans in mobility dimension (e.g., 400 - &gt;1000 per frame, depending on the
+instrument type and setting) than in rt dimension (e.g. 5000 for LC-MS depending on acquisition
+rate), the threshold should be lowered to 80 or less.</p>
+<h4 id="search-minimum-range">Search minimum range<a class="headerlink" href="#search-minimum-range" title="Permanent link">&para;</a></h4>
+<p>This value determines the search range in mobility dimension. Therefore, this value has to be set
+lower when resolving a TIMS (Bruker data) mobilogram, because the absolute numerical values are
+smaller (e.g., 0.01). When resolving mobilograms from Waters or Agilent data (mobility as drift time
+in ms), the values are higher and must therefore be increased.</p>
+<p>Other parameters such as minimum intensities or minimum number of data points should be adjusted
+depending on what you want to detect.</p>
+<h3 id="smoothing-in-rt-and-mobility-dimension-optional">Smoothing in rt and mobility dimension (optional)<a class="headerlink" href="#smoothing-in-rt-and-mobility-dimension-optional" title="Permanent link">&para;</a></h3>
+<p>Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
+mobility resolving step. If smoother shapes are required, the smoothing can be reapplied afterwards.
+In that case, smoothing can be applied to both dimensions at once.</p>
+<h2 id="lc-ms-workflow">LC-MS workflow<a class="headerlink" href="#lc-ms-workflow" title="Permanent link">&para;</a></h2>
+<p>LC-IMS-MS data can also be processed via the regular LC-MS modules. If necessary, detected features
+can be expanded into the mobility dimension.</p>
+<p>For this workflow, generation of summed frame spectra via
+the <a href="#mobility-scan-merging">Mobility scan merging</a> module is a mandatory step, if the data was
+imported from an .mzML file (automatically generated via native Bruker import).</p>
+<h2 id="adap-chromatogram-builder">ADAP chromatogram builder<a class="headerlink" href="#adap-chromatogram-builder" title="Permanent link">&para;</a></h2>
+<h1 id="graphical-comparison-of-lc-ms-and-lc-ims-ms-data">Graphical comparison of LC-MS and LC-IMS-MS data<a class="headerlink" href="#graphical-comparison-of-lc-ms-and-lc-ims-ms-data" title="Permanent link">&para;</a></h1>
+<p>Classic LC-MS data consists of three dimensions: m/z, intensity, and retention time. At every
+retention time, a whole mass spectrum is acquired (yellow). Putting all scans together creates a
+three-dimensional plane. By slicing the three-dimensional data at a single m/z (+- a tolerance),
+EICs can be created (green).</p>
+<p><img alt="lcimsmsdata" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/lcmsdataformat.png" /></p>
+<p>On the other hand, ion mobility resolved data consists of a three-dimensional data plane at each
+retention time. The three dimensions being m/z, intentsity, and mobility (as drift time (ms) or
+inverse reduced mobility 1/k0 [Vs/(cm^2)]). The 3D projection of regular LC-MS data can be created
+by summing all mobility scans of a frame to create a frame spectrum.
+(see <a href="#mobility-scan-merging">Mobility scan merging</a>)
+<img alt="lcimsmsdata" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/lcimsmsdataformat.png" /></p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 8, 2021 20:20:55</span>
+      
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../lcms-workflow/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LC-MS workflow" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              LC-MS workflow
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Raw-data-visualisation/" class="md-footer__link md-footer__link--next" aria-label="Next: Raw data visualisation" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Raw data visualisation
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.e99e714c.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.bc35569b.min.js"></script>
+      
+    
+  </body>
+</html>
