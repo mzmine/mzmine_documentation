@@ -29,6 +29,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: site
