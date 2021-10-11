@@ -77,7 +77,7 @@ mass accuracy and resolution of the instrument. Usually, a good starting point f
 0.005 and 5-10 ppm for Orbitrap instruments, while 0.005 and 10-15 ppm can be used for TOF
 instruments.
 
-#### Smoothing in retention time dimension (optional)
+### Smoothing in retention time dimension (optional)
 
 The necessity of smoothing in RT dimension is determined by the noisiness of chromatographic peaks.
 These can be influenced by the overall spray stability, instrument accumulation times, transfer
