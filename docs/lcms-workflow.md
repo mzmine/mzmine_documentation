@@ -158,3 +158,7 @@ Describes valid peak lengths. Can be used to filter out very short or long noise
 
 Can be used in addition to **Peak duration range** to filter out noise. Should be set no lower than
 5 in most cases.
+
+## Page Contributors
+
+{{ git_page_authors }}

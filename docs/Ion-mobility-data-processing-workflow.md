@@ -382,3 +382,6 @@ by summing all mobility scans of a frame to create a frame spectrum.
 (see [Mobility scan merging](#mobility-scan-merging))
 ![lcimsmsdata](img/imsworkflow/lcimsmsdataformat.png)
 
+## Page Contributors
+
+{{ git_page_authors }}

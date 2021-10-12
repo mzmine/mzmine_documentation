@@ -25,3 +25,7 @@ lists and visualise the results. Furthermore, projects can be saved and preferen
 
 [4]: The task overview. Current tasks are displayed and their status and progress are indicated.
 Tasks can also be canceled by right clicking on a task.
+
+## Page Contributors
+
+{{ git_page_authors }}

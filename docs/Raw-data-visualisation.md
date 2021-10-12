@@ -7,3 +7,7 @@
 ## Chromatogram plot
 
 ## Spectrum plot
+
+## Page Contributors
+
+{{ git_page_authors }}
