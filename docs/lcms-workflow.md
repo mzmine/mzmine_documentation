@@ -30,7 +30,7 @@ adjust the noise level.
 The output of the mass detection step, can be referred to as **mass list**, since it will only
 contain a list of selected m/z values.
 
-![Mass detection](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/lcmsworkflow/massdetection.png)
+![Mass detection](img/lcmsworkflow/massdetection.png)
 
 #### Setting the noise level
 
@@ -45,7 +45,7 @@ mass**.
 
 ### ADAP chromatogram builder
 
-![adap chromatogram builder](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/lcmsworkflow/adapchromatogrambuilder.png)
+![adap chromatogram builder](img/lcmsworkflow/adapchromatogrambuilder.png)
 
 ###### Scan selection
 
@@ -90,7 +90,7 @@ For large batch modes, the **Remove original feature list** parameter should be 
 parameters are being optimised, this is not recommended, because removing a feature list cannot be
 undone.
 
-![](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/smoothingdialog.png)
+![](img/imsworkflow/smoothingdialog.png)
 
 ### Feature resolving
 
@@ -107,7 +107,7 @@ Therefore, we recommend optimising the parameters on good EICs and checking the 
 parameters with a noisy EIC. Most of the time, a noisy EIC can be found by sorting the feature table
 by decreasing area.
 
-![](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/chromatogramresolving.png)
+![](img/imsworkflow/chromatogramresolving.png)
 
 ##### MS/MS scan paring
 

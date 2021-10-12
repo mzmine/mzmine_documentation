@@ -49,13 +49,13 @@ spectrum as in classic LC-MS.
 A "_mobilogram_" represents the intensity of an m/z or m/z range along the mobility axis. A
 _mobilogram_ may be build from multiple frames and summed or built from a single frame.
 
-![mobilogram](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/mobilogram.png)
+![mobilogram](img/imsworkflow/mobilogram.png)
 
 ### Ion mobility traces
 
 An "_ion mobility trace_" basically represents a mobility resolved extracted ion chromatogram (EIC).
 
-![trace](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/trace.png)
+![trace](img/imsworkflow/trace.png)
 
 ***
 
@@ -90,7 +90,7 @@ However, the same noise level will be applied to frames, too.
 The output of the mass detection step, can be referred to as **mass list**, since it will only
 contain a list of selected m/z values.
 
-![Mass detection](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/massdetection.png)
+![Mass detection](img/imsworkflow/massdetection.png)
 
 #### Setting the noise level
 
@@ -167,7 +167,7 @@ takes longer.
 The **Ion mobility trace builder** is found under **Feature detection → LC-IMS-MS → Ion mobility
 trace builder**.
 
-![imstracebuilder-dialog](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/imstracebuilderdialog.png)
+![imstracebuilder-dialog](img/imsworkflow/imstracebuilderdialog.png)
 
 ##### Scan selection
 
@@ -203,7 +203,7 @@ For most applications, these parameters do not need to set/altered. For high mob
 the mobilograms might become noisy due to less ions reaching the detector at the same time. By
 default, the number of binned scans is set to cover about 0.0008 Vs/cm^2 per bin. The effect of
 binning can be
-seen [here](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/binnedmobilogram.png)
+seen [here](img/imsworkflow/binnedmobilogram.png)
 . If you are unsure about the nature of your data, you can perform trace building with the standard
 parameters and apply/preview the binning afterwards via the **Feature detection → Mobilogram
 binning** module.
@@ -215,7 +215,7 @@ After performing ion mobiltiy trace detection, a feature list is created in the 
 feature table, multiple columns are created. The displayed columns can be set via the button on the
 right of the feature table ([1]).
 
-![featuretable](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/featuretable.png)
+![featuretable](img/imsworkflow/featuretable.png)
 
 The **shapes** displays an EIC of the ion mobility trace (intensities summed in rt dimension). The
 **mobilograms** column shows a mobilogram for the ion mobility trace (intensities summed in mobility
@@ -237,7 +237,7 @@ For large batch modes, the **Remove original feature list** parameter should be 
 parameters are being optimised, this is not recommended, because removing a feature list cannot be
 undone.
 
-![](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/smoothingdialog.png)
+![](img/imsworkflow/smoothingdialog.png)
 
 #### Resolving in retention time dimension
 
@@ -254,7 +254,7 @@ Therefore, we recommend optimising the parameters on good EICs and checking the 
 parameters with a noisy EIC. Most of the time, a noisy EIC can be found by sorting the feature table
 by decreasing area.
 
-![](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/chromatogramresolving.png)
+![](img/imsworkflow/chromatogramresolving.png)
 
 ##### MS/MS scan paring
 
@@ -316,7 +316,7 @@ Select to smooth the mobility dimension [1] and select it as preview dimension [
 depends on the number of spectra acquired in the observed mobility range. Usually, a value between 5
 and 15 should be appropriate.
 
-![](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/mobilitysmoothing.png)
+![](img/imsworkflow/mobilitysmoothing.png)
 
 #### Resolving in mobility dimension
 
@@ -325,7 +325,7 @@ differences shall be noted. In the screenshot you can also see, that the resolve
 recalculated from the raw data and previously apply smoothing steps are therefore lost and must be
 reapplied if necessary.
 
-![](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/mobilityresolving.png)
+![](img/imsworkflow/mobilityresolving.png)
 
 ##### Dimension
 
@@ -377,12 +377,12 @@ retention time, a whole mass spectrum is acquired (yellow). Putting all scans to
 three-dimensional plane. By slicing the three-dimensional data at a single m/z (+- a tolerance),
 EICs can be created (green).
 
-![lcimsmsdata](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/lcmsdataformat.png)
+![lcimsmsdata](img/imsworkflow/lcmsdataformat.png)
 
 On the other hand, ion mobility resolved data consists of a three-dimensional data plane at each
 retention time. The three dimensions being m/z, intentsity, and mobility (as drift time (ms) or
 inverse reduced mobility 1/k0 [Vs/(cm^2)]). The 3D projection of regular LC-MS data can be created
 by summing all mobility scans of a frame to create a frame spectrum.
 (see [Mobility scan merging](#mobility-scan-merging))
-![lcimsmsdata](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/lcimsmsdataformat.png)
+![lcimsmsdata](img/imsworkflow/lcimsmsdataformat.png)
 
