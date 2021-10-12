@@ -9,3 +9,5 @@ Here you can find general processing guides, module documentations and video tut
 [LC-IMS-MS workflow](Ion-mobility-data-processing-workflow.md)
 
 [Raw data visualisation](Raw-data-visualisation.md)
+
+[Acknowledgements](wikiacknowledgements.md)
