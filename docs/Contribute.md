@@ -34,3 +34,5 @@ Please describe the change you are making.
 ## Page Contributors
 
 {{ git_page_authors }}
+
+This page was adapted from the [GNPS documentation](https://ccms-ucsd.github.io/GNPSDocumentation/gnps_community/).
