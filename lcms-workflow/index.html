@@ -492,6 +492,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -741,7 +756,7 @@ via the <strong>Setup</strong> button [2]. By selecting the <em>Show preview</em
 adjust the noise level.</p>
 <p>The output of the mass detection step, can be referred to as <strong>mass list</strong>, since it will only
 contain a list of selected m/z values.</p>
-<p><img alt="Mass detection" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/lcmsworkflow/massdetection.png" /></p>
+<p><img alt="Mass detection" src="../img/lcmsworkflow/massdetection.png" /></p>
 <h4 id="setting-the-noise-level">Setting the noise level<a class="headerlink" href="#setting-the-noise-level" title="Permanent link">&para;</a></h4>
 <p>Choose the noise level to detect (= red dot) actual peaks but filter out detector noise. The
 detector noise is usually determined by a lot of signals of the same intensity.</p>
@@ -750,7 +765,7 @@ detector noise is usually determined by a lot of signals of the same intensity.<
 chromatograms (EICs). This step can be executed by the <strong>ADAP chromatogram builder</strong> or <strong>Grid
 mass</strong>.</p>
 <h3 id="adap-chromatogram-builder">ADAP chromatogram builder<a class="headerlink" href="#adap-chromatogram-builder" title="Permanent link">&para;</a></h3>
-<p><img alt="adap chromatogram builder" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/lcmsworkflow/adapchromatogrambuilder.png" /></p>
+<p><img alt="adap chromatogram builder" src="../img/lcmsworkflow/adapchromatogrambuilder.png" /></p>
 <h6 id="scan-selection">Scan selection<a class="headerlink" href="#scan-selection" title="Permanent link">&para;</a></h6>
 <p>The scan selection parameter specifies the scans that shall be processed for feature detection.
 Usually, setting the ms level to 1 is sufficient. If a calibration segment is present, it can be cut
@@ -780,7 +795,7 @@ preview dimension is selected at [2].</p>
 <p>For large batch modes, the <strong>Remove original feature list</strong> parameter should be selected. While
 parameters are being optimised, this is not recommended, because removing a feature list cannot be
 undone.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/smoothingdialog.png" /></p>
+<p><img alt="" src="../img/imsworkflow/smoothingdialog.png" /></p>
 <h3 id="feature-resolving">Feature resolving<a class="headerlink" href="#feature-resolving" title="Permanent link">&para;</a></h3>
 <p>Here, the <strong>Feature detection → Resolving → Local minimum resolver</strong> is used. However, the <strong>ADAP
 resolver</strong> also produces great results, but takes longer to process.</p>
@@ -793,7 +808,7 @@ a good EIC [5], but recognise a lot of noise as feature in a noisy EIC [6].<br /
 Therefore, we recommend optimising the parameters on good EICs and checking the results of these
 parameters with a noisy EIC. Most of the time, a noisy EIC can be found by sorting the feature table
 by decreasing area.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/chromatogramresolving.png" /></p>
+<p><img alt="" src="../img/imsworkflow/chromatogramresolving.png" /></p>
 <h5 id="msms-scan-paring">MS/MS scan paring<a class="headerlink" href="#msms-scan-paring" title="Permanent link">&para;</a></h5>
 <p>Selecting this parameter will pair DDA MS/MS spectra to the resolved features. This is optional at
 this stage, because it will be executed again during resolving in the mobility dimension.</p>
@@ -834,7 +849,7 @@ using such a signal as an example.</p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 11, 2021 20:02:40</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 12, 2021 09:40:08</span>
       
     
   </small>

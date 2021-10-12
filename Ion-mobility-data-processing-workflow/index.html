@@ -643,6 +643,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1064,10 +1079,10 @@ spectrum as in classic LC-MS.</p>
 <h3 id="mobilograms">Mobilograms<a class="headerlink" href="#mobilograms" title="Permanent link">&para;</a></h3>
 <p>A "<em>mobilogram</em>" represents the intensity of an m/z or m/z range along the mobility axis. A
 <em>mobilogram</em> may be build from multiple frames and summed or built from a single frame.</p>
-<p><img alt="mobilogram" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/mobilogram.png" /></p>
+<p><img alt="mobilogram" src="../img/imsworkflow/mobilogram.png" /></p>
 <h3 id="ion-mobility-traces">Ion mobility traces<a class="headerlink" href="#ion-mobility-traces" title="Permanent link">&para;</a></h3>
 <p>An "<em>ion mobility trace</em>" basically represents a mobility resolved extracted ion chromatogram (EIC).</p>
-<p><img alt="trace" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/trace.png" /></p>
+<p><img alt="trace" src="../img/imsworkflow/trace.png" /></p>
 <hr />
 <h2 id="raw-data-processing">Raw data processing<a class="headerlink" href="#raw-data-processing" title="Permanent link">&para;</a></h2>
 <h3 id="raw-data-import">Raw data import<a class="headerlink" href="#raw-data-import" title="Permanent link">&para;</a></h3>
@@ -1091,7 +1106,7 @@ adjust the noise level. Note that a mobility scan should be selected to determin
 However, the same noise level will be applied to frames, too.</p>
 <p>The output of the mass detection step, can be referred to as <strong>mass list</strong>, since it will only
 contain a list of selected m/z values.</p>
-<p><img alt="Mass detection" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/massdetection.png" /></p>
+<p><img alt="Mass detection" src="../img/imsworkflow/massdetection.png" /></p>
 <h4 id="setting-the-noise-level">Setting the noise level<a class="headerlink" href="#setting-the-noise-level" title="Permanent link">&para;</a></h4>
 <p>Choose the noise level to detect (= red dot) actual peaks but filter out detector noise. The
 detector noise is usually determined by a lot of signals of the same intensity.</p>
@@ -1161,7 +1176,7 @@ raw data. Alternatively, the <strong>Recursive IMS builder</strong> can be used,
 takes longer.</p>
 <p>The <strong>Ion mobility trace builder</strong> is found under <strong>Feature detection → LC-IMS-MS → Ion mobility
 trace builder</strong>.</p>
-<p><img alt="imstracebuilder-dialog" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/imstracebuilderdialog.png" /></p>
+<p><img alt="imstracebuilder-dialog" src="../img/imsworkflow/imstracebuilderdialog.png" /></p>
 <h5 id="scan-selection">Scan selection<a class="headerlink" href="#scan-selection" title="Permanent link">&para;</a></h5>
 <p>The scan selection parameter specifies the scans that shall be processed for feature detection.
 Usually, setting the ms level to 1 is sufficient. If a calibration segment is present, it can be cut
@@ -1187,7 +1202,7 @@ see <a href="#Ion mobility traces">ion mobility traces</a>)</p>
 the mobilograms might become noisy due to less ions reaching the detector at the same time. By
 default, the number of binned scans is set to cover about 0.0008 Vs/cm^2 per bin. The effect of
 binning can be
-seen <a href="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/binnedmobilogram.png">here</a>
+seen <a href="../img/imsworkflow/binnedmobilogram.png">here</a>
 . If you are unsure about the nature of your data, you can perform trace building with the standard
 parameters and apply/preview the binning afterwards via the <strong>Feature detection → Mobilogram
 binning</strong> module.</p>
@@ -1196,7 +1211,7 @@ binning</strong> module.</p>
 (see <a href="../Main-window-overview/#ms-data-files-and-feature-lists-tab">feature lists tab</a>). In the
 feature table, multiple columns are created. The displayed columns can be set via the button on the
 right of the feature table ([1]).</p>
-<p><img alt="featuretable" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/featuretable.png" /></p>
+<p><img alt="featuretable" src="../img/imsworkflow/featuretable.png" /></p>
 <p>The <strong>shapes</strong> displays an EIC of the ion mobility trace (intensities summed in rt dimension). The
 <strong>mobilograms</strong> column shows a mobilogram for the ion mobility trace (intensities summed in mobility
 dimension). The shapes and projections can be smoothed and resolved. However, the ion mobility trace
@@ -1212,7 +1227,7 @@ preview dimension is selected at [2].</p>
 <p>For large batch modes, the <strong>Remove original feature list</strong> parameter should be selected. While
 parameters are being optimised, this is not recommended, because removing a feature list cannot be
 undone.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/smoothingdialog.png" /></p>
+<p><img alt="" src="../img/imsworkflow/smoothingdialog.png" /></p>
 <h4 id="resolving-in-retention-time-dimension">Resolving in retention time dimension<a class="headerlink" href="#resolving-in-retention-time-dimension" title="Permanent link">&para;</a></h4>
 <p>Here, the <strong>Feature detection → Resolving → Local minimum resolver</strong> is used. However, the <strong>ADAP
 resolver</strong> also produces great results, but takes longer to process.</p>
@@ -1225,7 +1240,7 @@ a good EIC [5], but recognise a lot of noise as feature in a noisy EIC [6].<br /
 Therefore, we recommend optimising the parameters on good EICs and checking the results of these
 parameters with a noisy EIC. Most of the time, a noisy EIC can be found by sorting the feature table
 by decreasing area.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/chromatogramresolving.png" /></p>
+<p><img alt="" src="../img/imsworkflow/chromatogramresolving.png" /></p>
 <h5 id="msms-scan-paring">MS/MS scan paring<a class="headerlink" href="#msms-scan-paring" title="Permanent link">&para;</a></h5>
 <p>Selecting this parameter will pair DDA MS/MS spectra to the resolved features. This is optional at
 this stage, because it will be executed again during resolving in the mobility dimension.</p>
@@ -1265,13 +1280,13 @@ requires it. The smoothing dialog is opened via <strong>Feature detection → Sm
 <p>Select to smooth the mobility dimension [1] and select it as preview dimension [2]. The filter with
 depends on the number of spectra acquired in the observed mobility range. Usually, a value between 5
 and 15 should be appropriate.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/mobilitysmoothing.png" /></p>
+<p><img alt="" src="../img/imsworkflow/mobilitysmoothing.png" /></p>
 <h4 id="resolving-in-mobility-dimension">Resolving in mobility dimension<a class="headerlink" href="#resolving-in-mobility-dimension" title="Permanent link">&para;</a></h4>
 <p>In general, the same principles apply as in the retention time resolving step. However, a few
 differences shall be noted. In the screenshot you can also see, that the resolved mobilograms are
 recalculated from the raw data and previously apply smoothing steps are therefore lost and must be
 reapplied if necessary.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/mobilityresolving.png" /></p>
+<p><img alt="" src="../img/imsworkflow/mobilityresolving.png" /></p>
 <h5 id="dimension_1">Dimension<a class="headerlink" href="#dimension_1" title="Permanent link">&para;</a></h5>
 <p>Mobility has to be selected as a dimension to resolve mobilograms [1].</p>
 <h5 id="chromatographic-threshold_1">Chromatographic threshold<a class="headerlink" href="#chromatographic-threshold_1" title="Permanent link">&para;</a></h5>
@@ -1303,13 +1318,13 @@ imported from an .mzML file (automatically generated via native Bruker import).<
 retention time, a whole mass spectrum is acquired (yellow). Putting all scans together creates a
 three-dimensional plane. By slicing the three-dimensional data at a single m/z (+- a tolerance),
 EICs can be created (green).</p>
-<p><img alt="lcimsmsdata" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/lcmsdataformat.png" /></p>
+<p><img alt="lcimsmsdata" src="../img/imsworkflow/lcmsdataformat.png" /></p>
 <p>On the other hand, ion mobility resolved data consists of a three-dimensional data plane at each
 retention time. The three dimensions being m/z, intentsity, and mobility (as drift time (ms) or
 inverse reduced mobility 1/k0 [Vs/(cm^2)]). The 3D projection of regular LC-MS data can be created
 by summing all mobility scans of a frame to create a frame spectrum.
 (see <a href="#mobility-scan-merging">Mobility scan merging</a>)
-<img alt="lcimsmsdata" src="https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/images/imsworkflow/lcimsmsdataformat.png" /></p>
+<img alt="lcimsmsdata" src="../img/imsworkflow/lcimsmsdataformat.png" /></p>
                 
                   
                     
@@ -1318,7 +1333,7 @@ by summing all mobility scans of a frame to create a frame spectrum.
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 12, 2021 09:30:17</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 12, 2021 09:40:08</span>
       
     
   </small>
