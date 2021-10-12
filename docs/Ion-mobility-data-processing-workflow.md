@@ -353,6 +353,10 @@ Some recognised features might have rather noisy signals (in rt and mobility dim
 mobility resolving step. If smoother shapes are required, the smoothing can be reapplied afterwards.
 In that case, smoothing can be applied to both dimensions at once.
 
+#### MS/MS scan pairing
+
+This parameter can be selected now, to directly pair MS/MS spectra with recognised features. Usually an m/z tolerance of 0.01 m/z and 10 ppm can be used. The rt tolerance should be set to the approximate peak width.
+
 ### LC-MS workflow
 
 LC-IMS-MS data can also be processed via the regular LC-MS modules. If necessary, detected features
