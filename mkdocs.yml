@@ -10,6 +10,7 @@ nav:
   - LC-MS workflow: lcms-workflow.md
   - LC-IMS-MS workflow: Ion-mobility-data-processing-workflow.md
   - Raw data visualisation: Raw-data-visualisation.md
+  - Contribute: Contribute.md
 theme:
   name: material
 
