@@ -2,16 +2,12 @@
 ## Supported formats
 
 * Vendor formats:
-*
-    * .tdf (Native Bruker LC-IMS-MS and MALDI-IMS-MSI format)
-*
-    * .tsf (Native Bruker MALDI-IMS-MS (single shot) format)
+  * .tdf (Native Bruker LC-IMS-MS and MALDI-IMS-MSI format)
+  * .tsf (Native Bruker MALDI-IMS-MS (single shot) format)
 * .mzML
-*
-    * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native Bruker
-      data
-*
-    * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native Waters
+  * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native Bruker
+        data
+  * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native Waters
       data
 
 **Note**: mzML via MSConvert from Agilent raw data can be imported, but certain restrictions might
