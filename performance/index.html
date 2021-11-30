@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/Raw-data-visualisation/">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/performance/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.1">
     
     
       
-        <title>Raw data visualisation - MZmine 3 Documentation</title>
+        <title>Performance options - MZmine 3 Documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#raw-data-visualisation" class="md-skip">
+        <a href="#preferences" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Raw data visualisation
+              Performance options
             
           </span>
         </div>
@@ -232,11 +232,96 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../performance/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Performance options
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Performance options
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preferences" class="md-nav__link">
+    Preferences
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    Logs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-arguments" class="md-nav__link">
+    Command-line arguments
+  </a>
+  
+    <nav class="md-nav" aria-label="Command-line arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-mzmine-batch-with-memory-mapping-default" class="md-nav__link">
+    Start MZmine batch with memory mapping (DEFAULT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-mzmine-batch-on-machines-with-enough-memory-ram" class="md-nav__link">
+    Start MZmine batch on machines with enough memory (RAM)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#argument-table" class="md-nav__link">
+    Argument table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -277,80 +362,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Raw data visualisation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Raw-data-visualisation/" class="md-nav__link">
         Raw data visualisation
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#raw-data-overview-lc-ms" class="md-nav__link">
-    Raw data overview (LC-MS)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ion-mobility-raw-data-overview-lc-ims-ms" class="md-nav__link">
-    Ion mobility raw data overview (LC-IMS-MS)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chromatogram-plot" class="md-nav__link">
-    Chromatogram plot
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#spectrum-plot" class="md-nav__link">
-    Spectrum plot
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#page-contributors" class="md-nav__link">
-    Page Contributors
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -402,8 +418,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -412,37 +426,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#raw-data-overview-lc-ms" class="md-nav__link">
-    Raw data overview (LC-MS)
+  <a href="#preferences" class="md-nav__link">
+    Preferences
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ion-mobility-raw-data-overview-lc-ims-ms" class="md-nav__link">
-    Ion mobility raw data overview (LC-IMS-MS)
+  <a href="#logs" class="md-nav__link">
+    Logs
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#chromatogram-plot" class="md-nav__link">
-    Chromatogram plot
+  <a href="#command-line-arguments" class="md-nav__link">
+    Command-line arguments
+  </a>
+  
+    <nav class="md-nav" aria-label="Command-line arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#spectrum-plot" class="md-nav__link">
-    Spectrum plot
+        
+          <li class="md-nav__item">
+  <a href="#start-mzmine-batch-with-memory-mapping-default" class="md-nav__link">
+    Start MZmine batch with memory mapping (DEFAULT)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#page-contributors" class="md-nav__link">
-    Page Contributors
+        
+          <li class="md-nav__item">
+  <a href="#start-mzmine-batch-on-machines-with-enough-memory-ram" class="md-nav__link">
+    Start MZmine batch on machines with enough memory (RAM)
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#argument-table" class="md-nav__link">
+    Argument table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -458,25 +492,66 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/Raw-data-visualisation.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/performance.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="raw-data-visualisation">Raw data visualisation<a class="headerlink" href="#raw-data-visualisation" title="Permanent link">&para;</a></h1>
-<h2 id="raw-data-overview-lc-ms">Raw data overview (LC-MS)<a class="headerlink" href="#raw-data-overview-lc-ms" title="Permanent link">&para;</a></h2>
-<h2 id="ion-mobility-raw-data-overview-lc-ims-ms">Ion mobility raw data overview (LC-IMS-MS)<a class="headerlink" href="#ion-mobility-raw-data-overview-lc-ims-ms" title="Permanent link">&para;</a></h2>
-<h2 id="chromatogram-plot">Chromatogram plot<a class="headerlink" href="#chromatogram-plot" title="Permanent link">&para;</a></h2>
-<h2 id="spectrum-plot">Spectrum plot<a class="headerlink" href="#spectrum-plot" title="Permanent link">&para;</a></h2>
-<h2 id="page-contributors">Page Contributors<a class="headerlink" href="#page-contributors" title="Permanent link">&para;</a></h2>
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>SteffenHeu</a></span></p>
+  <h1>Performance options</h1>
+
+<p>_# Performance options
+This section contains information on how to tune MZmine 3 for different systems.</p>
+<h2 id="preferences">Preferences<a class="headerlink" href="#preferences" title="Permanent link">&para;</a></h2>
+<p>The preferences can be changed in MZmine's graphical user interface by accessing <em>File/Set preferences</em> from the menu. The choices will be stored in a (hidden) <em>.mzmine3.conf</em> file in the user's home directory (Windows: <em>C:\Users\USERNAME</em>) once MZmine is closed.</p>
+<p><img alt="Preferences" src="../img/menu_pref.png" /></p>
+<p><img alt="Preferences" src="../img/performance_param.png" /></p>
+<p><img alt="Preferences" src="../img/performance_memory.png" /></p>
+<h2 id="logs">Logs<a class="headerlink" href="#logs" title="Permanent link">&para;</a></h2>
+<p>Currently, the logs are written to an <em>mzmine_0_0.log</em> file in the user's home directory. Please submit your log files together with any issues on <strong><a href="https://github.com/mzmine/mzmine3/issues">GitHub</a></strong>.</p>
+<h2 id="command-line-arguments">Command-line arguments<a class="headerlink" href="#command-line-arguments" title="Permanent link">&para;</a></h2>
+<p>Command-line arguments offer a variety of options that generally override the corresponding parameters in the preferences.</p>
+<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
+<p>An easy way to start MZMine with arguments is to create a shortcut to the MZmine.exe, right-click, and define the target with additional arguments. This example runs MZMine in batch mode (headless), imports the specified batch file, overrides the memory management to <strong>none</strong> (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the <em>memory</em> or <em>temp</em> arguments, the values stored in the current <em>preferences</em> file will be used, or the default values if no <em>preferences</em> file was found.  </p>
+<h4 id="start-mzmine-batch-with-memory-mapping-default">Start MZmine batch with memory mapping (<strong>DEFAULT</strong>)<a class="headerlink" href="#start-mzmine-batch-with-memory-mapping-default" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory **none** -temp &quot;D:\tmpmzmine&quot;
+</code></pre></div>
+<h4 id="start-mzmine-batch-on-machines-with-enough-memory-ram">Start MZmine batch on machines with enough memory (RAM)<a class="headerlink" href="#start-mzmine-batch-on-machines-with-enough-memory-ram" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory **all** -temp &quot;D:\tmpmzmine&quot;
+</code></pre></div>
+<h3 id="argument-table">Argument table<a class="headerlink" href="#argument-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Options (<strong>default</strong>)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-batch</td>
+<td>a path, e.g. "D:\batch.xml"</td>
+<td>Path to batch file</td>
+</tr>
+<tr>
+<td>-memory</td>
+<td><strong>none</strong>, all, features, centroids, raw, masses_features</td>
+<td>Defines what data is kept in memory (RAM) or otherwise memory mapped to the temp directory. Generally this setting should be <em>none</em>. If memory is no issue this option might be set to <em>all</em> process all spectral and feature data in memory. The option <em>masses_features</em> keeps centroid mass lists and features in memory while memory mapping raw spectral data.</td>
+</tr>
+<tr>
+<td>-temp</td>
+<td>a path, e.g., "-temp "D:\tmpmzmine\"</td>
+<td>The defined directory should be on a fast drive (usually SSD &gt; HDD &gt; network drive) with enough free space. Local drives are usually preferred. MZmine uses memory mapping to efficiently store and access spectral and feature data. This can lead to a considerable temporary consumption of disk space. Make sure that the selected drive has enough space (maybe 20 GB + 1 GB/10 files; generously over estimated).</td>
+</tr>
+</tbody>
+</table>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 12, 2021 11:51:46</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 30, 2021 01:40:01</span>
       
     
   </small>
@@ -494,7 +569,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../Ion-mobility-data-processing-workflow/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LC-IMS-MS workflow" rel="prev">
+        <a href="../Main-window-overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Main window overview" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -503,20 +578,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              LC-IMS-MS workflow
+              Main window overview
             </div>
           </div>
         </a>
       
       
         
-        <a href="../Contribute/" class="md-footer__link md-footer__link--next" aria-label="Next: Contribute" rel="next">
+        <a href="../lcms-workflow/" class="md-footer__link md-footer__link--next" aria-label="Next: LC-MS workflow" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Contribute
+              LC-MS workflow
             </div>
           </div>
           <div class="md-footer__button md-icon">
