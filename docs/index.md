@@ -4,6 +4,8 @@ Here you can find general processing guides, module documentations and video tut
 
 [Main window overview](Main-window-overview.md)
 
+[Performance options](performance.md)
+
 [LC-MS workflow](lcms-workflow.md)
 
 [LC-IMS-MS workflow](Ion-mobility-data-processing-workflow.md)
