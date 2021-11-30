@@ -3,6 +3,10 @@ This section contains information on how to tune MZmine 3 for different systems.
 ## Preferences
 The preferences can be changed in MZmine's graphical user interface by accessing _File/Set preferences_ from the menu. The choices will be stored in a (hidden) _.mzmine3.conf_ file in the user's home directory (Windows: _C:\Users\USERNAME_) once MZmine is closed.
 
+
+![Preferences](img/menu_pref.png){: style="width:200px"}  ![Preferences](img/performance_param.png){: style="width:500px"}  ![Memory](img/performance_memory.png){: style="width:500px"}
+
+
 <img src="img/menu_pref.png" alt="Preferences" width="200"/> <img src="img/performance_param.png" alt="Preferences" width="500"/> <img src="img/performance_memory.png" alt="Memory" width="500"/>
 
 
