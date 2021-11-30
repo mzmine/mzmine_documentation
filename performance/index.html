@@ -286,27 +286,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    Windows
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#start-mzmine-batch-with-memory-mapping-default" class="md-nav__link">
-    Start MZmine batch with memory mapping (DEFAULT)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#start-mzmine-batch-on-machines-with-enough-memory-ram-with-memory-all" class="md-nav__link">
-    Start MZmine batch on machines with enough memory (RAM) with -memory all
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#argument-table" class="md-nav__link">
     Argument table
   </a>
@@ -448,27 +427,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    Windows
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#start-mzmine-batch-with-memory-mapping-default" class="md-nav__link">
-    Start MZmine batch with memory mapping (DEFAULT)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#start-mzmine-batch-on-machines-with-enough-memory-ram-with-memory-all" class="md-nav__link">
-    Start MZmine batch on machines with enough memory (RAM) with -memory all
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#argument-table" class="md-nav__link">
     Argument table
   </a>
@@ -499,8 +457,7 @@
 
   <h1>Performance options</h1>
 
-<p>_# Performance options
-This section contains information on how to tune MZmine 3 for different systems.</p>
+<p>This section contains information on how to tune MZmine 3 for different systems.</p>
 <h2 id="preferences">Preferences<a class="headerlink" href="#preferences" title="Permanent link">&para;</a></h2>
 <p>The preferences can be changed in MZmine's graphical user interface by accessing <em>File/Set preferences</em> from the menu. The choices will be stored in a (hidden) <em>.mzmine3.conf</em> file in the user's home directory (Windows: <em>C:\Users\USERNAME</em>) once MZmine is closed.</p>
 <p><img src="img/menu_pref.png" alt="Preferences" width="200"/> <img src="img/performance_param.png" alt="Preferences" width="500"/> <img src="img/performance_memory.png" alt="Memory" width="500"/></p>
@@ -508,14 +465,14 @@ This section contains information on how to tune MZmine 3 for different systems.
 <p>Currently, the logs are written to an <em>mzmine_0_0.log</em> file in the user's home directory. Please submit your log files together with any issues on <strong><a href="https://github.com/mzmine/mzmine3/issues">GitHub</a></strong>.</p>
 <h2 id="command-line-arguments">Command-line arguments<a class="headerlink" href="#command-line-arguments" title="Permanent link">&para;</a></h2>
 <p>Command-line arguments offer a variety of options that generally override the corresponding parameters in the preferences.</p>
-<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
+<p><strong>Windows</strong></p>
 <p>An easy way to start MZMine with arguments is to create a shortcut to the MZmine.exe, right-click, and define the target with additional arguments. This example runs MZMine in batch mode (headless), imports the specified batch file, overrides the memory management to <strong>none</strong> (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the <em>memory</em> or <em>temp</em> arguments, the values stored in the current <em>preferences</em> file will be used, or the default values if no <em>preferences</em> file was found.  </p>
-<h4 id="start-mzmine-batch-with-memory-mapping-default">Start MZmine batch with memory mapping (<strong>DEFAULT</strong>)<a class="headerlink" href="#start-mzmine-batch-with-memory-mapping-default" title="Permanent link">&para;</a></h4>
+<p><strong>Start MZmine batch with memory mapping (</strong>DEFAULT<strong>)</strong>
 <div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory none -temp &quot;D:\tmpmzmine&quot;
-</code></pre></div>
-<h4 id="start-mzmine-batch-on-machines-with-enough-memory-ram-with-memory-all">Start MZmine batch on machines with enough memory (RAM) with -memory all<a class="headerlink" href="#start-mzmine-batch-on-machines-with-enough-memory-ram-with-memory-all" title="Permanent link">&para;</a></h4>
+</code></pre></div></p>
+<p><strong>Start MZmine batch on machines with enough memory (RAM) with -memory all</strong>
 <div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory all -temp &quot;D:\tmpmzmine&quot;
-</code></pre></div>
+</code></pre></div></p>
 <h3 id="argument-table">Argument table<a class="headerlink" href="#argument-table" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -549,7 +506,7 @@ This section contains information on how to tune MZmine 3 for different systems.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 30, 2021 01:53:16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 30, 2021 01:57:07</span>
       
     
   </small>
