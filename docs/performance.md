@@ -6,10 +6,6 @@ The preferences can be changed in MZmine's graphical user interface by accessing
 
 ![Preferences](img/menu_pref.png){: style="width:200px"}  ![Preferences](img/performance_param.png){: style="width:500px"}  ![Memory](img/performance_memory.png){: style="width:500px"}
 
-
-<img src="img/menu_pref.png" alt="Preferences" width="200"/> <img src="img/performance_param.png" alt="Preferences" width="500"/> <img src="img/performance_memory.png" alt="Memory" width="500"/>
-
-
 ## Logs
 Currently, the logs are written to an _mzmine_0_0.log_ file in the user's home directory. Please submit your log files together with any issues on **[GitHub](https://github.com/mzmine/mzmine3/issues)**.
 
