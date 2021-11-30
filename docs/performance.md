@@ -1,4 +1,3 @@
-_# Performance options
 This section contains information on how to tune MZmine 3 for different systems.
 
 ## Preferences
@@ -15,16 +14,17 @@ Currently, the logs are written to an _mzmine_0_0.log_ file in the user's home d
 Command-line arguments offer a variety of options that generally override the corresponding parameters in the preferences.
 
 
-#### Windows
+**Windows**
+
 An easy way to start MZMine with arguments is to create a shortcut to the MZmine.exe, right-click, and define the target with additional arguments. This example runs MZMine in batch mode (headless), imports the specified batch file, overrides the memory management to **none** (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the _memory_ or _temp_ arguments, the values stored in the current _preferences_ file will be used, or the default values if no _preferences_ file was found.  
 
-#### Start MZmine batch with memory mapping (**DEFAULT**)
+**Start MZmine batch with memory mapping (**DEFAULT**)**
 ```
 "C:\Program Files\MZmine\MZmine.exe" -batch "D:\batch\my_batch_file.xml" -memory none -temp "D:\tmpmzmine"
 ```
 
 
-#### Start MZmine batch on machines with enough memory (RAM) with -memory all
+**Start MZmine batch on machines with enough memory (RAM) with -memory all**
 ```
 "C:\Program Files\MZmine\MZmine.exe" -batch "D:\batch\my_batch_file.xml" -memory all -temp "D:\tmpmzmine"
 ```
