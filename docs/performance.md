@@ -20,13 +20,13 @@ An easy way to start MZMine with arguments is to create a shortcut to the MZmine
 
 #### Start MZmine batch with memory mapping (**DEFAULT**)
 ```
-"C:\Program Files\MZmine\MZmine.exe" -batch "D:\batch\my_batch_file.xml" -memory **none** -temp "D:\tmpmzmine"
+"C:\Program Files\MZmine\MZmine.exe" -batch "D:\batch\my_batch_file.xml" -memory none -temp "D:\tmpmzmine"
 ```
 
 
-#### Start MZmine batch on machines with enough memory (RAM)
+#### Start MZmine batch on machines with enough memory (RAM) with -memory all
 ```
-"C:\Program Files\MZmine\MZmine.exe" -batch "D:\batch\my_batch_file.xml" -memory **all** -temp "D:\tmpmzmine"
+"C:\Program Files\MZmine\MZmine.exe" -batch "D:\batch\my_batch_file.xml" -memory all -temp "D:\tmpmzmine"
 ```
 
 ### Argument table
