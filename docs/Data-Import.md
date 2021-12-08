@@ -1,4 +1,5 @@
 # Data Import
+***
 ## Supported formats
 MZmine 3 can read and process both low-resolution (unit mass) and high-resolution (exact mass) data in both continuous and centroided modes, including fragmentation (MSn) scans. The following data formats are supported: 
 - Vendor formts:
