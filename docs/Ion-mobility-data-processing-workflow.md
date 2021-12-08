@@ -1,21 +1,5 @@
 # LC-IMS-MS Workflow
-## Supported formats
-
-* Vendor formats:
-  * .tdf (Native Bruker LC-IMS-MS and MALDI-IMS-MSI format)
-  * .tsf (Native Bruker MALDI-IMS-MS (single shot) format)
-* .mzML
-  * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native Bruker
-        data
-  * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native Waters
-      data
-
-**Note**: mzML via MSConvert from Agilent raw data can be imported, but certain restrictions might
-hinder processsing workflows due to the nature of the raw data format.
-
-
 ***
-
 ## Background information and terminology
 
 Since ion mobility spectrometry (IMS) resolved data is more complex due to the additional dimension
