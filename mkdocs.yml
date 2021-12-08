@@ -7,6 +7,7 @@ repo_url: https://github.com/mzmine/mzmine_documentation
 nav:
   - Home page: index.md
   - Main window overview: Main-window-overview.md
+  - Data import: Data-import.md
   - LC-MS workflow: lcms-workflow.md
   - LC-IMS-MS workflow: Ion-mobility-data-processing-workflow.md
   - Raw data visualisation: Raw-data-visualisation.md
