@@ -7,9 +7,11 @@ The preferences can be changed in MZmine's graphical user interface by accessing
 ![Preferences](img/menu_pref.png){: style="width:200px"}  
 
 **Important preferences**
+
 ![Preferences](img/performance_param.png){: style="width:500px"} 
 
 **Memory options**
+
 ![Memory](img/performance_memory.png){: style="width:500px"}
 
 ## Logs
