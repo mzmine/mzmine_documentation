@@ -34,6 +34,8 @@ plugins:
       show_contribution: true
   - git-revision-date-localized:
       type: datetime
+  - with-pdf:
+      output_path: ../documentation.pdf
 
 markdown_extensions:
   - toc:
