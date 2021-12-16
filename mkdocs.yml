@@ -3,6 +3,7 @@ site_url: https://mzmine.github.io/mzmine_documentation/
 edit_uri: https://github.com/mzmine/mzmine_documentation/edit/master/docs/
 repo_name: mzmine/mzmine_documentation
 repo_url: https://github.com/mzmine/mzmine_documentation
+use_directory_urls: false
 
 nav:
   - Home page: index.md
