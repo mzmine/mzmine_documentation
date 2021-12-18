@@ -6,9 +6,9 @@ Here you can find general processing guides, module documentations and video tut
 
 [Performance options](performance.md)
 
-[LC-MS workflow](wf_featuredetection/lcms-workflow.md)
+[LC-MS workflow](lcms-workflow.md)
 
-[LC-IMS-MS workflow](wf_featuredetection/Ion-mobility-data-processing-workflow.md)
+[LC-IMS-MS workflow](Ion-mobility-data-processing-workflow.md)
 
 [Raw data visualisation](Raw-data-visualisation.md)
 
