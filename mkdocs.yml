@@ -14,10 +14,10 @@ nav:
       - Mass detection: wf_featuredetection/mass-detection.md
       - Mobility scan merging: wf_featuredetection/mobility-scan-merging.md
       - ADAP Chromatogram builder: wf_featuredetection/adap-chromatogram-builder.md
-      - Ion mobility expander: wf_featuredetection/ims_expander.md
+      - Ion mobility expander: wf_featuredetection/ims-expander.md
       - Ion mobility trace builder: wf_featuredetection/ion-mobility-trace-builder.md
       - Smoothing: wf_featuredetection/smoothing.md
-      - Resolving: wf_featuredetection/local-minimum-resovler.md
+      - Resolving: wf_featuredetection/local-minimum-resolver.md
   - Visualisation:
       - Raw data visualisation: Raw-data-visualisation.md
   - Performance options: performance.md
