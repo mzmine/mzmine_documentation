@@ -12,7 +12,7 @@ nav:
   - Module documentations:
       - Data import: wf_featuredetection/data-import.md
       - Mass detection: wf_featuredetection/mass-detection.md
-          - Mobility scan mering: wf_featuredetection/moblity-scan-merging.md
+          - Mobility scan mering: wf_featuredetection/mobility-scan-merging.md
       - ADAP Chromatogram builder: wf_featuredetection/adap-chromatogram-builder.md
       - Ion mobility expander: wf_featuredetection/ims_expander.md
       - Ion mobility trace builder: wf_featuredetection/ion-mobility-trace-builder.md
