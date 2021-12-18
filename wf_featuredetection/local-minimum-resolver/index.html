@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/lcms-workflow/">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/wf_featuredetection/local-minimum-resolver/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.5">
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.2">
     
     
       
-        <title>LC-MS workflow - MZmine 3 Documentation</title>
+        <title>Resolving - MZmine 3 Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a617204b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7951f6f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.9204c3b2.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -36,7 +36,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lc-ms-workflow" class="md-skip">
+        <a href="#local-minimum-resolver" class="md-skip">
           Skip to content
         </a>
       
@@ -74,7 +74,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+    <a href="../.." title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LC-MS workflow
+              Resolving
             
           </span>
         </div>
@@ -172,7 +172,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+    <a href="../.." title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -203,7 +203,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home page
       </a>
     </li>
@@ -218,7 +218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Main-window-overview/" class="md-nav__link">
+      <a href="../../Main-window-overview/" class="md-nav__link">
         Main window overview
       </a>
     </li>
@@ -233,8 +233,23 @@
   
   
     <li class="md-nav__item">
-      <a href="../performance/" class="md-nav__link">
-        Performance options
+      <a href="../lcms-workflow/" class="md-nav__link">
+        LC-MS workflow
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ion-mobility-data-processing-workflow/" class="md-nav__link">
+        LC-IMS-MS workflow
       </a>
     </li>
   
@@ -249,6 +264,132 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Module documentations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Module documentations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Module documentations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-import/" class="md-nav__link">
+        Data import
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mass-detection/" class="md-nav__link">
+        Mass detection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobility-scan-merging/" class="md-nav__link">
+        Mobility scan merging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adap-chromatogram-builder/" class="md-nav__link">
+        ADAP Chromatogram builder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ims-expander/" class="md-nav__link">
+        Ion mobility expander
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ion-mobility-trace-builder/" class="md-nav__link">
+        Ion mobility trace builder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smoothing/" class="md-nav__link">
+        Smoothing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -258,12 +399,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          LC-MS workflow
+          Resolving
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        LC-MS workflow
+        Resolving
       </a>
       
         
@@ -282,114 +423,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#raw-data-processing" class="md-nav__link">
-    Raw data processing
+  <a href="#parameter-settings" class="md-nav__link">
+    Parameter settings
   </a>
   
-    <nav class="md-nav" aria-label="Raw data processing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#raw-data-import" class="md-nav__link">
-    Raw data import
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mass-detection" class="md-nav__link">
-    Mass detection
-  </a>
-  
-    <nav class="md-nav" aria-label="Mass detection">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setting-the-noise-level" class="md-nav__link">
-    Setting the noise level
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#feature-processing" class="md-nav__link">
-    Feature processing
-  </a>
-  
-    <nav class="md-nav" aria-label="Feature processing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adap-chromatogram-builder" class="md-nav__link">
-    ADAP chromatogram builder
-  </a>
-  
-    <nav class="md-nav" aria-label="ADAP chromatogram builder">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scan-selection" class="md-nav__link">
-    Scan selection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#min-group-size-in-of-scans" class="md-nav__link">
-    Min group size in # of scans
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#group-intensity-threshold" class="md-nav__link">
-    Group intensity threshold
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minimum-highest-intensity" class="md-nav__link">
-    Minimum highest intensity
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scan-to-scan-accuracy-mz" class="md-nav__link">
-    Scan to scan accuracy (m/z)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-retention-time-dimension-optional" class="md-nav__link">
-    Smoothing in retention time dimension (optional)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#feature-resolving" class="md-nav__link">
-    Feature resolving
-  </a>
-  
-    <nav class="md-nav" aria-label="Feature resolving">
+    <nav class="md-nav" aria-label="Parameter settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -459,16 +497,38 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#ion-mobility-data" class="md-nav__link">
+    Ion mobility data
+  </a>
+  
+    <nav class="md-nav" aria-label="Ion mobility data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimension_1" class="md-nav__link">
+    Dimension
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chromatographic-threshold_1" class="md-nav__link">
+    Chromatographic threshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-minimum-range" class="md-nav__link">
+    Search minimum range
+  </a>
+  
+</li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#page-contributors" class="md-nav__link">
-    Page Contributors
-  </a>
   
 </li>
       
@@ -479,18 +539,10 @@
     </li>
   
 
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Ion-mobility-data-processing-workflow/" class="md-nav__link">
-        LC-IMS-MS workflow
-      </a>
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -502,13 +554,46 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Visualisation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Visualisation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Visualisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../Raw-data-visualisation/" class="md-nav__link">
+      <a href="../../Raw-data-visualisation/" class="md-nav__link">
         Raw data visualisation
       </a>
     </li>
   
 
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
       
       
@@ -518,7 +603,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../Contribute/" class="md-nav__link">
+      <a href="../../performance/" class="md-nav__link">
+        Performance options
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contribute/" class="md-nav__link">
         Contribute
       </a>
     </li>
@@ -533,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wikiacknowledgements/" class="md-nav__link">
+      <a href="../../wikiacknowledgements/" class="md-nav__link">
         Acknowledgements
       </a>
     </li>
@@ -567,114 +667,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#raw-data-processing" class="md-nav__link">
-    Raw data processing
+  <a href="#parameter-settings" class="md-nav__link">
+    Parameter settings
   </a>
   
-    <nav class="md-nav" aria-label="Raw data processing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#raw-data-import" class="md-nav__link">
-    Raw data import
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mass-detection" class="md-nav__link">
-    Mass detection
-  </a>
-  
-    <nav class="md-nav" aria-label="Mass detection">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setting-the-noise-level" class="md-nav__link">
-    Setting the noise level
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#feature-processing" class="md-nav__link">
-    Feature processing
-  </a>
-  
-    <nav class="md-nav" aria-label="Feature processing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adap-chromatogram-builder" class="md-nav__link">
-    ADAP chromatogram builder
-  </a>
-  
-    <nav class="md-nav" aria-label="ADAP chromatogram builder">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scan-selection" class="md-nav__link">
-    Scan selection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#min-group-size-in-of-scans" class="md-nav__link">
-    Min group size in # of scans
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#group-intensity-threshold" class="md-nav__link">
-    Group intensity threshold
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minimum-highest-intensity" class="md-nav__link">
-    Minimum highest intensity
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scan-to-scan-accuracy-mz" class="md-nav__link">
-    Scan to scan accuracy (m/z)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-retention-time-dimension-optional" class="md-nav__link">
-    Smoothing in retention time dimension (optional)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#feature-resolving" class="md-nav__link">
-    Feature resolving
-  </a>
-  
-    <nav class="md-nav" aria-label="Feature resolving">
+    <nav class="md-nav" aria-label="Parameter settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -744,16 +741,38 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#ion-mobility-data" class="md-nav__link">
+    Ion mobility data
+  </a>
+  
+    <nav class="md-nav" aria-label="Ion mobility data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimension_1" class="md-nav__link">
+    Dimension
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chromatographic-threshold_1" class="md-nav__link">
+    Chromatographic threshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-minimum-range" class="md-nav__link">
+    Search minimum range
+  </a>
+  
+</li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#page-contributors" class="md-nav__link">
-    Page Contributors
-  </a>
   
 </li>
       
@@ -769,87 +788,23 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/lcms-workflow.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/wf_featuredetection/local-minimum-resolver.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="lc-ms-workflow">LC-MS Workflow<a class="headerlink" href="#lc-ms-workflow" title="Permanent link">&para;</a></h1>
-<h2 id="raw-data-processing">Raw data processing<a class="headerlink" href="#raw-data-processing" title="Permanent link">&para;</a></h2>
-<h3 id="raw-data-import">Raw data import<a class="headerlink" href="#raw-data-import" title="Permanent link">&para;</a></h3>
-<p>Raw data can be imported via the main menu <strong>Raw data methods → Raw data import</strong>. Note that
-multiple data files/folders can be dropped into the
-<strong>MS data (advanced)</strong> dialog. If individual modules are used, folder based formats can only
-imported as one folder at a time. When using the <strong>MS data (advanced)</strong> dialog, inexperienced users
-should deactivate the direct mass detection steps, since they alter the raw data on the import. Mass
-detection is then performend, when the scans are loaded and only peaks above the noise level are
-imported.</p>
-<p>Alternatively, you can simply drag &amp; drop the raw data into the raw data list of the main window.</p>
-<p><img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391336-5722d04c-91c0-4c77-88db-00325e8ff41b.png" /> <img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391465-c61eece6-0720-459f-8b2b-511021d7a058.png" /></p>
-<h3 id="mass-detection">Mass detection<a class="headerlink" href="#mass-detection" title="Permanent link">&para;</a></h3>
-<p>The mass detection steps perform noise filtering (by a threshold) and centroiding of profile raw
-data. The raw data format can either be centroided or in profile mode. If the data is centroided,
-the <strong>centroid</strong> mass detector can be used. Profile data requires a different mass detector such as
-<strong>exact mass</strong>.</p>
-<p>The mass detection is launched via <strong>Raw data methods → Mass detection → Mass detection</strong> ([1] in
-the figure). In the dropdown menu [2], an applicable mass detector should be chosen and configured
-via the <strong>Setup</strong> button [2]. By selecting the <em>Show preview</em> checkbox, a scan can be selected to
-adjust the noise level.</p>
-<p>The output of the mass detection step, can be referred to as <strong>mass list</strong>, since it will only
-contain a list of selected m/z values.</p>
-<p><img alt="Mass detection" src="../img/lcmsworkflow/massdetection.png" /></p>
-<h4 id="setting-the-noise-level">Setting the noise level<a class="headerlink" href="#setting-the-noise-level" title="Permanent link">&para;</a></h4>
-<p>Choose the noise level to detect (= red dot) actual peaks but filter out detector noise. The
-detector noise is usually determined by a lot of signals of the same intensity.</p>
-<h2 id="feature-processing">Feature processing<a class="headerlink" href="#feature-processing" title="Permanent link">&para;</a></h2>
-<p>After raw data processing, the first step of feature detection is building extracted ion
-chromatograms (EICs). This step can be executed by the <strong>ADAP chromatogram builder</strong> or <strong>Grid
-mass</strong>.</p>
-<h3 id="adap-chromatogram-builder">ADAP chromatogram builder<a class="headerlink" href="#adap-chromatogram-builder" title="Permanent link">&para;</a></h3>
-<p><img alt="adap chromatogram builder" src="../img/lcmsworkflow/adapchromatogrambuilder.png" /></p>
-<h6 id="scan-selection">Scan selection<a class="headerlink" href="#scan-selection" title="Permanent link">&para;</a></h6>
-<p>The scan selection parameter specifies the scans that shall be processed for feature detection.
-Usually, setting the ms level to 1 is sufficient. If a calibration segment is present, it can be cut
-out via the retention time filter in the scan selection.</p>
-<h5 id="min-group-size-in-of-scans">Min group size in # of scans<a class="headerlink" href="#min-group-size-in-of-scans" title="Permanent link">&para;</a></h5>
-<p>This parameter specifies the number of consecutive detections of the same m/z value in a
-chromatographic peak (rt dimension). This means that a single m/z has to be detected in, e.g, 5
-scans with an intensity higher than zero. This parameter helps to filter noise. Usually no less than
-5 should be set here if the MS1 acquisition rate is sufficient.</p>
-<h5 id="group-intensity-threshold">Group intensity threshold<a class="headerlink" href="#group-intensity-threshold" title="Permanent link">&para;</a></h5>
-<p>Specifies a minimum intensity that the number specified
-by <a href="#min-group-size-in--of-scans">min group size</a> have to exceed. In this example, the intensity in
-at least 5 scans must be above 5E2.</p>
-<h5 id="minimum-highest-intensity">Minimum highest intensity<a class="headerlink" href="#minimum-highest-intensity" title="Permanent link">&para;</a></h5>
-<p>The highest point of a potential EIC must exceed this value.</p>
-<h5 id="scan-to-scan-accuracy-mz">Scan to scan accuracy (m/z)<a class="headerlink" href="#scan-to-scan-accuracy-mz" title="Permanent link">&para;</a></h5>
-<p>The <strong>m/z tolerance</strong> specifies the scan-to-scan tolerance for EICs. This tolerance depends on the
-mass accuracy and resolution of the instrument. Usually, a good starting point for optimisations are
-0.005 and 5-10 ppm for Orbitrap instruments, while 0.005 and 10-15 ppm can be used for TOF
-instruments.</p>
-<h3 id="smoothing-in-retention-time-dimension-optional">Smoothing in retention time dimension (optional)<a class="headerlink" href="#smoothing-in-retention-time-dimension-optional" title="Permanent link">&para;</a></h3>
-<p>The necessity of smoothing in RT dimension is determined by the noisiness of chromatographic peaks.
-These can be influenced by the overall spray stability, instrument accumulation times, transfer
-efficiency and many more.</p>
-<p>The number of data points to be smoothed in rt dimension can be set at [1]. Note that the correct
-preview dimension is selected at [2].</p>
-<p>For large batch modes, the <strong>Remove original feature list</strong> parameter should be selected. While
-parameters are being optimised, this is not recommended, because removing a feature list cannot be
-undone.</p>
-<p><img alt="" src="../img/imsworkflow/smoothingdialog.png" /></p>
-<h3 id="feature-resolving">Feature resolving<a class="headerlink" href="#feature-resolving" title="Permanent link">&para;</a></h3>
-<p>Here, the <strong>Feature detection → Resolving → Local minimum resolver</strong> is used. However, the <strong>ADAP
-resolver</strong> also produces great results, but takes longer to process.</p>
-<p>Resolving traces/chromatograms into individual features, is one of the most crucial steps of data
+<h1 id="local-minimum-resolver">Local Minimum Resolver<a class="headerlink" href="#local-minimum-resolver" title="Permanent link">&para;</a></h1>
+<p>Resolving traces/chromatograms into individual features, is one of the most <strong>crucial</strong> steps of data
 processing. Well optimised parameters [1] can lead to recognition of all good features in a "good"
 EICs [2] and to few noise recognised as feature in EIC that also contains chromatographic noise
-[3].<br />
+[3].
 On the other hand, poorly optimised parameters [4] can still lead to recognition of all features in
 a good EIC [5], but recognise a lot of noise as feature in a noisy EIC [6].<br />
 Therefore, we recommend optimising the parameters on good EICs and checking the results of these
 parameters with a noisy EIC. Most of the time, a noisy EIC can be found by sorting the feature table
 by decreasing area.</p>
-<p><img alt="" src="../img/imsworkflow/chromatogramresolving.png" /></p>
+<p><img alt="" src="../../img/imsworkflow/chromatogramresolving.png" /></p>
+<h3 id="parameter-settings">Parameter settings<a class="headerlink" href="#parameter-settings" title="Permanent link">&para;</a></h3>
 <h5 id="msms-scan-paring">MS/MS scan paring<a class="headerlink" href="#msms-scan-paring" title="Permanent link">&para;</a></h5>
 <p>Selecting this parameter will pair DDA MS/MS spectra to the resolved features. This is optional at
 this stage, because it will be executed again during resolving in the mobility dimension.</p>
@@ -882,15 +837,32 @@ using such a signal as an example.</p>
 <h5 id="minimum-number-of-data-points">Minimum number of data points<a class="headerlink" href="#minimum-number-of-data-points" title="Permanent link">&para;</a></h5>
 <p>Can be used in addition to <strong>Peak duration range</strong> to filter out noise. Should be set no lower than
 5 in most cases.</p>
-<h2 id="page-contributors">Page Contributors<a class="headerlink" href="#page-contributors" title="Permanent link">&para;</a></h2>
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>SteffenHeu</a></span></p>
+<h2 id="ion-mobility-data">Ion mobility data<a class="headerlink" href="#ion-mobility-data" title="Permanent link">&para;</a></h2>
+<p>In general, the same principles apply as in the retention time resolving step. However, a few
+differences shall be noted. In the screenshot you can also see, that the resolved mobilograms are
+recalculated from the raw data and previously apply smoothing steps are therefore lost and must be
+reapplied if necessary.</p>
+<p><img alt="" src="../../img/imsworkflow/mobilityresolving.png" /></p>
+<h5 id="dimension_1">Dimension<a class="headerlink" href="#dimension_1" title="Permanent link">&para;</a></h5>
+<p>Mobility has to be selected as a dimension to resolve mobilograms [1].</p>
+<h5 id="chromatographic-threshold_1">Chromatographic threshold<a class="headerlink" href="#chromatographic-threshold_1" title="Permanent link">&para;</a></h5>
+<p>Since there are less scans in mobility dimension (e.g., 400 - &gt;1000 per frame, depending on the
+instrument type and setting) than in rt dimension (e.g. 5000 for LC-MS depending on acquisition
+rate), the threshold should be lowered to 80 or less.</p>
+<h5 id="search-minimum-range">Search minimum range<a class="headerlink" href="#search-minimum-range" title="Permanent link">&para;</a></h5>
+<p>This value determines the search range in mobility dimension. Therefore, this value has to be set
+lower when resolving a TIMS (Bruker data) mobilogram, because the absolute numerical values are
+smaller (e.g., 0.01). When resolving mobilograms from Waters or Agilent data (mobility as drift time
+in ms), the values are higher and must therefore be increased.</p>
+<p>Other parameters such as minimum intensities or minimum number of data points should be adjusted
+depending on what you want to detect.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 12, 2021 11:51:46</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 18, 2021 12:23:04</span>
       
     
   </small>
@@ -908,7 +880,7 @@ using such a signal as an example.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../performance/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Performance options" rel="prev">
+        <a href="../smoothing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Smoothing" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -917,20 +889,20 @@ using such a signal as an example.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Performance options
+              Smoothing
             </div>
           </div>
         </a>
       
       
         
-        <a href="../Ion-mobility-data-processing-workflow/" class="md-footer__link md-footer__link--next" aria-label="Next: LC-IMS-MS workflow" rel="next">
+        <a href="../../Raw-data-visualisation/" class="md-footer__link md-footer__link--next" aria-label="Next: Raw data visualisation" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              LC-IMS-MS workflow
+              Raw data visualisation
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -960,10 +932,10 @@ using such a signal as an example.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.cefbb252.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.a5f8ea78.min.js"></script>
+      <script src="../../assets/javascripts/bundle.649a939e.min.js"></script>
       
     
   </body>
