@@ -18,6 +18,7 @@ nav:
       - Ion mobility trace builder: wf_featuredetection/ion-mobility-trace-builder.md
       - Smoothing: wf_featuredetection/smoothing.md
       - Resolving: wf_featuredetection/local-minimum-resolver.md
+      - CCS calibration: module_docs/ccs_calibration.md
   - Visualisation:
       - Raw data visualisation: Raw-data-visualisation.md
   - Performance options: performance.md
