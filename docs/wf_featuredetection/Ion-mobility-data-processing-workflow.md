@@ -7,11 +7,8 @@
 * .mzML
   * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native Bruker
         data
-  * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native Waters
+  * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native Waters/Agilent
       data
-
-**Note**: mzML via MSConvert from Agilent raw data can be imported, but certain restrictions might
-hinder processsing workflows due to the nature of the raw data format.
 
 
 ***
