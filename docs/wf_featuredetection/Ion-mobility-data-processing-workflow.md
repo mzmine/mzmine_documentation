@@ -37,7 +37,7 @@
 Ion mobility data can be processed in MZmine 3 in two ways. The first few steps are different for
 the two workflows.
 
-1. Regular LC-MS workflow via **ADAP Chromatogram builder and IMS expander** (recommended)
+1. LC-IMS-MS workflow via **ADAP Chromatogram builder and IMS expander** **(recommended)**
     - build extracted ion chromatograms (rt dimension) from frame spectra
         - requires merged frame spectra (see [mobility scan merging](#Mobility-scan-merging))
     - smoothing (optional)
