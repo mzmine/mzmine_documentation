@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ion-mobility-spectrometry-expander" class="md-skip">
+        <a href="#ims-expander" class="md-skip">
           Skip to content
         </a>
       
@@ -356,9 +356,67 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Ion mobility expander
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Ion mobility expander
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-settings" class="md-nav__link">
+    Parameter settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameter settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mz-tolerance" class="md-nav__link">
+    m/z tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raw-data-instead-of-thresholded" class="md-nav__link">
+    Raw data instead of thresholded
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-default-mobility-bin-witdth-scans" class="md-nav__link">
+    Override default mobility bin witdth (scans)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -540,6 +598,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-settings" class="md-nav__link">
+    Parameter settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameter settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mz-tolerance" class="md-nav__link">
+    m/z tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raw-data-instead-of-thresholded" class="md-nav__link">
+    Raw data instead of thresholded
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-default-mobility-bin-witdth-scans" class="md-nav__link">
+    Override default mobility bin witdth (scans)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -555,15 +655,30 @@
 </a>
 
 
-<h1 id="ion-mobility-spectrometry-expander">Ion mobility spectrometry expander<a class="headerlink" href="#ion-mobility-spectrometry-expander" title="Permanent link">&para;</a></h1>
-<p><strong>TODO</strong></p>
+<h1 id="ims-expander">IMS Expander<a class="headerlink" href="#ims-expander" title="Permanent link">&para;</a></h1>
+<p>The IMS expander will search for data points in mobility scans for existing features. This requires
+prior chromatogram building (
+see <a href="../adap-chromatogram-builder/#adap-chromatogram-builder">ADAP Chromatogram builder</a> and
+resolving in retention time dimension (see <a href="../local-minimum-resolver/">Resolving</a>).</p>
+<h3 id="parameter-settings">Parameter settings<a class="headerlink" href="#parameter-settings" title="Permanent link">&para;</a></h3>
+<h4 id="mz-tolerance">m/z tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
+<p>If selected, a tolerance will be applied to the feature's detected m/z while searching for data
+points in mobility dimension. Otherwise, the accepted m/z range is determined by the feature's m/z
+distribution in accumulated frame spectra.<br />
+<strong>Recommended setting: selected, 0.003 m/z and 15 ppm</strong></p>
+<h4 id="raw-data-instead-of-thresholded">Raw data instead of thresholded<a class="headerlink" href="#raw-data-instead-of-thresholded" title="Permanent link">&para;</a></h4>
+<p>Enables searching in mobility scan raw data instead of the thresholded (=mass detected) data. Only
+possible for centroid raw data files.</p>
+<h4 id="override-default-mobility-bin-witdth-scans">Override default mobility bin witdth (scans)<a class="headerlink" href="#override-default-mobility-bin-witdth-scans" title="Permanent link">&para;</a></h4>
+<p>If selected, the default number of binned mobility scans can be overriden. Useful for data with high
+mobility resolution. Example: <img alt="" src="../../img/imsworkflow/binnedmobilogram.png" /></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 18, 2021 12:23:04</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 15, 2022 17:08:58</span>
       
     
   </small>
