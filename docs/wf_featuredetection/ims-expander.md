@@ -11,7 +11,8 @@ resolving in retention time dimension (see [Resolving](local-minimum-resolver.md
 
 If selected, a tolerance will be applied to the feature's detected m/z while searching for data
 points in mobility dimension. Otherwise, the accepted m/z range is determined by the feature's m/z
-distribution in accumulated frame spectra.
+distribution in accumulated frame spectra.  
+**Recommended setting: selected, 0.003 m/z and 15 ppm**
 
 #### Raw data instead of thresholded
 
