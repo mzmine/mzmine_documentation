@@ -1,6 +1,6 @@
 # ADAP chromatogram builder
 
-![adap chromatogram builder](../img/lcmsworkflow/adapchromatogrambuilder.png)
+![adap chromatogram builder](adapchromatogrambuilder.png)
 
 ### Scan selection
 

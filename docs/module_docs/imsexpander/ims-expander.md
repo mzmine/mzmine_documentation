@@ -2,8 +2,8 @@
 
 The IMS expander will search for data points in mobility scans for existing features. This requires
 prior chromatogram building (
-see [ADAP Chromatogram builder](adap-chromatogram-builder.md#adap-chromatogram-builder) and
-resolving in retention time dimension (see [Resolving](local-minimum-resolver.md)).
+see [ADAP Chromatogram builder](../adapchromatogrambuilder/adap-chromatogram-builder.md#adap-chromatogram-builder) and
+resolving in retention time dimension (see [Resolving](../localminimumresolver/local-minimum-resolver.md)).
 
 ### Parameter settings
 
@@ -22,4 +22,4 @@ possible for centroid raw data files.
 #### Override default mobility bin witdth (scans)
 
 If selected, the default number of binned mobility scans can be overriden. Useful for data with high
-mobility resolution. Example: ![](../img/imsworkflow/binnedmobilogram.png)
+mobility resolution. Example: ![](binnedmobilogram.png)

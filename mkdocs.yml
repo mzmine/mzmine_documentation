@@ -10,14 +10,14 @@ nav:
   - LC-MS workflow: wf_featuredetection/lcms-workflow.md
   - LC-IMS-MS workflow: wf_featuredetection/Ion-mobility-data-processing-workflow.md
   - Module documentations:
-      - Data import: wf_featuredetection/data-import.md
-      - Mass detection: wf_featuredetection/mass-detection.md
-      - Mobility scan merging: wf_featuredetection/mobility-scan-merging.md
-      - ADAP Chromatogram builder: wf_featuredetection/adap-chromatogram-builder.md
-      - Ion mobility expander: wf_featuredetection/ims-expander.md
-      - Ion mobility trace builder: wf_featuredetection/ion-mobility-trace-builder.md
-      - Smoothing: wf_featuredetection/smoothing.md
-      - Resolving: wf_featuredetection/local-minimum-resolver.md
+      - Data import: module_docs/dataimport/data-import.md
+      - Mass detection: module_docs/massdetection/mass-detection.md
+      - Mobility scan merging: module_docs/mobilityscanmerging/mobility-scan-merging.md
+      - ADAP Chromatogram builder: module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md
+      - Ion mobility expander: module_docs/imsexpander/ims-expander.md
+      - Ion mobility trace builder: module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.md
+      - Smoothing: module_docs/smoothing/smoothing.md
+      - Resolving: module_docs/localminimumresolver/local-minimum-resolver.md
       - CCS calibration: module_docs/ccs_calibration/ccs_calibration.md
   - Visualisation:
       - Raw data visualisation: Raw-data-visualisation.md

@@ -14,7 +14,7 @@ For large batch modes, the **Remove original feature list** parameter should be 
 parameters are being optimised, this is not recommended, because removing a feature list cannot be
 undone.
 
-![](../img/imsworkflow/smoothingdialog.png)
+![](smoothingdialog.png)
 
 ## Mobility dimension
 
@@ -26,4 +26,4 @@ Select to smooth the mobility dimension [1] and select it as preview dimension [
 depends on the number of spectra acquired in the observed mobility range. Usually, a value between 5
 and 15 should be appropriate.
 
-![](../img/imsworkflow/mobilitysmoothing.png)
+![](mobilitysmoothing.png)
