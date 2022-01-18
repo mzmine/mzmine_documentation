@@ -7,8 +7,8 @@ repo_url: https://github.com/mzmine/mzmine_documentation
 nav:
   - Home page: index.md
   - Main window overview: Main-window-overview.md
-  - LC-MS workflow: wf_featuredetection/lcms-workflow.md
-  - LC-IMS-MS workflow: wf_featuredetection/Ion-mobility-data-processing-workflow.md
+  - LC-MS workflow: wf_featuredetection/lcmsworkflow/lcms-workflow.md
+  - LC-IMS-MS workflow: wf_featuredetection/imsworkflow/Ion-mobility-data-processing-workflow.md
   - Module documentations:
       - Data import: module_docs/dataimport/data-import.md
       - Mass detection: module_docs/massdetection/mass-detection.md

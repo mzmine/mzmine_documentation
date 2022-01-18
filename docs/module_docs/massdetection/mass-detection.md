@@ -15,7 +15,7 @@ adjust the noise level.
 The output of the mass detection step, can be referred to as **mass list**, since it will only
 contain a list of selected m/z values.
 
-![Mass detection](../../img/lcmsworkflow/massdetection.png)
+![Mass detection](../../wf_featuredetection/lcmsworkflow/massdetection.png)
 
 #### Setting the noise level
 

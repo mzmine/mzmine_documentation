@@ -21,16 +21,16 @@
 
 ### Raw data import
 
-[Data import](../module_docs/dataimport/data-import.md#lc-ims-ms-data)
+[Data import](../../module_docs/dataimport/data-import.md#lc-ims-ms-data)
 
 ### Mass detection
 
-[Mass detection](../module_docs/massdetection/mass-detection.md#lc-ims-ms-data)
+[Mass detection](../../module_docs/massdetection/mass-detection.md#lc-ims-ms-data)
 
 ### Mobility scan merging
 
 **This step is not required when importing native Bruker .tdf or .tsf data from .d folders.**
-[Mobility scan mering](../module_docs/mobilityscanmerging/mobility-scan-merging.md)
+[Mobility scan mering](../../module_docs/mobilityscanmerging/mobility-scan-merging.md)
 
 ## Feature detection workflows
 
@@ -39,7 +39,7 @@ the two workflows.
 
 1. LC-IMS-MS workflow via **ADAP Chromatogram builder and IMS expander** **(recommended)**
     - build extracted ion chromatograms (rt dimension) from frame spectra
-        - requires merged frame spectra (see [mobility scan merging](../module_docs/mobilityscanmerging/mobility-scan-merging.md))
+        - requires merged frame spectra (see [mobility scan merging](../../module_docs/mobilityscanmerging/mobility-scan-merging.md))
     - smoothing (optional)
     - resolve retention time dimension
     - expand features into mobility dimension
@@ -76,16 +76,16 @@ LC-IMS-MS data can also be processed via the regular LC-MS modules. If necessary
 can be expanded into the mobility dimension.
 
 For this workflow, generation of summed frame spectra via
-the [Mobility scan merging](../module_docs/mobilityscanmerging/mobility-scan-merging.md) module is a mandatory step, if the data was
+the [Mobility scan merging](../../module_docs/mobilityscanmerging/mobility-scan-merging.md) module is a mandatory step, if the data was
 imported from an .mzML file (automatically generated via native Bruker import).
 
-- [ADAP Chromatogram builder](../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md)
-- [Smoothing in retention time dimension (optional)](../module_docs/smoothing/smoothing.md)
-- [Resolving in retention time dimension](../module_docs/localminimumresolver/local-minimum-resolver.md)
-- [Expanding EICs in mobility dimension](../module_docs/imsexpander/ims-expander.md)
-- [Smoothing  in mobility dimension (optional)](../module_docs/smoothing/smoothing.md#Mobility-dimension)
-- [Resolving in mobility dimension](../module_docs/localminimumresolver/local-minimum-resolver.md#ion-mobility-data)
-- [Smoothing in rt and mobility dimension (optional)](../module_docs/smoothing/smoothing.md)
+- [ADAP Chromatogram builder](../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md)
+- [Smoothing in retention time dimension (optional)](../../module_docs/smoothing/smoothing.md)
+- [Resolving in retention time dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md)
+- [Expanding EICs in mobility dimension](../../module_docs/imsexpander/ims-expander.md)
+- [Smoothing  in mobility dimension (optional)](../../module_docs/smoothing/smoothing.md#Mobility-dimension)
+- [Resolving in mobility dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md#ion-mobility-data)
+- [Smoothing in rt and mobility dimension (optional)](../../module_docs/smoothing/smoothing.md)
   - Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
 mobility resolving step. If smoother shapes are required, the smoothing can be reapplied afterwards.
 In that case, smoothing can be applied to both dimensions at once.
@@ -93,21 +93,21 @@ In that case, smoothing can be applied to both dimensions at once.
 ### LC-IMS-MS workflow
 
 The LC-IMS-MS workflow will directly
-build [ion mobility traces](ims-background-terminology#Ion-mobility-traces) from the raw data in the
+build [ion mobility traces](ims-background-terminology.md#Ion-mobility-traces) from the raw data in the
 mobility scans. This workflow does not necessarily require summed frame spectra. However, if
 extracted ion chromatograms shall be visualized via
-the [Chromatogram visualizer](../Raw-data-visualisation.md#Chromatogram-plot), the frame intensities
+the [Chromatogram visualizer](../../Raw-data-visualisation.md#Chromatogram-plot), the frame intensities
 are used. In case these are not present, the chromatograms will be blank. Note that feature
 intensities from the LC-IMS-MS workflow might not exactly match the frame chromatograms due to
 summing being executed prior to thresholding (for native Bruker data). Furthermore, multiple isomers
 might hide behind a single chromatographic peak.
 
-- [Ion mobility trace builder](../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.md)
-- [Smoothing in retention time dimension (optional)](../module_docs/smoothing/smoothing.md)
-- [Resolving in retention time dimension](../module_docs/localminimumresolver/local-minimum-resolver.md)
-- [Smoothing  in mobility dimension (optional)](../module_docs/smoothing/smoothing.md#Mobility-dimension)
-- [Resolving in mobility dimension](../module_docs/localminimumresolver/local-minimum-resolver.md#ion-mobility-data)
-- [Smoothing in rt and mobility dimension (optional)](../module_docs/smoothing/smoothing.md)
+- [Ion mobility trace builder](../../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.md)
+- [Smoothing in retention time dimension (optional)](../../module_docs/smoothing/smoothing.md)
+- [Resolving in retention time dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md)
+- [Smoothing  in mobility dimension (optional)](../../module_docs/smoothing/smoothing.md#Mobility-dimension)
+- [Resolving in mobility dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md#ion-mobility-data)
+- [Smoothing in rt and mobility dimension (optional)](../../module_docs/smoothing/smoothing.md)
   - Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
 mobility resolving step. If smoother shapes are required, the smoothing can be reapplied afterwards.
 In that case, smoothing can be applied to both dimensions at once.

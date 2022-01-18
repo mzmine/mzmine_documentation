@@ -3,11 +3,11 @@
 
 ### Raw data import
 
-[Data import](../module_docs/dataimport/data-import.md#LC-MS data)
+[Data import](../../module_docs/dataimport/data-import.md#LC-MS data)
 
 ### Mass detection
 
-[Mass detection](../module_docs/massdetection/mass-detection.md)
+[Mass detection](../../module_docs/massdetection/mass-detection.md)
 
 ## Feature processing
 
@@ -17,15 +17,15 @@ mass**.
 
 ### ADAP chromatogram builder
 
-[ADAP Documentation](../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md)
+[ADAP Documentation](../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md)
 
 ### Smoothing in retention time dimension (optional)
 
-[Smoothing](../module_docs/smoothing/smoothing.md)
+[Smoothing](../../module_docs/smoothing/smoothing.md)
 
 ### Feature resolving
 
-[Local minimum resolver](../module_docs/localminimumresolver/local-minimum-resolver.md)
+[Local minimum resolver](../../module_docs/localminimumresolver/local-minimum-resolver.md)
 
 ## Page Contributors
 
