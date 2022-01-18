@@ -1,15 +1,15 @@
 # LC-IMS-MS Workflow Overview
+
 ## Supported formats
 
 * Vendor formats:
-  * .tdf (Native Bruker LC-IMS-MS and MALDI-IMS-MSI format)
-  * .tsf (Native Bruker MALDI-IMS-MS (single shot) format)
+    * .tdf (Native Bruker LC-IMS-MS and MALDI-IMS-MSI format)
+    * .tsf (Native Bruker MALDI-IMS-MS (single shot) format)
 * .mzML
-  * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native Bruker
-        data
-  * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native Waters/Agilent
+    * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native Bruker
       data
-
+    * Created via [MSConvert](https://proteowizard.sourceforge.io/download.html) from native
+      Waters/Agilent data
 
 ***
 
@@ -21,11 +21,11 @@
 
 ### Raw data import
 
-[Data import](data-import.md#LC-IMS-MS-data)
+[Data import](data-import.md#lc-ims-ms-data)
 
 ### Mass detection
 
-[Mass detection](mass-detection.md#LC-IMS-MS-data)
+[Mass detection](mass-detection.md#lc-ims-ms-data)
 
 ### Mobility scan merging
 
@@ -39,7 +39,7 @@ the two workflows.
 
 1. LC-IMS-MS workflow via **ADAP Chromatogram builder and IMS expander** **(recommended)**
     - build extracted ion chromatograms (rt dimension) from frame spectra
-        - requires merged frame spectra (see [mobility scan merging](#Mobility-scan-merging))
+        - requires merged frame spectra (see [mobility scan merging](mobility-scan-merging.md))
     - smoothing (optional)
     - resolve retention time dimension
     - expand features into mobility dimension
@@ -76,7 +76,7 @@ LC-IMS-MS data can also be processed via the regular LC-MS modules. If necessary
 can be expanded into the mobility dimension.
 
 For this workflow, generation of summed frame spectra via
-the [Mobility scan merging](#mobility-scan-merging) module is a mandatory step, if the data was
+the [Mobility scan merging](mobility-scan-merging.md) module is a mandatory step, if the data was
 imported from an .mzML file (automatically generated via native Bruker import).
 
 ### ADAP chromatogram builder
@@ -111,12 +111,12 @@ In that case, smoothing can be applied to both dimensions at once.
 
 [Smoothing](smoothing.md)
 
-
 ### LC-IMS-MS workflow
 
-The LC-IMS-MS workflow will directly build [ion mobility traces](#Ion-mobility-traces) from the raw
-data in the mobility scans. This workflow does not necessarily require summed frame spectra.
-However, if extracted ion chromatograms shall be visualized via
+The LC-IMS-MS workflow will directly
+build [ion mobility traces](ims-background-terminology#Ion-mobility-traces) from the raw data in the
+mobility scans. This workflow does not necessarily require summed frame spectra. However, if
+extracted ion chromatograms shall be visualized via
 the [Chromatogram visualizer](../Raw-data-visualisation.md#Chromatogram-plot), the frame intensities
 are used. In case these are not present, the chromatograms will be blank. Note that feature
 intensities from the LC-IMS-MS workflow might not exactly match the frame chromatograms due to
