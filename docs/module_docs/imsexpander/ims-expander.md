@@ -22,4 +22,8 @@ possible for centroid raw data files.
 #### Override default mobility bin width (scans)
 
 If selected, the default number of binned mobility scans can be overriden. Useful for data with high
-mobility resolution. Example: ![binned mobilogram](binnedmobilogram.png)
+mobility resolution. 
+
+### Binned mobilogram example
+
+![binned mobilogram](binnedmobilogram.png)
