@@ -4,10 +4,10 @@ Accurate determination of CCS values requires a valid CCS calibration and molecu
 be detected.
 
 - **timsTOF** raw data can be recalibrated using data analysis and imported in MZmine. The
-  recalibrated data will be used by default. (see [Calulating CCS values](#Calculating-CCS-values))
+  recalibrated data will be used by default. (see [Calulating CCS values](#calculating-ccs-values))
 - **mzML** raw data requires the determination of a calibration function from the raw data (e.g. as
   detected features) or as import from an external file. (
-  see [Creating or importing a CCS calibration](#Creating-or-importing-a-CCS-calibration)
+  see [Creating or importing a CCS calibration](#creating-or-importing-a-ccs-calibration)
 
 ## Creating or importing a CCS calibration
 
