@@ -97,7 +97,7 @@ imported from an .mzML file (automatically generated via native Bruker import).
 
 #### Smoothing  in mobility dimension (optional)
 
-[Smoothing](smoothing.md#Mobility-dimension)
+[Smoothing](smoothing.md#mobility-dimension)
 
 #### Resolving in mobility dimension
 
@@ -114,10 +114,10 @@ In that case, smoothing can be applied to both dimensions at once.
 ### LC-IMS-MS workflow
 
 The LC-IMS-MS workflow will directly
-build [ion mobility traces](ims-background-terminology#Ion-mobility-traces) from the raw data in the
+build [ion mobility traces](ims-background-terminology#ion-mobility-traces) from the raw data in the
 mobility scans. This workflow does not necessarily require summed frame spectra. However, if
 extracted ion chromatograms shall be visualized via
-the [Chromatogram visualizer](../Raw-data-visualisation.md#Chromatogram-plot), the frame intensities
+the [Chromatogram visualizer](../Raw-data-visualisation.md#chromatogram-plot), the frame intensities
 are used. In case these are not present, the chromatograms will be blank. Note that feature
 intensities from the LC-IMS-MS workflow might not exactly match the frame chromatograms due to
 summing being executed prior to thresholding (for native Bruker data). Furthermore, multiple isomers
@@ -137,7 +137,7 @@ might hide behind a single chromatographic peak.
 
 #### Smoothing  in mobility dimension (optional)
 
-[Smoothing](smoothing.md#Mobility-dimension)
+[Smoothing](smoothing.md#mobility-dimension)
 
 #### Resolving in mobility dimension
 

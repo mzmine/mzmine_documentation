@@ -3,7 +3,7 @@
 
 ### Raw data import
 
-[Data import](data-import.md#LC-MS data)
+[Data import](data-import.md#lc-ms data)
 
 ### Mass detection
 
