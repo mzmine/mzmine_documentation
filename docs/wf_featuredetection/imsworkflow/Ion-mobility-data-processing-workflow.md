@@ -93,7 +93,7 @@ In that case, smoothing can be applied to both dimensions at once.
 ### LC-IMS-MS workflow
 
 The LC-IMS-MS workflow will directly
-build [ion mobility traces](ims-background-terminology.md#ion-mobility-traces) from the raw data in the
+build [ion mobility traces](ims-background-terminology.md#ion-mobility-trace) from the raw data in the
 mobility scans. This workflow does not necessarily require summed frame spectra. However, if
 extracted ion chromatograms shall be visualized via
 the [Chromatogram visualizer](../../Raw-data-visualisation.md#chromatogram-plot), the frame intensities
