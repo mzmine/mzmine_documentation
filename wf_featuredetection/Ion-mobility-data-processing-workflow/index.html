@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/wf_featuredetection/Ion-mobility-data-processing-workflow/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
     
     
       
@@ -972,23 +972,27 @@
 <h1 id="lc-ims-ms-workflow-overview">LC-IMS-MS Workflow Overview<a class="headerlink" href="#lc-ims-ms-workflow-overview" title="Permanent link">&para;</a></h1>
 <h2 id="supported-formats">Supported formats<a class="headerlink" href="#supported-formats" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Vendor formats:</li>
+<li>Vendor formats:<ul>
 <li>.tdf (Native Bruker LC-IMS-MS and MALDI-IMS-MSI format)</li>
 <li>.tsf (Native Bruker MALDI-IMS-MS (single shot) format)</li>
-<li>.mzML</li>
+</ul>
+</li>
+<li>.mzML<ul>
 <li>Created via <a href="https://proteowizard.sourceforge.io/download.html">MSConvert</a> from native Bruker
-        data</li>
-<li>Created via <a href="https://proteowizard.sourceforge.io/download.html">MSConvert</a> from native Waters/Agilent
-      data</li>
+  data</li>
+<li>Created via <a href="https://proteowizard.sourceforge.io/download.html">MSConvert</a> from native
+  Waters/Agilent data</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="background-information-and-terminology">Background information and terminology<a class="headerlink" href="#background-information-and-terminology" title="Permanent link">&para;</a></h2>
 <hr />
 <h2 id="raw-data-processing">Raw data processing<a class="headerlink" href="#raw-data-processing" title="Permanent link">&para;</a></h2>
 <h3 id="raw-data-import">Raw data import<a class="headerlink" href="#raw-data-import" title="Permanent link">&para;</a></h3>
-<p><a href="../data-import/#LC-IMS-MS-data">Data import</a></p>
+<p><a href="../data-import/#lc-ims-ms-data">Data import</a></p>
 <h3 id="mass-detection">Mass detection<a class="headerlink" href="#mass-detection" title="Permanent link">&para;</a></h3>
-<p><a href="../mass-detection/#LC-IMS-MS-data">Mass detection</a></p>
+<p><a href="../mass-detection/#lc-ims-ms-data">Mass detection</a></p>
 <h3 id="mobility-scan-merging">Mobility scan merging<a class="headerlink" href="#mobility-scan-merging" title="Permanent link">&para;</a></h3>
 <p><strong>This step is not required when importing native Bruker .tdf or .tsf data from .d folders.</strong>
 <a href="../mobility-scan-merging/">Mobility scan mering</a></p>
@@ -998,7 +1002,7 @@ the two workflows.</p>
 <ol>
 <li>LC-IMS-MS workflow via <strong>ADAP Chromatogram builder and IMS expander</strong> <strong>(recommended)</strong><ul>
 <li>build extracted ion chromatograms (rt dimension) from frame spectra<ul>
-<li>requires merged frame spectra (see <a href="#Mobility-scan-merging">mobility scan merging</a>)</li>
+<li>requires merged frame spectra (see <a href="../mobility-scan-merging/">mobility scan merging</a>)</li>
 </ul>
 </li>
 <li>smoothing (optional)</li>
@@ -1038,7 +1042,7 @@ workflow is chosen.</p>
 <p>LC-IMS-MS data can also be processed via the regular LC-MS modules. If necessary, detected features
 can be expanded into the mobility dimension.</p>
 <p>For this workflow, generation of summed frame spectra via
-the <a href="#mobility-scan-merging">Mobility scan merging</a> module is a mandatory step, if the data was
+the <a href="../mobility-scan-merging/">Mobility scan merging</a> module is a mandatory step, if the data was
 imported from an .mzML file (automatically generated via native Bruker import).</p>
 <h3 id="adap-chromatogram-builder">ADAP chromatogram builder<a class="headerlink" href="#adap-chromatogram-builder" title="Permanent link">&para;</a></h3>
 <p><a href="../adap-chromatogram-builder/">ADAP Chromatogram builder</a></p>
@@ -1058,9 +1062,10 @@ mobility resolving step. If smoother shapes are required, the smoothing can be r
 In that case, smoothing can be applied to both dimensions at once.</p>
 <p><a href="../smoothing/">Smoothing</a></p>
 <h3 id="lc-ims-ms-workflow">LC-IMS-MS workflow<a class="headerlink" href="#lc-ims-ms-workflow" title="Permanent link">&para;</a></h3>
-<p>The LC-IMS-MS workflow will directly build <a href="#Ion-mobility-traces">ion mobility traces</a> from the raw
-data in the mobility scans. This workflow does not necessarily require summed frame spectra.
-However, if extracted ion chromatograms shall be visualized via
+<p>The LC-IMS-MS workflow will directly
+build <a href="ims-background-terminology#Ion-mobility-traces">ion mobility traces</a> from the raw data in the
+mobility scans. This workflow does not necessarily require summed frame spectra. However, if
+extracted ion chromatograms shall be visualized via
 the <a href="../../Raw-data-visualisation/#Chromatogram-plot">Chromatogram visualizer</a>, the frame intensities
 are used. In case these are not present, the chromatograms will be blank. Note that feature
 intensities from the LC-IMS-MS workflow might not exactly match the frame chromatograms due to
@@ -1091,7 +1096,7 @@ In that case, smoothing can be applied to both dimensions at once.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 15, 2022 16:47:12</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 18, 2022 20:15:12</span>
       
     
   </small>
@@ -1164,7 +1169,7 @@ In that case, smoothing can be applied to both dimensions at once.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.1514a9a0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.01de222e.min.js"></script>
       
     
   </body>
