@@ -1,5 +1,7 @@
 # Ion mobility data
 
+<!---
+
 Since ion mobility spectrometry (IMS) resolved data is more complex due to the additional dimension
 when compared to regular LC-MS data, some terms shall be clarified before going into details of the
 processing steps.
@@ -12,7 +14,7 @@ TOF instruments (several micro seconds). Therefore, the mobility dimension can b
 acquiring multiple spectra during a mobility separation (e.g. 1000 spectra per 100 ms). This leads
 to multiple mass spectra acquired at one IMS accumulation. Thus, at one retention time, multiple
 spectra are acquired. A detailed comparison of LC-MS and LC-IMS-MS raw data can be
-found <!--- [here](lc-ms-and-lc-ims-ms-data-comparison.md#graphical-comparison-of-lc-ms-and-lc-ims-ms-data). -->
+found [here](lc-ms-and-lc-ims-ms-data-comparison.md#graphical-comparison-of-lc-ms-and-lc-ims-ms-data). 
 
 ## Terminology
 
@@ -36,3 +38,5 @@ _mobilogram_ may be build from multiple frames and summed or built from a single
 An "_ion mobility trace_" basically represents a mobility resolved extracted ion chromatogram (EIC).
 
 ![trace](trace.png)
+
+-->
