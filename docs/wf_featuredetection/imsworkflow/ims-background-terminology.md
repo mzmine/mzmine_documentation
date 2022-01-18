@@ -12,7 +12,7 @@ TOF instruments (several micro seconds). Therefore, the mobility dimension can b
 acquiring multiple spectra during a mobility separation (e.g. 1000 spectra per 100 ms). This leads
 to multiple mass spectra acquired at one IMS accumulation. Thus, at one retention time, multiple
 spectra are acquired. A detailed comparison of LC-MS and LC-IMS-MS raw data can be
-found <!--- [here](lc-ms-and-lc-ims-ms-data-comparison.md#graphical-comparison-of-lc-ms-and-lc-ims-ms-data). -->
+found [here](lc-ms-and-lc-ims-ms-data-comparison.md).
 
 ## Terminology
 
