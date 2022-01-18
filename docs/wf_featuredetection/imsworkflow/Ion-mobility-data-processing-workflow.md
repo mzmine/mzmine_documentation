@@ -115,7 +115,7 @@ In that case, smoothing can be applied to both dimensions at once.
 
 ## Graphical comparison of LC-MS and LC-IMS-MS data
 
-[Data comparison](lc-ms-and-lc-ims-ms-data-comparison.md)
+<!--- [Data comparison](lc-ms-and-lc-ims-ms-data-comparison.md) -->
 
 ## Page Contributors
 
