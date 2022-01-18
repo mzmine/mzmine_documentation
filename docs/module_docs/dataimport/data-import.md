@@ -12,6 +12,7 @@ imported.
 Alternatively, you can simply drag & drop the raw data into the raw data list of the main window.
 
 ![grafik](https://user-images.githubusercontent.com/37407705/136391336-5722d04c-91c0-4c77-88db-00325e8ff41b.png)
+
 ![grafik](https://user-images.githubusercontent.com/37407705/136391465-c61eece6-0720-459f-8b2b-511021d7a058.png)
 
 

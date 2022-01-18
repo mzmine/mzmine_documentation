@@ -8,7 +8,7 @@ The scan selection parameter specifies the scans that shall be processed for fea
 Usually, setting the ms level to 1 is sufficient. If a calibration segment is present, it can be cut
 out via the retention time filter in the scan selection.
 
-### Min group size in # of scans
+### Min group size in number of scans
 
 This parameter specifies the number of consecutive detections of the same m/z value in a
 chromatographic peak (rt dimension). This means that a single m/z has to be detected in, e.g, 5
@@ -18,7 +18,7 @@ scans with an intensity higher than zero. This parameter helps to filter noise. 
 ### Group intensity threshold
 
 Specifies a minimum intensity that the number specified
-by [min group size](#min-group-size-in--of-scans) have to exceed. In this example, the intensity in
+by [min group size](#min-group-size-in-number-of-scans) have to exceed. In this example, the intensity in
 at least 5 scans must be above 5E2.
 
 ### Minimum highest intensity

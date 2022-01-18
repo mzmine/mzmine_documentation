@@ -19,7 +19,7 @@ distribution in accumulated frame spectra.
 Enables searching in mobility scan raw data instead of the thresholded (=mass detected) data. Only
 possible for centroid raw data files.
 
-#### Override default mobility bin witdth (scans)
+#### Override default mobility bin width (scans)
 
 If selected, the default number of binned mobility scans can be overriden. Useful for data with high
 mobility resolution. Example: ![](binnedmobilogram.png)

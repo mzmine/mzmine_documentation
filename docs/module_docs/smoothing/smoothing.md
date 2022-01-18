@@ -18,7 +18,7 @@ undone.
 
 ## Mobility dimension
 
-After resolving a feature in RT dimension, the mobilograms will be recalculated from the from the
+After resolving a feature in RT dimension, the mobilograms will be recalculated from the
 raw data (the resolved ion mobility trace). Therefore, a smoothing step is necessary if the data
 requires it. The smoothing dialog is opened via **Feature detection → Smoothing**
 
