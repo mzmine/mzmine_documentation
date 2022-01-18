@@ -31,7 +31,7 @@ _mobilogram_ may be build from multiple frames and summed or built from a single
 
 ![mobilogram](mobilogram.png)
 
-### Test
+### Ion mobility trace
 
 An "_ion mobility trace_" basically represents a mobility resolved extracted ion chromatogram (EIC).
 
