@@ -83,7 +83,7 @@ imported from an .mzML file (automatically generated via native Bruker import).
 - [Smoothing in retention time dimension (optional)](../../module_docs/smoothing/smoothing.md)
 - [Resolving in retention time dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md)
 - [Expanding EICs in mobility dimension](../../module_docs/imsexpander/ims-expander.md)
-- [Smoothing  in mobility dimension (optional)](../../module_docs/smoothing/smoothing.md#Mobility-dimension)
+- [Smoothing  in mobility dimension (optional)](../../module_docs/smoothing/smoothing.md#mobility-dimension)
 - [Resolving in mobility dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md#ion-mobility-data)
 - [Smoothing in rt and mobility dimension (optional)](../../module_docs/smoothing/smoothing.md)
   - Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
@@ -96,7 +96,7 @@ The LC-IMS-MS workflow will directly
 build [ion mobility traces](ims-background-terminology.md#Ion-mobility-traces) from the raw data in the
 mobility scans. This workflow does not necessarily require summed frame spectra. However, if
 extracted ion chromatograms shall be visualized via
-the [Chromatogram visualizer](../../Raw-data-visualisation.md#Chromatogram-plot), the frame intensities
+the [Chromatogram visualizer](../../Raw-data-visualisation.md#chromatogram-plot), the frame intensities
 are used. In case these are not present, the chromatograms will be blank. Note that feature
 intensities from the LC-IMS-MS workflow might not exactly match the frame chromatograms due to
 summing being executed prior to thresholding (for native Bruker data). Furthermore, multiple isomers
@@ -105,7 +105,7 @@ might hide behind a single chromatographic peak.
 - [Ion mobility trace builder](../../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.md)
 - [Smoothing in retention time dimension (optional)](../../module_docs/smoothing/smoothing.md)
 - [Resolving in retention time dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md)
-- [Smoothing  in mobility dimension (optional)](../../module_docs/smoothing/smoothing.md#Mobility-dimension)
+- [Smoothing  in mobility dimension (optional)](../../module_docs/smoothing/smoothing.md#mobility-dimension)
 - [Resolving in mobility dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md#ion-mobility-data)
 - [Smoothing in rt and mobility dimension (optional)](../../module_docs/smoothing/smoothing.md)
   - Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
