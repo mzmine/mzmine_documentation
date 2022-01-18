@@ -30,7 +30,7 @@
 ### Mobility scan merging
 
 **This step is not required when importing native Bruker .tdf or .tsf data from .d folders.**
-[Mobility scan mering](../module_docs/moblityscanmerging/mobility-scan-merging.md)
+[Mobility scan mering](../module_docs/mobilityscanmerging/mobility-scan-merging.md)
 
 ## Feature detection workflows
 
@@ -39,7 +39,7 @@ the two workflows.
 
 1. LC-IMS-MS workflow via **ADAP Chromatogram builder and IMS expander** **(recommended)**
     - build extracted ion chromatograms (rt dimension) from frame spectra
-        - requires merged frame spectra (see [mobility scan merging](../module_docs/moblityscanmerging/mobility-scan-merging.md))
+        - requires merged frame spectra (see [mobility scan merging](../module_docs/mobilityscanmerging/mobility-scan-merging.md))
     - smoothing (optional)
     - resolve retention time dimension
     - expand features into mobility dimension
@@ -76,7 +76,7 @@ LC-IMS-MS data can also be processed via the regular LC-MS modules. If necessary
 can be expanded into the mobility dimension.
 
 For this workflow, generation of summed frame spectra via
-the [Mobility scan merging](../module_docs/moblityscanmerging/mobility-scan-merging.md) module is a mandatory step, if the data was
+the [Mobility scan merging](../module_docs/mobilityscanmerging/mobility-scan-merging.md) module is a mandatory step, if the data was
 imported from an .mzML file (automatically generated via native Bruker import).
 
 - [ADAP Chromatogram builder](../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md)
