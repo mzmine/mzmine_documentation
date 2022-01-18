@@ -1,7 +1,7 @@
 # Ion mobility trace builder
 
 The **Ion mobility trace builder** will
-build [ion mobility traces](../../wf_featuredetection/imsworkflow/ims-background-terminology.md#ion-mobility-trace)
+build [ion mobility traces](../../wf_featuredetection/imsworkflow/ims-background-terminology.md#test)
 from the raw data. Alternatively, the **Recursive IMS builder** can be used, which requires less ram
 but takes longer.
 
@@ -37,7 +37,7 @@ set here if the MS1 acquisition rate is sufficient.
 Specifies the total number of peaks in the mobility dimension in all mobility scans. Every "dot" in
 an ion mobility trace represents a single datapoint.
 (
-see [ion mobility traces](../../wf_featuredetection/imsworkflow/ims-background-terminology.md#ion-mobility-trace)
+see [ion mobility traces](../../wf_featuredetection/imsworkflow/ims-background-terminology.md#test)
 )
 
 ##### Advanced parameters
