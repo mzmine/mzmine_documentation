@@ -43,7 +43,7 @@ see [ion mobility traces](../../wf_featuredetection/imsworkflow/ims-background-t
 For most applications, these parameters do not need to set/altered. For high mobility resolved data
 the mobilograms might become noisy due to less ions reaching the detector at the same time. By
 default, the number of binned scans is set to cover about 0.0008 Vs/cm^2 per bin. The effect of
-binning can be seen [here](../imsexpander/binnedmobilogram.png)
+binning can be seen <!--- [here](../imsexpander/binnedmobilogram.png) -->
 . If you are unsure about the nature of your data, you can perform trace building with the standard
 parameters and apply/preview the binning afterwards via the **Feature detection → Mobilogram
 binning** module.
