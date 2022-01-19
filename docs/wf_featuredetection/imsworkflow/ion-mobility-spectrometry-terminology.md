@@ -1,4 +1,4 @@
-# Ion mobility data
+# Ion mobility spectrometry terminology
 
 Since ion mobility spectrometry (IMS) resolved data is more complex due to the additional dimension
 when compared to regular LC-MS data, some terms shall be clarified before going into details of the
