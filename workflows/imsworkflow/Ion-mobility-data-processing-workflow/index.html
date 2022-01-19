@@ -8,9 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/wf_featuredetection/Ion-mobility-data-processing-workflow/">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/workflows/imsworkflow/Ion-mobility-data-processing-workflow/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
     
     
@@ -19,10 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.cd566b2a.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.cd566b2a.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -36,7 +36,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+    <a href="../../.." title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -172,7 +172,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+    <a href="../../.." title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -203,7 +203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home page
       </a>
     </li>
@@ -218,7 +218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Main-window-overview/" class="md-nav__link">
+      <a href="../../../Main-window-overview/" class="md-nav__link">
         Main window overview
       </a>
     </li>
@@ -233,7 +233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lcms-workflow/" class="md-nav__link">
+      <a href="../../lcmsworkflow/lcms-workflow/" class="md-nav__link">
         LC-MS workflow
       </a>
     </li>
@@ -345,112 +345,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#adap-chromatogram-builder" class="md-nav__link">
-    ADAP chromatogram builder
-  </a>
-  
-    <nav class="md-nav" aria-label="ADAP chromatogram builder">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-retention-time-dimension-optional" class="md-nav__link">
-    Smoothing in retention time dimension (optional)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resolving-in-retention-time-dimension" class="md-nav__link">
-    Resolving in retention time dimension
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expanding-eics-in-mobility-dimension" class="md-nav__link">
-    Expanding EICs in mobility dimension
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-mobility-dimension-optional" class="md-nav__link">
-    Smoothing  in mobility dimension (optional)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resolving-in-mobility-dimension" class="md-nav__link">
-    Resolving in mobility dimension
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-rt-and-mobility-dimension-optional" class="md-nav__link">
-    Smoothing in rt and mobility dimension (optional)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#lc-ims-ms-workflow" class="md-nav__link">
     LC-IMS-MS workflow
   </a>
-  
-    <nav class="md-nav" aria-label="LC-IMS-MS workflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ion-mobility-trace-builder" class="md-nav__link">
-    Ion mobility trace builder
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-retention-time-dimension-optional_1" class="md-nav__link">
-    Smoothing in retention time dimension (optional)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resolving-in-retention-time-dimension_1" class="md-nav__link">
-    Resolving in retention time dimension
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-mobility-dimension-optional_1" class="md-nav__link">
-    Smoothing  in mobility dimension (optional)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resolving-in-mobility-dimension_1" class="md-nav__link">
-    Resolving in mobility dimension
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-rt-and-mobility-dimension-optional_1" class="md-nav__link">
-    Smoothing in rt and mobility dimension (optional)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -515,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data-import/" class="md-nav__link">
+      <a href="../../../module_docs/dataimport/data-import/" class="md-nav__link">
         Data import
       </a>
     </li>
@@ -529,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mass-detection/" class="md-nav__link">
+      <a href="../../../module_docs/massdetection/mass-detection/" class="md-nav__link">
         Mass detection
       </a>
     </li>
@@ -543,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mobility-scan-merging/" class="md-nav__link">
+      <a href="../../../module_docs/mobilityscanmerging/mobility-scan-merging/" class="md-nav__link">
         Mobility scan merging
       </a>
     </li>
@@ -557,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adap-chromatogram-builder/" class="md-nav__link">
+      <a href="../../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder/" class="md-nav__link">
         ADAP Chromatogram builder
       </a>
     </li>
@@ -571,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ims-expander/" class="md-nav__link">
+      <a href="../../../module_docs/imsexpander/ims-expander/" class="md-nav__link">
         Ion mobility expander
       </a>
     </li>
@@ -585,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ion-mobility-trace-builder/" class="md-nav__link">
+      <a href="../../../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder/" class="md-nav__link">
         Ion mobility trace builder
       </a>
     </li>
@@ -599,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../smoothing/" class="md-nav__link">
+      <a href="../../../module_docs/smoothing/smoothing/" class="md-nav__link">
         Smoothing
       </a>
     </li>
@@ -613,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../local-minimum-resolver/" class="md-nav__link">
+      <a href="../../../module_docs/localminimumresolver/local-minimum-resolver/" class="md-nav__link">
         Resolving
       </a>
     </li>
@@ -627,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../module_docs/ccs_calibration/ccs_calibration/" class="md-nav__link">
+      <a href="../../../module_docs/ccs_calibration/ccs_calibration/" class="md-nav__link">
         CCS calibration
       </a>
     </li>
@@ -675,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Raw-data-visualisation/" class="md-nav__link">
+      <a href="../../../Raw-data-visualisation/" class="md-nav__link">
         Raw data visualisation
       </a>
     </li>
@@ -697,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../performance/" class="md-nav__link">
+      <a href="../../../performance/" class="md-nav__link">
         Performance options
       </a>
     </li>
@@ -712,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Contribute/" class="md-nav__link">
+      <a href="../../../Contribute/" class="md-nav__link">
         Contribute
       </a>
     </li>
@@ -727,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wikiacknowledgements/" class="md-nav__link">
+      <a href="../../../wikiacknowledgements/" class="md-nav__link">
         Acknowledgements
       </a>
     </li>
@@ -824,112 +721,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#adap-chromatogram-builder" class="md-nav__link">
-    ADAP chromatogram builder
-  </a>
-  
-    <nav class="md-nav" aria-label="ADAP chromatogram builder">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-retention-time-dimension-optional" class="md-nav__link">
-    Smoothing in retention time dimension (optional)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resolving-in-retention-time-dimension" class="md-nav__link">
-    Resolving in retention time dimension
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expanding-eics-in-mobility-dimension" class="md-nav__link">
-    Expanding EICs in mobility dimension
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-mobility-dimension-optional" class="md-nav__link">
-    Smoothing  in mobility dimension (optional)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resolving-in-mobility-dimension" class="md-nav__link">
-    Resolving in mobility dimension
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-rt-and-mobility-dimension-optional" class="md-nav__link">
-    Smoothing in rt and mobility dimension (optional)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#lc-ims-ms-workflow" class="md-nav__link">
     LC-IMS-MS workflow
   </a>
-  
-    <nav class="md-nav" aria-label="LC-IMS-MS workflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ion-mobility-trace-builder" class="md-nav__link">
-    Ion mobility trace builder
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-retention-time-dimension-optional_1" class="md-nav__link">
-    Smoothing in retention time dimension (optional)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resolving-in-retention-time-dimension_1" class="md-nav__link">
-    Resolving in retention time dimension
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-mobility-dimension-optional_1" class="md-nav__link">
-    Smoothing  in mobility dimension (optional)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resolving-in-mobility-dimension_1" class="md-nav__link">
-    Resolving in mobility dimension
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smoothing-in-rt-and-mobility-dimension-optional_1" class="md-nav__link">
-    Smoothing in rt and mobility dimension (optional)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -964,7 +758,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/wf_featuredetection/Ion-mobility-data-processing-workflow.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/workflows/imsworkflow/Ion-mobility-data-processing-workflow.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
@@ -990,19 +784,19 @@
 <hr />
 <h2 id="raw-data-processing">Raw data processing<a class="headerlink" href="#raw-data-processing" title="Permanent link">&para;</a></h2>
 <h3 id="raw-data-import">Raw data import<a class="headerlink" href="#raw-data-import" title="Permanent link">&para;</a></h3>
-<p><a href="../data-import/#lc-ims-ms-data">Data import</a></p>
+<p><a href="../../../module_docs/dataimport/data-import/#lc-ims-ms-data">Data import</a></p>
 <h3 id="mass-detection">Mass detection<a class="headerlink" href="#mass-detection" title="Permanent link">&para;</a></h3>
-<p><a href="../mass-detection/#lc-ims-ms-data">Mass detection</a></p>
+<p><a href="../../../module_docs/massdetection/mass-detection/#lc-ims-ms-data">Mass detection</a></p>
 <h3 id="mobility-scan-merging">Mobility scan merging<a class="headerlink" href="#mobility-scan-merging" title="Permanent link">&para;</a></h3>
 <p><strong>This step is not required when importing native Bruker .tdf or .tsf data from .d folders.</strong>
-<a href="../mobility-scan-merging/">Mobility scan mering</a></p>
+<a href="../../../module_docs/mobilityscanmerging/mobility-scan-merging/">Mobility scan mering</a></p>
 <h2 id="feature-detection-workflows">Feature detection workflows<a class="headerlink" href="#feature-detection-workflows" title="Permanent link">&para;</a></h2>
 <p>Ion mobility data can be processed in MZmine 3 in two ways. The first few steps are different for
 the two workflows.</p>
 <ol>
 <li>LC-IMS-MS workflow via <strong>ADAP Chromatogram builder and IMS expander</strong> <strong>(recommended)</strong><ul>
 <li>build extracted ion chromatograms (rt dimension) from frame spectra<ul>
-<li>requires merged frame spectra (see <a href="../mobility-scan-merging/">mobility scan merging</a>)</li>
+<li>requires merged frame spectra (see <a href="../../../module_docs/mobilityscanmerging/mobility-scan-merging/">mobility scan merging</a>)</li>
 </ul>
 </li>
 <li>smoothing (optional)</li>
@@ -1042,50 +836,41 @@ workflow is chosen.</p>
 <p>LC-IMS-MS data can also be processed via the regular LC-MS modules. If necessary, detected features
 can be expanded into the mobility dimension.</p>
 <p>For this workflow, generation of summed frame spectra via
-the <a href="../mobility-scan-merging/">Mobility scan merging</a> module is a mandatory step, if the data was
+the <a href="../../../module_docs/mobilityscanmerging/mobility-scan-merging/">Mobility scan merging</a> module is a mandatory step, if the data was
 imported from an .mzML file (automatically generated via native Bruker import).</p>
-<h3 id="adap-chromatogram-builder">ADAP chromatogram builder<a class="headerlink" href="#adap-chromatogram-builder" title="Permanent link">&para;</a></h3>
-<p><a href="../adap-chromatogram-builder/">ADAP Chromatogram builder</a></p>
-<h4 id="smoothing-in-retention-time-dimension-optional">Smoothing in retention time dimension (optional)<a class="headerlink" href="#smoothing-in-retention-time-dimension-optional" title="Permanent link">&para;</a></h4>
-<p><a href="../smoothing/">Smoothing</a></p>
-<h4 id="resolving-in-retention-time-dimension">Resolving in retention time dimension<a class="headerlink" href="#resolving-in-retention-time-dimension" title="Permanent link">&para;</a></h4>
-<p><a href="../local-minimum-resolver/">Local minimum resolver</a></p>
-<h4 id="expanding-eics-in-mobility-dimension">Expanding EICs in mobility dimension<a class="headerlink" href="#expanding-eics-in-mobility-dimension" title="Permanent link">&para;</a></h4>
-<p><a href="../ims-expander/">IMS expander</a></p>
-<h4 id="smoothing-in-mobility-dimension-optional">Smoothing  in mobility dimension (optional)<a class="headerlink" href="#smoothing-in-mobility-dimension-optional" title="Permanent link">&para;</a></h4>
-<p><a href="../smoothing/#Mobility-dimension">Smoothing</a></p>
-<h4 id="resolving-in-mobility-dimension">Resolving in mobility dimension<a class="headerlink" href="#resolving-in-mobility-dimension" title="Permanent link">&para;</a></h4>
-<p><a href="../local-minimum-resolver/#ion-mobility-data">Local minimum resolver (Mobility dimension)</a></p>
-<h4 id="smoothing-in-rt-and-mobility-dimension-optional">Smoothing in rt and mobility dimension (optional)<a class="headerlink" href="#smoothing-in-rt-and-mobility-dimension-optional" title="Permanent link">&para;</a></h4>
-<p>Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
+<ul>
+<li><a href="../../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder/">ADAP Chromatogram builder</a></li>
+<li><a href="../../../module_docs/smoothing/smoothing/">Smoothing in retention time dimension (optional)</a></li>
+<li><a href="../../../module_docs/localminimumresolver/local-minimum-resolver/">Resolving in retention time dimension</a></li>
+<li><a href="../../../module_docs/imsexpander/ims-expander/">Expanding EICs in mobility dimension</a></li>
+<li><a href="../../../module_docs/smoothing/smoothing/#Mobility-dimension">Smoothing  in mobility dimension (optional)</a></li>
+<li><a href="../../../module_docs/localminimumresolver/local-minimum-resolver/#ion-mobility-data">Resolving in mobility dimension</a></li>
+<li><a href="../../../module_docs/smoothing/smoothing/">Smoothing in rt and mobility dimension (optional)</a></li>
+<li>Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
 mobility resolving step. If smoother shapes are required, the smoothing can be reapplied afterwards.
-In that case, smoothing can be applied to both dimensions at once.</p>
-<p><a href="../smoothing/">Smoothing</a></p>
+In that case, smoothing can be applied to both dimensions at once.</li>
+</ul>
 <h3 id="lc-ims-ms-workflow">LC-IMS-MS workflow<a class="headerlink" href="#lc-ims-ms-workflow" title="Permanent link">&para;</a></h3>
 <p>The LC-IMS-MS workflow will directly
-build <a href="ims-background-terminology#Ion-mobility-traces">ion mobility traces</a> from the raw data in the
+build <a href="../ims-background-terminology/#Ion-mobility-traces">ion mobility traces</a> from the raw data in the
 mobility scans. This workflow does not necessarily require summed frame spectra. However, if
 extracted ion chromatograms shall be visualized via
-the <a href="../../Raw-data-visualisation/#Chromatogram-plot">Chromatogram visualizer</a>, the frame intensities
+the <a href="../../../Raw-data-visualisation/#Chromatogram-plot">Chromatogram visualizer</a>, the frame intensities
 are used. In case these are not present, the chromatograms will be blank. Note that feature
 intensities from the LC-IMS-MS workflow might not exactly match the frame chromatograms due to
 summing being executed prior to thresholding (for native Bruker data). Furthermore, multiple isomers
 might hide behind a single chromatographic peak.</p>
-<h4 id="ion-mobility-trace-builder">Ion mobility trace builder<a class="headerlink" href="#ion-mobility-trace-builder" title="Permanent link">&para;</a></h4>
-<p><a href="../ion-mobility-trace-builder/">Ion mobility trace builder</a></p>
-<h4 id="smoothing-in-retention-time-dimension-optional_1">Smoothing in retention time dimension (optional)<a class="headerlink" href="#smoothing-in-retention-time-dimension-optional_1" title="Permanent link">&para;</a></h4>
-<p><a href="../smoothing/">Smoothing</a></p>
-<h4 id="resolving-in-retention-time-dimension_1">Resolving in retention time dimension<a class="headerlink" href="#resolving-in-retention-time-dimension_1" title="Permanent link">&para;</a></h4>
-<p><a href="../local-minimum-resolver/">Local minimum resolver</a></p>
-<h4 id="smoothing-in-mobility-dimension-optional_1">Smoothing  in mobility dimension (optional)<a class="headerlink" href="#smoothing-in-mobility-dimension-optional_1" title="Permanent link">&para;</a></h4>
-<p><a href="../smoothing/#Mobility-dimension">Smoothing</a></p>
-<h4 id="resolving-in-mobility-dimension_1">Resolving in mobility dimension<a class="headerlink" href="#resolving-in-mobility-dimension_1" title="Permanent link">&para;</a></h4>
-<p><a href="../local-minimum-resolver/#ion-mobility-data">Local minimum resolver (Mobility dimension)</a></p>
-<h4 id="smoothing-in-rt-and-mobility-dimension-optional_1">Smoothing in rt and mobility dimension (optional)<a class="headerlink" href="#smoothing-in-rt-and-mobility-dimension-optional_1" title="Permanent link">&para;</a></h4>
-<p>Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
+<ul>
+<li><a href="../../../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder/">Ion mobility trace builder</a></li>
+<li><a href="../../../module_docs/smoothing/smoothing/">Smoothing in retention time dimension (optional)</a></li>
+<li><a href="../../../module_docs/localminimumresolver/local-minimum-resolver/">Resolving in retention time dimension</a></li>
+<li><a href="../../../module_docs/smoothing/smoothing/#Mobility-dimension">Smoothing  in mobility dimension (optional)</a></li>
+<li><a href="../../../module_docs/localminimumresolver/local-minimum-resolver/#ion-mobility-data">Resolving in mobility dimension</a></li>
+<li><a href="../../../module_docs/smoothing/smoothing/">Smoothing in rt and mobility dimension (optional)</a></li>
+<li>Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
 mobility resolving step. If smoother shapes are required, the smoothing can be reapplied afterwards.
-In that case, smoothing can be applied to both dimensions at once.</p>
-<p><a href="../smoothing/">Smoothing</a></p>
+In that case, smoothing can be applied to both dimensions at once.</li>
+</ul>
 <h2 id="graphical-comparison-of-lc-ms-and-lc-ims-ms-data">Graphical comparison of LC-MS and LC-IMS-MS data<a class="headerlink" href="#graphical-comparison-of-lc-ms-and-lc-ims-ms-data" title="Permanent link">&para;</a></h2>
 <p><a href="../lc-ms-and-lc-ims-ms-data-comparison/">Data comparison</a></p>
 <h2 id="page-contributors">Page Contributors<a class="headerlink" href="#page-contributors" title="Permanent link">&para;</a></h2>
@@ -1096,7 +881,7 @@ In that case, smoothing can be applied to both dimensions at once.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 18, 2022 20:15:12</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 19, 2022 09:20:07</span>
       
     
   </small>
@@ -1114,7 +899,7 @@ In that case, smoothing can be applied to both dimensions at once.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../lcms-workflow/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LC-MS workflow" rel="prev">
+        <a href="../../lcmsworkflow/lcms-workflow/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LC-MS workflow" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1130,7 +915,7 @@ In that case, smoothing can be applied to both dimensions at once.</p>
       
       
         
-        <a href="../data-import/" class="md-footer__link md-footer__link--next" aria-label="Next: Data import" rel="next">
+        <a href="../../../module_docs/dataimport/data-import/" class="md-footer__link md-footer__link--next" aria-label="Next: Data import" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -1166,10 +951,10 @@ In that case, smoothing can be applied to both dimensions at once.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.01de222e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.01de222e.min.js"></script>
       
     
   </body>
