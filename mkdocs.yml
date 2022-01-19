@@ -43,7 +43,7 @@ plugins:
       author: The MZmine Community
       cover_title: MZmine 3
       cover_subtitle: Documentation
-      cover_logo: docs/img/MZmine_logo_CMYK.eps
+      cover_logo: img/MZmine_logo_CMYK.eps
 
 markdown_extensions:
   - toc:
