@@ -289,47 +289,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#background-information-and-terminology" class="md-nav__link">
-    Background information and terminology
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#raw-data-processing" class="md-nav__link">
-    Raw data processing
-  </a>
-  
-    <nav class="md-nav" aria-label="Raw data processing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#raw-data-import" class="md-nav__link">
-    Raw data import
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mass-detection" class="md-nav__link">
-    Mass detection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mobility-scan-merging" class="md-nav__link">
-    Mobility scan merging
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#feature-detection-workflows" class="md-nav__link">
     Feature detection workflows
   </a>
@@ -727,47 +686,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#background-information-and-terminology" class="md-nav__link">
-    Background information and terminology
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#raw-data-processing" class="md-nav__link">
-    Raw data processing
-  </a>
-  
-    <nav class="md-nav" aria-label="Raw data processing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#raw-data-import" class="md-nav__link">
-    Raw data import
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mass-detection" class="md-nav__link">
-    Mass detection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mobility-scan-merging" class="md-nav__link">
-    Mobility scan merging
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#feature-detection-workflows" class="md-nav__link">
     Feature detection workflows
   </a>
@@ -842,42 +760,12 @@
 </li>
 </ul>
 <hr />
-<h2 id="background-information-and-terminology">Background information and terminology<a class="headerlink" href="#background-information-and-terminology" title="Permanent link">&para;</a></h2>
-<hr />
-<h2 id="raw-data-processing">Raw data processing<a class="headerlink" href="#raw-data-processing" title="Permanent link">&para;</a></h2>
-<h3 id="raw-data-import">Raw data import<a class="headerlink" href="#raw-data-import" title="Permanent link">&para;</a></h3>
-<p><a href="../../module_docs/dataimport/data-import.html#lc-ims-ms-data">Data import</a></p>
-<h3 id="mass-detection">Mass detection<a class="headerlink" href="#mass-detection" title="Permanent link">&para;</a></h3>
-<p><a href="../../module_docs/massdetection/mass-detection.html#lc-ims-ms-data">Mass detection</a></p>
-<h3 id="mobility-scan-merging">Mobility scan merging<a class="headerlink" href="#mobility-scan-merging" title="Permanent link">&para;</a></h3>
-<p><strong>This step is not required when importing native Bruker .tdf or .tsf data from .d folders.</strong>
-<a href="../../module_docs/mobilityscanmerging/mobility-scan-merging.html">Mobility scan mering</a></p>
 <h2 id="feature-detection-workflows">Feature detection workflows<a class="headerlink" href="#feature-detection-workflows" title="Permanent link">&para;</a></h2>
 <p>Ion mobility data can be processed in MZmine 3 in two ways. The first few steps are different for
-the two workflows.</p>
+the two workflows (see below).</p>
 <ol>
-<li>LC-IMS-MS workflow via <strong>ADAP Chromatogram builder and IMS expander</strong> <strong>(recommended)</strong><ul>
-<li>build extracted ion chromatograms (rt dimension) from frame spectra<ul>
-<li>requires merged frame spectra (see <a href="../../module_docs/mobilityscanmerging/mobility-scan-merging.html">mobility scan merging</a>)</li>
-</ul>
-</li>
-<li>smoothing (optional)</li>
-<li>resolve retention time dimension</li>
-<li>expand features into mobility dimension</li>
-<li>smoothing (optional)</li>
-<li>resolve mobility dimension</li>
-<li>smoothing (optional)</li>
-</ul>
-</li>
-<li>LC-IMS-MS workflow via <strong>Ion mobility trace builder / Recursive IMS builder</strong><ul>
-<li>directly build ion mobility traces (rt and mobility dimension)</li>
-<li>smoothing (optional)</li>
-<li>resolve retention time dimension</li>
-<li>smoothing (optional)</li>
-<li>resolve mobility dimension</li>
-<li>smoothing (optional)</li>
-</ul>
-</li>
+<li><a href="#lc-ms-workflow-recommended">LC-IMS-MS workflow via <strong>ADAP Chromatogram builder and IMS expander</strong> <strong>(recommended)</strong></a></li>
+<li><a href="#lc-ims-ms-workflow">LC-IMS-MS workflow via <strong>Ion mobility trace builder / Recursive IMS builder</strong></a></li>
 </ol>
 <p>While these lists might seem fairly similar, there are some differences in the processing approach.
 The LC-IMS-MS workflow builds ion mobility traces from the data in the mobility scans, whilst the
@@ -899,19 +787,20 @@ workflow is chosen.</p>
 can be expanded into the mobility dimension.</p>
 <p>For this workflow, generation of summed frame spectra via
 the <a href="../../module_docs/mobilityscanmerging/mobility-scan-merging.html">Mobility scan merging</a> module is a mandatory step, if the data was
-imported from an .mzML file (automatically generated via native Bruker import).</p>
-<ul>
-<li><a href="../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.html">ADAP Chromatogram builder</a></li>
-<li><a href="../../module_docs/smoothing/smoothing.html">Smoothing in retention time dimension (optional)</a></li>
-<li><a href="../../module_docs/localminimumresolver/local-minimum-resolver.html">Resolving in retention time dimension</a></li>
-<li><a href="../../module_docs/imsexpander/ims-expander.html">Expanding EICs in mobility dimension</a></li>
-<li><a href="../../module_docs/smoothing/smoothing.html#mobility-dimension">Smoothing  in mobility dimension (optional)</a></li>
-<li><a href="../../module_docs/localminimumresolver/local-minimum-resolver.html#ion-mobility-data">Resolving in mobility dimension</a></li>
-<li><a href="../../module_docs/smoothing/smoothing.html">Smoothing in rt and mobility dimension (optional)</a></li>
-<li>Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
+imported from an .mzML file (automatically generated via native Bruker import).
+- <a href="../../module_docs/dataimport/data-import.html#lc-ims-ms-data">Data import</a>
+- <a href="../../module_docs/massdetection/mass-detection.html#lc-ims-ms-data">Mass detection</a>
+- <a href="../../module_docs/mobilityscanmerging/mobility-scan-merging.html">Mobility scan merging</a> (mzML data)
+- <a href="../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.html">ADAP Chromatogram builder</a>
+- <a href="../../module_docs/smoothing/smoothing.html">Smoothing in retention time dimension (optional)</a>
+- <a href="../../module_docs/localminimumresolver/local-minimum-resolver.html">Resolving in retention time dimension</a>
+- <a href="../../module_docs/imsexpander/ims-expander.html">Expanding EICs in mobility dimension</a>
+- <a href="../../module_docs/smoothing/smoothing.html#mobility-dimension">Smoothing  in mobility dimension (optional)</a>
+- <a href="../../module_docs/localminimumresolver/local-minimum-resolver.html#ion-mobility-data">Resolving in mobility dimension</a>
+- <a href="../../module_docs/smoothing/smoothing.html">Smoothing in rt and mobility dimension (optional)</a>
+  - Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
 mobility resolving step. If smoother shapes are required, the smoothing can be reapplied afterwards.
-In that case, smoothing can be applied to both dimensions at once.</li>
-</ul>
+In that case, smoothing can be applied to both dimensions at once.</p>
 <h3 id="lc-ims-ms-workflow">LC-IMS-MS workflow<a class="headerlink" href="#lc-ims-ms-workflow" title="Permanent link">&para;</a></h3>
 <p>The LC-IMS-MS workflow will directly
 build <a href="ion-mobility-spectrometry-terminology.html#ion-mobility-trace">ion mobility traces</a> from the raw data in the
@@ -921,21 +810,20 @@ the <a href="../../Raw-data-visualisation.html#chromatogram-plot">Chromatogram v
 are used. In case these are not present, the chromatograms will be blank. Note that feature
 intensities from the LC-IMS-MS workflow might not exactly match the frame chromatograms due to
 summing being executed prior to thresholding (for native Bruker data). Furthermore, multiple isomers
-might hide behind a single chromatographic peak.</p>
-<ul>
-<li><a href="../../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.html">Ion mobility trace builder</a></li>
-<li><a href="../../module_docs/smoothing/smoothing.html">Smoothing in retention time dimension (optional)</a></li>
-<li><a href="../../module_docs/localminimumresolver/local-minimum-resolver.html">Resolving in retention time dimension</a></li>
-<li><a href="../../module_docs/smoothing/smoothing.html#mobility-dimension">Smoothing  in mobility dimension (optional)</a></li>
-<li><a href="../../module_docs/localminimumresolver/local-minimum-resolver.html#ion-mobility-data">Resolving in mobility dimension</a></li>
-<li><a href="../../module_docs/smoothing/smoothing.html">Smoothing in rt and mobility dimension (optional)</a></li>
-<li>Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
+might hide behind a single chromatographic peak.
+- <a href="../../module_docs/dataimport/data-import.html#lc-ims-ms-data">Data import</a>
+- <a href="../../module_docs/massdetection/mass-detection.html#lc-ims-ms-data">Mass detection</a>
+- <a href="../../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.html">Ion mobility trace builder</a>
+- <a href="../../module_docs/smoothing/smoothing.html">Smoothing in retention time dimension (optional)</a>
+- <a href="../../module_docs/localminimumresolver/local-minimum-resolver.html">Resolving in retention time dimension</a>
+- <a href="../../module_docs/smoothing/smoothing.html#mobility-dimension">Smoothing  in mobility dimension (optional)</a>
+- <a href="../../module_docs/localminimumresolver/local-minimum-resolver.html#ion-mobility-data">Resolving in mobility dimension</a>
+- <a href="../../module_docs/smoothing/smoothing.html">Smoothing in rt and mobility dimension (optional)</a>
+  - Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
 mobility resolving step. If smoother shapes are required, the smoothing can be reapplied afterwards.
-In that case, smoothing can be applied to both dimensions at once.</li>
-</ul>
+In that case, smoothing can be applied to both dimensions at once.</p>
 <h2 id="graphical-comparison-of-lc-ms-and-lc-ims-ms-data">Graphical comparison of LC-MS and LC-IMS-MS data<a class="headerlink" href="#graphical-comparison-of-lc-ms-and-lc-ims-ms-data" title="Permanent link">&para;</a></h2>
-<!--- [Data comparison](lc-ms-and-lc-ims-ms-data-comparison.md) -->
-
+<p><a href="lc-ms-and-lc-ims-ms-data-comparison.html">Data comparison</a></p>
 <h2 id="page-contributors">Page Contributors<a class="headerlink" href="#page-contributors" title="Permanent link">&para;</a></h2>
 <p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>SteffenHeu</a></span></p>
 
@@ -944,7 +832,7 @@ In that case, smoothing can be applied to both dimensions at once.</li>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 19, 2022 09:47:29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 19, 2022 12:06:40</span>
       
     
   </small>
