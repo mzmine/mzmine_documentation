@@ -9,7 +9,9 @@ nav:
   - Home page: index.md
   - Main window overview: Main-window-overview.md
   - LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
-  - LC-IMS-MS workflow: workflows/imsworkflow/Ion-mobility-data-processing-workflow.md
+  - LC-IMS-MS workflow:
+      - Workflow: workflows/imsworkflow/Ion-mobility-data-processing-workflow.md
+      - Terminology: workflows/imsworkflow/ion-mobility-spectrometry-terminology.md
   - Module documentations:
       - Data import: module_docs/dataimport/data-import.md
       - Mass detection: module_docs/massdetection/mass-detection.md
