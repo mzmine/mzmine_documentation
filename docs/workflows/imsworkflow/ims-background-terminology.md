@@ -29,10 +29,10 @@ spectrum as in classic LC-MS.
 A "_mobilogram_" represents the intensity of an m/z or m/z range along the mobility axis. A
 _mobilogram_ may be build from multiple frames and summed or built from a single frame.
 
-![mobilogram](../img/imsworkflow/mobilogram.png)
+![mobilogram](mobilogram.png)
 
 ### Ion mobility traces
 
 An "_ion mobility trace_" basically represents a mobility resolved extracted ion chromatogram (EIC).
 
-![trace](../img/imsworkflow/trace.png)
+![trace](trace.png)

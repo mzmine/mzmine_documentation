@@ -10,7 +10,7 @@ Therefore, we recommend optimising the parameters on good EICs and checking the 
 parameters with a noisy EIC. Most of the time, a noisy EIC can be found by sorting the feature table
 by decreasing area.
 
-![](../img/imsworkflow/chromatogramresolving.png)
+![](chromatogramresolving.png)
 
 ### Parameter settings
 
@@ -72,7 +72,7 @@ differences shall be noted. In the screenshot you can also see, that the resolve
 recalculated from the raw data and previously apply smoothing steps are therefore lost and must be
 reapplied if necessary.
 
-![](../img/imsworkflow/mobilityresolving.png)
+![](mobilityresolving.png)
 
 ##### Dimension
 

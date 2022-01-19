@@ -14,7 +14,7 @@ tab._
 
 [2]: The main content pane. Visualisations such as a raw data overview or a feature list can be
 viewed here. This pane can also contain multiple tabs. Every tab can also be opened in a new
-seperate window by right clicking on the header.
+separate window by right-clicking on the header.
 
 ## Main menu
 
