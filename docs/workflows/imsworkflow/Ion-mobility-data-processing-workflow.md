@@ -45,16 +45,17 @@ can be expanded into the mobility dimension.
 For this workflow, generation of summed frame spectra via
 the [Mobility scan merging](../../module_docs/mobilityscanmerging/mobility-scan-merging.md) module is a mandatory step, if the data was
 imported from an .mzML file (automatically generated via native Bruker import).
-  - [Data import](../../module_docs/dataimport/data-import.md#lc-ims-ms-data)
-  - [Mass detection](../../module_docs/massdetection/mass-detection.md#lc-ims-ms-data)
-  - [Mobility scan merging](../../module_docs/mobilityscanmerging/mobility-scan-merging.md) (mzML data)
-  - [ADAP Chromatogram builder](../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md)
-  - [Smoothing in retention time dimension (optional)](../../module_docs/smoothing/smoothing.md)
-  - [Resolving in retention time dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md)
-  - [Expanding EICs in mobility dimension](../../module_docs/imsexpander/ims-expander.md)
-  - [Smoothing  in mobility dimension (optional)](../../module_docs/smoothing/smoothing.md#mobility-dimension)
-  - [Resolving in mobility dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md#ion-mobility-data)
-  - [Smoothing in rt and mobility dimension (optional)](../../module_docs/smoothing/smoothing.md)
+
+  - [Data import](../../module_docs/dataimport/data-import.md#lc-ims-ms-data)  
+  - [Mass detection](../../module_docs/massdetection/mass-detection.md#lc-ims-ms-data)  
+  - [Mobility scan merging](../../module_docs/mobilityscanmerging/mobility-scan-merging.md) (mzML data)  
+  - [ADAP Chromatogram builder](../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md)  
+  - [Smoothing in retention time dimension (optional)](../../module_docs/smoothing/smoothing.md)  
+  - [Resolving in retention time dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md)  
+  - [Expanding EICs in mobility dimension](../../module_docs/imsexpander/ims-expander.md)  
+  - [Smoothing  in mobility dimension (optional)](../../module_docs/smoothing/smoothing.md#mobility-dimension)  
+  - [Resolving in mobility dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md#ion-mobility-data)  
+  - [Smoothing in rt and mobility dimension (optional)](../../module_docs/smoothing/smoothing.md)  
     - Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
 mobility resolving step. If smoother shapes are required, the smoothing can be reapplied afterwards.
 In that case, smoothing can be applied to both dimensions at once.
@@ -70,14 +71,15 @@ are used. In case these are not present, the chromatograms will be blank. Note t
 intensities from the LC-IMS-MS workflow might not exactly match the frame chromatograms due to
 summing being executed prior to thresholding (for native Bruker data). Furthermore, multiple isomers
 might hide behind a single chromatographic peak.
-  - [Data import](../../module_docs/dataimport/data-import.md#lc-ims-ms-data)
-  - [Mass detection](../../module_docs/massdetection/mass-detection.md#lc-ims-ms-data)
-  - [Ion mobility trace builder](../../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.md)
-  - [Smoothing in retention time dimension (optional)](../../module_docs/smoothing/smoothing.md)
-  - [Resolving in retention time dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md)
-  - [Smoothing  in mobility dimension (optional)](../../module_docs/smoothing/smoothing.md#mobility-dimension)
-  - [Resolving in mobility dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md#ion-mobility-data)
-  - [Smoothing in rt and mobility dimension (optional)](../../module_docs/smoothing/smoothing.md)
+
+  - [Data import](../../module_docs/dataimport/data-import.md#lc-ims-ms-data)  
+  - [Mass detection](../../module_docs/massdetection/mass-detection.md#lc-ims-ms-data)  
+  - [Ion mobility trace builder](../../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.md)  
+  - [Smoothing in retention time dimension (optional)](../../module_docs/smoothing/smoothing.md)  
+  - [Resolving in retention time dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md)  
+  - [Smoothing  in mobility dimension (optional)](../../module_docs/smoothing/smoothing.md#mobility-dimension)  
+  - [Resolving in mobility dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md#ion-mobility-data)  
+  - [Smoothing in rt and mobility dimension (optional)](../../module_docs/smoothing/smoothing.md)  
     - Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
 mobility resolving step. If smoother shapes are required, the smoothing can be reapplied afterwards.
 In that case, smoothing can be applied to both dimensions at once.
