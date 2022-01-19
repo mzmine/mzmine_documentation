@@ -1,97 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/index.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/Contribute/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/Contribute.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/Main-window-overview/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/Main-window-overview.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/Raw-data-visualisation/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/Raw-data-visualisation.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/performance/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/performance.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/wikiacknowledgements/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/wikiacknowledgements.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/adapchromatogrambuilder/adap-chromatogram-builder/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/adapchromatogrambuilder/adap-chromatogram-builder.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/ccs_calibration/ccs_calibration/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/ccs_calibration/ccs_calibration.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/dataimport/data-import/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/dataimport/data-import.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/imsexpander/ims-expander/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/imsexpander/ims-expander.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/localminimumresolver/local-minimum-resolver/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/localminimumresolver/local-minimum-resolver.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/massdetection/mass-detection/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/massdetection/mass-detection.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/mobilityscanmerging/mobility-scan-merging/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/mobilityscanmerging/mobility-scan-merging.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/smoothing/smoothing/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/smoothing/smoothing.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/workflows/imsworkflow/Ion-mobility-data-processing-workflow/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/workflows/imsworkflow/Ion-mobility-data-processing-workflow.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/workflows/imsworkflow/ims-background-terminology/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/workflows/imsworkflow/ion-mobility-spectrometry-terminology.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/workflows/lcmsworkflow/lcms-workflow/</loc>
+         <loc>https://mzmine.github.io/mzmine_documentation/workflows/lcmsworkflow/lcms-workflow.html</loc>
          <lastmod>2022-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
