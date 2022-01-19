@@ -8,8 +8,8 @@ use_directory_urls: false
 nav:
   - Home page: index.md
   - Main window overview: Main-window-overview.md
-  - LC-MS workflow: wf_featuredetection/lcmsworkflow/lcms-workflow.md
-  - LC-IMS-MS workflow: wf_featuredetection/imsworkflow/Ion-mobility-data-processing-workflow.md
+  - LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
+  - LC-IMS-MS workflow: workflows/imsworkflow/Ion-mobility-data-processing-workflow.md
   - Module documentations:
       - Data import: module_docs/dataimport/data-import.md
       - Mass detection: module_docs/massdetection/mass-detection.md
