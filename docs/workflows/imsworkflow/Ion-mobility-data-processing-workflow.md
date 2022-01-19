@@ -13,46 +13,13 @@
 
 ***
 
-## Background information and terminology
-
-***
-
-## Raw data processing
-
-### Raw data import
-
-[Data import](../../module_docs/dataimport/data-import.md#lc-ims-ms-data)
-
-### Mass detection
-
-[Mass detection](../../module_docs/massdetection/mass-detection.md#lc-ims-ms-data)
-
-### Mobility scan merging
-
-**This step is not required when importing native Bruker .tdf or .tsf data from .d folders.**
-[Mobility scan mering](../../module_docs/mobilityscanmerging/mobility-scan-merging.md)
-
 ## Feature detection workflows
 
 Ion mobility data can be processed in MZmine 3 in two ways. The first few steps are different for
-the two workflows.
+the two workflows (see below).
 
-1. LC-IMS-MS workflow via **ADAP Chromatogram builder and IMS expander** **(recommended)**
-    - build extracted ion chromatograms (rt dimension) from frame spectra
-        - requires merged frame spectra (see [mobility scan merging](../../module_docs/mobilityscanmerging/mobility-scan-merging.md))
-    - smoothing (optional)
-    - resolve retention time dimension
-    - expand features into mobility dimension
-    - smoothing (optional)
-    - resolve mobility dimension
-    - smoothing (optional)
-2. LC-IMS-MS workflow via **Ion mobility trace builder / Recursive IMS builder**
-    - directly build ion mobility traces (rt and mobility dimension)
-    - smoothing (optional)
-    - resolve retention time dimension
-    - smoothing (optional)
-    - resolve mobility dimension
-    - smoothing (optional)
+1. [LC-IMS-MS workflow via **ADAP Chromatogram builder and IMS expander** **(recommended)**](#lc-ms-workflow-recommended)
+2. [LC-IMS-MS workflow via **Ion mobility trace builder / Recursive IMS builder**](#lc-ims-ms-workflow)
 
 While these lists might seem fairly similar, there are some differences in the processing approach.
 The LC-IMS-MS workflow builds ion mobility traces from the data in the mobility scans, whilst the
@@ -78,7 +45,9 @@ can be expanded into the mobility dimension.
 For this workflow, generation of summed frame spectra via
 the [Mobility scan merging](../../module_docs/mobilityscanmerging/mobility-scan-merging.md) module is a mandatory step, if the data was
 imported from an .mzML file (automatically generated via native Bruker import).
-
+- [Data import](../../module_docs/dataimport/data-import.md#lc-ims-ms-data)
+- [Mass detection](../../module_docs/massdetection/mass-detection.md#lc-ims-ms-data)
+- [Mobility scan merging](../../module_docs/mobilityscanmerging/mobility-scan-merging.md) (mzML data)
 - [ADAP Chromatogram builder](../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md)
 - [Smoothing in retention time dimension (optional)](../../module_docs/smoothing/smoothing.md)
 - [Resolving in retention time dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md)
@@ -101,7 +70,8 @@ are used. In case these are not present, the chromatograms will be blank. Note t
 intensities from the LC-IMS-MS workflow might not exactly match the frame chromatograms due to
 summing being executed prior to thresholding (for native Bruker data). Furthermore, multiple isomers
 might hide behind a single chromatographic peak.
-
+- [Data import](../../module_docs/dataimport/data-import.md#lc-ims-ms-data)
+- [Mass detection](../../module_docs/massdetection/mass-detection.md#lc-ims-ms-data)
 - [Ion mobility trace builder](../../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.md)
 - [Smoothing in retention time dimension (optional)](../../module_docs/smoothing/smoothing.md)
 - [Resolving in retention time dimension](../../module_docs/localminimumresolver/local-minimum-resolver.md)
@@ -115,7 +85,7 @@ In that case, smoothing can be applied to both dimensions at once.
 
 ## Graphical comparison of LC-MS and LC-IMS-MS data
 
-<!--- [Data comparison](lc-ms-and-lc-ims-ms-data-comparison.md) -->
+[Data comparison](lc-ms-and-lc-ims-ms-data-comparison.md)
 
 ## Page Contributors
 
