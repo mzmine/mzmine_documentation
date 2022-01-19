@@ -788,17 +788,17 @@ can be expanded into the mobility dimension.</p>
 <p>For this workflow, generation of summed frame spectra via
 the <a href="../../module_docs/mobilityscanmerging/mobility-scan-merging.html">Mobility scan merging</a> module is a mandatory step, if the data was
 imported from an .mzML file (automatically generated via native Bruker import).
-- <a href="../../module_docs/dataimport/data-import.html#lc-ims-ms-data">Data import</a>
-- <a href="../../module_docs/massdetection/mass-detection.html#lc-ims-ms-data">Mass detection</a>
-- <a href="../../module_docs/mobilityscanmerging/mobility-scan-merging.html">Mobility scan merging</a> (mzML data)
-- <a href="../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.html">ADAP Chromatogram builder</a>
-- <a href="../../module_docs/smoothing/smoothing.html">Smoothing in retention time dimension (optional)</a>
-- <a href="../../module_docs/localminimumresolver/local-minimum-resolver.html">Resolving in retention time dimension</a>
-- <a href="../../module_docs/imsexpander/ims-expander.html">Expanding EICs in mobility dimension</a>
-- <a href="../../module_docs/smoothing/smoothing.html#mobility-dimension">Smoothing  in mobility dimension (optional)</a>
-- <a href="../../module_docs/localminimumresolver/local-minimum-resolver.html#ion-mobility-data">Resolving in mobility dimension</a>
-- <a href="../../module_docs/smoothing/smoothing.html">Smoothing in rt and mobility dimension (optional)</a>
-  - Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
+  - <a href="../../module_docs/dataimport/data-import.html#lc-ims-ms-data">Data import</a>
+  - <a href="../../module_docs/massdetection/mass-detection.html#lc-ims-ms-data">Mass detection</a>
+  - <a href="../../module_docs/mobilityscanmerging/mobility-scan-merging.html">Mobility scan merging</a> (mzML data)
+  - <a href="../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.html">ADAP Chromatogram builder</a>
+  - <a href="../../module_docs/smoothing/smoothing.html">Smoothing in retention time dimension (optional)</a>
+  - <a href="../../module_docs/localminimumresolver/local-minimum-resolver.html">Resolving in retention time dimension</a>
+  - <a href="../../module_docs/imsexpander/ims-expander.html">Expanding EICs in mobility dimension</a>
+  - <a href="../../module_docs/smoothing/smoothing.html#mobility-dimension">Smoothing  in mobility dimension (optional)</a>
+  - <a href="../../module_docs/localminimumresolver/local-minimum-resolver.html#ion-mobility-data">Resolving in mobility dimension</a>
+  - <a href="../../module_docs/smoothing/smoothing.html">Smoothing in rt and mobility dimension (optional)</a>
+    - Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
 mobility resolving step. If smoother shapes are required, the smoothing can be reapplied afterwards.
 In that case, smoothing can be applied to both dimensions at once.</p>
 <h3 id="lc-ims-ms-workflow">LC-IMS-MS workflow<a class="headerlink" href="#lc-ims-ms-workflow" title="Permanent link">&para;</a></h3>
@@ -811,15 +811,15 @@ are used. In case these are not present, the chromatograms will be blank. Note t
 intensities from the LC-IMS-MS workflow might not exactly match the frame chromatograms due to
 summing being executed prior to thresholding (for native Bruker data). Furthermore, multiple isomers
 might hide behind a single chromatographic peak.
-- <a href="../../module_docs/dataimport/data-import.html#lc-ims-ms-data">Data import</a>
-- <a href="../../module_docs/massdetection/mass-detection.html#lc-ims-ms-data">Mass detection</a>
-- <a href="../../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.html">Ion mobility trace builder</a>
-- <a href="../../module_docs/smoothing/smoothing.html">Smoothing in retention time dimension (optional)</a>
-- <a href="../../module_docs/localminimumresolver/local-minimum-resolver.html">Resolving in retention time dimension</a>
-- <a href="../../module_docs/smoothing/smoothing.html#mobility-dimension">Smoothing  in mobility dimension (optional)</a>
-- <a href="../../module_docs/localminimumresolver/local-minimum-resolver.html#ion-mobility-data">Resolving in mobility dimension</a>
-- <a href="../../module_docs/smoothing/smoothing.html">Smoothing in rt and mobility dimension (optional)</a>
-  - Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
+  - <a href="../../module_docs/dataimport/data-import.html#lc-ims-ms-data">Data import</a>
+  - <a href="../../module_docs/massdetection/mass-detection.html#lc-ims-ms-data">Mass detection</a>
+  - <a href="../../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.html">Ion mobility trace builder</a>
+  - <a href="../../module_docs/smoothing/smoothing.html">Smoothing in retention time dimension (optional)</a>
+  - <a href="../../module_docs/localminimumresolver/local-minimum-resolver.html">Resolving in retention time dimension</a>
+  - <a href="../../module_docs/smoothing/smoothing.html#mobility-dimension">Smoothing  in mobility dimension (optional)</a>
+  - <a href="../../module_docs/localminimumresolver/local-minimum-resolver.html#ion-mobility-data">Resolving in mobility dimension</a>
+  - <a href="../../module_docs/smoothing/smoothing.html">Smoothing in rt and mobility dimension (optional)</a>
+    - Some recognised features might have rather noisy signals (in rt and mobility dimension) after the
 mobility resolving step. If smoother shapes are required, the smoothing can be reapplied afterwards.
 In that case, smoothing can be applied to both dimensions at once.</p>
 <h2 id="graphical-comparison-of-lc-ms-and-lc-ims-ms-data">Graphical comparison of LC-MS and LC-IMS-MS data<a class="headerlink" href="#graphical-comparison-of-lc-ms-and-lc-ims-ms-data" title="Permanent link">&para;</a></h2>
@@ -832,7 +832,7 @@ In that case, smoothing can be applied to both dimensions at once.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 19, 2022 12:06:40</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 19, 2022 12:23:10</span>
       
     
   </small>
