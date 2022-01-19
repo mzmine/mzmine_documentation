@@ -19,8 +19,8 @@ Here you can find general processing guides, module documentations and video tut
 - [Chemistry Development Kit](http://cdk.sourceforge.net) - Isotope pattern and molecular calculations
 - [Freehep](http://java.freehep.org) - EMF image export
 - [Google Guava](https://code.google.com/p/guava-libraries) - Utility classes
-- [JavaHelp](http://javahelp.dev.java.net)- Help system
-- [JChemPaint](http://jchempaint.github.com) - 2D molecule visualization
+- [JDK Documentation](https://dev.java)
+- [JChemPaint](https://jchempaint.github.io/) - 2D molecule visualization
 - [JFreeChart](http://www.jfree.org/jfreechart) - TIC, Spectra and 2D visualizers
 - [JMol](http://jmol.sourceforge.net) - 3D molecule visualization
 - [jmzml](https://code.google.com/p/jmzml) - mzML file import

@@ -3,6 +3,7 @@ site_url: https://mzmine.github.io/mzmine_documentation/
 edit_uri: https://github.com/mzmine/mzmine_documentation/edit/master/docs/
 repo_name: mzmine/mzmine_documentation
 repo_url: https://github.com/mzmine/mzmine_documentation
+use_directory_urls: false
 
 nav:
   - Home page: index.md
@@ -21,6 +22,9 @@ nav:
       - CCS calibration: module_docs/ccs_calibration/ccs_calibration.md
   - Visualisation:
       - Raw data visualisation: Raw-data-visualisation.md
+  - Additional IMS resources:
+      - Terminology: workflows/imsworkflow/ion-mobility-spectrometry-terminology.md
+      - Data format insight: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
   - Performance options: performance.md
   - Contribute: Contribute.md
   - Acknowledgements: wikiacknowledgements.md
@@ -34,6 +38,8 @@ plugins:
       show_contribution: true
   - git-revision-date-localized:
       type: datetime
+  - with-pdf:
+      output_path: ../documentation.pdf
 
 markdown_extensions:
   - toc:
