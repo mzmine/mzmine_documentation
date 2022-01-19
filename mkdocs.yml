@@ -40,6 +40,10 @@ plugins:
       type: datetime
   - with-pdf:
       output_path: documentation.pdf
+      author: The MZmine Community
+      cover_title: MZmine 3
+      cover_subtitle: Documentation
+      cover_logo: docs/img/MZmine_logo_CMYK.eps
 
 markdown_extensions:
   - toc:
