@@ -31,6 +31,16 @@ Please describe the change you are making.
 
 ![](img/contribute/openpr.jpg)
 
+## Creating a new page
+
+**Follow steps 1 - 3.**
+
+**Navigate to mzmine_documentation/docs in your fork and create a new file**
+
+![new_file](img/contribute/newfile.jpg)
+
+**Follow steps 4 - 7.**
+
 ## Page Contributors
 
 {{ git_page_authors }}
