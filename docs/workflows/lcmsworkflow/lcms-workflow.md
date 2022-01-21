@@ -1,6 +1,8 @@
 # LC-MS Workflow
 The following workflow is intended to turn raw LC-MS data into a table of all the detected featuresand the corrisponding signal intensity recorded in each sample. A simplified version of the workflow is shown below:
 
+![workflow-image](https://github.com/titodamiani/mzmine_documentation/blob/215a9bf2df1647c4588cfd978b7e834acbe548b5/docs/workflows/lcmsworkflow/workflow_image.png)
+
 
 ## Raw data processing
   
