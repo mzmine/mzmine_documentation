@@ -16,16 +16,11 @@ Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can
 
 
 ## Feature processing
-The goal of the "Feature processing" is to turn into features (i.e. RT and m/z). The first step is to build the so-called extracted ion
-chromatograms (EICs) of each detected mass.
-. This step can be executed by the **ADAP chromatogram builder** or **Grid
-mass**.
+The goal of the "Feature processing" is to turn into features (i.e. RT and m/z).
 
-The ADAP chromatogram builde is arguably the most widely used.
-
-### ADAP chromatogram builder
-
-[ADAP Documentation](../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md)
+### Chromatogram building
+The first step in the "Feature processing" is to build the so-called extracted ion chromatograms (EICs) for each detected mass (see "Mass detection").
+There are two modules in MZmine 3 that can fulfil this task: [ADAP chromatogram builder](../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md) (widely used) and **Grid mass** (create docs).
 
 ### Smoothing in retention time dimension (optional)
 
