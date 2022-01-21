@@ -1,23 +1,27 @@
 # LC-MS Workflow
-The following workflow is intended to turn raw LC-MS data into a table of all the detected featuresand the corrisponding signal intensity recorded in each sample. A simplified version of the workflow is shown below:
+The following workflow is intended to turn raw LC-MS data into a table of all the detected features and corrisponding signal intensity detected in each sample. A schematic representation of the workflow is shown below:
 
-![workflow-image](https://github.com/titodamiani/mzmine_documentation/blob/215a9bf2df1647c4588cfd978b7e834acbe548b5/docs/workflows/lcmsworkflow/workflow_image.png)
+![workflow-image](https://github.com/titodamiani/mzmine_documentation/blob/e90deb3ccb11b18c94f7f27ed76f71c818640091/docs/workflows/lcmsworkflow/workflow-image.png)
 
 
 ## Raw data processing
+The raw data processing consists of essentially two steps: [Data import](../../module_docs/dataimport/data-import.md#lc-ms-data) and [Mass detection](../../module_docs/massdetection/mass-detection.md)
   
 ### Raw data import
-Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in MZmine 3. All the supported formats are listed here (LINK to Doc). For more details see [Data import module](../../module_docs/dataimport/data-import.md#lc-ms-data).
+Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in MZmine 3. All the supported formats are listed here (LINK to Doc). For more details see the [Data import](../../module_docs/dataimport/data-import.md#lc-ms-data) module.
 
 ### Mass detection
+- Obtain a list of all the mass that were detected
+- For more details see the [Mass detection](../../module_docs/massdetection/mass-detection.md) module.
 
-[Mass detection](../../module_docs/massdetection/mass-detection.md)
 
 ## Feature processing
-
-After raw data processing, the first step of feature detection is building extracted ion
-chromatograms (EICs). This step can be executed by the **ADAP chromatogram builder** or **Grid
+The goal of the "Feature processing" is to turn into features (i.e. RT and m/z). The first step is to build the so-called extracted ion
+chromatograms (EICs) of each detected mass.
+. This step can be executed by the **ADAP chromatogram builder** or **Grid
 mass**.
+
+The ADAP chromatogram builde is arguably the most widely used.
 
 ### ADAP chromatogram builder
 
