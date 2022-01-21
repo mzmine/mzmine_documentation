@@ -1,11 +1,11 @@
 # LC-MS Workflow
-The following workflow is intended to turn raw LC-MS data into a table of detected features. See <INSERT LINK> for the supported data formats.
+The following workflow is intended to turn raw LC-MS data into a table of all the detected featuresand the corrisponding signal intensity recorded in each sample. A simplified version of the workflow is shown below:
+
 
 ## Raw data processing
-
+  
 ### Raw data import
-
-[Data import](../../module_docs/dataimport/data-import.md#lc-ms-data)
+Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in MZmine 3. All the supported formats are listed here (LINK to Doc). For more details see [Data import module](../../module_docs/dataimport/data-import.md#lc-ms-data).
 
 ### Mass detection
 
