@@ -1,5 +1,5 @@
 # LC-MS Workflow
-This is a test
+The following workflow is intended to turn raw LC-MS data into a table of detected features. See <INSERT LINK> for the supported data formats.
 
 ## Raw data processing
 
