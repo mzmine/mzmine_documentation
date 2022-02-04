@@ -2,7 +2,13 @@
 
 ## Background
 Ion-mobility mass-spectrometry, here simply referred to as ion-mobility (IM), [...].
-IM separation is normally performed on a millisecond timescale by modern devices. Thus, it nicely fits in-between LC separation (~seconds timescale) and MS detection of TOF instruments (~microseconds timescale). This allows LC-IM-MS insturments to acqurie several MS spectra during each [accumulation](#frames-and-mobility-scans), without incurring sensitivity loss. For example, assuming a typical 100 µs MS-acquisition time of QTOF instruments, up to 1000 spectra can be recorded within 100 ms of IM separation. Therefore, as opposed to LC-MS, multiple MS (or MS2) spectra are associated to a each RT in LC-IM-MS data. A more detailed explanation of LC-MS and LC-IMS-MS raw data structure is provided [here](../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md).
+Modern devieces are able to perform IM separation on a millisecond timescale, typically within 10 to 100 ms. Thus, IM nicely fits in-between LC separation (~seconds timescale) and MS detection of TOF instruments (~microseconds timescale). This allows LC-IM-MS insturments to acqurie several MS spectra during each [accumulation](#frames-and-mobility-scans), without incurring sensitivity loss. For example, assuming a typical 100 µs MS-acquisition time of QTOF analyzers, around 1000 spectra can be recorded within 100 ms of IM separation. Therefore, as opposed to LC-MS, multiple MS (or MS2) spectra are associated to a each RT in LC-IM-MS data. A more detailed explanation of LC-MS and LC-IMS-MS raw data structure is provided [here](../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md).
+
+### Trapped ion mobility spectrometry
+Trapped ion mobility spectrometry (TIMS) (25, 26) reverses the concept of traditional drift tube ion mobility by bringing ions to a rest at different positions in an ion tunnel device, balanced in an electrical field against a constant gas stream.
+
+### Time-dispersve ion mobility spectrometry
+Todo
 
 
 ## Terminology
