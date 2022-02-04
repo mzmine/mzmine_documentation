@@ -1,5 +1,6 @@
 # LC-IMS-MS Workflow Overview
-Since LC-IM-MS data is more complex due to the additional dimension when compared to regular LC-MS data, some basic terminology is clarified [here](../../ion-mobility-terminology.md#frames-and-mobility-scans) before going into details of the processing steps.
+Compared to regular LC-MS, LC-IM-MS data is more complex due to the additional separation dimension. Since some terms might not be straightforward for new users, a basic explanation of IM separation principles and the terminology used within this documentation is provided [here](../../terminology/ion-mobility-terminology.md).
+
 
 ## Supported formats
 
