@@ -1,5 +1,13 @@
 # Terminology
 
+### Full scan acqusition mode
+In full scan acquisition mode, the mass spectrometer acquires [...]. Full scan spectra are often, as well as in MZmine, referred to as MS spectra.
+
+### MS2 data-dependent acqusition mode
+In data-dependent acquisition (DDA) schemes, the mass spectrometer detects 'suitable' precursor ions in each MS scan and selects them for fragmentation in consecutive MS2 scans.
+- 'Cycle time' and 'topN' acquisition schemes
+
+
 ### Mass
 ...
 
