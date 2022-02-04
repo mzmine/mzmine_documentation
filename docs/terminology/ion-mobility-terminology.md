@@ -6,6 +6,7 @@ Modern devieces are able to perform IM separation on a millisecond timescale, ty
 
 ### Trapped ion mobility spectrometry
 Trapped ion mobility spectrometry (TIMS) (25, 26) reverses the concept of traditional drift tube ion mobility by bringing ions to a rest at different positions in an ion tunnel device, balanced in an electrical field against a constant gas stream.
+Video: https://www.youtube.com/watch?v=cWjz32wky2A
 
 ### Time-dispersve ion mobility spectrometry
 Todo
