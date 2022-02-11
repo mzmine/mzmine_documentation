@@ -7,7 +7,7 @@ References:
 - 10.1039/9781788019880-00232
 - 10.1007/978-1-0716-0239-3_3
 - 10.1016/bs.coac.2018.08.003
-ROMAN IS AWESOME
+
 ## Raw data processing
 The raw data processing consists of essentially two steps: [Data import](../../module_docs/dataimport/data-import.md#lc-ms-data) and [Mass detection](../../module_docs/massdetection/mass-detection.md)
   
