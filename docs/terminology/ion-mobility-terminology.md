@@ -15,7 +15,7 @@ Time-dispersve IM devices include "traditional" drift tube (DTIMS) and travellin
 
 ### Accumulations, Mobility Scans and Frames
 
-Altough mainly used for TIMS, the term "_accumulation_" refers to the pack of ions gathered at the head of the IM device prior to the release and separation in the IM cell. As explained [above](#background), since the accumulation-separation cycle typically last ~100 ms, multiple MS spectra (referred to as "_mobility scans_" in MZmine) are acquired during each cycle. The set of _mobility scans_ collected during each IM separation constitutes a "_frame_". A _frame_ can be seen as the IM separation of a single _accumulation_, along which multiple MS spectra are collected. Several _frames_ are contained within one LC peak. Thus, the frame number are thus a natural unit to measure chromatographic RT. See [here](../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md) for more details.
+Altough mainly used for TIMS, the term "_accumulation_" refers to the pack of ions gathered at the head of the IM device prior to the release and separation in the IM cell. As explained [above](#background), since the accumulation-separation cycle typically last ~100 ms, multiple MS spectra (referred to as "_mobility scans_" in MZmine) are acquired during each cycle. The set of _mobility scans_ collected during each IM separation constitutes a "_frame_". A _frame_ can be seen as the IM separation of a single _accumulation_, along which multiple MS spectra are collected. Several _frames_ are contained within one LC peak. Thus, the frame number are a natural unit to measure chromatographic RT. See [here](../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md) for more details.
 
 --FIGURE HERE--
 
