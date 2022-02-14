@@ -20,9 +20,11 @@ Note that this is the only panel that does not possess a cursor as [...].
 
 ## Mobilogram chart [4]
 Todo
+The signal intensity is displayed as a continuous colour scale.
 
 ## Frame heatmap [5]
 Todo
+The signal intensity is displayed as a continuous colour scale.
 
 ## Ion trace chart [6]
 Todo
