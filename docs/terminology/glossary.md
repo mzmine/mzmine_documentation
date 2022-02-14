@@ -8,6 +8,9 @@ In data-dependent acquisition (DDA) schemes, the mass spectrometer detects 'suit
 - 'Cycle time' and 'topN' acquisition schemes
 
 
+### Total ion current chromatogram
+The total ion current (TIC) chromatogram is [...]
+
 ### Base peak chromatogram
 The base peak chromatogram (BPC) is [...]
 
