@@ -42,7 +42,7 @@ The "detected" features in each ﬁle are listed in the so-called "feature lists
 
 ### De-isotoping
 - Remove features produced by natural isotopes
-- For more details see the [De-isotoping](directory/de-isotoping.md) module.
+- For more details see the De-isotoping module (add link).
 
 ### Gap-filling
 Gap-filling can be performed on the aligned feature lists to cope with missing features that might be artifacts of the feature-detection process.
