@@ -1,4 +1,6 @@
 # LC-IMS-MS Workflow Overview
+Compared to regular LC-MS, LC-IM-MS data is more complex due to the additional separation dimension. Since some terms might not be straightforward for new users, a basic explanation of IM separation principles and the terminology used within this documentation is provided [here](../../terminology/ion-mobility-terminology.md).
+
 
 ## Supported formats
 
@@ -63,7 +65,7 @@ In that case, smoothing can be applied to both dimensions at once.
 ### LC-IMS-MS workflow
 
 The LC-IMS-MS workflow will directly
-build [ion mobility traces](ion-mobility-spectrometry-terminology.md#ion-mobility-trace) from the raw data in the
+build [ion mobility traces](../../terminology/ion-mobility-terminology.md#ion-mobility-trace) from the raw data in the
 mobility scans. This workflow does not necessarily require summed frame spectra. However, if
 extracted ion chromatograms shall be visualized via
 the [Chromatogram visualizer](../../Raw-data-visualisation.md#chromatogram-plot), the frame intensities

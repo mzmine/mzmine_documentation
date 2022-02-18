@@ -23,7 +23,7 @@ nav:
   - Visualisation:
       - Raw data visualisation: Raw-data-visualisation.md
   - Additional IMS resources:
-      - Terminology: workflows/imsworkflow/ion-mobility-spectrometry-terminology.md
+      - Terminology: terminology/ion-mobility-terminology.md
       - Data format insight: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
   - Performance options: performance.md
   - Contribute: Contribute.md
