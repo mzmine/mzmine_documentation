@@ -2,6 +2,8 @@
 
 Here you can find general processing guides, module documentations and video tutorials.
 
+Want to get started with MZmine 3? Check our [Getting started](getting_started.md) page!
+
 [Main window overview](Main-window-overview.md)
 
 [Performance options](performance.md)
