@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/workflows/lcmsworkflow/lcms-workflow.html">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.11">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.50e68009.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e8d9bf0c.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -302,8 +302,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adap-chromatogram-builder" class="md-nav__link">
-    ADAP chromatogram builder
+  <a href="#chromatogram-building" class="md-nav__link">
+    Chromatogram building
   </a>
   
 </li>
@@ -318,6 +318,20 @@
           <li class="md-nav__item">
   <a href="#feature-resolving" class="md-nav__link">
     Feature resolving
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-isotoping" class="md-nav__link">
+    De-isotoping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-filling" class="md-nav__link">
+    Gap-filling
   </a>
   
 </li>
@@ -599,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../imsworkflow/ion-mobility-spectrometry-terminology.html" class="md-nav__link">
+      <a href="../../terminology/ion-mobility-terminology.html" class="md-nav__link">
         Terminology
       </a>
     </li>
@@ -734,8 +748,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adap-chromatogram-builder" class="md-nav__link">
-    ADAP chromatogram builder
+  <a href="#chromatogram-building" class="md-nav__link">
+    Chromatogram building
   </a>
   
 </li>
@@ -750,6 +764,20 @@
           <li class="md-nav__item">
   <a href="#feature-resolving" class="md-nav__link">
     Feature resolving
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-isotoping" class="md-nav__link">
+    De-isotoping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gap-filling" class="md-nav__link">
+    Gap-filling
   </a>
   
 </li>
@@ -783,31 +811,52 @@
 </a>
 
 
+
 <h1 id="lc-ms-workflow">LC-MS Workflow<a class="headerlink" href="#lc-ms-workflow" title="Permanent link">&para;</a></h1>
+<p>The workflow proposed herein is intended as a general pipeline for untargeted LC-MS (or LC−MS/MS) data preprocessing. The main goal is essentially to turn the highly-complex LC-MS raw data into a list of features, and corresponding signal intensity, detected across the analysed samples. Such feature lists can then be exported for furhter downstream analysis (e.g., identification, search against spectral libraries, statistical analysis, etc.). A schematic representation of the workflow is shown below:</p>
+<p><img alt="workflow-image" src="workflow-image.png" /></p>
+<p>References:
+- 10.1039/9781788019880-00232
+- 10.1007/978-1-0716-0239-3_3
+- 10.1016/bs.coac.2018.08.003</p>
 <h2 id="raw-data-processing">Raw data processing<a class="headerlink" href="#raw-data-processing" title="Permanent link">&para;</a></h2>
+<p>The raw data processing consists of essentially two steps: <a href="../../module_docs/dataimport/data-import.html#lc-ms-data">Data import</a> and <a href="../../module_docs/massdetection/mass-detection.html">Mass detection</a></p>
 <h3 id="raw-data-import">Raw data import<a class="headerlink" href="#raw-data-import" title="Permanent link">&para;</a></h3>
-<p><a href="../../module_docs/dataimport/data-import.html#lc-ms-data">Data import</a></p>
+<p>Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in MZmine 3. All the supported formats are listed here (LINK to Doc). For more details see the <a href="../../module_docs/dataimport/data-import.html#lc-ms-data">Data import</a> module.</p>
 <h3 id="mass-detection">Mass detection<a class="headerlink" href="#mass-detection" title="Permanent link">&para;</a></h3>
-<p><a href="../../module_docs/massdetection/mass-detection.html">Mass detection</a></p>
+<p>This step produces a list (referred to as "mass list") of the m/z values found in each MS scan across the LC run that exceed a user-defined threeshold (i.e. noise level). For more details see the <a href="../../module_docs/massdetection/mass-detection.html">Mass detection</a> module.</p>
 <h2 id="feature-processing">Feature processing<a class="headerlink" href="#feature-processing" title="Permanent link">&para;</a></h2>
-<p>After raw data processing, the first step of feature detection is building extracted ion
-chromatograms (EICs). This step can be executed by the <strong>ADAP chromatogram builder</strong> or <strong>Grid
-mass</strong>.</p>
-<h3 id="adap-chromatogram-builder">ADAP chromatogram builder<a class="headerlink" href="#adap-chromatogram-builder" title="Permanent link">&para;</a></h3>
-<p><a href="../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.html">ADAP Documentation</a></p>
+<p>The goal of the "Feature processing" is to obtain a list of all the detected features (characterized by a RT and m/z value) from the raw LC-MS data.</p>
+<h3 id="chromatogram-building">Chromatogram building<a class="headerlink" href="#chromatogram-building" title="Permanent link">&para;</a></h3>
+<p>The first step in the "Feature processing" is to build the so-called extracted ion chromatograms (EICs) for each detected mass (see "Mass detection").
+There are two modules in MZmine 3 that can fulfil this task: <a href="../../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.html">ADAP chromatogram builder</a> (widely used) and <strong>Grid mass</strong> (create docs).</p>
+<p>The "detected" features in each ﬁle are listed in the so-called "feature lists", which are then further processed.</p>
+<p>(e.g.  to  ) and aligned to connect correspond-ing features across all samples.</p>
 <h3 id="smoothing-in-retention-time-dimension-optional">Smoothing in retention time dimension (optional)<a class="headerlink" href="#smoothing-in-retention-time-dimension-optional" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Optional, depends on the LC peak shape</li>
+<li>For more details see the <a href="../../module_docs/massdetection/mass-detection.html">Mass detection</a> module.</li>
+</ul>
 <p><a href="../../module_docs/smoothing/smoothing.html">Smoothing</a></p>
 <h3 id="feature-resolving">Feature resolving<a class="headerlink" href="#feature-resolving" title="Permanent link">&para;</a></h3>
 <p><a href="../../module_docs/localminimumresolver/local-minimum-resolver.html">Local minimum resolver</a></p>
+<h3 id="de-isotoping">De-isotoping<a class="headerlink" href="#de-isotoping" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Remove features produced by natural isotopes</li>
+<li>For more details see the De-isotoping module (add link).</li>
+</ul>
+<h3 id="gap-filling">Gap-filling<a class="headerlink" href="#gap-filling" title="Permanent link">&para;</a></h3>
+<p>Gap-filling can be performed on the aligned feature lists to cope with missing features that might be artifacts of the feature-detection process.
+- For more details see the Gap-filling module.</p>
 <h2 id="page-contributors">Page Contributors<a class="headerlink" href="#page-contributors" title="Permanent link">&para;</a></h2>
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>SteffenHeu</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>SteffenHeu</a> (35.85%), <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a> (64.15%)</span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 19, 2022 09:34:46</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 18, 2022 15:06:54</span>
       
     
   </small>
@@ -877,10 +926,10 @@ mass</strong>.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a9542cf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8aa65030.min.js"></script>
       
     
   </body>
