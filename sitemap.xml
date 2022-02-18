@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/getting_started.html</loc>
+         <lastmod>2022-02-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/performance.html</loc>
          <lastmod>2022-02-18</lastmod>
          <changefreq>daily</changefreq>
