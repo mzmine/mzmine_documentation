@@ -31,16 +31,18 @@ Todo
 
 ## LC-MS
 ### Total ion current chromatogram
-The total ion current (TIC) chromatogram displays the summed signal intensity (y-axis) over the entire m/z range at any one retention time point (x-axis) in the LC-MS run. In complex samples, the TIC chromatogram often provides limited information as multiple analytes elute simultaneously, obscuring individual species.
+The total ion current (TIC) chromatogram displays the summed signal intensity (y-axis) over the entire m/z range at any one retention time point (x-axis) in the LC-MS run. The following figure shows a TIC chromatogram of a 9-compounds mixture analysed on LC-MS system.
+![TIC](TIC.png)
+_Note_. In complex samples, the TIC chromatogram often provides limited information as multiple analytes elute simultaneously, obscuring individual species.
 
 ### Base peak chromatogram
-The base peak chromatogram (BPC) displays the signal intensity of the most intense maass peak in the MS spectra at any one retention time point (x-axis) in the LC-MS run.<br>
+The base peak chromatogram (BPC) displays the signal intensity of the most intense maass peak in the MS spectra at any one retention time point (x-axis) in the LC-MS run. The following figure shows the same data as above, visualized in BPI mode.
+![BPC](BPC.png)
+
 
 ### Extracted ion chromatogram
-The extracted ion chromatogram (EIC) displays the signal intensity of a specific m/z value, wthin a defined tolerance (e.g. ±5 ppm), at any one retention time point in the LC-MS run.<br>
-
-                                                                          FIGURE
-
+The extracted ion chromatogram (EIC) displays the signal intensity of a specific m/z value, wthin a defined tolerance (e.g. ± 5 ppm), at any one retention time point in the LC-MS run. The following figure shows the EIC of _m/z_ 455.2945 ± 5 ppm (same sample as above).
+![EIC](EIC.png)
 
 # MZmine-specific terminology
 
