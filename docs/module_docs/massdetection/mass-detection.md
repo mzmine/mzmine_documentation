@@ -22,6 +22,13 @@ contain a list of selected m/z values.
 Choose the noise level to detect (= red dot) actual peaks but filter out detector noise. The
 detector noise is usually determined by a lot of signals of the same intensity.
 
+#### Detect isotope signals below noise level
+
+**Centroid** and **exact mass** detectors provide an additional parameter called **detect isotope signals below noise level**. This option allows to include additional peaks, corresponding to isotope masses, in the resulting mass list. By clicking the **Setup** button, you can specify the following parameters:
+* **Chemical elements** - chemical elements which isotopes will be considered (select from the periodic table).
+* **M/z tolerance** - the maximum allowed difference between theoretical isotope m/z and measured m/z present in the scan to be considered the same.
+* **Maximum charge of isotope m/z** - should be a positive integer (further denoted as K). All peaks having m/z equal to (up to m/z tolerance) theoretical isotope mass (any isotope of any specified chemical element) divided by any of 1, ..., K will be included in the mass list. The default value is 1.
+
 ## LC-IMS-MS data
 
 The mass detection steps perform noise filtering (by a threshold) and centroiding of profile raw
