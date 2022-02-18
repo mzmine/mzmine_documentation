@@ -29,7 +29,7 @@ mass**.
 
 ### Isotope grouper (filter)
 
-[Isotope grouper (filter)](../../module_docs/Isotope grouper (filter)/Isotope_grouper)
+[Isotope grouper (filter)](../../module_docs/isotopegrouper/Isotope_grouper)
 
 
 ## Page Contributors
