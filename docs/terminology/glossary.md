@@ -23,7 +23,13 @@ The extracted ion chromatogram (EIC) displays the signal intensity of the XXX at
 ### Masses and Features
 Mass is ...individual signal in a mass spectrum, which corresponds to an ion detected by the mass spectrometer.
 
-Feature = Pair of m/z and retention time, normally associated with a signal intensity. The term ‘feature’ is used to emphasize the 3D nature of the signal, as opposed to the term ‘peak’, which is typically used for 2D datasets (e.g., m/z in a mass spectrum).
+In LC-MS, a 'feature' is defined as a pair of m/z and retention time, normally associated with a signal intensity.
+
+The term ‘feature’ is used to emphasize the 3D nature of the signal, as opposed to the term ‘peak’, which is typically used for 2D datasets (e.g., m/z in a mass spectrum).
+
+
+In this context, a emph{feature} is defined as the two-dimensional integration with respect to retention time (RT) and mass-over-charge (m/z) of the eluting signal belonging to a single charge variant of a measurand (e.g., a peptide). Features are characterized by attributes like average mass-to-charge ratio, centroid retention time, intensity, and quality. 
+
 
 ### Mass list
 In MZmine we call 'mass list' the list of m/z values and corresponding signal intensities found in each mass spectrum of the LC-MS run. To do so, each MS (and MS2) spectrum is processed separately to detect individual ion peaks. See [Mass detection](../module_docs/massdetection/mass-detection.md) module.
@@ -32,3 +38,9 @@ In MZmine we call 'mass list' the list of m/z values and corresponding signal in
 List of ....
 
 Essentially, [EICs](#total-ion-current-base-peak-and-extracted-ion-chromatogram) are constructed for each m/z value in the mass lists and subsequently deconvoluted into individual features. The latter are then stored as XXX. MZmine 3 provides a selection of diﬀerent algorithms for the EIC construction and deconvolution, depending on the nature of the MS data (e.g. mass accuracy and resolution). See, for example, [ADAP chromatogram builder](../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md) and [Local minimum resolver](../module_docs/localminimumresolver/local-minimum-resolver.md) modules for more details.
+
+![feature creation](feature-creation.png)
+
+References
+- Pluskal, T., Castillo, S., Villar-Briones, A. & Oresic, M. BMC Bioinformatics 11, 395 (2010). https://doi.org/10.1186/1471-2105-11-395
+- Pluskal, T. et al. Processing Metabolomics and Proteomics Data with Open Software 232–254 (2020). https://doi.org/10.1039/9781788019880-00232
