@@ -27,6 +27,11 @@ mass**.
 
 [Local minimum resolver](../../module_docs/localminimumresolver/local-minimum-resolver.md)
 
+### Isotope grouper (filter)
+
+[Isotope grouper (filter)](../../module_docs/Isotope grouper (filter)/Isotope_grouper)
+
+
 ## Page Contributors
 
 {{ git_page_authors }}
