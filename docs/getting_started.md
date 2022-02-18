@@ -2,7 +2,7 @@
 
 Before creating your first project, we recommend setting up some things.
 
-1. Set a temporary file directory. Go to _Project_ -> _Set preferences_ -> _Temporary file
+1. Set a temporary file directory. Go to _Project_ → _Set preferences_ → _Temporary file
    directory_. This requires a restart to take effect.
     2. We recommend setting the directory to an SSD with enough space for fast processing and
        visualizations.
