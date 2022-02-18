@@ -1,19 +1,43 @@
 # General terminology
 
+## MS
+See https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119377368.ch3
+
+### Parent ion
+Todo. A.k.a. precursor ion
+
+### Fragment ion 
+Todo. A.k.a. daughter ion, product ion
+
+### Mass range
+Todo
+
+### Mass accuracy 
+Todo. Can be expressed either in absolute (mDa) or relative (ppm) terms
+
+### Mass resolution 
+Todo. Often called/expressed as mass resolvin power
+
 ### Full scan acqusition mode
-In full scan acquisition mode, the mass spectrometer acquires [...]. Full scan spectra are often, as well as in MZmine, referred to as MS spectra.
+Todo
 
-### MS2 data-dependent acqusition mode
-In data-dependent acquisition (DDA) schemes, the mass spectrometer detects 'suitable' precursor ions in each MS scan and selects them for fragmentation in consecutive MS2 scans.
-- 'Cycle time' and 'topN' acquisition schemes
+### Data-dependent acqusition mode
+In data-dependent acquisition (DDA) schemes, the mass spectrometer detects 'suitable' precursor ions in each MS scan and selects them for fragmentation in consecutive MS2 scans.<br>
+Todo:'Cycle time' and 'topN' acquisition schemes
+
+### Data-independent acqusition mode
+Todo
 
 
-### Total ion current, Base peak and Extracted ion chromatogram
-The total ion current (TIC) chromatogram displays the summed signal intensity (y-axis) over the entire m/z range at any one retention time point (x-axis) obtained from a LC-MS experiment. In complex samples, the TIC chromatogram often provides limited information as multiple analytes elute simultaneously, obscuring individual species.<br>
+## LC-MS
+### Total ion current chromatogram
+The total ion current (TIC) chromatogram displays the summed signal intensity (y-axis) over the entire m/z range at any one retention time point (x-axis) in the LC-MS run. In complex samples, the TIC chromatogram often provides limited information as multiple analytes elute simultaneously, obscuring individual species.
 
-The base peak chromatogram (BPC) displays the signal intensity of the most intense maass peak in the MS spectra at any one retention time point (x-axis) obtained from a LC-MS experiment.<br>
+### Base peak chromatogram
+The base peak chromatogram (BPC) displays the signal intensity of the most intense maass peak in the MS spectra at any one retention time point (x-axis) in the LC-MS run.<br>
 
-The extracted ion chromatogram (EIC) displays the signal intensity of the XXX at any one retention time point obtained from a LC-MS experiment.<br>
+### Extracted ion chromatogram
+The extracted ion chromatogram (EIC) displays the signal intensity of a specific m/z value, wthin a defined tolerance (e.g. ±5 ppm), at any one retention time point in the LC-MS run.<br>
 
                                                                           FIGURE
 
@@ -41,6 +65,6 @@ Essentially, [EICs](#total-ion-current-base-peak-and-extracted-ion-chromatogram)
 
 ![feature creation](feature-creation.png)
 
-References
+## References
 - Pluskal, T., Castillo, S., Villar-Briones, A. & Oresic, M. BMC Bioinformatics 11, 395 (2010). https://doi.org/10.1186/1471-2105-11-395
 - Pluskal, T. et al. Processing Metabolomics and Proteomics Data with Open Software 232–254 (2020). https://doi.org/10.1039/9781788019880-00232
