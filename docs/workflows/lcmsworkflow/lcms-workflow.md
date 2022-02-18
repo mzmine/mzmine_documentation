@@ -27,7 +27,7 @@ There are two modules in MZmine 3 that can fulfil this task: [ADAP chromatogram 
 
 The "detected" features in each ﬁle are listed in the so-called "feature lists", which are then further processed.
 
-(e.g.,  to  ) and aligned to connect correspond-ing features across all samples.
+(e.g.  to  ) and aligned to connect correspond-ing features across all samples.
 
 
 ### Smoothing in retention time dimension (optional)
