@@ -20,7 +20,7 @@ Want to get started with MZmine 3? Check our [Getting started](getting_started.m
 - [Apache XML Graphics](https://xmlgraphics.apache.org/commons/) - EPS image export
 - [Chemistry Development Kit](http://cdk.sourceforge.net) - Isotope pattern and molecular calculations
 - [Freehep](http://java.freehep.org) - EMF image export
-- [Google Guava](https://code.google.com/p/guava-libraries) - Utility classes
+- [Google Guava](https://github.com/google/guava) - Utility classes
 - [JDK Documentation](https://dev.java)
 - [JChemPaint](https://jchempaint.github.io/) - 2D molecule visualization
 - [JFreeChart](http://www.jfree.org/jfreechart) - TIC, Spectra and 2D visualizers
