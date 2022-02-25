@@ -740,20 +740,24 @@ be detected.</p>
 <li><strong>timsTOF</strong> raw data can be recalibrated using data analysis and imported in MZmine. The
   recalibrated data will be used by default. (see <a href="#calculating-ccs-values">Calculating CCS values</a>)</li>
 <li><strong>mzML</strong> raw data requires the determination of a calibration function from the raw data (e.g. as
-  detected features) or as import from an external file. (
-  see <a href="#creating-or-importing-a-ccs-calibration">Creating or importing a CCS calibration</a></li>
+  detected features) or as import from an external file. (see 
+  <a href="#creating-or-importing-a-ccs-calibration">Creating or importing a CCS calibration</a>)</li>
 </ul>
 <h2 id="creating-or-importing-a-ccs-calibration">Creating or importing a CCS calibration<a class="headerlink" href="#creating-or-importing-a-ccs-calibration" title="Permanent link">&para;</a></h2>
 <h3 id="importing-a-ccs-calibration">Importing a CCS calibration<a class="headerlink" href="#importing-a-ccs-calibration" title="Permanent link">&para;</a></h3>
 <p>Agilent calibration data can be imported from the "OverrideImsCal.xml" file in the Agilent raw data
-folder.</p>
+folder. Waters calibration data can be imported from the "mob_cal.csv" file in the Waters raw data 
+folder. The "_extern.inf" file is also required, but will be read automatically when the "mob_cal.csv"
+is selected.</p>
 <p>The calibration import is accessed via <strong>Feature list methods</strong> -&gt; <strong>Processing</strong> -&gt; <strong>External CCS
-Calibration</strong>. Then select the calibration "OverrideImsCal.xml" from the raw data folder, and select
+Calibration</strong>. Then select the calibration "OverrideImsCal.xml"/"mob_cal.csv" from the raw data folder, and select
 the raw data files the calibration should be applied to.</p>
 <p><img alt="" src="external.jpg" /></p>
 <h3 id="reference-css-calibration">Reference CSS calibration<a class="headerlink" href="#reference-css-calibration" title="Permanent link">&para;</a></h3>
 <p>If a mobility calibrant is infused during an HPLC run of every sample, a CCS calibration can be
-calculated on a per-raw file basis. Otherwise, a single run can be used to calibrate multiple files.</p>
+calculated on a per-raw file basis. (Common procedure on Bruker devices) Otherwise, a single run can 
+be used to calibrate multiple files.</p>
+<p>Please note that this is currently only supported for TIMS and DTIMS data.</p>
 <p>The calibration module can be accessed via <strong>Feature list methods</strong> -&gt; <strong>Processing</strong> -&gt; <strong>Internal
 reference calibration</strong>.</p>
 <p><img alt="" src="reference.jpg" /></p>
@@ -791,7 +795,7 @@ state determined via the isotope pattern will be used.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 18, 2022 21:51:26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 25, 2022 08:26:49</span>
       
     
   </small>
