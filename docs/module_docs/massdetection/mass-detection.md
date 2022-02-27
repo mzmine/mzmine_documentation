@@ -24,10 +24,19 @@ detector noise is usually determined by a lot of signals of the same intensity.
 
 #### Detect isotope signals below noise level
 
-**Centroid** and **exact mass** detectors provide an additional parameter called **detect isotope signals below noise level**. This option allows to include additional peaks, corresponding to isotope masses, in the resulting mass list. By clicking the **Setup** button, you can specify the following parameters:
-* **Chemical elements** - chemical elements which isotopes will be considered (select from the periodic table).
-* **M/z tolerance** - the maximum allowed difference between theoretical isotope m/z and measured m/z present in the scan to be considered the same.
-* **Maximum charge of isotope m/z** - should be a positive integer (further denoted as K). All peaks having m/z equal to (up to m/z tolerance) theoretical isotope mass (any isotope of any specified chemical element) divided by any of 1, ..., K will be included in the mass list. The default value is 1.
+**Centroid** and **exact mass** detectors provide an additional parameter called **detect isotope signals below noise level**. This option allows to include additional peaks, corresponding to isotope masses, in the resulting mass list. By clicking the **Setup** button, you can specify the following parameters.
+
+##### Chemical elements
+
+Chemical elements which isotopes will be considered (select from the periodic table).
+
+##### M/z tolerance
+
+The maximum allowed difference between theoretical isotope m/z and measured m/z present in the scan to be considered the same.
+
+##### Maximum charge of isotope m/z
+
+Should be a positive integer (further denoted as K). All peaks having m/z equal to (up to m/z tolerance) theoretical isotope mass (any isotope of any specified chemical element) divided by any of 1, 2, ..., K will be included in the mass list. The default value is 1.
 
 ## LC-IMS-MS data
 
