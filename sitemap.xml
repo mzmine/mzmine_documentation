@@ -81,6 +81,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/msmsplot/msms-plot.html</loc>
+         <lastmod>2022-02-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/smoothing/smoothing.html</loc>
          <lastmod>2022-02-27</lastmod>
          <changefreq>daily</changefreq>
