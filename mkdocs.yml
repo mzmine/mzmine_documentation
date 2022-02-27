@@ -32,6 +32,7 @@ nav:
 
 theme:
   name: material
+  logo: img/MZMine_logo_white.png
 
 plugins:
   - search
