@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/index.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/commandline_tool.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
       
-        <title>MZmine 3 Documentation</title>
+        <title>Commandline tool - MZmine 3 Documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-the-mzmine-3-wiki" class="md-skip">
+        <a href="#preferences" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home page
+              Commandline tool
             
           </span>
         </div>
@@ -200,59 +200,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home page
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Home page
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#mzmine-3-for-mass-spec-data-analysis" class="md-nav__link">
-    MZmine 3 for mass spec data analysis
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about-this-documentation-how-to-contribute" class="md-nav__link">
-    About this documentation / How to contribute
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -649,8 +601,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -659,16 +609,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mzmine-3-for-mass-spec-data-analysis" class="md-nav__link">
-    MZmine 3 for mass spec data analysis
+  <a href="#preferences" class="md-nav__link">
+    Preferences
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#about-this-documentation-how-to-contribute" class="md-nav__link">
-    About this documentation / How to contribute
+  <a href="#logs" class="md-nav__link">
+    Logs
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-arguments" class="md-nav__link">
+    Command-line arguments
+  </a>
+  
+    <nav class="md-nav" aria-label="Command-line arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#argument-table" class="md-nav__link">
+    Argument table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -684,23 +654,61 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/commandline_tool.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="welcome-to-the-mzmine-3-wiki">Welcome to the MZmine 3 wiki!<a class="headerlink" href="#welcome-to-the-mzmine-3-wiki" title="Permanent link">&para;</a></h1>
-<h2 id="mzmine-3-for-mass-spec-data-analysis">MZmine 3 for mass spec data analysis<a class="headerlink" href="#mzmine-3-for-mass-spec-data-analysis" title="Permanent link">&para;</a></h2>
-<h2 id="about-this-documentation-how-to-contribute">About this documentation / How to contribute<a class="headerlink" href="#about-this-documentation-how-to-contribute" title="Permanent link">&para;</a></h2>
-<p>Here you can find general processing guides, module documentations and video tutorials.</p>
-<p>Want to get started with MZmine 3? Check our <a href="getting_started.html">Getting started</a> page!</p>
-<p><a href="Main-window-overview.html">Main window overview</a></p>
-<p><a href="performance.html">Performance options</a></p>
-<p><a href="workflows/lcmsworkflow/lcms-workflow.html">LC-MS workflow</a></p>
-<p><a href="workflows/imsworkflow/Ion-mobility-data-processing-workflow.html">LC-IMS-MS workflow</a></p>
-<p><a href="Raw-data-visualisation.html">Raw data visualisation</a></p>
-<p><a href="wikiacknowledgements.html">Acknowledgements</a></p>
+  <h1>Commandline tool</h1>
+
+<p>This section contains information on how to tune MZmine 3 for different systems.</p>
+<h2 id="preferences">Preferences<a class="headerlink" href="#preferences" title="Permanent link">&para;</a></h2>
+<p>The preferences can be changed in MZmine's graphical user interface by accessing <em>File/Set preferences</em> from the menu. The choices will be stored in a (hidden) <em>.mzmine3.conf</em> file in the user's home directory (Windows: <em>C:\Users\USERNAME</em>) once MZmine is closed.</p>
+<p><img alt="Preferences" src="img/menu_pref.png" style="width:200px" />  </p>
+<p><strong>Important preferences</strong></p>
+<p><img alt="Preferences" src="img/performance_param.png" style="width:500px" /> </p>
+<p><strong>Memory options</strong></p>
+<p><img alt="Memory" src="img/performance_memory.png" style="width:500px" /></p>
+<h2 id="logs">Logs<a class="headerlink" href="#logs" title="Permanent link">&para;</a></h2>
+<p>Currently, the logs are written to an <em>mzmine_0_0.log</em> file in the user's home directory. Please submit your log files together with any issues on <strong><a href="https://github.com/mzmine/mzmine3/issues">GitHub</a></strong>.</p>
+<h2 id="command-line-arguments">Command-line arguments<a class="headerlink" href="#command-line-arguments" title="Permanent link">&para;</a></h2>
+<p>Command-line arguments offer a variety of options that generally override the corresponding parameters in the preferences.</p>
+<p><strong>Windows</strong></p>
+<p>An easy way to start MZmine with arguments is to create a shortcut to the MZmine.exe, right-click, and define the target with additional arguments. This example runs MZMine in batch mode (headless), imports the specified batch file, overrides the memory management to <strong>none</strong> (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the <em>memory</em> or <em>temp</em> arguments, the values stored in the current <em>preferences</em> file will be used, or the default values if no <em>preferences</em> file was found.  </p>
+<p><strong>Start MZmine batch with memory mapping (</strong>DEFAULT<strong>)</strong>
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory none -temp &quot;D:\tmpmzmine&quot;
+</code></pre></div></p>
+<p><strong>Start MZmine batch on machines with enough memory (RAM) with -memory all</strong>
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory all -temp &quot;D:\tmpmzmine&quot;
+</code></pre></div></p>
+<h3 id="argument-table">Argument table<a class="headerlink" href="#argument-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Options (<strong>default</strong>)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-batch</td>
+<td>a path, e.g. "D:\batch.xml"</td>
+<td>Path to batch file</td>
+</tr>
+<tr>
+<td>-memory</td>
+<td><strong>none</strong>, all, features, centroids, raw, masses_features</td>
+<td>Defines what data is kept in memory (RAM) or otherwise memory mapped to the temp directory. Generally this setting should be <em>none</em>. If memory is no issue this option might be set to <em>all</em> process all spectral and feature data in memory. The option <em>masses_features</em> keeps centroid mass lists and features in memory while memory mapping raw spectral data.</td>
+</tr>
+<tr>
+<td>-temp</td>
+<td>a path, e.g., "-temp "D:\tmpmzmine\"</td>
+<td>The defined directory should be on a fast drive (usually SSD &gt; HDD &gt; network drive) with enough free space. Local drives are usually preferred. MZmine uses memory mapping to efficiently store and access spectral and feature data. This can lead to a considerable temporary consumption of disk space. Make sure that the selected drive has enough space (maybe 20 GB + 1 GB/10 files; generously over estimated).</td>
+</tr>
+</tbody>
+</table>
 
   <hr>
 <div class="md-source-file">
@@ -721,26 +729,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-      
-        
-        <a href="getting_started.html" class="md-footer__link md-footer__link--next" aria-label="Next: Getting started" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Getting started
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
