@@ -9,10 +9,10 @@ References:
 - 10.1016/bs.coac.2018.08.003
 
 ## Raw data processing
-The raw data processing consists of essentially two steps: [Data import](../../module_docs/io_data_import/data-import.md#lc-ms-data) and [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
+The raw data processing consists of essentially two steps: [Data import](../../module_docs/io/raw_data_import/data-import.md#lc-ms-data) and [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
   
 ### Raw data import
-Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in MZmine 3. All the supported formats are listed here (LINK to Doc). For more details see the [Data import](../../module_docs/io_data_import/data-import.md#lc-ms-data) module.
+Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in MZmine 3. All the supported formats are listed here (LINK to Doc). For more details see the [Data import](../../module_docs/io/raw_data_import/data-import.md#lc-ms-data) module.
 
 ### Mass detection
 This step produces a list (referred to as "mass list") of the m/z values found in each MS scan across the LC run that exceed a user-defined threeshold (i.e. noise level). For more details see the [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md) module.
