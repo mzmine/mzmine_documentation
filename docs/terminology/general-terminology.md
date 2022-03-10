@@ -58,12 +58,12 @@ In this context, a emph{feature} is defined as the two-dimensional integration w
 
 
 ### Mass list
-In MZmine we call 'mass list' the list of m/z values and corresponding signal intensities found in each mass spectrum of the LC-MS run. To do so, each MS (and MS2) spectrum is processed separately to detect individual ion peaks. See [Mass detection](../module_docs/massdetection/mass-detection.md) module.
+In MZmine we call 'mass list' the list of m/z values and corresponding signal intensities found in each mass spectrum of the LC-MS run. To do so, each MS (and MS2) spectrum is processed separately to detect individual ion peaks. See [Mass detection](../module_docs/featdet_mass_detection/mass-detection.md) module.
 
 ### Feature list
 List of ....
 
-Essentially, [EICs](#total-ion-current-base-peak-and-extracted-ion-chromatogram) are constructed for each m/z value in the mass lists and subsequently deconvoluted into individual features. The latter are then stored as XXX. MZmine 3 provides a selection of diﬀerent algorithms for the EIC construction and deconvolution, depending on the nature of the MS data (e.g. mass accuracy and resolution). See, for example, [ADAP chromatogram builder](../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.md) and [Local minimum resolver](../module_docs/localminimumresolver/local-minimum-resolver.md) modules for more details.
+Essentially, [EICs](#total-ion-current-base-peak-and-extracted-ion-chromatogram) are constructed for each m/z value in the mass lists and subsequently deconvoluted into individual features. The latter are then stored as XXX. MZmine 3 provides a selection of diﬀerent algorithms for the EIC construction and deconvolution, depending on the nature of the MS data (e.g. mass accuracy and resolution). See, for example, [ADAP chromatogram builder](../module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local minimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) modules for more details.
 
 ![feature creation](feature-creation.png)
 
