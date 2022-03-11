@@ -6,12 +6,12 @@ The "Ion mobilitiy raw data visualization" module allow a comprehensive navigati
 The main window consists of 5 panels and a set of displaying parameters. All the panels are interconnected, which means that moving the cursor in one panel, automatically updates the others. Cursors are displayed as light-blue solid lines in the panels.
 
 ## Summed frame spectrum panel [1]
-The MS spectrum corresponding to each [frame](../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames) is shown in this panel. The displayed MS spectrum is the sum of all the [mobility scans](../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames) acquired over that frame (see [Ion mobility spectrometry terminology](../terminology/ion-mobility-terminology.md)).
+The MS spectrum corresponding to each [frame](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames) is shown in this panel. The displayed MS spectrum is the sum of all the [mobility scans](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames) acquired over that frame (see [Ion mobility spectrometry terminology](../../terminology/ion-mobility-terminology.md)).
 
 
 ## BPC panel [2]
-In this panel, the [base peak chromatogram](../terminology/general-terminology.md#base-peak-chromatogram) is displayed. Each data point corresponds to an individual [frame](../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames). Moving the cursor frame-by-frame automatically updateds the 'frame heatmap' and 'summed frame spectrum' panels. Moving the cursor frame-by-frame automatically updateds the 'summed frame spectrum' panels as changing data point in regular LC-MS data would display a different MS scan. Since each frame is made of several [mobily scans](../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames), the 'mobilogram chart' and 'frame heatmap' panels automatically updates too.
-_Note_. It is currently not possible to display the [TIC chromatogram](../terminology/general-terminology.md#total-ion-current-chromatogram))
+In this panel, the [base peak chromatogram](../../terminology/general-terminology.md#base-peak-chromatogram) is displayed. Each data point corresponds to an individual [frame](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames). Moving the cursor frame-by-frame automatically updateds the 'frame heatmap' and 'summed frame spectrum' panels. Moving the cursor frame-by-frame automatically updateds the 'summed frame spectrum' panels as changing data point in regular LC-MS data would display a different MS scan. Since each frame is made of several [mobily scans](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames), the 'mobilogram chart' and 'frame heatmap' panels automatically updates too.
+_Note_. It is currently not possible to display the [TIC chromatogram](../../terminology/general-terminology.md#total-ion-current-chromatogram))
 
 
 ## Mobility scan [3]

@@ -23,6 +23,6 @@ Want to get started with MZmine 3? Check our [Getting started](getting_started.m
 
 [LC-IMS-MS workflow](workflows/imsworkflow/Ion-mobility-data-processing-workflow.md)
 
-[Raw data visualisation](Raw-data-visualisation.md)
+[Raw data visualisation](visualization_modules/Raw-data-visualisation.md)
 
 [Acknowledgements](wikiacknowledgements.md)
