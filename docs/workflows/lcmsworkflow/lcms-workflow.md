@@ -50,7 +50,7 @@ Gap-filling can be performed on the aligned feature lists to cope with missing f
 
 ### Isotope grouper (filter)
 
-[Isotope grouper (filter)](../../module_docs/isotopegrouper/Isotope_grouper)
+[Isotope grouper (filter)](../../module_docs/isotopegrouper/Isotope_grouper.md)
 
 
 ## Page Contributors
