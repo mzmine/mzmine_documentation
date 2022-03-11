@@ -41,7 +41,7 @@ The base peak chromatogram (BPC) displays the signal intensity of the most inten
 
 
 ### Extracted ion chromatogram
-The extracted ion chromatogram (EIC) displays the signal intensity of a specific m/z value, wthin a defined tolerance (e.g. ± 5 ppm), at any one retention time point in the LC-MS run. The following figure shows the EIC of _m/z_ 455.2945 ± 5 ppm (same sample as above).
+The extracted ion chromatogram (EIC) displays the signal intensity of a specific m/z value, within a defined tolerance (e.g. ± 5 ppm), at any one retention time point in the LC-MS run. The following figure shows the EIC of _m/z_ 455.2945 ± 5 ppm (same sample as above).
 ![EIC](EIC.png)
 
 # MZmine-specific terminology
@@ -63,7 +63,7 @@ In MZmine we call 'mass list' the list of m/z values and corresponding signal in
 ### Feature list
 List of ....
 
-Essentially, [EICs](#Extracted ion chromatogram) are constructed for each m/z value in the mass lists and subsequently deconvoluted into individual features. The latter are then stored as XXX. MZmine 3 provides a selection of diﬀerent algorithms for the EIC construction and deconvolution, depending on the nature of the MS data (e.g. mass accuracy and resolution). See, for example, [ADAP chromatogram builder](../module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local minimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) modules for more details.
+Essentially, [EICs](#Extracted-ion-chromatogram) are constructed for each m/z value in the mass lists and subsequently deconvoluted into individual features. The latter are then stored as XXX. MZmine 3 provides a selection of diﬀerent algorithms for the EIC construction and deconvolution, depending on the nature of the MS data (e.g. mass accuracy and resolution). See, for example, [ADAP chromatogram builder](../module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local minimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) modules for more details.
 
 ![feature creation](feature-creation.png)
 
