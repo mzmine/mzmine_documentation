@@ -1,7 +1,7 @@
 # Ion mobility trace builder
 
 The **Ion mobility trace builder** will
-build [ion mobility traces](../../workflows/imsworkflow/ion-mobility-spectrometry-terminology.md#ion-mobility-trace)
+build [ion mobility traces](../../terminology/ion-mobility-terminology.md#ion-mobility-trace)
 from the raw data. Alternatively, the **Recursive IMS builder** can be used, which requires less ram
 but takes longer.
 
@@ -36,14 +36,14 @@ set here if the MS1 acquisition rate is sufficient.
 
 Specifies the total number of peaks in the mobility dimension in all mobility scans. Every "dot" in
 an ion mobility trace represents a single datapoint. (
-see [ion mobility traces](../../workflows/imsworkflow/ion-mobility-spectrometry-terminology.md#ion-mobility-trace))
+see [ion mobility traces](../../terminology/ion-mobility-terminology.md#ion-mobility-trace))
 
 ##### Advanced parameters
 
 For most applications, these parameters do not need to set/altered. For high mobility resolved data
 the mobilograms might become noisy due to less ions reaching the detector at the same time. By
 default, the number of binned scans is set to cover about 0.0008 Vs/cm^2 per bin. The effect of
-binning can be seen [here](../imsexpander/ims-expander.md#binned-mobilogram-example)
+binning can be seen [here](../featdet_ims_expander/ims-expander.md#binned-mobilogram-example)
 . If you are unsure about the nature of your data, you can perform trace building with the standard
 parameters and apply/preview the binning afterwards via the **Feature detection → Mobilogram
 binning** module.

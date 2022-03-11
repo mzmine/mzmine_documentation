@@ -11,6 +11,6 @@ On the other hand, ion mobility resolved data consists of a three-dimensional da
 retention time. The three dimensions being m/z, intensity, and mobility (as drift time (ms) or
 inverse reduced mobility 1/k0 [Vs/(cm^2)]). The 3D projection of regular LC-MS data can be created
 by summing all mobility scans of a frame to create a frame spectrum.
-(see [Mobility scan merging](../../module_docs/mobilityscanmerging/mobility-scan-merging.md))
+(see [Mobility scan merging](../../module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md))
 
 ![lcimsmsdata](lcimsmsdataformat.png)

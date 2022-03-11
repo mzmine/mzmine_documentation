@@ -6,18 +6,20 @@ be detected.
 - **timsTOF** raw data can be recalibrated using data analysis and imported in MZmine. The
   recalibrated data will be used by default. (see [Calculating CCS values](#calculating-ccs-values))
 - **mzML** raw data requires the determination of a calibration function from the raw data (e.g. as
-  detected features) or as import from an external file. (
-  see [Creating or importing a CCS calibration](#creating-or-importing-a-ccs-calibration)
+  detected features) or as import from an external file. (see 
+  [Creating or importing a CCS calibration](#creating-or-importing-a-ccs-calibration))
 
 ## Creating or importing a CCS calibration
 
 ### Importing a CCS calibration
 
 Agilent calibration data can be imported from the "OverrideImsCal.xml" file in the Agilent raw data
-folder.
+folder. Waters calibration data can be imported from the "mob_cal.csv" file in the Waters raw data 
+folder. The "\_extern.inf" file is also required, but will be read automatically when the "mob_cal.csv"
+is selected.
 
 The calibration import is accessed via **Feature list methods** -> **Processing** -> **External CCS
-Calibration**. Then select the calibration "OverrideImsCal.xml" from the raw data folder, and select
+Calibration**. Then select the calibration "OverrideImsCal.xml"/"mob_cal.csv" from the raw data folder, and select
 the raw data files the calibration should be applied to.
 
 ![](external.jpg)
@@ -25,7 +27,10 @@ the raw data files the calibration should be applied to.
 ### Reference CSS calibration
 
 If a mobility calibrant is infused during an HPLC run of every sample, a CCS calibration can be
-calculated on a per-raw file basis. Otherwise, a single run can be used to calibrate multiple files.
+calculated on a per-raw file basis. (Common procedure on Bruker devices) Otherwise, a single run can 
+be used to calibrate multiple files.
+
+Please note that this is currently only supported for TIMS and DTIMS data.
 
 The calibration module can be accessed via **Feature list methods** -> **Processing** -> **Internal
 reference calibration**.
