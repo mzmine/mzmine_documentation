@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/visualization_modules/IM-data-visualisation.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/featdet_smoothing/smoothing.html">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
       
-        <title>Ion mobility raw data overview (LC-IMS-MS) - MZmine 3 Documentation</title>
+        <title>Smoothing - MZmine 3 Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -37,7 +37,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ion-mobility-raw-data-overview-lc-ims-ms" class="md-skip">
+        <a href="#smoothing" class="md-skip">
           Skip to content
         </a>
       
@@ -75,9 +75,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+    <a href="../../index.html" title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
       
-  <img src="../img/MZMine_logo_white.png" alt="logo">
+  <img src="../../img/MZMine_logo_white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ion mobility raw data overview (LC-IMS-MS)
+              Smoothing
             
           </span>
         </div>
@@ -172,9 +172,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+    <a href="../../index.html" title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
       
-  <img src="../img/MZMine_logo_white.png" alt="logo">
+  <img src="../../img/MZMine_logo_white.png" alt="logo">
 
     </a>
     MZmine 3 Documentation
@@ -202,7 +202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         Home page
       </a>
     </li>
@@ -217,7 +217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started.html" class="md-nav__link">
+      <a href="../../getting_started.html" class="md-nav__link">
         Getting started
       </a>
     </li>
@@ -232,7 +232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Main-window-overview.html" class="md-nav__link">
+      <a href="../../Main-window-overview.html" class="md-nav__link">
         Main window overview
       </a>
     </li>
@@ -247,7 +247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
+      <a href="../../workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
         LC-MS workflow
       </a>
     </li>
@@ -262,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/imsworkflow/Ion-mobility-data-processing-workflow.html" class="md-nav__link">
+      <a href="../../workflows/imsworkflow/Ion-mobility-data-processing-workflow.html" class="md-nav__link">
         LC-IMS-MS workflow
       </a>
     </li>
@@ -275,12 +275,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -303,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/dataimport/data-import.html" class="md-nav__link">
+      <a href="../io/raw_data_import/data-import.html" class="md-nav__link">
         Data import
       </a>
     </li>
@@ -317,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/massdetection/mass-detection.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/mass-detection.html" class="md-nav__link">
         Mass detection
       </a>
     </li>
@@ -331,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/mobilityscanmerging/mobility-scan-merging.html" class="md-nav__link">
+      <a href="../featdet_mobility_scan_merging/mobility-scan-merging.html" class="md-nav__link">
         Mobility scan merging
       </a>
     </li>
@@ -345,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/adapchromatogrambuilder/adap-chromatogram-builder.html" class="md-nav__link">
+      <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html" class="md-nav__link">
         ADAP Chromatogram builder
       </a>
     </li>
@@ -359,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/imsexpander/ims-expander.html" class="md-nav__link">
+      <a href="../featdet_ims_expander/ims-expander.html" class="md-nav__link">
         Ion mobility expander
       </a>
     </li>
@@ -373,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.html" class="md-nav__link">
+      <a href="../featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-nav__link">
         Ion mobility trace builder
       </a>
     </li>
@@ -385,11 +387,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../module_docs/smoothing/smoothing.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Smoothing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="smoothing.html" class="md-nav__link md-nav__link--active">
         Smoothing
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#retention-time-dimension" class="md-nav__link">
+    Retention time dimension
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobility-dimension" class="md-nav__link">
+    Mobility dimension
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -401,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/localminimumresolver/local-minimum-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-nav__link">
         Resolving
       </a>
     </li>
@@ -415,8 +465,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/ccs_calibration/ccs_calibration.html" class="md-nav__link">
+      <a href="../id_ccs_calibration/ccs_calibration.html" class="md-nav__link">
         CCS calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gapfill_peak_finder/gap-filling.html" class="md-nav__link">
+        Gap filling (Peak finder)
       </a>
     </li>
   
@@ -463,8 +527,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../Raw-data-visualisation.html" class="md-nav__link">
+      <a href="../../visualization_modules/Raw-data-visualisation.html" class="md-nav__link">
         Raw data visualisation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/ims_raw_data_overview/IM-data-visualisation.html" class="md-nav__link">
+        Ion mobility data visualisation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
+        MSMS Visualizer
       </a>
     </li>
   
@@ -494,14 +586,14 @@
       
       
         <label class="md-nav__link" for="__nav_8">
-          Additional IMS resources
+          Additional resources
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Additional IMS resources" data-md-level="1">
+      <nav class="md-nav" aria-label="Additional resources" data-md-level="1">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
-          Additional IMS resources
+          Additional resources
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -511,8 +603,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../terminology/ion-mobility-terminology.html" class="md-nav__link">
-        Terminology
+      <a href="../../terminology/general-terminology.html" class="md-nav__link">
+        Gerneral Terminology
       </a>
     </li>
   
@@ -525,8 +617,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
-        Data format insight
+      <a href="../../terminology/ion-mobility-terminology.html" class="md-nav__link">
+        IMS Terminology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
+        IMS data format insight
       </a>
     </li>
   
@@ -547,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../performance.html" class="md-nav__link">
+      <a href="../../performance.html" class="md-nav__link">
         Performance options
       </a>
     </li>
@@ -562,7 +668,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../Contribute.html" class="md-nav__link">
+      <a href="../../commandline_tool.html" class="md-nav__link">
+        Command line tool (batch mode)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contribute.html" class="md-nav__link">
         Contribute
       </a>
     </li>
@@ -577,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wikiacknowledgements.html" class="md-nav__link">
+      <a href="../../wikiacknowledgements.html" class="md-nav__link">
         Acknowledgements
       </a>
     </li>
@@ -611,50 +732,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summed-frame-spectrum-panel-1" class="md-nav__link">
-    Summed frame spectrum panel [1]
+  <a href="#retention-time-dimension" class="md-nav__link">
+    Retention time dimension
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bpc-panel-2" class="md-nav__link">
-    BPC panel [2]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mobility-scan-3" class="md-nav__link">
-    Mobility scan [3]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mobilogram-chart-4" class="md-nav__link">
-    Mobilogram chart [4]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#frame-heatmap-5" class="md-nav__link">
-    Frame heatmap [5]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ion-trace-chart-6" class="md-nav__link">
-    Ion trace chart [6]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#displaying-parameters-6" class="md-nav__link">
-    Displaying parameters [6]
+  <a href="#mobility-dimension" class="md-nav__link">
+    Mobility dimension
   </a>
   
 </li>
@@ -671,50 +757,39 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/visualization_modules/IM-data-visualisation.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/module_docs/featdet_smoothing/smoothing.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="ion-mobility-raw-data-overview-lc-ims-ms">Ion mobility raw data overview (LC-IMS-MS)<a class="headerlink" href="#ion-mobility-raw-data-overview-lc-ims-ms" title="Permanent link">&para;</a></h1>
-<p>The "Ion mobilitiy raw data visualization" module allow a comprehensive navigation of the complex LC-IM-MS raw data. The screenshot belows shows an example of LC-IM-MS data acquired with a Bruker timsTOF instrument:</p>
-<p><img alt="im-data-overview" src="im-data-overview.jpg" /></p>
-<p>The main window consists of 5 panels and a set of displaying parameters. All the panels are interconnected, which means that moving the cursor in one panel, automatically updates the others. Cursors are displayed as light-blue solid lines in the panels.</p>
-<h2 id="summed-frame-spectrum-panel-1">Summed frame spectrum panel [1]<a class="headerlink" href="#summed-frame-spectrum-panel-1" title="Permanent link">&para;</a></h2>
-<p>The MS spectrum corresponding to each <a href="../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">frame</a> is shown in this panel. The displayed MS spectrum is the sum of all the <a href="../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">mobility scans</a> acquired over that frame (see <a href="../terminology/ion-mobility-terminology.html">Ion mobility spectrometry terminology</a>).</p>
-<h2 id="bpc-panel-2">BPC panel [2]<a class="headerlink" href="#bpc-panel-2" title="Permanent link">&para;</a></h2>
-<p>In this panel, the <a href="../terminology/general-terminology.html#base-peak-chromatogram">base peak chromatogram</a> is displayed. Each data point corresponds to an individual <a href="../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">frame</a>. Moving the cursor frame-by-frame automatically updateds the 'frame heatmap' and 'summed frame spectrum' panels. Moving the cursor frame-by-frame automatically updateds the 'summed frame spectrum' panels as changing data point in regular LC-MS data would display a different MS scan. Since each frame is made of several <a href="../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">mobily scans</a>, the 'mobilogram chart' and 'frame heatmap' panels automatically updates too.
-<em>Note</em>. It is currently not possible to display the <a href="../terminology/general-terminology.html#total-ion-current-chromatogram">TIC chromatogram</a>)</p>
-<h2 id="mobility-scan-3">Mobility scan [3]<a class="headerlink" href="#mobility-scan-3" title="Permanent link">&para;</a></h2>
-<p>Todo
-Note that this is the only panel that does not possess a cursor as [...].</p>
-<h2 id="mobilogram-chart-4">Mobilogram chart [4]<a class="headerlink" href="#mobilogram-chart-4" title="Permanent link">&para;</a></h2>
-<p>Todo
-The signal intensity is displayed as a continuous colour scale.</p>
-<h2 id="frame-heatmap-5">Frame heatmap [5]<a class="headerlink" href="#frame-heatmap-5" title="Permanent link">&para;</a></h2>
-<p>Todo
-The signal intensity is displayed as a continuous colour scale.</p>
-<h2 id="ion-trace-chart-6">Ion trace chart [6]<a class="headerlink" href="#ion-trace-chart-6" title="Permanent link">&para;</a></h2>
-<p>Todo</p>
-<h2 id="displaying-parameters-6">Displaying parameters [6]<a class="headerlink" href="#displaying-parameters-6" title="Permanent link">&para;</a></h2>
-<p><strong>Mobility scan noise level</strong>: This parameter controls the signals shown in the XXX panels (panel n°X). For example, a noise level of 5.0E1 will show only the signals above this value (see below)
-                                                                    SCREENSHOT</p>
-<p><strong>Frame noise level</strong>: This parameter sets a threshold for the signals shown in the "Summed frame spectrum panel" (panel n°X). Signals from MS spectra acquired over the same frame are summed and shown</p>
-<p><strong>m/z tolerance</strong>: Todo</p>
-<p><strong>Scan selection</strong>: Todo</p>
-<p><strong>Retention time width</strong>: Todo</p>
-<p><strong>Mobilogram bin width (abs)</strong>: Todo</p>
-<p><strong>EIC/mobilogram ranges</strong>: Todo</p>
-<p>To-do list:
-- Explain EIC and EIC in mobilogram chart</p>
+<h1 id="smoothing">Smoothing<a class="headerlink" href="#smoothing" title="Permanent link">&para;</a></h1>
+<h2 id="retention-time-dimension">Retention time dimension<a class="headerlink" href="#retention-time-dimension" title="Permanent link">&para;</a></h2>
+<p>Smoothing chromatograms is optional.
+The necessity of smoothing in RT dimension is determined by the noisiness of chromatographic peaks.
+These can be influenced by the overall spray stability, instrument accumulation times, transfer
+efficiency and many more.</p>
+<p>The number of data points to be smoothed in rt dimension can be set at [1]. Note that the correct
+preview dimension is selected at [2].</p>
+<p>For large batch modes, the <strong>Remove original feature list</strong> parameter should be selected. While
+parameters are being optimised, this is not recommended, because removing a feature list cannot be
+undone.</p>
+<p><img alt="" src="smoothingdialog.png" /></p>
+<h2 id="mobility-dimension">Mobility dimension<a class="headerlink" href="#mobility-dimension" title="Permanent link">&para;</a></h2>
+<p>After resolving a feature in RT dimension, the mobilograms will be recalculated from the
+raw data (the resolved ion mobility trace). Therefore, a smoothing step is necessary if the data
+requires it. The smoothing dialog is opened via <strong>Feature detection → Smoothing</strong></p>
+<p>Select to smooth the mobility dimension [1] and select it as preview dimension [2]. The filter with
+depends on the number of spectra acquired in the observed mobility range. Usually, a value between 5
+and 15 should be appropriate.</p>
+<p><img alt="" src="mobilitysmoothing.png" /></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 18, 2022 13:27:01</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 10, 2022 15:42:38</span>
       
     
   </small>
@@ -728,6 +803,41 @@ The signal intensity is displayed as a continuous colour scale.</p>
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ion mobility trace builder" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Ion mobility trace builder
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-footer__link md-footer__link--next" aria-label="Next: Resolving" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Resolving
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -749,10 +859,10 @@ The signal intensity is displayed as a continuous colour scale.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
+      <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>
       
     
   </body>

@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/Raw-data-visualisation.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/id_ccs_calibration/ccs_calibration.html">
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
       
-        <title>Raw data visualisation - MZmine 3 Documentation</title>
+        <title>CCS calibration - MZmine 3 Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.2d9f7617.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -37,7 +37,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#raw-data-visualisation" class="md-skip">
+        <a href="#ccs-calibration-and-calculation" class="md-skip">
           Skip to content
         </a>
       
@@ -75,9 +75,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+    <a href="../../index.html" title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
       
-  <img src="img/MZMine_logo_white.png" alt="logo">
+  <img src="../../img/MZMine_logo_white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Raw data visualisation
+              CCS calibration
             
           </span>
         </div>
@@ -172,9 +172,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+    <a href="../../index.html" title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
       
-  <img src="img/MZMine_logo_white.png" alt="logo">
+  <img src="../../img/MZMine_logo_white.png" alt="logo">
 
     </a>
     MZmine 3 Documentation
@@ -202,7 +202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         Home page
       </a>
     </li>
@@ -217,7 +217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting_started.html" class="md-nav__link">
+      <a href="../../getting_started.html" class="md-nav__link">
         Getting started
       </a>
     </li>
@@ -232,7 +232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Main-window-overview.html" class="md-nav__link">
+      <a href="../../Main-window-overview.html" class="md-nav__link">
         Main window overview
       </a>
     </li>
@@ -247,7 +247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
+      <a href="../../workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
         LC-MS workflow
       </a>
     </li>
@@ -262,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="workflows/imsworkflow/Ion-mobility-data-processing-workflow.html" class="md-nav__link">
+      <a href="../../workflows/imsworkflow/Ion-mobility-data-processing-workflow.html" class="md-nav__link">
         LC-IMS-MS workflow
       </a>
     </li>
@@ -275,12 +275,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -303,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="module_docs/dataimport/data-import.html" class="md-nav__link">
+      <a href="../io/raw_data_import/data-import.html" class="md-nav__link">
         Data import
       </a>
     </li>
@@ -317,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="module_docs/massdetection/mass-detection.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/mass-detection.html" class="md-nav__link">
         Mass detection
       </a>
     </li>
@@ -331,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="module_docs/mobilityscanmerging/mobility-scan-merging.html" class="md-nav__link">
+      <a href="../featdet_mobility_scan_merging/mobility-scan-merging.html" class="md-nav__link">
         Mobility scan merging
       </a>
     </li>
@@ -345,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="module_docs/adapchromatogrambuilder/adap-chromatogram-builder.html" class="md-nav__link">
+      <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html" class="md-nav__link">
         ADAP Chromatogram builder
       </a>
     </li>
@@ -359,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="module_docs/imsexpander/ims-expander.html" class="md-nav__link">
+      <a href="../featdet_ims_expander/ims-expander.html" class="md-nav__link">
         Ion mobility expander
       </a>
     </li>
@@ -373,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="module_docs/ionmobilitytracebuilder/ion-mobility-trace-builder.html" class="md-nav__link">
+      <a href="../featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-nav__link">
         Ion mobility trace builder
       </a>
     </li>
@@ -387,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="module_docs/smoothing/smoothing.html" class="md-nav__link">
+      <a href="../featdet_smoothing/smoothing.html" class="md-nav__link">
         Smoothing
       </a>
     </li>
@@ -401,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="module_docs/localminimumresolver/local-minimum-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-nav__link">
         Resolving
       </a>
     </li>
@@ -413,10 +415,92 @@
               
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CCS calibration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ccs_calibration.html" class="md-nav__link md-nav__link--active">
+        CCS calibration
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-or-importing-a-ccs-calibration" class="md-nav__link">
+    Creating or importing a CCS calibration
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating or importing a CCS calibration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing-a-ccs-calibration" class="md-nav__link">
+    Importing a CCS calibration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-css-calibration" class="md-nav__link">
+    Reference CSS calibration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculating-ccs-values" class="md-nav__link">
+    Calculating CCS values
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
-      <a href="module_docs/ccs_calibration/ccs_calibration.html" class="md-nav__link">
-        CCS calibration
+      <a href="../gapfill_peak_finder/gap-filling.html" class="md-nav__link">
+        Gap filling (Peak finder)
       </a>
     </li>
   
@@ -435,14 +519,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
@@ -463,80 +545,39 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Raw data visualisation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Raw-data-visualisation.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/Raw-data-visualisation.html" class="md-nav__link">
         Raw data visualisation
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+            
+          
+            
+              
   
   
   
-    
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/ims_raw_data_overview/IM-data-visualisation.html" class="md-nav__link">
+        Ion mobility data visualisation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#raw-data-overview-lc-ms" class="md-nav__link">
-    Raw data overview (LC-MS)
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ion-mobility-raw-data-overview-lc-ims-ms" class="md-nav__link">
-    Ion mobility raw data overview (LC-IMS-MS)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chromatogram-plot" class="md-nav__link">
-    Chromatogram plot
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#spectrum-plot" class="md-nav__link">
-    Spectrum plot
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#page-contributors" class="md-nav__link">
-    Page Contributors
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
+        MSMS Visualizer
+      </a>
     </li>
   
 
@@ -565,14 +606,14 @@
       
       
         <label class="md-nav__link" for="__nav_8">
-          Additional IMS resources
+          Additional resources
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Additional IMS resources" data-md-level="1">
+      <nav class="md-nav" aria-label="Additional resources" data-md-level="1">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
-          Additional IMS resources
+          Additional resources
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -582,8 +623,8 @@
   
   
     <li class="md-nav__item">
-      <a href="terminology/ion-mobility-terminology.html" class="md-nav__link">
-        Terminology
+      <a href="../../terminology/general-terminology.html" class="md-nav__link">
+        Gerneral Terminology
       </a>
     </li>
   
@@ -596,8 +637,22 @@
   
   
     <li class="md-nav__item">
-      <a href="workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
-        Data format insight
+      <a href="../../terminology/ion-mobility-terminology.html" class="md-nav__link">
+        IMS Terminology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
+        IMS data format insight
       </a>
     </li>
   
@@ -618,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="performance.html" class="md-nav__link">
+      <a href="../../performance.html" class="md-nav__link">
         Performance options
       </a>
     </li>
@@ -633,7 +688,22 @@
   
   
     <li class="md-nav__item">
-      <a href="Contribute.html" class="md-nav__link">
+      <a href="../../commandline_tool.html" class="md-nav__link">
+        Command line tool (batch mode)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Contribute.html" class="md-nav__link">
         Contribute
       </a>
     </li>
@@ -648,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="wikiacknowledgements.html" class="md-nav__link">
+      <a href="../../wikiacknowledgements.html" class="md-nav__link">
         Acknowledgements
       </a>
     </li>
@@ -682,36 +752,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#raw-data-overview-lc-ms" class="md-nav__link">
-    Raw data overview (LC-MS)
+  <a href="#creating-or-importing-a-ccs-calibration" class="md-nav__link">
+    Creating or importing a CCS calibration
   </a>
+  
+    <nav class="md-nav" aria-label="Creating or importing a CCS calibration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing-a-ccs-calibration" class="md-nav__link">
+    Importing a CCS calibration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-css-calibration" class="md-nav__link">
+    Reference CSS calibration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ion-mobility-raw-data-overview-lc-ims-ms" class="md-nav__link">
-    Ion mobility raw data overview (LC-IMS-MS)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chromatogram-plot" class="md-nav__link">
-    Chromatogram plot
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#spectrum-plot" class="md-nav__link">
-    Spectrum plot
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#page-contributors" class="md-nav__link">
-    Page Contributors
+  <a href="#calculating-ccs-values" class="md-nav__link">
+    Calculating CCS values
   </a>
   
 </li>
@@ -728,31 +797,75 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/Raw-data-visualisation.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/module_docs/id_ccs_calibration/ccs_calibration.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="raw-data-visualisation">Raw data visualisation<a class="headerlink" href="#raw-data-visualisation" title="Permanent link">&para;</a></h1>
-<p>todo</p>
-<h2 id="raw-data-overview-lc-ms">Raw data overview (LC-MS)<a class="headerlink" href="#raw-data-overview-lc-ms" title="Permanent link">&para;</a></h2>
-<p>todo</p>
-<h2 id="ion-mobility-raw-data-overview-lc-ims-ms">Ion mobility raw data overview (LC-IMS-MS)<a class="headerlink" href="#ion-mobility-raw-data-overview-lc-ims-ms" title="Permanent link">&para;</a></h2>
-<p>todo</p>
-<h2 id="chromatogram-plot">Chromatogram plot<a class="headerlink" href="#chromatogram-plot" title="Permanent link">&para;</a></h2>
-<p>todo</p>
-<h2 id="spectrum-plot">Spectrum plot<a class="headerlink" href="#spectrum-plot" title="Permanent link">&para;</a></h2>
-<p>todo</p>
-<h2 id="page-contributors">Page Contributors<a class="headerlink" href="#page-contributors" title="Permanent link">&para;</a></h2>
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>SteffenHeu</a></span></p>
+<h1 id="ccs-calibration-and-calculation">CCS Calibration and calculation<a class="headerlink" href="#ccs-calibration-and-calculation" title="Permanent link">&para;</a></h1>
+<p>Accurate determination of CCS values requires a valid CCS calibration and molecule charge states to
+be detected.</p>
+<ul>
+<li><strong>timsTOF</strong> raw data can be recalibrated using data analysis and imported in MZmine. The
+  recalibrated data will be used by default. (see <a href="#calculating-ccs-values">Calculating CCS values</a>)</li>
+<li><strong>mzML</strong> raw data requires the determination of a calibration function from the raw data (e.g. as
+  detected features) or as import from an external file. (see 
+  <a href="#creating-or-importing-a-ccs-calibration">Creating or importing a CCS calibration</a>)</li>
+</ul>
+<h2 id="creating-or-importing-a-ccs-calibration">Creating or importing a CCS calibration<a class="headerlink" href="#creating-or-importing-a-ccs-calibration" title="Permanent link">&para;</a></h2>
+<h3 id="importing-a-ccs-calibration">Importing a CCS calibration<a class="headerlink" href="#importing-a-ccs-calibration" title="Permanent link">&para;</a></h3>
+<p>Agilent calibration data can be imported from the "OverrideImsCal.xml" file in the Agilent raw data
+folder. Waters calibration data can be imported from the "mob_cal.csv" file in the Waters raw data 
+folder. The "_extern.inf" file is also required, but will be read automatically when the "mob_cal.csv"
+is selected.</p>
+<p>The calibration import is accessed via <strong>Feature list methods</strong> -&gt; <strong>Processing</strong> -&gt; <strong>External CCS
+Calibration</strong>. Then select the calibration "OverrideImsCal.xml"/"mob_cal.csv" from the raw data folder, and select
+the raw data files the calibration should be applied to.</p>
+<p><img alt="" src="external.jpg" /></p>
+<h3 id="reference-css-calibration">Reference CSS calibration<a class="headerlink" href="#reference-css-calibration" title="Permanent link">&para;</a></h3>
+<p>If a mobility calibrant is infused during an HPLC run of every sample, a CCS calibration can be
+calculated on a per-raw file basis. (Common procedure on Bruker devices) Otherwise, a single run can 
+be used to calibrate multiple files.</p>
+<p>Please note that this is currently only supported for TIMS and DTIMS data.</p>
+<p>The calibration module can be accessed via <strong>Feature list methods</strong> -&gt; <strong>Processing</strong> -&gt; <strong>Internal
+reference calibration</strong>.</p>
+<p><img alt="" src="reference.jpg" /></p>
+<p><strong>Set to additional raw files</strong> If a calibration calculated from a single feature list shall be
+applied to multiple other raw files, the raw files can be selected here. This requires only a single
+raw file to be selected.</p>
+<p><strong>Feature list (with reference compounds)</strong> Specifies (a) feature list(s) that contains the
+reference compounds. If multiple feature lists are selected, every feature list will be searched for
+reference compounds, and the calibration will be used for the raw data files in the particular
+feature list. This means that no raw data file may be selected. (Cannot set multiple calibrations to
+a single raw file.)<br />
+If a single feature list is selected, the calibration may be applied to additional raw data files
+via the <strong>Set to additional raw files</strong> parameter.</p>
+<p><strong>Reference list</strong> Specifies a ".csv" reference list of for CCS calibrant ions. Must contain the
+columns "
+mz", "mobility", "ccs", "charge". Columns must be separated by ";". The ion mode may be specified
+via the charge of the ion, e.g., as 1 or -1. Only the correct polarity will be used to calculate the
+calibration.</p>
+<p><strong>m/z tolerance</strong> The m/z tolerance for the reference compounds.</p>
+<p><strong>Mobility tolerance</strong> the mobiltiy tolerance to detect the reference compounds.</p>
+<p><strong>Calibration segment RT Range</strong> Specifies the rt range that shall be searched for calibrant ions.
+Usually either the beginning or end of a HPLC run.</p>
+<p><strong>Minimum height</strong> A minimum intensity for reference compounds to be used as calibrant signals for
+determination of the calibration.</p>
+<h2 id="calculating-ccs-values">Calculating CCS values<a class="headerlink" href="#calculating-ccs-values" title="Permanent link">&para;</a></h2>
+<p>After a calibration as been set (Agilent/Waters/Bruker mzML) (Bruker tdf works out-of-the-box)
+CCS values can be calculated via <strong>Feature list methods</strong> -&gt; <strong>Processing</strong> -&gt; <strong>Calculate CCS
+values</strong>.</p>
+<p>Here, a default charge state may be set, in case it could not be determined. Otherwise, the charge
+state determined via the isotope pattern will be used.</p>
+<p><img alt="" src="ccscalc.jpg" /></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 18, 2022 21:51:26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 10, 2022 15:42:38</span>
       
     
   </small>
@@ -770,7 +883,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="module_docs/ccs_calibration/ccs_calibration.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: CCS calibration" rel="prev">
+        <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Resolving" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -779,20 +892,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              CCS calibration
+              Resolving
             </div>
           </div>
         </a>
       
       
         
-        <a href="terminology/ion-mobility-terminology.html" class="md-footer__link md-footer__link--next" aria-label="Next: Terminology" rel="next">
+        <a href="../gapfill_peak_finder/gap-filling.html" class="md-footer__link md-footer__link--next" aria-label="Next: Gap filling (Peak finder)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Terminology
+              Gap filling (Peak finder)
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -822,10 +935,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="assets/javascripts/bundle.467223ff.min.js"></script>
+      <script src="../../assets/javascripts/bundle.467223ff.min.js"></script>
       
     
   </body>

@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/dataimport/data-import.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/featdet_ims_expander/ims-expander.html">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
       
-        <title>Data import - MZmine 3 Documentation</title>
+        <title>Ion mobility expander - MZmine 3 Documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-import" class="md-skip">
+        <a href="#ims-expander" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data import
+              Ion mobility expander
             
           </span>
         </div>
@@ -303,6 +303,62 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../io/raw_data_import/data-import.html" class="md-nav__link">
+        Data import
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_mass_detection/mass-detection.html" class="md-nav__link">
+        Mass detection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_mobility_scan_merging/mobility-scan-merging.html" class="md-nav__link">
+        Mobility scan merging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html" class="md-nav__link">
+        ADAP Chromatogram builder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -315,12 +371,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Data import
+          Ion mobility expander
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="data-import.html" class="md-nav__link md-nav__link--active">
-        Data import
+      <a href="ims-expander.html" class="md-nav__link md-nav__link--active">
+        Ion mobility expander
       </a>
       
         
@@ -339,15 +395,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lc-ms-data" class="md-nav__link">
-    LC-MS data
+  <a href="#parameter-settings" class="md-nav__link">
+    Parameter settings
   </a>
+  
+    <nav class="md-nav" aria-label="Parameter settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mz-tolerance" class="md-nav__link">
+    m/z tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raw-data-instead-of-thresholded" class="md-nav__link">
+    Raw data instead of thresholded
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-default-mobility-bin-width-scans" class="md-nav__link">
+    Override default mobility bin width (scans)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lc-ims-ms-data" class="md-nav__link">
-    LC-IMS-MS data
+  <a href="#binned-mobilogram-example" class="md-nav__link">
+    Binned mobilogram example
   </a>
   
 </li>
@@ -367,63 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../massdetection/mass-detection.html" class="md-nav__link">
-        Mass detection
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../mobilityscanmerging/mobility-scan-merging.html" class="md-nav__link">
-        Mobility scan merging
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../adapchromatogrambuilder/adap-chromatogram-builder.html" class="md-nav__link">
-        ADAP Chromatogram builder
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../imsexpander/ims-expander.html" class="md-nav__link">
-        Ion mobility expander
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ionmobilitytracebuilder/ion-mobility-trace-builder.html" class="md-nav__link">
+      <a href="../featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-nav__link">
         Ion mobility trace builder
       </a>
     </li>
@@ -437,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../smoothing/smoothing.html" class="md-nav__link">
+      <a href="../featdet_smoothing/smoothing.html" class="md-nav__link">
         Smoothing
       </a>
     </li>
@@ -451,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../localminimumresolver/local-minimum-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-nav__link">
         Resolving
       </a>
     </li>
@@ -465,8 +492,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../ccs_calibration/ccs_calibration.html" class="md-nav__link">
+      <a href="../id_ccs_calibration/ccs_calibration.html" class="md-nav__link">
         CCS calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gapfill_peak_finder/gap-filling.html" class="md-nav__link">
+        Gap filling (Peak finder)
       </a>
     </li>
   
@@ -513,8 +554,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Raw-data-visualisation.html" class="md-nav__link">
+      <a href="../../visualization_modules/Raw-data-visualisation.html" class="md-nav__link">
         Raw data visualisation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/ims_raw_data_overview/IM-data-visualisation.html" class="md-nav__link">
+        Ion mobility data visualisation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
+        MSMS Visualizer
       </a>
     </li>
   
@@ -544,14 +613,14 @@
       
       
         <label class="md-nav__link" for="__nav_8">
-          Additional IMS resources
+          Additional resources
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Additional IMS resources" data-md-level="1">
+      <nav class="md-nav" aria-label="Additional resources" data-md-level="1">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
-          Additional IMS resources
+          Additional resources
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -561,8 +630,22 @@
   
   
     <li class="md-nav__item">
+      <a href="../../terminology/general-terminology.html" class="md-nav__link">
+        Gerneral Terminology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../terminology/ion-mobility-terminology.html" class="md-nav__link">
-        Terminology
+        IMS Terminology
       </a>
     </li>
   
@@ -576,7 +659,7 @@
   
     <li class="md-nav__item">
       <a href="../../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
-        Data format insight
+        IMS data format insight
       </a>
     </li>
   
@@ -599,6 +682,21 @@
     <li class="md-nav__item">
       <a href="../../performance.html" class="md-nav__link">
         Performance options
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commandline_tool.html" class="md-nav__link">
+        Command line tool (batch mode)
       </a>
     </li>
   
@@ -661,15 +759,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lc-ms-data" class="md-nav__link">
-    LC-MS data
+  <a href="#parameter-settings" class="md-nav__link">
+    Parameter settings
   </a>
+  
+    <nav class="md-nav" aria-label="Parameter settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mz-tolerance" class="md-nav__link">
+    m/z tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raw-data-instead-of-thresholded" class="md-nav__link">
+    Raw data instead of thresholded
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-default-mobility-bin-width-scans" class="md-nav__link">
+    Override default mobility bin width (scans)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lc-ims-ms-data" class="md-nav__link">
-    LC-IMS-MS data
+  <a href="#binned-mobilogram-example" class="md-nav__link">
+    Binned mobilogram example
   </a>
   
 </li>
@@ -686,41 +811,38 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/module_docs/dataimport/data-import.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/module_docs/featdet_ims_expander/ims-expander.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="data-import">Data import<a class="headerlink" href="#data-import" title="Permanent link">&para;</a></h1>
-<h2 id="lc-ms-data">LC-MS data<a class="headerlink" href="#lc-ms-data" title="Permanent link">&para;</a></h2>
-<p>Raw data can be imported via the main menu <strong>Raw data methods → Raw data import</strong>. Note that
-multiple data files/folders can be dropped into the
-<strong>MS data (advanced)</strong> dialog. If individual modules are used, folder based formats can only
-imported as one folder at a time. When using the <strong>MS data (advanced)</strong> dialog, inexperienced users
-should deactivate the direct mass detection steps, since they alter the raw data on the import. Mass
-detection is then performed, when the scans are loaded and only peaks above the noise level are
-imported.</p>
-<p>Alternatively, you can simply drag &amp; drop the raw data into the raw data list of the main window.</p>
-<p><img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391336-5722d04c-91c0-4c77-88db-00325e8ff41b.png" /></p>
-<p><img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391465-c61eece6-0720-459f-8b2b-511021d7a058.png" /></p>
-<h2 id="lc-ims-ms-data">LC-IMS-MS data<a class="headerlink" href="#lc-ims-ms-data" title="Permanent link">&para;</a></h2>
-<p>As any other data format, ion mobility data can be imported via the main menu <strong>Raw data methods →
-Raw data import</strong>. Note that multiple .tdf data folders can be dropped into the
-<strong>MS data (advanced)</strong> dialog. The Bruker TDF import can only select a single folder. When using
-the <strong>MS data (advanced)</strong> dialog, inexperienced users should deactivate the direct mass detection
-steps, since they alter the raw data on the import. Mass detection is then performend, when the
-scans are loaded and only peaks above the noise level are imported.</p>
-<p>Alternatively, you can simply drag &amp; drop the raw data into the raw data list of the main window.</p>
-<p><img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391336-5722d04c-91c0-4c77-88db-00325e8ff41b.png" />
-<img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391465-c61eece6-0720-459f-8b2b-511021d7a058.png" /></p>
+<h1 id="ims-expander">IMS Expander<a class="headerlink" href="#ims-expander" title="Permanent link">&para;</a></h1>
+<p>The IMS expander will search for data points in mobility scans for existing features. This requires
+prior chromatogram building (
+see <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP Chromatogram builder</a> and
+resolving in retention time dimension (see <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html">Resolving</a>).</p>
+<h3 id="parameter-settings">Parameter settings<a class="headerlink" href="#parameter-settings" title="Permanent link">&para;</a></h3>
+<h4 id="mz-tolerance">m/z tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
+<p>If selected, a tolerance will be applied to the feature's detected m/z while searching for data
+points in mobility dimension. Otherwise, the accepted m/z range is determined by the feature's m/z
+distribution in accumulated frame spectra.<br />
+<strong>Recommended setting: selected, 0.003 m/z and 15 ppm</strong></p>
+<h4 id="raw-data-instead-of-thresholded">Raw data instead of thresholded<a class="headerlink" href="#raw-data-instead-of-thresholded" title="Permanent link">&para;</a></h4>
+<p>Enables searching in mobility scan raw data instead of the thresholded (=mass detected) data. Only
+possible for centroid raw data files.</p>
+<h4 id="override-default-mobility-bin-width-scans">Override default mobility bin width (scans)<a class="headerlink" href="#override-default-mobility-bin-width-scans" title="Permanent link">&para;</a></h4>
+<p>If selected, the default number of binned mobility scans can be overriden. Useful for data with high
+mobility resolution. </p>
+<h3 id="binned-mobilogram-example">Binned mobilogram example<a class="headerlink" href="#binned-mobilogram-example" title="Permanent link">&para;</a></h3>
+<p><img alt="binned mobilogram" src="binnedmobilogram.png" /></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 18, 2022 21:51:26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 10, 2022 15:42:38</span>
       
     
   </small>
@@ -738,7 +860,7 @@ scans are loaded and only peaks above the noise level are imported.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../workflows/imsworkflow/Ion-mobility-data-processing-workflow.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: LC-IMS-MS workflow" rel="prev">
+        <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: ADAP Chromatogram builder" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -747,20 +869,20 @@ scans are loaded and only peaks above the noise level are imported.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              LC-IMS-MS workflow
+              ADAP Chromatogram builder
             </div>
           </div>
         </a>
       
       
         
-        <a href="../massdetection/mass-detection.html" class="md-footer__link md-footer__link--next" aria-label="Next: Mass detection" rel="next">
+        <a href="../featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-footer__link md-footer__link--next" aria-label="Next: Ion mobility trace builder" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Mass detection
+              Ion mobility trace builder
             </div>
           </div>
           <div class="md-footer__button md-icon">
