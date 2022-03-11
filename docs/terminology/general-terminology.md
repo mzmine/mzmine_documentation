@@ -63,7 +63,7 @@ In MZmine we call 'mass list' the list of m/z values and corresponding signal in
 ### Feature list
 List of ....
 
-Essentially, [EICs](#total-ion-current-base-peak-and-extracted-ion-chromatogram) are constructed for each m/z value in the mass lists and subsequently deconvoluted into individual features. The latter are then stored as XXX. MZmine 3 provides a selection of diﬀerent algorithms for the EIC construction and deconvolution, depending on the nature of the MS data (e.g. mass accuracy and resolution). See, for example, [ADAP chromatogram builder](../module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local minimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) modules for more details.
+Essentially, [EICs](#Extracted ion chromatogram) are constructed for each m/z value in the mass lists and subsequently deconvoluted into individual features. The latter are then stored as XXX. MZmine 3 provides a selection of diﬀerent algorithms for the EIC construction and deconvolution, depending on the nature of the MS data (e.g. mass accuracy and resolution). See, for example, [ADAP chromatogram builder](../module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local minimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) modules for more details.
 
 ![feature creation](feature-creation.png)
 

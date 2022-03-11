@@ -31,6 +31,7 @@ nav:
       - IMS Terminology: terminology/ion-mobility-terminology.md
       - IMS data format insight: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
   - Performance options: performance.md
+  - Command line tool (batch mode): commandline_tool.md
   - Contribute: Contribute.md
   - Acknowledgements: wikiacknowledgements.md
 
