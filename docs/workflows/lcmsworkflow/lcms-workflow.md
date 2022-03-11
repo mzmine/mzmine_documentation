@@ -44,13 +44,15 @@ The "detected" features in each ﬁle are listed in the so-called "feature lists
 - Remove features produced by natural isotopes
 - For more details see the De-isotoping module (add link).
 
+#### Isotope grouper (filter)
+
+[Isotope grouper (filter)](../../module_docs/isotopegrouper/Isotope_grouper.md)
+
 ### Gap-filling
 Gap-filling can be performed on the aligned feature lists to cope with missing features that might be artifacts of the feature-detection process.
 - For more details see the Gap-filling module.
 
-### Isotope grouper (filter)
 
-[Isotope grouper (filter)](../../module_docs/isotopegrouper/Isotope_grouper.md)
 
 
 ## Page Contributors
