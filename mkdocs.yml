@@ -19,7 +19,7 @@ nav:
       - Ion mobility expander: module_docs/featdet_ims_expander/ims-expander.md
       - Ion mobility trace builder: module_docs/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md
       - Smoothing: module_docs/featdet_smoothing/smoothing.md
-      - Resolving: module_docs/featdet_resolving_local_minimum/local-minimum-resolver.md
+      - Resolving: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
   - Visualisation:
       - Raw data visualisation: Raw-data-visualisation.md
