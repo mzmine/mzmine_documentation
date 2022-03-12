@@ -10,7 +10,7 @@ Before creating your first project, we recommend setting up some things.
 2. MZmine 2 projects cannot be imported due to changes in the data structure.
 3. MZmine 2 batch files cannot be imported due to parameter optimizations.
 
-You can familiarize with the new GUI here: [Main window overview](Main-window-overview.md)
+You can get familiar with the new GUI here: [Main window overview](Main-window-overview.md)
 
 A quick insight to data processing workflows can be found
 here: [LC-MS workflow](workflows/lcmsworkflow/lcms-workflow.md)
