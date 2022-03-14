@@ -9,9 +9,13 @@ nav:
   - Home page: index.md
   - Getting started: getting_started.md
   - Main window overview: Main-window-overview.md
-  - LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
-  - LC-IMS-MS workflow: workflows/imsworkflow/Ion-mobility-data-processing-workflow.md
-  - Module documentations:
+  
+  - Visualisation modules:
+      - Raw data visualisation: visualization_modules/Raw-data-visualisation.md
+      - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md
+      - MSMS Visualizer: visualization_modules/msmsplot/msms-plot.md
+  
+  - Processing modules:
       - Data import: module_docs/io/raw_data_import/data-import.md
       - Mass detection: module_docs/featdet_mass_detection/mass-detection.md
       - Mobility scan merging: module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md
@@ -22,14 +26,17 @@ nav:
       - Resolving: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
       - Gap filling (Peak finder): module_docs/gapfill_peak_finder/gap-filling.md
-  - Visualisation:
-      - Raw data visualisation: visualization_modules/Raw-data-visualisation.md
-      - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md
-      - MSMS Visualizer: visualization_modules/msmsplot/msms-plot.md
+  
+  - Workflows:
+      - LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
+      - LC-IMS-MS workflow: workflows/imsworkflow/Ion-mobility-data-processing-workflow.md
+      - Batch processing: workflows/batch_processing/batch-processing.md
+  
   - Additional resources:
       - Gerneral Terminology: terminology/general-terminology.md
       - IMS Terminology: terminology/ion-mobility-terminology.md
       - IMS data format insight: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
+      
   - Performance options: performance.md
   - Command line tool (batch mode): commandline_tool.md
   - Contribute: Contribute.md
