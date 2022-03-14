@@ -3,17 +3,14 @@
 ## MS
 See https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119377368.ch3
 
-### Parent ion
-Todo. A.k.a. precursor ion
+### Precursor and fragment ions
+The precuror ion (a.k.a. "parent ion") is the ion that dissociates to a smaller fragment ions in a MS/MS experiment. A fragment ion (a.k.a. "daughter ion" or "product ion") is the charged product of an ion dissociation. A fragment ion may be stable itself or may dissociate further to form other charged fragment ions and neutral species of successively lower mass.
 
-### Fragment ion 
-Todo. A.k.a. daughter ion, product ion
+### Accurate mass, exact mass and mass accuracy 
+The accurate mass is the experimentally-determined mass of an ion measured with an high-resolution mass spectormeter. The exact masss is the calculated mass of an ion based on its elemental formula, isotopic composition and charge state. While the accurate mass is an experimentally-measured quantity, the exact mass is a theretically-calculated quantity. The mass accuracy is defined as the difference between the measured value (accurate mass) and the true value (exact mass). It can be expressed either in absolute (mDa) or relative (ppm) terms.
 
-### Mass range
-Todo
-
-### Mass accuracy 
-Todo. Can be expressed either in absolute (mDa) or relative (ppm) terms
+### Monoisotopic mass
+Exact mass of an ion calculated using the mass of the lightest isotope of each element.
 
 ### Mass resolution 
 Todo. Often called/expressed as mass resolvin power
