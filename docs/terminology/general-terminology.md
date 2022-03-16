@@ -55,7 +55,8 @@ In this context, a emph{feature} is defined as the two-dimensional integration w
 
 
 ### Mass list
-In MZmine we call 'mass list' the list of m/z values and corresponding signal intensities found in each mass spectrum of the LC-MS run. To do so, each MS (and MS2) spectrum is processed separately to detect individual ion peaks. See [Mass detection](../module_docs/featdet_mass_detection/mass-detection.md) module.
+In MZmine we call _mass list_ the output of the [mass detection](../module_docs/featdet_mass_detection/mass-detection.md) module. A _mass list_ is a list of _m/z_ values (and corresponding signal intensities) found in each mass spectrum (MS or MSn) of each processed raw data file. 
+Every mass spetrum contained in the raw file is processed indivudally and the signals exceeding the set noise threshold are included in the mass list. See [Mass detection](../module_docs/featdet_mass_detection/mass-detection.md) module.
 
 ### Feature list
 List of ....
