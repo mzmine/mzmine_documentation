@@ -44,14 +44,11 @@ The extracted ion chromatogram (EIC) displays the signal intensity of a specific
 # MZmine-specific terminology
 
 ### Masses and Features
-Mass is ...individual signal in a mass spectrum, which corresponds to an ion detected by the mass spectrometer.
+In MS data processing, the term _mass_ is normally used to refer to an individual signal in a mass spectrum, which corresponds to an ion detected by the mass spectrometer (see [Mass detection](../module_docs/featdet_mass_detection/mass-detection.md)).
 
-In LC-MS, a 'feature' is defined as a pair of m/z and retention time, normally associated with a signal intensity.
+In LC-MS, a _feature_ is defined as a bounded, two-dimensional (_m/z_ and RT dimensions) signal characterized by a pair of _m/z_ and RT values and associated with the detected signal intensity. In the case of LC-IM-MS data, a feature is also characterized by the ion mobility value recorded for the ion (see [LC-MS and LC-IMS-MS data comparison](../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md). MZmine 3 provides a selection of different algorithms for LC-(IM)-MS feature detection, depending on the nature of the MS data (_e.g._ mass accuracy and resolution). However, they all follow the same logic: [EICs](#extracted-ion-chromatogram) are constructed starting from each _m/z_ value in the mass lists and subsequently deconvoluted into individual features (see figure).
 
-The term ‘feature’ is used to emphasize the 3D nature of the signal, as opposed to the term ‘peak’, which is typically used for 2D datasets (e.g., m/z in a mass spectrum).
-
-
-In this context, a emph{feature} is defined as the two-dimensional integration with respect to retention time (RT) and mass-over-charge (m/z) of the eluting signal belonging to a single charge variant of a measurand (e.g., a peptide). Features are characterized by attributes like average mass-to-charge ratio, centroid retention time, intensity, and quality. 
+![feature creation](feature-creation.png)
 
 
 ### Mass list
@@ -59,11 +56,8 @@ In MZmine we call _mass list_ the output of the [mass detection](../module_docs/
 Every mass spetrum contained in the raw file is processed indivudally and the signals exceeding the set noise threshold are included in the mass list. See [Mass detection](../module_docs/featdet_mass_detection/mass-detection.md) module.
 
 ### Feature list
-List of ....
+In MZmine, _feature lists_ are the output of the feature detection process (see [Masses and features](#masses-and-features)). The set of detected features in each LC-MS run is stored as a list, hence the name "feature list" (see, for example, [ADAP chromatogram builder](../module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local mimimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) for more details). Multiple feature lists can undergo further processing (_e.g._ feature alingment) which results in a tables (often referred to as _feature table_) where samples are arranged in columns, features in rows and each entry contains the signal intensity detected for the corresponding feature, in the corresponding sample.
 
-Essentially, [EICs](#extracted-ion-chromatogram) are constructed for each m/z value in the mass lists and subsequently deconvoluted into individual features. The latter are then stored as XXX. MZmine 3 provides a selection of diﬀerent algorithms for the EIC construction and deconvolution, depending on the nature of the MS data (e.g. mass accuracy and resolution). See, for example, [ADAP chromatogram builder](../module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local minimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) modules for more details.
-
-![feature creation](feature-creation.png)
 
 ## References
 - Pluskal, T., Castillo, S., Villar-Briones, A. & Oresic, M. BMC Bioinformatics 11, 395 (2010). https://doi.org/10.1186/1471-2105-11-395
