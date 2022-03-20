@@ -7,7 +7,9 @@ The _ADAP chromatogram builder_ algorithm operates as follow. The MS1 spectra in
 
 The [masses](../../terminology/general-terminology.md#masses-and features) detected in each MS1 spectrum (_i.e._ the mass list) are first sorted in order of decreasing intensity and the processing starts from the most intense mass. Since no EICs have yet been created, a new EIC is initialized with and associated to the corresponding _m/z_ value. The same is repeated for all the masses in MS1 scan and a set of EICs is created (constituting the _feature list_). The processing proceeds with the second MS1 scan in the LC-MS run. Each mass is checked to determine if it "belongs" to an existing EIC based on its _m/z_ and the user-defined tolerance (_i.e._ "Scan to scan accuracy (m/z)" parameter). If a matching EIC is found, a new data point is added to the EIC. Whenever a data point is added, the average of the EIC’s _m/z_ values is recalculated and the EIC-associated _m/z_ updated. If no matching EIC is found, a new EIC is inizialized. When no new data point can be added to an EIC, the latter is terminated. The same is repeated for all the MS1 scans in the LC-MS run. When all the MS1 scans have been processed, the so-built set of EICs is checked according to the user-defined parameters (_i.e._ minimum number of data points and intensity). The EICs matching the requirements are retained in the feature list, whereas the rest are discarded. The so-built EICs can then be deconvoluted into individual features by one of the deconvolution algorithms provided by MZmine 3 (_e.g._ [Local mimimum resolver](../featdet_resolver_local_minimum/local-minimum-resolver.md) module).
 
-**Feature detection → LC-MS → ADAP chromatogram builder**
+---
+## Parameters settings
+:material-menu-open: Feature detection → LC-MS → ADAP chromatogram builder
 ![ADAP Chromatogram Builder](adap_chromatogram_builder.png)
 
 

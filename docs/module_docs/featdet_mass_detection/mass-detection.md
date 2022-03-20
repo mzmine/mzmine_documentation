@@ -1,7 +1,10 @@
 # **Mass detection**
 The mass detection module generates a [mass list](../../terminology/general-terminology.md#mass-list) (_i.e._ list of m/z values and correspoinding signal intensities) for each scan, in each raw data file. During the mass detection, profile raw data are centroided and a noise filtering is performed based on a user-defined threshold (see [Setting the noise level](#setting-the-noise-level)).
 
-**Raw data methods → Mass detection → Mass detection**
+---
+## Parameters settings
+:material-menu-open:
+Raw data methods → Mass detection → Mass detection
 ![Mass detection](mass_detection_main.png)
 
 **Raw data files**: To-do 
