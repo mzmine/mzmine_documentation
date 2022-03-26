@@ -61,6 +61,8 @@ Every mass spetrum contained in the raw file is processed indivudally and the si
 ### Feature list
 In MZmine, _feature lists_ are the output of the feature detection process (see [Masses and features](#masses-and-features)). The set of detected features in each LC-MS run is stored as a list, hence the name "feature list" (see, for example, [ADAP chromatogram builder](../module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local mimimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) for more details). Multiple feature lists can undergo further processing (_e.g._ feature alingment) which results in a tables (often referred to as _feature table_) where samples are arranged in columns, features in rows and each entry contains the signal intensity detected for the corresponding feature, in the corresponding sample.
 
+### Intra- and inter-scan tolerances
+To-do
 
 ## References
 - Pluskal, T., Castillo, S., Villar-Briones, A. & Oresic, M. BMC Bioinformatics 11, 395 (2010). https://doi.org/10.1186/1471-2105-11-395
