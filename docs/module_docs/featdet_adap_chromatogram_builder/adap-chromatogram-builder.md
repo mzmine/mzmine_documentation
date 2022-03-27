@@ -11,7 +11,7 @@ The _ADAP chromatogram builder_ algorithm operates as follow. The MS1 spectra in
 
 **Raw data files**: select the input raw data files for chromatogram building. Mass lists associated with the data files will be automatically selected. See option descriptions in [Mass detection](../featdet_mass_detection/mass-detection.md#parameters-settings) module.
 
-**Scans**: select (or filter out) the MS scans to be processed. Several filters are avialble (see description in [Mass detection](../featdet_mass_detection/mass-detection.md#parameters-settings) module) but setting the _MS level = 1_ is usually sufficient for this module. 
+**Scans**: select (or filter out) the MS scans to be processed. Several filters are avialble (see option descriptions in [Mass detection](../featdet_mass_detection/mass-detection.md#parameters-settings) module) but setting the _MS level = 1_ is usually sufficient for this module. 
 
 **Min group size in # of scans**: minimum number of consecutive MS1 scans where a _m/z_ must be detected with a non-zero intensity in order for the corresponding EICs to be considered valid and retained in the feature list.
 :octicons-light-bulb-16: **Tip**. This parameter largely depends on the chromatographic system setup (_e.g._ HPLC vs UHPLC) and the acquisition rate (_a.k.a._ MS scan speed) of the mass spectrometer. The best way to optimize this setting is by manually inspecting the the raw data and determining the typical minimum number of data points of the LC peaks. Usually, no less than 4-5 should be used.
@@ -21,7 +21,7 @@ The _ADAP chromatogram builder_ algorithm operates as follow. The MS1 spectra in
 
 **Min highest intensity**: minimum intensity that the highest point in the EIC must exceed in order for the corresponding trace to be considered valid and retained in the feature list.
 
-**Scan to scan accuracy (m/z)**: maximum allowed difference between an EIC-associated _m/z_ and a new data point to be added to the existing EIC trace. It is essentially the maximum allowed mass accuracy deviation between consecutive data points in the EICs. The tolerance can be set in _m/z_, ppm or both (see [Mass detection](../featdet_mass_detection/mass-detection.md#parameters-settings)). It is an [inter-scan _m/z_ tolerance](../../terminology/general-terminology.md#Intra-and-inter-scan-tolerances) and it depends on the mass accuracy, resolution and stabiity of the instrument.
+**Scan to scan accuracy (m/z)**: maximum allowed difference between an EIC-associated _m/z_ and a new data point to be added to the existing EIC trace. It is essentially the maximum allowed mass accuracy deviation between consecutive data points in the EICs. The tolerance can be set in _m/z_, ppm or both. It is an [inter-scan _m/z_ tolerance](../../terminology/general-terminology.md#Intra-and-inter-scan-tolerances) and it depends on the mass accuracy, resolution and stabiity of the instrument.
 :octicons-light-bulb-16: **Tip**. The best way to optimize this parameter is by manually inspecting the the raw data and determining the typical fluctuation of the accurate mass measurement over consecutive scans. A good starting point is 0.002-0.005 _m/z_ and 5-10 ppm for Orbitrap instruments, while 0.005 _m/z_ and 10-15 ppm can be used for TOF devices. 
 
 **Suffix**: string added to the filename as suffix when creating the corresponding feature list.
