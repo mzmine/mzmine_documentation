@@ -1,7 +1,7 @@
 # General terminology
 
 ## MS
-See https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119377368.ch3
+See https://doi.org/10.1002/9781119377368.ch3
 
 ### Precursor and fragment ions
 The precuror ion (a.k.a. "parent ion") is the ion that dissociates to a smaller fragment ions in a MS/MS experiment. A fragment ion (a.k.a. "daughter ion" or "product ion") is the charged product of an ion dissociation. A fragment ion may be stable itself or may dissociate further to form other charged fragment ions and neutral species of successively lower mass.
