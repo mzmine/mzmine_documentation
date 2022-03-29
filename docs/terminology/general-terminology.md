@@ -41,8 +41,8 @@ The base peak chromatogram (BPC) displays the signal intensity of the most inten
 The extracted ion chromatogram (EIC) displays the signal intensity of a specific m/z value, within a defined tolerance (e.g. ± 5 ppm), at any one retention time point in the LC-MS run. The following figure shows the EIC of _m/z_ 455.2945 ± 5 ppm (same sample as above).
 ![EIC](EIC.png)
 
-### Chromatographic deconvolution - To finish
-Peak overlapping, or co-elution, is a common problem in any chromatographic separation technique. In the case of LC-MS (especially untargeted _omics_ analysis), it is virtually impossible to obtain a full baseline separation for the hundreds (or thousands) of analytes eluted through the column. The process of XXX is called _chromatographic deconvolution_ and is one of the most crucial steps of data processing. 
+### Chromatographic deconvolution
+Peak overlapping, or co-elution, is a common problem in any chromatographic separation technique. In the case of LC-MS (especially untargeted _omics_ analysis), it is virtually impossible to obtain a full baseline separation for the hundreds (or thousands) of analytes eluted through the column. The process of XXX is called _chromatographic deconvolution_ and is one of the most crucial steps of data processing. TO FINISH
 
 # MZmine-specific terminology
 

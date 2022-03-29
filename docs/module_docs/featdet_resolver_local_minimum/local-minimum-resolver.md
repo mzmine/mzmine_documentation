@@ -1,4 +1,4 @@
-# Local Minimum Resolver
+# **Local Minimum Resolver**
 
 During the EICs building, overalpping and partially co-eluting peaks are retained as single features in the faeture list (see, for example, [ADAP chromatogram builder](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)). The _local minimum resolver_ module aims at splitting such "shoulder" LC peaks into individual features (_i.e._ [chromatographic deconvolution](../../terminology/general-terminology.md#chromatographic-deconvolution)) based on local minima. In fact, a local minimum in the EIC trace might correspond to the valley between two adjacent, partially-resolved peaks.
 
@@ -6,29 +6,34 @@ The algorithm examines all the data points in the EIC trace starting from the ea
 
 With the implementation of IM support in MZmine 3, this module was expanded and can now be applied to both the RT and IM dimension (see [Resolving the IM dimension](#resolving-the-IM-dimension)).
 
-
 :octicons-light-bulb-16: **Tip**. The LMR is particularly suitable for LC-MS data with little 
 noise and nice peak shapes.
 
-
 ---
-## Parameters settings
+## **Parameters settings**
 :material-menu-open: Feature detection → Chromatogram resolving → Local minimum resolver
 
 ![](local-minimum-resolver.png)
 
 
-**Suffix**: To-do
+#### **Suffix**
+String added as suffix when creating the corresponding feature list.
 
-**Original feature list**: To-do
+#### **Original feature list**
+Keep or remove the processed feature list(s).
 
-**MS/MS scan pairing**: Selecting this parameter will pair DDA MS/MS spectra to the resolved features. This is optional at this stage, because it will be executed again during resolving in the mobility dimension.
+#### **MS/MS scan pairing**
+Pair MS/MS fragmentation spectra collected in [DDA](../../terminology/general-terminology.md#chromatographic-deconvolution.md#data-dependent-acqusition-mode) mode to the resolved features. This is optional at this stage as the same can be done with a separate [module](../featdet_MS2_scan_pairing/MS2_scan_pairing.md). See [MS2 scan pairing](../featdet_MS2_scan_pairing/MS2_scan_pairing.md) documentation for more details.
 
-**Dimension**: The dimension to be resolved can be selected here. Select _Retention time_. ... 
 
-**Chromatographic threshold**: percentage of data points in the EIC removed before local minima search. The algorithm finds the intensity value (threshold) such that the specified percentage of EIC's data points are below the threshold. All such data points are removed. For example, a _Chromatographic threshold_ = 50% will lead to the lowest-intense 50% data points being discarded. This represents an important filter for noisy chromatogram and significantly reduces the precessing time.
+#### **Dimension**
+The dimension to be resolved can be selected here. Select _Retention time_. ... 
+
+#### **Chromatographic threshold**
+Percentage of data points in the EIC removed before local minima search. The algorithm finds the intensity value (threshold) such that the specified percentage of EIC's data points are below the threshold. All such data points are removed. For example, a _Chromatographic threshold_ = 50% will discard the lowest-intense 50% data points. This represents an important filter for noisy chromatogram and significantly reduces the precessing time.
 
 :octicons-alert-16: Since the algorithms examines the EICs throughout the entire RT range (_i.e._ also the zero data points are considered), we recommend to set this value rather high (_e.g._ 95%) and lower it only if necessary. 
+:octicons-alert-16: ION MOBILITY 80%
 
 **Minimum search range RT/Mobility (absolute)**: size of the moving window examined for local minima search. Overly low values can cause peak edges to be cut off. On the other hand, too high might lead to incomplete separation of narrowly eluting compounds.
 
