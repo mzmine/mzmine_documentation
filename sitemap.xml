@@ -71,6 +71,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_isotope_filter/isotope_filter.html</loc>
+         <lastmod>2022-04-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/gapfill_peak_finder/gap-filling.html</loc>
          <lastmod>2022-04-01</lastmod>
          <changefreq>daily</changefreq>
