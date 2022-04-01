@@ -57,6 +57,13 @@ markdown_extensions:
       permalink: true
   - admonition
   - attr_list
+  # https://squidfunk.github.io/mkdocs-material/reference/formatting/
+  # superscript ^13^C subscript H~2~O
+  # key combinations: ++ctrl+alt+del++
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.superfences:
       # make exceptions to highlighting of code:
       custom_fences:
