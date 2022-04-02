@@ -1,6 +1,7 @@
 # General terminology
 
 ## MS
+<!-- markdown-link-check-disable-next-line -->
 See [Mass Spectrometry: An Applied Approach, Chapter 3: Basic Definitions](https://doi.org/10.1002/9781119377368.ch3)
 
 ### Parent ion
