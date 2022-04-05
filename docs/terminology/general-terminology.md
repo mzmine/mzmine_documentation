@@ -1,7 +1,8 @@
 # General terminology
 
 ## MS
-See https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119377368.ch3
+<!-- markdown-link-check-disable-next-line -->
+See [Mass Spectrometry: An Applied Approach, Chapter 3: Basic Definitions](https://doi.org/10.1002/9781119377368.ch3)
 
 ### Parent ion
 Todo. A.k.a. precursor ion
