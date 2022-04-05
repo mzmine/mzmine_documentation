@@ -65,5 +65,5 @@ In MZmine, _feature lists_ are the output of the feature detection process (see 
 To-do
 
 ## References
-- Pluskal, T., Castillo, S., Villar-Briones, A. & Oresic, M. BMC Bioinformatics 11, 395 (2010). https://doi.org/10.1186/1471-2105-11-395
-- Pluskal, T. et al. Processing Metabolomics and Proteomics Data with Open Software 232–254 (2020). https://doi.org/10.1039/9781788019880-00232
+- Pluskal, T., Castillo, S., Villar-Briones, A. & Oresic, M. BMC Bioinformatics 11, 395 (2010). DOI: 10.1186/1471-2105-11-395
+- Pluskal, T. et al. Processing Metabolomics and Proteomics Data with Open Software 232–254 (2020). DOI: 10.1039/9781788019880-00232

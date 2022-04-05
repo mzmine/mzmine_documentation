@@ -55,7 +55,7 @@ is a mandatory step, if the data was imported from an .mzML file (automatically 
 Bruker import).
 
 - [Data import](../../module_docs/io/raw_data_import/data-import.md#lc-ims-ms-data)
-- [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md#lc-ims-ms-data)
+- [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
 - [Mobility scan merging](../../module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md) (mzML
   data)
 - [ADAP Chromatogram builder](../../module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)
@@ -82,7 +82,7 @@ to summing being executed prior to thresholding (for native Bruker data). Furthe
 isomers might hide behind a single chromatographic peak.
 
 - [Data import](../../module_docs/io/raw_data_import/data-import.md#lc-ims-ms-data)
-- [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md#lc-ims-ms-data)
+- [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
 - [Ion mobility trace builder](../../module_docs/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md)
 - [Smoothing in retention time dimension (optional)](../../module_docs/featdet_smoothing/smoothing.md)
 - [Resolving in retention time dimension](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md)

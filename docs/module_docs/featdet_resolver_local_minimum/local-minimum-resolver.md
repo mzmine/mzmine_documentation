@@ -4,7 +4,7 @@ During the EICs building, overalpping and partially co-eluting peaks are retaine
 
 The algorithm examines all the data points in the EIC trace starting from the earliest RT. A scan window is set (see _Minimum search range RT/Mobility_ parameter) and centred around the examined data point. A data point is considered a local minimum if it is the lowest intense point within the scan window. Moreover, it has to be X times lower than the highest point in the window (see _Min ratio of peak top/edge_ parameter). When a local minumum is found, a set of user-defined intensity and peak duration requirements is checked. If they are fulfilled, the original overlapping peaks are splitted into new, distinct features.
 
-With the implementation of IM support in MZmine 3, this module was expanded and can now be applied to both the RT and IM dimension (see [Resolving the IM dimension](#resolving-the-IM-dimension)).
+With the implementation of IM support in MZmine 3, this module was expanded and can now be applied to both the RT and IM dimension (see [Resolving the ion mobility dimension](#resolving-the-ion-mobility-dimension)).
 
 :octicons-light-bulb-16: **Tip**. The LMR is particularly suitable for LC-MS data with little 
 noise and nice peak shapes.
