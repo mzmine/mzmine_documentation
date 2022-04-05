@@ -29,7 +29,7 @@ Minimum intensity that the highest point in the EIC must exceed in order for the
 
 
 #### **Scan to scan accuracy (m/z)**
-Maximum allowed difference between an EIC-associated _m/z_ and a new data point to be added to the existing EIC trace. It is essentially the maximum allowed mass accuracy deviation between consecutive data points in the EICs. The tolerance can be set in _m/z_, ppm or both. It is an [inter-scan _m/z_ tolerance](../../terminology/general-terminology.md#intra--and-inter-scan-tolerances) and it depends on the mass accuracy, resolution and stabiity of the instrument.
+Maximum allowed difference between an EIC-associated _m/z_ and a new data point to be added to the existing EIC trace. It is essentially the maximum allowed mass accuracy deviation between consecutive data points in the EICs. The tolerance can be set in _m/z_, ppm or both. It is an [inter-scan _m/z_ tolerance](../../terminology/general-terminology.md) and it depends on the mass accuracy, resolution and stabiity of the instrument.
 :octicons-light-bulb-16: **Tip**. The best way to optimize this parameter is by manually inspecting the the raw data and determining the typical fluctuation of the accurate mass measurement over consecutive scans. A good starting point is 0.002-0.005 _m/z_ and 5-10 ppm for Orbitrap instruments, while 0.005 _m/z_ and 10-15 ppm can be used for TOF devices. 
 
 #### **Suffix**
