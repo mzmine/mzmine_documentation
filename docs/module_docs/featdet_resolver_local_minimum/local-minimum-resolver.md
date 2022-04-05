@@ -23,7 +23,7 @@ String added as suffix when creating the corresponding feature list.
 Keep or remove the processed feature list(s).
 
 #### **MS/MS scan pairing**
-Pair MS/MS fragmentation spectra collected in [DDA](../../terminology/general-terminology.md#chromatographic-deconvolution.md#data-dependent-acqusition-mode) mode to the resolved features. This is optional at this stage as the same can be done with a separate [module](../featdet_ms2_scan_pairing/ms2_scan_pairing.md). See [MS2 scan pairing](../featdet_ms2_scan_pairing/ms2_scan_pairing.md) documentation for more details.
+Pair MS/MS fragmentation spectra collected in [DDA](../../terminology/general-terminology.md#data-dependent-acqusition-mode) mode to the resolved features. This is optional at this stage as the same can be done with a separate [module](../featdet_ms2_scan_pairing/ms2_scan_pairing.md). See [MS2 scan pairing](../featdet_ms2_scan_pairing/ms2_scan_pairing.md) documentation for more details.
 
 
 #### **Dimension**
