@@ -13,7 +13,7 @@ The _ADAP chromatogram builder_ algorithm operates as follow. Only MS1 scans are
 Select the input raw data files for chromatogram building. Mass lists associated with the data files will be automatically selected. See option descriptions in [Mass detection](../featdet_mass_detection/mass-detection.md#parameters-settings) module.
 
 ####  **Scans**
-Select (or filter out) the MS scans to be processed. Several filters are avialble (see option descriptions in [Mass detection](../featdet_mass_detection/mass-detection.md#parameters-settings) module) but setting the _MS level = 1_ is usually sufficient for this module. 
+Select (or filter out) the MS scans to be processed. Although setting the _MS level = 1_ is usually sufficient for this module, several filters are avialble (see option descriptions in [Mass detection](../featdet_mass_detection/mass-detection.md#parameters-settings) module). For example, specific RT ranges (_e.g._ dead volume, equilibration time, calibration segments, _etc._) can be excluded from the processing by setting the corresponding filter.
 
 ####  **Min group size in # of scans**
 Minimum number of consecutive MS1 scans where a _m/z_ must be detected with a non-zero intensity in order for the corresponding EICs to be considered valid and retained in the feature list.
@@ -25,7 +25,7 @@ Minimum signal intensity that the group scans (see previous parameter) must exce
 
 #### **Min highest intensity**
 Minimum intensity that the highest point in the EIC must exceed in order for the corresponding trace to be considered valid and retained in the feature list.
-:octicons-light-bulb-16: **Tip**. A good starting point for this parameter is 3 times the noise level used in the [Mass detection](../featdet_mass_detection/mass-detection.md).
+:octicons-light-bulb-16: **Tip**. A good starting point for this parameter is 3-5 times the noise level used in the [Mass detection](../featdet_mass_detection/mass-detection.md).
 
 #### **Scan to scan accuracy (m/z)**
 Maximum allowed difference between an EIC-associated _m/z_ and a new data point to be added to the existing EIC trace. It is essentially the maximum allowed mass accuracy deviation between consecutive data points in the EICs. The tolerance can be set in _m/z_, ppm or both. It is an [inter-scan _m/z_ tolerance](../../terminology/general-terminology.md#intra-and-inter-scan-tolerances) and it depends on the mass accuracy, resolution and stabiity of the instrument.

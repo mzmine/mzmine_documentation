@@ -12,14 +12,9 @@ Batch files (XML format) are essentially lists of tasks run by MZmine one after 
 
 When a new step is added to the queue its parameter setup dialog is shown. The "Set paramaters" button allows the user to modify a step's parameter settings. The "Clear" button removes all steps. The "Load" and "Save" buttons make it possible to read and write batch steps to XML files.
 
-The first step of a batch queue is performed on those raw data files and/or peak lists selected by the user. The remaining steps are performed on the results produced by each preceding step. For example, if the first step of the batch queue is Chromatogram builder, it will produce peak lists as a result. If the following step were Peak list deconvolution then it will be performed on the peak lists produced by the preceding Chromatogram builder step.
+The first step of a batch queue is performed on those raw data files and/or peak lists selected by the user. The remaining steps are performed on the results produced by each preceding step (File/Feature list selection must be set to _Those created by previous batch step_). For example, if the first step of the batch queue is the [ADAP chromatogram builder](../../module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md), it will produce peak lists as a result. If the following step were Peak list deconvolution then it will be performed on the peak lists produced by the preceding Chromatogram builder step.
 
-
-
-
-!!! tip
-
-    MZmine "remembers" the last settings used.
+:octicons-alert-16: **Tip** MZmine "remembers" the last settings used.
 
 
 # Processing wizard
