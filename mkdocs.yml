@@ -35,7 +35,7 @@ nav:
       - LC-IMS-MS workflow: workflows/imsworkflow/ion-mobility-data-processing-workflow.md
       - Batch processing: workflows/batch_processing/batch-processing.md
   - Visualisation:
-      - Raw data visualisation: visualization_modules/Raw-data-visualisation.md
+      - Raw data visualisation: visualization_modules/raw-data-visualisation.md
       - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md
       - MSMS Visualizer: visualization_modules/msmsplot/msms-plot.md
   - Additional resources:

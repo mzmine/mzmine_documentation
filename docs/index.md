@@ -16,7 +16,7 @@ Finally, recent developments have strengthened the ties to other open source pro
 
 ---
 ## **About this documentation**
-Here you can find documentation for both [processing](module_docs) and [visualization](visualization_modules) modules in MZmine 3. Moreover, [data processing pipelines](workflows) for untargeted [LC-MS](workflows/lcmsworkflow/lcms-workflow.md) and [LC-IMS-MS](workflows/imsworkflow/ion-mobility-data-processing-workflow.md) feature detection are described and general recommendations are given.
+Here you can find documentation for both processing and visualization modules in MZmine 3. Moreover, data processing pipelines for untargeted [LC-MS](workflows/lcmsworkflow/lcms-workflow.md) and [LC-IMS-MS](workflows/imsworkflow/ion-mobility-data-processing-workflow.md) feature detection are described and general recommendations are given.
 
 **COMING SOON!** We are currently working on a series of short videotutorials to help get you started with the main features of MZmine 3!
 
