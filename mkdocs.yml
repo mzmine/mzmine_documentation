@@ -26,12 +26,11 @@ nav:
       - Resolving: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
       - Gap filling (Peak finder): module_docs/gapfill_peak_finder/gap-filling.md
-  
-  - Workflows:
-      - LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
-      - LC-IMS-MS workflow: workflows/imsworkflow/Ion-mobility-data-processing-workflow.md
-      - Batch processing: workflows/batch_processing/batch-processing.md
-  
+      - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md
+  - Visualisation:
+      - Raw data visualisation: visualization_modules/Raw-data-visualisation.md
+      - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md
+      - MSMS Visualizer: visualization_modules/msmsplot/msms-plot.md
   - Additional resources:
       - Gerneral Terminology: terminology/general-terminology.md
       - IMS Terminology: terminology/ion-mobility-terminology.md
@@ -64,6 +63,13 @@ markdown_extensions:
       permalink: true
   - admonition
   - attr_list
+  # https://squidfunk.github.io/mkdocs-material/reference/formatting/
+  # superscript ^13^C subscript H~2~O
+  # key combinations: ++ctrl+alt+del++
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.superfences:
       # make exceptions to highlighting of code:
       custom_fences:
