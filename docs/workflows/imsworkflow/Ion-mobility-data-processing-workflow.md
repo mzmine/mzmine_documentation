@@ -63,7 +63,7 @@ Bruker import).
 - [Resolving in retention time dimension](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md)
 - [Expanding EICs in mobility dimension](../../module_docs/featdet_ims_expander/ims-expander.md)
 - [Smoothing  in mobility dimension (optional)](../../module_docs/featdet_smoothing/smoothing.md#mobility-dimension)
-- [Resolving in mobility dimension](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#ion-mobility-data)
+- [Resolving in mobility dimension](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#resolving-the-ion-mobility-dimension)
 - [Smoothing in rt and mobility dimension (optional)](../../module_docs/featdet_smoothing/smoothing.md)
     - Some recognised features might have rather noisy signals (in rt and mobility dimension) after
       the mobility resolving step. If smoother shapes are required, the smoothing can be reapplied
@@ -87,7 +87,7 @@ isomers might hide behind a single chromatographic peak.
 - [Smoothing in retention time dimension (optional)](../../module_docs/featdet_smoothing/smoothing.md)
 - [Resolving in retention time dimension](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md)
 - [Smoothing  in mobility dimension (optional)](../../module_docs/featdet_smoothing/smoothing.md#mobility-dimension)
-- [Resolving in mobility dimension](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#ion-mobility-data)
+- [Resolving in mobility dimension](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#resolving-the-ion-mobility-dimension)
 - [Smoothing in rt and mobility dimension (optional)](../../module_docs/featdet_smoothing/smoothing.md)
     - Some recognised features might have rather noisy signals (in rt and mobility dimension) after
       the mobility resolving step. If smoother shapes are required, the smoothing can be reapplied

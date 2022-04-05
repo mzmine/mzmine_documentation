@@ -17,7 +17,9 @@ nav:
   
   - Processing modules:
       - Data import: module_docs/io/raw_data_import/data-import.md
-      - Mass detection: module_docs/featdet_mass_detection/mass-detection.md
+      - Mass detection:
+        - Mass detection: module_docs/featdet_mass_detection/mass-detection.md
+        - Mass detection algorithms: module_docs/featdet_mass_detection/mass-detection-algorithms.md
       - Mobility scan merging: module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md
       - ADAP Chromatogram builder: module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
       - Ion mobility expander: module_docs/featdet_ims_expander/ims-expander.md
@@ -26,6 +28,8 @@ nav:
       - Resolving: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
       - Gap filling (Peak finder): module_docs/gapfill_peak_finder/gap-filling.md
+      - MS2 scan paring: module_docs/featdet_MS2_scan_pairing/MS2_scan_pairing.md
+      
       - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md
   - Visualisation:
       - Raw data visualisation: visualization_modules/Raw-data-visualisation.md

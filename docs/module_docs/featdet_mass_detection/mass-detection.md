@@ -6,7 +6,7 @@ The mass detection module generates a [mass list](../../terminology/general-term
 :material-menu-open: Raw data methods → Mass detection → Mass detection
 ![Mass detection](mass_detection_main.png)
 
-#### **Raw data files**ù
+#### **Raw data files**
 Select the input raw data files for the mass detection. All the imported data files can be processed in bulk (_i.e._ _All raw data files_), or a subset can be selected directly from the _MS data files_ panel (_i.e._ _As selected in the main window_) or based on the filename (_i.e._ _File name pattern_) As an alternative, the files' directory can be also specified (_i.e._ _Specific raw data files_). Finally, if the _Those created by previous batch step_ option is selected, MZmine takes the output of the last processing step as input (particularly useful for [batch processing](../../workflows/batch_processing/batch-processing.md)
 
 #### **Scans**

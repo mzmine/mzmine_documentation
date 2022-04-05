@@ -75,7 +75,8 @@ by decreasing area.
 
 
 
-## Resolving the IM dimension - To-finish
+## Resolving the ion mobility dimension
+To-finish
 
 In general, the same principles apply as in the retention time resolving step. However, a few
 differences shall be noted. In the screenshot you can also see, that the resolved mobilograms are
