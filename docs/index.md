@@ -1,7 +1,9 @@
 # **Welcome to the MZmine 3 wiki!**
 MZmine 3 is an open-source and platform-independent software for mass spectrometry (MS) data processing and visualization. It enables large-scale metabolomics and lipidomics research by spectral preprocessing, feature detection, and various options for compound identification, including spectral library querying and creation.
 
-Since the introduction of MZmine 2 in 2010, the project has matured into a into a community-driven, highly collaborative platform and its functions continue to expand based on the MS community needs and feedbacks. This progress was made possible by the invaluable contribution of many [developers](https://github.com/mzmine/mzmine3/graphs/contributors) from research labs distributed all over the world.
+Since the introduction of MZmine 2 in 2010, the project has matured into a community-driven, highly collaborative platform and its functions continue to expand based on the users' needs and feedbacks. This has also enabled the tight integration of the MZmine ecosystem with popular third-party software for MS data analysis, such as the [SIRIUS](https://bio.informatik.uni-jena.de/software/sirius/) suite, the [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) platform, the [MetaboAnalyst](https://www.metaboanalyst.ca/) web app, _etc._ Such a great progress was made possible by the invaluable contribution of many [developers](https://github.com/mzmine/mzmine3/graphs/contributors) from research labs distributed all over the world. 
+
+Although, MZmine 3 is a stand-alone ecosystem that can be installed ona local computer, it is desinged to interact with third party web interfaces such as Sirius, GNPS/MassIVE, MassQL, XXXX.  MZmine 3 is designed so that it can now accommodate projects that are XXXX-fold in size.
 
 Want to get started with MZmine 3? Check out our [getting started](getting_started.md) page!
  
