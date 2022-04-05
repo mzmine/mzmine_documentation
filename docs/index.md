@@ -1,9 +1,9 @@
 # **Welcome to the MZmine 3 wiki!**
 MZmine 3 is an open-source and platform-independent software for mass spectrometry (MS) data processing and visualization. It enables large-scale metabolomics and lipidomics research by spectral preprocessing, feature detection, and various options for compound identification, including spectral library querying and creation.
 
-Since the introduction of MZmine 2 in 2010, the project has matured into a community-driven, highly collaborative platform and its functions continue to expand based on the users' needs and feedbacks. This has also enabled the tight integration of the MZmine ecosystem with popular third-party software for MS data analysis, such as the [SIRIUS](https://bio.informatik.uni-jena.de/software/sirius/) suite, the [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) platform, the [MetaboAnalyst](https://www.metaboanalyst.ca/) web app, _etc._ Such a great progress was made possible by the invaluable contribution of many [developers](https://github.com/mzmine/mzmine3/graphs/contributors) from research labs distributed all over the world. 
+Since the introduction of MZmine 2 in 2010, the project has matured into a community-driven, highly collaborative platform and its functions continue to expand based on the users' needs and feedbacks. This has also enabled the tight integration of the MZmine ecosystem with popular third-party software for MS data analysis, such as the [SIRIUS](https://bio.informatik.uni-jena.de/software/sirius/) suite for _in silico_ metabolite annotation, the [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) platform with Ion Identity Molecular Networking, the [MetaboAnalyst](https://www.metaboanalyst.ca/) web app for univariate and multivariate statistical anlysis, _etc._
 
-Although, MZmine 3 is a stand-alone ecosystem that can be installed ona local computer, it is desinged to interact with third party web interfaces such as Sirius, GNPS/MassIVE, MassQL, XXXX.  MZmine 3 is designed so that it can now accommodate projects that are XXXX-fold in size.
+Such a great progress was made possible by the invaluable contribution of many [developers](https://github.com/mzmine/mzmine3/graphs/contributors) from research labs distributed all over the world!
 
 Want to get started with MZmine 3? Check out our [getting started](getting_started.md) page!
  
@@ -11,9 +11,11 @@ Want to get started with MZmine 3? Check out our [getting started](getting_start
 ## **What's new compared to MZmine 2?**
 MZmine 3 comes with a redesigned and fully customizable [GUI](main-window-overview.md) based on the JavaFX technology that allow an interactive visualization and validation of results from every processing step.
 
-A completely new data structure provides the flexibility to process any type of mass spectrometry, including LC-MS, GC-MS and MS-imaging. Moreover, MZmine 3 now support ion mobility, with a dedicated [LC-IM-MS data visualization](visualization_modules/ims_raw_data_overview/IM-data-visualisation.md) module and [feature detection](workflows/imsworkflow/ion-mobility-data-processing-workflow.md) algorithms. While offering numerous new data analysis options, significant effort was also devoted to trace memory issues and bottlenecks, resulting in an unprecendent processing performance and scalability.
+A completely new data structure provides the flexibility to process any type of mass spectrometry, including LC-MS, GC-MS and MS-imaging. Moreover, MZmine 3 now supports ion mobility, with a dedicated [LC-IM-MS data visualization](visualization_modules/ims_raw_data_overview/IM-data-visualisation.md) module and [feature detection](workflows/imsworkflow/ion-mobility-data-processing-workflow.md) algorithms. 
 
-Finally, recent developments have strengthened the ties to other open source projects, including the [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) platform with Ion Identity Molecular Networking and the [SIRIUS](https://bio.informatik.uni-jena.de/software/sirius/) suite for _in silico_ metabolite annotation.
+Finally, significant effort was devoted to trace memory issues and bottlenecks, resulting in an unprecendent processing performance and scalability.
+
+**COMING SOON!** We are implementing the [Mass Spec Query Langauge](https://github.com/rformassspectrometry/SpectraQL) (MassQL) to explore your MS data with human-readable, succinct queries! The project is suppported by the [Google Summer of Code](https://summerofcode.withgoogle.com/) program.
 
 
 ---
