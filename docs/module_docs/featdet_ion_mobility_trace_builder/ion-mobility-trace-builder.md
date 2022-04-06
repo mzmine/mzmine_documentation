@@ -51,7 +51,7 @@ binning** module.
 ##### Processing result
 
 After performing ion mobiltiy trace detection, a feature list is created in the feature list tab
-(see [feature lists tab](../../Main-window-overview.md#ms-data-files-and-feature-lists-tab)). In the
+(see [feature lists tab](../../main-window-overview.md#ms-data-files-and-feature-lists-tab)). In the
 feature table, multiple columns are created. The displayed columns can be set via the button on the
 right of the feature table ([1]).
 
