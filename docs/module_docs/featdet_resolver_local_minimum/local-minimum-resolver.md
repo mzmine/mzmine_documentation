@@ -35,22 +35,23 @@ Percentage of data points in the EIC removed before local minima search. The alg
 :octicons-alert-16: Since the algorithms examines the EICs throughout the entire RT range (_i.e._ also the zero data points are considered), we recommend to set this value rather high (_e.g._ 95%) and lower it only if necessary. 
 :octicons-alert-16: ION MOBILITY 80%
 
-**Minimum search range RT/Mobility (absolute)**: size of the moving window examined for local minima search. Overly low values can cause peak edges to be cut off. On the other hand, too high might lead to incomplete separation of narrowly eluting compounds.
+#### **Minimum search range RT/Mobility (absolute)**
+Size of the moving window examined for local minima search. Overly low values can cause peak edges to be cut off. On the other hand, too high might lead to incomplete separation of narrowly eluting compounds.
 
-
-**Minimum relative height**: minimum relative intensity (respect to the highest data point in the EIC) a peak need to reach to be retained as a feature. Overly high thresholds may lead tolow-intensity features being discarded.
-
+#### **Minimum relative height**
+Minimum relative intensity (respect to the highest data point in the EIC) a peak need to reach to be retained as a feature. Overly high thresholds may lead tolow-intensity features being discarded.
 :octicons-light-bulb-16: **Tip**. Modern HRMS instruments can show linear dynamic ranges op to five orders of magnitude. If we take an Orbitrap device with a detector saturation level around 1.0E10 intensity, a _Minimum relative height_ = 0.001 would correspond to 1.0E5.
 
-
-**Minimum absolute height**: minimum absolute intensity a peak needs to reach to be retained as a feature.
-
+#### **Minimum absolute height**
+Minimum absolute intensity a peak needs to reach to be retained as a feature.
 This parameter depends on what you want to detect, the instrument and detector type. Usually, Orbitrap
 instruments report higher intensities than TOF instruments. However, the noise level is also higher
 for Orbitrap than for TOF instruments. For TOF instruments 1E3 or even 5E2 can be appropriate,
 whilst Orbitraps can require 1E5 or 5E4.
+:octicons-light-bulb-16: **Tip**. The same value used as [Min highest intensity](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#min-highest-intensity) in the EICs building step (_e.g._ [ADAP chromatogram builder](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) can normally be used here.
 
-**Min ratio of peak top/edge**: Describes the minimum ratio of the highest point of a peak to the lowest point of a peak. This mostly affects detection of low intensity and not-baseline-resolved signals and should be optimised using such a signal as an example.
+
+**Min ratio of peak top/edge**: Describes the minimum ratio between the highest and lowest point of a peak. This mostly affects detection of low intensity and not-baseline-resolved signals and should be optimised using such a signal as an example.
 
 :octicons-light-bulb-16: **Tip**. We recommend values between 1.7 (not baseline separated) and 2 to start the optimisation.
 
