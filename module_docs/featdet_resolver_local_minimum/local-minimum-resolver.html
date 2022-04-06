@@ -232,7 +232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Main-window-overview.html" class="md-nav__link">
+      <a href="../../main-window-overview.html" class="md-nav__link">
         Main window overview
       </a>
     </li>
@@ -246,25 +246,71 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Visualisation modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Visualisation modules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Visualisation modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
-        LC-MS workflow
+      <a href="../../visualization_modules/raw-data-visualisation.html" class="md-nav__link">
+        Raw data visualisation
       </a>
     </li>
   
 
-    
-      
-      
-      
-
+            
+          
+            
+              
   
   
   
     <li class="md-nav__item">
-      <a href="../../workflows/imsworkflow/Ion-mobility-data-processing-workflow.html" class="md-nav__link">
-        LC-IMS-MS workflow
+      <a href="../../visualization_modules/ims_raw_data_overview/IM-data-visualisation.html" class="md-nav__link">
+        Ion mobility data visualisation
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
+        MSMS Visualizer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -282,20 +328,20 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
-          Module documentations
+        <label class="md-nav__link" for="__nav_5">
+          Processing modules
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Module documentations" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+      <nav class="md-nav" aria-label="Processing modules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Module documentations
+          Processing modules
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -318,10 +364,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Mass detection
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mass detection" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Mass detection
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../featdet_mass_detection/mass-detection.html" class="md-nav__link">
         Mass detection
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_mass_detection/mass-detection-algorithms.html" class="md-nav__link">
+        Mass detection algorithms
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -437,16 +530,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parameter-settings" class="md-nav__link">
-    Parameter settings
+  <a href="#parameters-settings" class="md-nav__link">
+    Parameters settings
   </a>
   
-    <nav class="md-nav" aria-label="Parameter settings">
+    <nav class="md-nav" aria-label="Parameters settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#msms-scan-paring" class="md-nav__link">
-    MS/MS scan paring
+  <a href="#suffix" class="md-nav__link">
+    Suffix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#original-feature-list" class="md-nav__link">
+    Original feature list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msms-scan-pairing" class="md-nav__link">
+    MS/MS scan pairing
   </a>
   
 </li>
@@ -466,8 +573,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#search-minimum-rt-range-min" class="md-nav__link">
-    Search minimum rt range (min)
+  <a href="#minimum-search-range-rtmobility-absolute" class="md-nav__link">
+    Minimum search range RT/Mobility (absolute)
   </a>
   
 </li>
@@ -486,38 +593,24 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#min-ration-of-peak-topedge" class="md-nav__link">
-    Min ration of peak top/edge
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#peak-duration-range" class="md-nav__link">
-    Peak duration range
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minimum-number-of-data-points" class="md-nav__link">
-    Minimum number of data points
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ion-mobility-data" class="md-nav__link">
-    Ion mobility data
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
-    <nav class="md-nav" aria-label="Ion mobility data">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-the-ion-mobility-dimension" class="md-nav__link">
+    Resolving the ion mobility dimension
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolving the ion mobility dimension">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -589,8 +682,98 @@
   
   
     <li class="md-nav__item">
+      <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html" class="md-nav__link">
+        MS2 scan paring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../filter_isotope_filter/isotope_filter.html" class="md-nav__link">
         13C isotope filter (isotope grouper)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Workflows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Workflows" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Workflows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
+        LC-MS workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/imsworkflow/ion-mobility-data-processing-workflow.html" class="md-nav__link">
+        LC-IMS-MS workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/batch_processing/batch-processing.html" class="md-nav__link">
+        Batch processing
       </a>
     </li>
   
@@ -637,7 +820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../visualization_modules/Raw-data-visualisation.html" class="md-nav__link">
+      <a href="../../visualization_modules/raw-data-visualisation.html" class="md-nav__link">
         Raw data visualisation
       </a>
     </li>
@@ -793,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Contribute.html" class="md-nav__link">
+      <a href="../../contribute.html" class="md-nav__link">
         Contribute
       </a>
     </li>
@@ -842,16 +1025,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parameter-settings" class="md-nav__link">
-    Parameter settings
+  <a href="#parameters-settings" class="md-nav__link">
+    Parameters settings
   </a>
   
-    <nav class="md-nav" aria-label="Parameter settings">
+    <nav class="md-nav" aria-label="Parameters settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#msms-scan-paring" class="md-nav__link">
-    MS/MS scan paring
+  <a href="#suffix" class="md-nav__link">
+    Suffix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#original-feature-list" class="md-nav__link">
+    Original feature list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msms-scan-pairing" class="md-nav__link">
+    MS/MS scan pairing
   </a>
   
 </li>
@@ -871,8 +1068,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#search-minimum-rt-range-min" class="md-nav__link">
-    Search minimum rt range (min)
+  <a href="#minimum-search-range-rtmobility-absolute" class="md-nav__link">
+    Minimum search range RT/Mobility (absolute)
   </a>
   
 </li>
@@ -891,38 +1088,24 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#min-ration-of-peak-topedge" class="md-nav__link">
-    Min ration of peak top/edge
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#peak-duration-range" class="md-nav__link">
-    Peak duration range
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minimum-number-of-data-points" class="md-nav__link">
-    Minimum number of data points
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ion-mobility-data" class="md-nav__link">
-    Ion mobility data
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
-    <nav class="md-nav" aria-label="Ion mobility data">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-the-ion-mobility-dimension" class="md-nav__link">
+    Resolving the ion mobility dimension
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolving the ion mobility dimension">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -969,51 +1152,58 @@
 
 
 
-<h1 id="local-minimum-resolver">Local Minimum Resolver<a class="headerlink" href="#local-minimum-resolver" title="Permanent link">&para;</a></h1>
-<p>Resolving traces/chromatograms into individual features, is one of the most <strong>crucial</strong> steps of data
-processing. Well optimised parameters [1] can lead to recognition of all good features in a "good"
+<h1 id="local-minimum-resolver"><strong>Local Minimum Resolver</strong><a class="headerlink" href="#local-minimum-resolver" title="Permanent link">&para;</a></h1>
+<p>During the EICs building, overalpping and partially co-eluting peaks are retained as single features in the faeture list (see, for example, <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP chromatogram builder</a>). The <em>local minimum resolver</em> module aims at splitting such "shoulder" LC peaks into individual features (<em>i.e.</em> <a href="../../terminology/general-terminology.html#chromatographic-resolving">chromatographic deconvolution</a>) based on local minima. In fact, a local minimum in the EIC trace might correspond to the valley between two adjacent, partially-resolved peaks.</p>
+<p>The algorithm examines all the data points in the EIC trace starting from the earliest RT. A scan window is set (see <em>Minimum search range RT/Mobility</em> parameter) and centred around the examined data point. A data point is considered a local minimum if it is the lowest intense point within the scan window. Moreover, it has to be X times lower than the highest point in the window (see <em>Min ratio of peak top/edge</em> parameter). When a local minumum is found, a set of user-defined intensity and peak duration requirements is checked. If they are fulfilled, the original overlapping peaks are split into new, distinct features.</p>
+<p>With the implementation of IM support in MZmine 3, this module was expanded and can now be applied to both the RT and IM dimension (see <a href="#resolving-the-ion-mobility-dimension">Resolving the ion mobility dimension</a>).</p>
+<p>:octicons-light-bulb-16: <strong>Tip</strong>. The LMR is particularly suitable for LC-MS data with little 
+noise and nice peak shapes.</p>
+<hr />
+<h2 id="parameters-settings"><strong>Parameters settings</strong><a class="headerlink" href="#parameters-settings" title="Permanent link">&para;</a></h2>
+<p>:material-menu-open: Feature detection → Chromatogram resolving → Local minimum resolver</p>
+<p><img alt="" src="local-minimum-resolver.png" /></p>
+<h4 id="suffix"><strong>Suffix</strong><a class="headerlink" href="#suffix" title="Permanent link">&para;</a></h4>
+<p>String added as suffix when creating the corresponding feature list.</p>
+<h4 id="original-feature-list"><strong>Original feature list</strong><a class="headerlink" href="#original-feature-list" title="Permanent link">&para;</a></h4>
+<p>Keep or remove the processed feature list(s).</p>
+<h4 id="msms-scan-pairing"><strong>MS/MS scan pairing</strong><a class="headerlink" href="#msms-scan-pairing" title="Permanent link">&para;</a></h4>
+<p>Pair MS/MS fragmentation spectra collected in <a href="../../terminology/general-terminology.html#data-dependent-acqusition-mode">DDA</a> mode to the resolved features. This is optional at this stage as the same can be done with a separate <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html">module</a>. See <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html">MS2 scan pairing</a> documentation for more details.</p>
+<h4 id="dimension"><strong>Dimension</strong><a class="headerlink" href="#dimension" title="Permanent link">&para;</a></h4>
+<p>Dimension to be resolved. Select <em>Retention time</em> or <em>Mobility</em> to run the module over the RT or ion mobility dimension, respectively.</p>
+<h4 id="chromatographic-threshold"><strong>Chromatographic threshold</strong><a class="headerlink" href="#chromatographic-threshold" title="Permanent link">&para;</a></h4>
+<p>Percentage of data points in the EIC removed before local minima search. The algorithm finds the intensity value (threshold) such that the specified percentage of EIC's data points are below the threshold. All such data points are removed. For example, a <em>Chromatographic threshold</em> = 50% will discard the lowest-intense 50% data points. This represents an important filter for noisy chromatogram and significantly reduces the precessing time.</p>
+<p>:octicons-alert-16: Since the algorithms examines the EICs throughout the entire RT range (<em>i.e.</em> also the zero data points are considered), we recommend to set this value rather high (<em>e.g.</em> 95%) and lower it only if necessary. 
+:octicons-alert-16: ION MOBILITY 80%</p>
+<h4 id="minimum-search-range-rtmobility-absolute"><strong>Minimum search range RT/Mobility (absolute)</strong><a class="headerlink" href="#minimum-search-range-rtmobility-absolute" title="Permanent link">&para;</a></h4>
+<p>Size of the moving window examined for local minima search. Overly low values can cause peak edges to be cut off. On the other hand, too high might lead to incomplete separation of narrowly eluting compounds.</p>
+<h4 id="minimum-relative-height"><strong>Minimum relative height</strong><a class="headerlink" href="#minimum-relative-height" title="Permanent link">&para;</a></h4>
+<p>Minimum relative intensity (respect to the highest data point in the EIC) a peak need to reach to be retained as a feature. Overly high thresholds may lead tolow-intensity features being discarded.
+:octicons-light-bulb-16: <strong>Tip</strong>. Modern HRMS instruments can show linear dynamic ranges op to five orders of magnitude. If we take an Orbitrap device with a detector saturation level around 1.0E10 intensity, a <em>Minimum relative height</em> = 0.001 would correspond to 1.0E5.</p>
+<h4 id="minimum-absolute-height"><strong>Minimum absolute height</strong><a class="headerlink" href="#minimum-absolute-height" title="Permanent link">&para;</a></h4>
+<p>Minimum absolute intensity a peak needs to reach to be retained as a feature.
+This parameter depends on what you want to detect, the instrument and detector type. Usually, Orbitrap
+instruments report higher intensities than TOF instruments. However, the noise level is also higher
+for Orbitrap than for TOF instruments. For TOF instruments 1E3 or even 5E2 can be appropriate,
+whilst Orbitraps can require 1E5 or 5E4.
+:octicons-light-bulb-16: <strong>Tip</strong>. The same value used as <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#min-highest-intensity">Min highest intensity</a> in the EICs building step (<em>e.g.</em> <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP chromatogram builder</a> can normally be used here.</p>
+<p><strong>Min ratio of peak top/edge</strong>: Describes the minimum ratio between the highest and lowest point of a peak. This mostly affects detection of low intensity and not-baseline-resolved signals and should be optimised using such a signal as an example.</p>
+<p>:octicons-light-bulb-16: <strong>Tip</strong>. We recommend values between 1.7 (not baseline separated) and 2 to start the optimisation.</p>
+<p><strong>Peak durantion range (min/mobility)</strong>: Describes valid peak lengths. Can be used to filter out very short or long noise signals.</p>
+<p><strong>Min # of data points</strong>: Can be used in addition to <strong>Peak duration range</strong> to filter out noise. Should be set no lower than
+5 in most cases.</p>
+<p><strong>Show preview</strong>: To-do</p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<p>Optimal algorithm settings [1] can lead to recognition of all good features in a "good"
 EICs [2] and to few noise recognised as feature in EIC that also contains chromatographic noise
 [3].
-On the other hand, poorly optimised parameters [4] can still lead to recognition of all features in
-a good EIC [5], but recognise a lot of noise as feature in a noisy EIC [6].<br />
-Therefore, we recommend optimising the parameters on good EICs and checking the results of these
+On the other hand, poorly set parameters [4] will likely recognize all features in
+a good EIC [5], but also retain a lot of noise as feature in a noisy EIC [6]. </p>
+<p>Therefore, we recommend optimising the parameters on good EICs and checking the results of these
 parameters with a noisy EIC. Most of the time, a noisy EIC can be found by sorting the feature table
 by decreasing area.</p>
-<p><img alt="" src="chromatogramresolving.png" /></p>
-<h3 id="parameter-settings">Parameter settings<a class="headerlink" href="#parameter-settings" title="Permanent link">&para;</a></h3>
-<h5 id="msms-scan-paring">MS/MS scan paring<a class="headerlink" href="#msms-scan-paring" title="Permanent link">&para;</a></h5>
-<p>Selecting this parameter will pair DDA MS/MS spectra to the resolved features. This is optional at
-this stage, because it will be executed again during resolving in the mobility dimension.</p>
-<h5 id="dimension">Dimension<a class="headerlink" href="#dimension" title="Permanent link">&para;</a></h5>
-<p>The dimension to be resolved can be selected here. Select <em>Retention time</em>.</p>
-<h5 id="chromatographic-threshold">Chromatographic threshold<a class="headerlink" href="#chromatographic-threshold" title="Permanent link">&para;</a></h5>
-<p>This parameter is crucial for removing noise from chromatograms. If this parameter is set to, e.g.,
-50, the lowest 50 % of intensities will be removed. Since the <em>all</em> retention time in the data file
-are used for this determination, this value should be rather high (e.g., 95 %) to begin with and
-only lowered if necessary.</p>
-<h5 id="search-minimum-rt-range-min">Search minimum rt range (min)<a class="headerlink" href="#search-minimum-rt-range-min" title="Permanent link">&para;</a></h5>
-<p>Determines the step size that will be scanned for individual peaks. Setting this value too low, can
-cause peak edges to be cut off, setting it too high might lead to incomplete separation of narrowly
-eluting compounds.</p>
-<h5 id="minimum-relative-height">Minimum relative height<a class="headerlink" href="#minimum-relative-height" title="Permanent link">&para;</a></h5>
-<p>Determines the minimum relative intensity of a individual feature in relation to the highest
-intensity in the chromatogram. May lead to discrimination of low intensity features.</p>
-<h5 id="minimum-absolute-height">Minimum absolute height<a class="headerlink" href="#minimum-absolute-height" title="Permanent link">&para;</a></h5>
-<p>Determines the minimum absolute intensity of a feature to be recognised by the algorithm. This
-parameter depends on what you want to detect, the instrument and detector type. Usually, Orbitrap
-instruments report higher intensities that TOF instruments. However, the noise level is also higher
-for Orbitrap than for TOF instruments. For TOF instruments 1E3 or even 5E2 can be appropriate,
-whilst Orbitraps can require 1E5 or 5E4.</p>
-<h5 id="min-ration-of-peak-topedge">Min ration of peak top/edge<a class="headerlink" href="#min-ration-of-peak-topedge" title="Permanent link">&para;</a></h5>
-<p>Describes the minimum ratio of the highest point of a peak to the lowest point of a peak. This
-mostly affects detection of low intensity and not-baseline-resolved signals and should be optimised
-using such a signal as an example.</p>
-<h5 id="peak-duration-range">Peak duration range<a class="headerlink" href="#peak-duration-range" title="Permanent link">&para;</a></h5>
-<p>Describes valid peak lengths. Can be used to filter out very short or long noise signals.</p>
-<h5 id="minimum-number-of-data-points">Minimum number of data points<a class="headerlink" href="#minimum-number-of-data-points" title="Permanent link">&para;</a></h5>
-<p>Can be used in addition to <strong>Peak duration range</strong> to filter out noise. Should be set no lower than
-5 in most cases.</p>
-<h2 id="ion-mobility-data">Ion mobility data<a class="headerlink" href="#ion-mobility-data" title="Permanent link">&para;</a></h2>
+<p><img alt="test" src="chromatogramresolving.png" /></p>
+<h2 id="resolving-the-ion-mobility-dimension">Resolving the ion mobility dimension<a class="headerlink" href="#resolving-the-ion-mobility-dimension" title="Permanent link">&para;</a></h2>
+<p>To-finish</p>
 <p>In general, the same principles apply as in the retention time resolving step. However, a few
 differences shall be noted. In the screenshot you can also see, that the resolved mobilograms are
 recalculated from the raw data and previously apply smoothing steps are therefore lost and must be
@@ -1038,7 +1228,7 @@ depending on what you want to detect.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 10, 2022 15:42:38</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 6, 2022 09:25:41</span>
       
     
   </small>
