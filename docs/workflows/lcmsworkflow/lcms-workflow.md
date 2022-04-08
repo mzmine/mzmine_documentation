@@ -45,10 +45,13 @@ The "detected" features in each ﬁle are listed in the so-called "feature lists
 
 [^13^C isotope filter (isotope grouper)](../../module_docs/filter_isotope_filter/isotope_filter.md)
 
+### Isotope pattern finder
+
+[Isotope pattern finder](../../docs/module_docs/filter_isotope_pattern_finder.md)
+
 ### Gap-filling
 Gap-filling can be performed on the aligned feature lists to cope with missing features that might be artifacts of the feature-detection process.
 - For more details see the Gap-filling module.
-
 
 
 
