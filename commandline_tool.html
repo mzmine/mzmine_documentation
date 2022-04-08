@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#preferences" class="md-skip">
+        <a href="#command-line-arguments" class="md-skip">
           Skip to content
         </a>
       
@@ -821,6 +821,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Command line tool (batch mode)
@@ -837,6 +839,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -845,36 +849,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preferences" class="md-nav__link">
-    Preferences
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs" class="md-nav__link">
-    Logs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command-line-arguments" class="md-nav__link">
-    Command-line arguments
-  </a>
-  
-    <nav class="md-nav" aria-label="Command-line arguments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#argument-table" class="md-nav__link">
     Argument table
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -933,6 +910,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -941,36 +920,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preferences" class="md-nav__link">
-    Preferences
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logs" class="md-nav__link">
-    Logs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command-line-arguments" class="md-nav__link">
-    Command-line arguments
-  </a>
-  
-    <nav class="md-nav" aria-label="Command-line arguments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#argument-table" class="md-nav__link">
     Argument table
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -992,19 +944,7 @@
 
 
 
-  <h1>Command line tool (batch mode)</h1>
-
-<p>This section contains information on how to tune MZmine 3 for different systems.</p>
-<h2 id="preferences">Preferences<a class="headerlink" href="#preferences" title="Permanent link">&para;</a></h2>
-<p>The preferences can be changed in MZmine's graphical user interface by accessing <em>File/Set preferences</em> from the menu. The choices will be stored in a (hidden) <em>.mzmine3.conf</em> file in the user's home directory (Windows: <em>C:\Users\USERNAME</em>) once MZmine is closed.</p>
-<p><img alt="Preferences" src="img/menu_pref.png" style="width:200px" />  </p>
-<p><strong>Important preferences</strong></p>
-<p><img alt="Preferences" src="img/performance_param.png" style="width:500px" /> </p>
-<p><strong>Memory options</strong></p>
-<p><img alt="Memory" src="img/performance_memory.png" style="width:500px" /></p>
-<h2 id="logs">Logs<a class="headerlink" href="#logs" title="Permanent link">&para;</a></h2>
-<p>Currently, the logs are written to an <em>mzmine_0_0.log</em> file in the user's home directory. Please submit your log files together with any issues on <strong><a href="https://github.com/mzmine/mzmine3/issues">GitHub</a></strong>.</p>
-<h2 id="command-line-arguments">Command-line arguments<a class="headerlink" href="#command-line-arguments" title="Permanent link">&para;</a></h2>
+<h1 id="command-line-arguments">Command-line arguments<a class="headerlink" href="#command-line-arguments" title="Permanent link">&para;</a></h1>
 <p>Command-line arguments offer a variety of options that generally override the corresponding parameters in the preferences.</p>
 <p><strong>Windows</strong></p>
 <p>An easy way to start MZmine with arguments is to create a shortcut to the MZmine.exe, right-click, and define the target with additional arguments. This example runs MZMine in batch mode (headless), imports the specified batch file, overrides the memory management to <strong>none</strong> (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the <em>memory</em> or <em>temp</em> arguments, the values stored in the current <em>preferences</em> file will be used, or the default values if no <em>preferences</em> file was found.  </p>
@@ -1047,7 +987,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 10, 2022 15:35:04</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 8, 2022 08:12:41</span>
       
     
   </small>
