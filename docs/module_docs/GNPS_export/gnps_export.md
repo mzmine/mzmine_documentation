@@ -35,7 +35,7 @@ This option allows you to select the way to merge the fragments' m/z values asso
 
 ##### Intensity merge mode
 Options on how to merge the intensity values of features from different spectra with similar mass.
-"Sum intensities" is a convenient option that will increase the intensities of feature that occur consistently in many fragment scans. However, this will make intensities between merged and unmerged spectra incomparable. Use "max intesntiy" if you want to preserve intesntiy values.
+"Sum intensities" is a convenient option that will increase the intensities of feature that occur consistently in many fragment scans. However, this will make intensities between merged and unmerged spectra incomparable. Use "max intensity" if you want to preserve intensity values.
 
 ##### Expected mass deviation
 Expected mass deviation between different spectra of the same feature of your measurement in ppm (parts per million) or Da(larger value is used). We reccommend to use a rather large values, e.g. 10ppm for Orbitrap, 15 ppm for Q-ToF, 100 ppm for QQQ.
@@ -55,13 +55,13 @@ Isolation window offset from the precursor m/z.
 Width of the isolation window (left and right).  
 
 #### Filter rows
-In the final output files, the user can select to export all the rows without any filters applied, rows only with MS/MS spectra, rows with MS/MS and Ion Identity (it gives MSS/MS and the adduct information) and rows with MS/MS or Ion Identity. Normally, for FBMN you want to retain features with MS/MS spectra.
+In the final output files, the user can select to export all the rows without any filters applied, rows only with MS/MS spectra, rows with MS/MS and Ion Identity (it gives MS/MS and the adduct information) and rows with MS/MS or Ion Identity. Normally, for FBMN you want to retain features with MS/MS spectra.
 
 #### Feature intensity
-The user can either select peak area or peak hight which will then be displayed in the quantification table.
+The user can either select peak area or peak height which will then be displayed in the quantification table.
 
 #### CSV export
-The user can choose between simple, comprehensive or all. 
+The user can choose between simple, comprehensive or all. Difference is in the amount of information that is present in the quantification table. 
 Generally, "simple" can be used for the FBMN. 
 
 #### Submit to GNPS
