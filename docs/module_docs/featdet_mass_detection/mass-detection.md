@@ -42,6 +42,10 @@ Maximum allowed difference between measured and theoretical isotope _m/z_. It is
 Maximum allowed charge state of the isotope to be retained in the mass list. Default value is 1.
 
 ### **How do I determine the instrumental noise level in my data?**
+The noise level largely depends on the instrument and detector type. For example, Orbitrap instruments normally provides higher signal intensities than TOF devices.
+
+While 1.0E3 could be appropriate for TOF analyzer, the same would be overly low for Orbitrap instruments (which normally require 1.0E5).
+
 To-do.
 The detector noise is usually determined by a lot of signals of the same intensity.
 

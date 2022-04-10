@@ -24,7 +24,7 @@ Minimum signal intensity that the group scans (see previous parameter) must exce
 :octicons-light-bulb-16: **Tip**. A good starting point for this parameter is 3 times the noise level used in the [Mass detection](../featdet_mass_detection/mass-detection.md), if the instrumental noise is used as cutoff (see [here](../featdet_mass_detection/mass-detection.md#how-do-i-determine-the-instrumental-noise-level-in-my-data) for more details).
 
 #### **Min highest intensity**
-Minimum intensity that the highest point in the EIC must exceed in order for the corresponding trace to be considered valid and retained in the feature list.
+Minimum intensity that the highest point in the EIC must exceed in order for the corresponding trace to be considered valid and retained in the feature list. This parameter mainly depends on the mass spectrometer characteristics (_e.g._ Orbitrap instruments normally provides higher signal intensities than TOF devices) as well as the overall goal of the processing. Overly low intensity thresholds normally leads to a larger number of background signals being retained as featurs, extending the overall processing time. On the other hand, overly high thresholds may lead to low-intensity features being erroneously discarded.
 :octicons-light-bulb-16: **Tip**. A good starting point for this parameter is 7-10 times the noise level used in the [Mass detection](../featdet_mass_detection/mass-detection.md), if the instrumental noise is used as cutoff.
 
 #### **Scan to scan accuracy (m/z)**
