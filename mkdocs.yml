@@ -31,10 +31,12 @@ nav:
       - MS2 scan paring: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
       - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md
       - GNPS export: module_docs/GNPS_export/gnps_export.md
+      - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md 
+      - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md 
   - Workflows:
       - LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
       - LC-IMS-MS workflow: workflows/imsworkflow/ion-mobility-data-processing-workflow.md
-      - Batch processing: workflows/batch_processing/batch-processing.md
+      - Batch processing: workflows/batch_processing/batch-processing.md 
   - Visualisation:
       - Raw data visualisation: visualization_modules/raw-data-visualisation.md
       - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md

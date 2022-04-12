@@ -42,12 +42,16 @@ The "detected" features in each ﬁle are listed in the so-called "feature lists
 
 ### ^13^C isotope filter (isotope grouper)
 - Removes ^13^C isotope features from the feature list
+- Has limited chance to detect isotope patterns for all features as only detected features (with all their filters and contraints are considered)
+- Use the isotope finder for more sensitive detection of possible isotope signals  
 
 [^13^C isotope filter (isotope grouper)](../../module_docs/filter_isotope_filter/isotope_filter.md)
 
-### Isotope pattern finder
+### Isotope pattern finder 
+- Searches for the isotope signals of selected chemical elements in the mass list of each feature.
+- The isotope pattern detected by the **isotope finder** module has priority over the one detected by the **isotope filter (grouper)** module, if both are available.
 
-[Isotope pattern finder](../../docs/module_docs/filter_isotope_pattern_finder.md)
+[Isotope pattern finder](../../module_docs/filter_isotope_finder/isotope_finder.md)
 
 ### Gap-filling
 Gap-filling can be performed on the aligned feature lists to cope with missing features that might be artifacts of the feature-detection process.
