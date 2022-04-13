@@ -18,6 +18,9 @@ Currently, MZmine 3 lacks a signature for macOS. While we are working on this, u
 - Start MZmine
 
 ```
+sudo xattr -cr ../MZmine.app
+
+# if this fails try
 sudo xattr -cr MZmine.app
 ```
 
