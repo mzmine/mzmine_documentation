@@ -226,9 +226,67 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Getting started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="getting_started.html" class="md-nav__link md-nav__link--active">
         Getting started
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    Download
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-macos" class="md-nav__link">
+    On macOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-user-preferences" class="md-nav__link">
+    Set User Preferences
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -896,6 +954,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    Download
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-macos" class="md-nav__link">
+    On macOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-user-preferences" class="md-nav__link">
+    Set User Preferences
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -913,6 +1013,29 @@
 
 
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
+<h2 id="download">Download<a class="headerlink" href="#download" title="Permanent link">&para;</a></h2>
+<p>Download MZmine 3 portable versions or installers from:</p>
+<p>https://github.com/mzmine/mzmine3/releases/latest </p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>On Windows and Linux the installers and portable versions should function directly. Windows users might be warned that MZmine is not signed or from a trusted source and have to click run anyways.</p>
+<h3 id="on-macos">On macOS<a class="headerlink" href="#on-macos" title="Permanent link">&para;</a></h3>
+<p>Currently, MZmine 3 lacks a signature for macOS. While we are working on this, user can allow MZmine in the macOS Gatekeeper protection by running the following command in the terminal from the Applications folder.</p>
+<ul>
+<li>Download MZmine and click the MZmine.dmg installer - Drag and drop MZmine into the Applications folder </li>
+<li>Open the Applciations folder, right click (CTRL click) anywhere, e.g., on the MZmine icon, and choose "New Terminal at folder" from the context menu</li>
+<li>Run the provided command to tell macOS to trust the installed version of MZmine. The terminal directory has to be the Applications folder. (Depending on the actual folder use or omit the <code>../</code> to jump to the parent directory).</li>
+<li>Approve command with user password</li>
+<li>Start MZmine</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sudo xattr -cr ../MZmine.app
+
+# if this fails try
+sudo xattr -cr MZmine.app
+</code></pre></div>
+<p><img alt="" src="img/install_mac1.png" /> <img alt="" src="img/install_mac2.png" /></p>
+<p>The Terminal does not output any log or message.
+<img alt="" src="img/install_mac3.png" /></p>
+<h2 id="set-user-preferences">Set User Preferences<a class="headerlink" href="#set-user-preferences" title="Permanent link">&para;</a></h2>
 <p>Before creating your first project, we recommend setting up some things.</p>
 <ol>
 <li>Set a temporary file directory. Go to <em>Project</em> → <em>Set preferences</em> → <em>Temporary file
@@ -936,7 +1059,7 @@ or <a href="workflows/imsworkflow/ion-mobility-data-processing-workflow.html">LC
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 5, 2022 13:31:49</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 13, 2022 23:12:01</span>
       
     
   </small>
