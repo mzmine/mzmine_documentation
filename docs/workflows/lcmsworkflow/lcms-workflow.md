@@ -59,7 +59,6 @@ Gap-filling can be performed on the aligned feature lists to cope with missing f
 
 
 
-
 ## Page Contributors
 
 {{ git_page_authors }}
