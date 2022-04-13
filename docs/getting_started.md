@@ -1,5 +1,36 @@
 # Getting Started
 
+## Download
+Download MZmine 3 portable versions or installers from:
+
+https://github.com/mzmine/mzmine3/releases/latest 
+
+## Installation
+On Windows and Linux the installers and portable versions should function directly. Windows users might be warned that MZmine is not signed or from a trusted source and have to click run anyways.
+
+### On macOS
+Currently, MZmine 3 lacks a signature for macOS. While we are working on this, user can allow MZmine in the macOS Gatekeeper protection by running the following command in the terminal from the Applications folder.
+
+- Download MZmine and click the MZmine.dmg installer - Drag and drop MZmine into the Applications folder 
+- Open the Applciations folder, right click (CTRL click) anywhere, e.g., on the MZmine icon, and choose "New Terminal at folder" from the context menu
+- Run the provided command to tell macOS to trust the installed version of MZmine. The terminal directory has to be the Applications folder. (Depending on the actual folder use or omit the `../` to jump to the parent directory).
+- Approve command with user password
+- Start MZmine
+
+```
+sudo xattr -cr ../MZmine.app
+
+# if this fails try
+sudo xattr -cr MZmine.app
+```
+
+![](img/install_mac1.png) ![](img/install_mac2.png)
+
+The Terminal does not output any log or message.
+![](img/install_mac3.png)
+
+## Set User Preferences
+
 Before creating your first project, we recommend setting up some things.
 
 1. Set a temporary file directory. Go to _Project_ → _Set preferences_ → _Temporary file
