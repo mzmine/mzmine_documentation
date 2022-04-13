@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/GNPS_export/gnps_export.html</loc>
+         <lastmod>2022-04-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
@@ -87,6 +92,11 @@
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_isotope_finder/isotope_finder.html</loc>
+         <lastmod>2022-04-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_isotope_pattern_finder/isotope_pattern_finder.html</loc>
          <lastmod>2022-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
