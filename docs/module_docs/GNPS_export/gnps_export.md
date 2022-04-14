@@ -1,12 +1,23 @@
-# GNPS export
+!!! quote "Recommended Citations"
+    
+    **IIMN:** Schmid R., Petras D., Nothias LF, et al. [Ion Identity Molecular Networking for mass spectrometry-based metabolomics in the GNPS Environment](https://www.nature.com/articles/s41467-021-23953-9). Nat. Comm. 12, 3832 (2021).
 
-The **GNPS export** is found under **Feature list methods → Export feature lists → GNPS - feature based molecular networking.**
+    **FBMN:** Nothias, L.-F., Petras, D., Schmid, R. et al. [Feature-based molecular networking in the GNPS analysis environment](https://www.nature.com/articles/s41592-020-0933-6). Nat. Methods 17, 905–908 (2020).
+
+    **GNPS:** Wang, M. et al. [Sharing and community curation of mass spectrometry data with Global Natural Products Social Molecular Networking](https://doi.org/10.1038/nbt.3597). Nat. Biotechnol. 34, 828–837 (2016).
+
+# GNPS-FBMN/IIMN export
+This module connects MZmine feature finding results to the [GNPS](https://gnps.ucsd.edu/) workflows for [Feature-based Molecular Networking (FBMN)](https://ccms-ucsd.github.io/GNPSDocumentation/featurebasedmolecularnetworking/) and [Ion Identity Molecular Networking (IIMN)](https://ccms-ucsd.github.io/GNPSDocumentation/fbmn-iin).
+
+The export module is found under **Feature list methods → Export feature lists → GNPS - feature based molecular networking**.
 
 ![](gnps_export.png)
 
 Using this module, the user can export the feature list needed for the manual submission to GNPS' feature based molecular networking (GNPS FBMN) or directly submit the job to the GNPS platform from MZmine. In both cases, two files are created: 
-    1. Quantification table (CSV file) which contains the features and their associated information (e.g retention time, peak area or peak height).
-    2. MS/MS spectral summary (.MGF file) which contains representative MS/MS spectra for the rows in the feature list. 
+
+1. Quantification table (CSV file) which contains the features and their associated information (e.g., average m/z, retention time, and each feature's area or height).
+2. MS/MS spectral summary (.MGF file) which contains one representative MS/MS spectrum for each row in the feature list. 
+3. A [supplementary edges file](https://ccms-ucsd.github.io/GNPSDocumentation/fbmn-iin/#supplementary-pairs) with related ion identities (if ion identity networking was performed).
 
 
 
@@ -17,42 +28,7 @@ Using this module, the user can export the feature list needed for the manual su
 Name to be given to the output files (.MGF and .CSV). In this field, the user can either write the path where they want to save the file, or click "select", navigate into the desired output folder, write the output name in the "file name" field and click save. Once that is done, the path should be visible in the Filename field in the GNPS export module.
 
 #### Merge MS/MS (experimental)
-If checked, high quality MS/MS spectra that correspond to one feature are merged, instead of exporting only the most intense MS/MS spectra.
-
-##### Additional setup options:
-
-![](merge.png)
-
-##### Select spectra to merge
-The users can select to merge the MS/MS spectra:
-1.across samples, which will merge all MS/MS spectra that belong to the same feature, and as such is the most convenient option.
-2.same sample, which will merge MS/MS spectra for the same feature within one sample, and can be used if the user is not confident about the alignment algorithm.
-3.consecutive scans, which will merge MS/MS spectra if they are triggered in a row.
-
-##### m/z merge mode
-This option allows you to select the way to merge the fragments' m/z values associated with a similar precursor value.
-"Most intense" will always pick the m/z of the best feature, which is a very safe and conservative option. However, "weighted average (remove outliers)" will often have better result. 
-
-##### Intensity merge mode
-Options on how to merge the intensity values of features from different spectra with similar mass.
-"Sum intensities" is a convenient option that will increase the intensities of feature that occur consistently in many fragment scans. However, this will make intensities between merged and unmerged spectra incomparable. Use "max intensity" if you want to preserve intensity values.
-
-##### Expected mass deviation
-Expected mass deviation between different spectra of the same feature of your measurement in ppm (parts per million) or Da(larger value is used). We reccommend to use a rather large values, e.g. 10ppm for Orbitrap, 15 ppm for Q-ToF, 100 ppm for QQQ.
-
-
-##### Cosine treshold
-Treshold of cosine similarity between spectra that needs to be met in order for two spectra to be merged. In case they have different collision energies, cosine treshold should be set to 0%, since different collision energies will result in different fragmentation pattern.
-
-
-##### Signal count treshold 
-After merging the spectra, signals that occur in less than the user specified % of the merged spectra will be removed.
- 
-##### Isolation window offset (m/z)
-Isolation window offset from the precursor m/z.
-
-##### Isolation window width (m/z)
-Width of the isolation window (left and right).  
+If checked, high quality MS/MS spectra that correspond to one feature are merged, instead of exporting only the most intense MS/MS spectrum. See [MS/MS merger](merge_ms2_kai.md) for additional information.
 
 #### Filter rows
 In the final output files, the user can select to export all the rows without any filters applied, rows only with MS/MS spectra, rows with MS/MS and Ion Identity (it gives MS/MS and the adduct information) and rows with MS/MS or Ion Identity. Normally, for FBMN you want to retain features with MS/MS spectra.
@@ -61,12 +37,11 @@ In the final output files, the user can select to export all the rows without an
 The user can either select peak area or peak height which will then be displayed in the quantification table.
 
 #### CSV export
-The user can choose between simple, comprehensive or all. Difference is in the amount of information that is present in the quantification table. 
-Generally, "simple" can be used for the FBMN. 
+The user can choose between **simple**, **comprehensive**, or **all**. Difference is in the amount of information that is present in the quantification table. Simple resembles the legacy format from the MZmine 2 export. Both options can be used for FBMN in GNPS other tools might rely on the simple MZmine 2 style output. 
 
 #### Submit to GNPS
-In case the user has a GNPS acccount, upon checking this option, it is possible to directly submit the job to GNPS for FBMN. The password is sent without encryption (until the server has moved to its final location with https).
-The input files uploaded to GNPS with the "Submit to GNPS" option are not saved on your GNPS user account. These files are deleted on monthly basis, which prevent future cloning of the job and retrieval of the files. Use the "standard" interface of the FBMN for persistant jobs and more options.
+This option allows any user to directly submit FBMN/IIMN jobs to GNPS. The password and user name are optional and are sent without encryption (until the server has moved to its final location with https).
+The input files uploaded to GNPS with the "Submit to GNPS" option are not saved on your GNPS user account. These files are deleted on monthly basis, which prevent future cloning of the job and retrieval of the files. Use the "standard" interface of FBMN for persistant jobs and more options. Or log into your GNPS account and click on **Clone to latest version** for a job submitted via direct interface. 
 
 #### Open folder
 Opens the export folder.
