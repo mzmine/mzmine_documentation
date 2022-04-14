@@ -32,6 +32,7 @@ nav:
       - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md 
       - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md 
       - Export to GNPS-FBMN/IIMN: module_docs/GNPS_export/gnps_export.md
+      - Other parameters:
         - Merge MS/MS: module_docs/GNPS_export/merge_ms2_kai.md
   - Workflows:
       - LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
