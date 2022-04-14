@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/filter_isotope_pattern_finder/isotope_pattern_finder.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/GNPS_export/merge_ms2_kai.html">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
     
     
       
-        <title>Isotope pattern finder - MZmine 3 Documentation</title>
+        <title>Merge MS/MS - MZmine 3 Documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#isotope-pattern-finder" class="md-skip">
+        <a href="#merge-msms-experimental" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Isotope pattern finder
+              Merge MS/MS
             
           </span>
         </div>
@@ -321,12 +321,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -564,37 +566,175 @@
   
   
     <li class="md-nav__item">
-      <a href="../GNPS_export/gnps_export.html" class="md-nav__link">
-        GNPS export
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../filter_isotope_filter/isotope_filter.html" class="md-nav__link">
-        13C isotope filter (isotope grouper)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../filter_isotope_finder/isotope_finder.html" class="md-nav__link">
         Isotope pattern finder
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gnps_export.html" class="md-nav__link">
+        Export to GNPS-FBMN/IIMN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_15" type="checkbox" id="__nav_5_15" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_15">
+          Other parameters
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other parameters" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_15">
+          <span class="md-nav__icon md-icon"></span>
+          Other parameters
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Merge MS/MS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="merge_ms2_kai.html" class="md-nav__link md-nav__link--active">
+        Merge MS/MS
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#select-spectra-to-merge" class="md-nav__link">
+    Select spectra to merge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mz-merge-mode" class="md-nav__link">
+    m/z merge mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intensity-merge-mode" class="md-nav__link">
+    Intensity merge mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-mass-deviation" class="md-nav__link">
+    Expected mass deviation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cosine-treshold" class="md-nav__link">
+    Cosine treshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-count-treshold" class="md-nav__link">
+    Signal count treshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isolation-window-offset-mz" class="md-nav__link">
+    Isolation window offset (m/z)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isolation-window-width-mz" class="md-nav__link">
+    Isolation window width (m/z)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -929,29 +1069,57 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#chemical-elements" class="md-nav__link">
-    Chemical elements
+  <a href="#select-spectra-to-merge" class="md-nav__link">
+    Select spectra to merge
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mz-tolerance" class="md-nav__link">
-    m//z tolerance
+  <a href="#mz-merge-mode" class="md-nav__link">
+    m/z merge mode
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#maximum-charge-of-isotope-mz" class="md-nav__link">
-    Maximum charge of isotope m/z
+  <a href="#intensity-merge-mode" class="md-nav__link">
+    Intensity merge mode
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#search-in-scans" class="md-nav__link">
-    Search in scans
+  <a href="#expected-mass-deviation" class="md-nav__link">
+    Expected mass deviation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cosine-treshold" class="md-nav__link">
+    Cosine treshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signal-count-treshold" class="md-nav__link">
+    Signal count treshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isolation-window-offset-mz" class="md-nav__link">
+    Isolation window offset (m/z)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isolation-window-width-mz" class="md-nav__link">
+    Isolation window width (m/z)
   </a>
   
 </li>
@@ -973,32 +1141,49 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/module_docs/filter_isotope_pattern_finder/isotope_pattern_finder.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/module_docs/GNPS_export/merge_ms2_kai.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="isotope-pattern-finder">Isotope pattern finder<a class="headerlink" href="#isotope-pattern-finder" title="Permanent link">&para;</a></h1>
-<p>The <strong>Isotope pattern finder</strong> is found under <strong>Feature list methods → Isotopes → Isotope pattern finder.</strong></p>
-<p><img alt="" src="isotope_pattern_finder.png" /></p>
-<p>The isotope pattern finder will search for all possible isotope signals in the mass lists for each feature. The resulting pattern may contain signals from different charge states as this module tries to capture all available information, unlike the isotope filter, which acts as a feature filter.</p>
+<h1 id="merge-msms-experimental">Merge MS/MS (experimental)<a class="headerlink" href="#merge-msms-experimental" title="Permanent link">&para;</a></h1>
+<p>This option is available in the <a href="gnps_export.html">GNPS FBMN export</a> and the SIRIUS export. If checked, high quality MS/MS spectra that correspond to one feature are merged, instead of exporting only the most intense MS/MS spectrum.</p>
 <h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
-<h4 id="chemical-elements">Chemical elements<a class="headerlink" href="#chemical-elements" title="Permanent link">&para;</a></h4>
-<p>Chemical elements for which the isotopes will be considered. </p>
-<h4 id="mz-tolerance">m//z tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum allowed difference between two features' m/z values in order for them to be considered the same. The value is specified both as absolute tolerance (in m/z) and relative tolerance (in ppm). The tolerance range is calculated using maximum of the absolute and relative tolerances.</p>
-<h4 id="maximum-charge-of-isotope-mz">Maximum charge of isotope m/z<a class="headerlink" href="#maximum-charge-of-isotope-mz" title="Permanent link">&para;</a></h4>
-<p>Maximum charge to consider for detecting the isotope patterns.</p>
-<h4 id="search-in-scans">Search in scans<a class="headerlink" href="#search-in-scans" title="Permanent link">&para;</a></h4>
-<p>Options to search isotopes in the single most intense scan or within all scans in full-widh at half maximum range. Currently, only the single most intense scan is supported.</p>
+<p><img alt="" src="merge.png" /></p>
+<h4 id="select-spectra-to-merge">Select spectra to merge<a class="headerlink" href="#select-spectra-to-merge" title="Permanent link">&para;</a></h4>
+<p>The users can select to merge the MS/MS spectra:</p>
+<ol>
+<li><strong>Across samples</strong>, which will merge all MS/MS spectra that belong to the same feature, and as such is the most convenient option.</li>
+<li><strong>Same sample</strong>, which will merge MS/MS spectra for the same feature within one sample, and can be used if the user is not confident about the alignment algorithm.</li>
+<li><strong>Consecutive scans</strong>, which will merge MS/MS spectra if they are triggered in a row.</li>
+</ol>
+<h4 id="mz-merge-mode">m/z merge mode<a class="headerlink" href="#mz-merge-mode" title="Permanent link">&para;</a></h4>
+<p>This option allows you to select the way to merge the fragments' m/z values associated with a similar precursor value.
+"Most intense" will always pick the m/z of the best feature, which is a very safe and conservative option. However, "weighted average (remove outliers)" will often yield better result. </p>
+<h4 id="intensity-merge-mode">Intensity merge mode<a class="headerlink" href="#intensity-merge-mode" title="Permanent link">&para;</a></h4>
+<p>Options on how to merge the intensity values of features from different spectra with similar mass.</p>
+<ul>
+<li><strong>Sum intensities</strong> is a convenient option that will increase the intensities of feature that occur consistently in many fragment scans. However, this will make intensities between merged and unmerged spectra incomparable. </li>
+<li>Use <strong>max intensity</strong> to preserve intensity values</li>
+</ul>
+<h4 id="expected-mass-deviation">Expected mass deviation<a class="headerlink" href="#expected-mass-deviation" title="Permanent link">&para;</a></h4>
+<p>Expected mass deviation between different spectra of the same feature of your measurement in ppm (parts per million) or Da(larger value is used). We reccommend to use a rather large values, e.g. 10ppm for Orbitrap, 15 ppm for Q-ToF, 100 ppm for QQQ.</p>
+<h4 id="cosine-treshold">Cosine treshold<a class="headerlink" href="#cosine-treshold" title="Permanent link">&para;</a></h4>
+<p>Treshold of cosine similarity between spectra that needs to be met in order for two spectra to be merged. In case they have different collision energies, cosine treshold should be set to 0, since different collision energies will result in different fragmentation pattern.</p>
+<h4 id="signal-count-treshold">Signal count treshold<a class="headerlink" href="#signal-count-treshold" title="Permanent link">&para;</a></h4>
+<p>After merging the spectra, signals that occur in less than the user specified % of the merged spectra will be removed.</p>
+<h4 id="isolation-window-offset-mz">Isolation window offset (m/z)<a class="headerlink" href="#isolation-window-offset-mz" title="Permanent link">&para;</a></h4>
+<p>Isolation window offset from the precursor m/z.</p>
+<h4 id="isolation-window-width-mz">Isolation window width (m/z)<a class="headerlink" href="#isolation-window-width-mz" title="Permanent link">&para;</a></h4>
+<p>Width of the isolation window (left and right).  </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 8, 2022 14:33:25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 14, 2022 00:14:12</span>
       
     
   </small>
@@ -1012,6 +1197,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="gnps_export.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Export to GNPS-FBMN/IIMN" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Export to GNPS-FBMN/IIMN
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../workflows/lcmsworkflow/lcms-workflow.html" class="md-footer__link md-footer__link--next" aria-label="Next: LC-MS workflow" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              LC-MS workflow
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
