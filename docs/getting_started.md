@@ -1,9 +1,9 @@
 # Getting Started
 
 ## Download
-Download MZmine 3 portable versions or installers from:
+Download MZmine 3 portable versions or installers from GitHub:
 
-https://github.com/mzmine/mzmine3/releases/latest 
+[https://github.com/mzmine/mzmine3/releases/latest](https://github.com/mzmine/mzmine3/releases/latest) 
 
 ## Installation
 On Windows and Linux the installers and portable versions should function directly. Windows users might be warned that MZmine is not signed or from a trusted source and have to click run anyways.
@@ -24,7 +24,7 @@ sudo xattr -cr ../MZmine.app
 sudo xattr -cr MZmine.app
 ```
 
-![](img/install_mac1.png){: style="height:150px} ![](img/install_mac2.png){: style="width:150px}
+![](img/install_mac1.png){: style="height:50px} ![](img/install_mac2.png){: style="width:50px}
 
 The Terminal does not output any log or message.
 ![](img/install_mac3.png)
