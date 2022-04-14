@@ -24,7 +24,7 @@ sudo xattr -cr ../MZmine.app
 sudo xattr -cr MZmine.app
 ```
 
-![](img/install_mac1.png){: style="height:50px} ![](img/install_mac2.png){: style="width:50px}
+![](img/install_mac1.png){: style="height:150px"} ![](img/install_mac2.png){: style="width:150px"}
 
 The Terminal does not output any log or message.
 ![](img/install_mac3.png)
