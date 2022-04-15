@@ -1,28 +1,31 @@
-# Welcome to the MZmine 3 wiki!
+# **Welcome to the MZmine 3 wiki!**
+MZmine 3 is an open-source and platform-independent software for mass spectrometry (MS) data processing and visualization. It enables large-scale metabolomics and lipidomics research by spectral preprocessing, feature detection, and various options for compound identification, including spectral library querying and creation.
 
-## MZmine 3 for mass spec data analysis
+Since the introduction of MZmine 2 in 2010, the project has matured into a community-driven, highly collaborative platform and its functions continue to expand based on the users' needs and feedbacks. This has also enabled the tight integration of the MZmine ecosystem with popular third-party software for MS data analysis, such as the [SIRIUS](https://bio.informatik.uni-jena.de/software/sirius/) suite for _in silico_ metabolite annotation, the [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp?redirect=auth) platform with Ion Identity Molecular Networking, the [MetaboAnalyst](https://www.metaboanalyst.ca/) web app for univariate and multivariate statistical anlysis, _etc._
+
+Such a great progress was made possible by the invaluable contribution of many [developers](https://github.com/mzmine/mzmine3/graphs/contributors) from research labs distributed all over the world!
+
+Want to get started with MZmine 3? Check out our [getting started](getting_started.md) page!
+ 
+---
+## **What's new compared to MZmine 2?**
+MZmine 3 comes with a redesigned and fully customizable [GUI](main-window-overview.md) based on the JavaFX technology that allow an interactive visualization and validation of results from every processing step.
+
+A completely new data structure provides the flexibility to process any type of mass spectrometry, including LC-MS, GC-MS and MS-imaging. Moreover, MZmine 3 now supports ion mobility, with a dedicated [LC-IM-MS data visualization](visualization_modules/ims_raw_data_overview/IM-data-visualisation.md) module and [feature detection](workflows/imsworkflow/ion-mobility-data-processing-workflow.md) algorithms. 
+
+Finally, significant effort was devoted to trace memory issues and bottlenecks, resulting in an unprecendent processing performance and scalability.
+
+**COMING SOON!** We are implementing the [Mass Spec Query Langauge](https://github.com/rformassspectrometry/SpectraQL) (MassQL) to explore your MS data with human-readable, succinct queries! The project is suppported by the [Google Summer of Code](https://summerofcode.withgoogle.com/) program.
 
 
+---
+## **About this documentation**
+Here you can find documentation for both processing and visualization modules in MZmine 3. Moreover, data processing pipelines for untargeted [LC-MS](workflows/lcmsworkflow/lcms-workflow.md) and [LC-IMS-MS](workflows/imsworkflow/ion-mobility-data-processing-workflow.md) feature detection are described and general recommendations are given.
 
+**COMING SOON!** We are currently working on a series of short videotutorials to help get you started with the main features of MZmine 3!
 
-## About this documentation / How to contribute
+---
+## **How to contribute**
+The MZmine community is always welcoming new developers and contributions! You can contribute by improving existing modules or even adding new featurs in MZmine 3! Please, check out our brief [tutorial](http://mzmine.github.io/development.html).
 
-
-
-
-
-Here you can find general processing guides, module documentations and video tutorials.
-
-Want to get started with MZmine 3? Check our [Getting started](getting_started.md) page!
-
-[Main window overview](Main-window-overview.md)
-
-[Performance options](performance.md)
-
-[LC-MS workflow](workflows/lcmsworkflow/lcms-workflow.md)
-
-[LC-IMS-MS workflow](workflows/imsworkflow/Ion-mobility-data-processing-workflow.md)
-
-[Raw data visualisation](visualization_modules/Raw-data-visualisation.md)
-
-[Acknowledgements](wikiacknowledgements.md)
+You can also contribute to this wiki and help new users to get started with MZmine 3! See [here](contribute.md) how to contribute to the documentation.
