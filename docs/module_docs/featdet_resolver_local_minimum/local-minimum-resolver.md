@@ -75,12 +75,13 @@ By checking this box, an interactive visualization panel will open to help the u
 This will help the user to appreciate how the chosen settings will impact the resolution of noisy and "good" EIC traces, respecively.
 The feature list and EIC traces to display can be selected from the corresponding drop-down menus.
 
+---
 ## Resolving the ion mobility dimension
-This same module can be used to resolve features co-eluting in the RT dimension, based on their ion mobility. The same concept applies as in resolution of the RT dimension; however, [mobilograms](../../terminology/ion-mobility-terminology.md#mobilograms) are examined instead of EIC traces. Therefore, few differences should be kept in mind:
+This same module can be used to resolve features co-eluting in the RT dimension, based on their ion mobility. The same concept applies as in resolution of the RT dimension; however, [mobilograms](../../terminology/ion-mobility-terminology.md#mobilograms) are examined instead of EIC traces. Therefore, few differences should be born in mind:
 
 1. Mobilograms contain less scans (_e.g._ ≈400-1000 per [frame](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames), depending on instrument type and acquisition settings) compared to regular EICs (_e.g._ ≈4500 scans for 15 minutes LC run and scan rate of 0.2 seconds). Therefore, a lower [chromatographic threshold](#chromatographic-threshold) (_e.g._ 80%) is recommended to avoid relevant data points in the mobilogram being discarded.
 
-2. Different vendors use different unit of mobility. For instance, [TIMS](../../terminology/ion-mobility-terminology.md#trapped-ion-mobility-spectrometry-tims) express ions' mobility as XXX, whereas [time dispersive IM devices](../../terminology/ion-mobility-terminology.md#time-dispersve-ion-mobility-spectrometry-dtims-and-twims) (DTIMS and TWIMS) use the ions' drift time (expressed milliseconds). TIMS values are numerically smaller (_e.g._ 0.01) than DTIMS or TWIMS; therefore, a lower [minimum search range](#minimum-search-range-rtmobility-absolute) should be used for the local minima search.  
+2. Different vendors use different units of mobility. For instance, [TIMS](../../terminology/ion-mobility-terminology.md#trapped-ion-mobility-spectrometry-tims) express ions' mobility as Vs/cm<sup>2</sup>, whereas [time dispersive IM devices](../../terminology/ion-mobility-terminology.md#time-dispersve-ion-mobility-spectrometry-dtims-and-twims) (DTIMS and TWIMS) use the ions' drift time (expressed in milliseconds). TIMS values are numerically smaller (_e.g._ 0.01) than DTIMS or TWIMS (_e.g._ 0.05); therefore, a lower [minimum search range](#minimum-search-range-rtmobility-absolute) should be used.  
 
 
 3. Raw data are used. Resolved mobilograms are recalculated from the raw data and any applied smoothing(LINK)
@@ -90,8 +91,6 @@ This same module can be used to resolve features co-eluting in the RT dimension,
 SCREENSHOT OF IM DIMENSION
 
 ![](mobilityresolving.png)
-
-
 
 
 ## Example

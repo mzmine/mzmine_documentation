@@ -41,11 +41,18 @@ Maximum allowed difference between measured and theoretical isotope _m/z_. It is
 #### **Maximum charge of isotope _m/z_**
 Maximum allowed charge state of the isotope to be retained in the mass list. Default value is 1.
 
+---
 ### **How do I determine the instrumental noise level in my data?**
-The noise level largely depends on the instrument and detector type. For example, Orbitrap instruments normally provides higher signal intensities than TOF devices.
+The backgorund noise level largely depends on the mass spectrometer and detector type. For example, Orbitrap instruments normally provides higher signal intensities than TOF devices. To provide some numbers, while 1.0E2 - 1.0E3 could be an appropriate noise level for TOF analyzers, the same would be overly low for Orbitrap instruments (which normally require 1.0E4 - 1.0E5).
 
-While 1.0E3 could be appropriate for TOF analyzer, the same would be overly low for Orbitrap instruments (which normally require 1.0E5).
+The best way to determine the instrumental noise level is undoubtedly by looking at the raw data. The backgorund noise (often referred to as "grass" in technical jargon) is characterized by several signals having the same intensity and no clear pattern among them (see Figure). 
 
-To-do.
-The detector noise is usually determined by a lot of signals of the same intensity (FIGURE)
+![determine noise level](determine_noise_level.png)
 
+Since these signals are produced by electrical and/or mechanical noise, rather than actual ions being detected, they should be excluded from the mass detection and downstream data processing. The red dashed line in the figure corresponds to a hypothetical noise level (1.0E4 in this case) that would filter out most of the "grass"-type noise from the mass detection.
+
+Another way, more releant for the fearure detection, to determine the noise level consists of picking a mid-intensity LC peak and extract the EICs of its 13C isotopes. When the chromatographic peak shape starts to deteriorate, it means we are approaching the instrument detection limit (see Figure).
+
+![determine noise level](determine_noise_level-2.png)
+
+Such approach can also be useful to determine other parameters in the feature detection such as the [Group intensity threshold](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#group-intensity-threshold) and [Min highest intensity](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#min-highest-intensity) parameters in the [ADAP chromatogram builder](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#min-highest-intensity) module.
