@@ -22,7 +22,7 @@ Select the algorithm to be used for the mass detection. Several mass detection a
 ### **Setting the noise level**
 All the mass detection algorithms allow to set a threshold for the noise filtering (_i.e._ _Noise level_) by hitting the _Setup_ button next to the _Mass detector_ field. A dialog box like the following will open up:
 ![Noise level](noise_level.png)
-The noise threshold can be entered either in standard or scientific notation. By checking the _Show preview_ box, an interactive visualization panel will open to help the user to adjust the noise level (see also [How do I determine the noise level in my data?](#how-do-i-determine-the-instrumental-noise-level-in-my-data)). The red dots denotes the mass signals retained in the mass list according to the set threshold. Different data files and scan numbers can be visualized using the corresponding drop-down menus. 
+The noise threshold can be entered either in standard or scientific notation. By checking the _Show preview_ box, an interactive visualization panel will open to help the user to adjust the noise level (see also [How do I determine the noise level in my data?](#how-do-i-determine-the-noise-level-in-my-data)). The red dots denotes the mass signals retained in the mass list according to the set threshold. Different data files and scan numbers can be visualized using the corresponding drop-down menus. 
 
 ### **Detect isotope signals below noise level**
 The _Centroid_ and _Exact mass_ algorithms provide the option to retain signals that are below the noise level (and would be otherwise discarded), but correspond to isotopes of the detected masses. Theoretical isotopic distributions are calculated for each mass detected in the _mass list_ based on the speciefied chemical elements. If a signal below the noise threshold that matches a theoretical isotopic mass is found in the raw data, it will be included in the final mass list.
@@ -42,7 +42,7 @@ Maximum allowed difference between measured and theoretical isotope _m/z_. It is
 Maximum allowed charge state of the isotope to be retained in the mass list. Default value is 1.
 
 ---
-### **How do I determine the instrumental noise level in my data?**
+### **How do I determine the noise level in my data?**
 The backgorund noise level largely depends on the mass spectrometer and detector type. For example, Orbitrap instruments normally provides higher signal intensities than TOF devices. To provide some numbers, while 1.0E2 - 1.0E3 could be an appropriate noise level for TOF analyzers, the same would be overly low for Orbitrap instruments (which normally require 1.0E4 - 1.0E5).
 
 The best way to determine the instrumental noise level is undoubtedly by looking at the raw data. The backgorund noise (often referred to as "grass" in technical jargon) is characterized by several signals having the same intensity and no clear pattern among them (see Figure). 
