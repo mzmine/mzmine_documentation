@@ -84,9 +84,11 @@ This same module can be used to resolve features co-eluting in the RT dimension,
 2. Different vendors use different units of mobility. For instance, [TIMS](../../terminology/ion-mobility-terminology.md#trapped-ion-mobility-spectrometry-tims) express ions' mobility as Vs/cm<sup>2</sup>, whereas [time dispersive IM devices](../../terminology/ion-mobility-terminology.md#time-dispersve-ion-mobility-spectrometry-dtims-and-twims) (DTIMS and TWIMS) use the ions' drift time (expressed in milliseconds). TIMS values are numerically smaller (_e.g._ 0.01) than DTIMS or TWIMS (_e.g._ 0.05); therefore, a lower [minimum search range](#minimum-search-range-rtmobility-absolute) should be used.  
 
 
-3. Raw data are used. Resolved mobilograms are recalculated from the raw data and any applied smoothing(LINK)
-- Mobiligrams tend to be more jagged (see Figure). As a consequence, some parameters, such as [Minimum absolute height](#minimum-absolute-height), or [Minimum absolute height](#min--of-data-points), and [Min ratio of peak top/edge](#min-ratio-of-peak-topedge) should be adjusted respec to wha normally used in the resolution of the RT dimension.
-- Smoothing must be reapplied, if needed.
+3. Resolved mobilograms are recalculated from the raw data, rather than [smoothed](../featdet_smoothing/smoothing.md) traces. Non-smoothed mobiligrams tend to be more jagged thans regular EIC traces (see Figure). As a consequence, some parameters (_e.g._ [Min ratio of peak top/edge](#min-ratio-of-peak-topedge) should be adjusted accordingly.
+
+
+, such as [Minimum absolute height](#minimum-absolute-height), or [Minimum absolute height](#min--of-data-points), and [Min ratio of peak top/edge](#min-ratio-of-peak-topedge)  to wha normally used in the resolution of the RT dimension.
+
 
 SCREENSHOT OF IM DIMENSION
 
