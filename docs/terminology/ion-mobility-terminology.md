@@ -39,4 +39,6 @@ IM-derived CCS values can be used as an additional molecular descriptor to suppo
 
 
 ## References
-https://doi.org/10.1074/mcp.TIR118.000900
+- Meier, F., Brunner, A.D., Koch, S., Cox, J., Räther, O., Mann, M. Online Parallel Accumulation–Serial Fragmentation (PASEF) with a Novel Trapped Ion Mobility Mass Spectrometer. _Molecular & Cellular Proteomics_ (2018). DOI: 10.1074/mcp.TIR118.000900
+
+
