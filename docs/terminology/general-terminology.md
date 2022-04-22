@@ -6,7 +6,7 @@
 The precuror ion (a.k.a. "parent ion") is the ion that dissociates to a smaller fragment ions in a MS/MS experiment. A fragment ion (a.k.a. "daughter ion" or "product ion") is the charged product of an ion dissociation. A fragment ion may be stable itself or may dissociate further to form other charged fragment ions and neutral species of successively lower mass.
 
 ### Accurate mass, exact mass and mass accuracy 
-The accurate mass is the experimentally-determined mass of an ion measured with an high-resolution mass spectormeter. The exact mass is the calculated mass of an ion based on its elemental formula, isotopic composition and charge state. While the accurate mass is an experimentally-measured quantity, the exact mass is a theretically-calculated quantity. The mass accuracy is defined as the difference between the measured value (accurate mass) and the true value (exact mass). It can be expressed either in absolute (mDa) or relative (ppm) terms.
+The accurate mass is the experimentally-determined mass of an ion measured with an high-resolution mass spectrometer. The exact mass is the calculated mass of an ion based on its elemental formula, isotopic composition and charge state. While the accurate mass is an experimentally-measured quantity, the exact mass is a theoretically-calculated quantity. The mass accuracy is defined as the difference between the measured value (accurate mass) and the true value (exact mass). It can be expressed either in absolute (mDa) or relative (ppm) terms.
 
 ### Monoisotopic mass
 Exact mass of an ion calculated using the mass of the lightest isotope of each element.

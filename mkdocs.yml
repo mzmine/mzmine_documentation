@@ -29,10 +29,11 @@ nav:
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
       - Gap filling (Peak finder): module_docs/gapfill_peak_finder/gap-filling.md
       - MS2 scan paring: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
-      - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md
-      - GNPS export: module_docs/GNPS_export/gnps_export.md
       - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md 
       - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md 
+      - Export to GNPS-FBMN/IIMN: module_docs/GNPS_export/gnps_export.md
+      - Other parameters:
+        - Merge MS/MS: module_docs/GNPS_export/merge_ms2_kai.md
   - Workflows:
       - LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
       - LC-IMS-MS workflow: workflows/imsworkflow/ion-mobility-data-processing-workflow.md
