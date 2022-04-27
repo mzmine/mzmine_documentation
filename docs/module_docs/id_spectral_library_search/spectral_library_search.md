@@ -2,7 +2,14 @@
 
 The spectral library search can be performed on feature lists, feature rows, or single scans. Depending on the MS level
 (MS1 or MS2), all corresponding rows will be matched against selected spectral libraries that were 
-previously imported (formats: .json, .mgf, .msp, or .jdx).      
+previously imported (formats: .json, .mgf, .msp, or .jdx).
+
+The **Spectral library search** is found under **Feature list methods → Annotation → Search spectra → Spectral library
+search** or with a right click on one or multiple selected feature rows **Search → Spectral library search**
+
+**Libraries** can be imported by drag and drop, or found under **Raw data methods → Raw data import
+→ Spectral library import** or under **Feature list methods → Annotation → Search spectra → Import
+spectral libraries.**
 
 ## Supported library formats
 - .json: MassBank of North America (MoNA) ([download](https://mona.fiehnlab.ucdavis.edu/downloads))
@@ -13,6 +20,8 @@ previously imported (formats: .json, .mgf, .msp, or .jdx).
 - .jdx: JCAMP-DX
 
 ### Parameters
+
+![library_search](spectral_library_search.png)
 
 #### Spectral libraries
 The spectral libraries of interest need to be imported before the spectral library search can be applied. 
@@ -66,11 +75,16 @@ Signals below the minimum ion intensity will be filtered from the mass lists and
 taken into account during the library matching.
 
 #### ^13^C deisotoping
-
-- **m/z tolerance**:
-- **Monotonic shape**:
-- **Maximum charge**:
-
+Removes ^13^C isotope signals from the mass list. Here, different settings are possible after
+enabeling.
+- **m/z tolerance**: As in spectral or precursor m/z tolerance a maximum allowed difference between 
+two m/z values has to be considered the same. The absolute (in m/z) and relative (in ppm) m/z
+tolerance can be set, whereas the maximum tolerance for each m/z value is applied.
+- **Monotonic shape**: If enabled, the the monotonically decreasing height of isotope pattern is 
+required.
+- **Maximum charge**: The maximum charge that will be considered for detecting the isotope pattern.
+For singly charged ions, the ^13^C isotope will be expected +1 whereas for doubly charged ions
+it will be +0.5 (+1 m/z divided by the charge 2). 
 
 #### Min matched isotope signals
 This option is only useful if the query AND library entries contain isotope pattern (MS^1^ or wider isolation 
@@ -93,7 +107,8 @@ The **weighted dot-product cosine** similarity is used for comparing MS^2^ data,
 neighboring signals and is, therefore, applied to MS^1^ spectra.
 
 - **Weights**: For calculating the cosine similarity, different weighting strategies for  m/z
-value and signal intensity can be applied. 
+value and signal intensity can be applied. A usual scaling is based by taking the square root of
+the peak intensity multiplying by the square mass. 
 - **Minimum cosine similarity**: This option defines the minimum accepted similarity
 score that is taken into account for annotation. The similarity score depends on the data 
 handling of unmatched signals.
@@ -109,6 +124,7 @@ of matching results.
   - **Keep library signals** results in discarding all unaligned signals of the query scan,
   whereas all unaligned library signals are matched to zero. Here, the negative impact of 
   contaminating signals in the query scans are reduced. This might be helpful for mixed spectra
-  of multiple compounds, especially during imaging techniques without any further separation.
+  of multiple compounds, especially during imaging techniques without any further separation or 
+  all ion fragmentation/data independent fragmentation workflows.
   - **Keep experimental signals** results in discarding all unaligned signals of the library scan,
   whereas all unaligned query signals are matched to zero.
