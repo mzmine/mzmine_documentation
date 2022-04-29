@@ -56,7 +56,7 @@ The "detected" features in each ﬁle are listed in the so-called "feature lists
 ### Join aligner
 - Aligns detected peaks in different samples through a match score. The score is calculated based on the mass
 and retention time of each peak and ranges of tolerance stipulated in the parameter setup dialog.
-For more information, see the Join aligner module. 
+For more information, see the [join aligner](../../module_docs/join_aligner/join_aligner.md) module. 
 
 ### Gap-filling
 Gap-filling can be performed on the aligned feature lists to cope with missing features that might be artifacts of the feature-detection process.

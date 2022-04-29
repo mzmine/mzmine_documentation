@@ -54,7 +54,6 @@ Score for perfectly matching mobility values. Only taken into account if "Mobili
 #### Require same charge state
 If checked, only rows having same charge can be aligned. 
 
-
 #### Require same ID
 If checked, only rows having same compound identities (or no identities) can be aligned.
 
