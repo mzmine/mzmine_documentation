@@ -11,7 +11,7 @@ Spectral m/z tolerance is used to match all signals between spectra of two compa
 
  2. **Composite dot-product identity** - used to determine the similarity between two spectra (usually library and query spectra). Especially useful for very reproducible generation of spectra (GC-EI-MS). Takes into account the relative intensities of neighbouring signals in the two spectra. This option is used for MS1 level.
 
- Additional setup of spectra similarity comparison enables set up of the following parameters:
+ Additional setup of spectra similarity comparison enables modification of the following parameters:
 
 #### Weights
 Weights for the m/z and intensity values. Usually, MassBank is used, in which higher m/z values contribute more to the cosine similarity calculation.
