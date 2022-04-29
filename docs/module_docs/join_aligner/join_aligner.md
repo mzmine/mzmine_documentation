@@ -45,11 +45,11 @@ Only in cases where there is a perfect match of RT values, the score receives th
 
 #### Mobility tolerance
 In case of IM data,the user can determine the mobility tolerance. If checked, this parameter specifies the tolerance range for matching the mobility values. 
-**What unit is used for this?** 
+ 
 
 #### Mobility weight
 Score for perfectly matching mobility values. Only taken into account if "Mobility tolerance" is activated.
-**Should it be stated it's added to the formula in the same manner as RTw. and MZW?**
+
 
 #### Require same charge state
 If checked, only rows having same charge can be aligned. 
