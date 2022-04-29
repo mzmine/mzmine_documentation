@@ -54,7 +54,7 @@ Minimum absolute intensity a peak needs to reach to be retained as a feature. Th
 :octicons-alert-16: While [frame scans](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames) are examined over the RT dimension, [mobility scans](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames) are examined over the IM dimension. Therefore, this parameter might need to be adjested accordingly when [resolving the ion mobility dimension](#resolving-the-ion-mobility-dimension). 
 
 #### **Min ratio of peak top/edge**
-Minimum ratio between the highest and lowest point of a peak. The lowest peak's data point has to be X times less intense than the peak apex for the feature to be retained. This parameter mainly affects low intensity and not-baseline-resolved signals and helps reducing the detection of false peaks when the exaimend trace (EIC or _mobilogram_) is not smooth.
+Minimum ratio between the intensity of the highest (apex) and side (left and right 'edges') points of a peak, to retain it as a feature. The peak edges have to be X times less intense than the peak apex for the feature to be retained. The purpose of this parameter is to reduce the detection of false local minima when the exaimend trace (EIC or _mobilogram_) is not smooth. In general, this mainly affects low intensity and not-baseline-resolved signals
 
 :octicons-light-bulb-16: **Tip**. This parameter can best be optimized using the _Show preview_ option. We recommend values between 1.7 (not baseline separated) and 2 to start the optimisation.
 
@@ -69,9 +69,7 @@ Minimum number of data points a resolved peak needs to have to be considered val
 :octicons-alert-16: A feature in the IM dimension is normally made up of more data points than regular LC peaks. Therefore, a higher _Min # of data points_ can be set when [resolving the ion mobility dimension](#resolving-the-ion-mobility-dimension) to filter out noisy features.
 
 #### **Show preview**
-By checking this box, an interactive visualization panel will open to help the user to adjust the algorithm parameters. In two EIC traces can be dispalyed simoultaneously in two sub-panels. This helps the user to appreciate the impact of chosen settings on the final outcome The feature list and EIC traces to display can be selected from the corresponding drop-down menus.
-- Explain difference between the two sub-panels> noisy and "good" EIC traces.
-We recommend optimising the parameters on good EICs and checking the results of these parameters with a noisy EIC. A "noisy" EIC can generally be found by sorting the feature table by decreasing area.
+By checking this box, an interactive visualization panel will open to help the user to adjust the algorithm parameters. Two EIC traces can be dispalyed simoultaneously in two sub-panels to assess the impact of chosen settings on both "good" and "noisy" EIC traces. The feature list and EIC traces to display can be selected from the corresponding drop-down menus. A noisy EIC can generally be found by sorting the feature table by decreasing area, or by looking at the height/area ratio provided for each feature in the top sub-panel (noisy EIC tend to have low height/area ratios). We recommend optimising the parameters on good EICs and checking the results of these parameters with a noisy EIC.
 
 ---
 ## Resolving the ion mobility dimension
