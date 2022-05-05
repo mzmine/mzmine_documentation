@@ -15,7 +15,7 @@ Select the input raw data files for chromatogram building. Mass lists associated
 ####  **Scans**
 Select (or filter out) the MS scans to be processed. Although setting the _MS level = 1_ is usually sufficient for this module, several filters are avialble (see option descriptions in [Mass detection](../featdet_mass_detection/mass-detection.md#parameters-settings) module). For example, specific RT ranges (_e.g._ dead volume, equilibration time, calibration segments, _etc._) can be excluded from the processing by setting the corresponding filter.
 
-####  **Min group size in # of scans**
+####  **Min group size in number of scans**
 Minimum number of consecutive MS1 scans where a _m/z_ must be detected with a non-zero intensity in order for the corresponding EICs to be considered valid and retained in the feature list.
 :octicons-light-bulb-16: **Tip**. This parameter largely depends on the chromatographic system setup (_e.g._ HPLC vs UHPLC) and the acquisition rate (_a.k.a._ MS scan speed) of the mass spectrometer. The best way to optimize this setting is by manually inspecting the the raw data and determining the typical minimum number of data points of the LC peaks. Usually, no less than 4-5 should be used.
 

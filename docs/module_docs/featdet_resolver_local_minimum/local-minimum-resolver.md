@@ -64,7 +64,7 @@ Range of acceptable peak length expressed in minutes (RT dimension) or absolute 
 #### **Min # of data points**
 Minimum number of data points a resolved peak needs to have to be considered valid and retained as a feature. This parameter can be used alogn with the [Peak duration range](#peak-durantion-range-minmobility) setting as  peak duration constraint to filter out noisy features.
 
-:octicons-light-bulb-16: **Tip**. This parameter is very similar to the [Min group size in # of scans](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#min-group-size-in--of-scans) settings in the ADAP chromatogram builder module and the same value can normally be used here (usually, no less than 4-5).
+:octicons-light-bulb-16: **Tip**. This parameter is very similar to the [Min group size in # of scans](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#min-group-size-in-number-of-scans) settings in the ADAP chromatogram builder module and the same value can normally be used here (usually, no less than 4-5).
 
 :octicons-alert-16: A feature in the IM dimension is normally made up of more data points than regular LC peaks. Therefore, a higher _Min # of data points_ can be set when [resolving the ion mobility dimension](#resolving-the-ion-mobility-dimension) to filter out noisy features.
 
