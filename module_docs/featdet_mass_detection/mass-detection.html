@@ -504,8 +504,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#how-do-i-determine-the-instrumental-noise-level-in-my-data" class="md-nav__link">
-    How do I determine the instrumental noise level in my data?
+  <a href="#how-do-i-determine-the-noise-level-in-my-data" class="md-nav__link">
+    How do I determine the noise level in my data?
   </a>
   
 </li>
@@ -1186,8 +1186,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#how-do-i-determine-the-instrumental-noise-level-in-my-data" class="md-nav__link">
-    How do I determine the instrumental noise level in my data?
+  <a href="#how-do-i-determine-the-noise-level-in-my-data" class="md-nav__link">
+    How do I determine the noise level in my data?
   </a>
   
 </li>
@@ -1233,7 +1233,7 @@
 <h3 id="setting-the-noise-level"><strong>Setting the noise level</strong><a class="headerlink" href="#setting-the-noise-level" title="Permanent link">&para;</a></h3>
 <p>All the mass detection algorithms allow to set a threshold for the noise filtering (<em>i.e.</em> <em>Noise level</em>) by hitting the <em>Setup</em> button next to the <em>Mass detector</em> field. A dialog box like the following will open up:
 <img alt="Noise level" src="noise_level.png" />
-The noise threshold can be entered either in standard or scientific notation. By checking the <em>Show preview</em> box, an interactive visualization panel will open to help the user to adjust the noise level (see also <a href="#how-do-i-determine-the-instrumental-noise-level-in-my-data">How do I determine the noise level in my data?</a>). The red dots denotes the mass signals retained in the mass list according to the set threshold. Different data files and scan numbers can be visualized using the corresponding drop-down menus. </p>
+The noise threshold can be entered either in standard or scientific notation. By checking the <em>Show preview</em> box, an interactive visualization panel will open to help the user to adjust the noise level (see also <a href="#how-do-i-determine-the-noise-level-in-my-data">How do I determine the noise level in my data?</a>). The red dots denotes the mass signals retained in the mass list according to the set threshold. Different data files and scan numbers can be visualized using the corresponding drop-down menus. </p>
 <h3 id="detect-isotope-signals-below-noise-level"><strong>Detect isotope signals below noise level</strong><a class="headerlink" href="#detect-isotope-signals-below-noise-level" title="Permanent link">&para;</a></h3>
 <p>The <em>Centroid</em> and <em>Exact mass</em> algorithms provide the option to retain signals that are below the noise level (and would be otherwise discarded), but correspond to isotopes of the detected masses. Theoretical isotopic distributions are calculated for each mass detected in the <em>mass list</em> based on the speciefied chemical elements. If a signal below the noise threshold that matches a theoretical isotopic mass is found in the raw data, it will be included in the final mass list.</p>
 <p>:octicons-light-bulb-16: <strong>Tip</strong>. In the case of LC-MS data processing, the low-intensity isotope signals included in the final mass list will undergo the whole feature detection workflow (see, for example, <a href="../../workflows/lcmsworkflow/lcms-workflow.html">LC-MS data processing workflow</a>. Due to the low intensity, these masses often produce LC peaks with poor peak shape during the chromatogram building step and might be discarded if they do not meet the user-defined parameters (<em>e.g.</em> minimum number of data points and intensity, see <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP chromatogram builder</a> for more details). Therefore, it might be advisable not to use this option during the mass detection, but rather use the Isotope finder module (CREATE DOC)</p>
@@ -1245,16 +1245,22 @@ The noise threshold can be entered either in standard or scientific notation. By
 <p>Maximum allowed difference between measured and theoretical isotope <em>m/z</em>. It is an <a href="../../terminology/general-terminology.html#intra-and-inter-scan-tolerances">intra-scan <em>m/z</em> tolerance</a>. The tolerance can be set in <em>m/z</em>, ppm or both. Since mass deviations expressed in ppm are dependent on the <em>m/z</em> (<em>e.g.</em> higher at low <em>m/z</em> and lower at high <em>m/z</em>), MZmine automatically uses the largest tolerance.</p>
 <h4 id="maximum-charge-of-isotope-mz"><strong>Maximum charge of isotope <em>m/z</em></strong><a class="headerlink" href="#maximum-charge-of-isotope-mz" title="Permanent link">&para;</a></h4>
 <p>Maximum allowed charge state of the isotope to be retained in the mass list. Default value is 1.</p>
-<h3 id="how-do-i-determine-the-instrumental-noise-level-in-my-data"><strong>How do I determine the instrumental noise level in my data?</strong><a class="headerlink" href="#how-do-i-determine-the-instrumental-noise-level-in-my-data" title="Permanent link">&para;</a></h3>
-<p>To-do.
-The detector noise is usually determined by a lot of signals of the same intensity.</p>
+<hr />
+<h3 id="how-do-i-determine-the-noise-level-in-my-data"><strong>How do I determine the noise level in my data?</strong><a class="headerlink" href="#how-do-i-determine-the-noise-level-in-my-data" title="Permanent link">&para;</a></h3>
+<p>The backgorund noise level largely depends on the mass spectrometer and detector type. For example, Orbitrap instruments normally provides higher signal intensities than TOF devices. To provide some numbers, while 1.0E2 - 1.0E3 could be an appropriate noise level for TOF analyzers, the same would be overly low for Orbitrap instruments (which normally require 1.0E4 - 1.0E5).</p>
+<p>The best way to determine the instrumental noise level is undoubtedly by looking at the raw data. The backgorund noise (often referred to as "grass" in technical jargon) is characterized by several signals having the same intensity and no clear pattern among them (see Figure). </p>
+<p><img alt="determine noise level" src="determine_noise_level.png" /></p>
+<p>Since these signals are produced by electrical and/or mechanical noise, rather than actual ions being detected, they should be excluded from the mass detection and downstream data processing. The red dashed line in the figure corresponds to a hypothetical noise level (1.0E4 in this case) that would filter out most of the "grass"-type noise from the mass detection.</p>
+<p>Another way, more releant for the fearure detection, to determine the noise level consists of picking a mid-intensity LC peak and extract the EICs of its 13C isotopes. When the chromatographic peak shape starts to deteriorate, it means we are approaching the instrument detection limit (see Figure).</p>
+<p><img alt="determine noise level" src="determine_noise_level-2.png" /></p>
+<p>Such approach can also be useful to determine other parameters in the feature detection such as the <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#group-intensity-threshold">Group intensity threshold</a> and <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#min-highest-intensity">Min highest intensity</a> parameters in the <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#min-highest-intensity">ADAP chromatogram builder</a> module.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 5, 2022 19:53:57</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 16, 2022 15:48:53</span>
       
     
   </small>

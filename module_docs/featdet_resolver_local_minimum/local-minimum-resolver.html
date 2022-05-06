@@ -593,15 +593,36 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#min-ratio-of-peak-topedge" class="md-nav__link">
+    Min ratio of peak top/edge
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+        
+          <li class="md-nav__item">
+  <a href="#peak-durantion-range-minmobility" class="md-nav__link">
+    Peak durantion range (min/mobility)
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-of-data-points" class="md-nav__link">
+    Min # of data points
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-preview" class="md-nav__link">
+    Show preview
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -609,33 +630,6 @@
   <a href="#resolving-the-ion-mobility-dimension" class="md-nav__link">
     Resolving the ion mobility dimension
   </a>
-  
-    <nav class="md-nav" aria-label="Resolving the ion mobility dimension">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dimension_1" class="md-nav__link">
-    Dimension
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chromatographic-threshold_1" class="md-nav__link">
-    Chromatographic threshold
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search-minimum-range" class="md-nav__link">
-    Search minimum range
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1191,15 +1185,36 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#min-ratio-of-peak-topedge" class="md-nav__link">
+    Min ratio of peak top/edge
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+        
+          <li class="md-nav__item">
+  <a href="#peak-durantion-range-minmobility" class="md-nav__link">
+    Peak durantion range (min/mobility)
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-of-data-points" class="md-nav__link">
+    Min # of data points
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-preview" class="md-nav__link">
+    Show preview
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1207,33 +1222,6 @@
   <a href="#resolving-the-ion-mobility-dimension" class="md-nav__link">
     Resolving the ion mobility dimension
   </a>
-  
-    <nav class="md-nav" aria-label="Resolving the ion mobility dimension">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dimension_1" class="md-nav__link">
-    Dimension
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chromatographic-threshold_1" class="md-nav__link">
-    Chromatographic threshold
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search-minimum-range" class="md-nav__link">
-    Search minimum range
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1256,82 +1244,77 @@
 
 
 <h1 id="local-minimum-resolver"><strong>Local Minimum Resolver</strong><a class="headerlink" href="#local-minimum-resolver" title="Permanent link">&para;</a></h1>
-<p>During the EICs building, overalpping and partially co-eluting peaks are retained as single features in the faeture list (see, for example, <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP chromatogram builder</a>). The <em>local minimum resolver</em> module aims at splitting such "shoulder" LC peaks into individual features (<em>i.e.</em> <a href="../../terminology/general-terminology.html#chromatographic-resolving">chromatographic deconvolution</a>) based on local minima. In fact, a local minimum in the EIC trace might correspond to the valley between two adjacent, partially-resolved peaks.</p>
-<p>The algorithm examines all the data points in the EIC trace starting from the earliest RT. A scan window is set (see <em>Minimum search range RT/Mobility</em> parameter) and centred around the examined data point. A data point is considered a local minimum if it is the lowest intense point within the scan window. Moreover, it has to be X times lower than the highest point in the window (see <em>Min ratio of peak top/edge</em> parameter). When a local minumum is found, a set of user-defined intensity and peak duration requirements is checked. If they are fulfilled, the original overlapping peaks are split into new, distinct features.</p>
-<p>With the implementation of IM support in MZmine 3, this module was expanded and can now be applied to both the RT and IM dimension (see <a href="#resolving-the-ion-mobility-dimension">Resolving the ion mobility dimension</a>).</p>
-<p>:octicons-light-bulb-16: <strong>Tip</strong>. The LMR is particularly suitable for LC-MS data with little 
-noise and nice peak shapes.</p>
+<p>During the EICs building, overalpping and partially co-eluting peaks are retained as single features in the feature list (see, for example, <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP chromatogram builder</a>). The <em>local minimum resolver</em> module aims at splitting such "shoulder" LC peaks into individual features (<em>i.e.</em> <a href="../../terminology/general-terminology.html#chromatographic-resolving">chromatographic resolving</a>) based on local minima. In fact, a local minimum in the EIC trace might correspond to the valley between two adjacent, partially-resolved peaks.</p>
+<p>The algorithm examines all the data points in the EIC trace starting from the earliest RT. A scan window is set (see <a href="#minimum-search-range-rtmobility-absolute">Minimum search range RT/Mobility</a> parameter) and centered around the examined data point. A data point is considered a local minimum if it is the lowest intense point within the scan window. When a local minumum is found, a set of user-defined intensity and peak duration requirements is checked. If they are fulfilled, the original overlapping peaks are split into new, distinct features. The LMR is particularly suitable for LC-MS data with little noise and nice peak shapes.</p>
+<p>With the implementation of ion mobility (IM) support in MZmine 3, this module was expanded and can now be applied over both the RT and IM dimensions (see <a href="#resolving-the-ion-mobility-dimension">Resolving the ion mobility dimension</a>).</p>
 <hr />
 <h2 id="parameters-settings"><strong>Parameters settings</strong><a class="headerlink" href="#parameters-settings" title="Permanent link">&para;</a></h2>
 <p>:material-menu-open: Feature detection → Chromatogram resolving → Local minimum resolver</p>
 <p><img alt="" src="local-minimum-resolver.png" /></p>
 <h4 id="suffix"><strong>Suffix</strong><a class="headerlink" href="#suffix" title="Permanent link">&para;</a></h4>
-<p>String added as suffix when creating the corresponding feature list.</p>
+<p>String added as suffix to when creating the new feature list(s).</p>
 <h4 id="original-feature-list"><strong>Original feature list</strong><a class="headerlink" href="#original-feature-list" title="Permanent link">&para;</a></h4>
-<p>Keep or remove the processed feature list(s).</p>
+<p>Keep or remove the input feature list(s). The <em>PROCESS IN PLACE</em> option directly filter the input feature list and performs better in terms of memory usage; therefore, it is recommended over <em>REMOVE</em>, when available.</p>
 <h4 id="msms-scan-pairing"><strong>MS/MS scan pairing</strong><a class="headerlink" href="#msms-scan-pairing" title="Permanent link">&para;</a></h4>
-<p>Pair MS/MS fragmentation spectra collected in <a href="../../terminology/general-terminology.html#data-dependent-acqusition-mode">DDA</a> mode to the resolved features. This is optional at this stage as the same can be done with a separate <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html">module</a>. See <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html">MS2 scan pairing</a> documentation for more details.</p>
+<p>Pair MS/MS fragmentation spectra collected in <a href="../../terminology/general-terminology.html#data-dependent-acqusition-mode">DDA</a> mode to the resolved features. This is optional at this stage as the same can be done later in the pipeline using a separate <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html">module</a>. See <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html">MS2 scan pairing</a> documentation for more details.</p>
 <h4 id="dimension"><strong>Dimension</strong><a class="headerlink" href="#dimension" title="Permanent link">&para;</a></h4>
-<p>Dimension to be resolved. Select <em>Retention time</em> or <em>Mobility</em> to run the module over the RT or ion mobility dimension, respectively.</p>
+<p>Dimension to be resolved. Select <em>Retention time</em> or <em>Mobility</em> to run the module over the RT or IM dimension, respectively.</p>
 <h4 id="chromatographic-threshold"><strong>Chromatographic threshold</strong><a class="headerlink" href="#chromatographic-threshold" title="Permanent link">&para;</a></h4>
-<p>Percentage of data points in the EIC removed before local minima search. The algorithm finds the intensity value (threshold) such that the specified percentage of EIC's data points are below the threshold. All such data points are removed. For example, a <em>Chromatographic threshold</em> = 50% will discard the lowest-intense 50% data points. This represents an important filter for noisy chromatogram and significantly reduces the precessing time.</p>
-<p>:octicons-alert-16: Since the algorithms examines the EICs throughout the entire RT range (<em>i.e.</em> also the zero data points are considered), we recommend to set this value rather high (<em>e.g.</em> 95%) and lower it only if necessary. 
-:octicons-alert-16: ION MOBILITY 80%</p>
+<p>Percentage of data points in the EIC removed before local minima search. This represents an important filter for noisy chromatogram and significantly reduces the precessing time. 
+The algorithm finds the intensity value (threshold) that leaves the specified percentage of data points in the EIC trace below XXX. All such data points are removed. For example, a <em>Chromatographic threshold</em> = 50% will discard the lowest-intense 50% data points in the EIC trace.</p>
+<p>💡 <strong><em>Tip</em></strong>. It must be noted that the algorithm examines the EICs throughout the entire RT range (<em>i.e.</em> also the zero data points are considered). Therefore, we recommend to set this value rather high (<em>e.g.</em> 90-95%) and lower it only if needed.</p>
+<p>💡 <strong><em>Tip</em></strong>. When <a href="#resolving-the-ion-mobility-dimension">resolving the ion mobility dimension</a>, we recommend to lower this settings to no more than 80% since <a href="../../terminology/ion-mobility-terminology.html#mobilograms">mobilograms</a> contains less data points than regular LC traces.</p>
 <h4 id="minimum-search-range-rtmobility-absolute"><strong>Minimum search range RT/Mobility (absolute)</strong><a class="headerlink" href="#minimum-search-range-rtmobility-absolute" title="Permanent link">&para;</a></h4>
-<p>Size of the moving window examined for local minima search. Overly low values can cause peak edges to be cut off. On the other hand, too high might lead to incomplete separation of narrowly eluting compounds.</p>
+<p>Size of the RT, or mobility, window examined for local minimum search. An overly narrow search range can cause peak edges to be cut off, whereas a too wide search ranges might lead to an incomplete resolution of narrowly eluting peaks (see example below).
+<img alt="Minimum search range RT" src="min-search-range-rt.png" /></p>
+<p>💡 <strong><em>Tip</em></strong>. A shorter <em>Minimum search range</em> is generally needed when <a href="#resolving-the-ion-mobility-dimension">resolving the ion mobility dimension</a>.</p>
+<p><img alt="Minimum search range IM" src="min-search-range-im.png" /></p>
 <h4 id="minimum-relative-height"><strong>Minimum relative height</strong><a class="headerlink" href="#minimum-relative-height" title="Permanent link">&para;</a></h4>
-<p>Minimum relative intensity (respect to the highest data point in the EIC) a peak need to reach to be retained as a feature. Overly high thresholds may lead tolow-intensity features being discarded.
-:octicons-light-bulb-16: <strong>Tip</strong>. Modern HRMS instruments can show linear dynamic ranges op to five orders of magnitude. If we take an Orbitrap device with a detector saturation level around 1.0E10 intensity, a <em>Minimum relative height</em> = 0.001 would correspond to 1.0E5.</p>
+<p>Minimum relative intensity (respect to the highest data point in the EIC) a peak need to reach to be retained as a feature. This parameter can be used in combination with the <a href="#minimum-absolute-height">Minimum absolute height</a>) setting as to filter the resolved features to be retained. Many users prefer to rely only on the <em>Minimum absolute height</em> as it is more straightforward to set. To do so, set the <em>Minimum relative height = 0</em> and the parameter will be ignored. </p>
+<p>💡 <strong><em>Tip</em></strong>. Modern mass spectrometers provides linear dynamic ranges up to 5 orders of magnitude. If we take an Orbitrap device with a detector saturation around 1.0E10 intensity, a <em>Minimum relative height</em> = 0.001 would correspond to a 1.0E5 minimum intensity.</p>
 <h4 id="minimum-absolute-height"><strong>Minimum absolute height</strong><a class="headerlink" href="#minimum-absolute-height" title="Permanent link">&para;</a></h4>
-<p>Minimum absolute intensity a peak needs to reach to be retained as a feature.
-This parameter depends on what you want to detect, the instrument and detector type. Usually, Orbitrap
-instruments report higher intensities than TOF instruments. However, the noise level is also higher
-for Orbitrap than for TOF instruments. For TOF instruments 1E3 or even 5E2 can be appropriate,
-whilst Orbitraps can require 1E5 or 5E4.
-:octicons-light-bulb-16: <strong>Tip</strong>. The same value used as <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#min-highest-intensity">Min highest intensity</a> in the EICs building step (<em>e.g.</em> <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP chromatogram builder</a> can normally be used here.</p>
-<p><strong>Min ratio of peak top/edge</strong>: Describes the minimum ratio between the highest and lowest point of a peak. This mostly affects detection of low intensity and not-baseline-resolved signals and should be optimised using such a signal as an example.</p>
-<p>:octicons-light-bulb-16: <strong>Tip</strong>. We recommend values between 1.7 (not baseline separated) and 2 to start the optimisation.</p>
-<p><strong>Peak durantion range (min/mobility)</strong>: Describes valid peak lengths. Can be used to filter out very short or long noise signals.</p>
-<p><strong>Min # of data points</strong>: Can be used in addition to <strong>Peak duration range</strong> to filter out noise. Should be set no lower than
-5 in most cases.</p>
-<p><strong>Show preview</strong>: To-do</p>
-<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<p>Optimal algorithm settings [1] can lead to recognition of all good features in a "good"
-EICs [2] and to few noise recognised as feature in EIC that also contains chromatographic noise
-[3].
-On the other hand, poorly set parameters [4] will likely recognize all features in
-a good EIC [5], but also retain a lot of noise as feature in a noisy EIC [6]. </p>
-<p>Therefore, we recommend optimising the parameters on good EICs and checking the results of these
-parameters with a noisy EIC. Most of the time, a noisy EIC can be found by sorting the feature table
-by decreasing area.</p>
-<p><img alt="test" src="chromatogramresolving.png" /></p>
+<p>Minimum absolute intensity a peak needs to reach to be retained as a feature. This paramter is very similar to the <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#min-highest-intensity">Min highest intensity</a> settings in the ADAP chromatogram builder module and the same concepts apply.</p>
+<p>💡 <strong><em>Tip</em></strong>. When resolving the RT dimension, the same value used as <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#min-highest-intensity">Min highest intensity</a> in the EICs building can normally be used here.</p>
+<p>💡 <strong><em>Tip</em></strong>. While <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">frame scans</a> are examined over the RT dimension, <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">mobility scans</a> are examined over the IM dimension. Therefore, this parameter might need to be adjested accordingly when <a href="#resolving-the-ion-mobility-dimension">resolving the ion mobility dimension</a>. </p>
+<h4 id="min-ratio-of-peak-topedge"><strong>Min ratio of peak top/edge</strong><a class="headerlink" href="#min-ratio-of-peak-topedge" title="Permanent link">&para;</a></h4>
+<p>Minimum ratio between the intensity of the highest (apex) and side (left and right 'edges') points of a peak, to retain it as a feature. The peak edges have to be X times less intense than the peak apex for the feature to be retained. The purpose of this parameter is to reduce the detection of false local minima when the exaimend trace (EIC or <em>mobilogram</em>) is not smooth. In general, this mainly affects low intensity and not-baseline-resolved signals</p>
+<p>💡 <strong><em>Tip</em></strong>. This parameter can best be optimized using the <em>Show preview</em> option. We recommend values between 1.7 (not baseline separated) and 2 to start the optimisation.</p>
+<h4 id="peak-durantion-range-minmobility"><strong>Peak durantion range (min/mobility)</strong><a class="headerlink" href="#peak-durantion-range-minmobility" title="Permanent link">&para;</a></h4>
+<p>Range of acceptable peak length expressed in minutes (RT dimension) or absolute units (mobility dimension). This parameter can be used to filter out noisy features based on their overly short (or long) duration.</p>
+<h4 id="min-of-data-points"><strong>Min # of data points</strong><a class="headerlink" href="#min-of-data-points" title="Permanent link">&para;</a></h4>
+<p>Minimum number of data points a resolved peak needs to have to be considered valid and retained as a feature. This parameter can be used alogn with the <a href="#peak-durantion-range-minmobility">Peak duration range</a> setting as  peak duration constraint to filter out noisy features.</p>
+<p>💡 <strong><em>Tip</em></strong>. This parameter is very similar to the <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#min-group-size-in-number-of-scans">Min group size in # of scans</a> settings in the ADAP chromatogram builder module and the same value can normally be used here (usually, no less than 4-5).</p>
+<p>💡 <strong><em>Tip</em></strong>. A feature in the IM dimension is normally made up of more data points than regular LC peaks. Therefore, a higher <em>Min # of data points</em> can be set when <a href="#resolving-the-ion-mobility-dimension">resolving the ion mobility dimension</a> to filter out noisy features.</p>
+<h4 id="show-preview"><strong>Show preview</strong><a class="headerlink" href="#show-preview" title="Permanent link">&para;</a></h4>
+<p>By checking this box, an interactive visualization panel will open to help the user to adjust the algorithm parameters. Two EIC traces can be dispalyed simoultaneously in two sub-panels to assess the impact of chosen settings on both "good" and "noisy" EIC traces. The feature list and EIC traces to display can be selected from the corresponding drop-down menus. A noisy EIC can generally be found by sorting the feature table by decreasing area, or by looking at the height/area ratio provided for each feature in the top sub-panel (noisy EIC tend to have low height/area ratios). We recommend optimising the parameters on good EICs and checking the results of these parameters with a noisy EIC.</p>
+<hr />
 <h2 id="resolving-the-ion-mobility-dimension">Resolving the ion mobility dimension<a class="headerlink" href="#resolving-the-ion-mobility-dimension" title="Permanent link">&para;</a></h2>
-<p>To-finish</p>
-<p>In general, the same principles apply as in the retention time resolving step. However, a few
-differences shall be noted. In the screenshot you can also see, that the resolved mobilograms are
-recalculated from the raw data and previously apply smoothing steps are therefore lost and must be
-reapplied if necessary.</p>
-<p><img alt="" src="mobilityresolving.png" /></p>
-<h5 id="dimension_1">Dimension<a class="headerlink" href="#dimension_1" title="Permanent link">&para;</a></h5>
-<p>Mobility has to be selected as a dimension to resolve mobilograms [1].</p>
-<h5 id="chromatographic-threshold_1">Chromatographic threshold<a class="headerlink" href="#chromatographic-threshold_1" title="Permanent link">&para;</a></h5>
-<p>Since there are less scans in mobility dimension (e.g., 400 - &gt;1000 per frame, depending on the
-instrument type and setting) than in rt dimension (e.g. 5000 for LC-MS depending on acquisition
-rate), the threshold should be lowered to 80 or less.</p>
-<h5 id="search-minimum-range">Search minimum range<a class="headerlink" href="#search-minimum-range" title="Permanent link">&para;</a></h5>
-<p>This value determines the search range in mobility dimension. Therefore, this value has to be set
-lower when resolving a TIMS (Bruker data) mobilogram, because the absolute numerical values are
-smaller (e.g., 0.01). When resolving mobilograms from Waters or Agilent data (mobility as drift time
-in ms), the values are higher and must therefore be increased.</p>
-<p>Other parameters such as minimum intensities or minimum number of data points should be adjusted
-depending on what you want to detect.</p>
+<p>This same module can be used to resolve features co-eluting in the RT dimension, based on their ion mobility. The same concepts apply as in the resolution of the RT dimension. However, <a href="../../terminology/ion-mobility-terminology.html#mobilograms"><em>mobilograms</em></a> are examined instead of EIC traces and the same settings used for the RT dimension might not be optimal when resolving IM data. In particular, the following aspects should be born in mind:</p>
+<ol>
+<li>
+<p>While <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames"><em>frame scans</em></a> are examined over the RT dimension, <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames"><em>mobility scans</em></a> are considered over the IM dimension. As explained <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">here</a>, <em>frame scans</em> are essentially obtained by merging the <em>mobility scans</em> acquired over an IM accumulation. Therefore, it might be necessary to adjust parameters like <a href="#minimum-absolute-height">Minimum absolute height</a> or <a href="#min-ratio-of-peak-topedge">Min ratio of peak top/edge</a> to account for the lower signal intensity of <em>mobility scans</em>.</p>
+</li>
+<li>
+<p><a href="../../terminology/ion-mobility-terminology.html#mobilograms"><em>Mobilograms</em></a> are recalculated from  raw data, even though a <a href="../featdet_smoothing/smoothing.html">smoothing</a> step was previously applied. Non-smoothed <em>mobiligrams</em> tend to be more jagged than regular EIC traces (see Figure). Threfore, some parameters (<em>e.g.</em> <a href="#minimum-search-range-rtmobility-absolute">Min search range</a> and (<em>e.g.</em> <a href="#min-ratio-of-peak-topedge">Min ratio of peak top/edge</a>) should be adjusted accordingly.</p>
+</li>
+</ol>
+<p><img alt="Moobility resolving" src="mobility-resolving.png" /></p>
+<ol>
+<li>
+<p><em>Mobilograms</em> contain less scans (<em>e.g.</em> ≈400-1000 per <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">frame</a>, depending on instrument type and acquisition settings) compared to regular EICs (<em>e.g.</em> ≈4500 scans for 15 minutes LC run and scan rate of 0.2 seconds). Therefore, a lower <a href="#chromatographic-threshold">chromatographic threshold</a> (<em>e.g.</em> 80%) is recommended to avoid relevant data points in the mobilogram being discarded.</p>
+<p>On the other hand, a single feature in the IM dimension is normally made up of more data points than regular LC peaks, due to the different timescale the IM separation is performed on (see <a href="../../terminology/ion-mobility-terminology.html#background">here</a> for more details). Therefore, a higher <em>Min # of data points</em> can be set when <a href="#resolving-the-ion-mobility-dimension">resolving the ion mobility dimension</a> to filter out noisy features.</p>
+</li>
+<li>
+<p>Different vendors use different units of mobility. For instance, <a href="../../terminology/ion-mobility-terminology.html#trapped-ion-mobility-spectrometry-tims">TIMS</a> express ions' mobility as Vs/cm<sup>2</sup>, whereas <a href="../../terminology/ion-mobility-terminology.html#time-dispersve-ion-mobility-spectrometry-dtims-and-twims">time dispersive IM devices</a> (DTIMS and TWIMS) use the ions' drift time (expressed in milliseconds). TIMS values are numerically smaller than DTIMS or TWIMS; therefore, the <a href="#minimum-search-range-rtmobility-absolute">minimum search range</a> parameter should be adjusted accordingly. </p>
+</li>
+</ol>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 6, 2022 09:25:41</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 6, 2022 14:34:32</span>
       
     
   </small>
