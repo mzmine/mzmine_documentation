@@ -11,6 +11,9 @@ The accurate mass is the experimentally-determined mass of an ion measured with 
 ### Monoisotopic mass
 Exact mass of an ion calculated using the mass of the lightest isotope of each element.
 
+### Isotopic pattern
+To-do
+
 ### Mass resolution 
 Todo. Often called/expressed as mass resolvin power
 
