@@ -48,7 +48,10 @@ In case of IM data,the user can determine the mobility tolerance. If checked, th
  
 
 #### Mobility weight
-Score for perfectly matching mobility values. Only taken into account if "Mobility tolerance" is activated.
+Score for perfectly matching mobility values. Only taken into account if "Mobility tolerance" is activated. Furthermore,
+score calculation that is mentioned in the **Algorithm** is then modified to account for the mobility as well. Mobility tolerance and weight are accounted for
+in the same manner as m/z and RT parameters.
+
 
 
 #### Require same charge state
