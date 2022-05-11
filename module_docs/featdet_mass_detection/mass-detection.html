@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/featdet_mass_detection/mass-detection.html">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.14">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e411adfe.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3de6f41f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
@@ -705,6 +705,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../id_spectral_library_creation/spectral_library_creation.html" class="md-nav__link">
+        Spectral library creation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../id_spectral_library_search/spectral_library_search.html" class="md-nav__link">
+        Spectral library search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../GNPS_export/gnps_export.html" class="md-nav__link">
         Export to GNPS-FBMN/IIMN
       </a>
@@ -736,18 +764,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_16" type="checkbox" id="__nav_5_16" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_18" type="checkbox" id="__nav_5_18" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_5_16">
+        <label class="md-nav__link" for="__nav_5_18">
           Other parameters
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Other parameters" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_16">
+        <label class="md-nav__title" for="__nav_5_18">
           <span class="md-nav__icon md-icon"></span>
           Other parameters
         </label>
@@ -1224,7 +1252,7 @@
 <h4 id="raw-data-files"><strong>Raw data files</strong><a class="headerlink" href="#raw-data-files" title="Permanent link">&para;</a></h4>
 <p>Select the input raw data files for the mass detection. All the imported data files can be processed in bulk (<em>i.e.</em> <em>All raw data files</em>), or a subset can be selected directly from the <em>MS data files</em> panel (<em>i.e.</em> <em>As selected in the main window</em>) or based on the filename (<em>i.e.</em> <em>File name pattern</em>) As an alternative, the files' directory can be also specified (<em>i.e.</em> <em>Specific raw data files</em>). Finally, if the <em>Those created by previous batch step</em> option is selected, MZmine takes the output of the last processing step as input. This option is only avaialble for <a href="../../workflows/batch_processing/batch-processing.html">batch processing</a>.</p>
 <h4 id="scans"><strong>Scans</strong><a class="headerlink" href="#scans" title="Permanent link">&para;</a></h4>
-<p>Select (or filter out) the MS scans to be processed. Several filters are avialble (<em>Select filters</em> button). A scan number, RT and mobility range can be set (<em>i.e</em> <em>Scan number</em>, <em>Retention time</em> and <em>Mobility</em> options); only the scans belonging to the defined range(s) will be processed. The <em>Base Filtering Integer</em> option allows to prcesses one every-<em>N</em> scans. The <em>Scan definition</em> field can be used to filter scans based on the scan's description normally included in the raw file's metadata (<em>e.g.</em> FTMS). Scans can also be filtered by <em>MS level</em> (<em>i.e.</em> 1, 2, ..., <em>N</em>), polarity and spectrum type (<em>i.e.</em> Centroided, Profile and Thresholded).</p>
+<p>Select (or filter out) the MS scans to be processed. Several filters are available (<em>Select filters</em> button). A scan number, RT and mobility range can be set (<em>i.e</em> <em>Scan number</em>, <em>Retention time</em> and <em>Mobility</em> options); only the scans belonging to the defined range(s) will be processed. The <em>Base Filtering Integer</em> option allows to prcesses one every-<em>N</em> scans. The <em>Scan definition</em> field can be used to filter scans based on the scan's description normally included in the raw file's metadata (<em>e.g.</em> FTMS). Scans can also be filtered by <em>MS level</em> (<em>i.e.</em> 1, 2, ..., <em>N</em>), polarity and spectrum type (<em>i.e.</em> Centroided, Profile and Thresholded).</p>
 <h4 id="scan-types-ims"><strong>Scan types (IMS)</strong><a class="headerlink" href="#scan-types-ims" title="Permanent link">&para;</a></h4>
 <p>This parameter applies only to IM data and determines if <em>mobility scans</em>, <em>frame scans</em> or both (<em>i.e.</em> <em>All scan types</em>) are processed. For more details about <em>mobility</em> and <em>frame scans</em>, see <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">here</a>.<br>
 :octicons-light-bulb-16: <strong>Tip</strong>. Since <em>frame scans</em> are obtained by merging multiple <em>mobility scans</em>, the noise thresholds will likely be different. However, only one noise level can be set per processing step. Therefore, if one wants to run the mass detection for <em>mobility</em> and <em>frame scans</em> using different noise cutoffs, two module calls are required. As an alternative, mass detection can be performed only on the <em>mobility scans</em> by selecteing the appropriate noise level. <em>Mobility scans</em> can then be merged into <em>frame scans</em> with a <a href="../featdet_mobility_scan_merging/mobility-scan-merging.html">dedicated module</a>. </p>
@@ -1260,7 +1288,7 @@ The noise threshold can be entered either in standard or scientific notation. By
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 16, 2022 15:48:53</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 11, 2022 09:54:27</span>
       
     
   </small>
@@ -1333,7 +1361,7 @@ The noise threshold can be entered either in standard or scientific notation. By
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2e1ee47.min.js"></script>
       
     
   </body>
