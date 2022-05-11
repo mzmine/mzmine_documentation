@@ -30,7 +30,9 @@ nav:
       - Gap filling (Peak finder): module_docs/gapfill_peak_finder/gap-filling.md
       - MS2 scan paring: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
       - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md 
-      - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md 
+      - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md
+      - Spectral library creation: module_docs/id_spectral_library_creation/spectral_library_creation.md
+      - Spectral library search: module_docs/id_spectral_library_search/spectral_library_search.md
       - Export to GNPS-FBMN/IIMN: module_docs/GNPS_export/gnps_export.md
       - Join aligner: module_docs/join_aligner/join_aligner.md
       - Other parameters:
