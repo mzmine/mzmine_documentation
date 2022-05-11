@@ -100,7 +100,7 @@ Make sure the correct JDK is set in these places:
 ### Could not target platform
 Error: When building via gradlew: “Could not target platform: 'Java SE 17' using tool chain: 'JDK 13 (13)'”
 Solution (Windows): Set the JAVA_HOME environment variable to the JDK 17 root directory.
-See https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html
+See https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html <!-- markdown-link-check-disable-line -->
 
 
 ### Gradle project not imported
