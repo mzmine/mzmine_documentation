@@ -54,7 +54,7 @@ nav:
   - Performance options: performance.md
   - Command line tool (batch mode): commandline_tool.md
   - Contribute: contribute.md
-    - MZmine development (in IntelliJ): contribute_intellij.md
+  - MZmine development (in IntelliJ): contribute_intellij.md
   - Acknowledgements: wikiacknowledgements.md
 
 theme:
