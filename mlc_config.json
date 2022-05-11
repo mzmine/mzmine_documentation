@@ -1,0 +1,6 @@
+{
+  "ignorePatterns": [{
+    "pattern": "^https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html"
+  }],
+  "aliveStatusCodes": [200, 206, 429]
+}
