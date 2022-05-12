@@ -1,0 +1,15 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html"
+    },
+    {
+      "pattern": "^https://help.github.com/en/github/getting-started-with-github/fork-a-repo"
+    }
+  ],
+  "aliveStatusCodes": [
+    200,
+    206,
+    429
+  ]
+}
