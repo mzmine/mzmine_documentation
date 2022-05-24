@@ -46,6 +46,19 @@ The extracted ion chromatogram (EIC) displays the signal intensity of a specific
 ### Chromatographic resolving
 Peak overlapping, or co-elution, is a common problem in any chromatographic separation technique. In the case of LC-MS (especially untargeted _omics_ analysis), it is virtually impossible to obtain a full baseline separation for the hundreds (or thousands) of analytes eluted through the column. The split of partially-overlapping and shoulder peaks into indivual features is generally referred to as _chromatographic resolving_ and is one of the most crucial steps of data processing. TO FINISH.
 
+### Missing values
+MISSING VALUE DEFINITION (see https://www.nature.com/articles/s41598-017-19120-0). _Missing values_ can be caused by biological and/or technical reasons.
+A gap (match-to-nothing) is defined as a missing value in an alignment. Peaks that cannot be aligned (corresponding to a gap) are designated with a value of “NA” (missing value).
+
+### Missing value imputation
+_Missing values_ are generally undesired as they might introduce bias and significantly affect downstream data analysis, especially when statistics is involved. Therefore, it is important to REDUCE THEM. 
+- To tackle this issue, a value for the peak needs to be imputed
+Also the gap-filling module (LINK can be sees as a missing value approach. In fact, a simple gap-filling approach is to integrate the area where the peak is expected but not detected. These areas usually correspond to spectral noise. By doing so, no bias is introduced. Therefore, we recommend to always run the gap filling module before the missing value imputataion. 
+
+The other alternative for gap filling is the "Same RT and m/z range gap filler" (CREATE DOC AND LINK) this limits the gap fill to features within the original detected peak window. This results in much cleaner results. HOWEVER; MISSING VALUE IMPUTATION. It's good to have noise instead of zero.
+
+- MZmine 3 does not support missing-value imputation.
+
 # MZmine-specific terminology
 
 ### Masses and Features
