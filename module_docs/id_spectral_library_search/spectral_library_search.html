@@ -1401,7 +1401,7 @@ removal of the precursor signal within the precursor m/z tolerance (parameter ab
 <h4 id="spectral-mz-tolerance">Spectral m/z tolerance<a class="headerlink" href="#spectral-mz-tolerance" title="Permanent link">&para;</a></h4>
 <p>This m/z tolerance is used to pair signals in the query and library scans. It 
 can be set in absolute (in m/z) and relative (in ppm) m/z tolerance, whereas 
-the maximum tolerance for each m/z value is applied. It must keep in mind, which mass resolutions are achieved 
+the maximum tolerance for each m/z value is applied. It must be kept in mind, which mass resolutions are achieved 
 within the experimental spectra and within the spectral library.</p>
 <h4 id="retention-time-tolerance">Retention time tolerance<a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h4>
 <p>The maximum allowed retention time difference when comparing the query and library scan.
@@ -1426,7 +1426,7 @@ taken into account during the library matching. Absolute values.</p>
 - <strong>Monotonic shape</strong>: If enabled, the monotonically decreasing height of isotope pattern is required.
 - <strong>Maximum charge</strong>: The maximum charge that will be considered for detecting the isotope pattern. For singly charged ions, the <sup>13</sup>C isotope will be expected +1 whereas for doubly charged ions it will be +0.5 (+1 m/z divided by the charge 2). </p>
 <h4 id="min-matched-isotope-signals">Min matched isotope signals<a class="headerlink" href="#min-matched-isotope-signals" title="Permanent link">&para;</a></h4>
-<p>This option is only useful if the query AND library entries contain isotope pattern (e.g., in MS<sup>1</sup> or with wider precursor isolation 
+<p>This option is only useful if the query AND library entries contain isotope patterns (e.g., in MS<sup>1</sup> or with wider precursor isolation 
 windows). The minimum number of matched signals of <sup>13</sup>C isotopes. It cannot be applied when <sup>13</sup>C deisotoping is enabled.</p>
 <h4 id="min-matched-signals">Min matched signals<a class="headerlink" href="#min-matched-signals" title="Permanent link">&para;</a></h4>
 <p>The query mass list and spectral library entry must contain at least this number of matched (paired) m/z values 
@@ -1434,7 +1434,7 @@ windows). The minimum number of matched signals of <sup>13</sup>C isotopes. It c
 fragmentation, when using a higher number of matched signals. Choosing a lower number of matched
 signals can result in spurious library hits. Common parameters include 4 signals for smaller molecules and 6 for more confident matches. </p>
 <h4 id="similarity">Similarity<a class="headerlink" href="#similarity" title="Permanent link">&para;</a></h4>
-<p>Different algorithm can be applied to calculate the similarity of the query and library 
+<p>Different algorithms can be applied to calculate the similarity of the query and library 
 scans and to filter the resulting library matches. The most common spectral similarity measure for library search
 is the weighted cosine similarity.</p>
 <p>The <strong>weighted dot-product cosine</strong> similarity is used for comparing MS<sup>2</sup> data, whereas the
@@ -1464,7 +1464,7 @@ of matching results. </li>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 28, 2022 19:11:18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 23, 2022 23:17:49</span>
       
     
   </small>
