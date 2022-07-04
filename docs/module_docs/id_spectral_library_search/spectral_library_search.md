@@ -50,7 +50,7 @@ removal of the precursor signal within the precursor m/z tolerance (parameter ab
 #### Spectral m/z tolerance
 This m/z tolerance is used to pair signals in the query and library scans. It 
 can be set in absolute (in m/z) and relative (in ppm) m/z tolerance, whereas 
-the maximum tolerance for each m/z value is applied. It must keep in mind, which mass resolutions are achieved 
+the maximum tolerance for each m/z value is applied. It must be kept in mind, which mass resolutions are achieved 
 within the experimental spectra and within the spectral library.
 
 #### Retention time tolerance
@@ -81,7 +81,7 @@ Removes ^13^C isotope signals from the mass list using the following parameters:
 - **Maximum charge**: The maximum charge that will be considered for detecting the isotope pattern. For singly charged ions, the ^13^C isotope will be expected +1 whereas for doubly charged ions it will be +0.5 (+1 m/z divided by the charge 2). 
 
 #### Min matched isotope signals
-This option is only useful if the query AND library entries contain isotope pattern (e.g., in MS^1^ or with wider precursor isolation 
+This option is only useful if the query AND library entries contain isotope patterns (e.g., in MS^1^ or with wider precursor isolation 
 windows). The minimum number of matched signals of ^13^C isotopes. It cannot be applied when ^13^C deisotoping is enabled.
 
 #### Min matched signals
@@ -91,7 +91,7 @@ fragmentation, when using a higher number of matched signals. Choosing a lower n
 signals can result in spurious library hits. Common parameters include 4 signals for smaller molecules and 6 for more confident matches. 
 
 #### Similarity
-Different algorithm can be applied to calculate the similarity of the query and library 
+Different algorithms can be applied to calculate the similarity of the query and library 
 scans and to filter the resulting library matches. The most common spectral similarity measure for library search
 is the weighted cosine similarity.
 
