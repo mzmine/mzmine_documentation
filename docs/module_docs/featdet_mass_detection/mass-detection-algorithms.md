@@ -63,7 +63,7 @@ In numerical analysis, the Mexican hat wavelet is the normalized second derivati
 
 $$\psi(t)=\frac{1}{\sqrt{2\pi}\sigma^3} \left( 1-\frac{t^2}{\sigma^2} \right)e^{-\frac{t^2}{2\sigma^2}}$$
 
-![Mexican Hat](mexican_hat_transform.png) 
+ ![Mexican hat](mexican-hat.png) 
 
 The parameter $t$ is the intensity of each data point in the curve, and $\sigma$ corresponds to the standard deviation. 
 
@@ -72,7 +72,7 @@ To simplify the process of wavelet calculation, the original function is transfo
 $$W_{c}=\left[\frac{2}{\sqrt{3}\pi^\frac{1}{4}}\left(1-t^2\right)e^-\frac{t^2}{2}\right]$$
 $$ y=\lim_{LL \to UL}(W_{c}x)$$ 
 
-![Calculated Form](wavelet_calculated_form.jpg)
+![Calculated form](Wavelet_calculated_form.jpg)
 
 The lower (LL) and upper (UL) limits, where the Mexican Hat wavelet is evaluated, are from -5 until 5. The incremental step used in this range is the result of limits range division by 60,000.
 
