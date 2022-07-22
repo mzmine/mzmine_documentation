@@ -1,6 +1,6 @@
 # **ADAP chromatogram builder**
 The _ADAP chromatogram builder_ module is one of the LC-MS feature detection algorithms provided by MZmine 3. The module essentially builds an [EIC](../../terminology/general-terminology.md#extracted-ion-chromatogram) for each _m/z_ value that was detected over a minum number of consecutive scans in the LC-MS run.
-Each data file is processed individually. The [mass list](../../terminology/general-terminology.md#mass-list) associated to each MS1 scan in a data file (see [Mass detection](../featdet_mass_detection/mass-detection.md) module) are taken as input and a [feature list](../../terminology/general-terminology.md#feature-list) is returned as output. Since a mass list must be avaialble, the _Mass detection_ module must be run first.
+Each data file is processed individually. The [mass list](../../terminology/general-terminology.md#mass-list) associated to each MS1 scan in a data file (see [Mass detection](../featdet_mass_detection/mass-detection.md) module) are taken as input and a [feature list](../../terminology/general-terminology.md#feature-list) is returned as output. Since a mass list must be available, the _Mass detection_ module must be run first.
 
 The _ADAP chromatogram builder_ algorithm operates as follow. Only MS1 scans are processed. 
 All the data points are extracted from all the MS1 scans in a data file and and sorted in order of decreasing intensity. 
