@@ -417,9 +417,108 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Mass detection algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="mass-detection-algorithms.html" class="md-nav__link md-nav__link--active">
         Mass detection algorithms
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#centroid" class="md-nav__link">
+    Centroid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exact-mass" class="md-nav__link">
+    Exact mass
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-maxima" class="md-nav__link">
+    Local maxima:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-threshold" class="md-nav__link">
+    Recursive threshold:
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursive threshold:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-method-parameters" class="md-nav__link">
+    Additional method parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wavelet-transform" class="md-nav__link">
+    Wavelet transform
+  </a>
+  
+    <nav class="md-nav" aria-label="Wavelet transform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-model" class="md-nav__link">
+    Mathematical model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-method-parameters_1" class="md-nav__link">
+    Additional method parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto" class="md-nav__link">
+    Auto
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -989,6 +1088,89 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#centroid" class="md-nav__link">
+    Centroid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exact-mass" class="md-nav__link">
+    Exact mass
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-maxima" class="md-nav__link">
+    Local maxima:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-threshold" class="md-nav__link">
+    Recursive threshold:
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursive threshold:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-method-parameters" class="md-nav__link">
+    Additional method parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wavelet-transform" class="md-nav__link">
+    Wavelet transform
+  </a>
+  
+    <nav class="md-nav" aria-label="Wavelet transform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-model" class="md-nav__link">
+    Mathematical model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-method-parameters_1" class="md-nav__link">
+    Additional method parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto" class="md-nav__link">
+    Auto
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1006,14 +1188,67 @@
 
 
 <h1 id="mass-detection-algorithms"><strong>Mass detection algorithms</strong><a class="headerlink" href="#mass-detection-algorithms" title="Permanent link">&para;</a></h1>
-<p>To-do</p>
+<p>Mass detection can be done with the following six algorithms:</p>
+<ul>
+<li>Centroid </li>
+<li>Exact mass</li>
+<li>Local maxima</li>
+<li>Recursive threshold</li>
+<li>Wavelet transform</li>
+<li>Auto</li>
+</ul>
+<h2 id="centroid"><strong>Centroid</strong><a class="headerlink" href="#centroid" title="Permanent link">&para;</a></h2>
+<p>Centroid algorithm assumes that each signal above a given noise level is a detected ion.
+This mass detector is suitable for already centroided data. </p>
+<h2 id="exact-mass"><strong>Exact mass</strong><a class="headerlink" href="#exact-mass" title="Permanent link">&para;</a></h2>
+<p>This mass detector first searches for all local maxima within the spectrum, which then form candidate ions. </p>
+<p>This method calculates the exact mass of a peak using the <strong>FWHM</strong> (full width at half maximum) concept and linear equation (<em>y = mx + b</em>). FWHM is the difference between the two values of the independent variable at which the dependent variable equals half of its maximum value. </p>
+<p>First, the method locates the data points located nearest to the peak center at half of the maximum intensity (P1, P2, P3, P4).
+With these four points it calculates two points (cP1, cP2) that define the width of the peak. The exact mass is then obtained as the center of the width.</p>
+<p><img alt="FWHM" src="exact_mass_FWHM.jpg" /></p>
+<p>This method is suitable for high-resolution MS data, such as provided by FTMS instruments.</p>
+<p>💡 <strong>Tip</strong>: The exact mass algorithm is highly recommended for profile MS data. 
+💡 <strong>Tip</strong> If the continous data is too noisy, one can use recursive threshold algorithm.</p>
+<h2 id="local-maxima"><strong>Local maxima</strong>:<a class="headerlink" href="#local-maxima" title="Permanent link">&para;</a></h2>
+<p>This very simple mass detector detects all local maxima within the spectrum, except the signals below the given noise level. The practical usability of this method on real MS data is limited, but it is useful to demonstrate and understand the functionality of mass detection using the preview plot.</p>
+<h2 id="recursive-threshold"><strong>Recursive threshold</strong>:<a class="headerlink" href="#recursive-threshold" title="Permanent link">&para;</a></h2>
+<p>The algorithm finds all m/z ranges within the given limit in a recursive way. </p>
+<p>Initially, it looks at the whole range of data points. If the m/z width of this range is not within given limits, a minimum data point is found and used to split the range in two parts. The same algorithm is then applied recursively on each part. Recursion continues until all m/z ranges fitting into the given width limits are found. </p>
+<p>Final m/z values are determined as local maxima of the identified m/z ranges.</p>
+<p>This mass detector is suitable for continuous data, which has too much noise for the Exact mass detector to be used, but which shows a consistent width of m/z peaks.</p>
+<h4 id="additional-method-parameters"><strong>Additional method parameters</strong><a class="headerlink" href="#additional-method-parameters" title="Permanent link">&para;</a></h4>
+<p><strong>Min m/z peak width</strong>: Minimum acceptable peak width in m/z.</p>
+<p><strong>Max m/z peak width</strong>: Maximum acceptable peak width in m/z.</p>
+<p>💡 <strong>Tip</strong> Recursive threshold method can be used with the noisy continuous data that shows a consistent width of m/z peaks.</p>
+<h2 id="wavelet-transform"><strong>Wavelet transform</strong><a class="headerlink" href="#wavelet-transform" title="Permanent link">&para;</a></h2>
+<p>The method uses the <strong>Mexican Hat wavelet model</strong> of the continuous wavelet transform (<strong>CWT</strong>) algorithm. </p>
+<p>The search of mass spectrum peaks is executed in three steps. First, the data point intesity is converted into wavelet domain. Second, all the local maxima of the calculated wavelet are found. Finally, m/z peaks (ions) are declared in those points, where the wavelet has a local maximum. The m/z peak is formed with the selected data point (mass and intensity) using the wavelet and all surrounding data points. The final m/z value of the ion is calculated as an average of m/z values of surrounding data points weighted by their intensity.</p>
+<h4 id="mathematical-model"><strong>Mathematical model</strong><a class="headerlink" href="#mathematical-model" title="Permanent link">&para;</a></h4>
+<p>In numerical analysis, the Mexican hat wavelet is the normalized second derivative of a Gaussian function.</p>
+<p>$$\psi(t)=\frac{1}{\sqrt{2\pi}\sigma^3} \left( 1-\frac{t<sup>2}{\sigma</sup>2} \right)e<sup>{-\frac{t</sup>2}{2\sigma^2}}$$</p>
+<p><img alt="Mexican hat" src="mexican-hat.png" /> </p>
+<p>The parameter $t$ is the intensity of each data point in the curve, and $\sigma$ corresponds to the standard deviation. </p>
+<p>To simplify the process of wavelet calculation, the original function is transformed into two parts, where $W_{c}$ is the wavelet coefficient and $y$ is the intensity of the wavelet at certain point. In the following formula, $t$ corresponds to the Wavelet window size (%) parameter.</p>
+<p>$$W_{c}=\left[\frac{2}{\sqrt{3}\pi<sup>\frac{1}{4}}\left(1-t</sup>2\right)e<sup>-\frac{t</sup>2}{2}\right]$$
+$$ y=\lim_{LL \to UL}(W_{c}x)$$ </p>
+<p><img alt="Calculated form" src="Wavelet_calculated_form.jpg" /></p>
+<p>The lower (LL) and upper (UL) limits, where the Mexican Hat wavelet is evaluated, are from -5 until 5. The incremental step used in this range is the result of limits range division by 60,000.</p>
+<h4 id="additional-method-parameters_1"><strong>Additional method parameters</strong><a class="headerlink" href="#additional-method-parameters_1" title="Permanent link">&para;</a></h4>
+<p><strong>Scale level</strong></p>
+<p>Number of wavelet coeficients to use in m/z feature detection. Serves as the scale factor that either dilates or compresses the wavelet signal. </p>
+<p>When the scale factor is relatively low, the signal is more contracted, which results in a more detailed resulting graph and more noisy peaks are detected. On the other hand, when the scale factor is high, the signal is stretched out, which means that the resulting graph will be less detailed with a smoothed signal.</p>
+<p><strong>Wavelet window size (%)</strong>
+The size of the window used to calculated the wavelet signal. When the size of the window is small, more noisy peaks can be detected. The proper value of this parameter may help to avoid the undesired noise peaks.</p>
+<p>💡 <strong>Tip</strong> The Wavelet transform mass detector is particularly suitable for low-resolution and noisy data.</p>
+<h2 id="auto"><strong>Auto</strong><a class="headerlink" href="#auto" title="Permanent link">&para;</a></h2>
+<p>Auto mass detector recognizes if the spectrum is of profile or centroided data type and applies centroid or exact mass algorithms correspondingly.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 26, 2022 22:05:35</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 22, 2022 10:22:15</span>
       
     
   </small>
