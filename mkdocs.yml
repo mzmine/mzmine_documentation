@@ -9,12 +9,19 @@ nav:
   - Home page: index.md
   - Getting started: getting_started.md
   - Main window overview: main-window-overview.md
-  
+
   - Visualization modules:
       - Visualization overview: visualization_modules/visualization-overview.md
-      - Raw data visualisation: visualization_modules/ms_raw_data_overview/raw_data_visualization.md
+      - MS data visualisation:
+          - Raw data overview: visualization_modules/ms_raw_data_overview/raw_data_visualization.md
+          - Additional tools:  visualization_modules/ms_raw_data_overview/raw_data_additional.md
       - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md
-      - MSMS Visualizer: visualization_modules/msmsplot/msms-plot.md
+      - Image viewer: visualization_modules/image_raw_data/image_viewer.md
+      - Processed data visualition:
+          - MSMS Visualizer: visualization_modules/msmsplot/msms-plot.md
+          - Interactive Ion Identity Molecular Networks: visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md
+          - Feature histograms: visualization_modules/feature_histograms/feature_hist.md
+          - Additional tools: visualization_modules/processed_additional/processed_additional.md
   
   - Processing modules:
       - Data import: module_docs/io/raw_data_import/data-import.md
@@ -66,21 +73,21 @@ plugins:
       show_contribution: true
   - git-revision-date-localized:
       type: datetime
-  - with-pdf:
-      output_path: documentation.pdf
-      author: The MZmine Community
-      cover_title: MZmine 3
-      cover_subtitle: Documentation
-      cover_logo: img/MZmine_logo_CMYK.png
+#  - with-pdf:
+#      output_path: documentation.pdf
+#      author: The MZmine Community
+#      cover_title: MZmine 3
+#      cover_subtitle: Documentation
+#      cover_logo: img/MZmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:
       permalink: true
   - admonition
   - attr_list
-  # https://squidfunk.github.io/mkdocs-material/reference/formatting/
-  # superscript ^13^C subscript H~2~O
-  # key combinations: ++ctrl+alt+del++
+#   https://squidfunk.github.io/mkdocs-material/reference/formatting/
+#   superscript ^13^C subscript H~2~O
+#   key combinations: ++ctrl+alt+del++
   - pymdownx.caret
   - pymdownx.keys
   - pymdownx.mark
@@ -95,3 +102,10 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:pymdownx.emoji.twemoji
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
