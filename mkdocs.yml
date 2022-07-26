@@ -10,8 +10,9 @@ nav:
   - Getting started: getting_started.md
   - Main window overview: main-window-overview.md
   
-  - Visualisation modules:
-      - Raw data visualisation: visualization_modules/raw-data-visualisation.md
+  - Visualization modules:
+      - Visualization overview: visualization_modules/visualization-overview.md
+      - Raw data visualisation: visualization_modules/ms_raw_data_overview/raw_data_visualization.md
       - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md
       - MSMS Visualizer: visualization_modules/msmsplot/msms-plot.md
   
