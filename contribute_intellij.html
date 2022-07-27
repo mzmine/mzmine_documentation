@@ -287,10 +287,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          MS data visualisation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MS data visualisation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          MS data visualisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="visualization_modules/ms_raw_data_overview/raw_data_visualization.html" class="md-nav__link">
-        Raw data visualisation
+        Raw data overview
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="visualization_modules/ms_raw_data_overview/raw_data_additional.html" class="md-nav__link">
+        Additional tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -316,9 +363,98 @@
   
   
     <li class="md-nav__item">
+      <a href="visualization_modules/image_raw_data/image_viewer.html" class="md-nav__link">
+        Image viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Processed data visualition
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Processed data visualition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Processed data visualition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
         MSMS Visualizer
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.html" class="md-nav__link">
+        Interactive Ion Identity Molecular Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="visualization_modules/feature_histograms/feature_hist.html" class="md-nav__link">
+        Feature histograms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="visualization_modules/processed_additional/processed_additional.html" class="md-nav__link">
+        Additional tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1297,7 +1433,7 @@ Now the project structure (CTRL+SHIFT+ALT+S) should show the source, test, and r
 Access <strong>Settings/Editor/Live Templates</strong> (CTRL+ALT+S on Windows) and add a new template (+ button). Define the
 abbreviation to trigger autocompletion at this statement, define the template text, and change the target context
 (“<strong>Java</strong>”) at the bottom. The template below generates a logger after typing log and pressing CTRL+SPACE. The variable
-<strong>$CLASS_NAME$</strong> was set to represent the current className() under <strong>Edit variable</strong>.</p>
+<strong><span class="arithmatex">\(CLASS_NAME\)</span></strong> was set to represent the current className() under <strong>Edit variable</strong>.</p>
 <p>The template:
 <div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">logging</span><span class="p">.</span><span class="na">Logger</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">logging</span><span class="p">.</span><span class="na">Logger</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="n">$CLASSNAME$</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span><span class="w"></span>
 </code></pre></div>
@@ -1305,7 +1441,7 @@ Generates the output in class Scan:
 <div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="n">Scan</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span><span class="w"></span>
 </code></pre></div></p>
 <p><img alt="" src="img/contribute/intellij_template.png" /></p>
-<p>Another example to create Javadoc links for @l . The variable (here $target$) places the cursor.</p>
+<p>Another example to create Javadoc links for @l . The variable (here <span class="arithmatex">\(target\)</span>) places the cursor.</p>
 <p><img alt="" src="img/contribute/intellij_template2.png" /></p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <h3 id="correct-jdk-selection">Correct JDK selection<a class="headerlink" href="#correct-jdk-selection" title="Permanent link">&para;</a></h3>
@@ -1407,6 +1543,12 @@ See https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html
     
     
       <script src="assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

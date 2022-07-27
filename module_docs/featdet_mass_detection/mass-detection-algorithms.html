@@ -287,10 +287,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          MS data visualisation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MS data visualisation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          MS data visualisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../visualization_modules/ms_raw_data_overview/raw_data_visualization.html" class="md-nav__link">
-        Raw data visualisation
+        Raw data overview
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/ms_raw_data_overview/raw_data_additional.html" class="md-nav__link">
+        Additional tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -316,9 +363,98 @@
   
   
     <li class="md-nav__item">
+      <a href="../../visualization_modules/image_raw_data/image_viewer.html" class="md-nav__link">
+        Image viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Processed data visualition
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Processed data visualition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Processed data visualition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
         MSMS Visualizer
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.html" class="md-nav__link">
+        Interactive Ion Identity Molecular Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/feature_histograms/feature_hist.html" class="md-nav__link">
+        Feature histograms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/processed_additional/processed_additional.html" class="md-nav__link">
+        Additional tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1239,12 +1375,12 @@ With these four points it calculates two points (cP1, cP2) that define the width
 <p>The search of mass spectrum peaks is executed in three steps. First, the data point intesity is converted into wavelet domain. Second, all the local maxima of the calculated wavelet are found. Finally, m/z peaks (ions) are declared in those points, where the wavelet has a local maximum. The m/z peak is formed with the selected data point (mass and intensity) using the wavelet and all surrounding data points. The final m/z value of the ion is calculated as an average of m/z values of surrounding data points weighted by their intensity.</p>
 <h4 id="mathematical-model"><strong>Mathematical model</strong><a class="headerlink" href="#mathematical-model" title="Permanent link">&para;</a></h4>
 <p>In numerical analysis, the Mexican hat wavelet is the normalized second derivative of a Gaussian function.</p>
-<p>$$\psi(t)=\frac{1}{\sqrt{2\pi}\sigma^3} \left( 1-\frac{t<sup>2}{\sigma</sup>2} \right)e<sup>{-\frac{t</sup>2}{2\sigma^2}}$$</p>
+<div class="arithmatex">\[\psi(t)=\frac{1}{\sqrt{2\pi}\sigma^3} \left( 1-\frac{t^2}{\sigma^2} \right)e^{-\frac{t^2}{2\sigma^2}}\]</div>
 <p><img alt="Mexican hat" src="mexican-hat.png" /> </p>
-<p>The parameter $t$ is the intensity of each data point in the curve, and $\sigma$ corresponds to the standard deviation. </p>
-<p>To simplify the process of wavelet calculation, the original function is transformed into two parts, where $W_{c}$ is the wavelet coefficient and $y$ is the intensity of the wavelet at certain point. In the following formula, $t$ corresponds to the Wavelet window size (%) parameter.</p>
-<p>$$W_{c}=\left[\frac{2}{\sqrt{3}\pi<sup>\frac{1}{4}}\left(1-t</sup>2\right)e<sup>-\frac{t</sup>2}{2}\right]$$
-$$ y=\lim_{LL \to UL}(W_{c}x)$$ </p>
+<p>The parameter <span class="arithmatex">\(t\)</span> is the intensity of each data point in the curve, and <span class="arithmatex">\(\sigma\)</span> corresponds to the standard deviation. </p>
+<p>To simplify the process of wavelet calculation, the original function is transformed into two parts, where <span class="arithmatex">\(W_{c}\)</span> is the wavelet coefficient and <span class="arithmatex">\(y\)</span> is the intensity of the wavelet at certain point. In the following formula, <span class="arithmatex">\(t\)</span> corresponds to the Wavelet window size (%) parameter.</p>
+<div class="arithmatex">\[W_{c}=\left[\frac{2}{\sqrt{3}\pi^\frac{1}{4}}\left(1-t^2\right)e^-\frac{t^2}{2}\right]$$
+$$ y=\lim_{LL \to UL}(W_{c}x)\]</div>
 <p><img alt="Calculated form" src="Wavelet_calculated_form.jpg" /></p>
 <p>The lower (LL) and upper (UL) limits, where the Mexican Hat wavelet is evaluated, are from -5 until 5. The incremental step used in this range is the result of limits range division by 60,000.</p>
 <h4 id="additional-method-parameters_1"><strong>Additional method parameters</strong><a class="headerlink" href="#additional-method-parameters_1" title="Permanent link">&para;</a></h4>
@@ -1338,6 +1474,12 @@ The size of the window used to calculated the wavelet signal. When the size of t
     
     
       <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
