@@ -18,7 +18,7 @@ nav:
       - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md
       - Image viewer: visualization_modules/image_raw_data/image_viewer.md
       - Processed data visualition:
-          - MS/MS Visualizer: visualization_modules/msmsplot/msms-plot.md
+          - MSMS Visualizer: visualization_modules/msmsplot/msms-plot.md
           - Interactive Ion Identity Molecular Networks: visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md
           - Feature histograms: visualization_modules/feature_histograms/feature_hist.md
           - Additional tools: visualization_modules/processed_additional/processed_additional.md
@@ -102,8 +102,8 @@ markdown_extensions:
           format: !!python/name:mermaid2.fence_mermaid
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
 
