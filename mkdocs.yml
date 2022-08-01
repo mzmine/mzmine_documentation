@@ -28,6 +28,8 @@ nav:
       - Mass detection:
         - Mass detection: module_docs/featdet_mass_detection/mass-detection.md
         - Mass detection algorithms: module_docs/featdet_mass_detection/mass-detection-algorithms.md
+        - FTMS shoulder peak finder: module_docs/featdet_mass_detection/FTMS-shoulder-peak-finder.md
+        - Mass calibration: module_docs/featdet_mass_detection/mass-calibration.md
       - Mobility scan merging: module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md
       - ADAP Chromatogram builder: module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
       - Ion mobility expander: module_docs/featdet_ims_expander/ims-expander.md
@@ -73,12 +75,12 @@ plugins:
       show_contribution: true
   - git-revision-date-localized:
       type: datetime
-#  - with-pdf:
-#      output_path: documentation.pdf
-#      author: The MZmine Community
-#      cover_title: MZmine 3
-#      cover_subtitle: Documentation
-#      cover_logo: img/MZmine_logo_CMYK.png
+  - with-pdf:
+      output_path: documentation.pdf
+      author: The MZmine Community
+      cover_title: MZmine 3
+      cover_subtitle: Documentation
+      cover_logo: img/MZmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:
