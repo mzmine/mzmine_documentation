@@ -28,7 +28,7 @@ nav:
       - Mass detection:
         - Mass detection: module_docs/featdet_mass_detection/mass-detection.md
         - Mass detection algorithms: module_docs/featdet_mass_detection/mass-detection-algorithms.md
-        - FTMS shoulder peak finder: module_docs/featdet_mass_detection/FTMS-shoulder-peak-finder.md
+        - FTMS shoulder peak finder: module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.md
         - Mass calibration: module_docs/featdet_mass_detection/mass-calibration.md
       - Mobility scan merging: module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md
       - ADAP Chromatogram builder: module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
