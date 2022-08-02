@@ -404,7 +404,7 @@
   
     <li class="md-nav__item">
       <a href="../../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
-        MS/MS Visualizer
+        MSMS Visualizer
       </a>
     </li>
   
@@ -599,6 +599,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#factor-of-the-lowest-signal" class="md-nav__link">
+    Factor of the lowest signal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exact-mass" class="md-nav__link">
     Exact mass
   </a>
@@ -607,17 +614,17 @@
       
         <li class="md-nav__item">
   <a href="#local-maxima" class="md-nav__link">
-    Local maxima:
+    Local maxima
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#recursive-threshold" class="md-nav__link">
-    Recursive threshold:
+    Recursive threshold
   </a>
   
-    <nav class="md-nav" aria-label="Recursive threshold:">
+    <nav class="md-nav" aria-label="Recursive threshold">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -670,6 +677,34 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FTMS-shoulder-peak-filter.html" class="md-nav__link">
+        FTMS shoulder peak finder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mass-calibration.html" class="md-nav__link">
+        Mass calibration
+      </a>
     </li>
   
 
@@ -1252,6 +1287,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#factor-of-the-lowest-signal" class="md-nav__link">
+    Factor of the lowest signal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exact-mass" class="md-nav__link">
     Exact mass
   </a>
@@ -1260,17 +1302,17 @@
       
         <li class="md-nav__item">
   <a href="#local-maxima" class="md-nav__link">
-    Local maxima:
+    Local maxima
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#recursive-threshold" class="md-nav__link">
-    Recursive threshold:
+    Recursive threshold
   </a>
   
-    <nav class="md-nav" aria-label="Recursive threshold:">
+    <nav class="md-nav" aria-label="Recursive threshold">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1341,6 +1383,7 @@
 <p>Mass detection can be done with the following six algorithms:</p>
 <ul>
 <li>Centroid </li>
+<li>Factor of the lowest signal</li>
 <li>Exact mass</li>
 <li>Local maxima</li>
 <li>Recursive threshold</li>
@@ -1350,6 +1393,9 @@
 <h2 id="centroid"><strong>Centroid</strong><a class="headerlink" href="#centroid" title="Permanent link">&para;</a></h2>
 <p>Centroid algorithm assumes that each signal above a given noise level is a detected ion.
 This mass detector is suitable for already centroided data. </p>
+<h2 id="factor-of-the-lowest-signal"><strong>Factor of the lowest signal</strong><a class="headerlink" href="#factor-of-the-lowest-signal" title="Permanent link">&para;</a></h2>
+<p>Description</p>
+<p>This mass detector is suitable for already centroided data. It removes all data points below a spectrums lowest intensity multiplied by a factor.</p>
 <h2 id="exact-mass"><strong>Exact mass</strong><a class="headerlink" href="#exact-mass" title="Permanent link">&para;</a></h2>
 <p>This mass detector first searches for all local maxima within the spectrum, which then form candidate ions. </p>
 <p>This method calculates the exact mass of a peak using the <strong>FWHM</strong> (full width at half maximum) concept and linear equation (<em>y = mx + b</em>). FWHM is the difference between the two values of the independent variable at which the dependent variable equals half of its maximum value. </p>
@@ -1357,11 +1403,11 @@ This mass detector is suitable for already centroided data. </p>
 With these four points it calculates two points (cP1, cP2) that define the width of the peak. The exact mass is then obtained as the center of the width.</p>
 <p><img alt="FWHM" src="exact_mass_FWHM.jpg" /></p>
 <p>This method is suitable for high-resolution MS data, such as provided by FTMS instruments.</p>
-<p>💡 <strong>Tip</strong>: The exact mass algorithm is highly recommended for profile MS data. 
-💡 <strong>Tip</strong> If the continous data is too noisy, one can use recursive threshold algorithm.</p>
-<h2 id="local-maxima"><strong>Local maxima</strong>:<a class="headerlink" href="#local-maxima" title="Permanent link">&para;</a></h2>
+<p>💡 <strong>Tip</strong>: The exact mass algorithm is highly recommended for profile MS data. </p>
+<p>💡 <strong>Tip</strong> If the continous data is too noisy, one can use recursive threshold algorithm.</p>
+<h2 id="local-maxima"><strong>Local maxima</strong><a class="headerlink" href="#local-maxima" title="Permanent link">&para;</a></h2>
 <p>This very simple mass detector detects all local maxima within the spectrum, except the signals below the given noise level. The practical usability of this method on real MS data is limited, but it is useful to demonstrate and understand the functionality of mass detection using the preview plot.</p>
-<h2 id="recursive-threshold"><strong>Recursive threshold</strong>:<a class="headerlink" href="#recursive-threshold" title="Permanent link">&para;</a></h2>
+<h2 id="recursive-threshold"><strong>Recursive threshold</strong><a class="headerlink" href="#recursive-threshold" title="Permanent link">&para;</a></h2>
 <p>The algorithm finds all m/z ranges within the given limit in a recursive way. </p>
 <p>Initially, it looks at the whole range of data points. If the m/z width of this range is not within given limits, a minimum data point is found and used to split the range in two parts. The same algorithm is then applied recursively on each part. Recursion continues until all m/z ranges fitting into the given width limits are found. </p>
 <p>Final m/z values are determined as local maxima of the identified m/z ranges.</p>
@@ -1398,7 +1444,7 @@ The size of the window used to calculated the wavelet signal. When the size of t
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 22, 2022 10:22:15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 1, 2022 17:24:00</span>
       
     
   </small>
@@ -1434,13 +1480,13 @@ The size of the window used to calculated the wavelet signal. When the size of t
       
       
         
-        <a href="../featdet_mobility_scan_merging/mobility-scan-merging.html" class="md-footer__link md-footer__link--next" aria-label="Next: Mobility scan merging" rel="next">
+        <a href="FTMS-shoulder-peak-filter.html" class="md-footer__link md-footer__link--next" aria-label="Next: FTMS shoulder peak finder" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Mobility scan merging
+              FTMS shoulder peak finder
             </div>
           </div>
           <div class="md-footer__button md-icon">

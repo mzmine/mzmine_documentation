@@ -66,6 +66,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.html</loc>
+         <lastmod>2022-08-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_mass_detection/mass-calibration.html</loc>
+         <lastmod>2022-08-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_mass_detection/mass-detection-algorithms.html</loc>
          <lastmod>2022-08-02</lastmod>
          <changefreq>daily</changefreq>
