@@ -1,4 +1,4 @@
-# **FTMS shoulder peaks filter**
+# **FTMS shoulder peak filter**
 
 ## **Description**
 
