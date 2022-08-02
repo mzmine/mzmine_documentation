@@ -2,6 +2,7 @@
 Mass detection can be done with the following six algorithms:
 
 - Centroid 
+- Factor of the lowest signal
 - Exact mass
 - Local maxima
 - Recursive threshold
@@ -12,6 +13,12 @@ Mass detection can be done with the following six algorithms:
 
 Centroid algorithm assumes that each signal above a given noise level is a detected ion.
 This mass detector is suitable for already centroided data. 
+
+## **Factor of the lowest signal**
+
+Description
+
+This mass detector is suitable for already centroided data. It removes all data points below a spectrums lowest intensity multiplied by a factor.
 
 ## **Exact mass** 
 
@@ -27,13 +34,14 @@ With these four points it calculates two points (cP1, cP2) that define the width
 This method is suitable for high-resolution MS data, such as provided by FTMS instruments.
 
 💡 **Tip**: The exact mass algorithm is highly recommended for profile MS data. 
+
 💡 **Tip** If the continous data is too noisy, one can use recursive threshold algorithm.
 
-## **Local maxima**:
+## **Local maxima**
 
 This very simple mass detector detects all local maxima within the spectrum, except the signals below the given noise level. The practical usability of this method on real MS data is limited, but it is useful to demonstrate and understand the functionality of mass detection using the preview plot.
 
-## **Recursive threshold**:
+## **Recursive threshold**
 
 The algorithm finds all m/z ranges within the given limit in a recursive way. 
 

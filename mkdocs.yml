@@ -18,7 +18,7 @@ nav:
       - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md
       - Image viewer: visualization_modules/image_raw_data/image_viewer.md
       - Processed data visualition:
-          - MS/MS Visualizer: visualization_modules/msmsplot/msms-plot.md
+          - MSMS Visualizer: visualization_modules/msmsplot/msms-plot.md
           - Interactive Ion Identity Molecular Networks: visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md
           - Feature histograms: visualization_modules/feature_histograms/feature_hist.md
           - Additional tools: visualization_modules/processed_additional/processed_additional.md
@@ -28,6 +28,8 @@ nav:
       - Mass detection:
         - Mass detection: module_docs/featdet_mass_detection/mass-detection.md
         - Mass detection algorithms: module_docs/featdet_mass_detection/mass-detection-algorithms.md
+        - FTMS shoulder peak finder: module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.md
+        - Mass calibration: module_docs/featdet_mass_detection/mass-calibration.md
       - Mobility scan merging: module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md
       - ADAP Chromatogram builder: module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
       - Ion mobility expander: module_docs/featdet_ims_expander/ims-expander.md
@@ -73,12 +75,12 @@ plugins:
       show_contribution: true
   - git-revision-date-localized:
       type: datetime
-#  - with-pdf:
-#      output_path: documentation.pdf
-#      author: The MZmine Community
-#      cover_title: MZmine 3
-#      cover_subtitle: Documentation
-#      cover_logo: img/MZmine_logo_CMYK.png
+  - with-pdf:
+      output_path: documentation.pdf
+      author: The MZmine Community
+      cover_title: MZmine 3
+      cover_subtitle: Documentation
+      cover_logo: img/MZmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:
@@ -100,8 +102,8 @@ markdown_extensions:
           format: !!python/name:mermaid2.fence_mermaid
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
 
