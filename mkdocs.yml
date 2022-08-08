@@ -25,12 +25,14 @@ nav:
   
   - Processing modules:
       - Data import: module_docs/io/raw_data_import/data-import.md
+      - File merging:
+        - Raw data files merging: module_docs/featdet_file_merging/raw-files-merging.md
+        - Mobility scan merging: module_docs/featdet_file_merging/mobility-scan-merging.md
       - Mass detection:
         - Mass detection: module_docs/featdet_mass_detection/mass-detection.md
         - Mass detection algorithms: module_docs/featdet_mass_detection/mass-detection-algorithms.md
         - FTMS shoulder peak finder: module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.md
         - Mass calibration: module_docs/featdet_mass_detection/mass-calibration.md
-      - Mobility scan merging: module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md
       - ADAP Chromatogram builder: module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
       - Ion mobility expander: module_docs/featdet_ims_expander/ims-expander.md
       - Ion mobility trace builder: module_docs/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md
@@ -75,12 +77,12 @@ plugins:
       show_contribution: true
   - git-revision-date-localized:
       type: datetime
-  - with-pdf:
-      output_path: documentation.pdf
-      author: The MZmine Community
-      cover_title: MZmine 3
-      cover_subtitle: Documentation
-      cover_logo: img/MZmine_logo_CMYK.png
+#  - with-pdf:
+#      output_path: documentation.pdf
+#      author: The MZmine Community
+#      cover_title: MZmine 3
+#      cover_subtitle: Documentation
+#      cover_logo: img/MZmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:
@@ -102,8 +104,8 @@ markdown_extensions:
           format: !!python/name:mermaid2.fence_mermaid
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:pymdownx.emoji.twemoji
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
 
