@@ -1,0 +1,1654 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/id_spectral_library_search/spectral_library_search.html">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Spectral library search - MZmine 3 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#spectral-library-search" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+      
+  <img src="../../img/MZMine_logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MZmine 3 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Spectral library search
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mzmine/mzmine_documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mzmine/mzmine_documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+      
+  <img src="../../img/MZMine_logo_white.png" alt="logo">
+
+    </a>
+    MZmine 3 Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mzmine/mzmine_documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mzmine/mzmine_documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        Home page
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started.html" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main-window-overview.html" class="md-nav__link">
+        Main window overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Visualization modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Visualization modules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Visualization modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/visualization-overview.html" class="md-nav__link">
+        Visualization overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          MS data visualisation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MS data visualisation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          MS data visualisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/ms_raw_data_overview/raw_data_visualization.html" class="md-nav__link">
+        Raw data overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/ms_raw_data_overview/raw_data_additional.html" class="md-nav__link">
+        Additional tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/ims_raw_data_overview/IM-data-visualisation.html" class="md-nav__link">
+        Ion mobility data visualisation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/image_raw_data/image_viewer.html" class="md-nav__link">
+        Image viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Processed data visualition
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Processed data visualition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Processed data visualition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
+        MS/MS Visualizer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.html" class="md-nav__link">
+        Interactive Ion Identity Molecular Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/feature_histograms/feature_hist.html" class="md-nav__link">
+        Feature histograms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/processed_additional/processed_additional.html" class="md-nav__link">
+        Additional tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Processing modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Processing modules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Processing modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/raw_data_import/data-import.html" class="md-nav__link">
+        Data import
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Mass detection
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mass detection" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Mass detection
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_mass_detection/mass-detection.html" class="md-nav__link">
+        Mass detection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_mass_detection/mass-detection-algorithms.html" class="md-nav__link">
+        Mass detection algorithms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_mass_detection/FTMS-shoulder-peak-filter.html" class="md-nav__link">
+        FTMS shoulder peak finder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_mass_detection/mass-calibration.html" class="md-nav__link">
+        Mass calibration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_mobility_scan_merging/mobility-scan-merging.html" class="md-nav__link">
+        Mobility scan merging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_adap_chromatogram_builder/adap-chromatogram-builder.html" class="md-nav__link">
+        ADAP Chromatogram builder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_ims_expander/ims-expander.html" class="md-nav__link">
+        Ion mobility expander
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-nav__link">
+        Ion mobility trace builder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_smoothing/smoothing.html" class="md-nav__link">
+        Smoothing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-nav__link">
+        Resolving
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../id_ccs_calibration/ccs_calibration.html" class="md-nav__link">
+        CCS calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gapfill_peak_finder/gap-filling.html" class="md-nav__link">
+        Gap filling (Peak finder)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html" class="md-nav__link">
+        MS2 scan paring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filter_isotope_filter/isotope_filter.html" class="md-nav__link">
+        13C isotope filter (isotope grouper)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filter_isotope_finder/isotope_finder.html" class="md-nav__link">
+        Isotope pattern finder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../id_spectral_library_creation/spectral_library_creation.html" class="md-nav__link">
+        Spectral library creation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Spectral library search
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="spectral_library_search.html" class="md-nav__link md-nav__link--active">
+        Spectral library search
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-library-formats" class="md-nav__link">
+    Supported library formats
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported library formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spectral-libraries" class="md-nav__link">
+    Spectral libraries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms-level" class="md-nav__link">
+    MS level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-all-scans-only-for-ms2" class="md-nav__link">
+    Check all scans (only for MS2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precursor-mz-tolerance" class="md-nav__link">
+    Precursor m/z tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-precursor" class="md-nav__link">
+    Remove precursor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-mz-tolerance" class="md-nav__link">
+    Spectral m/z tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retention-time-tolerance" class="md-nav__link">
+    Retention time tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccs-tolerance" class="md-nav__link">
+    CCS tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crop-spectra-to-mz-overlap" class="md-nav__link">
+    Crop spectra to m/z overlap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-ion-intensity" class="md-nav__link">
+    Minimum ion intensity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13c-deisotoping" class="md-nav__link">
+    13C deisotoping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-matched-isotope-signals" class="md-nav__link">
+    Min matched isotope signals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-matched-signals" class="md-nav__link">
+    Min matched signals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#similarity" class="md-nav__link">
+    Similarity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GNPS_export/gnps_export.html" class="md-nav__link">
+        Export to GNPS-FBMN/IIMN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../join_aligner/join_aligner.html" class="md-nav__link">
+        Join aligner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_18" type="checkbox" id="__nav_5_18" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_18">
+          Other parameters
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other parameters" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_18">
+          <span class="md-nav__icon md-icon"></span>
+          Other parameters
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GNPS_export/merge_ms2_kai.html" class="md-nav__link">
+        Merge MS/MS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../join_aligner/spectra_similarity.html" class="md-nav__link">
+        Spectra similarity
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Workflows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Workflows" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Workflows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
+        LC-MS workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/imsworkflow/ion-mobility-data-processing-workflow.html" class="md-nav__link">
+        LC-IMS-MS workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/batch_processing/batch-processing.html" class="md-nav__link">
+        Batch processing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Additional resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Additional resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Additional resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminology/general-terminology.html" class="md-nav__link">
+        Gerneral Terminology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminology/ion-mobility-terminology.html" class="md-nav__link">
+        IMS Terminology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
+        IMS data format insight
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../performance.html" class="md-nav__link">
+        Performance options
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commandline_tool.html" class="md-nav__link">
+        Command line tool (batch mode)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Contribute
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contribute" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute.html" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute_intellij.html" class="md-nav__link">
+        MZmine development (in IntelliJ)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wikiacknowledgements.html" class="md-nav__link">
+        Acknowledgements
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-library-formats" class="md-nav__link">
+    Supported library formats
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported library formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spectral-libraries" class="md-nav__link">
+    Spectral libraries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms-level" class="md-nav__link">
+    MS level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-all-scans-only-for-ms2" class="md-nav__link">
+    Check all scans (only for MS2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precursor-mz-tolerance" class="md-nav__link">
+    Precursor m/z tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-precursor" class="md-nav__link">
+    Remove precursor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-mz-tolerance" class="md-nav__link">
+    Spectral m/z tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retention-time-tolerance" class="md-nav__link">
+    Retention time tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccs-tolerance" class="md-nav__link">
+    CCS tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crop-spectra-to-mz-overlap" class="md-nav__link">
+    Crop spectra to m/z overlap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-ion-intensity" class="md-nav__link">
+    Minimum ion intensity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13c-deisotoping" class="md-nav__link">
+    13C deisotoping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-matched-isotope-signals" class="md-nav__link">
+    Min matched isotope signals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-matched-signals" class="md-nav__link">
+    Min matched signals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#similarity" class="md-nav__link">
+    Similarity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/module_docs/id_spectral_library_search/spectral_library_search.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="spectral-library-search">Spectral library search<a class="headerlink" href="#spectral-library-search" title="Permanent link">&para;</a></h1>
+<p>The spectral library search module can be performed on feature lists, feature list rows, or single scans. Depending on the MS level (MS1 or MS2), all corresponding query scans (e.g., extracted from the rows) will be matched against selected spectral libraries that were previously imported (formats: .json, .mgf, .msp, or .jdx).</p>
+<p>The <strong>Spectral library search</strong> module is found under <strong>Feature list methods → Annotation → Search spectra → Spectral library
+search</strong> or with a right click on one or multiple selected feature rows <strong>Search → Spectral library search</strong></p>
+<p>Preferred ways to import <strong>libraries</strong> are in this order: 
+- together with spectral data files in the advanced data import: <strong>Raw data methods → Raw data import → MS data (advanced)</strong>
+- drag and drop into the main window
+- with a dedicated import module: <strong>Raw data methods → Raw data import → Spectral library import</strong> or under <strong>Feature list methods → Annotation → Search spectra → Import spectral libraries.</strong></p>
+<h2 id="supported-library-formats">Supported library formats<a class="headerlink" href="#supported-library-formats" title="Permanent link">&para;</a></h2>
+<ul>
+<li>.json: MassBank of North America (MoNA) (<a href="https://mona.fiehnlab.ucdavis.edu/downloads">download</a>)</li>
+<li>.json: The Global Natural Product Social Molecular Networking (GNPS) (format from the spectral DB submission module)</li>
+<li>.mgf: GNPS (<a href="https://gnps-external.ucsd.edu/gnpslibrary">download</a>)</li>
+<li>.msp: MoNA</li>
+<li>.msp: National Institute of Standards and Technology (NIST)</li>
+<li>.jdx: JCAMP-DX</li>
+</ul>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<p><img alt="library_search" src="spectral_library_search.png" /></p>
+<h4 id="spectral-libraries">Spectral libraries<a class="headerlink" href="#spectral-libraries" title="Permanent link">&para;</a></h4>
+<p>The spectral libraries of interest need to be imported before applying spectral library search. 
+Either uses all imported spectral libraries or only the selected libraries.</p>
+<h4 id="ms-level">MS level<a class="headerlink" href="#ms-level" title="Permanent link">&para;</a></h4>
+<p>Choose the MS level of the scans that should be compared with the library. Set the MS level to "1" to compare MS<sup>1</sup> 
+spectra, e.g., from GC-EI-MS or MALDI-imaging MS<sup>1</sup> data. Use "2" or higher for fragmentation scans. 
+In case of issues with the scan selection, check the actual scan numbers of the scans as they are reported in the data files and in MZmine's raw data overview and scan list.</p>
+<h4 id="check-all-scans-only-for-ms2">Check all scans (only for MS2)<a class="headerlink" href="#check-all-scans-only-for-ms2" title="Permanent link">&para;</a></h4>
+<p>This option enables the comparison of all MS2 scans otherwise only the most intense MS<sup>2</sup> scan (highest TIC) is used for the matching. 
+It does not apply to MS1 scans.</p>
+<h4 id="precursor-mz-tolerance">Precursor m/z tolerance<a class="headerlink" href="#precursor-mz-tolerance" title="Permanent link">&para;</a></h4>
+<p>This option is only used for MS level &gt; 1. Here, the library entries are filtered by their precursor m/z reducing 
+the number of spectral-pairs to match. The absolute (in m/z) and relative (in ppm) m/z tolerance can be set, whereas 
+the maximum tolerance for each precursor is applied. Considering that the precursor isolation window is often far greater than the resolution or accuracy of the MS scan, this parameter is often set to higher m/z tolerances. 
+Another aspect is the used library, which might contain uncalibrated reference spectra from lower resolution instruments.</p>
+<h4 id="remove-precursor">Remove precursor<a class="headerlink" href="#remove-precursor" title="Permanent link">&para;</a></h4>
+<p>Can be only selected for MS level &gt; 1. Depending on the fragmentation method, e.g., collision induced dissociation (CID)
+or higher-energy collisional dissociation (HCD), the precursor can be detected with different 
+intensities resulting in varying cosine similarities during the library matching. Therefore, this option enables the
+removal of the precursor signal within the precursor m/z tolerance (parameter above) prior to the matching. </p>
+<h4 id="spectral-mz-tolerance">Spectral m/z tolerance<a class="headerlink" href="#spectral-mz-tolerance" title="Permanent link">&para;</a></h4>
+<p>This m/z tolerance is used to pair signals in the query and library scans. It 
+can be set in absolute (in m/z) and relative (in ppm) m/z tolerance, whereas 
+the maximum tolerance for each m/z value is applied. It must be kept in mind, which mass resolutions are achieved 
+within the experimental spectra and within the spectral library.</p>
+<h4 id="retention-time-tolerance">Retention time tolerance<a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h4>
+<p>The maximum allowed retention time difference when comparing the query and library scan.
+This option is useful for in-house libraries or standardized libraries that follow the same acquisition protocol with the same set up, e.g., column, instrument,
+and method). It can be set in absolute (min or sec) or relative (%) values.</p>
+<h4 id="ccs-tolerance">CCS tolerance<a class="headerlink" href="#ccs-tolerance" title="Permanent link">&para;</a></h4>
+<p>The collision cross-section (CCS) tolerance can be used in a similar way as the retention time tolerance.
+Accordingly, the CCS value of a query will be compared with the library entries and the maximum tolerance
+can be set in %. If the query or library entry was analyzed without ion mobility (no CCS values), no spectrum
+will be matched.</p>
+<h4 id="crop-spectra-to-mz-overlap">Crop spectra to m/z overlap<a class="headerlink" href="#crop-spectra-to-mz-overlap" title="Permanent link">&para;</a></h4>
+<p>If query and library scans were acquired with different methods, e.g., mass range, fragmentation
+energy or mode, it can be helpful to crop the spectra to their overlapping m/z range (+ m/z tolerance). 
+This is done by using the maximum m/z range where both spectra contain signals.
+However, this method will boost false matches and needs strict manual interpretation.</p>
+<h4 id="minimum-ion-intensity">Minimum ion intensity<a class="headerlink" href="#minimum-ion-intensity" title="Permanent link">&para;</a></h4>
+<p>Signals in the query scan below the minimum ion intensity will be filtered from the mass lists and are not 
+taken into account during the library matching. Absolute values.</p>
+<h4 id="13c-deisotoping"><sup>13</sup>C deisotoping<a class="headerlink" href="#13c-deisotoping" title="Permanent link">&para;</a></h4>
+<p>Removes <sup>13</sup>C isotope signals from the mass list using the following parameters:
+- <strong>m/z tolerance</strong>: Maximum allowed difference between the measured and predicted isotope m/z values. The absolute (in m/z) and relative (in ppm) m/z tolerance can be set, whereas the maximum tolerance for each m/z value is applied.
+- <strong>Monotonic shape</strong>: If enabled, the monotonically decreasing height of isotope pattern is required.
+- <strong>Maximum charge</strong>: The maximum charge that will be considered for detecting the isotope pattern. For singly charged ions, the <sup>13</sup>C isotope will be expected +1 whereas for doubly charged ions it will be +0.5 (+1 m/z divided by the charge 2). </p>
+<h4 id="min-matched-isotope-signals">Min matched isotope signals<a class="headerlink" href="#min-matched-isotope-signals" title="Permanent link">&para;</a></h4>
+<p>This option is only useful if the query AND library entries contain isotope patterns (e.g., in MS<sup>1</sup> or with wider precursor isolation 
+windows). The minimum number of matched signals of <sup>13</sup>C isotopes. It cannot be applied when <sup>13</sup>C deisotoping is enabled.</p>
+<h4 id="min-matched-signals">Min matched signals<a class="headerlink" href="#min-matched-signals" title="Permanent link">&para;</a></h4>
+<p>The query mass list and spectral library entry must contain at least this number of matched (paired) m/z values 
+(+- m/z tolerance). This parameter must be set carefully to not exclude compounds that show less
+fragmentation, when using a higher number of matched signals. Choosing a lower number of matched
+signals can result in spurious library hits. Common parameters include 4 signals for smaller molecules and 6 for more confident matches. </p>
+<h4 id="similarity">Similarity<a class="headerlink" href="#similarity" title="Permanent link">&para;</a></h4>
+<p>Different algorithms can be applied to calculate the similarity of the query and library 
+scans and to filter the resulting library matches. The most common spectral similarity measure for library search
+is the weighted cosine similarity.</p>
+<p>The <strong>weighted dot-product cosine</strong> similarity is used for comparing MS<sup>2</sup> data, whereas the
+<strong>composite dot-product identity (similar to NIST search)</strong> considers the relative intensity of
+neighboring signals and is, therefore, applied to MS<sup>1</sup> spectra from GC-EI-MS.</p>
+<ul>
+<li><strong>Weights</strong>: For calculating the cosine similarity, different weighting strategies for  m/z
+and signal intensities can be applied. A usual scaling is based on the square root of
+the peak intensity (sometimes multiplying by the squared m/z to value larger fragments over smaller ones). </li>
+<li><strong>Minimum cosine similarity</strong>: This option defines the minimum accepted similarity
+score that is taken into account for annotation. The similarity score depends on the data 
+handling of unmatched signals.</li>
+<li><strong>Handle unmatched signals</strong>: Signals that only occur within one scan (query OR library entry)
+can be handled in different ways to affect the cosine similarity and controlling the quality
+of matching results. </li>
+<li><strong>Keep all and match to zero</strong> This is the <strong>standard</strong> conservative approach where all unmatched signals weigh negatively on the score. It is used for both GC-EI-MS and MS<sup>2</sup> spectra.</li>
+<li><strong>Remove all</strong> is the opposite option and discard all unaligned signals, which increases the
+  similarity score artificially. This option is only feasible if both the library and query spectrum are considered to be complex mixtures. Therefore, the last two options are more conservative.</li>
+<li><strong>Keep library signals</strong> results in discarding all unaligned signals of the query scan, whereas all unaligned library signals are matched to zero, setting the library spectrum as the ground truth. Here, the negative impact of 
+  contaminating signals in the query scans are reduced. This might be helpful for mixed spectra of multiple compounds, especially during imaging techniques without any further separation or all ion fragmentation/data independent fragmentation workflows.</li>
+<li><strong>Keep experimental signals</strong> results in discarding all unaligned signals of the library scan,
+  whereas all unaligned query signals are matched to zero. With reversed effects compared to the previous option.</li>
+</ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 23, 2022 23:17:49</span>
+      
+    
+  </small>
+</div>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../id_spectral_library_creation/spectral_library_creation.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Spectral library creation" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Spectral library creation
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../GNPS_export/gnps_export.html" class="md-footer__link md-footer__link--next" aria-label="Next: Export to GNPS-FBMN/IIMN" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Export to GNPS-FBMN/IIMN
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
