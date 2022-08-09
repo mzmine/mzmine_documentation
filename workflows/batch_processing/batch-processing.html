@@ -274,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../visualization_modules/visualization-overview.html" class="md-nav__link">
+      <a href="../../visualization_modules/visualization_overview/visualization-overview.html" class="md-nav__link">
         Visualization overview
       </a>
     </li>
@@ -314,7 +314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../visualization_modules/ms_raw_data_overview/raw_data_visualization.html" class="md-nav__link">
+      <a href="../../visualization_modules/raw_data_overview/raw_data_overview.html" class="md-nav__link">
         Raw data overview
       </a>
     </li>
@@ -328,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../visualization_modules/ms_raw_data_overview/raw_data_additional.html" class="md-nav__link">
+      <a href="../../visualization_modules/raw_data_overview/raw_data_additional.html" class="md-nav__link">
         Additional tools
       </a>
     </li>
@@ -404,7 +404,7 @@
   
     <li class="md-nav__item">
       <a href="../../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
-        MSMS Visualizer
+        MS/MS Visualizer
       </a>
     </li>
   
@@ -1232,14 +1232,14 @@
 <p>Batch files (XML format) are essentially lists of tasks run by MZmine one after another. Any of the methods available in MZmine 3 can be included in the batch file.</p>
 <hr />
 <h2 id="how-to-run-batch-processing"><strong>How to run batch processing</strong><a class="headerlink" href="#how-to-run-batch-processing" title="Permanent link">&para;</a></h2>
-<p><strong>Project :material-arrow-right-thin: Batch mode</strong>
+<p><strong>Project <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 16.94v-4H5.08l-.03-2.01H14V6.94l5 5Z"/></svg></span> Batch mode</strong>
 <img alt="batch-mode" src="batch_mode.png" /></p>
 <p>When a new step is added to the queue its parameter setup dialog is shown. The "Set paramaters" button allows the user to modify a step's parameter settings. The "Clear" button removes all steps. The "Load" and "Save" buttons make it possible to read and write batch steps to XML files.</p>
 <p>The first step of a batch queue is performed on those raw data files and/or peak lists selected by the user. The remaining steps are performed on the results produced by each preceding step (File/Feature list selection must be set to <em>Those created by previous batch step</em>). For example, if the first step of the batch queue is the <a href="../../module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP chromatogram builder</a>, it will produce peak lists as a result. If the following step were Peak list deconvolution then it will be performed on the peak lists produced by the preceding Chromatogram builder step.</p>
-<p>:octicons-alert-16: <strong>Tip</strong> MZmine "remembers" the last settings used.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575L6.457 1.047zM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-5.25a.75.75 0 0 0-1.5 0v2.5a.75.75 0 0 0 1.5 0v-2.5z"/></svg></span> <strong>Tip</strong> MZmine "remembers" the last settings used.</p>
 <h1 id="processing-wizard">Processing wizard<a class="headerlink" href="#processing-wizard" title="Permanent link">&para;</a></h1>
 <p>The processing wizard is inteded to quickly set up a general workflow for the processing of untargeted LC-MS and LC-IM-MS data. By clicking the "Set default" button, default settings for mass and feature detection are also provided according to the selected MS type (Orbitrap or TOF) and LC system (UHPLC or HPLC). Once the desired parameters have been set, hit the "Build batch" botton and a pre-populated batch window will open up.</p>
-<p><strong>Tools :material-arrow-right-thin: Processing wizard</strong>
+<p><strong>Tools <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 16.94v-4H5.08l-.03-2.01H14V6.94l5 5Z"/></svg></span> Processing wizard</strong>
 <img alt="wizard" src="processing_wizard.png" /></p>
 <h3 id="mass-spectrometers-presets"><strong>Mass spectrometers presets</strong><a class="headerlink" href="#mass-spectrometers-presets" title="Permanent link">&para;</a></h3>
 <p>MS type: When TOF is selected, the "Ion mobility" can be enabled <br>
