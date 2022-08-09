@@ -113,7 +113,7 @@ User can also apply a Gaussian fit to a distribution.
 
 TODO
 
-## **MS(n) spectra tree
+## **MS(n) spectra tree**
 
 TODO
 
