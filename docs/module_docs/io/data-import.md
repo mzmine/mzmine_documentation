@@ -1,4 +1,4 @@
-# Data import
+# **Data import**
 
 ## LC-MS data
 Raw data can be imported via the main menu **Raw data methods → Raw data import**. Note that

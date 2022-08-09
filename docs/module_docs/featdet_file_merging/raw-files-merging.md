@@ -16,11 +16,11 @@ Raw data files the module will take as an input.
 
 + MERGE PATTERN: 
 
-   Merge files based on a grouping identifier which can be a name suffix or prefix. (e.g., Sample_A_1, Sample_B_1: Use AFTER LAST _ to combine these files)
+    Merge files based on a grouping identifier which can be a name suffix or prefix. (e.g., Sample_A_1, Sample_B_1: Use AFTER LAST _ to combine these files)
 
 + MERGE SELECTED: 
 
-   Merge all selected files to a new
+    Merge all selected files to a new
 
 **Grouping identifier position**
 
