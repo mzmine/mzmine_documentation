@@ -34,20 +34,6 @@ The Savitzky–Golay method essentially performs a **local polynomial regression
 
 This number can be 5, 7, 9, 11, 13 or 15.
 
-### **Crop filter**
-
-The scans out of the retention time range defined by the user are deleted by using this filter. Also, the data points of the remaining scans that are out of the m/z window defined by the user are deleted.
-
-#### **Parameters**
-
-**m/z range**
-
-m/z boundary of the cropped region.
-
-**Retention time range**
-
-Retention time boundary of the cropped region.
-
 ### **Resampling filter**
 
 Each scan is divide in m/z bins whose length is defined by the user in the parameters. The mass of the new data point will be in the middle of each m/z bin's space. Its intensity is the average of the intensity of all the data points inside the bin.

@@ -81,6 +81,8 @@ nav:
 
   - Acknowledgements: wikiacknowledgements.md
 
+copyright: This software is licensed under the MIT License (MIT). Copyright (c) 2022-present
+
 theme:
   name: material
   logo: img/MZMine_logo_white.png
