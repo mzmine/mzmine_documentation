@@ -16,7 +16,7 @@ nav:
           -  Data export: module_docs/io/data-export.md
       - File merging:
         - Raw data files merging: module_docs/featdet_file_merging/raw-files-merging.md
-        - Mobility scan merging: module_docs/featdet_file_merging/mobility-scan-merging.md
+        - Mobility scan merging: module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md
       - Mass detection:
         - Mass detection: module_docs/featdet_mass_detection/mass-detection.md
         - Mass detection algorithms: module_docs/featdet_mass_detection/mass-detection-algorithms.md
@@ -25,6 +25,7 @@ nav:
       - LC-MS feature detection:
         - ADAP Chromatogram builder: module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
         - GridMass: module_docs/lc-ms_featdet/featdet_gridmass/gridmass.md
+        - Targeted feature detection: module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.md
       - Ion mobility expander: module_docs/featdet_ims_expander/ims-expander.md
       - Ion mobility trace builder: module_docs/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md
       - Smoothing: module_docs/featdet_smoothing/smoothing.md
