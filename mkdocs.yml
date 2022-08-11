@@ -82,7 +82,7 @@ nav:
 
   - Acknowledgements: wikiacknowledgements.md
 
-copyright: This software is licensed under the MIT License (MIT). Copyright (c) 2022-present
+copyright: This documentation is licensed under the MIT License (MIT). 
 
 theme:
   name: material
