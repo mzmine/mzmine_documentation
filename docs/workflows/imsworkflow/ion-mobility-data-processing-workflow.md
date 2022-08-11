@@ -61,7 +61,7 @@ Bruker import).
 - [ADAP Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)
 - [Smoothing in retention time dimension (optional)](../../module_docs/featdet_smoothing/smoothing.md)
 - [Resolving in retention time dimension](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md)
-- [Expanding EICs in mobility dimension](../../module_docs/featdet_ims_expander/ims-expander.md)
+- [Expanding EICs in mobility dimension](../../module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.md)
 - [Smoothing  in mobility dimension (optional)](../../module_docs/featdet_smoothing/smoothing.md#mobility-dimension)
 - [Resolving in mobility dimension](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#resolving-the-ion-mobility-dimension)
 - [Smoothing in rt and mobility dimension (optional)](../../module_docs/featdet_smoothing/smoothing.md)
