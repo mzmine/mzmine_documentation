@@ -2,7 +2,7 @@
 
 ## **Description**
 
-This module contains various filters that can be applied to the raw data scan by scan.
+This module can be used to preprocess data in each scan using various filters.
 
 The preview shows the superposed spectra of the scan before and after the Savitzky-Golay filter is applied.
 
