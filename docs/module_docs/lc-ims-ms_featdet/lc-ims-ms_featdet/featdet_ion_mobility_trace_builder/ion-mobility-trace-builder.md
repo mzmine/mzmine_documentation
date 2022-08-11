@@ -36,7 +36,7 @@ set here if the MS1 acquisition rate is sufficient.
 
 Specifies the total number of peaks in the mobility dimension in all mobility scans. Every "dot" in
 an ion mobility trace represents a single datapoint. (
-see [ion mobility traces](../../terminology/ion-mobility-terminology.md#ion-mobility-trace))
+see [ion mobility traces]("../../terminology/ion-mobility-terminology.md#ion-mobility-trace"))
 
 ##### Advanced parameters
 

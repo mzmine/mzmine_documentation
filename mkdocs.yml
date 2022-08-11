@@ -31,8 +31,9 @@ nav:
         - ADAP Chromatogram builder: module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
         - GridMass: module_docs/lc-ms_featdet/featdet_gridmass/gridmass.md
         - Targeted feature detection: module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.md
-      - Ion mobility expander: module_docs/featdet_ims_expander/ims-expander.md
-      - Ion mobility trace builder: module_docs/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md
+      - LC-IMS-MS feature detection:
+        - Ion mobility expander: module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.md
+        - Ion mobility trace builder: module_docs/lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md
       - Smoothing: module_docs/featdet_smoothing/smoothing.md
       - Resolving: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
