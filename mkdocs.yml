@@ -54,7 +54,7 @@ nav:
   - Visualization modules:
       - Visualization overview: visualization_modules/visualization_overview/visualization-overview.md
       - MS data visualisation:
-          - Raw data overview: visualization_modules/raw_data_overview/raw_data_visualization.md
+          - Raw data overview: visualization_modules/raw_data_overview/raw_data_overview.md
           - Additional tools:  visualization_modules/raw_data_overview/raw_data_additional.md
       - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md
       - Image viewer: visualization_modules/image_raw_data/image_viewer.md
