@@ -10,7 +10,7 @@ The view consists of three panes - chromatogram representation (on the left), ma
 
 **Show XIC**
 
-To display an extracted ion chromatogram, the user can tick the "Show XIC" box. There are several options for defining the m/z range - from mass, from formula and auto range. 
+To display an extracted ion chromatogram (XIC), the user can tick the "Show XIC" box. There are several options for defining the m/z range - from mass, from formula and auto range. 
 
 
 ![Raw data chromatogram](raw-data-chromatogram.PNG)
