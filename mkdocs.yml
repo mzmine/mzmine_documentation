@@ -17,6 +17,11 @@ nav:
       - File merging:
         - Raw data files merging: module_docs/featdet_file_merging/raw-files-merging.md
         - Mobility scan merging: module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md
+      - Raw data filtering:
+          - Scan by scan filtering: module_docs/filter_raw_data/filter-scan-by-scan.md
+          - Baseline corrections: module_docs/filter_raw_data/baseline-corrections.md
+          - Align scans: module_docs/filter_raw_data/align-scans.md
+          - Scan smoothing: module_docs/filter_raw_data/scan_smoothing.md
       - Mass detection:
         - Mass detection: module_docs/featdet_mass_detection/mass-detection.md
         - Mass detection algorithms: module_docs/featdet_mass_detection/mass-detection-algorithms.md

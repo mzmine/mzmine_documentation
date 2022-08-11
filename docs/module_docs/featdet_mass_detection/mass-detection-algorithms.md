@@ -78,6 +78,7 @@ The parameter $t$ is the intensity of each data point in the curve, and $\sigma$
 To simplify the process of wavelet calculation, the original function is transformed into two parts, where $W_{c}$ is the wavelet coefficient and $y$ is the intensity of the wavelet at certain point. In the following formula, $t$ corresponds to the Wavelet window size (%) parameter.
 
 $$W_{c}=\left[\frac{2}{\sqrt{3}\pi^\frac{1}{4}}\left(1-t^2\right)e^-\frac{t^2}{2}\right]$$
+
 $$ y=\lim_{LL \to UL}(W_{c}x)$$ 
 
 ![Calculated form](Wavelet_calculated_form.jpg)

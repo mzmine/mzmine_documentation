@@ -75,7 +75,7 @@ The LC-IMS-MS workflow will directly
 build [ion mobility traces](../../terminology/ion-mobility-terminology.md#ion-mobility-trace) from
 the raw data in the mobility scans. This workflow does not necessarily require summed frame spectra.
 However, if extracted ion chromatograms shall be visualized via
-the [Chromatogram visualizer](../../visualization_modules/raw_data_overview/raw_data_visualization.md#chromatogram-plot), the frame
+the [Chromatogram visualizer](../../visualization_modules/ms_raw_data_overview/raw_data_visualization.md#chromatogram-plot), the frame
 intensities are used. In case these are not present, the chromatograms will be blank. Note that
 feature intensities from the LC-IMS-MS workflow might not exactly match the frame chromatograms due
 to summing being executed prior to thresholding (for native Bruker data). Furthermore, multiple
