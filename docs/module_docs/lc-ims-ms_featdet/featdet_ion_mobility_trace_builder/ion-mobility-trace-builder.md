@@ -1,7 +1,7 @@
 # Ion mobility trace builder
 
 The **Ion mobility trace builder** will
-build [ion mobility traces](../../terminology/ion-mobility-terminology.md#ion-mobility-trace)
+build [ion mobility traces](../../../terminology/ion-mobility-terminology.md#ion-mobility-trace)
 from the raw data. Alternatively, the **Recursive IMS builder** can be used, which requires less ram
 but takes longer.
 
@@ -35,8 +35,7 @@ set here if the MS1 acquisition rate is sufficient.
 ##### Minimum total signals
 
 Specifies the total number of peaks in the mobility dimension in all mobility scans. Every "dot" in
-an ion mobility trace represents a single datapoint. (
-see [ion mobility traces](../../terminology/ion-mobility-terminology.md#ion-mobility-trace))
+an ion mobility trace represents a single datapoint. 
 
 ##### Advanced parameters
 
@@ -51,7 +50,7 @@ binning** module.
 ##### Processing result
 
 After performing ion mobiltiy trace detection, a feature list is created in the feature list tab
-(see [feature lists tab](../../main-window-overview.md#ms-data-files-and-feature-lists-tab)). In the
+(see [feature lists tab](../../../main-window-overview.md#ms-data-files-and-feature-lists-tab)). In the
 feature table, multiple columns are created. The displayed columns can be set via the button on the
 right of the feature table ([1]).
 

@@ -1,6 +1,6 @@
 # **Local Minimum Resolver**
 
-During the EICs building, overlapping and partially co-eluting peaks are retained as single features in the feature list (see, for example, [ADAP chromatogram builder](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)). The _local minimum resolver_ module aims at splitting such "shoulder" LC peaks into individual features (_i.e._ [chromatographic resolving](../../terminology/general-terminology.md#chromatographic-resolving)) based on local minima. In fact, a local minimum in the EIC trace might correspond to the valley between two adjacent, partially-resolved peaks.
+During the EICs building, overlapping and partially co-eluting peaks are retained as single features in the feature list (see, for example, [ADAP chromatogram builder](../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)). The _local minimum resolver_ module aims at splitting such "shoulder" LC peaks into individual features (_i.e._ [chromatographic resolving](../../terminology/general-terminology.md#chromatographic-resolving)) based on local minima. In fact, a local minimum in the EIC trace might correspond to the valley between two adjacent, partially-resolved peaks.
 
 The algorithm examines all the data points in the EIC trace starting from the earliest RT. A scan window is set (see [Minimum search range RT/Mobility](#minimum-search-range-rtmobility-absolute) parameter) and centered around the examined data point. A data point is considered a local minimum if it is the lowest intense point within the scan window. When a local minumum is found, a set of user-defined intensity and peak duration requirements is checked. If they are fulfilled, the original overlapping peaks are split into new, distinct features. The LMR is particularly suitable for LC-MS data with little noise and nice peak shapes.
 
@@ -46,9 +46,9 @@ Minimum relative intensity (respect to the highest data point in the EIC) a peak
 💡 **_Tip_**. Modern mass spectrometers provides linear dynamic ranges up to 5 orders of magnitude. If we take an Orbitrap device with a detector saturation around 1.0E10 intensity, a _Minimum relative height_ = 0.001 would correspond to a 1.0E5 minimum intensity.
 
 #### **Minimum absolute height**
-Minimum absolute intensity a peak needs to reach to be retained as a feature. This parameter is very similar to the [Min highest intensity](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#min-highest-intensity) settings in the ADAP chromatogram builder module and the same concepts apply.
+Minimum absolute intensity a peak needs to reach to be retained as a feature. This parameter is very similar to the [Min highest intensity](../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#parameters) settings in the ADAP chromatogram builder module and the same concepts apply.
 
-💡 **_Tip_**. When resolving the RT dimension, the same value used as [Min highest intensity](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#min-highest-intensity) in the EICs building can normally be used here.
+💡 **_Tip_**. When resolving the RT dimension, the same value used as [Min highest intensity](../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#parameters) in the EICs building can normally be used here.
 
 💡 **_Tip_**. While [frame scans](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames) are examined over the RT dimension, [mobility scans](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames) are examined over the IM dimension. Therefore, this parameter might need to be adjested accordingly when [resolving the ion mobility dimension](#resolving-the-ion-mobility-dimension). 
 
@@ -63,7 +63,7 @@ Range of acceptable peak length expressed in minutes (RT dimension) or absolute 
 #### **Min # of data points**
 Minimum number of data points a resolved peak needs to have to be considered valid and retained as a feature. This parameter can be used along with the [Peak duration range](#peak-durantion-range-minmobility) setting as  peak duration constraint to filter out noisy features.
 
-💡 **_Tip_**. This parameter is very similar to the [Min group size in # of scans](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#min-group-size-in-number-of-scans) settings in the ADAP chromatogram builder module and the same value can normally be used here (usually, no less than 4-5).
+💡 **_Tip_**. This parameter is very similar to the [Min group size in # of scans](../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#parameters) settings in the ADAP chromatogram builder module and the same value can normally be used here (usually, no less than 4-5).
 
 💡 **_Tip_**. A feature in the IM dimension is normally made up of more data points than regular LC peaks. Therefore, a higher _Min # of data points_ can be set when [resolving the ion mobility dimension](#resolving-the-ion-mobility-dimension) to filter out noisy features.
 

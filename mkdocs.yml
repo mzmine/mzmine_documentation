@@ -10,30 +10,32 @@ nav:
   - Getting started: getting_started.md
   - Main window overview: main-window-overview.md
 
-  - Visualization modules:
-      - Visualization overview: visualization_modules/visualization_overview/visualization-overview.md
-      - MS data visualisation:
-          - Raw data overview: visualization_modules/raw_data_overview/raw_data_overview.md
-          - Additional tools:  visualization_modules/raw_data_overview/raw_data_additional.md
-      - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md
-      - Image viewer: visualization_modules/image_raw_data/image_viewer.md
-      - Processed data visualition:
-          - MS/MS Visualizer: visualization_modules/msmsplot/msms-plot.md
-          - Interactive Ion Identity Molecular Networks: visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md
-          - Feature histograms: visualization_modules/feature_histograms/feature_hist.md
-          - Additional tools: visualization_modules/processed_additional/processed_additional.md
-  
   - Processing modules:
-      - Data import: module_docs/io/raw_data_import/data-import.md
+      - I/O:
+          -  Data import: module_docs/io/data-import.md
+          -  Data export: module_docs/io/data-export.md
+      - File merging:
+        - Raw data files merging: module_docs/featdet_file_merging/raw-files-merging.md
+        - Mobility scan merging: module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md
+      - Raw data filtering:
+          - Scan by scan filtering: module_docs/filter_raw_data/filter-scan-by-scan.md
+          - Crop filter: module_docs/filter_raw_data/crop-filter.md
+          - Baseline corrections: module_docs/filter_raw_data/baseline-corrections.md
+          - Align scans: module_docs/filter_raw_data/align-scans.md
+          - Scan smoothing: module_docs/filter_raw_data/scan_smoothing.md
       - Mass detection:
         - Mass detection: module_docs/featdet_mass_detection/mass-detection.md
         - Mass detection algorithms: module_docs/featdet_mass_detection/mass-detection-algorithms.md
         - FTMS shoulder peak finder: module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.md
         - Mass calibration: module_docs/featdet_mass_detection/mass-calibration.md
-      - Mobility scan merging: module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md
-      - ADAP Chromatogram builder: module_docs/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
-      - Ion mobility expander: module_docs/featdet_ims_expander/ims-expander.md
-      - Ion mobility trace builder: module_docs/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md
+      - LC-MS feature detection:
+        - ADAP Chromatogram builder: module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
+        - GridMass: module_docs/lc-ms_featdet/featdet_gridmass/gridmass.md
+        - Targeted feature detection: module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.md
+      - LC-IMS-MS feature detection:
+        - Ion mobility expander: module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.md
+        - Ion mobility trace builder: module_docs/lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md
+        - Recursive IMS builder: module_docs/lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.md
       - Smoothing: module_docs/featdet_smoothing/smoothing.md
       - Resolving: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
@@ -48,12 +50,27 @@ nav:
       - Other parameters:
         - Merge MS/MS: module_docs/GNPS_export/merge_ms2_kai.md
         - Spectra similarity: module_docs/join_aligner/spectra_similarity.md
+
+  - Visualization modules:
+      - Visualization overview: visualization_modules/visualization_overview/visualization-overview.md
+      - MS data visualisation:
+          - Raw data overview: visualization_modules/raw_data_overview/raw_data_overview.md
+          - Additional tools:  visualization_modules/raw_data_overview/raw_data_additional.md
+      - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md
+      - Image viewer: visualization_modules/image_raw_data/image_viewer.md
+      - Processed data visualition:
+          - MSMS Visualizer: visualization_modules/msmsplot/msms-plot.md
+          - Interactive Ion Identity Molecular Networks: visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md
+          - Feature histograms: visualization_modules/feature_histograms/feature_hist.md
+          - Additional tools: visualization_modules/processed_additional/processed_additional.md
+
   - Workflows:
       - LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
       - LC-IMS-MS workflow: workflows/imsworkflow/ion-mobility-data-processing-workflow.md
-      - Batch processing: workflows/batch_processing/batch-processing.md 
+      - Batch processing: workflows/batch_processing/batch-processing.md
+
   - Additional resources:
-      - Gerneral Terminology: terminology/general-terminology.md
+      - General Terminology: terminology/general-terminology.md
       - IMS Terminology: terminology/ion-mobility-terminology.md
       - IMS data format insight: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
       
@@ -65,6 +82,8 @@ nav:
 
   - Acknowledgements: wikiacknowledgements.md
 
+copyright: This documentation is licensed under the MIT License (MIT). 
+
 theme:
   name: material
   logo: img/MZMine_logo_white.png
@@ -75,12 +94,12 @@ plugins:
       show_contribution: true
   - git-revision-date-localized:
       type: datetime
-  - with-pdf:
-      output_path: documentation.pdf
-      author: The MZmine Community
-      cover_title: MZmine 3
-      cover_subtitle: Documentation
-      cover_logo: img/MZmine_logo_CMYK.png
+#  - with-pdf:
+#      output_path: documentation.pdf
+#      author: The MZmine Community
+#      cover_title: MZmine 3
+#      cover_subtitle: Documentation
+#      cover_logo: img/MZmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:
