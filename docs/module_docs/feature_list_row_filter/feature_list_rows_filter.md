@@ -34,10 +34,10 @@ Range of acceptable FWHM in a row required not to remove it.
 Range of Charge in a row required not to remove it. Please run isotopic peaks grouper prior to using this.
 
 #### Kendrick mass defect
-Filter features in a Kendrick mass defect range. For more details see Kendrick mass defect setup.
+Filter features in a Kendrick mass defect range. For more details see Kendrick mass defect setup[yet to be completed].
 
 #### Parameter
-Paremeter defining the group of each sample. They have to be defined by the user using "Project-> Set sample parameters.." module.
+Paremeter defining the group of each sample.
 
 #### Only identified?
 If the checkbox is selected, only identified rows will be retained.
