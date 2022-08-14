@@ -2,277 +2,277 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/index.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/commandline_tool.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/contribute.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/contribute_intellij.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/getting_started.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/main-window-overview.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/performance.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/wikiacknowledgements.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/GNPS_export/gnps_export.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/GNPS_export/merge_ms2_kai.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_file_merging/raw-files-merging.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_mass_detection/mass-calibration.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_mass_detection/mass-detection-algorithms.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_mass_detection/mass-detection.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_mobility_scan_merging/mobility-scan-merging.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_smoothing/smoothing.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_isotope_filter/isotope_filter.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_isotope_finder/isotope_finder.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_raw_data/align-scans.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_raw_data/baseline-corrections.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_raw_data/crop-filter.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_raw_data/filter-scan-by-scan.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_raw_data/scan_smoothing.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/gapfill_peak_finder/gap-filling.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/id_ccs_calibration/ccs_calibration.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/id_spectral_library_creation/spectral_library_creation.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/id_spectral_library_search/spectral_library_search.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/io/data-export.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/io/data-import.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/join_aligner/join_aligner.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/join_aligner/spectra_similarity.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/lc-ms_featdet/featdet_gridmass/gridmass.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/terminology/general-terminology.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/terminology/ion-mobility-terminology.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/visualization_modules/feature_histograms/feature_hist.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/visualization_modules/image_raw_data/image_viewer.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/visualization_modules/ims_raw_data_overview/IM-data-visualisation.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/visualization_modules/msmsplot/msms-plot.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/visualization_modules/processed_additional/processed_additional.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/visualization_modules/raw_data_overview/raw_data_additional.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/visualization_modules/raw_data_overview/raw_data_overview.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/visualization_modules/visualization_overview/visualization-overview.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/workflows/batch_processing/batch-processing.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/workflows/imsworkflow/ion-mobility-data-processing-workflow.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/workflows/lcmsworkflow/lcms-workflow.html</loc>
-         <lastmod>2022-08-12</lastmod>
+         <lastmod>2022-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
