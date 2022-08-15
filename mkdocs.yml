@@ -72,7 +72,7 @@ nav:
   - Additional resources:
       - General Terminology: terminology/general-terminology.md
       - IMS Terminology: terminology/ion-mobility-terminology.md
-      - IMS data format insight: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
+      - LC-MS and LC-IMS-MS data comparison: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
       
   - Performance options: performance.md
   - Command line tool (batch mode): commandline_tool.md
@@ -94,12 +94,12 @@ plugins:
       show_contribution: true
   - git-revision-date-localized:
       type: datetime
-#  - with-pdf:
-#      output_path: documentation.pdf
-#      author: The MZmine Community
-#      cover_title: MZmine 3
-#      cover_subtitle: Documentation
-#      cover_logo: img/MZmine_logo_CMYK.png
+  - with-pdf:
+      output_path: documentation.pdf
+      author: The MZmine Community
+      cover_title: MZmine 3
+      cover_subtitle: Documentation
+      cover_logo: img/MZmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:
