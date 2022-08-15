@@ -39,7 +39,12 @@ nav:
       - Smoothing: module_docs/featdet_smoothing/smoothing.md
       - Resolving: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
-      - Gap filling (Peak finder): module_docs/gapfill_peak_finder/gap-filling.md
+      - Gap filling:
+        - Gap filling (Peak finder): module_docs/gapfill_peak_finder/gap-filling.md
+        - Same RT and m/z range gap filler: module_docs/Gap-filling-same_mz_and_RT_range/same_mz_and_RT_range_gap_filler.md
+      - Feature list filtering:
+        - Duplicate feature filter: module_docs/Duplicate_feature_filter/duplicate_feature_filter.md
+        - Feature list rows filter: module_docs/feature_list_row_filter/feature_list_rows_filter.md
       - MS2 scan paring: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
       - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md 
       - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md
