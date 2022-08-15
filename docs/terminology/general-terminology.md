@@ -22,7 +22,7 @@ Exact mass of an ion calculated using the mass of the lightest isotope of each e
 Isotopic (or isotope) pattern describes a set of peaks related to the ions with the same chemical formula but containing different isotopes; e.g. the 16 and 17 mass/charge peaks in a CH4 sample arising from <sup>12</sup>CH<sub>4</sub><sup>+</sup> and <sup>13</sup>CH<sub>4</sub><sup>+</sup> ions.
 
 ### **Mass resolution** 
-**Resolution** describes an ability of MS method to distinguish two peaks of different [mass-to-charge ratios]("general-terminology#mass-to-charge-ratio"). 
+**Resolution** describes an ability of MS method to distinguish two peaks of different mass-to-charge ratios. 
 Can be interchangeably used with [mass resolving power](general-terminology.md#mass-resolving-power)
 
 [Wikipedia article on MS resolution](https://en.wikipedia.org/wiki/Resolution_(mass_spectrometry))
@@ -131,7 +131,7 @@ m/z tolerance is defined as maximum allowed difference between m/z values in ord
 
 - Pluskal, T., Castillo, S., Villar-Briones, A. & Oresic, M. MZmine 2: Modular framework for processing, visualizing, and analyzing mass spectrometry-based molecular profile data. _BMC Bioinformatics_ (2010). DOI: [10.1186/1471-2105-11-395](https://doi.org/10.1186/1471-2105-11-395)
 - Pluskal, T. et al. Processing Metabolomics and Proteomics Data with Open Software: A Practical Guide, Chapter 7: Metabolomics Data Analysis Using MZmine (2020). DOI: [10.1039/9781788019880-00232](https://doi.org/10.1039/9781788019880-00232)
-- Smoluch M., Piechura K. Mass Spectrometry: An Applied Approach, Chapter 3: Basic Definitions (2019). DOI: [10.1002/9781119377368.ch3]( https://doi.org/10.1002/9781119377368.ch3)
+- Smoluch M., Piechura K. Mass Spectrometry: An Applied Approach, Chapter 3: Basic Definitions (2019). DOI: [10.1002/9781119377368.ch3](https://onlinelibrary.wiley.com/doi/10.1002/9781119377368.ch3)
 - [IUPAC. Compendium of Chemical Terminology](https://doi.org/10.1351/goldbook), 2nd ed. (the "Gold Book"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997). Online version (2019-) created by S. J. Chalk. ISBN 0-9678550-9-8. 
 - Guo, J., Huan T. Evaluation of significant features discovered from different data acquisition modes in mass spectrometry-based untargeted metabolomics. _Analytica Chimica Acta_ (2020). DOI: [10.1016/j.aca.2020.08.065](https://doi.org/10.1016/j.aca.2020.08.065)
 
