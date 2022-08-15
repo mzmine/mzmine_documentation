@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#peak-finder" class="md-skip">
+        <a href="#peak-finder-recommended-gap-filling-algorithm" class="md-skip">
           Skip to content
         </a>
       
@@ -1738,36 +1738,36 @@
 
 
 
-<h1 id="peak-finder">Peak finder<a class="headerlink" href="#peak-finder" title="Permanent link">&para;</a></h1>
-<p>Some chromatographic peaks may not be detected in every sample for several reasons, such as</p>
+<h1 id="peak-finder-recommended-gap-filling-algorithm">Peak finder (recommended gap-filling algorithm)<a class="headerlink" href="#peak-finder-recommended-gap-filling-algorithm" title="Permanent link">&para;</a></h1>
+<p>Find the module under <strong>Feature list methods → Gap filling → Peak finder</strong>.</p>
+<p>Some chromatographic features in an aligned feature list may not be detected in every sample for several reasons, such as:</p>
 <ul>
-<li>deficient peak detection,</li>
-<li>mistake in the alignment of different peak lists,</li>
-<li>inaccurate mass calibration, etc.</li>
+<li>feature shape constraints in the resolver or later feature filters</li>
+<li>co-eluting features that are not baseline separated might be resolved in one sample but kept unsplit in another </li>
+<li>misalignment due to shifts in m/z, retention time, or ion mobility within feature lists from different samples (or batches). Might originate from inaccurate mass calibration, etc.</li>
 </ul>
-<p>All of these reasons can result in undesirable gaps (missing values) in the aligned feature table. To account for this problem, the user can use the Peak finder module which searches through the original raw data to find the missing spectra, and is found under <strong>Feature list methods → Gap filling → Peak finder</strong>.
-This algorithm fills the gaps in the peak list when it is possible according with the parameters defined by the user, with the most crucial being <strong>m/z tolerance</strong> and <strong>RT tolerance</strong>. These two parameters define the window where the algorithm should find the new peak. </p>
+<p>All of these reasons can result in undesirable gaps (missing values) in the aligned feature table. Those gaps are not limited to smaller signals but can also affect abundant features. To account for this problem, the user can use the Peak finder module as a secondary, informed feature finding step. The algorithm searches for signals within the original centroided mass spectra. This algorithm fills the gaps in the feature list according to the user parameters, with the most crucial being <strong>m/z tolerance</strong> and <strong>RT tolerance</strong>. These two tolerances define the window where the algorithm should find the new feature. In the feature table, gap-filled features are marked with a grey color as the feature state. </p>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <h3 id="name-suffix">Name suffix<a class="headerlink" href="#name-suffix" title="Permanent link">&para;</a></h3>
 <p>Suffix to be added to the peak list name. </p>
 <h3 id="intensity-tolerance">Intensity tolerance<a class="headerlink" href="#intensity-tolerance" title="Permanent link">&para;</a></h3>
 <p>Maximum allowed deviation from the expected peak shape in chromatographic direction.</p>
 <h3 id="mz-tolerance">m/z tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h3>
-<p>m/z range which will be applied when searching for the possible peak in the raw data.</p>
+<p>m/z range which will be applied when searching for the possible feature in the raw data.</p>
 <h3 id="retention-time-tolerance">Retention time tolerance<a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h3>
-<p>Retention time range when searching for the possible peak in the raw data.</p>
+<p>Retention time range when searching for the possible feature in the raw data.</p>
 <h3 id="minimum-data-points">Minimum data points<a class="headerlink" href="#minimum-data-points" title="Permanent link">&para;</a></h3>
 <p>Feature will be used for gap filling only if it satisfies the set minimum number of data points.</p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> Usually lower number of data points is used.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> Usually a lower number of data points is used compared to the primary feature finding workflow with the resolvers.</p>
 <h3 id="original-fature-lits">Original fature lits<a class="headerlink" href="#original-fature-lits" title="Permanent link">&para;</a></h3>
-<p>User can either keep, remove or process in place of the original feature list.</p>
+<p>User can either keep, remove, or process in place of the original feature list. The latter two increase memory efficiency and throughput while users might want to keep the original feature list as a reference. </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 15, 2022 13:05:36</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 15, 2022 19:35:31</span>
       
     
   </small>
