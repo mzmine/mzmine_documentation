@@ -33,7 +33,7 @@ In TWIMS, ions are propelled through a gas-filled stacked ring ion guide with th
 
 Higher mobility ions undergo less ‘roll over’ events on the waves than the lower mobility ions. As the waves pass along the device, ions can ‘surf’ on the wave front for a period of time before being overtaken by the wave. Usage of travelling waves makes possible to increase sensitivity, selectivity, and speed of the method.
 
-For more information, see [Fundamentals of Traveling Wave Ion Mobility Spectrometry](https://doi.org/10.1021%2Fac8016295)
+For more information, see _Fundamentals of Traveling Wave Ion Mobility Spectrometry_ DOI: <a>10.1021/ac8016295</a>
 
 ## Terminology
 
