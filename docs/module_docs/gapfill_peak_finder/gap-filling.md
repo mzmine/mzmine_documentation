@@ -6,9 +6,9 @@ Some chromatographic features in an aligned feature list may not be detected in 
 
 - feature shape constraints in the resolver or later feature filters
 - co-eluting features that are not baseline separated might be resolved in one sample but kept unsplit in another 
-- misalignment due to shits in m/z, retention time, or ion mobility within feature lists from different samples (or batches). Might originate from inaccurate mass calibration, etc.
+- misalignment due to shifts in m/z, retention time, or ion mobility within feature lists from different samples (or batches). Might originate from inaccurate mass calibration, etc.
 
-All of these reasons can result in undesirable gaps (missing values) in the aligned feature table. Those gaps are not limited smaller signals but can also range to abundant features. To account for this problem, the user can use the Peak finder module as a secondary, informed feature finding step. The algorithm searches for signals within the original centroided mass spectra. This algorithm fills the gaps in the feature list according to the user parameters, with the most crucial being **m/z tolerance** and **RT tolerance**. These two tolerances define the window where the algorithm should find the new feature. In the feature table, gap-filled features are marked with a grey color as the feature state. 
+All of these reasons can result in undesirable gaps (missing values) in the aligned feature table. Those gaps are not limited to smaller signals but can also affect abundant features. To account for this problem, the user can use the Peak finder module as a secondary, informed feature finding step. The algorithm searches for signals within the original centroided mass spectra. This algorithm fills the gaps in the feature list according to the user parameters, with the most crucial being **m/z tolerance** and **RT tolerance**. These two tolerances define the window where the algorithm should find the new feature. In the feature table, gap-filled features are marked with a grey color as the feature state. 
 
 
 ## Parameters
