@@ -66,7 +66,7 @@ An "_ion mobility trace_" basically represents a mobility resolved extracted ion
 **Collision cross section (CCS)** can be defined as area of interaction between an individual ion and gas molecule. CCS depends on ion's size, shape, and charge. IM-derived CCS values can be used as an additional molecular descriptor to support the compound unknown identification process.
 
 ## References
-- Meier, F., Brunner, A.D., Koch, S., Cox, J., Räther, O., Mann, M. Online Parallel Accumulation–Serial Fragmentation (PASEF) with a Novel Trapped Ion Mobility Mass Spectrometer. _Molecular & Cellular Proteomics_ (2018). DOI: [10.1074/mcp.TIR118.000900](https://doi.org/10.1074%2Fmcp.TIR118.000900)
-- Paglia, G. et al. Ion Mobility Derived Collision Cross Sections to Support Metabolomics Applications. _Anal. Chem._ (2014). DOI: [10.1021/ac500405x](https://doi.org/10.1021/ac500405x)
+- Meier, F., Brunner, A.D., Koch, S., Cox, J., Räther, O., Mann, M. Online Parallel Accumulation–Serial Fragmentation (PASEF) with a Novel Trapped Ion Mobility Mass Spectrometer. _Molecular & Cellular Proteomics_ (2018). DOI: <a>10.1074/mcp.TIR118.000900</a>
+- Paglia, G. et al. Ion Mobility Derived Collision Cross Sections to Support Metabolomics Applications. _Anal. Chem._ (2014). DOI: <a>10.1021/ac500405x</a>
 
 
