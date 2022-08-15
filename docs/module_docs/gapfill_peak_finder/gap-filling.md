@@ -1,13 +1,14 @@
-# Peak finder
+# Peak finder (recommended gap-filling algorithm)
 
-Some chromatographic peaks may not be detected in every sample for several reasons, such as
+Find the module under **Feature list methods → Gap filling → Peak finder**.
 
-- deficient peak detection,
-- mistake in the alignment of different peak lists,
-- inaccurate mass calibration, etc.
+Some chromatographic features in an aligned feature list may not be detected in every sample for several reasons, such as:
 
-All of these reasons can result in undesirable gaps (missing values) in the aligned feature table. To account for this problem, the user can use the Peak finder module which searches through the original raw data to find the missing spectra, and is found under **Feature list methods → Gap filling → Peak finder**.
-This algorithm fills the gaps in the peak list when it is possible according with the parameters defined by the user, with the most crucial being **m/z tolerance** and **RT tolerance**. These two parameters define the window where the algorithm should find the new peak. 
+- feature shape constraints in the resolver or later feature filters
+- co-eluting features that are not baseline separated might be resolved in one sample but kept unsplit in another 
+- misalignment due to shits in m/z, retention time, or ion mobility within feature lists from different samples (or batches). Might originate from inaccurate mass calibration, etc.
+
+All of these reasons can result in undesirable gaps (missing values) in the aligned feature table. Those gaps are not limited smaller signals but can also range to abundant features. To account for this problem, the user can use the Peak finder module as a secondary, informed feature finding step. The algorithm searches for signals within the original centroided mass spectra. This algorithm fills the gaps in the feature list according to the user parameters, with the most crucial being **m/z tolerance** and **RT tolerance**. These two tolerances define the window where the algorithm should find the new feature. In the feature table, gap-filled features are marked with a grey color as the feature state. 
 
 
 ## Parameters
@@ -19,16 +20,16 @@ Suffix to be added to the peak list name.
 Maximum allowed deviation from the expected peak shape in chromatographic direction.
 
 ### m/z tolerance
-m/z range which will be applied when searching for the possible peak in the raw data.
+m/z range which will be applied when searching for the possible feature in the raw data.
 
 ### Retention time tolerance
-Retention time range when searching for the possible peak in the raw data.
+Retention time range when searching for the possible feature in the raw data.
 
 ### Minimum data points
 Feature will be used for gap filling only if it satisfies the set minimum number of data points.
 
-:material-lightbulb: Usually lower number of data points is used.
+:material-lightbulb: Usually a lower number of data points is used compared to the primary feature finding workflow with the resolvers.
 
 ### Original fature lits
-User can either keep, remove or process in place of the original feature list.
+User can either keep, remove, or process in place of the original feature list. The latter two increase memory efficiency and throughput while users might want to keep the original feature list as a reference. 
 
