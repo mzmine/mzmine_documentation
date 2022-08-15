@@ -1462,8 +1462,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#time-dispersve-ion-mobility-spectrometry-dtims-and-twims" class="md-nav__link">
-    Time-dispersve ion mobility spectrometry (DTIMS and TWIMS)
+  <a href="#time-dispersive-ion-mobility-spectrometry-dtims-and-twims" class="md-nav__link">
+    Time-dispersive ion mobility spectrometry (DTIMS and TWIMS)
   </a>
   
 </li>
@@ -1503,8 +1503,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cross-collisional-section" class="md-nav__link">
-    Cross Collisional Section
+  <a href="#collisional-cross-section" class="md-nav__link">
+    Collisional Cross Section
   </a>
   
 </li>
@@ -1537,7 +1537,7 @@
   
     <li class="md-nav__item">
       <a href="../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
-        IMS data format insight
+        LC-MS and LC-IMS-MS data comparison
       </a>
     </li>
   
@@ -1699,8 +1699,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#time-dispersve-ion-mobility-spectrometry-dtims-and-twims" class="md-nav__link">
-    Time-dispersve ion mobility spectrometry (DTIMS and TWIMS)
+  <a href="#time-dispersive-ion-mobility-spectrometry-dtims-and-twims" class="md-nav__link">
+    Time-dispersive ion mobility spectrometry (DTIMS and TWIMS)
   </a>
   
 </li>
@@ -1740,8 +1740,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cross-collisional-section" class="md-nav__link">
-    Cross Collisional Section
+  <a href="#collisional-cross-section" class="md-nav__link">
+    Collisional Cross Section
   </a>
   
 </li>
@@ -1776,20 +1776,32 @@
 
 
 
-<h1 id="ion-mobility-spectrometry-terminology">Ion mobility spectrometry terminology<a class="headerlink" href="#ion-mobility-spectrometry-terminology" title="Permanent link">&para;</a></h1>
-<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
-<p>Ion-mobility mass-spectrometry, here simply referred to as ion-mobility (IM), is an analytical technique where ions are separated through a gas-filled mobility cell prior to the MS acquisition. Ions drift through the IM cell with different velocity based on their interaction with the buffer gas, which allows for the separation of different shaped molecules. Modern devieces are able to perform IM separation on a millisecond timescale, typically within 10 to 100 ms. Thus, IM nicely fits in-between LC separation (~seconds timescale) and MS detection of TOF instruments (~microseconds timescale). This allows LC-IM-MS insturments to acqurie several MS spectra during each <a href="#accumulations-mobility-scans-and-frames">accumulation</a>, without incurring sensitivity loss. For example, assuming a typical 100 µs MS-acquisition time of TOF analyzers, around 1000 spectra can be recorded within 100 ms of IM separation. Therefore, as opposed to LC-MS, multiple MS (or MS2) spectra are associated to each RT in LC-IM-MS data. A more detailed explanation of LC-MS and LC-IMS-MS raw data structure is provided <a href="../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html">here</a>.</p>
-<h3 id="trapped-ion-mobility-spectrometry-tims">Trapped ion mobility spectrometry (TIMS)<a class="headerlink" href="#trapped-ion-mobility-spectrometry-tims" title="Permanent link">&para;</a></h3>
-<p>TO-DO
-Trapped ion mobility spectrometry (TIMS) reverses the concept of traditional drift tube IM. Rather than moving ions through astationary gas, TIMS holds ions stationary against a moving gas and then releases them according to their mobility. 
-Video: https://www.youtube.com/watch?v=cWjz32wky2A</p>
-<h3 id="time-dispersve-ion-mobility-spectrometry-dtims-and-twims">Time-dispersve ion mobility spectrometry (DTIMS and TWIMS)<a class="headerlink" href="#time-dispersve-ion-mobility-spectrometry-dtims-and-twims" title="Permanent link">&para;</a></h3>
-<p>TO-DO
-Time-dispersve IM devices include "traditional" drift tube (DTIMS) and travelling-wave (TWIMS) devices. In classic DTIM, ions migrate through aninert buffer gas under the influence of a weak electricfield, whereas collisions with buffer gas molecules retard theprogress of the ions. As larger ions have more collisions withthe gas, they are more strongly retarded than their smaller counterparts. Thus, smaller ions, having a smaller cross section, arrive earlier at the detector than ions with a larger collisional cross section (CCS). The ion mobility K is then defined as the ratio of the analyte's steady-state net drift velocity to the applied electric field, and it is convention toc alculate the reduced ion mobility K0 at standard pressur eand standard temperature, often reported as the inverse reduced ion mobility 1/K0.</p>
+<h1 id="ion-mobility-spectrometry-terminology"><strong>Ion mobility spectrometry terminology</strong><a class="headerlink" href="#ion-mobility-spectrometry-terminology" title="Permanent link">&para;</a></h1>
+<h2 id="background"><strong>Background</strong><a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>Ion-mobility mass-spectrometry, here simply referred to as <strong>ion-mobility (IM)</strong>, is an analytical technique where ions are separated through a gas-filled mobility cell prior to the MS acquisition. </p>
+<p>In classic <strong>drift tube ion mobility (DTIM)</strong>, ions migrate through an inert buffer gas under the influence of a weak electric field.  Ions drift with different <strong>velocity</strong> based on their interaction with the buffer gas, which allows for the separation of different shaped molecules. Modern devices are able to perform IM separation on a millisecond timescale, typically within 10 to 100 ms. </p>
+<p>As larger ions have more collisions with the gas, they are more strongly retarded than their smaller counterparts. Thus, smaller ions, having a smaller cross section, arrive earlier at the detector than ions with a larger collisional cross section (<a href="#collisional-cross-section">CCS</a>). </p>
+<p>The <strong>ion mobility</strong> <span class="arithmatex">\(K\)</span> is then defined as the ratio of the analyte's steady-state net drift velocity to the applied electric field, and it is convention to calculate the reduced ion mobility <span class="arithmatex">\(K_0\)</span> at standard pressure and standard temperature. This value is often reported as the inverse reduced ion mobility <span class="arithmatex">\(1/K_0\)</span>.</p>
+<p>From practical point of view, IM nicely fits in-between LC separation (~seconds timescale) and MS detection of TOF instruments (~microseconds timescale). This allows LC-IM-MS instruments to acquire several MS spectra during each <a href="#accumulations-mobility-scans-and-frames">accumulation</a>, without incurring sensitivity loss. </p>
+<p>For example, assuming a typical 100 µs MS-acquisition time of TOF analyzers, around 1000 spectra can be recorded within 100 ms of IM separation. Therefore, as opposed to LC-MS, multiple MS (or MS2) spectra are associated to each RT in LC-IM-MS data. </p>
+<p>A more detailed explanation of LC-MS and LC-IMS-MS raw data structure is provided <a href="../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html">here</a>.</p>
+<p><a href="https://www.youtube.com/watch?v=RRxW18bFbHo">Visual explanation of IMS by Waters</a></p>
+<h3 id="trapped-ion-mobility-spectrometry-tims"><strong>Trapped ion mobility spectrometry (TIMS)</strong><a class="headerlink" href="#trapped-ion-mobility-spectrometry-tims" title="Permanent link">&para;</a></h3>
+<p><strong>Trapped ion mobility spectrometry</strong> (TIMS) reverses the concept of traditional drift tube IM. Rather than moving ions through a stationary gas, TIMS holds ions stationary against a <strong>moving gas</strong> and then releases them according to their mobility. </p>
+<p>TIMS has the advantage that the physical dimension of the analyzer can be smaller, whereas the analytical column of gas – the column that flows past during the course of an analysis – can be large and user defined. This can lead to increased method sensitivity.</p>
+<p><a href="https://www.youtube.com/watch?v=cWjz32wky2A">Bruker's TIMS TOF Video</a></p>
+<h3 id="time-dispersive-ion-mobility-spectrometry-dtims-and-twims">Time-dispersive ion mobility spectrometry (DTIMS and TWIMS)<a class="headerlink" href="#time-dispersive-ion-mobility-spectrometry-dtims-and-twims" title="Permanent link">&para;</a></h3>
+<p><strong>Time-dispersve IM</strong> devices include "traditional" <strong>drift tube (DTIMS)</strong> and <strong>travelling-wave (TWIMS)</strong> devices. </p>
+<p>In TWIMS, ions are propelled through a gas-filled stacked ring ion guide with the help of travelling voltage waves. </p>
+<p>Higher mobility ions undergo less ‘roll over’ events on the waves than the lower mobility ions. As the waves pass along the device, ions can ‘surf’ on the wave front for a period of time before being overtaken by the wave. Usage of travelling waves makes possible to increase sensitivity, selectivity, and speed of the method.</p>
+<p>For more information, see <a href="https://doi.org/10.1021%2Fac8016295">Fundamentals of Traveling Wave Ion Mobility Spectrometry</a></p>
 <h2 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h2>
 <h3 id="accumulations-mobility-scans-and-frames">Accumulations, Mobility Scans and Frames<a class="headerlink" href="#accumulations-mobility-scans-and-frames" title="Permanent link">&para;</a></h3>
-<p>Altough mainly used for TIMS, the term "<em>accumulation</em>" refers to the pack of ions gathered at the head of the IM device prior to the release and separation in the IM cell. As explained <a href="#background">above</a>, since the accumulation-separation cycle typically last ~100 ms, multiple MS spectra (referred to as "<em>mobility scans</em>" in MZmine) are acquired during each cycle. The set of <em>mobility scans</em> collected during each IM separation constitutes a "<em>frame</em>". A <em>frame</em> can be seen as the IM separation of a single <em>accumulation</em>, along which multiple MS spectra are collected. Several <em>frames</em> are contained within one LC peak. Thus, the frame number are a natural unit to measure chromatographic RT. See <a href="../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html">here</a> for more details.</p>
-<p>--FIGURE HERE--</p>
+<p>Altough mainly used for TIMS, the term <strong>"accumulation"</strong> refers to the pack of ions gathered at the head of the IM device prior to the release and separation in the IM cell. </p>
+<p>As explained <a href="#background">above</a>, since the accumulation-separation cycle typically last ~100 ms, multiple MS spectra (referred to as <strong>"mobility scans"</strong> in MZmine) are acquired during each cycle. </p>
+<p><strong>Frame</strong> is the set of <strong>mobility scans</strong> collected during each IM separation. A frame can be seen as the IM separation of a single accumulation, along which multiple MS spectra are collected. Several frames are contained within one LC peak. Thus, the <strong>frame number</strong> are a natural unit to measure chromatographic RT. </p>
+<p>See <a href="../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html">here</a> for more details.</p>
+<p><img alt="lcimsmsdata" src="../workflows/imsworkflow/lcimsmsdataformat.png" /></p>
 <h3 id="mobilograms">Mobilograms<a class="headerlink" href="#mobilograms" title="Permanent link">&para;</a></h3>
 <p>A "<em>mobilogram</em>" represents the intensity of an m/z or m/z range along the mobility axis. A
 <em>mobilogram</em> may be build from multiple frames and summed or built from a single frame.</p>
@@ -1797,11 +1809,12 @@ Time-dispersve IM devices include "traditional" drift tube (DTIMS) and travellin
 <h3 id="ion-mobility-trace">Ion mobility trace<a class="headerlink" href="#ion-mobility-trace" title="Permanent link">&para;</a></h3>
 <p>An "<em>ion mobility trace</em>" basically represents a mobility resolved extracted ion chromatogram (EIC).</p>
 <p><img alt="trace" src="trace.png" /></p>
-<h3 id="cross-collisional-section">Cross Collisional Section<a class="headerlink" href="#cross-collisional-section" title="Permanent link">&para;</a></h3>
-<p>IM-derived CCS values can be used as an additional molecular descriptor to support the compound unknown identification process.(Paglia et al. 2014) However, the number of acquired spectra per run increases from several thousand to several million, requiring memory-efficient software and new processing algorithms. </p>
+<h3 id="collisional-cross-section">Collisional Cross Section<a class="headerlink" href="#collisional-cross-section" title="Permanent link">&para;</a></h3>
+<p><strong>Collision cross section (CCS)</strong> can be defined as area of interaction between an individual ion and gas molecule. CCS depends on ion's size, shape, and charge. IM-derived CCS values can be used as an additional molecular descriptor to support the compound unknown identification process.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Meier, F., Brunner, A.D., Koch, S., Cox, J., Räther, O., Mann, M. Online Parallel Accumulation–Serial Fragmentation (PASEF) with a Novel Trapped Ion Mobility Mass Spectrometer. <em>Molecular &amp; Cellular Proteomics</em> (2018). DOI: 10.1074/mcp.TIR118.000900</li>
+<li>Meier, F., Brunner, A.D., Koch, S., Cox, J., Räther, O., Mann, M. Online Parallel Accumulation–Serial Fragmentation (PASEF) with a Novel Trapped Ion Mobility Mass Spectrometer. <em>Molecular &amp; Cellular Proteomics</em> (2018). DOI: <a href="https://doi.org/10.1074%2Fmcp.TIR118.000900">10.1074/mcp.TIR118.000900</a></li>
+<li>Paglia, G. et al. Ion Mobility Derived Collision Cross Sections to Support Metabolomics Applications. <em>Anal. Chem.</em> (2014). DOI: <a href="https://doi.org/10.1021/ac500405x">10.1021/ac500405x</a></li>
 </ul>
 
   <hr>
@@ -1809,7 +1822,7 @@ Time-dispersve IM devices include "traditional" drift tube (DTIMS) and travellin
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 16, 2022 15:42:27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 15, 2022 13:17:04</span>
       
     
   </small>
@@ -1848,13 +1861,13 @@ Time-dispersve IM devices include "traditional" drift tube (DTIMS) and travellin
       
       
         
-        <a href="../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-footer__link md-footer__link--next" aria-label="Next: IMS data format insight" rel="next">
+        <a href="../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-footer__link md-footer__link--next" aria-label="Next: LC-MS and LC-IMS-MS data comparison" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              IMS data format insight
+              LC-MS and LC-IMS-MS data comparison
             </div>
           </div>
           <div class="md-footer__button md-icon">

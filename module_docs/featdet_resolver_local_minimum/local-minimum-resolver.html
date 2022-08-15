@@ -1566,7 +1566,7 @@
   
     <li class="md-nav__item">
       <a href="../../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
-        IMS data format insight
+        LC-MS and LC-IMS-MS data comparison
       </a>
     </li>
   
@@ -1847,7 +1847,7 @@
 <h4 id="original-feature-list"><strong>Original feature list</strong><a class="headerlink" href="#original-feature-list" title="Permanent link">&para;</a></h4>
 <p>Keep or remove the input feature list(s). The <em>PROCESS IN PLACE</em> option directly filter the input feature list and performs better in terms of memory usage; therefore, it is recommended over <em>REMOVE</em>, when available.</p>
 <h4 id="msms-scan-pairing"><strong>MS/MS scan pairing</strong><a class="headerlink" href="#msms-scan-pairing" title="Permanent link">&para;</a></h4>
-<p>Pair MS/MS fragmentation spectra collected in <a href="../../terminology/general-terminology.html#data-dependent-acqusition-mode">DDA</a> mode to the resolved features. This is optional at this stage as the same can be done later in the pipeline using a separate <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html">module</a>. See <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html">MS2 scan pairing</a> documentation for more details.</p>
+<p>Pair MS/MS fragmentation spectra collected in <a href="../../terminology/general-terminology.html#data-dependent-acqusition-mode-dda">DDA</a> mode to the resolved features. This is optional at this stage as the same can be done later in the pipeline using a separate <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html">module</a>. See <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html">MS2 scan pairing</a> documentation for more details.</p>
 <h4 id="dimension"><strong>Dimension</strong><a class="headerlink" href="#dimension" title="Permanent link">&para;</a></h4>
 <p>Dimension to be resolved. Select <em>Retention time</em> or <em>Mobility</em> to run the module over the RT or IM dimension, respectively.</p>
 <h4 id="chromatographic-threshold"><strong>Chromatographic threshold</strong><a class="headerlink" href="#chromatographic-threshold" title="Permanent link">&para;</a></h4>
@@ -1896,7 +1896,7 @@ The algorithm finds the intensity value (threshold) that leaves the specified pe
 <p>On the other hand, a single feature in the IM dimension is normally made up of more data points than regular LC peaks, due to the different timescale the IM separation is performed on (see <a href="../../terminology/ion-mobility-terminology.html#background">here</a> for more details). Therefore, a higher <em>Min # of data points</em> can be set when <a href="#resolving-the-ion-mobility-dimension">resolving the ion mobility dimension</a> to filter out noisy features.</p>
 </li>
 <li>
-<p>Different vendors use different units of mobility. For instance, <a href="../../terminology/ion-mobility-terminology.html#trapped-ion-mobility-spectrometry-tims">TIMS</a> express ions' mobility as Vs/cm<sup>2</sup>, whereas <a href="../../terminology/ion-mobility-terminology.html#time-dispersve-ion-mobility-spectrometry-dtims-and-twims">time dispersive IM devices</a> (DTIMS and TWIMS) use the ions' drift time (expressed in milliseconds). TIMS values are numerically smaller than DTIMS or TWIMS; therefore, the <a href="#minimum-search-range-rtmobility-absolute">minimum search range</a> parameter should be adjusted accordingly. </p>
+<p>Different vendors use different units of mobility. For instance, <a href="../../terminology/ion-mobility-terminology.html#trapped-ion-mobility-spectrometry-tims">TIMS</a> express ions' mobility as Vs/cm<sup>2</sup>, whereas <a href="../../terminology/ion-mobility-terminology.html#time-dispersive-ion-mobility-spectrometry-dtims-and-twims">time dispersive IM devices</a> (DTIMS and TWIMS) use the ions' drift time (expressed in milliseconds). TIMS values are numerically smaller than DTIMS or TWIMS; therefore, the <a href="#minimum-search-range-rtmobility-absolute">minimum search range</a> parameter should be adjusted accordingly. </p>
 </li>
 </ol>
 
@@ -1905,7 +1905,7 @@ The algorithm finds the intensity value (threshold) that leaves the specified pe
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 11, 2022 09:10:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 15, 2022 13:24:12</span>
       
     
   </small>

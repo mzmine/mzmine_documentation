@@ -15,7 +15,7 @@
     
     
       
-        <title>IMS data format insight - MZmine 3 Documentation</title>
+        <title>LC-MS and LC-IMS-MS data comparison - MZmine 3 Documentation</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              IMS data format insight
+              LC-MS and LC-IMS-MS data comparison
             
           </span>
         </div>
@@ -1437,7 +1437,7 @@
       
       
       <a href="lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link md-nav__link--active">
-        IMS data format insight
+        LC-MS and LC-IMS-MS data comparison
       </a>
       
     </li>
@@ -1594,15 +1594,27 @@
 
 
 
-<h1 id="graphical-comparison-of-lc-ms-and-lc-ims-ms-data">Graphical comparison of LC-MS and LC-IMS-MS data<a class="headerlink" href="#graphical-comparison-of-lc-ms-and-lc-ims-ms-data" title="Permanent link">&para;</a></h1>
-<p>Classic LC-MS data consists of three dimensions: m/z, intensity, and retention time. At every
-retention time, a whole mass spectrum is acquired (yellow). Putting all scans together creates a
-three-dimensional plane. By slicing the three-dimensional data at a single m/z (+- a tolerance),
-EICs can be created (green).</p>
+<h1 id="graphical-comparison-of-lc-ms-and-lc-ims-ms-data"><strong>Graphical comparison of LC-MS and LC-IMS-MS data</strong><a class="headerlink" href="#graphical-comparison-of-lc-ms-and-lc-ims-ms-data" title="Permanent link">&para;</a></h1>
+<p><strong>Classic LC-MS data</strong> consists of three dimensions: </p>
+<ul>
+<li>m/z, </li>
+<li>intensity, </li>
+<li>and retention time. </li>
+</ul>
+<p>At every retention time, a whole mass spectrum is acquired (yellow). 
+Putting all scans together creates a three-dimensional plane. By slicing the three-dimensional data at a single m/z value (+- a value of tolerance),
+<a href="../../terminology/general-terminology.html#extracted-ion-chromatogram"><strong>EICs</strong></a> can be created (green).</p>
 <p><img alt="lcmsdata" src="lcmsdataformat.png" /></p>
-<p>On the other hand, ion mobility resolved data consists of a three-dimensional data plane at each
-retention time. The three dimensions being m/z, intensity, and mobility (as drift time (ms) or
-inverse reduced mobility 1/k0 [Vs/(cm^2)]). The 3D projection of regular LC-MS data can be created
+<p><strong>Ion mobility resolved data</strong>, on the other hand, consists of a three-dimensional data plane at each
+retention time. 
+The three dimensions being:</p>
+<ul>
+<li>m/z, </li>
+<li>intensity,</li>
+<li>and mobility (as drift time (ms) or
+inverse reduced mobility <span class="arithmatex">\(1/K_0 [Vs/(cm^2)]\)</span>). </li>
+</ul>
+<p>The 3D projection of regular LC-MS data can be created
 by summing all mobility scans of a frame to create a frame spectrum.
 (see <a href="../../module_docs/featdet_mobility_scan_merging/mobility-scan-merging.html">Mobility scan merging</a>)</p>
 <p><img alt="lcimsmsdata" src="lcimsmsdataformat.png" /></p>
@@ -1612,7 +1624,7 @@ by summing all mobility scans of a frame to create a frame spectrum.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 10, 2022 15:42:38</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 15, 2022 13:17:04</span>
       
     
   </small>
