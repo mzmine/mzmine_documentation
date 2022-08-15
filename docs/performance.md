@@ -41,5 +41,11 @@ Currently, the logs are written to an _mzmine_0_0.log_ file in the user's home d
 submit your log files together with any issues
 on **[GitHub](https://github.com/mzmine/mzmine3/issues)**.
 
+## Maximum memory
+The maximum Java heap size (the main part of the RAM available to MZmine) is set to 80%. This is usually a good value, considering that MZmine and its Java Virtual Machine (JVM) will use memory extending over this 80% threshold for specific tasks. There is one way to change the maximum heap size before starting MZmine, however, it requires administrator access.
 
-
+Find the **MZmine/app/MZmine.cfg** file in the MZmine install directory or portable version. Under Window, this file is write protected, which needs to be changed under **File/Properties/Security/** select Users and click Edit to grant write access. Now change the _MaxRAMPercentage_ to grant more RAM.
+```
+java-options=-XX:InitialRAMPercentage=10
+java-options=-XX:MaxRAMPercentage=80
+```
