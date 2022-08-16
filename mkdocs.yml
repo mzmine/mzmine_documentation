@@ -46,8 +46,10 @@ nav:
         - Duplicate feature filter: module_docs/Duplicate_feature_filter/duplicate_feature_filter.md
         - Feature list rows filter: module_docs/feature_list_row_filter/feature_list_rows_filter.md
       - MS2 scan paring: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
-      - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md 
-      - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md
+      - Isotope filtering:
+        - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md
+        - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md
+        - Isotope peak scanner: module_docs/filter_isotope_peak_scanner/isotope_peak_scanner.md
       - Spectral library creation: module_docs/id_spectral_library_creation/spectral_library_creation.md
       - Spectral library search: module_docs/id_spectral_library_search/spectral_library_search.md
       - Export to GNPS-FBMN/IIMN: module_docs/GNPS_export/gnps_export.md
