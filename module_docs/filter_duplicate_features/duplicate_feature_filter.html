@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/filter_duplicate_features/duplicate_feature_filter.html">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
     
     
       
@@ -905,57 +905,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     Parameters
   </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#name-sufix" class="md-nav__link">
-    Name sufix
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filter-mode" class="md-nav__link">
-    Filter mode:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mz-tolerance" class="md-nav__link">
-    m/z tolerance
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rt-tolerance" class="md-nav__link">
-    RT tolerance
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#require-same-identification" class="md-nav__link">
-    Require same identification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#original-feature-list" class="md-nav__link">
-    Original feature list
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -976,6 +935,76 @@
     <li class="md-nav__item">
       <a href="../feature_list_row_filter/feature_list_rows_filter.html" class="md-nav__link">
         Feature list rows filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feature_filter/feature_filter.html" class="md-nav__link">
+        Feature filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filter_peakcomparison_row_filter/filter_peakcomparison_row_filter.html" class="md-nav__link">
+        Peak comparison rows filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filter_neutral_loss/filter_neutral_loss.html" class="md-nav__link">
+        Neutral loss filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filter_mobilitymzregionextraction/filter_mobilitymzregionextraction.html" class="md-nav__link">
+        m/z mobility region extraction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filter_blanksubtraction/filter_blanksubtraction.html" class="md-nav__link">
+        Feature list blank subtraction
       </a>
     </li>
   
@@ -1774,57 +1803,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     Parameters
   </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#name-sufix" class="md-nav__link">
-    Name sufix
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filter-mode" class="md-nav__link">
-    Filter mode:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mz-tolerance" class="md-nav__link">
-    m/z tolerance
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rt-tolerance" class="md-nav__link">
-    RT tolerance
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#require-same-identification" class="md-nav__link">
-    Require same identification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#original-feature-list" class="md-nav__link">
-    Original feature list
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1846,36 +1834,46 @@
 
 
 
-<h1 id="duplicate-feature-filter">Duplicate feature filter<a class="headerlink" href="#duplicate-feature-filter" title="Permanent link">&para;</a></h1>
-<p>This filter might be very helpful to eliminate misaligned feature list rows after the gap-filling process. It is found under 
-<strong>Feature list method → Feature list filtering → Duplicate feature filter</strong>.</p>
-<p>It has three different modes:</p>
-<p><strong>Old average (the old filter)</strong>: Keeps only the feature list row with the maximum average area. Checks for average m/z and RT.</p>
-<p><strong>New average</strong>: Two peaks are considered duplicates when their average m/z and retention time differences are lower than the tolerances set by the user. When two (or more) duplicates are found, a consensus row is created with the lowest row ID of all duplicates.
-For this consensus row, all DETECTED features are favored over ESTIMATED (gap-filled) and ESTIMATED are favored over UNKNOWN. Furthermore, if there are only ESTIMATED features in a raw data file, the highest is chosen.</p>
-<p><strong>Single feature</strong>: Marks rows as duplicates if they share one feature within the RT and m/z tolerance in the same raw data file. Creates a consensus row.</p>
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h4 id="name-sufix">Name sufix<a class="headerlink" href="#name-sufix" title="Permanent link">&para;</a></h4>
-<p>This is the suffix to identify the new aligned peak list.</p>
-<h4 id="filter-mode">Filter mode:<a class="headerlink" href="#filter-mode" title="Permanent link">&para;</a></h4>
-<p>Old average: Compares rows with the average m/z and RT (like the old algorithm)
-New average: Compares rows with the average m/z and RT and creates a consensus row.
-Single feature: Compares rows on a raw data file basis. Marks rows as duplicates if two rows share a feature in a raw data file with the same RT and m/z (and identity/charge state).</p>
-<h4 id="mz-tolerance">m/z tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum m/z difference between duplicate peaks.</p>
-<h4 id="rt-tolerance">RT tolerance<a class="headerlink" href="#rt-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum retention time difference between duplicate peaks.</p>
-<h4 id="require-same-identification">Require same identification<a class="headerlink" href="#require-same-identification" title="Permanent link">&para;</a></h4>
-<p>If the checkbox is selected duplicate peaks must have the same identification.</p>
-<h4 id="original-feature-list">Original feature list<a class="headerlink" href="#original-feature-list" title="Permanent link">&para;</a></h4>
-<p>Can be either processed in place of, kept or replaced. </p>
+<h1 id="duplicate-feature-filter"><strong>Duplicate feature filter</strong><a class="headerlink" href="#duplicate-feature-filter" title="Permanent link">&para;</a></h1>
+<h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Feature list method → Feature list filtering → Duplicate feature filter</strong>.</p>
+<p>This filter can help eliminate misaligned feature list rows after the gap-filling process. </p>
+<p>It has three different <strong>modes</strong>:</p>
+<ul>
+<li>
+<p><strong>Old average (the old filter)</strong>:</p>
+<p>Keeps only the feature list row with the maximum average area. Compares rows with the average m/z and RT.</p>
+</li>
+<li>
+<p><strong>New average</strong>: </p>
+<p>Compares rows with the average m/z and RT and creates a consensus row.Two peaks are considered duplicates when their average m/z and retention time differences are lower than the tolerances set by the user. </p>
+<p>When two (or more) duplicates are found, a <strong>consensus row</strong> is created with the lowest row ID of all duplicates. For this consensus row, all DETECTED features are favored over ESTIMATED (gap-filled) and ESTIMATED are favored over UNKNOWN. Furthermore, if there are only ESTIMATED features in a raw data file, the highest is chosen.</p>
+</li>
+<li>
+<p><strong>Single feature</strong>: </p>
+<p>Compares rows on a raw data file basis. Marks rows as duplicates if they share one feature within the RT and m/z tolerance in the same raw data file. Creates a consensus row.</p>
+</li>
+</ul>
+<h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<p><strong>Name suffix</strong>
+This is the suffix to identify the new aligned peak list.</p>
+<p><strong>Filter mode</strong>
+User can choose one of three modes: old average, new average, and single feature.</p>
+<p><strong>m/z tolerance</strong>
+Maximum m/z difference between duplicate peaks.</p>
+<p><strong>RT tolerance</strong>
+Maximum retention time difference between duplicate peaks.</p>
+<p><strong>Require same identification</strong>
+If the checkbox is selected duplicate peaks must have the same identification.</p>
+<p><strong>Original feature list</strong>
+Can be either processed in place of, kept or replaced. </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 18, 2022 08:36:33</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 22, 2022 09:25:46</span>
       
     
   </small>
