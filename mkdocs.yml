@@ -45,6 +45,11 @@ nav:
       - Feature list filtering:
         - Duplicate feature filter: module_docs/filter_duplicate_features/duplicate_feature_filter.md
         - Feature list rows filter: module_docs/feature_list_row_filter/feature_list_rows_filter.md
+        - Feature filter: module_docs/feature_filter/feature_filter.md
+        - Peak comparison rows filter: module_docs/filter_peakcomparison_row_filter/filter_peakcomparison_row_filter.md
+        - Neutral loss filter: module_docs/filter_neutral_loss/filter_neutral_loss.md
+        - m/z mobility region extraction: module_docs/filter_mobilitymzregionextraction/filter_mobilitymzregionextraction.md
+        - Feature list blank subtraction: module_docs/filter_blanksubtraction/filter_blanksubtraction.md
       - MS2 scan paring: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
       - Isotope filtering:
         - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md
@@ -104,12 +109,12 @@ plugins:
       show_contribution: true
   - git-revision-date-localized:
       type: datetime
-#  - with-pdf:
-#      output_path: documentation.pdf
-#      author: The MZmine Community
-#      cover_title: MZmine 3
-#      cover_subtitle: Documentation
-#      cover_logo: img/MZmine_logo_CMYK.png
+  - with-pdf:
+      output_path: documentation.pdf
+      author: The MZmine Community
+      cover_title: MZmine 3
+      cover_subtitle: Documentation
+      cover_logo: img/MZmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:
