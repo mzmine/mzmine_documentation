@@ -4,7 +4,7 @@
 
 :material-menu-open: **Feature list methods → Feature list filtering → Peak comparison rows filter**
 
-This method removes certain rows from a feature list based on peak comparisons.
+This method removes certain rows from an aligned feature list based on peak comparisons in two columns.
 
 # **Parameters**
 

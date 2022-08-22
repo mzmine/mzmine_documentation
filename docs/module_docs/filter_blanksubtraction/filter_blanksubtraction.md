@@ -8,7 +8,7 @@ Subtracts the features appearing in (procedural) blank measurements feature list
 
 ## **Parameters**
 
-:warning: This module needs aligned feature lists as an input.
+:warning: This module needs aligned feature lists as an input. This aligned feature list should contain features from blank/control. 
 
 **Minimum # of detection in blanks**
 
