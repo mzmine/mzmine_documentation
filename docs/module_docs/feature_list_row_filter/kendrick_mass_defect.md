@@ -17,4 +17,4 @@ Set charge value
 #### Divisor
 Set divisor value
 #### Use remainder of Kendrick mass
-Select check box to use RKM instead if KMD
+Select check box to use RKM instead of KMD
