@@ -49,7 +49,7 @@ Feature alignment enables alignment of corresponding features across all samples
 ### Join aligner
 This module aligns detected peaks in different samples through a match score. The score is calculated based on the mass
 and retention time of each peak and ranges of tolerance stipulated in the parameter setup dialog.
-For more information, see the [join aligner](../../module_docs/join_aligner/join_aligner.md) module. 
+For more information, see the [join aligner](../../module_docs/align_join_aligner/join_aligner.md) module. 
 
 ## Gap-filling 
 Absence of features in some samples can either reflect the truth - the metabolite is absent in the given sample, or it can be due to data preprocessing.To account for  this, gap filling is applied as the next step.
