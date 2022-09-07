@@ -51,6 +51,41 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/align_adap/align_adap_gc.html</loc>
+         <lastmod>2022-09-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/align_hierarch/align_hierarch.html</loc>
+         <lastmod>2022-09-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/align_join_aligner/join_aligner.html</loc>
+         <lastmod>2022-09-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/align_join_aligner/spectra_similarity.html</loc>
+         <lastmod>2022-09-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/align_lc-image/align_lc-image.html</loc>
+         <lastmod>2022-09-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/align_merge_lists/align_merge_lists.html</loc>
+         <lastmod>2022-09-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/align_ransac/align_ransac.html</loc>
+         <lastmod>2022-09-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_file_merging/raw-files-merging.html</loc>
          <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
@@ -217,16 +252,6 @@
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/io/data-import.html</loc>
-         <lastmod>2022-09-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/join_aligner/join_aligner.html</loc>
-         <lastmod>2022-09-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/join_aligner/spectra_similarity.html</loc>
          <lastmod>2022-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
