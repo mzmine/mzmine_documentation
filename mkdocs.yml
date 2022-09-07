@@ -74,7 +74,7 @@ nav:
       - Export to GNPS-FBMN/IIMN: module_docs/GNPS_export/gnps_export.md
       - Other parameters:
         - Merge MS/MS: module_docs/GNPS_export/merge_ms2_kai.md
-        - Spectra similarity: module_docs/join_aligner/spectra_similarity.md
+        - Spectra similarity: module_docs/align_join_aligner/spectra_similarity.md
 
   - Visualization modules:
       - Visualization overview: visualization_modules/visualization_overview/visualization-overview.md
