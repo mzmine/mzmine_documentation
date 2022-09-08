@@ -25,6 +25,8 @@ A typical workflow can be as following:
 - "Raw data methods → Raw data import" to import raw data files
 - "Raw data methods → Mass detection" to detect masses in the raw data
 
+[//]: # (TODO Check if old version is properly "translated" into the new one)
+
 [//]: # ([//]: # &#40;- Old version)
 
 [//]: # (Raw datamethods / Peak detection / ADAP Chromatogram builder builds extracted-ion chromatograms)
