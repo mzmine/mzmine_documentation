@@ -8,19 +8,21 @@
       
       
       
-      <link rel="icon" href="/mzmine_documentation/assets/images/favicon.png">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/norm_linear/norm_linear.html">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.3">
     
     
       
-        <title>MZmine 3 Documentation</title>
+        <title>Linear normalizer - MZmine 3 Documentation</title>
       
     
     
-      <link rel="stylesheet" href="/mzmine_documentation/assets/stylesheets/main.6b80c2a2.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6b80c2a2.min.css">
       
         
-        <link rel="stylesheet" href="/mzmine_documentation/assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -36,7 +38,7 @@
       
     
     
-    <script>__md_scope=new URL("/mzmine_documentation/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -59,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#linear-normalizer" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,9 +76,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/mzmine_documentation/index.html" title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+    <a href="../../index.html" title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
       
-  <img src="/mzmine_documentation/img/MZMine_logo_white.png" alt="logo">
+  <img src="../../img/MZMine_logo_white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -87,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Linear normalizer
             
           </span>
         </div>
@@ -166,9 +173,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/mzmine_documentation/index.html" title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+    <a href="../../index.html" title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
       
-  <img src="/mzmine_documentation/img/MZMine_logo_white.png" alt="logo">
+  <img src="../../img/MZMine_logo_white.png" alt="logo">
 
     </a>
     MZmine 3 Documentation
@@ -196,7 +203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         Home page
       </a>
     </li>
@@ -211,7 +218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/getting_started.html" class="md-nav__link">
+      <a href="../../getting_started.html" class="md-nav__link">
         Getting started
       </a>
     </li>
@@ -226,7 +233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/main-window-overview.html" class="md-nav__link">
+      <a href="../../main-window-overview.html" class="md-nav__link">
         Main window overview
       </a>
     </li>
@@ -239,12 +246,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -293,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/io/data-import.html" class="md-nav__link">
+      <a href="../io/data-import.html" class="md-nav__link">
         Data import
       </a>
     </li>
@@ -307,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/io/data-export.html" class="md-nav__link">
+      <a href="../io/data-export.html" class="md-nav__link">
         Data export
       </a>
     </li>
@@ -354,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/featdet_file_merging/raw-files-merging.html" class="md-nav__link">
+      <a href="../featdet_file_merging/raw-files-merging.html" class="md-nav__link">
         Raw data files merging
       </a>
     </li>
@@ -368,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/featdet_mobility_scan_merging/mobility-scan-merging.html" class="md-nav__link">
+      <a href="../featdet_mobility_scan_merging/mobility-scan-merging.html" class="md-nav__link">
         Mobility scan merging
       </a>
     </li>
@@ -415,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_raw_data/filter-scan-by-scan.html" class="md-nav__link">
+      <a href="../filter_raw_data/filter-scan-by-scan.html" class="md-nav__link">
         Scan by scan filtering
       </a>
     </li>
@@ -429,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_raw_data/crop-filter.html" class="md-nav__link">
+      <a href="../filter_raw_data/crop-filter.html" class="md-nav__link">
         Crop filter
       </a>
     </li>
@@ -443,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_raw_data/baseline-corrections.html" class="md-nav__link">
+      <a href="../filter_raw_data/baseline-corrections.html" class="md-nav__link">
         Baseline corrections
       </a>
     </li>
@@ -457,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_raw_data/align-scans.html" class="md-nav__link">
+      <a href="../filter_raw_data/align-scans.html" class="md-nav__link">
         Align scans
       </a>
     </li>
@@ -471,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_raw_data/scan_smoothing.html" class="md-nav__link">
+      <a href="../filter_raw_data/scan_smoothing.html" class="md-nav__link">
         Scan smoothing
       </a>
     </li>
@@ -518,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/featdet_mass_detection/mass-detection.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/mass-detection.html" class="md-nav__link">
         Mass detection
       </a>
     </li>
@@ -532,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/featdet_mass_detection/mass-detection-algorithms.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/mass-detection-algorithms.html" class="md-nav__link">
         Mass detection algorithms
       </a>
     </li>
@@ -546,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/FTMS-shoulder-peak-filter.html" class="md-nav__link">
         FTMS shoulder peak finder
       </a>
     </li>
@@ -560,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/featdet_mass_detection/mass-calibration.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/mass-calibration.html" class="md-nav__link">
         Mass calibration
       </a>
     </li>
@@ -607,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html" class="md-nav__link">
+      <a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html" class="md-nav__link">
         ADAP Chromatogram builder
       </a>
     </li>
@@ -621,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/lc-ms_featdet/featdet_gridmass/gridmass.html" class="md-nav__link">
+      <a href="../lc-ms_featdet/featdet_gridmass/gridmass.html" class="md-nav__link">
         GridMass
       </a>
     </li>
@@ -635,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.html" class="md-nav__link">
+      <a href="../lc-ms_featdet/targeted_featdet/targeted-featdet.html" class="md-nav__link">
         Targeted feature detection
       </a>
     </li>
@@ -682,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.html" class="md-nav__link">
+      <a href="../lc-ims-ms_featdet/featdet_ims_expander/ims-expander.html" class="md-nav__link">
         Ion mobility expander
       </a>
     </li>
@@ -696,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-nav__link">
+      <a href="../lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-nav__link">
         Ion mobility trace builder
       </a>
     </li>
@@ -710,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.html" class="md-nav__link">
+      <a href="../lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.html" class="md-nav__link">
         Recursive IMS builder
       </a>
     </li>
@@ -731,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/featdet_smoothing/smoothing.html" class="md-nav__link">
+      <a href="../featdet_smoothing/smoothing.html" class="md-nav__link">
         Smoothing
       </a>
     </li>
@@ -745,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-nav__link">
         Resolving
       </a>
     </li>
@@ -759,7 +768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/id_ccs_calibration/ccs_calibration.html" class="md-nav__link">
+      <a href="../id_ccs_calibration/ccs_calibration.html" class="md-nav__link">
         CCS calibration
       </a>
     </li>
@@ -773,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.html" class="md-nav__link">
+      <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html" class="md-nav__link">
         MS2 scan pairing
       </a>
     </li>
@@ -813,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_isotope_filter/isotope_filter.html" class="md-nav__link">
+      <a href="../filter_isotope_filter/isotope_filter.html" class="md-nav__link">
         13C isotope filter (isotope grouper)
       </a>
     </li>
@@ -827,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_isotope_finder/isotope_finder.html" class="md-nav__link">
+      <a href="../filter_isotope_finder/isotope_finder.html" class="md-nav__link">
         Isotope pattern finder
       </a>
     </li>
@@ -841,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_isotope_peak_scanner/isotope_peak_scanner.html" class="md-nav__link">
+      <a href="../filter_isotope_peak_scanner/isotope_peak_scanner.html" class="md-nav__link">
         Isotope peak scanner
       </a>
     </li>
@@ -888,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/featdet_hierarch_clustering/featdet_hierarch_clustering.html" class="md-nav__link">
+      <a href="../featdet_hierarch_clustering/featdet_hierarch_clustering.html" class="md-nav__link">
         Hierarchical clustering
       </a>
     </li>
@@ -902,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/featdet_multivariate_curve_res/featdet_multivar_curve_res.html" class="md-nav__link">
+      <a href="../featdet_multivariate_curve_res/featdet_multivar_curve_res.html" class="md-nav__link">
         Multivariate curve resolution
       </a>
     </li>
@@ -949,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_duplicate_features/duplicate_feature_filter.html" class="md-nav__link">
+      <a href="../filter_duplicate_features/duplicate_feature_filter.html" class="md-nav__link">
         Duplicate feature filter
       </a>
     </li>
@@ -963,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/feature_list_row_filter/feature_list_rows_filter.html" class="md-nav__link">
+      <a href="../feature_list_row_filter/feature_list_rows_filter.html" class="md-nav__link">
         Feature list rows filter
       </a>
     </li>
@@ -977,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/feature_filter/feature_filter.html" class="md-nav__link">
+      <a href="../feature_filter/feature_filter.html" class="md-nav__link">
         Feature filter
       </a>
     </li>
@@ -991,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_peakcomparison_row_filter/filter_peakcomparison_row_filter.html" class="md-nav__link">
+      <a href="../filter_peakcomparison_row_filter/filter_peakcomparison_row_filter.html" class="md-nav__link">
         Peak comparison rows filter
       </a>
     </li>
@@ -1005,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_neutral_loss/filter_neutral_loss.html" class="md-nav__link">
+      <a href="../filter_neutral_loss/filter_neutral_loss.html" class="md-nav__link">
         Neutral loss filter
       </a>
     </li>
@@ -1019,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_mobilitymzregionextraction/filter_mobilitymzregionextraction.html" class="md-nav__link">
+      <a href="../filter_mobilitymzregionextraction/filter_mobilitymzregionextraction.html" class="md-nav__link">
         m/z mobility region extraction
       </a>
     </li>
@@ -1033,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/filter_blanksubtraction/filter_blanksubtraction.html" class="md-nav__link">
+      <a href="../filter_blanksubtraction/filter_blanksubtraction.html" class="md-nav__link">
         Feature list blank subtraction
       </a>
     </li>
@@ -1080,7 +1089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/align_join_aligner/join_aligner.html" class="md-nav__link">
+      <a href="../align_join_aligner/join_aligner.html" class="md-nav__link">
         Join aligner
       </a>
     </li>
@@ -1094,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/align_merge_lists/align_merge_lists.html" class="md-nav__link">
+      <a href="../align_merge_lists/align_merge_lists.html" class="md-nav__link">
         Merge lists
       </a>
     </li>
@@ -1108,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/align_ransac/align_ransac.html" class="md-nav__link">
+      <a href="../align_ransac/align_ransac.html" class="md-nav__link">
         RANSAC aligner
       </a>
     </li>
@@ -1122,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/align_hierarch/align_hierarch.html" class="md-nav__link">
+      <a href="../align_hierarch/align_hierarch.html" class="md-nav__link">
         Hierachical aligner (GC)
       </a>
     </li>
@@ -1136,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/align_adap/align_adap_gc.html" class="md-nav__link">
+      <a href="../align_adap/align_adap_gc.html" class="md-nav__link">
         ADAP aligner (GC)
       </a>
     </li>
@@ -1150,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/align_lc-image/align_lc-image.html" class="md-nav__link">
+      <a href="../align_lc-image/align_lc-image.html" class="md-nav__link">
         LC Image Aligner
       </a>
     </li>
@@ -1197,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/gapfill_peak_finder/gap-filling.html" class="md-nav__link">
+      <a href="../gapfill_peak_finder/gap-filling.html" class="md-nav__link">
         Peak finder
       </a>
     </li>
@@ -1211,7 +1220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/gapfill_same_mz_and_RT_range/same_mz_and_RT_range_gap_filler.html" class="md-nav__link">
+      <a href="../gapfill_same_mz_and_RT_range/same_mz_and_RT_range_gap_filler.html" class="md-nav__link">
         Same RT and m/z range gap filler
       </a>
     </li>
@@ -1230,12 +1239,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_16" type="checkbox" id="__nav_4_16" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_16" type="checkbox" id="__nav_4_16" checked>
       
       
       
@@ -1258,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/norm_rt_calibration/norm_rt_calibration.html" class="md-nav__link">
+      <a href="../norm_rt_calibration/norm_rt_calibration.html" class="md-nav__link">
         Retention time calibration
       </a>
     </li>
@@ -1270,11 +1281,72 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/norm_linear/norm_linear.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Linear normalizer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="norm_linear.html" class="md-nav__link md-nav__link--active">
         Linear normalizer
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normalization-factors" class="md-nav__link">
+    Normalization factors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1286,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/norm_stand_cmpd/norm_stand_cmpd.html" class="md-nav__link">
+      <a href="../norm_stand_cmpd/norm_stand_cmpd.html" class="md-nav__link">
         Standard compound normalizer
       </a>
     </li>
@@ -1307,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/id_spectral_library_creation/spectral_library_creation.html" class="md-nav__link">
+      <a href="../id_spectral_library_creation/spectral_library_creation.html" class="md-nav__link">
         Spectral library creation
       </a>
     </li>
@@ -1321,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/id_spectral_library_search/spectral_library_search.html" class="md-nav__link">
+      <a href="../id_spectral_library_search/spectral_library_search.html" class="md-nav__link">
         Spectral library search
       </a>
     </li>
@@ -1335,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/GNPS_export/gnps_export.html" class="md-nav__link">
+      <a href="../GNPS_export/gnps_export.html" class="md-nav__link">
         Export to GNPS-FBMN/IIMN
       </a>
     </li>
@@ -1375,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/GNPS_export/merge_ms2_kai.html" class="md-nav__link">
+      <a href="../GNPS_export/merge_ms2_kai.html" class="md-nav__link">
         Merge MS/MS
       </a>
     </li>
@@ -1389,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/module_docs/align_join_aligner/spectra_similarity.html" class="md-nav__link">
+      <a href="../align_join_aligner/spectra_similarity.html" class="md-nav__link">
         Spectra similarity
       </a>
     </li>
@@ -1444,7 +1516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/visualization_modules/visualization_overview/visualization-overview.html" class="md-nav__link">
+      <a href="../../visualization_modules/visualization_overview/visualization-overview.html" class="md-nav__link">
         Visualization overview
       </a>
     </li>
@@ -1484,7 +1556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/visualization_modules/raw_data_overview/raw_data_overview.html" class="md-nav__link">
+      <a href="../../visualization_modules/raw_data_overview/raw_data_overview.html" class="md-nav__link">
         Raw data overview
       </a>
     </li>
@@ -1498,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/visualization_modules/raw_data_overview/raw_data_additional.html" class="md-nav__link">
+      <a href="../../visualization_modules/raw_data_overview/raw_data_additional.html" class="md-nav__link">
         Additional tools
       </a>
     </li>
@@ -1519,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/visualization_modules/ims_raw_data_overview/IM-data-visualisation.html" class="md-nav__link">
+      <a href="../../visualization_modules/ims_raw_data_overview/IM-data-visualisation.html" class="md-nav__link">
         Ion mobility data visualisation
       </a>
     </li>
@@ -1533,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/visualization_modules/image_raw_data/image_viewer.html" class="md-nav__link">
+      <a href="../../visualization_modules/image_raw_data/image_viewer.html" class="md-nav__link">
         Image viewer
       </a>
     </li>
@@ -1573,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
+      <a href="../../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
         MSMS Visualizer
       </a>
     </li>
@@ -1587,7 +1659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.html" class="md-nav__link">
+      <a href="../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.html" class="md-nav__link">
         Interactive Ion Identity Molecular Networks
       </a>
     </li>
@@ -1601,7 +1673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/visualization_modules/feature_histograms/feature_hist.html" class="md-nav__link">
+      <a href="../../visualization_modules/feature_histograms/feature_hist.html" class="md-nav__link">
         Feature histograms
       </a>
     </li>
@@ -1615,7 +1687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/visualization_modules/processed_additional/processed_additional.html" class="md-nav__link">
+      <a href="../../visualization_modules/processed_additional/processed_additional.html" class="md-nav__link">
         Additional tools
       </a>
     </li>
@@ -1670,7 +1742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
+      <a href="../../workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
         LC-MS workflow
       </a>
     </li>
@@ -1684,7 +1756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/workflows/imsworkflow/ion-mobility-data-processing-workflow.html" class="md-nav__link">
+      <a href="../../workflows/imsworkflow/ion-mobility-data-processing-workflow.html" class="md-nav__link">
         LC-IMS-MS workflow
       </a>
     </li>
@@ -1698,7 +1770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/workflows/batch_processing/batch-processing.html" class="md-nav__link">
+      <a href="../../workflows/batch_processing/batch-processing.html" class="md-nav__link">
         Batch processing
       </a>
     </li>
@@ -1746,7 +1818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/terminology/general-terminology.html" class="md-nav__link">
+      <a href="../../terminology/general-terminology.html" class="md-nav__link">
         General Terminology
       </a>
     </li>
@@ -1760,7 +1832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/terminology/ion-mobility-terminology.html" class="md-nav__link">
+      <a href="../../terminology/ion-mobility-terminology.html" class="md-nav__link">
         IMS Terminology
       </a>
     </li>
@@ -1774,7 +1846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
+      <a href="../../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
         LC-MS and LC-IMS-MS data comparison
       </a>
     </li>
@@ -1796,7 +1868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/performance.html" class="md-nav__link">
+      <a href="../../performance.html" class="md-nav__link">
         Performance options
       </a>
     </li>
@@ -1811,7 +1883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/commandline_tool.html" class="md-nav__link">
+      <a href="../../commandline_tool.html" class="md-nav__link">
         Command line tool (batch mode)
       </a>
     </li>
@@ -1852,7 +1924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/contribute.html" class="md-nav__link">
+      <a href="../../contribute.html" class="md-nav__link">
         Contribute
       </a>
     </li>
@@ -1866,7 +1938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/contribute_intellij.html" class="md-nav__link">
+      <a href="../../contribute_intellij.html" class="md-nav__link">
         MZmine development (in IntelliJ)
       </a>
     </li>
@@ -1888,7 +1960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mzmine_documentation/wikiacknowledgements.html" class="md-nav__link">
+      <a href="../../wikiacknowledgements.html" class="md-nav__link">
         Acknowledgements
       </a>
     </li>
@@ -1912,6 +1984,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normalization-factors" class="md-nav__link">
+    Normalization factors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1922,8 +2031,59 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
 
+  <a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/module_docs/norm_linear/norm_linear.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="linear-normalizer"><strong>Linear normalizer</strong><a class="headerlink" href="#linear-normalizer" title="Permanent link">&para;</a></h1>
+<h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Feature list methods → Normalization → Linear normalizer</strong></p>
+<p>Linear normalizer divides the height (or area) of each feature in the feature list by a normalization factor, chosen according to the "Normalization type" parameter. </p>
+<p>Each column of the feature list is normalized separately. In other words, normalization factor is determined independently for each raw data file.</p>
+<h3 id="normalization-factors"><strong>Normalization factors</strong><a class="headerlink" href="#normalization-factors" title="Permanent link">&para;</a></h3>
+<p><strong>Average intensity</strong></p>
+<p>Average height (or area) of all peaks in the column is calculated and used as the normalization factor</p>
+<p><strong>Average squared intensity</strong></p>
+<p>Same as Average intensity, but values are squared before calculating the average</p>
+<p><strong>Maximum peak intensity</strong></p>
+<p>Maximum height (or area) in the peak list column is used as the normalization factor</p>
+<p><strong>Total raw signal</strong></p>
+<p>Sum of the height (or area) of all peaks in the peak list column is used as the normalization factor</p>
+<h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<p><strong>Name suffix</strong></p>
+<p>Suffix to be added to a processed feature list name</p>
+<p><strong>Normalization type</strong></p>
+<p>Selection of the normalization factor. Available options:</p>
+<ul>
+<li>Average intensity</li>
+<li>Average squared intensity</li>
+<li>Maximum peak intensity</li>
+<li>Total raw signal</li>
+</ul>
+<p><strong>Feature measurement type</strong></p>
+<p>Selection of either feature height or feature area, which will be used to calculate the normalization factors</p>
+<p><strong>Original feature list</strong></p>
+<p>If REMOVE option is selected, the original feature list is  removed, allowing to save memory.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 8, 2022 09:49:42</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+              
             </article>
             
           </div>
@@ -1932,6 +2092,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../norm_rt_calibration/norm_rt_calibration.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Retention time calibration" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Retention time calibration
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../norm_stand_cmpd/norm_stand_cmpd.html" class="md-footer__link md-footer__link--next" aria-label="Next: Standard compound normalizer" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Standard compound normalizer
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1958,12 +2154,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/mzmine_documentation/", "features": [], "search": "/mzmine_documentation/assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="/mzmine_documentation/assets/javascripts/bundle.2ab50757.min.js"></script>
+      <script src="../../assets/javascripts/bundle.2ab50757.min.js"></script>
       
-        <script src="/mzmine_documentation/javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
