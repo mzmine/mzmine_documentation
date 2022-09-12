@@ -33,15 +33,15 @@ Set MS/MS scan pairing parameters. For more details see [MS2 scan pairing](..//f
 
 **Min peak height**
 
-Minimum acceptable peak height (absolute intensity)
+Minimum acceptable feature height (absolute intensity)
 
 **Peak duration range**
 
-Range of acceptable peak durations
+Range of acceptable feature durations
 
 **Derivative threshold level**
 
-Minimum acceptable intensity in the second derivative for peak recognition
+Minimum acceptable intensity in the second derivative for feature recognition
 
 **Min # of data points**
 

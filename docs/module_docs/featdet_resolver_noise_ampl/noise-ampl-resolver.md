@@ -28,11 +28,11 @@ Set MS/MS scan pairing parameters. For more details see [MS2 scan pairing](..//f
 
 **Min peak height**
 
-Minimum acceptable height (intensity) for a chromatographic peak
+Minimum acceptable height (intensity) for a feature
 
 **Peak duration range**
 
-Range of acceptable peak durations
+Range of acceptable feature durations
 
 **Amplitude of noise**
 

@@ -4,9 +4,9 @@
 
 :material-menu-open: **Feature detection → Chromatogram resolving → CentWave resolver**
 
-This method uses wavelets (from [xcms library](http://www.bioconductor.org/packages/release/bioc/html/xcms.html)) to detect peaks within a chromatogram. A series of wavelets of different scales is convolved within the chromatogram. **Local maxima** in the convolution results determine the locations of possible peaks. 
+This method uses wavelets (from [xcms library](http://www.bioconductor.org/packages/release/bioc/html/xcms.html)) to detect features within a chromatogram. A series of wavelets of different scales is convolved within the chromatogram. **Local maxima** in the convolution results determine the locations of possible peaks. 
 
-When these candidate peak locations co-occur at multiple scales then the scale with the strongest response indicates **peak width**. Given the candidate peak locations and scales, peaks can then be reconstructed from the original chromatogram. 
+When these candidate feature locations co-occur at multiple scales then the scale with the strongest response indicates **peak width**. Given the candidate feature locations and scales, features can then be reconstructed from the original chromatogram. 
 
 Full details of the algorithm are published in Tautenhahn et al. [[1]](#references).
 
@@ -37,13 +37,13 @@ Set MS/MS scan pairing parameters. For more details see [MS2 scan pairing](..//f
 
 **S/N Threshold**
 
-Peaks with a signal-to-noise ratio less than the threshold will be rejected. 
+Features with a signal-to-noise ratio less than the threshold will be rejected. 
 
 The S:N ratio is defined as 
 
 $$(max - baseline) / sd$$
 
-where max is the maximum peak intensity, baseline is the estimated baseline value, and sd is the standard deviation of local chromatographic noise.
+where max is the maximum feature intensity, baseline is the estimated baseline value, and sd is the standard deviation of local chromatographic noise.
 
 [//]: # (Peak scales)
 
@@ -51,13 +51,13 @@ where max is the maximum peak intensity, baseline is the estimated baseline valu
 
 **Peak duration range**
 
-The acceptable range of peak widths. Peaks with widths outside this range will be rejected.
+The acceptable range of feature widths. Features with widths outside this range will be rejected.
 
 **Peak integration method**
 
-Type of data used during peak reconstruction.
+Type of data used during feature reconstruction.
 
-When reconstructing a peak from the chromatogram, gradient descent is used. This can be performed on the raw peak data or a smoothed version of it. Smoothed data is obtained through mexican hat filtering.
+When reconstructing a feature from the chromatogram, gradient descent is used. This can be performed on the raw peak data or a smoothed version of it. Smoothed data is obtained through mexican hat filtering.
 
 Using the unfiltered data is more accurate but can be susceptible to noise. The smooth data provide less exact results but are more robust in the presence of noise.
 

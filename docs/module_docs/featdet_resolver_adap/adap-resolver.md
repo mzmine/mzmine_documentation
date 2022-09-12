@@ -34,7 +34,7 @@ The applied procedure for detecting the ridgelines is similar to that described 
 
 [//]: # (TODO Check the threshold algorithms if the description fully matches the implementation)
 
-To calculate it, S is chosen to be the maximum intensity between the boundaries of the peak under investigation. Noise, N, is estimated using two different steps. The final estimate of N is the smaller value, which is then used to calculate S/N. Each estimation of the noise attempts to avoid overestimate from the accidental inclusion of other real peaks that may be close in RT.
+To calculate it, S is chosen to be the maximum intensity between the boundaries of the feature under investigation. Noise, N, is estimated using two different steps. The final estimate of N is the smaller value, which is then used to calculate S/N. Each estimation of the noise attempts to avoid overestimate from the accidental inclusion of other real features that may be close in RT.
 
 **Step 1**:
 
@@ -56,15 +56,15 @@ To calculate it, S is chosen to be the maximum intensity between the boundaries 
 
 #### **Wavelet coefficients-based**
 
-The magnitude of the wavelet coefficient alone is not sufficient for determining if a peak is real due to its strong dependence on the intensities of the data points used in calculations. 
+The magnitude of the wavelet coefficient alone is not sufficient for determining if a feature is real due to its strong dependence on the intensities of the data points used in calculations. 
 
-To ensure that low-intensity peaks can be reliably detected and that poorly shaped peaks can be reliably filtered out, the largest coefficient, $Cmax$, for a given peak is taken and divide it by the area, $A$, under the curve between the two boundaries of the peak. 
+To ensure that low-intensity features can be reliably detected and that poorly shaped peaks can be reliably filtered out, the largest coefficient, $Cmax$, for a given feature is taken and divide it by the area, $A$, under the curve between the two boundaries of the peak. 
 
 Then the area is calculated using a trapezoidal method so that $A$ is exactly the area under the curve created by connecting adjacent data points with straight lines. 
 
-The result is a measure for which large values correspond to the peaks similar in shape to the wavelet. 
+The result is a measure for which large values correspond to the features similar in shape to the wavelet. 
 
-One important property of $Cmax/A$, is that intermittent dips in the intensity can increase the value due to the reduced area. This is beneficial for finding messy low-intensity peaks but can also be problematic if the area is so small it results in the detection of a peak with a very bad shape.
+One important property of $Cmax/A$, is that intermittent dips in the intensity can increase the value due to the reduced area. This is beneficial for finding messy low-intensity features but can also be problematic if the area is so small it results in the detection of a feature with a very bad shape.
   
 ## **Parameters**
 
@@ -118,11 +118,11 @@ The best coefficient (the largest inner product of wavelet with peak in ridgelin
 
 **Peak duration range**
 
-The acceptable range of peak widths. Peaks with widths outside this range will be rejected.
+The acceptable range of peak widths. Features with widths outside this range will be rejected.
 
 **RT wavelet range**
 
-The range of wavelet scales used to build matrix of coefficients. Scales are expressed as RT values (minutes) and correspond to the range of wavelet scales that will be applied to the chromatogram. Choose a range that is similar to the range of peak widths expected to be found from the data.
+The range of wavelet scales used to build matrix of coefficients. Scales are expressed as RT values (minutes) and correspond to the range of wavelet scales that will be applied to the chromatogram. Choose a range that is similar to the range of feature widths expected to be found from the data.
 
 ## **References**
 
