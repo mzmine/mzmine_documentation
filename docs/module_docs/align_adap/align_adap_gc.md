@@ -14,7 +14,7 @@ $$S(f1, f2) = w*S_{time}(f1, f2) + (1 - w)*S_{spec}(f1, f2)$$
 
 where $S_{time}(f1, f2)$ is the relative retention time difference between two features, $S_{spec}(f1, f2)$ is the spectrum similarity between two features.
 
-For more details, see reference [1](#references).
+For more details, see reference [[1](#references)].
 
 ### **Requirements**
 

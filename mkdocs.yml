@@ -38,7 +38,13 @@ nav:
         - Ion mobility trace builder: module_docs/lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md
         - Recursive IMS builder: module_docs/lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.md
       - Smoothing: module_docs/featdet_smoothing/smoothing.md
-      - Resolving: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
+      - Resolving:
+        - Local minimum resolver: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
+        - ADAP resolver: module_docs/featdet_resolver_adap/adap-resolver.md
+        - Baseline resolver: module_docs/featdet_resolver_baseline/baseline-resolver.md
+        - CentWave resolver: module_docs/featdet_resolver_centwave/centwave-resolver.md
+        - Noise amplitude resolver: module_docs/featdet_resolver_noise_ampl/noise-ampl-resolver.md
+        - Savitzky-Golay resolver: module_docs/featdet_resolver_savitzky-golay/savitzky-golay-resolver.md
 #      TODO Update resolving
 #      TODO Add mobilogram binning
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
