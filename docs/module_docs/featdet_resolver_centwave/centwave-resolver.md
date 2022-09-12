@@ -29,7 +29,13 @@ This string is added to feature list name as suffix
 
 **Original feature list**
 
-Defines the processing. Standard is to keep the original feature list and create a new processed list. REMOVE saves memory. PROCESS IN PLACE is an advanced option to process directly in the feature list and reduce memory consumption more - this might come with side effects, apply with caution.
+Defines the processing.
+
+Standard is to KEEP the original feature list and create a new processed list.
+
+REMOVE saves memory.
+
+PROCESS IN PLACE is an advanced option to process directly in the feature list and reduce memory consumption more - this might come with side effects, apply with caution.
 
 **MS/MS scan pairing**
 

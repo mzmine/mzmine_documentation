@@ -47,7 +47,13 @@ String added as suffix to when creating the new feature list(s).
 
 **Original feature list**
 
-Keep or remove the input feature list(s). The _PROCESS IN PLACE_ option directly filter the input feature list and performs better in terms of memory usage; therefore, it is recommended over _REMOVE_, when available.
+Defines the processing.
+
+Standard is to KEEP the original feature list and create a new processed list.
+
+REMOVE saves memory.
+
+PROCESS IN PLACE is an advanced option to process directly in the feature list and reduce memory consumption more - this might come with side effects, apply with caution.
 
 **MS/MS scan pairing**
 

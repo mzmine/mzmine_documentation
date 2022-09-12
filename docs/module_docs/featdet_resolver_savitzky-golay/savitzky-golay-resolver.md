@@ -4,7 +4,7 @@
 
 :material-menu-open: **Feature detection → Chromatogram resolving → Savitzky Golay resolver**
 
-This method uses the **Savitzky-Golay polynomial** ([A. Savitzky and M. J. E. Golay, Anal. Chem., 36, 1627 (1964)](https://doi.org/10.1021/ac60214a047)) to calculate the smoothed second-derivative of the chromatogram's intensities. 
+This method uses the **Savitzky-Golay polynomial** [[1]](#references) to calculate the smoothed second-derivative of the chromatogram's intensities. 
 
 The following figure (left) presents the shape of 
 
@@ -25,7 +25,12 @@ This string is added to feature list name as suffix
 
 **Original feature list**
 
-Defines the processing. Standard is to keep the original feature list and create a new processed list. REMOVE saves memory. PROCESS IN PLACE is an advanced option to process directly in the feature list and reduce memory consumption more - this might come with side effects, apply with caution.
+Defines the processing. 
+Standard is to KEEP the original feature list and create a new processed list. 
+
+REMOVE saves memory. 
+
+PROCESS IN PLACE is an advanced option to process directly in the feature list and reduce memory consumption more - this might come with side effects, apply with caution.
 
 **MS/MS scan pairing**
 
@@ -46,3 +51,7 @@ Minimum acceptable intensity in the second derivative for feature recognition
 **Min # of data points**
 
 Minimum number of data points on a feature.
+
+## **References**
+
+1. A. Savitzky and M. J. E. Golay, Anal. Chem., 36, 1627 (1964). DOI: <a>10.1021/ac60214a047</a>
