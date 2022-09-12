@@ -127,6 +127,10 @@ The set of detected features in each LC-MS run is stored as a list, hence the na
 
 m/z tolerance is defined as maximum allowed difference between m/z values in order for them to be considered the same. Can be defined as **intra-scan m/z tolerance** for values with one scan (used, _e.g._, in [Mass detection of isotope signals](../module_docs/featdet_mass_detection/mass-detection.md#detect-isotope-signals-below-noise-level)) or **inter-scan m/z tolerance** for values between different scans (in, _e.g._, [ADAP Chromatogram Builder](../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md))
 
+### **Chromatogram resolving**
+
+Was referred to as **Deconvolution** in MZmine 2. Process of splitting "imperfect" - overlapping and partially co-eluting - peaks, which are retained as single features, into the separate features. 
+
 ## References
 
 - Pluskal, T., Castillo, S., Villar-Briones, A. & Oresic, M. MZmine 2: Modular framework for processing, visualizing, and analyzing mass spectrometry-based molecular profile data. _BMC Bioinformatics_ (2010). DOI: <a>10.1186/1471-2105-11-395</a>
