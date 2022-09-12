@@ -1,4 +1,4 @@
-# **Savitzky Golay resolver**
+# **Savitzky-Golay resolver**
 
 ## **Description**
 
