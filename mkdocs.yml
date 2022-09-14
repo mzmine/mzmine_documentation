@@ -45,7 +45,6 @@ nav:
         - CentWave resolver: module_docs/featdet_resolver_centwave/centwave-resolver.md
         - Noise amplitude resolver: module_docs/featdet_resolver_noise_ampl/noise-ampl-resolver.md
         - Savitzky-Golay resolver: module_docs/featdet_resolver_savitzky-golay/savitzky-golay-resolver.md
-#      TODO Update resolving
 #      TODO Add mobilogram binning
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
       - MS2 scan pairing: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
@@ -79,8 +78,18 @@ nav:
         - Retention time calibration: module_docs/norm_rt_calibration/norm_rt_calibration.md
         - Linear normalizer: module_docs/norm_linear/norm_linear.md
         - Standard compound normalizer: module_docs/norm_stand_cmpd/norm_stand_cmpd.md
-      - Spectral library creation: module_docs/id_spectral_library_creation/spectral_library_creation.md
-      - Spectral library search: module_docs/id_spectral_library_search/spectral_library_search.md
+#      TODO decide what to do with spectral lib creation
+#  - Spectral library creation: module_docs/id_spectral_library_creation/spectral_library_creation.md
+      - Precursor mass search:
+        - Local database search: module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md
+        - Precursor search in local spectral MS/MS library: module_docs/id_prec_local_spectra_lib/local-spectra-lib-search.md
+        - Online compound database search: module_docs/id_prec_online_db/online-cmpd-db-search.md
+      - Spectra search:
+          - Spectral library search: module_docs/id_spectral_library_search/spectral_library_search.md
+          - NIST MS search: module_docs/id_spectra_NIST/NIST-ms-search.md
+          - Chemical formula prediction: module_docs/id_spectra_chem_formula/chem-formula-pred.md
+          - Lipid annotation: module_docs/id_lipid_annotation/lipid-annotation.md
+          - MS2 similarity search: module_docs/id_ms2_similarity/ms2-similarity-search.md
       - Export to GNPS-FBMN/IIMN: module_docs/GNPS_export/gnps_export.md
       - Other parameters:
         - Merge MS/MS: module_docs/GNPS_export/merge_ms2_kai.md
@@ -108,6 +117,7 @@ nav:
       - General Terminology: terminology/general-terminology.md
       - IMS Terminology: terminology/ion-mobility-terminology.md
       - LC-MS and LC-IMS-MS data comparison: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
+      - Kendrick mass defect: module_docs/feature_list_row_filter/kendrick_mass_defect.md
       
   - Performance options: performance.md
   - Command line tool (batch mode): commandline_tool.md
@@ -129,12 +139,12 @@ plugins:
       show_contribution: true
   - git-revision-date-localized:
       type: datetime
-#  - with-pdf:
-#      output_path: documentation.pdf
-#      author: The MZmine Community
-#      cover_title: MZmine 3
-#      cover_subtitle: Documentation
-#      cover_logo: img/MZmine_logo_CMYK.png
+  - with-pdf:
+      output_path: documentation.pdf
+      author: The MZmine Community
+      cover_title: MZmine 3
+      cover_subtitle: Documentation
+      cover_logo: img/MZmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:
