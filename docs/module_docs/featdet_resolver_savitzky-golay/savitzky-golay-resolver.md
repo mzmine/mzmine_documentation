@@ -1,4 +1,4 @@
-# **Savitzky Golay resolver**
+# **Savitzky-Golay resolver**
 
 ## **Description**
 
@@ -6,11 +6,7 @@
 
 This method uses the **Savitzky-Golay polynomial** [[1]](#references) to calculate the smoothed second-derivative of the chromatogram's intensities. 
 
-The following figure (left) presents the shape of 
-
-a. a Gaussian peak, 
-b. the first derivative, 
-c. the second derivative. 
+The following figure (left) presents the shape of a) a Gaussian peak, b) the first derivative, and c) the second derivative. 
 
 The figure on the right side shows how the signal (blue line) may be divided into individual chromatographic peaks by observing the second derivative.
 
