@@ -22,20 +22,20 @@ However, [_mobilograms_](../../terminology/ion-mobility-terminology.md#mobilogra
 
 1. While [_frame scans_](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames) are examined over the RT dimension, [_mobility scans_](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames) are considered over the IM dimension.
 
-   As explained [here](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames), _frame scans_ are essentially obtained by merging the _mobility scans_ acquired over an IM accumulation. Therefore, it might be necessary to adjust parameters like [Minimum absolute height](#minimum-absolute-height) or [Min ratio of peak top/edge](#min-ratio-of-peak-topedge) to account for the lower signal intensity of _mobility scans_.
+   As explained [here](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames), _frame scans_ are essentially obtained by merging the _mobility scans_ acquired over an IM accumulation. Therefore, it might be necessary to adjust parameters like **Minimum absolute height** or **Min ratio of peak top/edge** to account for the lower signal intensity of _mobility scans_.
 
 2. [_Mobilograms_](../../terminology/ion-mobility-terminology.md#mobilograms) are recalculated from  raw data, even though a [smoothing](../featdet_smoothing/smoothing.md) step was previously applied. Non-smoothed _mobiligrams_ tend to be more jagged than regular EIC traces (see Figure). Therefore, some parameters (_e.g._ [Min search range](#minimum-search-range-rtmobility-absolute) and (_e.g._ [Min ratio of peak top/edge](#min-ratio-of-peak-topedge)) should be adjusted accordingly.
 
 ![Mobility resolving](mobility-resolving.png)
 
 
-3. _Mobilograms_ contain fewer scans (_e.g._ ≈400-1000 per [frame](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames), depending on instrument type and acquisition settings), compared to regular EICs (_e.g._ ≈4500 scans for 15 minutes LC run and scan rate of 0.2 seconds). Therefore, a lower [chromatographic threshold](#chromatographic-threshold) (_e.g._ 80%) is recommended to avoid relevant data points in the mobilogram being discarded.
+3. _Mobilograms_ contain fewer scans (_e.g._ ≈400-1000 per [frame](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames), depending on instrument type and acquisition settings), compared to regular EICs (_e.g._ ≈4500 scans for 15 minutes LC run and scan rate of 0.2 seconds). Therefore, a lower **chromatographic threshold** (_e.g._ 80%) is recommended to avoid relevant data points in the mobilogram being discarded.
 
    On the other hand, a single feature in the IM dimension is normally made up of more data points than regular LC peaks, due to the different timescale the IM separation is performed on (see [here](../../terminology/ion-mobility-terminology.md#background) for more details).
 
    Therefore, a higher _Min # of data points_ can be set when [resolving the ion mobility dimension](#resolving-the-ion-mobility-dimension) to filter out noisy features.
 
-5. Different vendors use different units of mobility. For instance, [TIMS](../../terminology/ion-mobility-terminology.md#trapped-ion-mobility-spectrometry-tims) express ions' mobility as Vs/cm<sup>2</sup>, whereas [time dispersive IM devices](../../terminology/ion-mobility-terminology.md#time-dispersive-ion-mobility-spectrometry-dtims-and-twims) (DTIMS and TWIMS) use the ions' drift time (expressed in milliseconds). TIMS values are numerically smaller than DTIMS or TWIMS; therefore, the [minimum search range](#minimum-search-range-rtmobility-absolute) parameter should be adjusted accordingly.
+5. Different vendors use different units of mobility. For instance, [TIMS](../../terminology/ion-mobility-terminology.md#trapped-ion-mobility-spectrometry-tims) express ions' mobility as Vs/cm<sup>2</sup>, whereas [time dispersive IM devices](../../terminology/ion-mobility-terminology.md#time-dispersive-ion-mobility-spectrometry-dtims-and-twims) (DTIMS and TWIMS) use the ions' drift time (expressed in milliseconds). TIMS values are numerically smaller than DTIMS or TWIMS; therefore, the **minimum search range** parameter should be adjusted accordingly.
 
 ## **Parameters**
 
@@ -68,7 +68,7 @@ Dimension to be resolved. Select _Retention time_ or _Mobility_ to run the modul
 Percentage of data points in the EIC removed before local minima search. This represents an important filter for noisy chromatogram and significantly reduces the precessing time. 
 The algorithm finds the intensity value (threshold) that leaves the specified percentage of data points in the EIC trace below the given value. All such data points are removed. 
 
-For example, a _Chromatographic threshold_ = 50% will discard the lowest-intense 50% data points in the EIC trace.
+For example, a **Chromatographic threshold** = 50% will discard the lowest-intense 50% data points in the EIC trace.
 
 :material-lightbulb: It must be noted that the algorithm examines the EICs throughout the entire RT range (_i.e._ also the zero data points are considered). Therefore, we recommend to set this value rather high (_e.g._ 90-95%) and lower it only if needed.
 
@@ -114,7 +114,7 @@ Range of acceptable peak length expressed in minutes (RT dimension) or absolute 
 
 **Min # of data points**
 
-Minimum number of data points a resolved peak needs to have to be considered valid and retained as a feature. This parameter can be used along with the [Peak duration range](#peak-durantion-range-minmobility) setting as  peak duration constraint to filter out noisy features.
+Minimum number of data points a resolved peak needs to have to be considered valid and retained as a feature. This parameter can be used along with the **Peak duration range** setting as  peak duration constraint to filter out noisy features.
 
 :material-lightbulb: This parameter is very similar to the [Min group size in # of scans](../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#parameters) settings in the ADAP chromatogram builder module and the same value can normally be used here (usually, no less than 4-5).
 
