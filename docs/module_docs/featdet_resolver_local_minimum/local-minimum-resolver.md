@@ -6,7 +6,7 @@
 
 During the EICs building, overlapping and partially co-eluting features are retained as single features in the feature list (see, for example, [ADAP chromatogram builder](../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)). As a local minimum in the EIC trace might correspond to the valley between two adjacent, partially-resolved peaks, the **Local minimum resolver (LMR)** utilizes such minima to split "shoulder" LC peaks into individual features (_i.e._ [chromatographic resolving](../../terminology/general-terminology.md#chromatographic-resolving)).
 
-The algorithm examines all the data points in the EIC trace starting from the earliest RT. A scan window is set (see [Minimum search range RT/Mobility](#minimum-search-range-rtmobility-absolute) parameter) and centered around the examined data point. 
+The algorithm examines all the data points in the EIC trace starting from the earliest RT. A scan window is set (see **Minimum search range RT/Mobility** parameter) and centered around the examined data point. 
 
 A data point is considered a **local minimum** if it is the lowest intense point within the scan window. When a local minumum is found, a set of user-defined intensity and feature duration requirements is checked. If they are fulfilled, the original overlapping peaks are split into new, distinct features. 
 
@@ -24,7 +24,7 @@ However, [_mobilograms_](../../terminology/ion-mobility-terminology.md#mobilogra
 
    As explained [here](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames), _frame scans_ are essentially obtained by merging the _mobility scans_ acquired over an IM accumulation. Therefore, it might be necessary to adjust parameters like **Minimum absolute height** or **Min ratio of peak top/edge** to account for the lower signal intensity of _mobility scans_.
 
-2. [_Mobilograms_](../../terminology/ion-mobility-terminology.md#mobilograms) are recalculated from  raw data, even though a [smoothing](../featdet_smoothing/smoothing.md) step was previously applied. Non-smoothed _mobiligrams_ tend to be more jagged than regular EIC traces (see Figure). Therefore, some parameters (_e.g._ [Min search range](#minimum-search-range-rtmobility-absolute) and (_e.g._ [Min ratio of peak top/edge](#min-ratio-of-peak-topedge)) should be adjusted accordingly.
+2. [_Mobilograms_](../../terminology/ion-mobility-terminology.md#mobilograms) are recalculated from  raw data, even though a [smoothing](../featdet_smoothing/smoothing.md) step was previously applied. Non-smoothed _mobiligrams_ tend to be more jagged than regular EIC traces (see Figure). Therefore, some parameters (_e.g._ **Min search range** and **Min ratio of peak top/edge**) should be adjusted accordingly.
 
 ![Mobility resolving](mobility-resolving.png)
 
@@ -86,7 +86,7 @@ Size of the RT, or mobility, window examined for local minimum search. An overly
 
 **Minimum relative height**
 
-Minimum relative intensity (with respect to the highest data point in the EIC) a peak needs to reach to be retained as a feature. This parameter can be used in combination with the [Minimum absolute height](#minimum-absolute-height)) setting as to filter the resolved features to be retained. 
+Minimum relative intensity (with respect to the highest data point in the EIC) a peak needs to reach to be retained as a feature. This parameter can be used in combination with the **Minimum absolute height** setting as to filter the resolved features to be retained. 
 
 Many users prefer to rely only on the _Minimum absolute height_ as it is more straightforward to set. To do so, set the _Minimum relative height = 0_ and the parameter will be ignored. 
 
