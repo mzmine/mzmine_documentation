@@ -15,14 +15,14 @@ This module uses a **local spectral MS/MS library** to search for putative precu
 
 ## **Parameters**
 
-**Spectral libraries file (MS/MS)**
+#### **Spectral libraries file (MS/MS)**
 
 Name of the library file of the supported format.
 
-**Precursor m/z tolerance**
+#### **Precursor m/z tolerance**
 
 Matches the average row m/z against the precursor m/z of the spectral library entry
 
-**Retention time tolerance**
+#### **Retention time tolerance**
 
 _Optional parameter_, should only be used if the DB entry has a retention time

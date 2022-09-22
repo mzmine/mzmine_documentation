@@ -1,30 +1,36 @@
 # **Online compound database search**
 
+:construction: This module has known bugs and is being updated, which might affect its functionality
+
 ## **Description**
 
 :material-menu-open: **Feature list methods → Annotation → Search precursor mass → Online compound database search**
 
 This module allows identification of peaks or whole peak lists using an on-line compound database. Databases are queried for the calculated neutral mass of the peak and matching compounds are returned.
 
+[//]: # (TODO Add comment about DBs and Sirius)
+
+:material-lightbulb: If a user is interested in more comprehensive online compound database search, they can export their data to [Sirius](https://bio.informatik.uni-jena.de/software/sirius/) software. 
+
 ## **Parameters**
 
-**Database**
+#### **Database**
 
 On-line database to search ([list of the available databases](#currently-supported-databases)).
 
-**Ionization type**
+#### **Ionization type**
 
 Type of ionization that produced the peak subjected to identification. 
 
-**Number of results**
+#### **Number of results**
 
 Limit for the number of results to be retrieved from the on-line database.
 
-**m/z tolerance**
+#### **m/z tolerance**
 
 Maximum allowed m/z difference to set an identification to a peak.
 
-**Isotope pattern filter**
+#### **Isotope pattern filter**
 
 If selected, only results which fit the required isotope pattern similarity score will be returned.
 

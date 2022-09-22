@@ -39,24 +39,24 @@ An experimental Python script which converts the MS2 similarity relationships ex
 
 ## **Parameters**
 
-**Feature list (1)**
+#### **Feature list (1)**
 
 A single feature list with features that have associated centroided MS2 spectra. Results from the module are output into the identifications column of Feature list (1)
 
-**Feature list (2)**
+#### **Feature list (2)**
 
 A single feature list, which has centroided MS2 spectra (in the masslist). This can be the same as Feature list (1), or a different peaklist / experiment. 
 
 For best results Feature list (2) should have MS data with the same polarity as Feature list (1), and close range of m/z values close (e.g. LC/MS data obtained on the same day, or m/z calibrated between the two feature lists).
 
-**m/z tolerance**
+#### **m/z tolerance**
 
 Maximum allowed m/z difference between two ions to be considered identical, and therefore "matched". 
 
 [//]: # (TODO Either transfer this info to terminology or remove altogether)
 [//]: # (Depends on the mass accuracy, precision, and resolution of the MS data. For data obtained on HRAM instruments, and when comparing within the same peaklist &#40;aka the same experiment or LC/MS run&#41;, this parameter can be set to the mass precision of the instrument during that experiment &#40;4e-4 m/z or ~1 PPM for Q-Exactive&#41;. It is recommended that you set this value to the smallest range which reliably matches your ions of interest.)
 
-**Minimum MS2 ion intensity** 
+#### **Minimum MS2 ion intensity** 
 
 Minimum ion intensity to consider in MS2 comparison.
 Ions of the MS2 spectra below this threshold will be ignored. 
@@ -65,7 +65,7 @@ Ions of the MS2 spectra below this threshold will be ignored.
 
 :material-lightbulb: Set to 0 to use all ions.
 
-**Minimum ion(s) matched per MS2 comparison**
+#### **Minimum ion(s) matched per MS2 comparison**
 
 Minimum number of matched ions needed in a given MS2 similarity comparison. Otherwise, that spectral match will not be reported. 
 
@@ -73,7 +73,7 @@ Minimum number of matched ions needed in a given MS2 similarity comparison. Othe
 
 :material-lightbulb: Set to 0 to report all matches.
 
-**Minimum spectral match score to report**
+#### **Minimum spectral match score to report**
 
 Minimum spectral match score threshold, below which spectral matches will not be reported. 
 

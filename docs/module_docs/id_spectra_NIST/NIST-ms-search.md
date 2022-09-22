@@ -24,21 +24,21 @@ This module relies on the installed NIST MS Search software, which is currently 
 
 ## **Parameters**
 
-**NIST MS Search directory**
+#### **NIST MS Search directory**
 
 Full path to the directory containing the NIST MS Search executable (**nistms$.exe**).
 
-**MS level**
+#### **MS level**
 
 MS spectra level for searching. 
 
 Use MS level = 1 to search for MS1 spectra or ADAP-GC clustered spectra produced from Spectral Deconvolution modules.
 
-**Min cosine similarity**
+#### **Min cosine similarity**
 
 The minimum cosine similarity score (dot product) for identification.
 
-**Merge MS/MS (experimental)**
+#### **Merge MS/MS (experimental)**
 
 _Optional parameter._ 
 
@@ -46,7 +46,7 @@ Merge multiple high-quality MS/MS spectra into consensus feature instead of usin
 
 More details are available [here](../GNPS_export/merge_ms2_kai.md).
 
-**Integer m/z**
+#### **Integer m/z**
 
 _Optional parameter_. 
 
@@ -54,6 +54,6 @@ Merging mode for fractional m/z to unit mass. Converts accurate mass m/z measure
 
 Available options are Sum or Maximum.
 
-**Spectrum Import**
+#### **Spectrum Import**
 
-Options for import, can be by either overwriting previous spectra or appending new ones.
+Options for import, can be by either **Overwrite** (overwriting previous spectra) or **Append** (appending new ones).

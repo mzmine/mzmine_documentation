@@ -41,34 +41,34 @@ The available fields in a library file include:
 
 ## **Parameters**
 
-**Database file**
+#### **Database file**
 
 Name of file that contains information for peak identification.
 
-**Field separator**
+#### **Field separator**
 
 Character(s) used to separate fields in the database file.
 
-**Columns**
+#### **Columns**
 
 Columns that will be imported from the library file. The choice of columns depends on the availability of mobility data, information about adducts, and presence of PubChemID.  
 
-**m/z tolerance**
+#### **m/z tolerance**
 
 Maximum allowed m/z difference to set an identification to a peak.
 
-**Retention time tolerance**
+#### **Retention time tolerance**
 
 Maximum allowed retention time difference to set an identification to a peak.
 
-**Mobility time tolerance**
+#### **Mobility time tolerance**
 
 Maximum allowed tolerance between two mobility values.
 
-**CCS tolerance (%)**
+#### **CCS tolerance (%)**
 
 Maximum allowed difference (in percents) between two CCS values.
 
-**Use adducts**
+#### **Use adducts**
 
 If chosen, m/z values for multiple adducts will be calculated and matched against feature list.
