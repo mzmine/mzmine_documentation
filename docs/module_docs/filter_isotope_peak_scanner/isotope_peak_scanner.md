@@ -32,78 +32,78 @@ where R is the rating, k - the number of an isotope peak, exp. - the calculated 
 
 ## **Parameters**
 
-**Feature lists** 
+**Feature lists**
 
 The feature list(s) that shall be analyzed.
 
-**m/z tolerance**
+#### **m/z tolerance**
 
 m/z window around the expected isotope features to scan for isotope peaks.
 
-**Check RT**
+#### **Check RT**
 
 If chosen, compares RT of feature to that of a parent. Based on the following parameter of **Retention time tolerance** feature is either filtered out or preserved.
 
 :warning: Invoking this parameter might not make sense for imaging or direct infusion, but is critical for chromatographic data.
 
-**Retention time tolerance** 
+#### **Retention time tolerance**
 
 Maximum allowed difference between two retention time values
 
-**Chemical formula** 
+#### **Chemical formula**
 
 Element (combination) whose isotope pattern to be searched for. Please enter the two letter Symbol of the elements. (e.g. \"Gd\", \"Cl2Br\")
 
-**Auto carbon** 
+#### **Auto carbon**
 
-If activated, Isotope peak scanner will calculate isotope patterns with variable numbers of carbon specified in Setup. The pattern with the best fitting number of carbon atoms will be chosen for every detected pattern. 
+If activated, Isotope peak scanner will calculate isotope patterns with variable numbers of carbon specified in Setup. The pattern with the best fitting number of carbon atoms will be chosen for every detected pattern.
 
-:material-lightbulb: This will greatly increase computation time but helps with unknown-compound-identification. 
+:material-lightbulb: This will greatly increase computation time but helps with unknown-compound-identification.
 
-:warning: Please note that 13C isotope peaks might overlap with hetero atom isotope peaks depending on the resolution of your MS. This influences intensity ratios and will yield **wrong results**, since this prediction is based on intensity ratios of isotope peaks. 
+:warning: Please note that 13C isotope peaks might overlap with hetero atom isotope peaks depending on the resolution of your MS. This influences intensity ratios and will yield **wrong results**, since this prediction is based on intensity ratios of isotope peaks.
 
 :warning: This option yeilds no exact results, but might give a good hint about data.
 
-**Charge** 
+#### **Charge**
 
-Amount and polarity(e.g.: [M]+=+1 / [M]-=-1). 
+Amount and polarity(e.g.: [M]+=+1 / [M]-=-1).
 
 :warning: This is important for multiply charged molecules because the m/z offset between isotope peaks will halve for molecules with a charge of two.
 
-**Min. pattern intensity** 
+#### **Min. pattern intensity**
 
 The minimum normalized intensity of a peak in the final calculated isotope pattern. Depends on the sensitivity of your MS. This differs from minimum abundance. Min = 0.0, Max = 0.99999.
 
-**Merge width(m/z)** 
+#### **Merge width(m/z)**
 
 This will be used to merge peaks in the calculated isotope pattern if they overlap in the spectrum. Specify in m/z, this depends on the resolution of your mass spectrometer.
 
-**Minimum height** 
+#### **Minimum height**
 
-Minimum peak height to be considered as an isotope peak. 
+Minimum peak height to be considered as an isotope peak.
 
 :warning: Setting this parameter is crucial if you use the **Calculate accurate average** parameter. (see below)
 
-**Check intensity ratios** 
+#### **Check intensity ratios**
 
-Compare intensity of peaks to the calculated abundance of the isotope pattern. 
+Compare intensity of peaks to the calculated abundance of the isotope pattern.
 
-:material-lightbulb: It's recommended to check this parameter for more accurate results. 
+:material-lightbulb: It's recommended to check this parameter for more accurate results.
 
 :warning: However, when processing fragment data, and it's unknown how much of an isotope pattern remains charged it might be reasonable to uncheck this. (e.g.: Fragmenting a Cl8-isotope-pattern-molecule -> If "Element pattern" = Cl4 this module will recognize everything with Cl4 or more Cl. However, this will lead to a messy result feature list)
 
-**Minimum rating** 
+#### **Minimum rating**
 
 Minimum rating to be considered as an isotope peak. min = 0.0, max = 1.0
 
-**Rating type** 
+#### **Rating type**
 
-Method to calculate the rating with. 
+Method to calculate the rating with.
 
-- **Highest Intensity** is the standard method and faster. 
-- **Temporary average** is slower method but could be more accurate for more intense peaks. 
+- **Highest Intensity** is the standard method and faster.
+- **Temporary average** is slower method but could be more accurate for more intense peaks.
 
-**Calculate accurate average** 
+#### **Calculate accurate average**
 
 This method will use averaged intensities over all mass lists in which ALL relevant masses were detected in. This will only be done for features that match the defined rating-calculation with the given rating.
 
@@ -111,9 +111,9 @@ This will scan all mass lists for the peak closest to the identified isotope pea
 
 If there are no scans that match all criteria avg rating will be -1.0.
 
-:warning: Make sure the mass list is contained in the feature list.  
+:warning: Make sure the mass list is contained in the feature list.
 
-**Name suffix** 
+#### **Name suffix**
 
 Suffix to be added to feature list name. If "auto" then the module will itself create a suffix.
 

@@ -12,7 +12,7 @@ If MS/MS data is available, an identification on fatty acid residue level is als
 
 ## **References**
 
-!!! quote ""
+!!! quote " "
 
     1. Korf, A., Jeck, V., Schmid, R., Helmer, P. O., & Hayen, H. (2019). Lipid Species Annotation at Double Bond Position Level with Custom Databases by Extension of the MZmine Open-Source Software Package. Analytical chemistry, 91(8), 5098-5105. DOI: <a>10.1021/acs.analchem.8b05493</a>
 

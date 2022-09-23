@@ -2,6 +2,8 @@
 
 ## **Description**
 
+:material-menu-open: **Feature list methods → Annotation → Search spectra → MS2 similarity search**
+
 Ions arising from compounds with similar chemical structures often give similar fragmentation patterns (MS2 spectra). Therefore, calculating the similarity between MS2 spectra is a useful approach for the discovery of structurally similar compounds. 
 
 This module calculates the similarity between **centroided MS2 spectra** associated with two feature lists. These two feature lists can be the same feature list, or different feature lists. 

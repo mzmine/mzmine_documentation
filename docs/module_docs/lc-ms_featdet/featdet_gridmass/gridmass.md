@@ -2,6 +2,8 @@
 
 ## **Description**
 
+:material-menu-open: **Feature detection → LC-MS → GridMass**
+
 GridMass is an algorithm to detect peaks analyzing 2D data. It directly generates a peak list, which can then be operated using the peak list methods.
 
 ### **Algorithm**
@@ -35,34 +37,34 @@ A summary of the algorithm is as follows:
 
 ## **Parameters**
 
-**Suffix**
+#### **Suffix**
 
 Suffix to be added to peak list name.
 
-**Minimum height**
+#### **Minimum height**
 
 Only intensities larger than this minimum are considered.
 
-**m/z tolerance**
+#### **m/z tolerance**
 
 Maximum distance in m/z from the expected location of a peak.
 
-**Min-max width time (min)**
+#### **Min-max width time (min)**
 
 Time range for a peak to be recognized as a 'mass'. The optimal value depends on the chromatography system setup. Check 2D raw data to determine typical time spans.
 
-**Smoothing time (min)**
+#### **Smoothing time (min)**
 
 Time window used to smooth the signal before detection.
 
-**Smoothing m/z**
+#### **Smoothing m/z**
 
 m/z window used to smooth the signal before detection.
 
-**False+: Intensity similarity ratio**
+#### **False+: Intensity similarity ratio**
 
 Ratio between features to be recognized as the same. This is highly useful to detect artifacts.
 
-**False+: Ignore times**
+#### **False+: Ignore times**
 
 Ranges of time to be ignored by the method. This can be avoided if the region is previously cleaned using the crop option. Format: timeA-timeB, timeC-timeD,...

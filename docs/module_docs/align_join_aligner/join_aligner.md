@@ -45,11 +45,11 @@ The algorithm works as follows:
 
 ## **Parameters**
 
-**Feature list name**
+#### **Feature list name**
 
 Name of the new aligned peak list.
 
-**m/z tolerance**
+#### **m/z tolerance**
 
  Maximum allowed difference between two m/z values in order for them to be considered the same and thus the peaks aligned. 
  
@@ -57,50 +57,59 @@ The value is specified both as absolute tolerance (in m/z) and relative toleranc
 
  The tolerance range is calculated using maximum of the absolute and relative tolerances for possible peaks to be aligned. 
 
-**Weight for m/z**
+#### **Weight for m/z**
 
 This is the assigned weight for m/z difference at the moment of match score calculation between peak rows, as can be seen in the aforementioned formula. Only in cases where there is a perfect match of m/z values, the score receives the complete m/z weight. 
 Generally, higher weight is given to m/z values than to RT values. 
 
-**Retention time tolerance** 
+#### **Retention time tolerance** 
 
 Maximum allowed difference between two retention times in order for them to be considered the same and thus peaks aligned.
 Maximum RT difference can be defined either using absolute or relative value. 
 
-**Weight for RT**
+#### **Weight for RT**
 
 This is the assigned weight for RT difference at the moment of match score calculation between peak rows. 
 Only in cases where there is a perfect match of RT values, the score receives the complete RT weight. 
 
-**Mobility tolerance**
+#### **Mobility tolerance**
 
 In case of IM data,the user can determine the mobility tolerance. If checked, this parameter specifies the tolerance range for matching the mobility values. 
- 
 
-**Mobility weight**
+
+#### **Mobility weight**
+
 Score for perfectly matching mobility values. Only taken into account if "Mobility tolerance" is activated. Furthermore,
 score calculation that is mentioned in the **Algorithm** is then modified to account for the mobility as well. Mobility tolerance and weight are accounted for
 in the same manner as m/z and RT parameters.
 
-**Require same charge state**
+#### **Require same charge state**
+
+_Optional parameter_
 
 If checked, only rows having same charge can be aligned. 
 
-**Require same ID**
+#### **Require same ID**
+
+_Optional parameter_
 
 If checked, only rows having same compound identities (or no identities) can be aligned.
 
-**Compare isotope pattern**
+#### **Compare isotope pattern**
+
+_Optional parameter_
 
 If both peaks represent an isotope pattern, checking this box will add isotope pattern score to the match score calculation. Additionally, the user can set up **isotope m/z tolerance** which defines what isotopes would be considered same when comparing two isotopic patterns, **minimum absolute intensity** below which isotopes will be ignored and **minimum score** % between isotope patterns that has to be satisfied in order for the match to not be discarded.
 
 
-**Compare spectra similarity**
+#### **Compare spectra similarity**
+
+_Optional parameter_
 
 Compare MS1 or MS2 scans similarity. Select the m/z tolerance, MS level and spectra similarity algorithm. 
 Only features meeting this criteria will be aligned.  See [compare spectra similarity](spectra_similarity.md) for additional information.
 
-**Original feature list**
+#### **Original feature list**
 
 The user can choose to either KEEP the original feature list and generate a new processed one, or REMOVE the original feature list with the processed one.
 Generally, you would keep the original feature list, but opting for REMOVE will save memory.

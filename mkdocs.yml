@@ -34,6 +34,7 @@ nav:
         - GridMass: module_docs/lc-ms_featdet/featdet_gridmass/gridmass.md
         - Targeted feature detection: module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.md
       - LC-IMS-MS feature detection:
+#       TODO Rework this one
         - Ion mobility expander: module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.md
         - Ion mobility trace builder: module_docs/lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md
         - Recursive IMS builder: module_docs/lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.md
@@ -46,6 +47,9 @@ nav:
         - Noise amplitude resolver: module_docs/featdet_resolver_noise_ampl/noise-ampl-resolver.md
         - Savitzky-Golay resolver: module_docs/featdet_resolver_savitzky-golay/savitzky-golay-resolver.md
 #      TODO Add mobilogram binning
+      - Spectral deconvolution (GC):
+          - Hierarchical clustering: module_docs/featdet_hierarch_clustering/featdet_hierarch_clustering.md
+          - Multivariate curve resolution: module_docs/featdet_multivariate_curve_res/featdet_multivar_curve_res.md
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
       - MS2 scan pairing: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
       - Isotope filtering:
@@ -53,9 +57,6 @@ nav:
           - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md
           - Isotope peak scanner: module_docs/filter_isotope_peak_scanner/isotope_peak_scanner.md
 #      TODO Add feature grouping
-      - Spectral deconvolution (GC):
-        - Hierarchical clustering: module_docs/featdet_hierarch_clustering/featdet_hierarch_clustering.md
-        - Multivariate curve resolution: module_docs/featdet_multivariate_curve_res/featdet_multivar_curve_res.md
       - Feature list filtering:
         - Duplicate feature filter: module_docs/filter_duplicate_features/duplicate_feature_filter.md
         - Feature list rows filter: module_docs/feature_list_row_filter/feature_list_rows_filter.md
@@ -118,6 +119,7 @@ nav:
       - IMS Terminology: terminology/ion-mobility-terminology.md
       - LC-MS and LC-IMS-MS data comparison: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
       - Kendrick mass defect: module_docs/feature_list_row_filter/kendrick_mass_defect.md
+      - Spectral similarity measures: module_docs/id_spectral_library_search/spectral-similarity-measures.md
       
   - Performance options: performance.md
   - Command line tool (batch mode): commandline_tool.md
@@ -139,12 +141,12 @@ plugins:
       show_contribution: true
   - git-revision-date-localized:
       type: datetime
-  - with-pdf:
-      output_path: documentation.pdf
-      author: The MZmine Community
-      cover_title: MZmine 3
-      cover_subtitle: Documentation
-      cover_logo: img/MZmine_logo_CMYK.png
+#  - with-pdf:
+#      output_path: documentation.pdf
+#      author: The MZmine Community
+#      cover_title: MZmine 3
+#      cover_subtitle: Documentation
+#      cover_logo: img/MZmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:

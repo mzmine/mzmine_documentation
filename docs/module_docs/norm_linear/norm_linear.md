@@ -10,29 +10,31 @@ Each column of the feature list is normalized separately. In other words, normal
 
 ### **Normalization factors**
 
-**Average intensity**
+Different normalization factors can be applied:
 
-Average height (or area) of all peaks in the column is calculated and used as the normalization factor
+1. **Average intensity**
 
-**Average squared intensity**
+    Average height (or area) of all peaks in the column is calculated and used as the normalization factor
 
-Same as Average intensity, but values are squared before calculating the average
+2. **Average squared intensity**
 
-**Maximum peak intensity**
+    Same as Average intensity, but values are squared before calculating the average
 
-Maximum height (or area) in the peak list column is used as the normalization factor
+3. **Maximum peak intensity**
 
-**Total raw signal**
+    Maximum height (or area) in the peak list column is used as the normalization factor
 
-Sum of the height (or area) of all peaks in the peak list column is used as the normalization factor
+4. **Total raw signal**
+
+    Sum of the height (or area) of all peaks in the peak list column is used as the normalization factor
 
 ## **Parameters**
 
-**Name suffix**
+#### **Name suffix**
 
 Suffix to be added to a processed feature list name
 
-**Normalization type**
+#### **Normalization type**
 
 Selection of the normalization factor. Available options:
 
@@ -41,10 +43,10 @@ Selection of the normalization factor. Available options:
 - Maximum peak intensity
 - Total raw signal
 
-**Feature measurement type**
+#### **Feature measurement type**
 
 Selection of either feature height or feature area, which will be used to calculate the normalization factors
 
-**Original feature list**
+#### **Original feature list**
 
 If REMOVE option is selected, the original feature list is  removed, allowing to save memory.

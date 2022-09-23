@@ -12,23 +12,23 @@ Ions present in all given feature lists (according to given m/z, RT tolerance an
 
 ## **Parameters**
 
-**Name suffix**
+#### **Name suffix**
 
 Suffix to be added to a processed feature list name
 
-**m/z tolerance**
+#### **m/z tolerance**
 
 Maximum allowed m/z difference for two values to be considered the same
 
-**Retention time tolerance**
+#### **Retention time tolerance**
 
 Maximum allowed difference between two retention time values
 
-**Minimum standard intensity**
+#### **Minimum standard intensity**
 
 Minimum height of a feature to be selected as normalization standard
 
-**Original feature list** 
+#### **Original feature list**
 
 If REMOVE option is selected, the original feature list is  removed, allowing to save memory.
 

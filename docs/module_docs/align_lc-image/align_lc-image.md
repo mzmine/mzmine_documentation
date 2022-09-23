@@ -8,26 +8,28 @@ Aligns LC and imaging measurements based on m/z and mobility.Images are aligned 
 
 ## **Parameters**
 
-**Feature lists**
+#### **Feature lists**
 
 Select at least two feature lists. The image feature list(s) are aligned to a single (pre-aligned) LC feature list.
 
-**m/z tolerance**
+#### **m/z tolerance**
 
 The file-to-file tolerance for two features.
 
-**m/z weight**
+#### **m/z weight**
 
 Maximum score for a perfectly matching m/z. Default value is 1.
 
-**Mobility tolerance (optional)**
+#### **Mobility tolerance**
+
+_Optional parameter_ 
 
 The file-to-file mobility tolerance. If the files don't contain mobility information, this parameter will be ignored. Default value is 0.01.
 
-**Mobility weight**
+#### **Mobility weight**
 
 Maximum score for a perfectly matching mobility. Default value is 1.
 
-**Feature list name**
+#### **Feature list name**
 
-he name of the new feature list. Use {lc} to use the name of the input (LC/DI) feature list.
+The name of the new feature list. Use {lc} to use the name of the input (LC/DI) feature list.

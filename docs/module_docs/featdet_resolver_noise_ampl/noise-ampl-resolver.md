@@ -18,32 +18,32 @@ The baseline level is calculated as follows:
 
 This string is added to feature list name as suffix
 
-**Original feature list**
+#### **Original feature list**
 
-Defines the processing. 
+Defines the processing.
 
-Standard is to KEEP the original feature list and create a new processed list. 
+Standard is to KEEP the original feature list and create a new processed list.
 
-REMOVE saves memory. 
+REMOVE saves memory.
 
 PROCESS IN PLACE is an advanced option to process directly in the feature list and reduce memory consumption more - this might come with side effects, apply with caution.
 
-**MS/MS scan pairing**
+#### **MS/MS scan pairing**
 
 Set MS/MS scan pairing parameters. For more details see [MS2 scan pairing](..//featdet_ms2_scan_pairing/ms2_scan_pairing.md)
 
-**Min peak height**
+#### **Min peak height**
 
 Minimum acceptable height (intensity) for a feature
 
-**Peak duration range**
+#### **Peak duration range**
 
 Range of acceptable feature durations
 
-**Amplitude of noise**
+#### **Amplitude of noise**
 
 This value is the intensity amplitude of the signal in the noise region
 
-**Min # of data points**
+#### **Min # of data points**
 
 Minimum number of data points on a feature.

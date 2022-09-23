@@ -24,20 +24,20 @@ It has three different **modes**:
 
 ## **Parameters** 
 
-**Name suffix**
+#### **Name suffix**
 This is the suffix to identify the new aligned peak list.
 
-**Filter mode**
+#### **Filter mode**
 User can choose one of three modes: old average, new average, and single feature.
 
-**m/z tolerance**
+#### **m/z tolerance**
 Maximum m/z difference between duplicate peaks.
 
-**RT tolerance**
+#### **RT tolerance**
 Maximum retention time difference between duplicate peaks.
 
-**Require same identification**
+#### **Require same identification**
 If the checkbox is selected duplicate peaks must have the same identification.
 
-**Original feature list**
+#### **Original feature list**
 Can be either processed in place of, kept or replaced. 

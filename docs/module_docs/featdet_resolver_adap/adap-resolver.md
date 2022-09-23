@@ -10,6 +10,14 @@ Subsequently, peak location and boundaries are determined through a **ridgeline 
 
 [//]: # (Though the algorithm uses a CWT is differs significantly from centWave primarily in the ridgline detection algorithm.)
 
+## **References**
+
+!!! quote " "
+
+    1. Du, P., Kibbe W. A., and Lin S. M., Bioinformatics 2006, 22:2059-65.
+
+    2. Wee A., Grayden D. B., Zhu Y., Petkovic-Duran K., and Smith D., Electrophoresis 2008, 29:4215-25.
+
 ### **Ridgeline detection**
 
 A real peak in an EIC should create a **local maxima** in the wavelet coefficients at multiple scales. The best scale would create the largest coefficient. In case of the wavelet, it is the scale, for which the wavelet most closely matches the shape of the peak. Scales close to the best scale should also have reasonably similar shapes to the peak and therefore create adjacent maxima between those scales. 
@@ -65,14 +73,14 @@ Then the area is calculated using a trapezoidal method so that $A$ is exactly th
 The result is a measure for which large values correspond to the features similar in shape to the wavelet. 
 
 One important property of $Cmax/A$, is that intermittent dips in the intensity can increase the value due to the reduced area. This is beneficial for finding messy low-intensity features but can also be problematic if the area is so small it results in the detection of a feature with a very bad shape.
-  
+
 ## **Parameters**
 
-**Suffix**
+#### **Suffix**
 
 This string is added to feature list name as suffix
 
-**Original feature list**
+#### **Original feature list**
 
 Defines the processing.
 
@@ -82,20 +90,20 @@ REMOVE saves memory.
 
 PROCESS IN PLACE is an advanced option to process directly in the feature list and reduce memory consumption more - this might come with side effects, apply with caution.
 
-**MS/MS scan pairing**
+#### **MS/MS scan pairing**
 
 Set MS/MS scan pairing parameters. For more details see [MS2 scan pairing](..//featdet_ms2_scan_pairing/ms2_scan_pairing.md)
 
 
-**Dimension**
+#### **Dimension**
 
 Select the dimension to be resolve - either retention time, or mobility.
 
-**S/N threshold**
+#### **S/N threshold**
 
 The signal (S) to noise (N) ratio, S/N.
 
-**S/N estimator**
+#### **S/N estimator**
 
 There two options for S/N estimator:
 
@@ -114,24 +122,18 @@ There two options for S/N estimator:
 
    If this parameter is chosen the calculations follow the algorithm described [here](#intensity-based).
 
-**Min feature height**
+#### **Min feature height**
 
 The smallest intensity a peak can have and be considered a real feature.
 
-**Coefficient/area threshold**
+#### **Coefficient/area threshold**
 
 The best coefficient (the largest inner product of wavelet with peak in ridgeline) divided by the area under the curve of the feature
 
-**Peak duration range**
+#### **Peak duration range**
 
 The acceptable range of peak widths. Features with widths outside this range will be rejected.
 
-**RT wavelet range**
+#### **RT wavelet range**
 
 The range of wavelet scales used to build matrix of coefficients. Scales are expressed as RT values (minutes) and correspond to the range of wavelet scales that will be applied to the chromatogram. Choose a range that is similar to the range of feature widths expected to be found from the data.
-
-## **References**
-
-[1] Du, P., Kibbe W. A., and Lin S. M., Bioinformatics 2006, 22:2059-65.
-
-[2] Wee A., Grayden D. B., Zhu Y., Petkovic-Duran K., and Smith D., Electrophoresis 2008, 29:4215-25.

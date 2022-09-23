@@ -97,41 +97,36 @@ One more step is required to get the very final clusters list. A **"cutoff"** ba
 
 ## **Method parameters**
 
-**Clustering strategy**
+#### **Clustering strategy**
 
 What strategy will be used for the clustering algorithm decision-making.
 
-**Feature list name**
+#### **Feature list name**
 
 Name of the new aligned peak list.
 
-**m/z tolerance**
+#### **m/z tolerance**
 
 This value sets the range, in terms of m/z, for possible peaks to be aligned. Maximum allowed m/z difference.
 
-**Weight for m/z**
+#### **Weight for m/z**
 
 The assigned weight for m/z difference at the moment of match score calculation between feature rows. In case of perfectly matching m/z values the score receives the complete weight.
 
-**Retention time tolerance**
+#### **Retention time tolerance**
 
 Maximum allowed difference between two RT values.
 
-**Weight for RT**
+#### **Weight for RT**
 
 The assigned weight for RT difference at the moment of match score calculation between peak rows. In case of perfectly matching RT values the score receives the complete weight.
 
-**Export dendrogram as TXT/CDT**
+#### **Export dendrogram as TXT/CDT**
 
 If checked, exports the resulting dendrogram to the given *txt file. 
 
 The dendrogram can be then browsed using common applications such as TreeView <a>https://sourceforge.net/projects/jtreeview/</a>.
 
-**Dendrogram output text filename**
+#### **Dendrogram output text filename**
 
 Name of the resulting TXT file to write the clustering resulting dendrogram to. If the file already exists, it will be overwritten.
-
-## **References**
-
-- An Optimal Peak Alignment For Comprehensive Two-Dimensional Gas Chromatography Mass Spectrometry Using Mixture Similarity Measure - 2013 [Seongho Kim, Aiqin Fang, Bing Wang, Jaesik Jeong, Xiang Zhang] - <a>https://louisville.edu/faculty/x0zhan17/papers/2011_mspa_bioinfor</a>
-- WEKA hierarchical clustering - <a>http://www.cs.waikato.ac.nz/ml/weka/</a>

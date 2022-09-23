@@ -18,26 +18,26 @@ where $MZvsRT_{Balance}$ is a multiplier of m/z difference set by **m/z vs RT ba
 
 ## **Parameters**
 
-**Name suffix**
+#### **Name suffix**
 
 Suffix to be added to a processed feature list name
 
-**Normalization type**
+#### **Normalization type**
 
-Normalize intensities using either only one (nearest) standard or using a weighted contribution of all selected standards, weighted by distance. 
+Normalize intensities using either only one (nearest) standard or using a weighted contribution of all selected standards, weighted by distance.
 
-**Feature measurement type**
+#### **Feature measurement type**
 
 Selection of either feature height or feature area, which will be used to calculate the normalization factors
 
-**m/z vs RT balance**
+#### **m/z vs RT balance**
 
 Used in distance measuring as a multiplier of m/z difference.
 
-**Standard compounds**
+#### **Standard compounds**
 
 List of features for choosing the normalization standards
 
-**Original peak list**
+#### **Original peak list**
 
 If selected, the original peak list is automatically removed

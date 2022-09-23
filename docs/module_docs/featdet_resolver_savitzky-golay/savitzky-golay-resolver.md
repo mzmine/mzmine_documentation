@@ -12,6 +12,11 @@ The figure on the right side shows how the signal (blue line) may be divided int
 
 ![derivatives](1nd2ndDerivative.jpg)![signal](1nd2ndDerivative2.jpg)
 
+## **References**
+
+!!! quote " "
+
+     1. A. Savitzky and M. J. E. Golay, Anal. Chem., 36, 1627 (1964). DOI: <a>10.1021/ac60214a047</a>
 
 ## **Parameters**
 
@@ -47,7 +52,3 @@ Minimum acceptable intensity in the second derivative for feature recognition
 **Min # of data points**
 
 Minimum number of data points on a feature.
-
-## **References**
-
-1. A. Savitzky and M. J. E. Golay, Anal. Chem., 36, 1627 (1964). DOI: <a>10.1021/ac60214a047</a>

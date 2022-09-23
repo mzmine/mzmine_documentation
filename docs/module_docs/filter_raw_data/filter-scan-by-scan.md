@@ -2,6 +2,8 @@
 
 ## **Description**
 
+:material-menu-open: **Raw data methods → Raw data filtering → Scan by scan filtering**
+
 This module can be used to preprocess data in each scan using various filters.
 
 The preview shows the superposed spectra of the scan before and after the Savitzky-Golay filter is applied.
@@ -16,7 +18,7 @@ For each data point, the filter assigns to it the intensity average of all the d
 
 #### **Parameters**
 
-**Window length**
+##### **Window length**
 
 One-sided length of the m/z smoothing window.
 
@@ -30,7 +32,7 @@ The Savitzky–Golay method essentially performs a **local polynomial regression
 
 #### **Parameters**
 
-**Number of datapoints**
+##### **Number of datapoints**
 
 This number can be 5, 7, 9, 11, 13 or 15.
 
@@ -40,7 +42,7 @@ Each scan is divide in m/z bins whose length is defined by the user in the param
 
 #### **Parameters**
 
-**m/z bin length**
+##### **m/z bin length**
 
 The length of m/z bin.
 
@@ -56,12 +58,12 @@ Unless **"Sum duplicate intensities"** is checked, leading to a single new data 
 
 #### **Parameters**
 
-**Sum duplicate intensities**
+##### **Sum duplicate intensities**
 
 Sums ions count (intensity) of m/z peaks competing for being rounded at same m/z unit. If unchecked, the intensities are averaged rather than summed.
 
-**Remove zero intensity m/z peaks**
+##### **Remove zero intensity m/z peaks**
 
 Clear all scans spectra from m/z peaks with intensity equal to zero.
 
-TODO Add the images for each filter
+[//]: # (TODO Add the images for each filter)

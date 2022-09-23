@@ -12,7 +12,7 @@ For a detailed description of the functionality and the embedded algorithms, ple
 
 ## **References**
 
-!!! quote ""
+!!! quote " "
 
     1. Pluskal T. et al, Highly Accurate Chemical Formula Prediction Tool Utilizing High-Resolution Mass Spectra, MS/MS Fragmentation, Heuristic Rules, and Isotope Pattern Matching. Anal Chem (2012), 84(10):4396-403. DOI: <a>10.1021/ac3000418</a>.
 

@@ -1,4 +1,5 @@
 # **Mass detection algorithms**
+
 Mass detection can be done with the following six algorithms:
 
 - Centroid 
@@ -11,20 +12,23 @@ Mass detection can be done with the following six algorithms:
 
 ## **Centroid**
 
+:material-lightbulb: This mass detector is suitable for already centroided data.
+
 Centroid algorithm assumes that each signal above a given noise level is a detected ion.
-This mass detector is suitable for already centroided data. 
 
 ## **Factor of the lowest signal**
 
-Description
+:material-lightbulb: This mass detector is suitable for already centroided data. 
 
-This mass detector is suitable for already centroided data. It removes all data points below a spectrums lowest intensity multiplied by a factor.
+It removes all data points below a spectrum's lowest intensity multiplied by a factor.
 
 ## **Exact mass** 
 
+:material-lightbulb: The exact mass algorithm is highly recommended for profile MS data.
+
 This mass detector first searches for all local maxima within the spectrum, which then form candidate ions. 
 
-This method calculates the exact mass of a peak using the **FWHM** (full width at half maximum) concept and linear equation (*y = mx + b*). FWHM is the difference between the two values of the independent variable at which the dependent variable equals half of its maximum value. 
+This method calculates the exact mass of a peak using the **FWHM** (full width at half maximum) concept and linear equation ($y = mx + b$). FWHM is the difference between the two values of the independent variable at which the dependent variable equals half of its maximum value. 
 
 First, the method locates the data points located nearest to the peak center at half of the maximum intensity (P1, P2, P3, P4).
 With these four points it calculates two points (cP1, cP2) that define the width of the peak. The exact mass is then obtained as the center of the width.
@@ -33,9 +37,7 @@ With these four points it calculates two points (cP1, cP2) that define the width
 
 This method is suitable for high-resolution MS data, such as provided by FTMS instruments.
 
-💡 **Tip**: The exact mass algorithm is highly recommended for profile MS data. 
-
-💡 **Tip** If the continous data is too noisy, one can use recursive threshold algorithm.
+:material-lightbulb: If the continous data is too noisy, one can use recursive threshold algorithm.
 
 ## **Local maxima**
 
@@ -51,13 +53,13 @@ Final m/z values are determined as local maxima of the identified m/z ranges.
 
 This mass detector is suitable for continuous data, which has too much noise for the Exact mass detector to be used, but which shows a consistent width of m/z peaks.
 
-#### **Additional method parameters**
+#### **Additional parameters**
 
 **Min m/z peak width**: Minimum acceptable peak width in m/z.
 
 **Max m/z peak width**\: Maximum acceptable peak width in m/z.
 
-💡 **Tip** Recursive threshold method can be used with the noisy continuous data that shows a consistent width of m/z peaks.
+:material-lightbulb: Recursive threshold method can be used with the noisy continuous data that shows a consistent width of m/z peaks.
 
 ## **Wavelet transform**
 
@@ -69,23 +71,27 @@ This mass detector is suitable for continuous data, which has too much noise for
 
 In numerical analysis, the Mexican hat wavelet is the normalized second derivative of a Gaussian function.
 
-$$\psi(t)=\frac{1}{\sqrt{2\pi}\sigma^3} \left( 1-\frac{t^2}{\sigma^2} \right)e^{-\frac{t^2}{2\sigma^2}}$$
+<p align="center">
+  <img src="mexican-hat.png"/>
+</p>
 
- ![Mexican hat](mexican-hat.png) 
+$$\psi(t)=\frac{1}{\sqrt{2\pi}\sigma^3} \left( 1-\frac{t^2}{\sigma^2} \right)e^{-\frac{t^2}{2\sigma^2}}$$
 
 The parameter $t$ is the intensity of each data point in the curve, and $\sigma$ corresponds to the standard deviation. 
 
 To simplify the process of wavelet calculation, the original function is transformed into two parts, where $W_{c}$ is the wavelet coefficient and $y$ is the intensity of the wavelet at certain point. In the following formula, $t$ corresponds to the Wavelet window size (%) parameter.
 
+<p align="center">
+  <img src="Wavelet_calculated_form.png"/>
+</p>
+
 $$W_{c}=\left[\frac{2}{\sqrt{3}\pi^\frac{1}{4}}\left(1-t^2\right)e^-\frac{t^2}{2}\right]$$
 
-$$ y=\lim_{LL \to UL}(W_{c}x)$$ 
-
-![Calculated form](Wavelet_calculated_form.jpg)
+$$ y=\lim_{LL \to UL}(W_{c}x)$$
 
 The lower (LL) and upper (UL) limits, where the Mexican Hat wavelet is evaluated, are from -5 until 5. The incremental step used in this range is the result of limits range division by 60,000.
 
-#### **Additional method parameters**
+#### **Additional parameters**
 
 **Scale level**
 
@@ -96,7 +102,7 @@ When the scale factor is relatively low, the signal is more contracted, which re
 **Wavelet window size (%)**
 The size of the window used to calculated the wavelet signal. When the size of the window is small, more noisy peaks can be detected. The proper value of this parameter may help to avoid the undesired noise peaks.
 
-💡 **Tip** The Wavelet transform mass detector is particularly suitable for low-resolution and noisy data.
+:material-lightbulb: The Wavelet transform mass detector is particularly suitable for low-resolution and noisy data.
 
 ## **Auto**
 

@@ -21,39 +21,41 @@ This picture shows a preview of the model with the red dots representing the ali
 
 ![Preview of the model](preview-model.png)
 
+[//]: # (TODO Add plots from the new preview)
+
 Using this model, the algorithm can predict the shift in the retention time along all the peak list and use the match score function, used also in **Join Align** algorithm, to match the peaks. 
 
 This score is calculated based on the mass and retention time of each peak and ranges of tolerance stipulated in the parameter setup dialog.
 
 ## **Parameters**
 
-**Feature list name**
+#### **Feature list name**
 
 The name of the new aligned feature list.
 
-**m/z tolerance**
+#### **m/z tolerance**
 
 This value sets the range, in terms of m/z, to verify for possible peak rows to be aligned. Maximum allowed m/z difference.
 
-**RT tolerance**
+#### **RT tolerance**
 
 This value sets the range, in terms of retention time, to create the model using RANSAC and non-linear regression algorithm. Maximum allowed retention time difference.
 
-**RT tolerance after correction**
+#### **RT tolerance after correction**
 
 This value sets the range, in terms of retention time, to verify for possible peak rows to be aligned. Maximum allowed retention time difference.
 
-**RANSAC Iterations**
+#### **RANSAC Iterations**
 
 Maximum number of iterations allowed in the algorithm to find the right model consistent in all the pairs of aligned peaks. 
 
 :material-lightbulb: When the value is 0, the number of iterations (k) will be estimate automatically.
 
-**Minimum Number of Points**
+#### **Minimum Number of Points**
 
 % of points required to consider the model valid (d).
 
-**Threshold value**
+#### **Threshold value**
 
 Threshold value (minutes) for determining when a data point fits a model (t).
 
@@ -65,7 +67,7 @@ This option should be selected only if the model has to be linear.
 
 :warning: Please, remember that when the shift in the retention time between the peaks in the samples is not constant the model shape is nonlinear, and this parameter should not be selected. 
 
-### **Setting optimal parameters**
+## **Recommendations for setting optimal parameters**
 
 The three first parameters (m/z tolerance, RT tolerance after the correction and RT tolerance) define **2 bi-dimensional windows** with the same "altitude" (m/z tolerance) and different "longitude" (RT tolerances). 
 

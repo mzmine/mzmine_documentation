@@ -1,9 +1,15 @@
 # **Mass detection**
-The mass detection module generates a [mass list](../../terminology/general-terminology.md#mass-list) (_i.e._ list of m/z values and correspoinding signal intensities) for each scan, in each raw data file. During the mass detection, profile raw data are centroided and a noise filtering is performed based on a user-defined threshold (see [Setting the noise level](#setting-the-noise-level)).
 
----
-## **Parameters settings**
-:material-menu-open: Raw data methods → Mass detection → Mass detection
+## **Description**
+
+:material-menu-open: **Raw data methods → Mass detection → Mass detection**
+
+The mass detection module generates a [mass list](../../terminology/general-terminology.md#mass-list) (_i.e._ list of m/z values and corresponding signal intensities) for each scan, in each raw data file. During the mass detection, profile raw data are centroided and a noise filtering is performed based on a user-defined threshold (see [Setting the noise level](#setting-the-noise-level)). 
+
+The available algorithms are described [here](mass-detection-algorithms.md).
+
+## **Parameters**
+
 ![Mass detection](mass_detection_main.png)
 
 #### **Raw data files**
@@ -41,8 +47,8 @@ Maximum allowed difference between measured and theoretical isotope _m/z_. It is
 #### **Maximum charge of isotope _m/z_**
 Maximum allowed charge state of the isotope to be retained in the mass list. Default value is 1.
 
----
-### **How do I determine the noise level in my data?**
+
+## **How do I determine the noise level in my data?**
 The backgorund noise level largely depends on the mass spectrometer and detector type. For example, Orbitrap instruments normally provides higher signal intensities than TOF devices. To provide some numbers, while 1.0E2 - 1.0E3 could be an appropriate noise level for TOF analyzers, the same would be overly low for Orbitrap instruments (which normally require 1.0E4 - 1.0E5).
 
 The best way to determine the instrumental noise level is undoubtedly by looking at the raw data. The backgorund noise (often referred to as "grass" in technical jargon) is characterized by several signals having the same intensity and no clear pattern among them (see Figure). 

@@ -150,7 +150,7 @@ Several algorithms can be applied to calculate the similarity of the query and l
 - Weighted dot-product cosine,
 - Composite dot-product identity (similar to NIST search).
 
-More details are available [here](spectral-similairty-measures.md).
+More details are available [here](spectral-similarity-measures.md).
 
 :material-lightbulb: The **weighted dot-product cosine** similarity is used for comparing MS^2^ data, whereas the
 **composite dot-product identity (similar to NIST search)** considers the relative intensity of

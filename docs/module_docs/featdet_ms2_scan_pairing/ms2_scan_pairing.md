@@ -1,10 +1,12 @@
 # **MS2 Scan Pairing**
 
-This module allows to pair MS2 scans with features. It asssigns all MS2 scans within range to all features in chosen feature list. 
+## **Description**
 
----
-## **Parameters settings**
-:material-menu-open: Feature list methods → Processing → Assign MS2 to feature
+:material-menu-open: **Feature list methods → Processing → Assign MS2 to feature**
+
+This module allows to pair MS2 scans with features. It assigns all MS2 scans within range to all features in chosen feature list. 
+
+## **Parameters**
 
 ![MS2 scan pairing dialog](ms2-scan-pairing.png)
 

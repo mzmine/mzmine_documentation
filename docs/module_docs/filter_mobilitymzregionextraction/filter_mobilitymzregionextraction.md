@@ -8,14 +8,16 @@ Extracts subregions of interest from m/z-mobility regions.
 
 ## **Parameters**
 
-**Region**
+#### **Region**
 
 Regions to extract.
 
-**Mobility/CCS**
+#### **Mobility/CCS**
 
 Defines if mobility or mz shall be used for extraction.
 
-**Suffix**
+#### **Suffix**
 
 The suffix of newly created feature lists.
+
+[//]: # (TODO Add more details)
