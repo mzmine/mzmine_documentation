@@ -44,7 +44,7 @@ Range of Charge in a row required not to remove it.
 :warning: Please, run isotopic peaks grouper prior to using this.
 
 #### **Kendrick mass defect**
-Filter features in a Kendrick mass defect (KMD) range. For more details see [Kendrick mass defect](../../visualization_modules/processed_additional/processed_additional.md#background).
+Filter features in a Kendrick mass defect (KMD) range. For more details see [Kendrick mass defect](../../visualization_modules/processed_additional/processed_additional.md#kendrick-mass-plot).
 
 If KMD is used, following parameters can be changed in the setup.
 

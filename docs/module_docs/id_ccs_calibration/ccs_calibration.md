@@ -10,7 +10,7 @@ Accurate determination of CCS values requires a valid CCS calibration and molecu
   recalibrated data will be used by default. (see [Calculating CCS values](#calculating-ccs-values))
 - **mzML** raw data requires the determination of a calibration function from the raw data (e.g. as
   detected features) or as import from an external file. (see 
-  [Creating or importing a CCS calibration](#creating-or-importing-a-ccs-calibration))
+  [importing an external CCS calibration](#importing-an-external-ccs-calibration) and [refernce CCS calibration](#reference-css-calibration))
 
 
 ## **Importing an external CCS calibration**
