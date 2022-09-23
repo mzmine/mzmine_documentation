@@ -2,6 +2,8 @@
 
 ## **Description**
 
+:material-menu-open: **Raw data methods → Raw data filtering → Baseline correction**
+
 This module performs baseline correction on raw data files. It is designed to **compensate for gradual shifts** in the chromatographic baseline by detecting the baseline and then subtracting it from the raw data intensity values. 
 
 The module proceeds as follows for each raw data file passed to it:
@@ -26,37 +28,37 @@ The module proceeds as follows for each raw data file passed to it:
 
 ## **Parameters**
 
-**Filename suffix**
+#### **Filename suffix**
 
 The text to append to the name of the baseline corrected raw data file.
 
-**Chromatogram type**
+#### **Chromatogram type**
 
 TIC: total ion count, i.e. summed intensities per scan, or
 
 Base peak intensity: maximum intensity per scan.
 
-**MS-level**
+#### **MS-level**
 
 MS level to which to apply correction. Select "0" for all levels.
 
-**Use m/z bins**
+#### **Use m/z bins**
 
 Baselines can be calculated and data points corrected per m/z bin or to the entire raw data file. If no binning is performed then a single chromatogram is calculated for the entire raw data file and its baseline used to correct the full data file. No binning is very quick but much less accurate and so is only suitable for fine-tuning the smoothing and asymmetry parameters.
 
-**m/z bin width**
+#### **m/z bin width**
 
 The width of the m/z bins if binning is performed (see use m/z bins). Smaller bin widths result in longer processing times and greater memory requirements. Avoid values below 0.01.
 
-**Correction method**
+#### **Correction method**
 
 The width of the m/z bins if binning is performed (see use m/z bins). Smaller bin widths result in longer processing times and greater memory requirements. Avoid values below 0.01.
 
-**R engine**
+#### **R engine**
 
-This option allows you to choose between two Java libraries to communicate with R - RServe or RCaller. 
+This option allows you to choose between two Java libraries to communicate with R - RServe or RCaller.
 
-**Remove source file after baseline correction**
+#### **Remove source file after baseline correction**
 
 Whether to remove the original raw data file once baseline correction is complete.
 
@@ -68,7 +70,7 @@ More information on correction methods is available in [CRAN decription of basel
 
 This corrector estimates a baseline using asymmetric least squares and subtracts it from the data.
 
-#### **Parameters**
+#### **Additional parameters**
 
 **Smoothing**
 
@@ -84,7 +86,7 @@ The weight (0 <= p <= 1) for points above the trend line, whereas 1-p is the wei
 The corrector estimates a trend based on the **Rolling Ball algorithm**, and subtracts it from the raw data intensity values.
 (Ideas from **Rolling Ball algorithm for X-ray spectra by M.A.Kneen and H.J. Annegarn**. Variable window width has been left out).
 
-#### **Parameters**
+#### **Additional parameters**
 
 **wm (number of scans)**
 
@@ -98,7 +100,7 @@ Width of local window for smoothing (in number of scans).
 The corrector estimates a trend based on the Peak Detection algorithm, and subtracts it from the raw data intensity values.
 Peak detection is done in several steps sorting out real peaks through different criteria. Peaks are removed from spectra and minimums and medians are used to smooth the remaining parts of the spectra. (A translation from **Kevin R. Coombes et al.'s MATLAB code** for detecting peaks and removing baselines).
 
-#### **Parameters**
+#### **Additional parameters**
 
 **left (number of scans)**
 
@@ -132,7 +134,7 @@ Internal window size multiplier.
 
 The corrector estimates a trend based on the Rubber Band algorithm (which determines a convex envelope for the spectra - underneath side), and subtracts it from the raw data intensity values.
 
-#### **Parameters**
+#### **Additional parameters**
 
 **noise**
 
@@ -159,7 +161,7 @@ Does nothing if equals to zero. Helps fitting better with low **"df"**.
 
 The corrector estimates a trend based on Local Minima + LOESS (smoothed low-percentile intensity), and subtracts it from the raw data intensity values.
 
-#### **Parameters**
+#### **Additional parameters**
 
 **method**
 

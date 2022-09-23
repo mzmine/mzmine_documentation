@@ -13,4 +13,4 @@ The following **functions** are available:
 
 In the right part of the plot there is a toolbar. Its functionality is also included in a pop-up menu, which appears when you make right click on the plot area.
 
-**TODO**: Add video of working with plots
+[//]: # (TODO Add video of working with plots)

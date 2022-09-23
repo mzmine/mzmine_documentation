@@ -1,12 +1,18 @@
 # **Raw data overview (LC-MS)**
 
+## **Description**
+
+:material-menu-open: **Visualization → Raw data overview**, or it can be accesed by **double-click of left mouse button**, or by clicking the right mouse button on **MS data files** table and choosing :material-menu-open: **Show raw data overview**
+
+[//]: # (TODO Add the same level of detalization for each menu item in data table and feature table)
+
 Raw data overview allows user to explore both chromatogram and MS views across all the selected files. By double-clicking on the raw file of interest in the "MS data files" tab, **Raw data overview** tab will open in the main content pane. Raw data overview can either display single or multiple overlaid chromatograms, depending on how many raw files are selected. Additionally, it can be accessed through: Visualization → Raw data overview.
 
 The view consists of three panes - chromatogram representation (on the left), mass spectrum (on the right), and table with tabs containing additional information about raw data files.
 
 ![Raw data visualizer](raw-data-visualizer.PNG)
 
-### **Chromatogram parameters**
+## **Chromatogram parameters**
 
 **Show XIC**
 
@@ -19,7 +25,7 @@ To display an extracted ion chromatogram (XIC), the user can tick the "Show XIC"
 
 ![Raw data chromatogram setup](raw-data-chromatogram-setup.PNG)
 
-### **Spectrum parameters**
+## **Spectrum parameters**
 
 When masses are detected, it is possible to display them on the spectrum by ticking an option "Show mass list".
 

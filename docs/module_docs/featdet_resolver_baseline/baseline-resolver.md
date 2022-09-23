@@ -11,11 +11,11 @@ A very simple method that can be used to demonstrate the functionality of chroma
 
 ## **Parameters**
 
-**Suffix**
+#### **Suffix**
 
 This string is added to feature list name as suffix
 
-**Original feature list**
+#### **Original feature list**
 
 Defines the processing.
 
@@ -25,22 +25,22 @@ REMOVE saves memory.
 
 PROCESS IN PLACE is an advanced option to process directly in the feature list and reduce memory consumption more - this might come with side effects, apply with caution.
 
-**MS/MS scan pairing**
+#### **MS/MS scan pairing**
 
 Set MS/MS scan pairing parameters. For more details see [MS2 scan pairing](..//featdet_ms2_scan_pairing/ms2_scan_pairing.md)
 
-**Min peak height**
+#### **Min peak height**
 
 Minimum acceptable feature height (absolute intensity)
 
-**Peak duration range**
+#### **Peak duration range**
 
 Range of acceptable feature durations
 
-**Baseline level**
+#### **Baseline level**
 
 Level below which all data points of the chromatogram are removed (absolute intensity)
 
-**Min # of data points**
+#### **Min # of data points**
 
 Minimum number of data points on a feature

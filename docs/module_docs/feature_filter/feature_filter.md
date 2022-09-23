@@ -8,46 +8,46 @@ This module deletes features in a selected feature list that do not meet the req
 
 ## **Parameters**
 
-**Name suffix**
+#### **Name suffix**
 
 Suffix to be added to feature list name.
 
-**Duration**
+#### **Duration**
 
 Peaks with a duration outside the entered range will be removed.
 
-**Area**
+#### **Area**
 
 Peaks with an area outside the entered range will be removed.
 
-**Height**
+#### **Height**
 
 Peaks with a height outside the entered range will be removed.
 
-**\# data points**
+#### **\# data points**
 
 Peaks with fewer data points than the entered range will be removed.
 
-**FWHM**
+#### **FWHM**
 
 Peaks with a FWHM outside the entered range will be removed.
 
-**Tailing factor**
+#### **Tailing factor**
 
 Peaks with a tailing factor outside the entered range will be removed.
 
 [//]: # (TODO Explain tailing factor)
 
-**Asymmetry factor**
+#### **Asymmetry factor**
 
 Peaks with an asymmetry factor outside the entered range will be removed.
 
 [//]: # (TODO EXplain asymmetry factor)
 
-**Keep only features with MS/MS scans**
+#### **Keep only features with MS/MS scans**
 
 Peaks without any MS/MS scans will be removed.
 
-**Remove source feature list after filtering**
+#### **Remove source feature list after filtering**
 
 If the checkbox is selected, the source feature list will be removed, and the filtered version will remain.

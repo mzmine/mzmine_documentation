@@ -21,9 +21,19 @@ To run R from MZmine the Rserve package [[3]](#references) must be installed in 
 
     install.packages("Rserve")
 
-**Parameters**
+## **References**
 
-**Suffix**
+!!! quote " "
+
+    1. Ralf Tautenhahn, Christoph Böttcher, and Steffen Neumann "Highly sensitive feature detection for high resolution LC/MS" BMC Bioinformatics 2008, 9:504
+
+    2. Bioconductor XCMS "LC/MS and GC/MS Data Analysis" http://www.bioconductor.org/packages/release/bioc/html/xcms.html.
+
+    3. Rserve "A TCP/IP server which allows other programs to use facilities of R" https://rforge.net/Rserve/.
+
+## **Parameters**
+
+#### **Suffix**
 
 This string is added to feature list name as suffix
 
@@ -37,15 +47,15 @@ REMOVE saves memory.
 
 PROCESS IN PLACE is an advanced option to process directly in the feature list and reduce memory consumption more - this might come with side effects, apply with caution.
 
-**MS/MS scan pairing**
+#### **MS/MS scan pairing**
 
 Set MS/MS scan pairing parameters. For more details see [MS2 scan pairing](..//featdet_ms2_scan_pairing/ms2_scan_pairing.md)
 
-**S/N Threshold**
+#### **S/N Threshold**
 
-Features with a signal-to-noise ratio less than the threshold will be rejected. 
+Features with a signal-to-noise ratio less than the threshold will be rejected.
 
-The S:N ratio is defined as 
+The S:N ratio is defined as
 
 $$(max - baseline) / sd$$
 
@@ -55,11 +65,11 @@ where max is the maximum feature intensity, baseline is the estimated baseline v
 
 [//]: # (The range of peak scales to search for. Scales are expressed as RT values &#40;minutes&#41; and correspond to the range of wavelet scales that will be applied to the chromatogram. If the minimum scale is too small then noise may be detected as peaks. If the maximum scale is to low then broad peaks may be ignored.)
 
-**Peak duration range**
+#### **Peak duration range**
 
 The acceptable range of feature widths. Features with widths outside this range will be rejected.
 
-**Peak integration method**
+#### **Peak integration method**
 
 Type of data used during feature reconstruction.
 
@@ -67,18 +77,10 @@ When reconstructing a feature from the chromatogram, gradient descent is used. T
 
 Using the unfiltered data is more accurate but can be susceptible to noise. The smooth data provide less exact results but are more robust in the presence of noise.
 
-**R engine**
+#### **R engine**
 
 The R engine to be used for communicating with R. RServe might provide you with better performance.
 
-**Min # of data points**
+#### **Min # of data points**
 
 Minimum number of data points on a feature.
-
-## **References**
-
-[1] Ralf Tautenhahn, Christoph Böttcher, and Steffen Neumann "Highly sensitive feature detection for high resolution LC/MS" BMC Bioinformatics 2008, 9:504
-
-[2] Bioconductor XCMS "LC/MS and GC/MS Data Analysis" http://www.bioconductor.org/packages/release/bioc/html/xcms.html.
-
-[3] Rserve "A TCP/IP server which allows other programs to use facilities of R" https://rforge.net/Rserve/.

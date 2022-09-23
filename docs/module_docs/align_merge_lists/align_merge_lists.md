@@ -10,10 +10,10 @@ This method merges feature lists by appending all rows into a new list.
 
 ## **Parameters**
 
-**Feature lists**
+#### **Feature lists**
 
 Feature lists this module will take as an input
 
-**Feature list name**
+#### **Feature list name**
 
 Resulting feature list name

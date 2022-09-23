@@ -2,17 +2,19 @@
 
 ## **Description**
 
+:material-menu-open: **Raw data methods → File merging → Raw data file merging**
+
 This module merges all raw data files into a new. For example to combine positive and negative scans with MS2, all from different raw data files.
 
-TODO: Usage examples or cases
+[//]: # (TODO: Usage examples or cases)
 
 ## **Method parameters**
 
-**Raw data files**
+#### **Raw data files**
 
 Raw data files the module will take as an input.
 
-**Mode**
+#### **Mode**
 
 + MERGE PATTERN: 
 
@@ -22,20 +24,20 @@ Raw data files the module will take as an input.
 
     Merge all selected files to a new
 
-**Grouping identifier position**
+#### **Grouping identifier position**
 
 Search for the specific group identifier before the first or after the last marker.
 
-**Position marker**
+#### **Position marker**
 
 The marker that splits the specific group identifier from the rest of the file names.
 
-**MS2 marker**
+#### **MS2 marker**
 
 If a raw data file has this marker in its name, it will only be used as a source of MS2 (MSn) scans. All MS1 scans of this file will be discarded. 
 
-TODO - what does this mean (e.g., MS2, TOP4, ...)
+[//]: # (TODO - what does this mean &#40;e.g., MS2, TOP4, ...&#41;)
 
-**Suffix**
+#### **Suffix**
 
 Suffix to be added to the new file name.

@@ -1,14 +1,14 @@
-# Ion mobility trace builder
+# **Ion mobility trace builder**
 
-The **Ion mobility trace builder** will
-build [ion mobility traces](../../../terminology/ion-mobility-terminology.md#ion-mobility-trace)
-from the raw data. Alternatively, the **Recursive IMS builder** can be used, which requires less ram
-but takes longer.
+## **Description**
 
-The **Ion mobility trace builder** is found under **Feature detection → LC-IMS-MS → Ion mobility
-trace builder**.
+:material-menu-open: **Feature detection → LC-IMS-MS → Ion mobility trace builder**.
+
+The **Ion mobility trace builder** will build [ion mobility traces](../../../terminology/ion-mobility-terminology.md#ion-mobility-trace) from the raw data. Alternatively, the **Recursive IMS builder** can be used, which requires less RAM but takes longer.
 
 ![imstracebuilder-dialog](imstracebuilderdialog.png)
+
+## **Parameters**
 
 ##### Scan selection
 
@@ -39,15 +39,25 @@ an ion mobility trace represents a single datapoint.
 
 ##### Advanced parameters
 
-For most applications, these parameters do not need to set/altered. For high mobility resolved data
-the mobilograms might become noisy due to less ions reaching the detector at the same time. By
-default, the number of binned scans is set to cover about 0.0008 Vs/cm^2 per bin. The effect of
-binning can be seen [here](../featdet_ims_expander/ims-expander.md#binned-mobilogram-example)
-. If you are unsure about the nature of your data, you can perform trace building with the standard
-parameters and apply/preview the binning afterwards via the **Feature detection → Mobilogram
+:warning: For most applications, these parameters do not need to set/altered. 
+
+For high mobility resolved data the mobilograms might become noisy due to a fewer ions reaching the detector at the same time. By default, the number of binned scans is set to cover about 0.0008 Vs/cm^2 per bin. The effect of
+binning can be seen [here](../featdet_ims_expander/ims-expander.md#binned-mobilogram-example). If you are unsure about the nature of your data, you can perform trace building with the standard parameters and apply/preview the binning afterwards via the **Feature detection → Mobilogram
 binning** module.
 
-##### Processing result
+**Override default TIMS binning width (Vs/cm²)**
+
+The binning width in mobility units of the selected raw data file.
+
+**Travelling wave binning width (ms)**
+
+The binning width in mobility units of the selected raw data file.
+
+**Drift tube binning width (ms)**
+
+The binning width in mobility units of the selected raw data file.
+
+## **Processing result**
 
 After performing ion mobiltiy trace detection, a feature list is created in the feature list tab
 (see [feature lists tab](../../../main-window-overview.md#ms-data-files-and-feature-lists-tab)). In the

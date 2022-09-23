@@ -4,6 +4,8 @@
 
 ## **Description**
 
+:material-menu-open: **Feature list methods → Spectral deconvolution (GC) → Hierarchical clustering**
+
 This ADAP-based method finds analytes by combining similar features into clusters and using their intensities to construct fragmentation mass spectra. 
 
 The following steps are performed:
@@ -36,41 +38,48 @@ EIC peak is considered to be shared (i.e. produced by two co-eluting analytes) i
 - its right boundary intensity divided by the apex intensity exceeds minimum edge-to-height ratio
 - the absolute difference between its boundary intensities divided by the apex intensity exceeds by minimum delta-to-height ratio
 
+## **References**
+
+!!! quote " "
+
+    1. Pluskal, T., Castillo, S., Villar-Briones, A. & Oresic, M. MZmine 2: Modular framework for processing, visualizing, and analyzing mass spectrometry-based molecular profile data. _BMC Bioinformatics_ (2010). DOI: <a>10.1186/1471-2105-11-395</a>
+    2. Smirnov A, Jia W, Walker D, Jones D, Du X: ADAP-GC 3.2: Graphical Software Tool for Efficient Spectral Deconvolution of Gas Cromatography—High-Resolution Mass Spectrometry Metabolomics Data. J. Proteome Res 2017, DOI: <a>10.1021/acs.jproteome.7b00633</a>
+
 ## **Parameters**
 
-**Min cluster distance (min)**
+#### **Min cluster distance (min)**
 
 Minimum distance between any two retention-time clusters.
 
-**Min cluster size**
+#### **Min cluster size**
 
 Minimum number of peaks in a cluster.
 
-**Min cluster intensity**
+#### **Min cluster intensity**
 
 Minimum intensity of the highest peak in a cluster.
 
-**Find shared peaks**
+#### **Find shared peaks**
 
 If selected, shared peaks are determined and do not participate in the second clustering.
 
-**Min edge-to-height ratio**
+#### **Min edge-to-height ratio**
 
 Minimum value of a boundary intensity divided by the apex intensity of EIC peak that is considered to be shared.
 
-**Min delta-to-height ratio**
+#### **Min delta-to-height ratio**
 
 Minimum value of the absolute difference of the boundary intensities divided by the apex intensity of EIC peak that is considered to be shared.
 
-**Min sharpness**
+#### **Min sharpness**
 
 Minimum sharpness of EIC peak that can participate in the second clustering.
 
-**Shape-similarity tolerance (0..90)**
+#### **Shape-similarity tolerance (0..90)**
 
 Tolerance is used in the second clustering based on the similarity of peaks' elution profiles: small tolerance corresponds to large number of clusters; large tolerance corresponds to a small number of clusters.
 
-**Choice of Model Peak based on**
+#### **Choice of Model Peak based on**
 
 In each cluster, a model peak is chosen. 
 
@@ -78,19 +87,17 @@ In each cluster, a model peak is chosen.
 - If Intensity is used, then EIC peak of the highest intensity in the cluster is chosen to be a model peak. 
 - If M/z value is used, then EIC peak with the highest m/z value in the cluster is chosen to be a model peak.
 
-**Exclude m/z-values**
+#### **Exclude m/z-values**
+
+_Optional parameter_ 
 
 Optionally, the user can specify a list of deprecated m/z values such that EIC peaks with those m/z value could not be chosen as model peaks. It is possible to specify single m/z values as well as ranges of m/z values. 
 For example: 1-50, 73, 100.
 
-**Suffix**
+#### **Suffix**
 
 String to add to feature list name as a suffix.
 
 **Remove original feature list**
 
 If checked, original feature list will be removed.
-
-## **References**
-- Pluskal, T., Castillo, S., Villar-Briones, A. & Oresic, M. MZmine 2: Modular framework for processing, visualizing, and analyzing mass spectrometry-based molecular profile data. _BMC Bioinformatics_ (2010). DOI: <a>10.1186/1471-2105-11-395</a>
-- Smirnov A, Jia W, Walker D, Jones D, Du X: ADAP-GC 3.2: Graphical Software Tool for Efficient Spectral Deconvolution of Gas Cromatography—High-Resolution Mass Spectrometry Metabolomics Data. J. Proteome Res 2017, DOI: <a>10.1021/acs.jproteome.7b00633</a>
