@@ -51,6 +51,32 @@ It shows a plot of two dimensions, where X axis corresponds to m/z value and Y a
 
 Choose the scan to visualize
 
+## **2D visualizer**
+
+:material-menu-open: **Visualization → 2D plot**
+
+This tool displays a plot of two dimensions, where X axis corresponds to retention time and Y axis is the m/z value. This visualization of spots in the plot corresponds with the intensity of the data in that region.
+
+![2D plot](2D-plot.png)
+
+:material-lightbulb: User can define features from the feature list to be displayed on the plot.
+
+### **Parameters**
+
+#### **Type of data**
+
+This plot can use either resampled data as input (faster), or raw data (slower).
+
+#### **Scans**
+
+Here user can set up the level (MS1,MS2,... ,MSn), polarity, retention time, and the other parameters of the scans to be used.
+
+#### **m/z** 
+
+Defines range of m/z values. 
+
+[//]: # (TODO Look into the code for this - If this range does not include the whole scan m/z range, the resulting visualizer is XIC type.)
+
 ## **3D visualizer**
 
 ### **Description**
@@ -63,23 +89,23 @@ This tool presents a three dimensional plot where X axis represents the retentio
 
 ### **Parameters**
 
-**MS level**
+#### **Scans**
 
-This refers to the scan level (MS1,MS2,... ,MSn) to be used to display the chromatogram.
+Here user can set up the level (MS1,MS2,... ,MSn), polarity, retention time, and the other parameters of the scans to be used.
 
-**Retention time**
-
-Retention time (X axis) range.
-
-**Retention time resolution**
-
-Number of data points on retention time axis.
-
-**m/z range**
+#### **m/z range**
 
 Range of m/z values.
 
-**m/z resolution**
+#### **Features**
+
+Features that will be taken as an input.
+
+#### **Retention time resolution**
+
+Number of data points on retention time axis.
+
+#### **m/z resolution**
 
 Number of data points on m/z axis.
 
@@ -93,30 +119,48 @@ This module creates m/z distribution histograms of all m/z values in mass lists 
 
 ![Scan histogram dialog](scan-histogram-dialog.PNG)
 
+[//]: # (TODO Maybe change the picture)
+
 <https://youtu.be/31hwc74vUjA>
 
 ### **Parameters**
 
-**Raw data file, scans filter and mass list**
+#### **Scans**
 
-Specify the scans and mass lists
+Here user can set up the level (MS1,MS2,... ,MSn), polarity, retention time, and the other parameters of the scans to be used.
 
-**m/z range**
+#### **m/z**
 
-Limit the range of the histogram to save performance
+Limit the range of the histogram (can improve performance).
 
-**Retention time range (optional)**
+#### **Signal intensity range**
 
-Limit the scans to a specific retention time range
+_Optional parameter_
 
-**m/z bin width**
-The binning width to count m/z value occurance in scans (can be changed dynamically in the dialog)
+Allows to limit signal intensities (can improve performance).
 
-**The dialog**
+#### **Mass defect**
 
-The "bin width" and "shift bins by" parameter automatically listens for changes and updates the chart (indicated by red/green label above). 
+_Optional parameter_
 
-User can also apply a Gaussian fit to a distribution.
+Filters for mass defects in the signals.
+
+#### **Type**
+
+Type of the histogram to be created. Available options:
+
+- m/z,
+- Intensity,
+- Intensity (noise recalibrated),
+- Mass defect.
+
+#### **Bin width**
+
+The binning width to count m/z value occurence in scans.
+
+#### **Use mobility scans**
+
+If the input data has ion mobility dimension, this data can be used instead of the data from the summed frames.
 
 ## **Scan inject time analysis**
 
