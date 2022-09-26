@@ -41,6 +41,22 @@ Append the correlated features delta m/z to a csv file.
 
 [//]: # (TODO Add screenshot)
 
+## **Correlation coefficient histogram**
+
+### **Description**
+
+:construction: This module is being updated. Some newer functionality might not be documented.
+
+This module allows to plot all correlations between feature shapes.
+
+![Hist](cor-coef-hist.png)
+
+### **Parameters**
+
+#### **m/z bin width**
+
+Binning of m/z values for feature picking
+
 ## **Feature intensity plot**
 
 ### **Description**
@@ -190,3 +206,32 @@ Enter lower bound left and higher bound right. If you have choosen percentile fo
 #### **Heatmap style**
 
 Select the style of your paint scale. You can choose between rainbow and different monochrome color coded paint scales.
+
+## **Van Krevelen diagram**
+
+### **Description**
+
+**Van Krevelen diagrams** are graphical plots developed by Dirk Willem van Krevelen (chemist and professor of fuel technology at the TU Delft) that are used to assess the origin and maturity of kerogen and petroleum. 
+
+The diagram cross-plots the hydrogen:carbon (hydrogen index) as a function of the oxygen:carbon (oxygen index) atomic ratios of carbon compounds. 
+
+!!! quote " "
+
+    1. Van Krevelen, D.W. (1950). "Graphical-statistical method for the study of structure and reaction processes of coal", Fuel, 29, 269-84
+    2. https://en.wikipedia.org/wiki/Van_Krevelen_diagram
+
+### **Parameters**
+
+#### **Peaks**
+
+Select peaks from the feature list.
+
+#### **Z-Axis**
+
+Select which parameters you want to display in the third dimension. If you select "none", a 2D Van Krevelen diagram will be generated.
+
+#### **Color scale**
+
+Select the style of your paint scale. You can choose between rainbow and monochrome color-coded scales.
+
+
