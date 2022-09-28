@@ -8,7 +8,7 @@ The module searches isotope patterns for each feature in selected feature lists 
 Starting from the feature m/z the algorithm will first backtrack any possible preceding isotope signals using a list
 of delta masses created from elements, their stable isotopes, and an m/z tolerance. For example, a -2 signal might 
 be detected when searching for Br isotopes. In a second step, all picked potential isotope m/z values are used to 
-search next isotope (with higher m/z). This is done for each charge state.    I
+search next isotope (with higher m/z). This is done for each charge state.
 
 ![](Isotope_pattern_finder.png)
 
