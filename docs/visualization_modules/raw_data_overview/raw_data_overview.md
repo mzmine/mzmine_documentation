@@ -6,7 +6,9 @@
 
 [//]: # (TODO Add the same level of detalization for each menu item in data table and feature table)
 
-Raw data overview allows user to explore both chromatogram and MS views across all the selected files. By double-clicking on the raw file of interest in the "MS data files" tab, **Raw data overview** tab will open in the main content pane. Raw data overview can either display single or multiple overlaid chromatograms, depending on how many raw files are selected. Additionally, it can be accessed through: Visualization → Raw data overview.
+Raw data overview allows user to explore both chromatogram and MS views across all the selected files. By double-clicking on the raw file of interest in the "MS data files" tab, **Raw data overview** tab will open in the main content pane. Raw data overview can either display single or multiple overlaid chromatograms, depending on how many raw files are selected.
+
+:material-lightbulb: To allow selection of multiple raw files, click the checkbox near the tab name "Raw data overview".
 
 The view consists of three panes - chromatogram representation (on the left), mass spectrum (on the right), and table with tabs containing additional information about raw data files.
 

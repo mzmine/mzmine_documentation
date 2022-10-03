@@ -33,6 +33,7 @@ nav:
         - ADAP Chromatogram builder: module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
         - GridMass: module_docs/lc-ms_featdet/featdet_gridmass/gridmass.md
         - Targeted feature detection: module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.md
+        - Feature detection results: module_docs/lc-ms_featdet/featdet_results/featdet_results.md
       - LC-IMS-MS feature detection:
 #       TODO Rework this one
         - Ion mobility expander: module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.md
@@ -141,12 +142,12 @@ plugins:
       show_contribution: true
   - git-revision-date-localized:
       type: datetime
-  - with-pdf:
-      output_path: documentation.pdf
-      author: The MZmine Community
-      cover_title: MZmine 3
-      cover_subtitle: Documentation
-      cover_logo: img/MZmine_logo_CMYK.png
+#  - with-pdf:
+#      output_path: documentation.pdf
+#      author: The MZmine Community
+#      cover_title: MZmine 3
+#      cover_subtitle: Documentation
+#      cover_logo: img/MZmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:
