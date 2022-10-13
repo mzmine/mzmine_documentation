@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/gapfill_peak_finder/gap-filling.html">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -648,6 +648,20 @@
     <li class="md-nav__item">
       <a href="../lc-ms_featdet/targeted_featdet/targeted-featdet.html" class="md-nav__link">
         Targeted feature detection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lc-ms_featdet/featdet_results/featdet_results.html" class="md-nav__link">
+        Feature detection results
       </a>
     </li>
   
@@ -2397,13 +2411,26 @@
 <h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> It is a recommended gap-filling algorithm.</p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Feature list methods → Gap filling → Peak finder</strong>.</p>
-<p>Some chromatographic features in an aligned feature list may not be detected in every sample for several reasons, such as:</p>
-<ul>
-<li>feature shape constraints in the resolver or later feature filters</li>
-<li>co-eluting features that are not baseline separated might be resolved in one sample but kept unsplit in another </li>
-<li>misalignment due to shifts in m/z, retention time, or ion mobility within feature lists from different samples (or batches). Might originate from inaccurate mass calibration, etc.</li>
-</ul>
-<p>All of these reasons can result in undesirable gaps (missing values) in the aligned feature table. Those gaps are not limited to smaller signals but can also affect abundant features. To account for this problem, the user can use the Peak finder module as a secondary, informed feature finding step. The algorithm searches for signals within the original centroided mass spectra. This algorithm fills the gaps in the feature list according to the user parameters, with the most crucial being <strong>m/z tolerance</strong> and <strong>RT tolerance</strong>. These two tolerances define the window where the algorithm should find the new feature. In the feature table, gap-filled features are marked with a grey color as the feature state. </p>
+<p>[//] # (TODO ADD FIGURE ALIGNED TABLE)</p>
+<p>When a feature cannot be identified/quantified in certain sample will be assigned a zero-intensity value during the feature alingment (see <a href="../align_join_aligner/join_aligner.html">here</a> for more details).This produces <strong>gaps</strong> in the aligned feature table, commonly referred to as <a href="../../terminology/general-terminology.html#missing-values">missing values</a>.</p>
+<p>There is a number of occasions where, due to suboptimal feature detection, a <em>missing value</em> is assigned even tough the peak is actually present. Some chromatographic features in an aligned feature list may not be detected in every sample for several reasons, such as:</p>
+<ol>
+<li>Peak intensity below the minimum abundance threshold. The peak will be not detected even though there is a peak, and it can be gap-filled for the alignment process if the peak having the same RT and m/z is detected in other samples.
+[//] # (TODO Explain minimum abundance threshold)</li>
+<li>Peak discarded in a previous processing step. Peaks filtered out due to low peak intensity</li>
+<li>Misalignment due to shifts in m/z, retention time, or ion mobility within feature lists from different samples (or batches). Might originate from inaccurate mass calibration, etc.</li>
+<li>Inaccurate peak detection and deconvolution of co-eluting compounds. Co-eluting features that are not baseline separated might be resolved in one sample but kept unsplit in another </li>
+<li>Feature shape constraints in the resolver or later feature filters</li>
+</ol>
+<p>All of these reasons can result in undesirable gaps (missing values) in the aligned feature table. Those gaps are not limited to smaller signals but can also affect abundant features. </p>
+<p>To account for this problem, the user can use the Peak finder module as a secondary, informed feature finding step. The gap-filling module (<em>i.e.</em> <em>'Peak finder' algorithm</em>) aims at reducing false missing values and 'fill the gaps' by going back to the original raw data and re-integrating the peak area where the peak is expected. This approch is sometimes reffered to as 'back-filling'.</p>
+<p>The algorithm searches for signals within the original centroided mass spectra. It fills the gaps in the feature list according to the user parameters, with the most crucial being <strong>m/z tolerance</strong> and <strong>RT tolerance</strong>. These two tolerances define the window where the algorithm should find the new feature. </p>
+<p>Each feature in the aligned table is examined individually within the RT window associated to the examined features. Algorithm searches for appropriate features in that window. If the user-defined requirements are met, the peak is integrated, and the retrieved peak area is used to reconstruct omitted features and fill the gap.</p>
+<p>[//] # (TODO ORIGINAL of TEXT above: If requirements are met (e.g. REQUIREMENTS) the peak integrated and the retrieved peak area used to XXX, this filling the gap. and reconstructs omitted chromatographic peaks in “empty” samples by scanning the m/z and retention time region of LC–MS spectra corresponding to the detected peaks in other samples.)</p>
+<p>In the feature table, gap-filled features are marked with a grey color as the feature state (see <a href="../lc-ms_featdet/featdet_results/featdet_results.html">feature table description</a>). There may still be some gaps in which no evidence for the peak was found, marked by orange.</p>
+<p><img alt="Gap-filling" src="gap-filling.png" /></p>
+<p><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> DANGER OF DUPLICATED FEATURES. Some features in the dataset can show duplicates, which appear during feature recognition and alignment of samples. The duplicates falsify the exploratory analysis of data and are removed in MZmine.</p>
+<p>The gap-filled feature table can be further used in downstream data analysis</p>
 <h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <h4 id="name-suffix"><strong>Name suffix</strong><a class="headerlink" href="#name-suffix" title="Permanent link">&para;</a></h4>
 <p>Suffix to be added to the peak list name. </p>
@@ -2411,6 +2438,7 @@
 <p>Maximum allowed deviation from the expected peak shape in chromatographic direction.</p>
 <h4 id="mz-tolerance"><strong>m/z tolerance</strong><a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
 <p>m/z range which will be applied when searching for the possible feature in the raw data.</p>
+<p>The tolerance can be specified as absolute tolerance (in <em>m/z</em>), relative tolerance (in ppm), or both. When both are specified, the tolerance range is calculated using the maximum between the absolute and relative tolerances.</p>
 <h4 id="retention-time-tolerance"><strong>Retention time tolerance</strong><a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h4>
 <p>Retention time range when searching for the possible feature in the raw data.</p>
 <h4 id="minimum-data-points"><strong>Minimum data points</strong><a class="headerlink" href="#minimum-data-points" title="Permanent link">&para;</a></h4>
@@ -2424,7 +2452,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 23, 2022 17:08:14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 13, 2022 12:53:50</span>
       
     
   </small>
@@ -2509,7 +2537,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
