@@ -8,7 +8,7 @@
 
 [//] # (TODO ADD FIGURE ALIGNED TABLE)
 
-When a feature cannot be identified/quantified in certain sample will be assigned a zero-intensity value during the feature alingment (see [here](../join_aligner/join_aligner.md) for more details).This produces **gaps** in the aligned feature table, commonly referred to as [missing values](../../terminology/general-terminology.md#missing-values).
+When a feature cannot be identified/quantified in certain sample will be assigned a zero-intensity value during the feature alingment (see [here](../align_join_aligner/join_aligner.md) for more details).This produces **gaps** in the aligned feature table, commonly referred to as [missing values](../../terminology/general-terminology.md#missing-values).
 
 There is a number of occasions where, due to suboptimal feature detection, a _missing value_ is assigned even tough the peak is actually present. Some chromatographic features in an aligned feature list may not be detected in every sample for several reasons, such as:
 
