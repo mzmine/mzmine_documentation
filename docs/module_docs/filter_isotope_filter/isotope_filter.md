@@ -10,7 +10,7 @@ The _13C isotope filter_ module (formerly called _Isotope grouper_) aims at filt
 
 ## **Parameters**
 
-![](isotope-filter.png)
+![13C isotope filter](isotope-filter.png)
 
 #### **Name suffix**
 String added as suffix when creating the new feature list(s).
@@ -34,7 +34,7 @@ If enabled and the mobility dimension was recorded, potential <sup>13</sup>C iso
 If true, a monotonically decreasing trend of the isotope pattern (typical of the <sup>13</sup>C isotope pattern of small molecules) is required for the filtering.
 
 #### **Maximum charge**
-Maximum charge state considered to predict the <sup>13</sup>C isotopes' _m/z_. If a value > 1 is set, the charge state with the maximum number of detected isotope features will be used for the filtering.
+Maximum charge state considered to predict the <sup>13</sup>C isotopes' _m/z_. If a value > 1 is set, all the cahrge states are evaluated and the one providing the most isotope features detected is used for the filtering.
 
 #### **Never remove feature with MS2**
 If checked, potential <sup>13</sup>C-related features will not be discarded if [associated to a MS2 spectrum](../featdet_ms2_scan_pairing/ms2_scan_pairing.md).
