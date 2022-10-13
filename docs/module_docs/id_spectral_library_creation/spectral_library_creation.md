@@ -1,1 +1,0 @@
-# Spectral library creation

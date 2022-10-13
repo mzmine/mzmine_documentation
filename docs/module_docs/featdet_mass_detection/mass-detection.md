@@ -1,9 +1,15 @@
 # **Mass detection**
-The mass detection module generates a [mass list](../../terminology/general-terminology.md#mass-list) (_i.e._ list of m/z values and correspoinding signal intensities) for each scan, in each raw data file. During the mass detection, profile raw data are centroided and a noise filtering is performed based on a user-defined threshold (see [Setting the noise level](#setting-the-noise-level)).
 
----
-## **Parameters settings**
-:material-menu-open: Raw data methods → Mass detection → Mass detection
+## **Description**
+
+:material-menu-open: **Raw data methods → Mass detection → Mass detection**
+
+The mass detection module generates a [mass list](../../terminology/general-terminology.md#mass-list) (_i.e._ list of m/z values and corresponding signal intensities) for each scan, in each raw data file. During the mass detection, profile raw data are centroided and a noise filtering is performed based on a user-defined threshold (see [Setting the noise level](#setting-the-noise-level)). 
+
+The available algorithms are described [here](mass-detection-algorithms.md).
+
+## **Parameters**
+
 ![Mass detection](mass_detection_main.png)
 
 #### **Raw data files**
@@ -27,7 +33,7 @@ The noise threshold can be entered either in standard or scientific notation. By
 ### **Detect isotope signals below noise level**
 The _Centroid_ and _Exact mass_ algorithms provide the option to retain signals that are below the noise level (and would be otherwise discarded), but correspond to isotopes of the detected masses. Theoretical isotopic distributions are calculated for each mass detected in the _mass list_ based on the speciefied chemical elements. If a signal below the noise threshold that matches a theoretical isotopic mass is found in the raw data, it will be included in the final mass list.
 
-:octicons-light-bulb-16: **Tip**. In the case of LC-MS data processing, the low-intensity isotope signals included in the final mass list will undergo the whole feature detection workflow (see, for example, [LC-MS data processing workflow](../../workflows/lcmsworkflow/lcms-workflow.md). Due to the low intensity, these masses often produce LC peaks with poor peak shape during the chromatogram building step and might be discarded if they do not meet the user-defined parameters (_e.g._ minimum number of data points and intensity, see [ADAP chromatogram builder](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) for more details). Therefore, it might be advisable not to use this option during the mass detection, but rather use the Isotope finder module (CREATE DOC)
+:octicons-light-bulb-16: **Tip**. In the case of LC-MS data processing, the low-intensity isotope signals included in the final mass list will undergo the whole feature detection workflow (see, for example, [LC-MS data processing workflow](../../workflows/lcmsworkflow/lcms-workflow.md). Due to the low intensity, these masses often produce LC peaks with poor peak shape during the chromatogram building step and might be discarded if they do not meet the user-defined parameters (_e.g._ minimum number of data points and intensity, see [ADAP chromatogram builder](../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) for more details). Therefore, it might be advisable not to use this option during the mass detection, but rather use the Isotope finder module (CREATE DOC)
 
 By ticking the corresponding checkbox and hitting the _Setup_ button, the following dialog box opens up:
 ![detect isotopes](isotopes_below_noise.png)
@@ -41,8 +47,8 @@ Maximum allowed difference between measured and theoretical isotope _m/z_. It is
 #### **Maximum charge of isotope _m/z_**
 Maximum allowed charge state of the isotope to be retained in the mass list. Default value is 1.
 
----
-### **How do I determine the noise level in my data?**
+
+## **How do I determine the noise level in my data?**
 The backgorund noise level largely depends on the mass spectrometer and detector type. For example, Orbitrap instruments normally provides higher signal intensities than TOF devices. To provide some numbers, while 1.0E2 - 1.0E3 could be an appropriate noise level for TOF analyzers, the same would be overly low for Orbitrap instruments (which normally require 1.0E4 - 1.0E5).
 
 The best way to determine the instrumental noise level is undoubtedly by looking at the raw data. The backgorund noise (often referred to as "grass" in technical jargon) is characterized by several signals having the same intensity and no clear pattern among them (see Figure). 
@@ -55,4 +61,4 @@ Another way, more releant for the fearure detection, to determine the noise leve
 
 ![determine noise level](determine_noise_level-2.png)
 
-Such approach can also be useful to determine other parameters in the feature detection such as the [Group intensity threshold](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#group-intensity-threshold) and [Min highest intensity](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#min-highest-intensity) parameters in the [ADAP chromatogram builder](../featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#min-highest-intensity) module.
+Such approach can also be useful to determine other parameters in the feature detection such as the **Group intensity threshold** and **Min highest intensity** parameters in the [ADAP chromatogram builder](../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#parameters) module.
