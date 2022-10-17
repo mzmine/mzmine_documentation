@@ -9,6 +9,7 @@ nav:
   - Home page: index.md
   - Getting started: getting_started.md
   - Main window overview: main-window-overview.md
+  - Data conversion: data_conversion.md
 
   - Processing modules:
       - I/O:
