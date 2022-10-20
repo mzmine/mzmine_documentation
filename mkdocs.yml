@@ -10,6 +10,14 @@ nav:
   - Getting started: getting_started.md
   - Main window overview: main-window-overview.md
   - Data conversion: data_conversion.md
+  - Citations: citations.md
+
+  - Coding:
+    - General structure: coding/general_structure.md
+    - Module development: coding/module_development.md
+    - Raw data structure: coding/raw_data_structure.md
+    - Feature data structure: coding/feature_data_structure.md
+    - Example module - Spectral entropy: coding/example_module.md
 
   - Processing modules:
       - I/O:
