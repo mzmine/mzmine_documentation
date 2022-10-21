@@ -285,8 +285,21 @@
       
         <li class="md-nav__item">
   <a href="#msconvert-proteowizard-to-mzml" class="md-nav__link">
-    msconvert (ProteoWizard) to mzML
+    MSConvert (ProteoWizard) to mzML
   </a>
+  
+    <nav class="md-nav" aria-label="MSConvert (ProteoWizard) to mzML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msconvert-command-line-interface" class="md-nav__link">
+    MSConvert command line interface
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2409,8 +2422,21 @@
       
         <li class="md-nav__item">
   <a href="#msconvert-proteowizard-to-mzml" class="md-nav__link">
-    msconvert (ProteoWizard) to mzML
+    MSConvert (ProteoWizard) to mzML
   </a>
+  
+    <nav class="md-nav" aria-label="MSConvert (ProteoWizard) to mzML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#msconvert-command-line-interface" class="md-nav__link">
+    MSConvert command line interface
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2442,20 +2468,32 @@
 
 
 <h1 id="data-conversion-to-open-formats-mzml-imzml">Data conversion to open formats (mzML / imzML)<a class="headerlink" href="#data-conversion-to-open-formats-mzml-imzml" title="Permanent link">&para;</a></h1>
-<h2 id="msconvert-proteowizard-to-mzml">msconvert (ProteoWizard) to mzML<a class="headerlink" href="#msconvert-proteowizard-to-mzml" title="Permanent link">&para;</a></h2>
+<h2 id="msconvert-proteowizard-to-mzml">MSConvert (ProteoWizard) to mzML<a class="headerlink" href="#msconvert-proteowizard-to-mzml" title="Permanent link">&para;</a></h2>
 <p>Recommended conversion settings for high-resolution MS data to mzML (newer than mzXML). Use <strong>64 bit</strong> for <em>m/z</em> to retain accuracy. 
 <strong>Compression is optional</strong> but reduces the size significantly without much information loss - this might be instrument dependent though.</p>
-<p>The <strong>peak picking</strong> filter needs to be the first in the list - otherwise msconvert might default to another algorithm than the selected vendor-specific one. <strong>Beware</strong> that previous versions of msconvert had the titleMaker filter at the first position and the position needed to be switched accordingly to peak picking first.  </p>
+<p>The <strong>peak picking</strong> filter needs to be the first in the list - otherwise MSConvert might default to another algorithm 
+than the selected vendor-specific one. <strong>Beware</strong> that previous versions of MSConvert had the titleMaker filter at the 
+first position and the peak picking algorithm was added manually and the position needed to be switched accordingly to 
+peak picking first.  </p>
 <p><img alt="" src="img/msconvert.png" /></p>
+<h3 id="msconvert-command-line-interface">MSConvert command line interface<a class="headerlink" href="#msconvert-command-line-interface" title="Permanent link">&para;</a></h3>
+<p>Example Microsoft windows command to convert all .raw to .mzML. Can be in a .bat-batchfile located together with the raw data files.
+By default, the <em>m/z</em> is encoded in <strong>64 bit</strong>, whereas the intensity is encoded in <strong>32 bit</strong>. NumpressPic compresses the intensity, whereas the numpressLinear compresses the <em>m/z</em> and RT and a [toler] can be set. The peakPicking
+can be set to specific MS levels (here MS1- for multistage fragmentation)
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;C:\Users\**USERNAME**\AppData\Local\Apps\ProteoWizard 3.0.22166.28b1b7b 64-bit\msconvert.exe&quot;</span> *.raw --filter <span class="s2">&quot;peakPicking true 1-&quot;</span> --zlib --numpressPic --numpressLinear -v -o mzml
+pause <span class="m">1</span>
+</code></pre></div>
+More details can be found in the proteowizard documentation. </p>
+<p>https://proteowizard.sourceforge.io/tools/msconvert.html</p>
 <h2 id="page-contributors">Page Contributors<a class="headerlink" href="#page-contributors" title="Permanent link">&para;</a></h2>
-<p><span class='git-page-authors git-authors'><a href='mailto:robinschmid@uni-muenster.de'>Robin Schmid</a> (20.0%), <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a> (80.0%)</span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:robinschmid@uni-muenster.de'>Robin Schmid</a> (7.14%), <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a> (53.57%), <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a> (39.29%)</span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 17, 2022 21:29:12</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 18, 2022 00:02:17</span>
       
     
   </small>
