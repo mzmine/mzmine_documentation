@@ -25,7 +25,7 @@ https://proteowizard.sourceforge.io/tools/msconvert.html
 
 ## Bruker: Recalibrated files to the data conversion guide
 
-For Bruker recalibrated data, it is recommended to perform **export analysis to mzXML** using the Bruker's Data Analysis software (for automation, apply Bruker’s processing script during data acquisition) prior to importing to mzMine. Compared to the mzML and mzData formats, the mzXML format best retains the full scan definition and sample recalibration properties. 
+For Bruker recalibrated data, it is recommended to perform **export analysis to mzXML** using the Bruker's Data Analysis software (for automation, apply Bruker’s processing script during data acquisition) prior to importing to MZmine. Compared to the mzML and mzData formats, the mzXML format best retains the full scan definition and sample recalibration properties. In mzML the MS1 scans were recalibrated but the MS2 scan definition of the precursor _m/z_ did stay unchanged, leading to differences between MS1 and MS2.
 
 
 ## Page Contributors
