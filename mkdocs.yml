@@ -120,8 +120,8 @@ nav:
           - Additional tools: visualization_modules/processed_additional/processed_additional.md
 
   - Workflows:
-      - LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
-      - LC-IMS-MS workflow: workflows/imsworkflow/ion-mobility-data-processing-workflow.md
+      - Untargeted LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
+      - Untargeted LC-IMS-MS workflow: workflows/imsworkflow/ion-mobility-data-processing-workflow.md
       - Batch processing: workflows/batch_processing/batch-processing.md
 
   - Additional resources:
@@ -134,7 +134,8 @@ nav:
   - Performance options: performance.md
   - Command line tool (batch mode): commandline_tool.md
   - Contribute:
-    - Contribute: contribute.md
+    - Contribute to documentation: contribute.md
+    - giDocumentation template: contribute_docu_template.md
     - MZmine development (in IntelliJ): contribute_intellij.md
 
   - Acknowledgements: wikiacknowledgements.md
@@ -156,7 +157,7 @@ plugins:
       author: The MZmine Community
       cover_title: MZmine 3
       cover_subtitle: Documentation
-      cover_logo: img/MZmine_logo_CMYK.png
+      cover_logo: docs/img/MZmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:
