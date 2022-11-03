@@ -4,7 +4,7 @@
 
 Supporting and updating the documentation is especially important for MZmine due to the variety and complexity of the modules. If you wish to contribute by creating a module, please, create a corresponding documentation. In this way, the MZmine community will be able to easier adapt the novel modules in their workflows and everyday practice.
 
-MZmine documentation uses [MkDocs site generator]("https://www.mkdocs.org/"). Documentation source is created in Markdown and configured using a single YAML file. If you are new to MkDocs or Markdown, the detailed User guide can be found [here]("https://www.mkdocs.org/user-guide/writing-your-docs/").
+MZmine documentation uses [MkDocs site generator](https://www.mkdocs.org/). Documentation source is created in Markdown and configured using a single YAML file. If you are new to MkDocs or Markdown, the detailed User guide can be found [here](https://www.mkdocs.org/user-guide/writing-your-docs/).
 
 [//]: # (TODO Describe local installation of documentation)
 
@@ -92,7 +92,7 @@ Please describe the change you are making.
 ## **Additional useful information**
 ### **Using icons**
 
-To highlight some points in the prepared documentation, it is advised to use icons. **Material for MkDocs** is integrated into MZmine documentation and suggests a wide range of icons, logos, and more. Icons can be found [here]("https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/").
+To highlight some points in the prepared documentation, it is advised to use icons. **Material for MkDocs** is integrated into MZmine documentation and suggests a wide range of icons, logos, and more. Icons can be found [here](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/).
 
 [//]: # (Used icons)
 
@@ -112,7 +112,7 @@ To insert inline formula, one can use single "\$" signs, like this `$x^n + y^n =
 
 $$E=mc^2$$
 
-The excellent reference guide to different mathematical expressions can be found [here]("https://www.overleaf.com/learn").
+The excellent reference guide to different mathematical expressions can be found [here](https://www.overleaf.com/learn).
 
 ## Page Contributors
 
