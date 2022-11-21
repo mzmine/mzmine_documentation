@@ -12,17 +12,13 @@ nav:
   - Data conversion: data_conversion.md
   - Citations: citations.md
 
-  - Coding:
-    - General structure: coding/general_structure.md
-    - Module development: coding/module_development.md
-    - Raw data structure: coding/raw_data_structure.md
-    - Feature data structure: coding/feature_data_structure.md
-    - Example module - Spectral entropy: coding/example_module.md
-
   - Processing modules:
       - I/O:
-          -  Data import: module_docs/io/data-import.md
-          -  Data export: module_docs/io/data-export.md
+          -  Raw data import: module_docs/io/data-import.md
+          -  Raw data export: module_docs/io/data-export.md
+          -  Feature list import: module_docs/io/feat-list-import.md
+          -  Feature list export: module_docs/io/feat-list-export.md
+          -  Export to other software: module_docs/io/data-exchange-with-other-software.md
 #         TODO Add feature list import/export
       - File merging:
         - Raw data files merging: module_docs/featdet_file_merging/raw-files-merging.md
@@ -134,9 +130,15 @@ nav:
   - Performance options: performance.md
   - Command line tool (batch mode): commandline_tool.md
   - Contribute:
-    - Contribute to documentation: contribute.md
-    - giDocumentation template: contribute_docu_template.md
-    - MZmine development (in IntelliJ): contribute_intellij.md
+      - Coding:
+            - General structure: coding/general_structure.md
+            - MZmine development (in IntelliJ): contribute_intellij.md
+            - Module development: coding/module_development.md
+            - Raw data structure: coding/raw_data_structure.md
+            - Feature data structure: coding/feature_data_structure.md
+            - Example module - Spectral entropy: coding/example_module.md
+      - Contribute to documentation: contribute.md
+      - Documentation template: contribute_docu_template.md
 
   - Acknowledgements: wikiacknowledgements.md
 
