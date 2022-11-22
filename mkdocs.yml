@@ -10,6 +10,7 @@ nav:
   - Getting started: getting_started.md
   - Main window overview: main-window-overview.md
   - Data conversion: data_conversion.md
+  - Integration to other tools: tool_integration.md
   - Citations: citations.md
 
   - Processing modules:
