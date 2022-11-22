@@ -20,7 +20,10 @@ To make the creation of documentation easier, a convenient Markdown structure is
 
     ## **References**
 
-    [TEXT]
+    !!! quote " "
+
+    1. Reference 1
+    2. ...
 
     ## **Parameters**
 
@@ -32,6 +35,8 @@ To make the creation of documentation easier, a convenient Markdown structure is
     #### **Parameter 2**
     _Optional parameter_
     ...
+
+    {{ git_page_authors }}
 
 ## **Sections**
 
@@ -91,6 +96,22 @@ The Markdown for the tip is:
     !!! tip
 
     Here you can put the tip. For example, 'The good starting value for the Parameter 1 might be between 0.1 and 0.5.
+
+## **References**
+
+For the references custom admonition box is used:
+
+!!! quote " "
+
+    1. Reference 1
+    2. ...
+
+The Markdown for this box is:
+
+    !!! quote " "
+
+    1. Reference 1
+    2. ...
 
 If a more detailed description for the used algorithms is needed, you can add it under a separate subsection "Algorithms".
 

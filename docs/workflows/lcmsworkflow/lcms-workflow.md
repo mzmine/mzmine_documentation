@@ -1,4 +1,4 @@
-# LC-MS Workflow
+# Untargeted LC-MS Workflow
 The workflow proposed herein is intended as a general pipeline for untargeted LC-MS (or LC−MS/MS) data preprocessing. The main goal is essentially to turn the highly-complex LC-MS raw data into a list of features, and corresponding signal intensity, detected across the analysed samples. Such feature lists can then be exported for further downstream analysis (e.g., identification, search against spectral libraries, statistical analysis, etc.). A schematic representation of the workflow is shown below:
 
 ![workflow-image](workflow-image.png)
@@ -60,7 +60,7 @@ Gap-filling can be performed on the aligned feature lists to cope with missing f
 ## Export
 Depending on the downstream analyses, there are several export options which are accessible through **Feature list methods** → **Export feature list**.
 
-For GNPS-Feature based molecular networking, see [GNPS-FBMN](../../module_docs/GNPS_export/gnps_export.md)
+For GNPS-Feature based molecular networking, see [GNPS-FBMN](../../module_docs/io/data-exchange-with-other-software.md#gnps-fbmniimn-export)
 
 ## References
 
