@@ -1,4 +1,4 @@
-# LC-IMS-MS Workflow Overview
+# Untargeted LC-IMS-MS Workflow Overview
 
 Compared to regular LC-MS, LC-IM-MS data is more complex due to the additional separation dimension.
 Since some terms might not be straightforward for new users, a basic explanation of IM separation
