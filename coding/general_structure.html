@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#general-structure-of-mzmine3-code" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2261,9 +2266,92 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          General structure
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="general_structure.html" class="md-nav__link md-nav__link--active">
         General structure
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-structure-of-mzmine3-code" class="md-nav__link">
+    General structure of MZmine3 code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mzmine-architecture" class="md-nav__link">
+    MZmine architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="MZmine architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#libraries-used" class="md-nav__link">
+    Libraries used
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-structure" class="md-nav__link">
+    Module structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Module structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-class" class="md-nav__link">
+    Module class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters-class" class="md-nav__link">
+    Parameters class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    Task
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2292,48 +2380,6 @@
     <li class="md-nav__item">
       <a href="module_development.html" class="md-nav__link">
         Module development
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="raw_data_structure.html" class="md-nav__link">
-        Raw data structure
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="feature_data_structure.html" class="md-nav__link">
-        Feature data structure
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="example_module.html" class="md-nav__link">
-        Example module - Spectral entropy
       </a>
     </li>
   
@@ -2414,6 +2460,75 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-structure-of-mzmine3-code" class="md-nav__link">
+    General structure of MZmine3 code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mzmine-architecture" class="md-nav__link">
+    MZmine architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="MZmine architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#libraries-used" class="md-nav__link">
+    Libraries used
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-structure" class="md-nav__link">
+    Module structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Module structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-class" class="md-nav__link">
+    Module class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters-class" class="md-nav__link">
+    Parameters class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    Task
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2432,16 +2547,64 @@
   </a>
 
 
-  <h1>General structure</h1>
-
-
+<h2 id="general-structure-of-mzmine3-code"><strong>General structure of MZmine3 code</strong><a class="headerlink" href="#general-structure-of-mzmine3-code" title="Permanent link">&para;</a></h2>
+<h1 id="mzmine-architecture"><strong>MZmine architecture</strong><a class="headerlink" href="#mzmine-architecture" title="Permanent link">&para;</a></h1>
+<p>MZmine 3 is developed using Java technology, therefore it is completely platform independent, requiring only Java runtime for running. 
+One of the main design goals is to keep a strict separation between the application core and modules for data processing and visualization. The general architecture of the modules is presented at the following scheme.</p>
+<p><img alt="Architecture" src="architecture.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The practical instructions for MZmine coding can be found <a href="module_development.html">here</a>.</p>
+</div>
+<h2 id="libraries-used"><strong>Libraries used</strong><a class="headerlink" href="#libraries-used" title="Permanent link">&para;</a></h2>
+<pre><code>Apache XML Graphics - EPS image export
+Chemistry Development Kit - Isotope pattern and molecular calculations
+Freehep - EMF image export
+Google Guava - Utility classes
+JavaHelp - Help system
+JChemPaint - 2D molecule visualization
+JFreeChart - TIC, Spectra and 2D visualizers
+JMol - 3D molecule visualization
+jmzml - mzML file import
+jmzTab - mzTab file import and export
+NetCDF-Java - NetCDF file import
+VisAD - 3D visualizer
+WEKA - Clustering and other machine learning algorithms
+</code></pre>
+<h2 id="module-structure"><strong>Module structure</strong><a class="headerlink" href="#module-structure" title="Permanent link">&para;</a></h2>
+<p>Each module in MZmine necessarily contains three classes:</p>
+<ul>
+<li>[Name]Module.java</li>
+<li>[Name]Parameters.java</li>
+<li>[Name]Task.java</li>
+</ul>
+<p>Optionally module can contain dialog class:</p>
+<ul>
+<li>[Name]Dialog.java</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<p>You can fnd examples for all these classes in the <code>java/io/github/mzmine/modules/example</code> folder.</p>
+<h3 id="module-class"><strong>Module class</strong><a class="headerlink" href="#module-class" title="Permanent link">&para;</a></h3>
+<p>Each Module class implements one of three interfaces:</p>
+<ul>
+<li><strong>MZMineModule</strong> interface - the most basic interface, aimed at any module that has to store some kind of parameters,</li>
+<li><strong>MZMineRunnableModule</strong> interface - an interface that extends MZmine module and presents a <code>runModule()</code> method, which provides an opportunity to run task (for example, from the dialog),</li>
+<li><strong>MZMineProcessingModule</strong> interface - an interface that extends MZMineRunnableModule and gives an opportunity to execute a module in a batch.</li>
+</ul>
+<h3 id="parameters-class"><strong>Parameters class</strong><a class="headerlink" href="#parameters-class" title="Permanent link">&para;</a></h3>
+<p>The Parameters class is defined by the <strong>ParameterSet interface</strong>, which declares functions necessary to get, load, and save module parameters. Also, in this class additional information must be defined, such as compatibility of module with the IMS data and URL of online documentation. Typically, a module would use <strong>SimpleParameterSet class</strong>. </p>
+<h3 id="task">Task<a class="headerlink" href="#task" title="Permanent link">&para;</a></h3>
+<p>This is the part where the functionality of a module is implemented. The main specifications are defined by the <strong>Task interface</strong>, with methods that control and monitor the flow of a task execution (such as <code>cancel()</code>, <code>getTaskPriority()</code>, <code>getFinishedPercentage()</code>). Task interface is implemented by <strong>AbstractTask class</strong>, which defines some of the most common used methods.  </p>
+<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>Olena Mokshyna</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 20, 2022 16:56:06</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 21:13:07</span>
       
     
   </small>
