@@ -21,3 +21,5 @@ Defines if mobility or mz shall be used for extraction.
 The suffix of newly created feature lists.
 
 [//]: # (TODO Add more details)
+
+{{ git_page_authors }}

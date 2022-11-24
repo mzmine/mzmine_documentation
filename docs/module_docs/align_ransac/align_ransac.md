@@ -90,3 +90,5 @@ The three first parameters (m/z tolerance, RT tolerance after the correction and
 - The choice of **model** depends on whether the deviation in the retention time can be considered linear or not in the data. 
 
    If the deviation in the retention time is linear, a simple linear regression will be used to fit the model.
+
+{{ git_page_authors }}

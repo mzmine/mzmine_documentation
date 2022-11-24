@@ -34,3 +34,4 @@ Transform intensities to _log_ scale before comparing correlation.
 
 Remove processed files to save memory.
 
+{{ git_page_authors }}

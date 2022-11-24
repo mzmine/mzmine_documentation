@@ -26,3 +26,5 @@ by summing all mobility scans of a frame to create a frame spectrum.
 (see [Mobility scan merging](../../module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md))
 
 ![lcimsmsdata](lcimsmsdataformat.png)
+
+{{ git_page_authors }}

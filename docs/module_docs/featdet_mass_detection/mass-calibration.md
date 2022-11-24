@@ -152,3 +152,5 @@ The module supports two main modes for mass calibration:
 
 
 `This module was intially created during a GSoC 2020 project with MZmine by Łukasz Fiszer and MZmine team.`
+
+{{ git_page_authors }}

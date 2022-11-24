@@ -27,3 +27,5 @@ The default value is 1, but insert an integer greater than 1 if you want to cons
 
 #### Search in scans
 Currently, the supported option is "Single most intense", which means the search for isotopes will happen in the single most intense MS scan of each feature.
+
+{{ git_page_authors }}

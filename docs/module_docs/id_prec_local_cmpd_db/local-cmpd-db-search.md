@@ -72,3 +72,5 @@ Maximum allowed difference (in percents) between two CCS values.
 #### **Use adducts**
 
 If chosen, m/z values for multiple adducts will be calculated and matched against feature list.
+
+{{ git_page_authors }}

@@ -41,3 +41,5 @@ List of features for choosing the normalization standards
 #### **Original peak list**
 
 If selected, the original peak list is automatically removed
+
+{{ git_page_authors }}

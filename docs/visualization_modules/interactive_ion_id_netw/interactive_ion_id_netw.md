@@ -39,3 +39,5 @@ Include feature correlation edges.
 #### **MS2 similarity edges**
 
 Show MS2 similarity edges.
+
+{{ git_page_authors }}

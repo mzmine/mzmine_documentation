@@ -175,3 +175,5 @@ If the input data has ion mobility dimension, this data can be used instead of t
 [//]: # (TODO Decribe chromatogram window)
 
 [//]: # (TODO 2D plot//)
+
+{{ git_page_authors }}

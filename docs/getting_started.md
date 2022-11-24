@@ -61,3 +61,5 @@ here: [LC-MS workflow](workflows/lcmsworkflow/lcms-workflow.md)
 or [LC-IMS-IMS workflow](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)
 
 You can also check out the new processing wizard under _Processing wizard_ in the main menu. 
+
+{{ git_page_authors }}

@@ -41,3 +41,5 @@ If the checkbox is selected duplicate peaks must have the same identification.
 
 #### **Original feature list**
 Can be either processed in place of, kept or replaced. 
+
+{{ git_page_authors }}

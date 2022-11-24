@@ -139,3 +139,5 @@ It features the detected isotope peaks, a detected m/z ppm-offset, expected (@mo
 **Solution 1**: Are you sure every isotope has been detected? How sensitive is you MS? Try to increase values for minimum abundance or minimum pattern intensity. You might need low minimum abundance but high minimum intensity, because a peak of a specific isotope composition might not been detected due to low relative intensity in the pattern. Check our preview function!
 
 **Solution 2**: Another solution might be changing the merge width. Check how good the resolution of your MS data is and adjust the merge width to that. If (several) isotope compositions overlap, the intensities have to be merged. You can see a preview in the preview window!
+
+{{ git_page_authors }}

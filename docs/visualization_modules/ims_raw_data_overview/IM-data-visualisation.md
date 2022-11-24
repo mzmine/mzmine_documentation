@@ -64,3 +64,5 @@ _Note_. It is currently not possible to display the [TIC chromatogram](../../ter
 
 
 [//]: # (Todo list: - Explain EIC and EIC in mobilogram chart)
+
+{{ git_page_authors }}

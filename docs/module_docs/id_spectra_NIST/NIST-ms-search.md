@@ -57,3 +57,5 @@ Available options are Sum or Maximum.
 #### **Spectrum Import**
 
 Options for import, can be by either **Overwrite** (overwriting previous spectra) or **Append** (appending new ones).
+
+{{ git_page_authors }}

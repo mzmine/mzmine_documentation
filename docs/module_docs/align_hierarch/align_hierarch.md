@@ -130,3 +130,5 @@ The dendrogram can be then browsed using common applications such as TreeView <a
 #### **Dendrogram output text filename**
 
 Name of the resulting TXT file to write the clustering resulting dendrogram to. If the file already exists, it will be overwritten.
+
+{{ git_page_authors }}

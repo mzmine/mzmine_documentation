@@ -101,3 +101,5 @@ String to add to feature list name as a suffix.
 **Remove original feature list**
 
 If checked, original feature list will be removed.
+
+{{ git_page_authors }}

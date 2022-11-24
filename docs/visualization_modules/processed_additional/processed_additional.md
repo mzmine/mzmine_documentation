@@ -234,4 +234,6 @@ Select which parameters you want to display in the third dimension. If you selec
 
 Select the style of your paint scale. You can choose between rainbow and monochrome color-coded scales.
 
+{{ git_page_authors }}
+
 

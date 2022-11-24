@@ -42,3 +42,5 @@ m/z ratio of the neutral loss to be detected. If the text box of "Molecule" is n
 #### **Molecule**
 
 Element combination/Molecule of the neutral loss (e.g. HI) This module will calculate the mass of the given molecule and ignore the input in the "Neutral loss" text box.
+
+{{ git_page_authors }}

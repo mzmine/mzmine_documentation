@@ -84,3 +84,5 @@ The R engine to be used for communicating with R. RServe might provide you with 
 #### **Min # of data points**
 
 Minimum number of data points on a feature.
+
+{{ git_page_authors }}

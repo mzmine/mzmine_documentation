@@ -47,3 +47,5 @@ This value is the intensity amplitude of the signal in the noise region
 #### **Min # of data points**
 
 Minimum number of data points on a feature.
+
+{{ git_page_authors }}

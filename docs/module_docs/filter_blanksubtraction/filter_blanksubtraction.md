@@ -21,3 +21,5 @@ Specifies a percentage of increase of the intensity of a feature. If the intensi
 #### **Suffix**
 
 The suffix for the new feature list.
+
+{{ git_page_authors }}

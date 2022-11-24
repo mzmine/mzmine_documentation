@@ -69,4 +69,4 @@ An "_ion mobility trace_" basically represents a mobility resolved extracted ion
 - Meier, F., Brunner, A.D., Koch, S., Cox, J., Räther, O., Mann, M. Online Parallel Accumulation–Serial Fragmentation (PASEF) with a Novel Trapped Ion Mobility Mass Spectrometer. _Molecular & Cellular Proteomics_ (2018). DOI: <a>10.1074/mcp.TIR118.000900</a>
 - Paglia, G. et al. Ion Mobility Derived Collision Cross Sections to Support Metabolomics Applications. _Anal. Chem._ (2014). DOI: <a>10.1021/ac500405x</a>
 
-
+{{ git_page_authors }}

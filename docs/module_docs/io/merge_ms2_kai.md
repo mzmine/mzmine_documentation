@@ -38,3 +38,5 @@ Isolation window offset from the precursor m/z.
 
 #### Isolation window width (m/z)
 Width of the isolation window (left and right).  
+
+{{ git_page_authors }}

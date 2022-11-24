@@ -155,3 +155,5 @@ More details are available [here](spectral-similarity-measures.md).
 :material-lightbulb: The **weighted dot-product cosine** similarity is used for comparing MS^2^ data, whereas the
 **composite dot-product identity (similar to NIST search)** considers the relative intensity of
 neighboring signals and is, therefore, applied to MS^1^ spectra from GC-EI-MS.
+
+{{ git_page_authors }}

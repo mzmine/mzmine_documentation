@@ -63,3 +63,5 @@ By clicking the button "Show database" at the bottom of the window, the user can
 ## **Results description**
 
 Peaks will be annotated as potential lipids by setting its peak identity. Always check for multiple assignments and compare the status with the database table and Kendrick plots! The comment holds information on the utilized ionization method, mass accuracy and MS/MS annotation. An MS/MS annotation will be added if MS/MS data was acquired and fragmentation information is listed in the database. More MS/MS data will be added in the future.
+
+{{ git_page_authors }}

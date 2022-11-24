@@ -44,3 +44,5 @@ Level below which all data points of the chromatogram are removed (absolute inte
 #### **Min # of data points**
 
 Minimum number of data points on a feature
+
+{{ git_page_authors }}

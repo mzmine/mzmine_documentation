@@ -69,3 +69,5 @@ Supported databases are listed below. Support for other databases may be impleme
 - **MetaCyc**
 
     MetaCyc (<a>https://metacyc.org/</a>) is a curated database of experimentally elucidated metabolic pathways from all biological domains. MetaCyc currently contains 2937 pathways, 17,780 reactions and 18,124 metabolites.
+
+{{ git_page_authors }}

@@ -83,3 +83,5 @@ Signals that only occur within one scan (query OR library entry) can be handled 
     Results in discarding all unaligned signals of the library scan, whereas all unaligned query signals are matched to zero.
 
     Has reversed effects compared to the previous option.
+
+{{ git_page_authors }}

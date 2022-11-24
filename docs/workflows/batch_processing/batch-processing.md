@@ -49,3 +49,4 @@ Export path: <br>
 
     The default settings were optimized on sample datasets used during the MZmine 3 development. Although probably suitable for many appications, it is strongly recommended not to blindly rely on them. Rather, optimal processing parameters should be chosen based on the LC-(IM)-MS system performance and data acquisition settings.
 
+{{ git_page_authors }}

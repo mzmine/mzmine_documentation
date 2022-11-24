@@ -62,3 +62,4 @@ Feature will be used for gap filling only if it satisfies the set minimum number
 #### **Original feature list**
 User can either keep, remove, or process in place of the original feature list. The latter two increase memory efficiency and throughput while users might want to keep the original feature list as a reference. 
 
+{{ git_page_authors }}

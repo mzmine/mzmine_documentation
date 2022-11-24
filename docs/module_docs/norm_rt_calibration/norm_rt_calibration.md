@@ -35,3 +35,5 @@ If REMOVE option is selected, the original feature list is  removed, allowing to
 [//]: # (TODO Add the screenshot)
 [//]: # (The folowing screenshot shows two feature lists &#40;top&#41; normalized by the Retention time normalizer &#40;bottom&#41; with the following parameters: m/z tolerance = 0.1, RT tolerance = 1:00, Minimum standard intensity = 1E6. The red color shows which peaks were selected as standards. The retention time of standards was averaged, and retention time of other peaks was adjusted accordingly &#40;blue color&#41;.)
 
+{{ git_page_authors }}
+

@@ -72,3 +72,5 @@ dimension). The shapes and projections can be smoothed and resolved. However, th
 is always represented by the raw data and remains unaltered. After resolving, the shapes and
 mobilograms have to be recalculated from the raw data, which is why the smoothing is lost after
 resolving.
+
+{{ git_page_authors }}

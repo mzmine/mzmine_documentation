@@ -90,3 +90,5 @@ state determined via the isotope pattern will be used.
 ![](ccscalc.jpg)
 
 [//]: # (TODO Describe parameters)
+
+{{ git_page_authors }}

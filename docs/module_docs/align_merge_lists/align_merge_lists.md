@@ -17,3 +17,5 @@ Feature lists this module will take as an input
 #### **Feature list name**
 
 Resulting feature list name
+
+{{ git_page_authors }}

@@ -82,3 +82,5 @@ Minimum spectral match score threshold, below which spectral matches will not be
 [//]: # (TODO 1e10??)
 
 [//]: # (A value of 1e10 is a decent cutoff on a Q-Exactive instrument with typical data. Set to 0 to report all matches.)
+
+{{ git_page_authors }}

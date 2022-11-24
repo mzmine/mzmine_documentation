@@ -137,3 +137,5 @@ The acceptable range of peak widths. Features with widths outside this range wil
 #### **RT wavelet range**
 
 The range of wavelet scales used to build matrix of coefficients. Scales are expressed as RT values (minutes) and correspond to the range of wavelet scales that will be applied to the chromatogram. Choose a range that is similar to the range of feature widths expected to be found from the data.
+
+{{ git_page_authors }}

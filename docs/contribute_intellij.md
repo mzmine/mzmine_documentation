@@ -117,3 +117,5 @@ If gradle tool window is not shown:
 2. To update the imports click the update gradle project button in the gradle tool window
  
 ![](img/contribute/intellij_gradle_update.png)
+
+{{ git_page_authors }}

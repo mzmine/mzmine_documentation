@@ -33,5 +33,7 @@ This string is added to filename as suffix
 
 If checked, only filtered file version is stored.
 
+{{ git_page_authors }}
+
 
 

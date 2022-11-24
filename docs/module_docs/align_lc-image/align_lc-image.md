@@ -33,3 +33,5 @@ Maximum score for a perfectly matching mobility. Default value is 1.
 #### **Feature list name**
 
 The name of the new feature list. Use {lc} to use the name of the input (LC/DI) feature list.
+
+{{ git_page_authors }}

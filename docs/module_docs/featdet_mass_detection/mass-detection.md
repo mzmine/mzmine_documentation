@@ -62,3 +62,5 @@ Another way, more releant for the fearure detection, to determine the noise leve
 ![determine noise level](determine_noise_level-2.png)
 
 Such approach can also be useful to determine other parameters in the feature detection such as the **Group intensity threshold** and **Min highest intensity** parameters in the [ADAP chromatogram builder](../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#parameters) module.
+
+{{ git_page_authors }}

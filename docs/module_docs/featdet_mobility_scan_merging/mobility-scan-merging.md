@@ -49,3 +49,5 @@ Selects the scans that should be included.
 
 Maximum allowed difference between two m/z values in order for them to be considered the same.
 
+{{ git_page_authors }}
+

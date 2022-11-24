@@ -25,3 +25,5 @@ the [GNPS](https://ccms-ucsd.github.io/GNPSDocumentation/) staff. We highly appr
 - [WEKA](http://www.cs.waikato.ac.nz/ml/weka/) - Clustering and other machine learning algorithms
 - [Bruker TDF SDK](https://www.bruker.com/de.html) - Native tdf/tdf file import (requires VC++ 2017 redist.)
 - [Thermo raw file parser](https://github.com/compomics/ThermoRawFileParser) - Native Thermo raw import
+
+{{ git_page_authors }}

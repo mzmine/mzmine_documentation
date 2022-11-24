@@ -114,3 +114,4 @@ Only features meeting this criteria will be aligned.  See [compare spectra simil
 The user can choose to either KEEP the original feature list and generate a new processed one, or REMOVE the original feature list with the processed one.
 Generally, you would keep the original feature list, but opting for REMOVE will save memory.
 
+{{ git_page_authors }}
