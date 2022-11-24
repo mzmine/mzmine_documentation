@@ -31,4 +31,4 @@ Sometimes it might be useful to perform manual integration of some selected peak
 
 ![Manual integration](manual-feat-integration.png)
 
-
+{{ git_page_authors }}

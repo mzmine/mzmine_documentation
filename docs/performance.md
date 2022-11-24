@@ -49,3 +49,5 @@ Find the **MZmine/app/MZmine.cfg** file in the MZmine install directory or porta
 java-options=-XX:InitialRAMPercentage=10
 java-options=-XX:MaxRAMPercentage=80
 ```
+
+{{ git_page_authors }}

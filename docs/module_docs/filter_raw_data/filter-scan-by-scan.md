@@ -67,3 +67,5 @@ Sums ions count (intensity) of m/z peaks competing for being rounded at same m/z
 Clear all scans spectra from m/z peaks with intensity equal to zero.
 
 [//]: # (TODO Add the images for each filter)
+
+{{ git_page_authors }}

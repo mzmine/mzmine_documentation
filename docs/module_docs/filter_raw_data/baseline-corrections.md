@@ -229,4 +229,6 @@ The whole thing can be setup as follows by running the following code in R:
 
 <a>https://rforge.net/Rserve</a>.
 
-TODO Add images for each type of baseline correction
+[//]: # (TODO Add images for each type of baseline correction)
+
+{{ git_page_authors }}

@@ -21,3 +21,5 @@ Minimum cosine similarity for a match between compared spectra.
 
 #### Handle unmatched signals
 Usually, **keep all and match to zero** is used, which will take all signals into account, and the unmatched ones will decrease the cosine similarity. 
+
+{{ git_page_authors }}

@@ -41,3 +41,5 @@ The next figure shows a histogram using the m/z value. This data is coming from 
 ![mz histogram](histogram_mz.png)
 
 [//]: # (TODO rewrite)
+
+{{ git_page_authors }}

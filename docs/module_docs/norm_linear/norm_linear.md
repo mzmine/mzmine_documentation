@@ -50,3 +50,5 @@ Selection of either feature height or feature area, which will be used to calcul
 #### **Original feature list**
 
 If REMOVE option is selected, the original feature list is  removed, allowing to save memory.
+
+{{ git_page_authors }}

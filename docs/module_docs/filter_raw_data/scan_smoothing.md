@@ -45,3 +45,5 @@ If chromatogram height is below this level, it is not used in the average calcul
 #### **Remove previous files**
 
 Remove processed files to save memory.
+
+{{ git_page_authors }}

@@ -26,3 +26,5 @@ Matches the average row m/z against the precursor m/z of the spectral library en
 #### **Retention time tolerance**
 
 _Optional parameter_, should only be used if the DB entry has a retention time
+
+{{ git_page_authors }}

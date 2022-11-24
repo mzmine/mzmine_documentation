@@ -41,3 +41,5 @@ If checked, potential <sup>13</sup>C-related features will not be discarded if [
 
 #### **Original feature lists**
 Keep or remove the input feature list(s). The _PROCESS IN PLACE_ option directly filter the input feature list and performs better in terms of memory usage; therefore, it is recommended over _REMOVE_, when available.
+
+{{ git_page_authors }}

@@ -30,3 +30,5 @@ mobility resolution.
 ### Binned mobilogram example
 
 ![binned mobilogram](binnedmobilogram.png)
+
+{{ git_page_authors }}

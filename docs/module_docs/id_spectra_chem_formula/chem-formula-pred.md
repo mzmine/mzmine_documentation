@@ -193,3 +193,5 @@ where $n_{found}$ is the number of ions for which the neutral loss could be inte
 
     Use only N most abundant signals for scoring.
     :material-lightbulb: This option speeds up the search.
+
+{{ git_page_authors }}

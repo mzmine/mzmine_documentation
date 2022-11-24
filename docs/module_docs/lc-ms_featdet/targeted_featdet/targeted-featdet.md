@@ -47,3 +47,5 @@ Maximum allowed m/z difference to find the peak
 
 #### **Retention time tolerance**
 Maximum allowed retention time difference to find the peak
+
+{{ git_page_authors }}

@@ -41,3 +41,5 @@ If a raw data file has this marker in its name, it will only be used as a source
 #### **Suffix**
 
 Suffix to be added to the new file name.
+
+{{ git_page_authors }}

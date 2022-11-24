@@ -55,3 +55,5 @@ Maximum allowed difference between an EIC-associated _m/z_ and a new data point 
 #### **Suffix**
 
 String added to the filename as suffix when creating the corresponding feature list.
+
+{{ git_page_authors }}

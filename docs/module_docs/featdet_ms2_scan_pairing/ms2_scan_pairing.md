@@ -36,3 +36,5 @@ If checked, only mobility scans from the mobility range of the feature will be m
 #### **Minimum merged intensity**
 
 If an ion mobility spectrometry (IMS) feature is processed, this parameter can be used to filter low abundant peaks in the MS/MS spectrum, since multiple MS/MS mobility scans need to be merged together.
+
+{{ git_page_authors }}

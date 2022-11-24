@@ -29,3 +29,5 @@ Here you can find documentation for both processing and visualization modules in
 The MZmine community is always welcoming new developers and contributions! You can contribute by improving existing modules or even adding new featurs in MZmine 3! Please, check out our brief [tutorial](http://mzmine.github.io/development.html).
 
 You can also contribute to this wiki and help new users to get started with MZmine 3! See [here](contribute.md) how to contribute to the documentation.
+
+{{ git_page_authors }}

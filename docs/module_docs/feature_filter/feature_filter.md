@@ -51,3 +51,5 @@ Peaks without any MS/MS scans will be removed.
 #### **Remove source feature list after filtering**
 
 If the checkbox is selected, the source feature list will be removed, and the filtered version will remain.
+
+{{ git_page_authors }}

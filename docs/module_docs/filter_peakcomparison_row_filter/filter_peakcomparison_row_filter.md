@@ -35,3 +35,5 @@ Return peaks with an RT difference within this range.
 #### **Remove source feature list after filtering**
 
 If checked, the original feature list will be removed leaving only the filtered version.
+
+{{ git_page_authors }}

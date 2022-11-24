@@ -374,4 +374,4 @@ The following dialog allows to set the criteria for the MS/MS export to the libr
 
 ![Quality parameters](quality-parameters.png)
 
-
+{{ git_page_authors }}

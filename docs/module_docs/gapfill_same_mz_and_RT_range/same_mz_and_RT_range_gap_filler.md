@@ -18,3 +18,5 @@ Tolerance, which is added to the m/z range of other peaks in the peak list row.
 
 #### **Original feature list**
 The user can either select to keep or remove the original feature list.
+
+{{ git_page_authors }}

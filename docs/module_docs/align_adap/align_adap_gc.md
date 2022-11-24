@@ -71,3 +71,5 @@ The weight $w$ that is used in the similarity function $S(f1, f2)$. The default 
 #### **Retention time similarity** 
 
 A method used for calculating the retention time similarity. The retention time difference (fast) is preferred method.
+
+{{ git_page_authors }}

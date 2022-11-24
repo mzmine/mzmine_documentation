@@ -52,3 +52,5 @@ Minimum acceptable intensity in the second derivative for feature recognition
 **Min # of data points**
 
 Minimum number of data points on a feature.
+
+{{ git_page_authors }}

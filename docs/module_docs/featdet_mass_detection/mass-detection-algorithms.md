@@ -107,3 +107,5 @@ The size of the window used to calculated the wavelet signal. When the size of t
 ## **Auto**
 
 Auto mass detector recognizes if the spectrum is of profile or centroided data type and applies centroid or exact mass algorithms correspondingly.
+
+{{ git_page_authors }}

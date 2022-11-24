@@ -90,3 +90,5 @@ Mass defect as a feature filter can be used for selective detection of compounds
 
 #### **Original feature list**
 It can be either processed in place, kept or removed.
+
+{{ git_page_authors }}

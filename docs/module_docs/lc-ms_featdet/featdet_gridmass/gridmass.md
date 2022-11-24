@@ -68,3 +68,5 @@ Ratio between features to be recognized as the same. This is highly useful to de
 #### **False+: Ignore times**
 
 Ranges of time to be ignored by the method. This can be avoided if the region is previously cleaned using the crop option. Format: timeA-timeB, timeC-timeD,...
+
+{{ git_page_authors }}

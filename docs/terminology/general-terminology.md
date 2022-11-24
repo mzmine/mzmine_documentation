@@ -157,5 +157,7 @@ Was referred to as **Deconvolution** in MZmine 2. Process of splitting "imperfec
 - IUPAC. Compendium of Chemical Terminology, 2nd ed. (the "Gold Book"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997). Online version (2019-) created by S. J. Chalk. ISBN 0-9678550-9-8. <a>10.1351/goldbook</a>
 - Guo, J., Huan T. Evaluation of significant features discovered from different data acquisition modes in mass spectrometry-based untargeted metabolomics. _Analytica Chimica Acta_ (2020). DOI: <a>10.1016/j.aca.2020.08.065</a>
 
+{{ git_page_authors }}
+
 
 

@@ -51,3 +51,5 @@ The smallest number of detected peaks to form a component.
 
 If **false**, then the retention time of each detected peak is determined by the retention time of its highest data point. 
 If **true**, then the retention time of each detected peak is determined by fitting a parabola into the top half of that peak.
+
+{{ git_page_authors }}

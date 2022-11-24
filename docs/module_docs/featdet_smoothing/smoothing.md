@@ -88,3 +88,5 @@ After resolving a feature in RT dimension, the mobilograms will be recalculated 
 Select to smooth the mobility dimension [1] and select it as preview dimension [2]. The filter with depends on the number of spectra acquired in the observed mobility range. Usually, a value between 5 and 15 should be appropriate.
 
 ![](mobilitysmoothing.png)
+
+{{ git_page_authors }}

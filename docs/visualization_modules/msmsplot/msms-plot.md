@@ -80,3 +80,5 @@ This plot is using the third part library JfreeChart for its basic functionality
         <li><img src="img/sort_z_desc_btn.png"> - show pale points in front</li>
         <img src = "img/msms_plot_sortz_desc.png" style="width:60%;">
     </ul>
+
+{{ git_page_authors }}
