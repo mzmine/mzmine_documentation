@@ -1,128 +1,76 @@
-# **Markdown template for a module**
+# **Markdown template to create online documentation for a processing module**
 
-To make the creation of documentation easier, a convenient Markdown structure is discussed below. You can just copy, paste, and modify the provided template.
+To facilitate a consistent contribution to the MZmine onlined documentation from new users, please refer to the present Markdown template. Changes in the structure are of course allowed, but will have to be justified in the pull request.
 
-[//]: # (TODO Make a downloadable vesrion)
+--- 
+<br><br>
 
+# **Module Name**
+Please start this section with the module's location within the MZmine menu as follow:
 
+:material-menu-open: **Menu1 → Menu2 → Module** 
 
-    # **Module Name**
+Provide here a concise description of the module functioning principles and usage. If possible, briefly describe also the algorithm(s) employed by the module. If a detailed description of the algorithm functioning is needed, provide it in the [Algorithm](contribute_docu_template.md#algorithm) section). 
 
-    ## **Description**
+## _Warnings and admonitions_
+Warnings, tips, and side contents in general can be provided throughout the document. In order not to interrupt the document flow, we encourage the use of admonition boxes. A few examples are provided below, while a variety of other admonition boxes is avaiable [here](https://squidfunk.github.io/mkdocs-material/reference/admonitions/).
 
-    :material-menu-open: **Menu1 → Menu2 → Module** 
+<br>
 
-    [WARNINGS]
+!!! danger inline
 
-    [MAIN TEXT]
+    This module is currently under maintenance / deprecated / etc.
 
-    [TIPS]
+<br>
 
-    ## **References**
+!!! warning inline
 
-    !!! quote " "
+    Since mass lists are taken as input by EIC building algorithms, the Mass detection module must be run first
 
-    1. Reference 1
-    2. ...
+<br>      
+    
+!!! tip inline
 
-    ## **Parameters**
+    A good starting point for 'Parameter #1' is between 0.1 and 0.5.
 
+---
 
-    #### **Parameter 1**
+## **Parameters**
+Provide here a concise description of each processing parameters to be set. When possible, provide instructions on how to finely tune the value
 
-    [Description of parameter 1]
+Please start this section with a screenshot of the module's dialogue box and continue with the parameters' description following the scheme provided below:
 
-    #### **Parameter 2**
-    _Optional parameter_
-    ...
+#### **Parameter #1**
+Provide here a brief description for Parameter #1.
 
-    {{ git_page_authors }}
+#### **Parameter #2**
+Provide here a brief description for Parameter #2.
 
-## **Sections**
+#### **Parameter #3 _(Optional)_**
+Provide here a brief description for Parameter #3. Optional parameters should be labelled as _(Optional)_ following the parameter's name.
 
-The documentation page for the module should follow the following structure:
+---
 
-    # **Module Name**
+## **Algorithm**
+A more detailed description of the algorithm(s) employed by the module can be provided in this section.
 
-    ## **Description**
-
-    ### **Algorithms**
-
-    ## **References**
-
-    ## **Parameters**
-
-## **Description section**
-
-In this section you can provide a brief and concise description of what module does, which algorithms it uses, and when it can be applied (usage cases).
-
-The section should start with the module location :material-menu-open: **Menu1 → Menu2 → Module** 
-
-    :material-menu-open: **Menu1 → Menu2 → Module** [Please, add the location of your module here]
-
-Then you can supply any warning that a user needs to know to successfully use the module. For that you can use MkDocs warning admonition box.
-
-!!! warning
-
-    Here you can put your warning. For example, 'This module requires aligned feature list'.
-
-The Markdown for the warning is:
-
-    !!! warning
-
-    Here you can put your warning. For example, 'This module requires aligned feature list'.
-
-If the modules are under maintenance, additional danger box can be added 
-
-!!! danger
-
-    This module is under maintenance/ has known bugs / is outdated and under update / etc.
-
-The Markdown for this box is the following:
-
-    !!! danger
-
-    This module is under maintenance/ has known bugs / is outdated and under update / etc.
-
-After the warnings, the main description text should follow. At the end of the main text, one can include tips to further facilitate module usage.
-
-
-!!! tip
-
-    Here you can put the tip. For example, 'The good starting value for the Parameter 1 might be between 0.1 and 0.5.
-
-The Markdown for the tip is:
-
-    !!! tip
-
-    Here you can put the tip. For example, 'The good starting value for the Parameter 1 might be between 0.1 and 0.5.
+---
 
 ## **References**
+Please cite relevant references in this section using the following box:
 
-For the references custom admonition box is used:
+!!! info inline
 
-!!! quote " "
+    1. Reference #1
+    2. Reference #2
+    3. ....
 
-    1. Reference 1
-    2. ...
+---
 
-The Markdown for this box is:
+{{ git_page_authors }}
 
-    !!! quote " "
 
-    1. Reference 1
-    2. ...
-
-If a more detailed description for the used algorithms is needed, you can add it under a separate subsection "Algorithms".
-
-## **Parameters section**
-
-Start the section with a screenshot of the parameter dialogue, with reference values of parameters included.
-Follow with a list of parameters, their brief descriptions, and available values for each parameter.
-If a parameter is optional it can be indicated after the parameter name.
-
+[//]: # (TODO Make a downloadable version)
 
 [//]: # (TODO Tips & warnings boxes - examples, bug or danger for maintained modules)
 [//]: # (TODO )
-
-{{ git_page_authors }}
