@@ -143,6 +143,7 @@ nav:
       - Documentation template: contribute_docu_template.md
 
   - Acknowledgements: wikiacknowledgements.md
+  - Changelog: changelog.md
 
 copyright: This documentation is licensed under the MIT License (MIT). 
 
