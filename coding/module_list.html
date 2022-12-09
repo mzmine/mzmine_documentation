@@ -1,0 +1,4277 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/coding/module_list.html">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Modules list - MZmine 3 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mzmine-module-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="MZmine 3 Documentation" class="md-header__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+      
+  <img src="../img/MZMine_logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MZmine 3 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modules list
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mzmine/mzmine_documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mzmine/mzmine_documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="MZmine 3 Documentation" class="md-nav__button md-logo" aria-label="MZmine 3 Documentation" data-md-component="logo">
+      
+  <img src="../img/MZMine_logo_white.png" alt="logo">
+
+    </a>
+    MZmine 3 Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mzmine/mzmine_documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mzmine/mzmine_documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Home page
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started.html" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../main-window-overview.html" class="md-nav__link">
+        Main window overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_conversion.html" class="md-nav__link">
+        Data conversion
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tool_integration.html" class="md-nav__link">
+        Integration to other tools
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../citations.html" class="md-nav__link">
+        Citations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Processing modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Processing modules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Processing modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          I/O
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="I/O" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          I/O
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/io/data-import.html" class="md-nav__link">
+        Raw data import
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/io/data-export.html" class="md-nav__link">
+        Raw data export
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/io/feat-list-import.html" class="md-nav__link">
+        Feature list import
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/io/feat-list-export.html" class="md-nav__link">
+        Feature list export
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/io/data-exchange-with-other-software.html" class="md-nav__link">
+        Export to other software
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          File merging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="File merging" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          File merging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_file_merging/raw-files-merging.html" class="md-nav__link">
+        Raw data files merging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_mobility_scan_merging/mobility-scan-merging.html" class="md-nav__link">
+        Mobility scan merging
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_3">
+          Raw data filtering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Raw data filtering" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Raw data filtering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_raw_data/filter-scan-by-scan.html" class="md-nav__link">
+        Scan by scan filtering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_raw_data/crop-filter.html" class="md-nav__link">
+        Crop filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_raw_data/baseline-corrections.html" class="md-nav__link">
+        Baseline corrections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_raw_data/align-scans.html" class="md-nav__link">
+        Align scans
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_raw_data/scan_smoothing.html" class="md-nav__link">
+        Scan smoothing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_4">
+          Mass detection
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mass detection" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          Mass detection
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_mass_detection/mass-detection.html" class="md-nav__link">
+        Mass detection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_mass_detection/mass-detection-algorithms.html" class="md-nav__link">
+        Mass detection algorithms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.html" class="md-nav__link">
+        FTMS shoulder peak finder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_mass_detection/mass-calibration.html" class="md-nav__link">
+        Mass calibration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" type="checkbox" id="__nav_7_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_5">
+          LC-MS feature detection
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="LC-MS feature detection" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          LC-MS feature detection
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html" class="md-nav__link">
+        ADAP Chromatogram builder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/lc-ms_featdet/featdet_gridmass/gridmass.html" class="md-nav__link">
+        GridMass
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.html" class="md-nav__link">
+        Targeted feature detection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/lc-ms_featdet/featdet_results/featdet_results.html" class="md-nav__link">
+        Feature detection results
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_6" type="checkbox" id="__nav_7_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_6">
+          LC-IMS-MS feature detection
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="LC-IMS-MS feature detection" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_6">
+          <span class="md-nav__icon md-icon"></span>
+          LC-IMS-MS feature detection
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.html" class="md-nav__link">
+        Ion mobility expander
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-nav__link">
+        Ion mobility trace builder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.html" class="md-nav__link">
+        Recursive IMS builder
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_smoothing/smoothing.html" class="md-nav__link">
+        Smoothing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_8" type="checkbox" id="__nav_7_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_8">
+          Resolving
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resolving" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_8">
+          <span class="md-nav__icon md-icon"></span>
+          Resolving
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-nav__link">
+        Local minimum resolver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_resolver_adap/adap-resolver.html" class="md-nav__link">
+        ADAP resolver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_resolver_baseline/baseline-resolver.html" class="md-nav__link">
+        Baseline resolver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_resolver_centwave/centwave-resolver.html" class="md-nav__link">
+        CentWave resolver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_resolver_noise_ampl/noise-ampl-resolver.html" class="md-nav__link">
+        Noise amplitude resolver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_resolver_savitzky-golay/savitzky-golay-resolver.html" class="md-nav__link">
+        Savitzky-Golay resolver
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_9" type="checkbox" id="__nav_7_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_9">
+          Spectral deconvolution (GC)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Spectral deconvolution (GC)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_9">
+          <span class="md-nav__icon md-icon"></span>
+          Spectral deconvolution (GC)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_hierarch_clustering/featdet_hierarch_clustering.html" class="md-nav__link">
+        Hierarchical clustering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_multivariate_curve_res/featdet_multivar_curve_res.html" class="md-nav__link">
+        Multivariate curve resolution
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/id_ccs_calibration/ccs_calibration.html" class="md-nav__link">
+        CCS calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.html" class="md-nav__link">
+        MS2 scan pairing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_12" type="checkbox" id="__nav_7_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_12">
+          Isotope filtering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Isotope filtering" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_12">
+          <span class="md-nav__icon md-icon"></span>
+          Isotope filtering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_isotope_filter/isotope_filter.html" class="md-nav__link">
+        13C isotope filter (isotope grouper)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_isotope_finder/isotope_finder.html" class="md-nav__link">
+        Isotope pattern finder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_isotope_peak_scanner/isotope_peak_scanner.html" class="md-nav__link">
+        Isotope peak scanner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_13" type="checkbox" id="__nav_7_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_13">
+          Feature list filtering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Feature list filtering" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_13">
+          <span class="md-nav__icon md-icon"></span>
+          Feature list filtering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_duplicate_features/duplicate_feature_filter.html" class="md-nav__link">
+        Duplicate feature filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/feature_list_row_filter/feature_list_rows_filter.html" class="md-nav__link">
+        Feature list rows filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/feature_filter/feature_filter.html" class="md-nav__link">
+        Feature filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_peakcomparison_row_filter/filter_peakcomparison_row_filter.html" class="md-nav__link">
+        Peak comparison rows filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_neutral_loss/filter_neutral_loss.html" class="md-nav__link">
+        Neutral loss filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_mobilitymzregionextraction/filter_mobilitymzregionextraction.html" class="md-nav__link">
+        m/z mobility region extraction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/filter_blanksubtraction/filter_blanksubtraction.html" class="md-nav__link">
+        Feature list blank subtraction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_14" type="checkbox" id="__nav_7_14" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_14">
+          Alignment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Alignment" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_14">
+          <span class="md-nav__icon md-icon"></span>
+          Alignment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/align_join_aligner/join_aligner.html" class="md-nav__link">
+        Join aligner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/align_merge_lists/align_merge_lists.html" class="md-nav__link">
+        Merge lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/align_ransac/align_ransac.html" class="md-nav__link">
+        RANSAC aligner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/align_hierarch/align_hierarch.html" class="md-nav__link">
+        Hierachical aligner (GC)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/align_adap/align_adap_gc.html" class="md-nav__link">
+        ADAP aligner (GC)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/align_lc-image/align_lc-image.html" class="md-nav__link">
+        LC Image Aligner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_15" type="checkbox" id="__nav_7_15" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_15">
+          Gap filling
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Gap filling" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_15">
+          <span class="md-nav__icon md-icon"></span>
+          Gap filling
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/gapfill_peak_finder/gap-filling.html" class="md-nav__link">
+        Peak finder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/gapfill_same_mz_and_RT_range/same_mz_and_RT_range_gap_filler.html" class="md-nav__link">
+        Same RT and m/z range gap filler
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_16" type="checkbox" id="__nav_7_16" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_16">
+          Normalization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Normalization" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_16">
+          <span class="md-nav__icon md-icon"></span>
+          Normalization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/norm_rt_calibration/norm_rt_calibration.html" class="md-nav__link">
+        Retention time calibration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/norm_linear/norm_linear.html" class="md-nav__link">
+        Linear normalizer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/norm_stand_cmpd/norm_stand_cmpd.html" class="md-nav__link">
+        Standard compound normalizer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_17" type="checkbox" id="__nav_7_17" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_17">
+          Precursor mass search
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Precursor mass search" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_17">
+          <span class="md-nav__icon md-icon"></span>
+          Precursor mass search
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.html" class="md-nav__link">
+        Local database search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/id_prec_local_spectra_lib/local-spectra-lib-search.html" class="md-nav__link">
+        Precursor search in local spectral MS/MS library
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/id_prec_online_db/online-cmpd-db-search.html" class="md-nav__link">
+        Online compound database search
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_18" type="checkbox" id="__nav_7_18" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_18">
+          Spectra search
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Spectra search" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_18">
+          <span class="md-nav__icon md-icon"></span>
+          Spectra search
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/id_spectral_library_search/spectral_library_search.html" class="md-nav__link">
+        Spectral library search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/id_spectra_NIST/NIST-ms-search.html" class="md-nav__link">
+        NIST MS search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/id_spectra_chem_formula/chem-formula-pred.html" class="md-nav__link">
+        Chemical formula prediction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/id_lipid_annotation/lipid-annotation.html" class="md-nav__link">
+        Lipid annotation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/id_ms2_similarity/ms2-similarity-search.html" class="md-nav__link">
+        MS2 similarity search
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_19" type="checkbox" id="__nav_7_19" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_19">
+          Other parameters
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other parameters" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_19">
+          <span class="md-nav__icon md-icon"></span>
+          Other parameters
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/io/merge_ms2_kai.html" class="md-nav__link">
+        Merge MS/MS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/align_join_aligner/spectra_similarity.html" class="md-nav__link">
+        Spectra similarity
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Visualization modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Visualization modules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Visualization modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization_modules/visualization_overview/visualization-overview.html" class="md-nav__link">
+        Visualization overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_2" type="checkbox" id="__nav_8_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_2">
+          MS data visualisation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MS data visualisation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          MS data visualisation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization_modules/raw_data_overview/raw_data_overview.html" class="md-nav__link">
+        Raw data overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization_modules/raw_data_overview/raw_data_additional.html" class="md-nav__link">
+        Additional tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization_modules/ims_raw_data_overview/IM-data-visualisation.html" class="md-nav__link">
+        Ion mobility data visualisation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization_modules/image_raw_data/image_viewer.html" class="md-nav__link">
+        Image viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_5" type="checkbox" id="__nav_8_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_5">
+          Processed data visualition
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Processed data visualition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_5">
+          <span class="md-nav__icon md-icon"></span>
+          Processed data visualition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
+        MSMS Visualizer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.html" class="md-nav__link">
+        Interactive Ion Identity Molecular Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization_modules/feature_histograms/feature_hist.html" class="md-nav__link">
+        Feature histograms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization_modules/processed_additional/processed_additional.html" class="md-nav__link">
+        Additional tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Workflows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Workflows" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Workflows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
+        Untargeted LC-MS workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/imsworkflow/ion-mobility-data-processing-workflow.html" class="md-nav__link">
+        Untargeted LC-IMS-MS workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/batch_processing/batch-processing.html" class="md-nav__link">
+        Batch processing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Additional resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Additional resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Additional resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/general-terminology.html" class="md-nav__link">
+        General Terminology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/ion-mobility-terminology.html" class="md-nav__link">
+        IMS Terminology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
+        LC-MS and LC-IMS-MS data comparison
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/feature_list_row_filter/kendrick_mass_defect.html" class="md-nav__link">
+        Kendrick mass defect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/id_spectral_library_search/spectral-similarity-measures.html" class="md-nav__link">
+        Spectral similarity measures
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance.html" class="md-nav__link">
+        Performance options
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commandline_tool.html" class="md-nav__link">
+        Command line tool (batch mode)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Contribute
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contribute" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_1" type="checkbox" id="__nav_13_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13_1">
+          Coding
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Coding" data-md-level="2">
+        <label class="md-nav__title" for="__nav_13_1">
+          <span class="md-nav__icon md-icon"></span>
+          Coding
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="general_structure.html" class="md-nav__link">
+        General structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute_intellij.html" class="md-nav__link">
+        MZmine development (in IntelliJ)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="module_development.html" class="md-nav__link">
+        Module development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Modules list
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="module_list.html" class="md-nav__link md-nav__link--active">
+        Modules list
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-mzmine-modules" class="md-nav__link">
+    List of MZmine modules
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute.html" class="md-nav__link">
+        Contribute to documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute_docu_template.html" class="md-nav__link">
+        Documentation template
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wikiacknowledgements.html" class="md-nav__link">
+        Acknowledgements
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-mzmine-modules" class="md-nav__link">
+    List of MZmine modules
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/mzmine/mzmine_documentation/edit/master/docs/coding/module_list.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="mzmine-module-overview">MZmine module overview<a class="headerlink" href="#mzmine-module-overview" title="Permanent link">&para;</a></h1>
+<h2 id="list-of-mzmine-modules">List of MZmine modules<a class="headerlink" href="#list-of-mzmine-modules" title="Permanent link">&para;</a></h2>
+<p>List of MZmine modules extracted on: 2022/12/01</p>
+<p>Please note that some contributors might not be correctly reflected due to reformatting and
+refactoring. Use git-blame at the <a href="https://github.com/mzmine/mzmine3">MZmine code repository</a> for a
+more detailed insight.</p>
+<table>
+<thead>
+<tr>
+<th>module</th>
+<th>name</th>
+<th>description</th>
+<th>main class</th>
+<th>sub class</th>
+<th>contributors</th>
+<th>path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADAP3AlignerModule</td>
+<td>ADAP Aligner (GC)</td>
+<td>This module calculates pairwise convolution integral for each pair of unaligned peaks in order to find the best alignment</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; tnguy271</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_adap3/ADAP3AlignerModule.java</td>
+</tr>
+<tr>
+<td>ADAP3DModule</td>
+<td>ADAP3D feature detection (experimental)</td>
+<td>This module detect peaks from profile spectra using the ADAP3D algorithm developed by the Xiuxia Du lab. The module requires no parameter settings. Note that it will not work with centroid spectra.</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_adap3d/ADAP3DModule.java</td>
+</tr>
+<tr>
+<td>ADAPHierarchicalClusteringModule</td>
+<td>Hierarchical Clustering</td>
+<td>This method combines peaks into analytes and constructs fragmentation spectrum for each analyte</td>
+<td>Feature filtering</td>
+<td>Spectral deconvolution</td>
+<td>Aleksandr Smirnov; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Varun Suresh; tnguy271</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/adap_hierarchicalclustering/ADAPHierarchicalClusteringModule.java</td>
+</tr>
+<tr>
+<td>ADAPMultivariateCurveResolutionModule</td>
+<td>Multivariate Curve Resolution</td>
+<td>This method combines peaks into analytes and constructs fragmentation spectrum for each analyte</td>
+<td>Feature filtering</td>
+<td>Spectral deconvolution</td>
+<td>Aleksandr Smirnov; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Varun Suresh; tnguy271</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/adap_mcr/ADAPMultivariateCurveResolutionModule.java</td>
+</tr>
+<tr>
+<td>AdapMgfExportModule</td>
+<td>Export to MGF file (ADAP)</td>
+<td>This method exports all ADAP clustered spectra in a feature lists to an MGF file. Used in the GNPS GC-MS workflow.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_mgf/AdapMgfExportModule.java</td>
+</tr>
+<tr>
+<td>AdapMspExportModule</td>
+<td>Export to MSP file (ADAP)</td>
+<td>This method exports all ADAP clustered spectra in a feature lists to an MSP file.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_msp/AdapMspExportModule.java</td>
+</tr>
+<tr>
+<td>AdapResolverModule</td>
+<td>Adap Resolver</td>
+<td>Resolves chromatograms to features.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/ADAPpeakpicking/AdapResolverModule.java</td>
+</tr>
+<tr>
+<td>AddIonNetworkingModule</td>
+<td>Add ion identities to networks</td>
+<td>This module adds ion identities to existing networks</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/addionannotations/AddIonNetworkingModule.java</td>
+</tr>
+<tr>
+<td>AirdImportModule</td>
+<td>Aird file import</td>
+<td>This module imports aird raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Robin Schmid; Tomas Pluskal; lms19880914</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_aird/AirdImportModule.java</td>
+</tr>
+<tr>
+<td>AlignScansModule</td>
+<td>Align scans (LC/MS or MS level 1)</td>
+<td>This module align scans for small fluctuations correlating consecutive scans.</td>
+<td>Spectral data</td>
+<td>Raw data filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_alignscans/AlignScansModule.java</td>
+</tr>
+<tr>
+<td>AllSpectralDataImportModule</td>
+<td>Import MS data</td>
+<td>This module combines the import of different MS data formats and provides advanced options</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; lms19880914; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_all/AllSpectralDataImportModule.java</td>
+</tr>
+<tr>
+<td>AnnotateIsomersModule</td>
+<td>Annotate possible isomers</td>
+<td>Annotates features with the same (or similar) m/z but different mobilities within a specified retention time window.</td>
+<td>Feature processing</td>
+<td>Feature grouping</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_interestingfeaturefinder/AnnotateIsomersModule.java</td>
+</tr>
+<tr>
+<td>AnnotationNetworkModule</td>
+<td>Ion Identity Molecular Networks</td>
+<td>Visualize the results of the MS annotation module</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/networking/AnnotationNetworkModule.java</td>
+</tr>
+<tr>
+<td>BaselineCorrectionModule</td>
+<td>Baseline correction</td>
+<td>This module performs a baseline correction on raw data files.</td>
+<td>Spectral data</td>
+<td>Raw data filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_baselinecorrection/BaselineCorrectionModule.java</td>
+</tr>
+<tr>
+<td>BaselineFeatureResolverModule</td>
+<td>Baseline resolver</td>
+<td>Resolves chromatograms to features.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/baseline/BaselineFeatureResolverModule.java</td>
+</tr>
+<tr>
+<td>BatchModeModule</td>
+<td>Batch mode</td>
+<td>This module allows execution of multiple processing tasks in a batch.</td>
+<td>Project</td>
+<td>Project</td>
+<td>Kirill Ponomarov; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/batchmode/BatchModeModule.java</td>
+</tr>
+<tr>
+<td>BatchWizardModule</td>
+<td>Processing wizard</td>
+<td>Creates processing batches with a reduced set of parameters.</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/tools/batchwizard/BatchWizardModule.java</td>
+</tr>
+<tr>
+<td>CCSCalcModule</td>
+<td>CCS calculation module</td>
+<td>Calculates CCS values for features.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; tarush.singh</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ccscalc/CCSCalcModule.java</td>
+</tr>
+<tr>
+<td>CSVExportModularModule</td>
+<td>Export to CSV file (modular)</td>
+<td>This method exports the feature list contents into a CSV (comma-separated values) file.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_csv/CSVExportModularModule.java</td>
+</tr>
+<tr>
+<td>CalcEcmsPotentialModule</td>
+<td>Calculate EC-MS potentials</td>
+<td>Calculates metabolite formation potentials in EC-MS experiments.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Tomas Pluskal; m_wesn01</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ecmscalcpotential/CalcEcmsPotentialModule.java</td>
+</tr>
+<tr>
+<td>CameraSearchModule</td>
+<td>CAMERA search</td>
+<td>This method searches for pseudo-spectra using the CAMERA algorithm.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_camera/CameraSearchModule.java</td>
+</tr>
+<tr>
+<td>CentWaveResolverModule</td>
+<td>CentWave resolver</td>
+<td>Resolves chromatograms to features.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/centwave/CentWaveResolverModule.java</td>
+</tr>
+<tr>
+<td>ChromatogramAndSpectraVisualizerModule</td>
+<td>Chromatogram and spectra visualizer</td>
+<td>Inspect LC-MS data by navigating through raw data.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Annexhc; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; annexhc; knakul853; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/chromatogramandspectra/ChromatogramAndSpectraVisualizerModule.java</td>
+</tr>
+<tr>
+<td>ChromatogramVisualizerModule</td>
+<td>TIC/XIC visualizer</td>
+<td>TIC/XIC visualizer.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/chromatogram/ChromatogramVisualizerModule.java</td>
+</tr>
+<tr>
+<td>ClearFeatureAnnotationsModule</td>
+<td>Clear feature list annotations</td>
+<td>This method clears the annotations from the feature list</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_clearannotations/ClearFeatureAnnotationsModule.java</td>
+</tr>
+<tr>
+<td>ClearIonIdentitiesModule</td>
+<td>Clear ion identites</td>
+<td>Deletes all ion identities and networks of all rows</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/clearionids/ClearIonIdentitiesModule.java</td>
+</tr>
+<tr>
+<td>ClearProjectModule</td>
+<td>Clear project</td>
+<td>Clearing all project files and feature lists</td>
+<td>Project</td>
+<td>Project</td>
+<td>Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/tools/clear_project/ClearProjectModule.java</td>
+</tr>
+<tr>
+<td>CliqueMSModule</td>
+<td>CliqueMS annotation</td>
+<td>This method groups features and annotates the groups/cliques using CliqueMS algorithm.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; SurajV; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_cliquems/CliqueMSModule.java</td>
+</tr>
+<tr>
+<td>CorrelateGroupingModule</td>
+<td>metaCorrelate</td>
+<td>This method correlates and groups feature list rows based on multiple criteria (feature shape, intensity across samples, ...)</td>
+<td>Feature processing</td>
+<td>Feature grouping</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/group_metacorrelate/corrgrouping/CorrelateGroupingModule.java</td>
+</tr>
+<tr>
+<td>CorrelatedFeaturesMzHistogramModule</td>
+<td>Correlated features Î m/z histogram</td>
+<td>This module plots all m/z deltas between correlated features in a histogram and offers a Gaussian fit.</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Olena Mokshyna; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/scan_histogram/CorrelatedFeaturesMzHistogramModule.java</td>
+</tr>
+<tr>
+<td>CreateAvgNetworkFormulasModule</td>
+<td>Average formulas for annotation networks</td>
+<td>Creates a list of average molecular formulas from all formula lists of all ions in this network (e.g., M+H and M+Na)</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/formula/createavgformulas/CreateAvgNetworkFormulasModule.java</td>
+</tr>
+<tr>
+<td>CropFilterModule</td>
+<td>Crop filter</td>
+<td>This module performs cropping of raw data files.</td>
+<td>Spectral data</td>
+<td>Raw data filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_cropfilter/CropFilterModule.java</td>
+</tr>
+<tr>
+<td>CsvImportModule</td>
+<td>Import from csv file.</td>
+<td>This method imports the feature list contents from a csv file.</td>
+<td>Feature IO</td>
+<td>Feature list import</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_features_csv/CsvImportModule.java</td>
+</tr>
+<tr>
+<td>CustomDBSpectraSearchModule</td>
+<td>Custom DB search</td>
+<td>Search spectrum against local csv database</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/customdatabase/CustomDBSpectraSearchModule.java</td>
+</tr>
+<tr>
+<td>DataPointProcessingModule</td>
+<td>Data point processing</td>
+<td>Processes individual spectra with multiple steps like mass detection, deisotoping, annotation</td>
+<td>Raw data</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/datapointprocessing/DataPointProcessingModule.java</td>
+</tr>
+<tr>
+<td>DiaMs2CorrModule</td>
+<td>DIA pseudo MS2 builder (experimental)</td>
+<td>Builds pseudo MS2 scans based on feature shape correlation.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Steffen Heuckeroth; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_diams2/DiaMs2CorrModule.java</td>
+</tr>
+<tr>
+<td>DuplicateFilterModule</td>
+<td>Duplicate peak filter</td>
+<td>This method removes duplicate peaks (peaks with same retention times and m/z) from the feature list.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_duplicatefilter/DuplicateFilterModule.java</td>
+</tr>
+<tr>
+<td>EmptyFeatureListModule</td>
+<td>module</td>
+<td>describe</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/example/EmptyFeatureListModule.java</td>
+</tr>
+<tr>
+<td>ExportCorrAnnotationModule</td>
+<td>Export feature networks to csv</td>
+<td>Export resutls from correlation/MS annotation as networks to csv</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; sanbit876</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/group_metacorrelate/export/ExportCorrAnnotationModule.java</td>
+</tr>
+<tr>
+<td>ExportScansFromRawFilesModule</td>
+<td>Export scans into one file</td>
+<td>Export scans or mass lists into one file</td>
+<td>Spectral data</td>
+<td>Raw data export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_scans/ExportScansFromRawFilesModule.java</td>
+</tr>
+<tr>
+<td>ExportScansModule</td>
+<td>Export scans</td>
+<td>Export scans from raw data.</td>
+<td>Spectral data</td>
+<td>Export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_scans/ExportScansModule.java</td>
+</tr>
+<tr>
+<td>ExternalCCSCalibrationModule</td>
+<td>External CCS calibration</td>
+<td>Uses an externally calculated CCS calibration to calculate CCS values.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ccscalibration/external/ExternalCCSCalibrationModule.java</td>
+</tr>
+<tr>
+<td>ExtractScansModule</td>
+<td>Extract scans</td>
+<td>Extract a defined number of scans around a center time</td>
+<td>Spectral data</td>
+<td>Raw data export</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_extractscans/ExtractScansModule.java</td>
+</tr>
+<tr>
+<td>FeatureCorrelationHistogramModule</td>
+<td>Correlation coefficient histogram (grouped feature shapes)</td>
+<td>This module plots all correlations between feature shapes.</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/histo_feature_correlation/FeatureCorrelationHistogramModule.java</td>
+</tr>
+<tr>
+<td>FeatureFilterModule</td>
+<td>Peak filter</td>
+<td>This method removes certain peak entries based on given restrictions.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_featurefilter/FeatureFilterModule.java</td>
+</tr>
+<tr>
+<td>FeatureListBlankSubtractionModule</td>
+<td>Feature list blank subtraction</td>
+<td>Subtracts features appearing in (procedural) blank measurements feature list from an aligned feature list.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_blanksubtraction/FeatureListBlankSubtractionModule.java</td>
+</tr>
+<tr>
+<td>FeatureResolverModule</td>
+<td>Main resolver</td>
+<td>Resolves chromatograms to features. Provides additional parameters and orchestrates the algoriithms</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/FeatureResolverModule.java</td>
+</tr>
+<tr>
+<td>FeatureTableFXModule</td>
+<td>Feature table</td>
+<td>MZmine 3 feature table.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Annexhc; Kirill Ponomarov; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/featurelisttable_modular/FeatureTableFXModule.java</td>
+</tr>
+<tr>
+<td>FormulaPredictionFeatureListModule</td>
+<td>Formula prediction</td>
+<td>This method gets the predicted formula for each unknown compound</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_formulapredictionfeaturelist/FormulaPredictionFeatureListModule.java</td>
+</tr>
+<tr>
+<td>FormulaPredictionIonNetworkModule</td>
+<td>Formula prediction (on annotation networks)</td>
+<td>This method predicts formulae for each ion identity in all annotation networks (generated by MS annotations module or similar)</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/formula/prediction/FormulaPredictionIonNetworkModule.java</td>
+</tr>
+<tr>
+<td>FormulaPredictionModule</td>
+<td>Formula prediction</td>
+<td>Predict molecular formulae for features.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Weiching Chen; knakul853</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_formulaprediction/FormulaPredictionModule.java</td>
+</tr>
+<tr>
+<td>FormulaSortModule</td>
+<td>Sort formulas</td>
+<td>This module sorts all formula lists of rows in a feature list</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_formula_sort/FormulaSortModule.java</td>
+</tr>
+<tr>
+<td>FrameVisualizerModule</td>
+<td>Frame visualizer</td>
+<td>Visualizes frames from ion mobility raw data files.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/frames/FrameVisualizerModule.java</td>
+</tr>
+<tr>
+<td>Fx3DVisualizerModule</td>
+<td>3D visualizer</td>
+<td>3D visualizer.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/fx3d/Fx3DVisualizerModule.java</td>
+</tr>
+<tr>
+<td>GNPSResultsImportModule</td>
+<td>Import GNPS results</td>
+<td>Imports GNPS feature based molecular networking results into the selected feature list (library matches)</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_gnpsresultsimport/GNPSResultsImportModule.java</td>
+</tr>
+<tr>
+<td>GnpsFbmnExportAndSubmitModule</td>
+<td>Export/Submit to GNPS-FBMN</td>
+<td>GNPS feature-based molecular networking export and submit module. Exports the MGF file for GNPS (only for MS/MS), the quant table (CSV export) and additional edges (ion identity networks and correlation)</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_gnps/fbmn/GnpsFbmnExportAndSubmitModule.java</td>
+</tr>
+<tr>
+<td>GnpsGcExportAndSubmitModule</td>
+<td>Export to GNPS-GC-MS (with ADAP)</td>
+<td>GNPS GC-EI-MS workflow. Export the mgf, quant table and Kovats reference file (optionally).</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_gnps/gc/GnpsGcExportAndSubmitModule.java</td>
+</tr>
+<tr>
+<td>GnpsMasstSubmitModule</td>
+<td>Submit GNPS MASST search</td>
+<td>Submit an MS2 spectrum to GNPS MASST search, searching against public data.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_gnps/masst/GnpsMasstSubmitModule.java</td>
+</tr>
+<tr>
+<td>GraphicsExportModule</td>
+<td>Graphics export</td>
+<td>Export charts to vector or pixel graphics</td>
+<td>Visualization</td>
+<td></td>
+<td>Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/gui/chartbasics/graphicsexport/GraphicsExportModule.java</td>
+</tr>
+<tr>
+<td>GridMassModule</td>
+<td>GridMass - 2D feature detection</td>
+<td>This module detect peaks based on a 2D peak recognition procedure.</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_gridmass/GridMassModule.java</td>
+</tr>
+<tr>
+<td>GroupMS2Module</td>
+<td>Group MS2 scans with features</td>
+<td>This method assings all MS2 scans within range to all features in this feature list</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_groupms2/GroupMS2Module.java</td>
+</tr>
+<tr>
+<td>HierarAlignerGcModule</td>
+<td>Hierachical aligner (GC)</td>
+<td>This method aligns detected peaks using a match score. This score is calculated based on the MZ profile and RT of each peak using preset tolerances.</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_hierarchical/HierarAlignerGcModule.java</td>
+</tr>
+<tr>
+<td>HistogramVisualizerModule</td>
+<td>Histogram plot</td>
+<td>Histogram plot</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/histogram/HistogramVisualizerModule.java</td>
+</tr>
+<tr>
+<td>IMSMobilityMzPlotModule</td>
+<td>IMS mobility mz plot</td>
+<td>Heatmap view for detected features.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/ims_mobilitymzplot/IMSMobilityMzPlotModule.java</td>
+</tr>
+<tr>
+<td>IMSRawDataOverviewModule</td>
+<td>Ion mobility raw data overview</td>
+<td>Visualizes ion mobility raw data files.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/rawdataoverviewims/IMSRawDataOverviewModule.java</td>
+</tr>
+<tr>
+<td>IcpMsCVSImportModule</td>
+<td>ICP MS CSV file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_icpms_csv/IcpMsCVSImportModule.java</td>
+</tr>
+<tr>
+<td>ImageBuilderModule</td>
+<td>Image builder</td>
+<td>This module connects data points from mass lists and builds images.</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Annexhc; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_imagebuilder/ImageBuilderModule.java</td>
+</tr>
+<tr>
+<td>ImageToCsvExportModule</td>
+<td>Export images to csv</td>
+<td>Exports spatially resolved data of features to csv files.</td>
+<td>Feature IO</td>
+<td>Export</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_image_csv/ImageToCsvExportModule.java</td>
+</tr>
+<tr>
+<td>ImageVisualizerModule</td>
+<td>Image visualizer</td>
+<td>Image visualizer</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Annexhc; Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/image/ImageVisualizerModule.java</td>
+</tr>
+<tr>
+<td>ImsExpanderModule</td>
+<td>Ims expander</td>
+<td>Expands rt chromatograms in mobility dimension.</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_imsexpander/ImsExpanderModule.java</td>
+</tr>
+<tr>
+<td>ImsVisualizerModule</td>
+<td>IMS Raw data visualizer</td>
+<td>Multidimensional raw data inspection of IMS raw data.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Annexhc; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; aiden; knakul853</td>
+<td>src/main/java/io//mzmine/modules/visualization/ims/ImsVisualizerModule.java</td>
+</tr>
+<tr>
+<td>ImzMLImportModule</td>
+<td>iMZML file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_imzml/ImzMLImportModule.java</td>
+</tr>
+<tr>
+<td>InfoVisualizerModule</td>
+<td>Feature list info visualizer</td>
+<td>Generates a batch from the list of applied methods to reproduce this feature list.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Roman Bushuiev; Tomas Pluskal; m_wesn01</td>
+<td>src/main/java/io//mzmine/modules/visualization/infovisualizer/InfoVisualizerModule.java</td>
+</tr>
+<tr>
+<td>InjectTimeAnalysisModule</td>
+<td>Injection time analysis</td>
+<td>Plots the minimum signal intensity against the injection time to see trends in trap based mass spectrometers</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/injection_time/InjectTimeAnalysisModule.java</td>
+</tr>
+<tr>
+<td>IntensityPlotModule</td>
+<td>Feature intensity plot</td>
+<td>Feature intensity plot.</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/intensityplot/IntensityPlotModule.java</td>
+</tr>
+<tr>
+<td>IonMobilityTraceBuilderModule</td>
+<td>Ion mobility trace builder</td>
+<td>Builds ion mobility traces for a raw data file</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Annexhc; Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_ionmobilitytracebuilder/IonMobilityTraceBuilderModule.java</td>
+</tr>
+<tr>
+<td>IonNetRelationsModule</td>
+<td>Relations between ion networks</td>
+<td>This method searches for relations between ion networks (e.g., chemical modifications, heterodimers, covalently bound multimers</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/relations/IonNetRelationsModule.java</td>
+</tr>
+<tr>
+<td>IonNetworkMSMSCheckModule</td>
+<td>Check all ion identities by MS/MS</td>
+<td>Checks ion identities (in-source fragments and multimers) by MS/MS</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/checkmsms/IonNetworkMSMSCheckModule.java</td>
+</tr>
+<tr>
+<td>IonNetworkRefinementModule</td>
+<td>Ion identity network refinement</td>
+<td>Refinement of ion identity networks</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/refinement/IonNetworkRefinementModule.java</td>
+</tr>
+<tr>
+<td>IonNetworkingModule</td>
+<td>Ion identity networking</td>
+<td>This method searches for adducts, in-source fragments, and clusters</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/ionidnetworking/IonNetworkingModule.java</td>
+</tr>
+<tr>
+<td>IsotopeFinderModule</td>
+<td>Isotopic peaks finder</td>
+<td>Find isotope signals in the FWHM of all features in the list</td>
+<td>Feature filtering</td>
+<td>Isotopes</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; tarush.singh</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_isotopefinder/IsotopeFinderModule.java</td>
+</tr>
+<tr>
+<td>IsotopeGrouperModule</td>
+<td>13C isotope filter (formerly: isotope grouper)</td>
+<td>This module detects isotopic features and removes them from the feature list. Its isotope patterns are limited to detected features. For a more comprehensive isotope pattern coverage and isotopes other than 13C, use the Isotope finder.</td>
+<td>Feature filtering</td>
+<td>Isotopes</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_isotopegrouper/IsotopeGrouperModule.java</td>
+</tr>
+<tr>
+<td>IsotopePatternExportModule</td>
+<td>Export isotope pattern</td>
+<td>Export isotope pattern of detected features.</td>
+<td>Spectral data</td>
+<td>Export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/featurelisttable_modular/export/IsotopePatternExportModule.java</td>
+</tr>
+<tr>
+<td>IsotopePatternPreviewModule</td>
+<td>Isotope pattern preview</td>
+<td>Calculate and view isotope patterns.</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/tools/isotopepatternpreview/IsotopePatternPreviewModule.java</td>
+</tr>
+<tr>
+<td>IsotopePeakScannerModule</td>
+<td>Isotope peak scanner</td>
+<td>Searches for m/z and intensity distribution of a calculated isotope pattern within a feature list.</td>
+<td>Feature filtering</td>
+<td>Isotopes</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_isotopepeakscanner/IsotopePeakScannerModule.java</td>
+</tr>
+<tr>
+<td>JoinAlignerModule</td>
+<td>Join aligner</td>
+<td>This method aligns detected peaks using a match score. This score is calculated based on the mass and retention time of each peak using preset tolerance.</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_join/JoinAlignerModule.java</td>
+</tr>
+<tr>
+<td>KendrickMassPlotModule</td>
+<td>Kendrick mass plot</td>
+<td>Kendrick mass plot.</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Annexhc; Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; annexhc; knakul853</td>
+<td>src/main/java/io//mzmine/modules/visualization/kendrickmassplot/KendrickMassPlotModule.java</td>
+</tr>
+<tr>
+<td>KovatsIndexExtractionModule</td>
+<td>Kovats index extraction</td>
+<td>Extract Kovats indexes from a raw data file and save to csv.</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/tools/kovats/KovatsIndexExtractionModule.java</td>
+</tr>
+<tr>
+<td>LcImageAlignerModule</td>
+<td>LC-Image Aligner</td>
+<td>Aligns LC and imaging measurements based on m/z and mobility. Images are aligned to all LC features that match, only the best match is retained.</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Olena Mokshyna; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_lcimage/LcImageAlignerModule.java</td>
+</tr>
+<tr>
+<td>LearnerModule</td>
+<td>Learner module</td>
+<td>This module is for learners only</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/example/LearnerModule.java</td>
+</tr>
+<tr>
+<td>LegacyCSVExportModule</td>
+<td>Export CSV (legacy MZmine 2)</td>
+<td>Legacy MZmine 2 method: This method exports the feature list contents into a CSV (comma-separated values) file.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_csv_legacy/LegacyCSVExportModule.java</td>
+</tr>
+<tr>
+<td>LibraryAnalysisCSVExportModule</td>
+<td>Export library analysis csv</td>
+<td>Cosine similarity of library to csv</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/export_library_analysis_csv/LibraryAnalysisCSVExportModule.java</td>
+</tr>
+<tr>
+<td>LibraryBatchGenerationModule</td>
+<td>Batch spectral library generation</td>
+<td>Uses metadata sheet to generate spectral library</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Steffen Heuckeroth; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/spectraldbsubmit/batch/LibraryBatchGenerationModule.java</td>
+</tr>
+<tr>
+<td>LibrarySubmitModule</td>
+<td>Library submit</td>
+<td>Submit MS2 spectra for spectral libraries.</td>
+<td>Spectral data</td>
+<td>Export</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/spectraldbsubmit/LibrarySubmitModule.java</td>
+</tr>
+<tr>
+<td>LinearNormalizerModule</td>
+<td>Linear normalizer</td>
+<td>Linear normalizer divides the height (or area) of each feature in the feature list by a normalization factor, determined according to the given normalization type.</td>
+<td>Feature processing</td>
+<td>Normalization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; tnguy271</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/norm_linear/LinearNormalizerModule.java</td>
+</tr>
+<tr>
+<td>LipidSearchModule</td>
+<td>Lipid annotation</td>
+<td>This method searches and annotates for features which m/z value matches a predicted mass of selected lipids.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; SurajV; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_lipididentification/LipidSearchModule.java</td>
+</tr>
+<tr>
+<td>LipidSpectraSearchModule</td>
+<td>Lipid annotation</td>
+<td>Lipid annotation on individual spectra</td>
+<td>Raw data</td>
+<td>Annotation</td>
+<td>Annexhc; Robin Schmid; Steffen Heuckeroth; SurajV; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/lipidsearch/LipidSpectraSearchModule.java</td>
+</tr>
+<tr>
+<td>LocalCSVDatabaseSearchModule</td>
+<td>Custom database search</td>
+<td>This method searches a custom database (CSV file) using m/z and retention time values.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_localcsvsearch/LocalCSVDatabaseSearchModule.java</td>
+</tr>
+<tr>
+<td>MS2SimilarityModule</td>
+<td>MS/MS spectral networking (Molecular networking)</td>
+<td>Checks MS2 similarity of all rows within the groups or on all networks and between networks</td>
+<td>Feature processing</td>
+<td>Feature grouping</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/group_metacorrelate/msms/similarity/MS2SimilarityModule.java</td>
+</tr>
+<tr>
+<td>MSDKmzMLImportModule</td>
+<td>mzML file import via MSDK</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Kirill Ponomarov; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_mzml/MSDKmzMLImportModule.java</td>
+</tr>
+<tr>
+<td>MSMSExportModule</td>
+<td>Export MS/MS spectra</td>
+<td>Export MS/MS spectra of detected features.</td>
+<td>Spectral data</td>
+<td>Export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/featurelisttable_modular/export/MSMSExportModule.java</td>
+</tr>
+<tr>
+<td>MSnTreeExportModule</td>
+<td>Export MSn trees</td>
+<td>This method exports the feature list contents into a CSV (comma-separated values) file.</td>
+<td>Spectral data</td>
+<td>Raw data export</td>
+<td>Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/export_msn_tree/MSnTreeExportModule.java</td>
+</tr>
+<tr>
+<td>MSnTreeVisualizerModule</td>
+<td>MSn Tree Visualizer</td>
+<td>Visualizes MSn spectra in a tree structure and all spectra of the same level in one spectra chart</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Robin Schmid; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/msn_tree/MSnTreeVisualizerModule.java</td>
+</tr>
+<tr>
+<td>MZTabmExportModule</td>
+<td>Export to mzTab-m file.</td>
+<td>This method exports the feature list contents into a mzTab-m file.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_mztabm/MZTabmExportModule.java</td>
+</tr>
+<tr>
+<td>MZTabmImportModule</td>
+<td>Import mzTab-m file</td>
+<td>This method imports a feature list from a mzTab-m file.</td>
+<td>Feature IO</td>
+<td>Feature list import</td>
+<td>Nils Hoffmann; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_features_mztabm/MZTabmImportModule.java</td>
+</tr>
+<tr>
+<td>ManualFeaturePickerModule</td>
+<td>Manual picker</td>
+<td>Manually pick or reintegrate features in EICs.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_manual/ManualFeaturePickerModule.java</td>
+</tr>
+<tr>
+<td>MassCalibrationModule</td>
+<td>Mass calibration</td>
+<td>This module estimates systematic error of measurement by analysing differences between actual mass peaks and masses of assigned compounds, it then shifts the mass peaks to account against that bias.</td>
+<td>Spectral data</td>
+<td>Raw data methods</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_masscalibration/MassCalibrationModule.java</td>
+</tr>
+<tr>
+<td>MassDetectionModule</td>
+<td>Mass detection</td>
+<td>This module detects individual ions in each scan and builds a mass list for each scan.</td>
+<td>Spectral data</td>
+<td>Raw data methods</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_massdetection/MassDetectionModule.java</td>
+</tr>
+<tr>
+<td>MassvoltommogramModule</td>
+<td>Massvoltammogram chart</td>
+<td>A chart that combines a specific instrumental setup (redox cell) with mass spectrometry. Different timepoints are converted into the potentials applied to the sample, this is plotted as 3D spectra against this potential.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Tomas Pluskal; m_wesn01</td>
+<td>src/main/java/io//mzmine/modules/visualization/massvoltammogram/MassvoltommogramModule.java</td>
+</tr>
+<tr>
+<td>MergeAlignerModule</td>
+<td>Merge lists</td>
+<td>This method merges feature lists by appending all rows into a new list. Perform alignment before to align all features from comparable samples and use this method to merge feature lists that should not be aligned: e.g., positive and negative mode data.</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_append_rows/MergeAlignerModule.java</td>
+</tr>
+<tr>
+<td>MetaboAnalystExportModule</td>
+<td>Export to MetaboAnalyst file</td>
+<td>This method exports the feature list contents into a CSV (comma-separated values) file that is formatted for easy processing by the MetaboAnalyst service (http://www.metaboanalyst.ca).</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_metaboanalyst/MetaboAnalystExportModule.java</td>
+</tr>
+<tr>
+<td>MinimumSearchFeatureResolverModule</td>
+<td>Local minimum resolver</td>
+<td>Resolves chromatograms to features.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/minimumsearch/MinimumSearchFeatureResolverModule.java</td>
+</tr>
+<tr>
+<td>MirrorScanModule</td>
+<td>Spectral mirror (USI enabled)</td>
+<td>Compare spectra</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/mirrorspectra/MirrorScanModule.java</td>
+</tr>
+<tr>
+<td>MobilityMzRegionExtractionModule</td>
+<td>m/z mobility region extraction</td>
+<td>Extracts regions of m/z-mobility regions</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_mobilitymzregionextraction/MobilityMzRegionExtractionModule.java</td>
+</tr>
+<tr>
+<td>MobilityScanMergerModule</td>
+<td>Mobility scan merging module</td>
+<td>Merges mobility scans at the same retention time to a summed frame spectrum.</td>
+<td>Spectral data</td>
+<td>Raw data methods</td>
+<td>Olena Mokshyna; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_mobilityscanmerger/MobilityScanMergerModule.java</td>
+</tr>
+<tr>
+<td>MobilogramBinningModule</td>
+<td>Mobilogram summing</td>
+<td>Bins intensities within given mobility ranges to correct for noise in mobilograms.</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_mobilogram_summing/MobilogramBinningModule.java</td>
+</tr>
+<tr>
+<td>ModularADAPChromatogramBuilderModule</td>
+<td>ADAP Chromatogram Builder</td>
+<td>This module connects data points from mass lists and builds chromatograms.</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_adapchromatogrambuilder/ModularADAPChromatogramBuilderModule.java</td>
+</tr>
+<tr>
+<td>Ms2SearchModule</td>
+<td>MS2 similarity search</td>
+<td>This method searches for similar MS2 fragmentation spectra between two feature lists</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ms2search/Ms2SearchModule.java</td>
+</tr>
+<tr>
+<td>MsMsQualityExportModule</td>
+<td>MS/MS quality export</td>
+<td>Exports metrics for MS/MS spectra</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Steffen Heuckeroth; SteffenHeu</td>
+<td>src/main/java/io//mzmine/modules/io/export_msmsquality/MsMsQualityExportModule.java</td>
+</tr>
+<tr>
+<td>MsMsSpectraMergeModule</td>
+<td>MsMs Spectra merge</td>
+<td>Merge multiple MS2 spectra to a single spectrum.</td>
+<td>Spectral data</td>
+<td></td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/msmsspectramerge/MsMsSpectraMergeModule.java</td>
+</tr>
+<tr>
+<td>MsMsVisualizerModule</td>
+<td>MS/MS data visualizer</td>
+<td>Scatter plot for MS/MS data visualization, fouraxes types supported: retention time, precursor m/z, product m/z, neutral loss</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Sandeep; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/msms/MsMsVisualizerModule.java</td>
+</tr>
+<tr>
+<td>MsnFeatureDetectionModule</td>
+<td>MSn feature list builder</td>
+<td>This module looks through the whole raw data for MSn scans and makes a list of chromatographic features using the precursor mass.</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Kevin-Murray; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_msn/MsnFeatureDetectionModule.java</td>
+</tr>
+<tr>
+<td>MsnTreeFeatureDetectionModule</td>
+<td>MSn tree feature list builder</td>
+<td>Builds all MSn trees and extracts chromatograms for the precursor m/z</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_msn_tree/MsnTreeFeatureDetectionModule.java</td>
+</tr>
+<tr>
+<td>MultiThreadPeakFinderModule</td>
+<td>Peak finder (multithreaded)</td>
+<td>This method fills the missing peaks (gaps) in the feature list by searching for a peak in the raw data.</td>
+<td>Feature detection</td>
+<td>Gap filling</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/gapfill_peakfinder/multithreaded/MultiThreadPeakFinderModule.java</td>
+</tr>
+<tr>
+<td>MzDataImportModule</td>
+<td>mzData file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_mzdata/MzDataImportModule.java</td>
+</tr>
+<tr>
+<td>MzMLExportModule</td>
+<td>Raw data export</td>
+<td>This module exports raw data files from your MZmine project into various formats</td>
+<td>Spectral data</td>
+<td>Raw data export</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_rawdata_mzml/MzMLExportModule.java</td>
+</tr>
+<tr>
+<td>MzMLImportModule</td>
+<td>mzML file import via jmzml</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/deprecated_jmzml/MzMLImportModule.java</td>
+</tr>
+<tr>
+<td>MzRangeFormulaCalculatorModule</td>
+<td>MZ range from formula calcuator</td>
+<td>Calculate mz range from formula and mz tolerance</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/mzrangecalculator/MzRangeFormulaCalculatorModule.java</td>
+</tr>
+<tr>
+<td>MzRangeMassCalculatorModule</td>
+<td>MZ range from tolerance calculator</td>
+<td>Calculate mz range from mz tolerance and mass</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/mzrangecalculator/MzRangeMassCalculatorModule.java</td>
+</tr>
+<tr>
+<td>MzTabExportModule</td>
+<td>Export to mzTab file</td>
+<td>This method exports the feature list contents into a mzTab file.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_mztab/MzTabExportModule.java</td>
+</tr>
+<tr>
+<td>MzTabImportModule</td>
+<td>Import mzTab file</td>
+<td>This method imports a feature list from a mzTab file.</td>
+<td>Feature IO</td>
+<td>Feature list import</td>
+<td>Nils Hoffmann; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_features_mztab/MzTabImportModule.java</td>
+</tr>
+<tr>
+<td>MzXMLImportModule</td>
+<td>mzXML file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_mzxml/MzXMLImportModule.java</td>
+</tr>
+<tr>
+<td>NetCDFExportModule</td>
+<td>Raw data export to netCDF</td>
+<td>This module exports raw data files from your MZmine project into various formats</td>
+<td>Spectral data</td>
+<td>Raw data export</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_rawdata_netcdf/NetCDFExportModule.java</td>
+</tr>
+<tr>
+<td>NetCDFImportModule</td>
+<td>netCDF file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>David Maek; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_netcdf/NetCDFImportModule.java</td>
+</tr>
+<tr>
+<td>NeutralLossFilterModule</td>
+<td>Neutral loss filter</td>
+<td>Searches for neutral losses within a feature list.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_neutralloss/NeutralLossFilterModule.java</td>
+</tr>
+<tr>
+<td>NistMsSearchModule</td>
+<td>NIST MS Search</td>
+<td>This method searches spectra against the NIST library.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Kevin-Murray; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; murra668; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_nist/NistMsSearchModule.java</td>
+</tr>
+<tr>
+<td>NoiseAmplitudeResolverModule</td>
+<td>Noise amplitude resolver</td>
+<td>Resolves chromatograms to features.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/noiseamplitude/NoiseAmplitudeResolverModule.java</td>
+</tr>
+<tr>
+<td>OnlineDBSearchModule</td>
+<td>Online database search</td>
+<td>This module attempts to find those peaks in a feature list, which form an isotope pattern.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; SurajV; Tomas Pluskal; knakul853</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_onlinecompounddb/OnlineDBSearchModule.java</td>
+</tr>
+<tr>
+<td>OnlineDBSpectraSearchModule</td>
+<td>Online DB search</td>
+<td>Online DB search on individual spectra</td>
+<td>Raw data</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/onlinedatabase/OnlineDBSpectraSearchModule.java</td>
+</tr>
+<tr>
+<td>PathAlignerModule</td>
+<td>Path aligner</td>
+<td>Description not yet available.</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_path/PathAlignerModule.java</td>
+</tr>
+<tr>
+<td>PeakComparisonRowFilterModule</td>
+<td>Peak comparison rows filter</td>
+<td>This method removes certain rows from a feature list based on peak comparisons.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_peakcomparisonrowfilter/PeakComparisonRowFilterModule.java</td>
+</tr>
+<tr>
+<td>PeakFinderModule</td>
+<td>Peak finder</td>
+<td>Fill gaps in aligned feature lists of LC-MS measurements.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/gapfill_peakfinder/PeakFinderModule.java</td>
+</tr>
+<tr>
+<td>PrecursorDBSearchModule</td>
+<td>Precursor search in spectral libraries</td>
+<td>This method searches all peaklist rows against a local spectral libraries to identify possible precursor ions</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_precursordbsearch/PrecursorDBSearchModule.java</td>
+</tr>
+<tr>
+<td>ProjectLoadModule</td>
+<td>Open project</td>
+<td>This module opens an existing MZmine project. The current workspace will be discarded.</td>
+<td>Project</td>
+<td>Project I/O</td>
+<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/projectload/ProjectLoadModule.java</td>
+</tr>
+<tr>
+<td>ProjectMetadataImportModule</td>
+<td>Project metadata import</td>
+<td>This module imports metadata into the project from .tsv-format files.</td>
+<td>Project</td>
+<td>Project metadata</td>
+<td>Kirill Ponomarov; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/projectmetadata/ProjectMetadataImportModule.java</td>
+</tr>
+<tr>
+<td>ProjectSaveAsModule</td>
+<td>Save project as</td>
+<td>This module saves the current MZmine project.</td>
+<td>Project</td>
+<td>Project I/O</td>
+<td>Annexhc; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/projectsave/ProjectSaveAsModule.java</td>
+</tr>
+<tr>
+<td>ProjectSaveModule</td>
+<td>Save project</td>
+<td>This module saves the current MZmine project.</td>
+<td>Project</td>
+<td>Project I/O</td>
+<td>Annexhc; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/projectsave/ProjectSaveModule.java</td>
+</tr>
+<tr>
+<td>QualityParametersModule</td>
+<td>Quality parameters</td>
+<td>Calculates quality parameters such as FWHM, asymmetry factor, tailing factor, S/N ratio.</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/qualityparameters/QualityParametersModule.java</td>
+</tr>
+<tr>
+<td>RTCalibrationModule</td>
+<td>Retention time calibration</td>
+<td>The retention time calibration attempts to reduce the deviation of retention times between feature lists, by searching for common features in these lists and using them as calibration standards.</td>
+<td>Feature processing</td>
+<td>Normalization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/norm_rtcalibration/RTCalibrationModule.java</td>
+</tr>
+<tr>
+<td>RansacAlignerModule</td>
+<td>RANSAC aligner</td>
+<td>Feature list aligner based on the RANSAC algorithm.</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_ransac/RansacAlignerModule.java</td>
+</tr>
+<tr>
+<td>RawDataFileRenameModule</td>
+<td>Raw data file rename</td>
+<td>Renames raw data files.</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/rawfilerename/RawDataFileRenameModule.java</td>
+</tr>
+<tr>
+<td>RawDataOverviewModule</td>
+<td>Raw data overview</td>
+<td>Raw data overview</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/rawdataoverview/RawDataOverviewModule.java</td>
+</tr>
+<tr>
+<td>RawFileMergeModule</td>
+<td>Merge files</td>
+<td>Merge all scans of multiple files to one raw data file</td>
+<td>Spectral data</td>
+<td>Raw data methods</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_merge/RawFileMergeModule.java</td>
+</tr>
+<tr>
+<td>RecursiveIMSBuilderModule</td>
+<td>Recursive IMS Builder</td>
+<td>Builds m/z traces for ion mobility spectrometry data</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_recursiveimsbuilder/RecursiveIMSBuilderModule.java</td>
+</tr>
+<tr>
+<td>ReferenceCCSCalibrationModule</td>
+<td>Internal standard CCS calculation</td>
+<td>Calculates CCS values based on an reference compound list and it's detected features in a feature list.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ccscalibration/reference/ReferenceCCSCalibrationModule.java</td>
+</tr>
+<tr>
+<td>RowsFilterModule</td>
+<td>Feature list rows filter</td>
+<td>This method removes certain rows from a feature list based on given restrictions.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_rowsfilter/RowsFilterModule.java</td>
+</tr>
+<tr>
+<td>SQLExportModule</td>
+<td>Export to SQL database</td>
+<td>This method exports the feature list contents into an SQL database using JDBC.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_sql/SQLExportModule.java</td>
+</tr>
+<tr>
+<td>SameRangeGapFillerModule</td>
+<td>Same RT and m/z range gap filler</td>
+<td>This method fills the missing peaks (gaps) in the feature list by looking at the whole m/z and retention time range of the feature list row and adding all raw data points in the same range.</td>
+<td>Feature detection</td>
+<td>Gap filling</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/gapfill_samerange/SameRangeGapFillerModule.java</td>
+</tr>
+<tr>
+<td>SavitzkyGolayResolverModule</td>
+<td>Savitzky Golay resolver</td>
+<td>Resolves chromatograms to features.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/savitzkygolay/SavitzkyGolayResolverModule.java</td>
+</tr>
+<tr>
+<td>ScanFiltersModule</td>
+<td>Scan by scan filtering</td>
+<td>This module performs filtering algorithms on each scan individually.</td>
+<td>Spectral data</td>
+<td>Raw data filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_scanfilters/ScanFiltersModule.java</td>
+</tr>
+<tr>
+<td>ScanHistogramModule</td>
+<td>scan histogram</td>
+<td>This module plots all values of all selected scans into one histogram and offers a Gaussian fit.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/scan_histogram/ScanHistogramModule.java</td>
+</tr>
+<tr>
+<td>ScanSmoothingModule</td>
+<td>Scan smoothing (LC/MS or MS level 1)</td>
+<td>This module averages intensity values within a time-scan frame.</td>
+<td>Spectral data</td>
+<td>Raw data filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_scansmoothing/ScanSmoothingModule.java</td>
+</tr>
+<tr>
+<td>ScatterPlotVisualizerModule</td>
+<td>Scatter plot</td>
+<td>Scatter plot.</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/scatterplot/ScatterPlotVisualizerModule.java</td>
+</tr>
+<tr>
+<td>SetCCSCalibrationModule</td>
+<td>Set CCS calibration</td>
+<td>Sets a CCS calibration to a raw data file.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ccscalibration/setcalibration/SetCCSCalibrationModule.java</td>
+</tr>
+<tr>
+<td>ShoulderPeaksFilterModule</td>
+<td>FTMS shoulder peaks filter</td>
+<td>This method filters mass lists and removes residual signals known as 'shoulder peaks' and commonly observed in FTMS data.</td>
+<td>Spectral data</td>
+<td>Raw data filtering</td>
+<td>Robin Schmid; Roman Bushuiev; Sonja-analytik; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_shoulderpeaksfilter/ShoulderPeaksFilterModule.java</td>
+</tr>
+<tr>
+<td>SingleSpectrumLibrarySearchModule</td>
+<td>Single Spectrum library search</td>
+<td>Search single spectrum in a spectral library.</td>
+<td>Raw data</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/spectraldatabase/SingleSpectrumLibrarySearchModule.java</td>
+</tr>
+<tr>
+<td>SiriusExportModule</td>
+<td>Export for SIRIUS</td>
+<td>This method exports a MGF file that contains for each feature, (1) the deconvoluted MS1 isotopic pattern, and (2) the MS/MS spectrum (highest precursor ion intensity). This file can be open and processed with Sirius, https://bio.informatik.uni-jena.de/software/sirius/.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_sirius/SiriusExportModule.java</td>
+</tr>
+<tr>
+<td>SmoothingModule</td>
+<td>Smoothing</td>
+<td>Smooths intensity along the retention time and/or mobility dimension.</td>
+<td>Feature detection</td>
+<td>Resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_smoothing/SmoothingModule.java</td>
+</tr>
+<tr>
+<td>SortDataFilesModule</td>
+<td>Sort raw data files</td>
+<td>Sort selected raw data files alphabetically</td>
+<td>Spectral data</td>
+<td>Raw data methods</td>
+<td>Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/sortdatafiles/SortDataFilesModule.java</td>
+</tr>
+<tr>
+<td>SortFeatureListsModule</td>
+<td>Sort feature lists</td>
+<td>Sort selected feature lists alphabetically</td>
+<td>Feature detection</td>
+<td>Feature list methods</td>
+<td>Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/sortfeaturelists/SortFeatureListsModule.java</td>
+</tr>
+<tr>
+<td>SortSpectralMatchesModule</td>
+<td>Sort results of spectra library search</td>
+<td>This method sorts all results of spectral library search.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_spectral_match_sort/SortSpectralMatchesModule.java</td>
+</tr>
+<tr>
+<td>SpectraIdentificationResultsModule</td>
+<td>Library search results window</td>
+<td>Visualize spectral database search results.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Kevin-Murray; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; murra668; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/spectralmatchresults/SpectraIdentificationResultsModule.java</td>
+</tr>
+<tr>
+<td>SpectraStackVisualizerModule</td>
+<td>Spectra stack visualizer</td>
+<td>Visualize multiple spectra.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/spectra_stack/SpectraStackVisualizerModule.java</td>
+</tr>
+<tr>
+<td>SpectraVisualizerModule</td>
+<td>Spectra visualizer</td>
+<td>Spectra visualizer.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; SurajV; Tomas Pluskal; aiden; Robin Schmid; ?ukasz Fiszer</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/SpectraVisualizerModule.java</td>
+</tr>
+<tr>
+<td>SpectralLibraryImportModule</td>
+<td>Import spectral library</td>
+<td>This method imports spectral libraries to speed up spectral library matching</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Olena Mokshyna; Robin Schmid; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/import_spectral_library/SpectralLibraryImportModule.java</td>
+</tr>
+<tr>
+<td>SpectralLibrarySearchModule</td>
+<td>Spectral library search</td>
+<td>This method searches all feature list rows (from all feature lists) against a local spectral libraries (needs to be loaded first).</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_spectral_library_match/SpectralLibrarySearchModule.java</td>
+</tr>
+<tr>
+<td>StandardCompoundNormalizerModule</td>
+<td>Standard compound normalizer</td>
+<td>This module normalizes the feature heights and areas according to selected internal standards.</td>
+<td>Feature processing</td>
+<td>Normalization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/norm_standardcompound/StandardCompoundNormalizerModule.java</td>
+</tr>
+<tr>
+<td>SumFormulaSpectraSearchModule</td>
+<td>Formula prediction on a single spectrum</td>
+<td>Predict formulae in a single spectrum.</td>
+<td>Raw data</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/sumformula/SumFormulaSpectraSearchModule.java</td>
+</tr>
+<tr>
+<td>TDFImportModule</td>
+<td>Bruker TDF file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_bruker_tdf/TDFImportModule.java</td>
+</tr>
+<tr>
+<td>TSFImportModule</td>
+<td>TSF import module</td>
+<td>Imports Bruker .d directories with tsf data files.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_bruker_tsf/TSFImportModule.java</td>
+</tr>
+<tr>
+<td>TargetedFeatureDetectionModule</td>
+<td>Targeted feature detection</td>
+<td>Targeted feature detection</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_targeted/TargetedFeatureDetectionModule.java</td>
+</tr>
+<tr>
+<td>ThermoRawImportModule</td>
+<td>Thermo RAW file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_thermo_raw/ThermoRawImportModule.java</td>
+</tr>
+<tr>
+<td>TwoDVisualizerModule</td>
+<td>2D visualizer</td>
+<td>2D visualizer.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/twod/TwoDVisualizerModule.java</td>
+</tr>
+<tr>
+<td>VanKrevelenDiagramModule</td>
+<td>Van Krevelen Diagram</td>
+<td>Van Krevelen Diagram.</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/vankrevelendiagram/VanKrevelenDiagramModule.java</td>
+</tr>
+<tr>
+<td>VennExportModule</td>
+<td>Venn export module</td>
+<td>Exports detected/undetected features in a feature list so they can be plotted as a venn diagramm.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_venn/VennExportModule.java</td>
+</tr>
+<tr>
+<td>WatersRawImportModule</td>
+<td>Waters RAW file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_waters_raw/WatersRawImportModule.java</td>
+</tr>
+<tr>
+<td>XICManualPickerModule</td>
+<td>Graphical manual picker</td>
+<td>Manually pick or reintegrate features in EICs by point and click operations.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_manual/XICManualPickerModule.java</td>
+</tr>
+<tr>
+<td>ZipImportModule</td>
+<td>ZIP/gZIP file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_zip/ZipImportModule.java</td>
+</tr>
+</tbody>
+</table>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 9, 2022 16:43:06</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="module_development.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Module development" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Module development
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../contribute.html" class="md-footer__link md-footer__link--next" aria-label="Next: Contribute to documentation" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Contribute to documentation
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      This documentation is licensed under the MIT License (MIT).
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>
