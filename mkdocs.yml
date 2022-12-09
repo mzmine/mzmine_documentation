@@ -126,8 +126,7 @@ nav:
       - LC-MS and LC-IMS-MS data comparison: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
       - Kendrick mass defect: module_docs/feature_list_row_filter/kendrick_mass_defect.md
       - Spectral similarity measures: module_docs/id_spectral_library_search/spectral-similarity-measures.md
-      - Modules list: module_docs/module_list.md
-      
+
   - Performance options: performance.md
   - Command line tool (batch mode): commandline_tool.md
   - Contribute:
@@ -135,6 +134,7 @@ nav:
             - General structure: coding/general_structure.md
             - MZmine development (in IntelliJ): contribute_intellij.md
             - Module development: coding/module_development.md
+            - Modules list: module_docs/module_list.md
 #            TODO Finish writing these
 #            - Raw data structure: coding/raw_data_structure.md
 #            - Feature data structure: coding/feature_data_structure.md
