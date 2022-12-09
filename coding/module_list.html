@@ -2468,7 +2468,6 @@ more detailed insight.</p>
 <table>
 <thead>
 <tr>
-<th>module</th>
 <th>name</th>
 <th>description</th>
 <th>main class</th>
@@ -2479,736 +2478,6 @@ more detailed insight.</p>
 </thead>
 <tbody>
 <tr>
-<td>ADAP3AlignerModule</td>
-<td>ADAP Aligner (GC)</td>
-<td>This module calculates pairwise convolution integral for each pair of unaligned peaks in order to find the best alignment</td>
-<td>Feature detection</td>
-<td>Alignment</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; tnguy271</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/align_adap3/ADAP3AlignerModule.java</td>
-</tr>
-<tr>
-<td>ADAP3DModule</td>
-<td>ADAP3D feature detection (experimental)</td>
-<td>This module detect peaks from profile spectra using the ADAP3D algorithm developed by the Xiuxia Du lab. The module requires no parameter settings. Note that it will not work with centroid spectra.</td>
-<td>Feature detection</td>
-<td>Chromatogram detection</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_adap3d/ADAP3DModule.java</td>
-</tr>
-<tr>
-<td>ADAPHierarchicalClusteringModule</td>
-<td>Hierarchical Clustering</td>
-<td>This method combines peaks into analytes and constructs fragmentation spectrum for each analyte</td>
-<td>Feature filtering</td>
-<td>Spectral deconvolution</td>
-<td>Aleksandr Smirnov; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Varun Suresh; tnguy271</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/adap_hierarchicalclustering/ADAPHierarchicalClusteringModule.java</td>
-</tr>
-<tr>
-<td>ADAPMultivariateCurveResolutionModule</td>
-<td>Multivariate Curve Resolution</td>
-<td>This method combines peaks into analytes and constructs fragmentation spectrum for each analyte</td>
-<td>Feature filtering</td>
-<td>Spectral deconvolution</td>
-<td>Aleksandr Smirnov; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Varun Suresh; tnguy271</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/adap_mcr/ADAPMultivariateCurveResolutionModule.java</td>
-</tr>
-<tr>
-<td>AdapMgfExportModule</td>
-<td>Export to MGF file (ADAP)</td>
-<td>This method exports all ADAP clustered spectra in a feature lists to an MGF file. Used in the GNPS GC-MS workflow.</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_mgf/AdapMgfExportModule.java</td>
-</tr>
-<tr>
-<td>AdapMspExportModule</td>
-<td>Export to MSP file (ADAP)</td>
-<td>This method exports all ADAP clustered spectra in a feature lists to an MSP file.</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_msp/AdapMspExportModule.java</td>
-</tr>
-<tr>
-<td>AdapResolverModule</td>
-<td>Adap Resolver</td>
-<td>Resolves chromatograms to features.</td>
-<td>Feature processing</td>
-<td>Feature resolving</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/ADAPpeakpicking/AdapResolverModule.java</td>
-</tr>
-<tr>
-<td>AddIonNetworkingModule</td>
-<td>Add ion identities to networks</td>
-<td>This module adds ion identities to existing networks</td>
-<td>Feature processing</td>
-<td>Ion identity networking</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/addionannotations/AddIonNetworkingModule.java</td>
-</tr>
-<tr>
-<td>AirdImportModule</td>
-<td>Aird file import</td>
-<td>This module imports aird raw data into the project.</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
-<td>Robin Schmid; Tomas Pluskal; lms19880914</td>
-<td>src/main/java/io//mzmine/modules/io/import_rawdata_aird/AirdImportModule.java</td>
-</tr>
-<tr>
-<td>AlignScansModule</td>
-<td>Align scans (LC/MS or MS level 1)</td>
-<td>This module align scans for small fluctuations correlating consecutive scans.</td>
-<td>Spectral data</td>
-<td>Raw data filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_alignscans/AlignScansModule.java</td>
-</tr>
-<tr>
-<td>AllSpectralDataImportModule</td>
-<td>Import MS data</td>
-<td>This module combines the import of different MS data formats and provides advanced options</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
-<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; lms19880914; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/import_rawdata_all/AllSpectralDataImportModule.java</td>
-</tr>
-<tr>
-<td>AnnotateIsomersModule</td>
-<td>Annotate possible isomers</td>
-<td>Annotates features with the same (or similar) m/z but different mobilities within a specified retention time window.</td>
-<td>Feature processing</td>
-<td>Feature grouping</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_interestingfeaturefinder/AnnotateIsomersModule.java</td>
-</tr>
-<tr>
-<td>AnnotationNetworkModule</td>
-<td>Ion Identity Molecular Networks</td>
-<td>Visualize the results of the MS annotation module</td>
-<td>Visualization</td>
-<td>Visualization feature list</td>
-<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/networking/AnnotationNetworkModule.java</td>
-</tr>
-<tr>
-<td>BaselineCorrectionModule</td>
-<td>Baseline correction</td>
-<td>This module performs a baseline correction on raw data files.</td>
-<td>Spectral data</td>
-<td>Raw data filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_baselinecorrection/BaselineCorrectionModule.java</td>
-</tr>
-<tr>
-<td>BaselineFeatureResolverModule</td>
-<td>Baseline resolver</td>
-<td>Resolves chromatograms to features.</td>
-<td>Feature processing</td>
-<td>Feature resolving</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/baseline/BaselineFeatureResolverModule.java</td>
-</tr>
-<tr>
-<td>BatchModeModule</td>
-<td>Batch mode</td>
-<td>This module allows execution of multiple processing tasks in a batch.</td>
-<td>Project</td>
-<td>Project</td>
-<td>Kirill Ponomarov; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/batchmode/BatchModeModule.java</td>
-</tr>
-<tr>
-<td>BatchWizardModule</td>
-<td>Processing wizard</td>
-<td>Creates processing batches with a reduced set of parameters.</td>
-<td>Other</td>
-<td>Tools</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/tools/batchwizard/BatchWizardModule.java</td>
-</tr>
-<tr>
-<td>CCSCalcModule</td>
-<td>CCS calculation module</td>
-<td>Calculates CCS values for features.</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; tarush.singh</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ccscalc/CCSCalcModule.java</td>
-</tr>
-<tr>
-<td>CSVExportModularModule</td>
-<td>Export to CSV file (modular)</td>
-<td>This method exports the feature list contents into a CSV (comma-separated values) file.</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_csv/CSVExportModularModule.java</td>
-</tr>
-<tr>
-<td>CalcEcmsPotentialModule</td>
-<td>Calculate EC-MS potentials</td>
-<td>Calculates metabolite formation potentials in EC-MS experiments.</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Tomas Pluskal; m_wesn01</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ecmscalcpotential/CalcEcmsPotentialModule.java</td>
-</tr>
-<tr>
-<td>CameraSearchModule</td>
-<td>CAMERA search</td>
-<td>This method searches for pseudo-spectra using the CAMERA algorithm.</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_camera/CameraSearchModule.java</td>
-</tr>
-<tr>
-<td>CentWaveResolverModule</td>
-<td>CentWave resolver</td>
-<td>Resolves chromatograms to features.</td>
-<td>Feature processing</td>
-<td>Feature resolving</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/centwave/CentWaveResolverModule.java</td>
-</tr>
-<tr>
-<td>ChromatogramAndSpectraVisualizerModule</td>
-<td>Chromatogram and spectra visualizer</td>
-<td>Inspect LC-MS data by navigating through raw data.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Annexhc; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; annexhc; knakul853; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/chromatogramandspectra/ChromatogramAndSpectraVisualizerModule.java</td>
-</tr>
-<tr>
-<td>ChromatogramVisualizerModule</td>
-<td>TIC/XIC visualizer</td>
-<td>TIC/XIC visualizer.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/chromatogram/ChromatogramVisualizerModule.java</td>
-</tr>
-<tr>
-<td>ClearFeatureAnnotationsModule</td>
-<td>Clear feature list annotations</td>
-<td>This method clears the annotations from the feature list</td>
-<td>Feature filtering</td>
-<td>Feature list filtering</td>
-<td>Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_clearannotations/ClearFeatureAnnotationsModule.java</td>
-</tr>
-<tr>
-<td>ClearIonIdentitiesModule</td>
-<td>Clear ion identites</td>
-<td>Deletes all ion identities and networks of all rows</td>
-<td>Feature processing</td>
-<td>Ion identity networking</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/clearionids/ClearIonIdentitiesModule.java</td>
-</tr>
-<tr>
-<td>ClearProjectModule</td>
-<td>Clear project</td>
-<td>Clearing all project files and feature lists</td>
-<td>Project</td>
-<td>Project</td>
-<td>Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/tools/clear_project/ClearProjectModule.java</td>
-</tr>
-<tr>
-<td>CliqueMSModule</td>
-<td>CliqueMS annotation</td>
-<td>This method groups features and annotates the groups/cliques using CliqueMS algorithm.</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; SurajV; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_cliquems/CliqueMSModule.java</td>
-</tr>
-<tr>
-<td>CorrelateGroupingModule</td>
-<td>metaCorrelate</td>
-<td>This method correlates and groups feature list rows based on multiple criteria (feature shape, intensity across samples, ...)</td>
-<td>Feature processing</td>
-<td>Feature grouping</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/group_metacorrelate/corrgrouping/CorrelateGroupingModule.java</td>
-</tr>
-<tr>
-<td>CorrelatedFeaturesMzHistogramModule</td>
-<td>Correlated features Î m/z histogram</td>
-<td>This module plots all m/z deltas between correlated features in a histogram and offers a Gaussian fit.</td>
-<td>Visualization</td>
-<td>Visualization feature list</td>
-<td>Olena Mokshyna; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/scan_histogram/CorrelatedFeaturesMzHistogramModule.java</td>
-</tr>
-<tr>
-<td>CreateAvgNetworkFormulasModule</td>
-<td>Average formulas for annotation networks</td>
-<td>Creates a list of average molecular formulas from all formula lists of all ions in this network (e.g., M+H and M+Na)</td>
-<td>Feature processing</td>
-<td>Ion identity networking</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/formula/createavgformulas/CreateAvgNetworkFormulasModule.java</td>
-</tr>
-<tr>
-<td>CropFilterModule</td>
-<td>Crop filter</td>
-<td>This module performs cropping of raw data files.</td>
-<td>Spectral data</td>
-<td>Raw data filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_cropfilter/CropFilterModule.java</td>
-</tr>
-<tr>
-<td>CsvImportModule</td>
-<td>Import from csv file.</td>
-<td>This method imports the feature list contents from a csv file.</td>
-<td>Feature IO</td>
-<td>Feature list import</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/import_features_csv/CsvImportModule.java</td>
-</tr>
-<tr>
-<td>CustomDBSpectraSearchModule</td>
-<td>Custom DB search</td>
-<td>Search spectrum against local csv database</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/customdatabase/CustomDBSpectraSearchModule.java</td>
-</tr>
-<tr>
-<td>DataPointProcessingModule</td>
-<td>Data point processing</td>
-<td>Processes individual spectra with multiple steps like mass detection, deisotoping, annotation</td>
-<td>Raw data</td>
-<td>Annotation</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/datapointprocessing/DataPointProcessingModule.java</td>
-</tr>
-<tr>
-<td>DiaMs2CorrModule</td>
-<td>DIA pseudo MS2 builder (experimental)</td>
-<td>Builds pseudo MS2 scans based on feature shape correlation.</td>
-<td>Feature filtering</td>
-<td>Feature list filtering</td>
-<td>Steffen Heuckeroth; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_diams2/DiaMs2CorrModule.java</td>
-</tr>
-<tr>
-<td>DuplicateFilterModule</td>
-<td>Duplicate peak filter</td>
-<td>This method removes duplicate peaks (peaks with same retention times and m/z) from the feature list.</td>
-<td>Feature filtering</td>
-<td>Feature list filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_duplicatefilter/DuplicateFilterModule.java</td>
-</tr>
-<tr>
-<td>EmptyFeatureListModule</td>
-<td>module</td>
-<td>describe</td>
-<td>Feature filtering</td>
-<td>Feature list filtering</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/example/EmptyFeatureListModule.java</td>
-</tr>
-<tr>
-<td>ExportCorrAnnotationModule</td>
-<td>Export feature networks to csv</td>
-<td>Export resutls from correlation/MS annotation as networks to csv</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; sanbit876</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/group_metacorrelate/export/ExportCorrAnnotationModule.java</td>
-</tr>
-<tr>
-<td>ExportScansFromRawFilesModule</td>
-<td>Export scans into one file</td>
-<td>Export scans or mass lists into one file</td>
-<td>Spectral data</td>
-<td>Raw data export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_scans/ExportScansFromRawFilesModule.java</td>
-</tr>
-<tr>
-<td>ExportScansModule</td>
-<td>Export scans</td>
-<td>Export scans from raw data.</td>
-<td>Spectral data</td>
-<td>Export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_scans/ExportScansModule.java</td>
-</tr>
-<tr>
-<td>ExternalCCSCalibrationModule</td>
-<td>External CCS calibration</td>
-<td>Uses an externally calculated CCS calibration to calculate CCS values.</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ccscalibration/external/ExternalCCSCalibrationModule.java</td>
-</tr>
-<tr>
-<td>ExtractScansModule</td>
-<td>Extract scans</td>
-<td>Extract a defined number of scans around a center time</td>
-<td>Spectral data</td>
-<td>Raw data export</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_extractscans/ExtractScansModule.java</td>
-</tr>
-<tr>
-<td>FeatureCorrelationHistogramModule</td>
-<td>Correlation coefficient histogram (grouped feature shapes)</td>
-<td>This module plots all correlations between feature shapes.</td>
-<td>Visualization</td>
-<td>Visualization feature list</td>
-<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/histo_feature_correlation/FeatureCorrelationHistogramModule.java</td>
-</tr>
-<tr>
-<td>FeatureFilterModule</td>
-<td>Peak filter</td>
-<td>This method removes certain peak entries based on given restrictions.</td>
-<td>Feature filtering</td>
-<td>Feature list filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_featurefilter/FeatureFilterModule.java</td>
-</tr>
-<tr>
-<td>FeatureListBlankSubtractionModule</td>
-<td>Feature list blank subtraction</td>
-<td>Subtracts features appearing in (procedural) blank measurements feature list from an aligned feature list.</td>
-<td>Feature filtering</td>
-<td>Feature list filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_blanksubtraction/FeatureListBlankSubtractionModule.java</td>
-</tr>
-<tr>
-<td>FeatureResolverModule</td>
-<td>Main resolver</td>
-<td>Resolves chromatograms to features. Provides additional parameters and orchestrates the algoriithms</td>
-<td>Feature processing</td>
-<td>Feature resolving</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/FeatureResolverModule.java</td>
-</tr>
-<tr>
-<td>FeatureTableFXModule</td>
-<td>Feature table</td>
-<td>MZmine 3 feature table.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Annexhc; Kirill Ponomarov; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/featurelisttable_modular/FeatureTableFXModule.java</td>
-</tr>
-<tr>
-<td>FormulaPredictionFeatureListModule</td>
-<td>Formula prediction</td>
-<td>This method gets the predicted formula for each unknown compound</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_formulapredictionfeaturelist/FormulaPredictionFeatureListModule.java</td>
-</tr>
-<tr>
-<td>FormulaPredictionIonNetworkModule</td>
-<td>Formula prediction (on annotation networks)</td>
-<td>This method predicts formulae for each ion identity in all annotation networks (generated by MS annotations module or similar)</td>
-<td>Feature processing</td>
-<td>Ion identity networking</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/formula/prediction/FormulaPredictionIonNetworkModule.java</td>
-</tr>
-<tr>
-<td>FormulaPredictionModule</td>
-<td>Formula prediction</td>
-<td>Predict molecular formulae for features.</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Weiching Chen; knakul853</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_formulaprediction/FormulaPredictionModule.java</td>
-</tr>
-<tr>
-<td>FormulaSortModule</td>
-<td>Sort formulas</td>
-<td>This module sorts all formula lists of rows in a feature list</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_formula_sort/FormulaSortModule.java</td>
-</tr>
-<tr>
-<td>FrameVisualizerModule</td>
-<td>Frame visualizer</td>
-<td>Visualizes frames from ion mobility raw data files.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/frames/FrameVisualizerModule.java</td>
-</tr>
-<tr>
-<td>Fx3DVisualizerModule</td>
-<td>3D visualizer</td>
-<td>3D visualizer.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/fx3d/Fx3DVisualizerModule.java</td>
-</tr>
-<tr>
-<td>GNPSResultsImportModule</td>
-<td>Import GNPS results</td>
-<td>Imports GNPS feature based molecular networking results into the selected feature list (library matches)</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_gnpsresultsimport/GNPSResultsImportModule.java</td>
-</tr>
-<tr>
-<td>GnpsFbmnExportAndSubmitModule</td>
-<td>Export/Submit to GNPS-FBMN</td>
-<td>GNPS feature-based molecular networking export and submit module. Exports the MGF file for GNPS (only for MS/MS), the quant table (CSV export) and additional edges (ion identity networks and correlation)</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_gnps/fbmn/GnpsFbmnExportAndSubmitModule.java</td>
-</tr>
-<tr>
-<td>GnpsGcExportAndSubmitModule</td>
-<td>Export to GNPS-GC-MS (with ADAP)</td>
-<td>GNPS GC-EI-MS workflow. Export the mgf, quant table and Kovats reference file (optionally).</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_gnps/gc/GnpsGcExportAndSubmitModule.java</td>
-</tr>
-<tr>
-<td>GnpsMasstSubmitModule</td>
-<td>Submit GNPS MASST search</td>
-<td>Submit an MS2 spectrum to GNPS MASST search, searching against public data.</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Robin Schmid; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_gnps/masst/GnpsMasstSubmitModule.java</td>
-</tr>
-<tr>
-<td>GraphicsExportModule</td>
-<td>Graphics export</td>
-<td>Export charts to vector or pixel graphics</td>
-<td>Visualization</td>
-<td></td>
-<td>Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/gui/chartbasics/graphicsexport/GraphicsExportModule.java</td>
-</tr>
-<tr>
-<td>GridMassModule</td>
-<td>GridMass - 2D feature detection</td>
-<td>This module detect peaks based on a 2D peak recognition procedure.</td>
-<td>Feature detection</td>
-<td>Chromatogram detection</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_gridmass/GridMassModule.java</td>
-</tr>
-<tr>
-<td>GroupMS2Module</td>
-<td>Group MS2 scans with features</td>
-<td>This method assings all MS2 scans within range to all features in this feature list</td>
-<td>Feature filtering</td>
-<td>Feature list filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_groupms2/GroupMS2Module.java</td>
-</tr>
-<tr>
-<td>HierarAlignerGcModule</td>
-<td>Hierachical aligner (GC)</td>
-<td>This method aligns detected peaks using a match score. This score is calculated based on the MZ profile and RT of each peak using preset tolerances.</td>
-<td>Feature detection</td>
-<td>Alignment</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/align_hierarchical/HierarAlignerGcModule.java</td>
-</tr>
-<tr>
-<td>HistogramVisualizerModule</td>
-<td>Histogram plot</td>
-<td>Histogram plot</td>
-<td>Visualization</td>
-<td>Visualization feature list</td>
-<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/histogram/HistogramVisualizerModule.java</td>
-</tr>
-<tr>
-<td>IMSMobilityMzPlotModule</td>
-<td>IMS mobility mz plot</td>
-<td>Heatmap view for detected features.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/ims_mobilitymzplot/IMSMobilityMzPlotModule.java</td>
-</tr>
-<tr>
-<td>IMSRawDataOverviewModule</td>
-<td>Ion mobility raw data overview</td>
-<td>Visualizes ion mobility raw data files.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/rawdataoverviewims/IMSRawDataOverviewModule.java</td>
-</tr>
-<tr>
-<td>IcpMsCVSImportModule</td>
-<td>ICP MS CSV file import</td>
-<td>This module imports raw data into the project.</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/import_rawdata_icpms_csv/IcpMsCVSImportModule.java</td>
-</tr>
-<tr>
-<td>ImageBuilderModule</td>
-<td>Image builder</td>
-<td>This module connects data points from mass lists and builds images.</td>
-<td>Feature detection</td>
-<td>Chromatogram detection</td>
-<td>Annexhc; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_imagebuilder/ImageBuilderModule.java</td>
-</tr>
-<tr>
-<td>ImageToCsvExportModule</td>
-<td>Export images to csv</td>
-<td>Exports spatially resolved data of features to csv files.</td>
-<td>Feature IO</td>
-<td>Export</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_image_csv/ImageToCsvExportModule.java</td>
-</tr>
-<tr>
-<td>ImageVisualizerModule</td>
-<td>Image visualizer</td>
-<td>Image visualizer</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Annexhc; Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/image/ImageVisualizerModule.java</td>
-</tr>
-<tr>
-<td>ImsExpanderModule</td>
-<td>Ims expander</td>
-<td>Expands rt chromatograms in mobility dimension.</td>
-<td>Feature detection</td>
-<td>Chromatogram detection</td>
-<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_imsexpander/ImsExpanderModule.java</td>
-</tr>
-<tr>
-<td>ImsVisualizerModule</td>
-<td>IMS Raw data visualizer</td>
-<td>Multidimensional raw data inspection of IMS raw data.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Annexhc; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; aiden; knakul853</td>
-<td>src/main/java/io//mzmine/modules/visualization/ims/ImsVisualizerModule.java</td>
-</tr>
-<tr>
-<td>ImzMLImportModule</td>
-<td>iMZML file import</td>
-<td>This module imports raw data into the project.</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/import_rawdata_imzml/ImzMLImportModule.java</td>
-</tr>
-<tr>
-<td>InfoVisualizerModule</td>
-<td>Feature list info visualizer</td>
-<td>Generates a batch from the list of applied methods to reproduce this feature list.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Roman Bushuiev; Tomas Pluskal; m_wesn01</td>
-<td>src/main/java/io//mzmine/modules/visualization/infovisualizer/InfoVisualizerModule.java</td>
-</tr>
-<tr>
-<td>InjectTimeAnalysisModule</td>
-<td>Injection time analysis</td>
-<td>Plots the minimum signal intensity against the injection time to see trends in trap based mass spectrometers</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Olena Mokshyna; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/injection_time/InjectTimeAnalysisModule.java</td>
-</tr>
-<tr>
-<td>IntensityPlotModule</td>
-<td>Feature intensity plot</td>
-<td>Feature intensity plot.</td>
-<td>Visualization</td>
-<td>Visualization feature list</td>
-<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/intensityplot/IntensityPlotModule.java</td>
-</tr>
-<tr>
-<td>IonMobilityTraceBuilderModule</td>
-<td>Ion mobility trace builder</td>
-<td>Builds ion mobility traces for a raw data file</td>
-<td>Feature detection</td>
-<td>Chromatogram detection</td>
-<td>Annexhc; Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_ionmobilitytracebuilder/IonMobilityTraceBuilderModule.java</td>
-</tr>
-<tr>
-<td>IonNetRelationsModule</td>
-<td>Relations between ion networks</td>
-<td>This method searches for relations between ion networks (e.g., chemical modifications, heterodimers, covalently bound multimers</td>
-<td>Feature processing</td>
-<td>Ion identity networking</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/relations/IonNetRelationsModule.java</td>
-</tr>
-<tr>
-<td>IonNetworkMSMSCheckModule</td>
-<td>Check all ion identities by MS/MS</td>
-<td>Checks ion identities (in-source fragments and multimers) by MS/MS</td>
-<td>Feature processing</td>
-<td>Ion identity networking</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/checkmsms/IonNetworkMSMSCheckModule.java</td>
-</tr>
-<tr>
-<td>IonNetworkRefinementModule</td>
-<td>Ion identity network refinement</td>
-<td>Refinement of ion identity networks</td>
-<td>Feature processing</td>
-<td>Ion identity networking</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/refinement/IonNetworkRefinementModule.java</td>
-</tr>
-<tr>
-<td>IonNetworkingModule</td>
-<td>Ion identity networking</td>
-<td>This method searches for adducts, in-source fragments, and clusters</td>
-<td>Feature processing</td>
-<td>Ion identity networking</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/ionidnetworking/IonNetworkingModule.java</td>
-</tr>
-<tr>
-<td>IsotopeFinderModule</td>
-<td>Isotopic peaks finder</td>
-<td>Find isotope signals in the FWHM of all features in the list</td>
-<td>Feature filtering</td>
-<td>Isotopes</td>
-<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; tarush.singh</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_isotopefinder/IsotopeFinderModule.java</td>
-</tr>
-<tr>
-<td>IsotopeGrouperModule</td>
 <td>13C isotope filter (formerly: isotope grouper)</td>
 <td>This module detects isotopic features and removes them from the feature list. Its isotope patterns are limited to detected features. For a more comprehensive isotope pattern coverage and isotopes other than 13C, use the Isotope finder.</td>
 <td>Feature filtering</td>
@@ -3217,313 +2486,30 @@ more detailed insight.</p>
 <td>src/main/java/io//mzmine/modules/dataprocessing/filter_isotopegrouper/IsotopeGrouperModule.java</td>
 </tr>
 <tr>
-<td>IsotopePatternExportModule</td>
-<td>Export isotope pattern</td>
-<td>Export isotope pattern of detected features.</td>
-<td>Spectral data</td>
-<td>Export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/featurelisttable_modular/export/IsotopePatternExportModule.java</td>
-</tr>
-<tr>
-<td>IsotopePatternPreviewModule</td>
-<td>Isotope pattern preview</td>
-<td>Calculate and view isotope patterns.</td>
-<td>Other</td>
-<td>Tools</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/tools/isotopepatternpreview/IsotopePatternPreviewModule.java</td>
-</tr>
-<tr>
-<td>IsotopePeakScannerModule</td>
-<td>Isotope peak scanner</td>
-<td>Searches for m/z and intensity distribution of a calculated isotope pattern within a feature list.</td>
-<td>Feature filtering</td>
-<td>Isotopes</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_isotopepeakscanner/IsotopePeakScannerModule.java</td>
-</tr>
-<tr>
-<td>JoinAlignerModule</td>
-<td>Join aligner</td>
-<td>This method aligns detected peaks using a match score. This score is calculated based on the mass and retention time of each peak using preset tolerance.</td>
-<td>Feature detection</td>
-<td>Alignment</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/align_join/JoinAlignerModule.java</td>
-</tr>
-<tr>
-<td>KendrickMassPlotModule</td>
-<td>Kendrick mass plot</td>
-<td>Kendrick mass plot.</td>
+<td>2D visualizer</td>
+<td>Two dimensional visualization of feature lists.</td>
 <td>Visualization</td>
-<td>Visualization feature list</td>
-<td>Annexhc; Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; annexhc; knakul853</td>
-<td>src/main/java/io//mzmine/modules/visualization/kendrickmassplot/KendrickMassPlotModule.java</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/twod/TwoDVisualizerModule.java</td>
 </tr>
 <tr>
-<td>KovatsIndexExtractionModule</td>
-<td>Kovats index extraction</td>
-<td>Extract Kovats indexes from a raw data file and save to csv.</td>
-<td>Other</td>
-<td>Tools</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/tools/kovats/KovatsIndexExtractionModule.java</td>
+<td>3D visualizer</td>
+<td>3D visulization of raw data.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/fx3d/Fx3DVisualizerModule.java</td>
 </tr>
 <tr>
-<td>LcImageAlignerModule</td>
-<td>LC-Image Aligner</td>
-<td>Aligns LC and imaging measurements based on m/z and mobility. Images are aligned to all LC features that match, only the best match is retained.</td>
+<td>ADAP Aligner (GC)</td>
+<td>This module calculates pairwise convolution integral for each pair of unaligned peaks in order to find the best alignment</td>
 <td>Feature detection</td>
 <td>Alignment</td>
-<td>Olena Mokshyna; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/align_lcimage/LcImageAlignerModule.java</td>
-</tr>
-<tr>
-<td>LearnerModule</td>
-<td>Learner module</td>
-<td>This module is for learners only</td>
-<td>Feature filtering</td>
-<td>Feature list filtering</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/example/LearnerModule.java</td>
-</tr>
-<tr>
-<td>LegacyCSVExportModule</td>
-<td>Export CSV (legacy MZmine 2)</td>
-<td>Legacy MZmine 2 method: This method exports the feature list contents into a CSV (comma-separated values) file.</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_csv_legacy/LegacyCSVExportModule.java</td>
-</tr>
-<tr>
-<td>LibraryAnalysisCSVExportModule</td>
-<td>Export library analysis csv</td>
-<td>Cosine similarity of library to csv</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Robin Schmid; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/export_library_analysis_csv/LibraryAnalysisCSVExportModule.java</td>
-</tr>
-<tr>
-<td>LibraryBatchGenerationModule</td>
-<td>Batch spectral library generation</td>
-<td>Uses metadata sheet to generate spectral library</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Steffen Heuckeroth; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/spectraldbsubmit/batch/LibraryBatchGenerationModule.java</td>
-</tr>
-<tr>
-<td>LibrarySubmitModule</td>
-<td>Library submit</td>
-<td>Submit MS2 spectra for spectral libraries.</td>
-<td>Spectral data</td>
-<td>Export</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/spectraldbsubmit/LibrarySubmitModule.java</td>
-</tr>
-<tr>
-<td>LinearNormalizerModule</td>
-<td>Linear normalizer</td>
-<td>Linear normalizer divides the height (or area) of each feature in the feature list by a normalization factor, determined according to the given normalization type.</td>
-<td>Feature processing</td>
-<td>Normalization</td>
 <td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; tnguy271</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/norm_linear/LinearNormalizerModule.java</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_adap3/ADAP3AlignerModule.java</td>
 </tr>
 <tr>
-<td>LipidSearchModule</td>
-<td>Lipid annotation</td>
-<td>This method searches and annotates for features which m/z value matches a predicted mass of selected lipids.</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; SurajV; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_lipididentification/LipidSearchModule.java</td>
-</tr>
-<tr>
-<td>LipidSpectraSearchModule</td>
-<td>Lipid annotation</td>
-<td>Lipid annotation on individual spectra</td>
-<td>Raw data</td>
-<td>Annotation</td>
-<td>Annexhc; Robin Schmid; Steffen Heuckeroth; SurajV; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/lipidsearch/LipidSpectraSearchModule.java</td>
-</tr>
-<tr>
-<td>LocalCSVDatabaseSearchModule</td>
-<td>Custom database search</td>
-<td>This method searches a custom database (CSV file) using m/z and retention time values.</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_localcsvsearch/LocalCSVDatabaseSearchModule.java</td>
-</tr>
-<tr>
-<td>MS2SimilarityModule</td>
-<td>MS/MS spectral networking (Molecular networking)</td>
-<td>Checks MS2 similarity of all rows within the groups or on all networks and between networks</td>
-<td>Feature processing</td>
-<td>Feature grouping</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/group_metacorrelate/msms/similarity/MS2SimilarityModule.java</td>
-</tr>
-<tr>
-<td>MSDKmzMLImportModule</td>
-<td>mzML file import via MSDK</td>
-<td>This module imports raw data into the project.</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
-<td>Kirill Ponomarov; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/import_rawdata_mzml/MSDKmzMLImportModule.java</td>
-</tr>
-<tr>
-<td>MSMSExportModule</td>
-<td>Export MS/MS spectra</td>
-<td>Export MS/MS spectra of detected features.</td>
-<td>Spectral data</td>
-<td>Export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/featurelisttable_modular/export/MSMSExportModule.java</td>
-</tr>
-<tr>
-<td>MSnTreeExportModule</td>
-<td>Export MSn trees</td>
-<td>This method exports the feature list contents into a CSV (comma-separated values) file.</td>
-<td>Spectral data</td>
-<td>Raw data export</td>
-<td>Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/export_msn_tree/MSnTreeExportModule.java</td>
-</tr>
-<tr>
-<td>MSnTreeVisualizerModule</td>
-<td>MSn Tree Visualizer</td>
-<td>Visualizes MSn spectra in a tree structure and all spectra of the same level in one spectra chart</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Olena Mokshyna; Robin Schmid; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/spectra/msn_tree/MSnTreeVisualizerModule.java</td>
-</tr>
-<tr>
-<td>MZTabmExportModule</td>
-<td>Export to mzTab-m file.</td>
-<td>This method exports the feature list contents into a mzTab-m file.</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_mztabm/MZTabmExportModule.java</td>
-</tr>
-<tr>
-<td>MZTabmImportModule</td>
-<td>Import mzTab-m file</td>
-<td>This method imports a feature list from a mzTab-m file.</td>
-<td>Feature IO</td>
-<td>Feature list import</td>
-<td>Nils Hoffmann; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/import_features_mztabm/MZTabmImportModule.java</td>
-</tr>
-<tr>
-<td>ManualFeaturePickerModule</td>
-<td>Manual picker</td>
-<td>Manually pick or reintegrate features in EICs.</td>
-<td>Feature processing</td>
-<td>Feature resolving</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_manual/ManualFeaturePickerModule.java</td>
-</tr>
-<tr>
-<td>MassCalibrationModule</td>
-<td>Mass calibration</td>
-<td>This module estimates systematic error of measurement by analysing differences between actual mass peaks and masses of assigned compounds, it then shifts the mass peaks to account against that bias.</td>
-<td>Spectral data</td>
-<td>Raw data methods</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_masscalibration/MassCalibrationModule.java</td>
-</tr>
-<tr>
-<td>MassDetectionModule</td>
-<td>Mass detection</td>
-<td>This module detects individual ions in each scan and builds a mass list for each scan.</td>
-<td>Spectral data</td>
-<td>Raw data methods</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_massdetection/MassDetectionModule.java</td>
-</tr>
-<tr>
-<td>MassvoltommogramModule</td>
-<td>Massvoltammogram chart</td>
-<td>A chart that combines a specific instrumental setup (redox cell) with mass spectrometry. Different timepoints are converted into the potentials applied to the sample, this is plotted as 3D spectra against this potential.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Tomas Pluskal; m_wesn01</td>
-<td>src/main/java/io//mzmine/modules/visualization/massvoltammogram/MassvoltommogramModule.java</td>
-</tr>
-<tr>
-<td>MergeAlignerModule</td>
-<td>Merge lists</td>
-<td>This method merges feature lists by appending all rows into a new list. Perform alignment before to align all features from comparable samples and use this method to merge feature lists that should not be aligned: e.g., positive and negative mode data.</td>
-<td>Feature detection</td>
-<td>Alignment</td>
-<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/align_append_rows/MergeAlignerModule.java</td>
-</tr>
-<tr>
-<td>MetaboAnalystExportModule</td>
-<td>Export to MetaboAnalyst file</td>
-<td>This method exports the feature list contents into a CSV (comma-separated values) file that is formatted for easy processing by the MetaboAnalyst service (http://www.metaboanalyst.ca).</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_metaboanalyst/MetaboAnalystExportModule.java</td>
-</tr>
-<tr>
-<td>MinimumSearchFeatureResolverModule</td>
-<td>Local minimum resolver</td>
-<td>Resolves chromatograms to features.</td>
-<td>Feature processing</td>
-<td>Feature resolving</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/minimumsearch/MinimumSearchFeatureResolverModule.java</td>
-</tr>
-<tr>
-<td>MirrorScanModule</td>
-<td>Spectral mirror (USI enabled)</td>
-<td>Compare spectra</td>
-<td>Other</td>
-<td>Tools</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/mirrorspectra/MirrorScanModule.java</td>
-</tr>
-<tr>
-<td>MobilityMzRegionExtractionModule</td>
-<td>m/z mobility region extraction</td>
-<td>Extracts regions of m/z-mobility regions</td>
-<td>Feature filtering</td>
-<td>Feature list filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_mobilitymzregionextraction/MobilityMzRegionExtractionModule.java</td>
-</tr>
-<tr>
-<td>MobilityScanMergerModule</td>
-<td>Mobility scan merging module</td>
-<td>Merges mobility scans at the same retention time to a summed frame spectrum.</td>
-<td>Spectral data</td>
-<td>Raw data methods</td>
-<td>Olena Mokshyna; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_mobilityscanmerger/MobilityScanMergerModule.java</td>
-</tr>
-<tr>
-<td>MobilogramBinningModule</td>
-<td>Mobilogram summing</td>
-<td>Bins intensities within given mobility ranges to correct for noise in mobilograms.</td>
-<td>Feature detection</td>
-<td>Chromatogram detection</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_mobilogram_summing/MobilogramBinningModule.java</td>
-</tr>
-<tr>
-<td>ModularADAPChromatogramBuilderModule</td>
 <td>ADAP Chromatogram Builder</td>
 <td>This module connects data points from mass lists and builds chromatograms.</td>
 <td>Feature detection</td>
@@ -3532,556 +2518,94 @@ more detailed insight.</p>
 <td>src/main/java/io//mzmine/modules/dataprocessing/featdet_adapchromatogrambuilder/ModularADAPChromatogramBuilderModule.java</td>
 </tr>
 <tr>
-<td>Ms2SearchModule</td>
-<td>MS2 similarity search</td>
-<td>This method searches for similar MS2 fragmentation spectra between two feature lists</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ms2search/Ms2SearchModule.java</td>
-</tr>
-<tr>
-<td>MsMsQualityExportModule</td>
-<td>MS/MS quality export</td>
-<td>Exports metrics for MS/MS spectra</td>
-<td>Other</td>
-<td>Tools</td>
-<td>Steffen Heuckeroth; SteffenHeu</td>
-<td>src/main/java/io//mzmine/modules/io/export_msmsquality/MsMsQualityExportModule.java</td>
-</tr>
-<tr>
-<td>MsMsSpectraMergeModule</td>
-<td>MsMs Spectra merge</td>
-<td>Merge multiple MS2 spectra to a single spectrum.</td>
-<td>Spectral data</td>
-<td></td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/tools/msmsspectramerge/MsMsSpectraMergeModule.java</td>
-</tr>
-<tr>
-<td>MsMsVisualizerModule</td>
-<td>MS/MS data visualizer</td>
-<td>Scatter plot for MS/MS data visualization, fouraxes types supported: retention time, precursor m/z, product m/z, neutral loss</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Sandeep; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/msms/MsMsVisualizerModule.java</td>
-</tr>
-<tr>
-<td>MsnFeatureDetectionModule</td>
-<td>MSn feature list builder</td>
-<td>This module looks through the whole raw data for MSn scans and makes a list of chromatographic features using the precursor mass.</td>
+<td>ADAP3D feature detection (experimental)</td>
+<td>This module detect peaks from profile spectra using the ADAP3D algorithm developed by the Xiuxia Du lab. The module requires no parameter settings. Note that it will not work with centroid spectra.</td>
 <td>Feature detection</td>
 <td>Chromatogram detection</td>
-<td>Kevin-Murray; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_msn/MsnFeatureDetectionModule.java</td>
-</tr>
-<tr>
-<td>MsnTreeFeatureDetectionModule</td>
-<td>MSn tree feature list builder</td>
-<td>Builds all MSn trees and extracts chromatograms for the precursor m/z</td>
-<td>Feature detection</td>
-<td>Chromatogram detection</td>
-<td>Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_msn_tree/MsnTreeFeatureDetectionModule.java</td>
-</tr>
-<tr>
-<td>MultiThreadPeakFinderModule</td>
-<td>Peak finder (multithreaded)</td>
-<td>This method fills the missing peaks (gaps) in the feature list by searching for a peak in the raw data.</td>
-<td>Feature detection</td>
-<td>Gap filling</td>
 <td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/gapfill_peakfinder/multithreaded/MultiThreadPeakFinderModule.java</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_adap3d/ADAP3DModule.java</td>
 </tr>
 <tr>
-<td>MzDataImportModule</td>
-<td>mzData file import</td>
-<td>This module imports raw data into the project.</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/import_rawdata_mzdata/MzDataImportModule.java</td>
-</tr>
-<tr>
-<td>MzMLExportModule</td>
-<td>Raw data export</td>
-<td>This module exports raw data files from your MZmine project into various formats</td>
-<td>Spectral data</td>
-<td>Raw data export</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_rawdata_mzml/MzMLExportModule.java</td>
-</tr>
-<tr>
-<td>MzMLImportModule</td>
-<td>mzML file import via jmzml</td>
-<td>This module imports raw data into the project.</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/deprecated_jmzml/MzMLImportModule.java</td>
-</tr>
-<tr>
-<td>MzRangeFormulaCalculatorModule</td>
-<td>MZ range from formula calcuator</td>
-<td>Calculate mz range from formula and mz tolerance</td>
-<td>Other</td>
-<td>Tools</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/tools/mzrangecalculator/MzRangeFormulaCalculatorModule.java</td>
-</tr>
-<tr>
-<td>MzRangeMassCalculatorModule</td>
-<td>MZ range from tolerance calculator</td>
-<td>Calculate mz range from mz tolerance and mass</td>
-<td>Other</td>
-<td>Tools</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/tools/mzrangecalculator/MzRangeMassCalculatorModule.java</td>
-</tr>
-<tr>
-<td>MzTabExportModule</td>
-<td>Export to mzTab file</td>
-<td>This method exports the feature list contents into a mzTab file.</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_mztab/MzTabExportModule.java</td>
-</tr>
-<tr>
-<td>MzTabImportModule</td>
-<td>Import mzTab file</td>
-<td>This method imports a feature list from a mzTab file.</td>
-<td>Feature IO</td>
-<td>Feature list import</td>
-<td>Nils Hoffmann; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/import_features_mztab/MzTabImportModule.java</td>
-</tr>
-<tr>
-<td>MzXMLImportModule</td>
-<td>mzXML file import</td>
-<td>This module imports raw data into the project.</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/import_rawdata_mzxml/MzXMLImportModule.java</td>
-</tr>
-<tr>
-<td>NetCDFExportModule</td>
-<td>Raw data export to netCDF</td>
-<td>This module exports raw data files from your MZmine project into various formats</td>
-<td>Spectral data</td>
-<td>Raw data export</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_rawdata_netcdf/NetCDFExportModule.java</td>
-</tr>
-<tr>
-<td>NetCDFImportModule</td>
-<td>netCDF file import</td>
-<td>This module imports raw data into the project.</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
-<td>David Maek; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/import_rawdata_netcdf/NetCDFImportModule.java</td>
-</tr>
-<tr>
-<td>NeutralLossFilterModule</td>
-<td>Neutral loss filter</td>
-<td>Searches for neutral losses within a feature list.</td>
-<td>Feature filtering</td>
-<td>Feature list filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_neutralloss/NeutralLossFilterModule.java</td>
-</tr>
-<tr>
-<td>NistMsSearchModule</td>
-<td>NIST MS Search</td>
-<td>This method searches spectra against the NIST library.</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Kevin-Murray; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; murra668; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_nist/NistMsSearchModule.java</td>
-</tr>
-<tr>
-<td>NoiseAmplitudeResolverModule</td>
-<td>Noise amplitude resolver</td>
+<td>Adap Resolver</td>
 <td>Resolves chromatograms to features.</td>
 <td>Feature processing</td>
 <td>Feature resolving</td>
 <td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/noiseamplitude/NoiseAmplitudeResolverModule.java</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/ADAPpeakpicking/AdapResolverModule.java</td>
 </tr>
 <tr>
-<td>OnlineDBSearchModule</td>
-<td>Online database search</td>
-<td>This module attempts to find those peaks in a feature list, which form an isotope pattern.</td>
+<td>Add ion identities to networks</td>
+<td>This module adds ion identities to existing networks</td>
 <td>Feature processing</td>
-<td>Annotation</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; SurajV; Tomas Pluskal; knakul853</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_onlinecompounddb/OnlineDBSearchModule.java</td>
-</tr>
-<tr>
-<td>OnlineDBSpectraSearchModule</td>
-<td>Online DB search</td>
-<td>Online DB search on individual spectra</td>
-<td>Raw data</td>
-<td>Annotation</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/onlinedatabase/OnlineDBSpectraSearchModule.java</td>
-</tr>
-<tr>
-<td>PathAlignerModule</td>
-<td>Path aligner</td>
-<td>Description not yet available.</td>
-<td>Feature detection</td>
-<td>Alignment</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/align_path/PathAlignerModule.java</td>
-</tr>
-<tr>
-<td>PeakComparisonRowFilterModule</td>
-<td>Peak comparison rows filter</td>
-<td>This method removes certain rows from a feature list based on peak comparisons.</td>
-<td>Feature filtering</td>
-<td>Feature list filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_peakcomparisonrowfilter/PeakComparisonRowFilterModule.java</td>
-</tr>
-<tr>
-<td>PeakFinderModule</td>
-<td>Peak finder</td>
-<td>Fill gaps in aligned feature lists of LC-MS measurements.</td>
-<td>Feature processing</td>
-<td>Feature resolving</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/gapfill_peakfinder/PeakFinderModule.java</td>
-</tr>
-<tr>
-<td>PrecursorDBSearchModule</td>
-<td>Precursor search in spectral libraries</td>
-<td>This method searches all peaklist rows against a local spectral libraries to identify possible precursor ions</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_precursordbsearch/PrecursorDBSearchModule.java</td>
-</tr>
-<tr>
-<td>ProjectLoadModule</td>
-<td>Open project</td>
-<td>This module opens an existing MZmine project. The current workspace will be discarded.</td>
-<td>Project</td>
-<td>Project I/O</td>
-<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/projectload/ProjectLoadModule.java</td>
-</tr>
-<tr>
-<td>ProjectMetadataImportModule</td>
-<td>Project metadata import</td>
-<td>This module imports metadata into the project from .tsv-format files.</td>
-<td>Project</td>
-<td>Project metadata</td>
-<td>Kirill Ponomarov; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/projectmetadata/ProjectMetadataImportModule.java</td>
-</tr>
-<tr>
-<td>ProjectSaveAsModule</td>
-<td>Save project as</td>
-<td>This module saves the current MZmine project.</td>
-<td>Project</td>
-<td>Project I/O</td>
-<td>Annexhc; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/projectsave/ProjectSaveAsModule.java</td>
-</tr>
-<tr>
-<td>ProjectSaveModule</td>
-<td>Save project</td>
-<td>This module saves the current MZmine project.</td>
-<td>Project</td>
-<td>Project I/O</td>
-<td>Annexhc; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/projectsave/ProjectSaveModule.java</td>
-</tr>
-<tr>
-<td>QualityParametersModule</td>
-<td>Quality parameters</td>
-<td>Calculates quality parameters such as FWHM, asymmetry factor, tailing factor, S/N ratio.</td>
-<td>Other</td>
-<td>Tools</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/tools/qualityparameters/QualityParametersModule.java</td>
-</tr>
-<tr>
-<td>RTCalibrationModule</td>
-<td>Retention time calibration</td>
-<td>The retention time calibration attempts to reduce the deviation of retention times between feature lists, by searching for common features in these lists and using them as calibration standards.</td>
-<td>Feature processing</td>
-<td>Normalization</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/norm_rtcalibration/RTCalibrationModule.java</td>
-</tr>
-<tr>
-<td>RansacAlignerModule</td>
-<td>RANSAC aligner</td>
-<td>Feature list aligner based on the RANSAC algorithm.</td>
-<td>Feature detection</td>
-<td>Alignment</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/align_ransac/RansacAlignerModule.java</td>
-</tr>
-<tr>
-<td>RawDataFileRenameModule</td>
-<td>Raw data file rename</td>
-<td>Renames raw data files.</td>
-<td>Other</td>
-<td>Tools</td>
+<td>Ion identity networking</td>
 <td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/tools/rawfilerename/RawDataFileRenameModule.java</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/addionannotations/AddIonNetworkingModule.java</td>
 </tr>
 <tr>
-<td>RawDataOverviewModule</td>
-<td>Raw data overview</td>
-<td>Raw data overview</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/rawdataoverview/RawDataOverviewModule.java</td>
-</tr>
-<tr>
-<td>RawFileMergeModule</td>
-<td>Merge files</td>
-<td>Merge all scans of multiple files to one raw data file</td>
+<td>Aird file import</td>
+<td>This module imports aird raw data into the project.</td>
 <td>Spectral data</td>
-<td>Raw data methods</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_merge/RawFileMergeModule.java</td>
+<td>Raw data import</td>
+<td>Robin Schmid; Tomas Pluskal; lms19880914</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_aird/AirdImportModule.java</td>
 </tr>
 <tr>
-<td>RecursiveIMSBuilderModule</td>
-<td>Recursive IMS Builder</td>
-<td>Builds m/z traces for ion mobility spectrometry data</td>
-<td>Feature detection</td>
-<td>Chromatogram detection</td>
-<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_recursiveimsbuilder/RecursiveIMSBuilderModule.java</td>
-</tr>
-<tr>
-<td>ReferenceCCSCalibrationModule</td>
-<td>Internal standard CCS calculation</td>
-<td>Calculates CCS values based on an reference compound list and it's detected features in a feature list.</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ccscalibration/reference/ReferenceCCSCalibrationModule.java</td>
-</tr>
-<tr>
-<td>RowsFilterModule</td>
-<td>Feature list rows filter</td>
-<td>This method removes certain rows from a feature list based on given restrictions.</td>
-<td>Feature filtering</td>
-<td>Feature list filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_rowsfilter/RowsFilterModule.java</td>
-</tr>
-<tr>
-<td>SQLExportModule</td>
-<td>Export to SQL database</td>
-<td>This method exports the feature list contents into an SQL database using JDBC.</td>
-<td>Feature IO</td>
-<td>Feature list export</td>
-<td>Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_sql/SQLExportModule.java</td>
-</tr>
-<tr>
-<td>SameRangeGapFillerModule</td>
-<td>Same RT and m/z range gap filler</td>
-<td>This method fills the missing peaks (gaps) in the feature list by looking at the whole m/z and retention time range of the feature list row and adding all raw data points in the same range.</td>
-<td>Feature detection</td>
-<td>Gap filling</td>
+<td>Align scans (LC/MS or MS level 1)</td>
+<td>This module align scans for small fluctuations correlating consecutive scans.</td>
+<td>Spectral data</td>
+<td>Raw data filtering</td>
 <td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/gapfill_samerange/SameRangeGapFillerModule.java</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_alignscans/AlignScansModule.java</td>
 </tr>
 <tr>
-<td>SavitzkyGolayResolverModule</td>
-<td>Savitzky Golay resolver</td>
+<td>Annotate possible isomers</td>
+<td>Annotates features with the same (or similar) m/z but different mobilities within a specified retention time window.</td>
+<td>Feature processing</td>
+<td>Feature grouping</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_interestingfeaturefinder/AnnotateIsomersModule.java</td>
+</tr>
+<tr>
+<td>Average formulas for annotation networks</td>
+<td>Creates a list of average molecular formulas from all formula lists of all ions in this network (e.g., M+H and M+Na)</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/formula/createavgformulas/CreateAvgNetworkFormulasModule.java</td>
+</tr>
+<tr>
+<td>Baseline correction</td>
+<td>This module performs a baseline correction on raw data files.</td>
+<td>Spectral data</td>
+<td>Raw data filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_baselinecorrection/BaselineCorrectionModule.java</td>
+</tr>
+<tr>
+<td>Baseline resolver</td>
 <td>Resolves chromatograms to features.</td>
 <td>Feature processing</td>
 <td>Feature resolving</td>
 <td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/savitzkygolay/SavitzkyGolayResolverModule.java</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/baseline/BaselineFeatureResolverModule.java</td>
 </tr>
 <tr>
-<td>ScanFiltersModule</td>
-<td>Scan by scan filtering</td>
-<td>This module performs filtering algorithms on each scan individually.</td>
-<td>Spectral data</td>
-<td>Raw data filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_scanfilters/ScanFiltersModule.java</td>
+<td>Batch mode</td>
+<td>This module allows execution of multiple processing tasks in a batch.</td>
+<td>Project</td>
+<td>Project</td>
+<td>Kirill Ponomarov; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/batchmode/BatchModeModule.java</td>
 </tr>
 <tr>
-<td>ScanHistogramModule</td>
-<td>scan histogram</td>
-<td>This module plots all values of all selected scans into one histogram and offers a Gaussian fit.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Olena Mokshyna; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/scan_histogram/ScanHistogramModule.java</td>
-</tr>
-<tr>
-<td>ScanSmoothingModule</td>
-<td>Scan smoothing (LC/MS or MS level 1)</td>
-<td>This module averages intensity values within a time-scan frame.</td>
-<td>Spectral data</td>
-<td>Raw data filtering</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/filter_scansmoothing/ScanSmoothingModule.java</td>
-</tr>
-<tr>
-<td>ScatterPlotVisualizerModule</td>
-<td>Scatter plot</td>
-<td>Scatter plot.</td>
-<td>Visualization</td>
-<td>Visualization feature list</td>
-<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/scatterplot/ScatterPlotVisualizerModule.java</td>
-</tr>
-<tr>
-<td>SetCCSCalibrationModule</td>
-<td>Set CCS calibration</td>
-<td>Sets a CCS calibration to a raw data file.</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_ccscalibration/setcalibration/SetCCSCalibrationModule.java</td>
-</tr>
-<tr>
-<td>ShoulderPeaksFilterModule</td>
-<td>FTMS shoulder peaks filter</td>
-<td>This method filters mass lists and removes residual signals known as 'shoulder peaks' and commonly observed in FTMS data.</td>
-<td>Spectral data</td>
-<td>Raw data filtering</td>
-<td>Robin Schmid; Roman Bushuiev; Sonja-analytik; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_shoulderpeaksfilter/ShoulderPeaksFilterModule.java</td>
-</tr>
-<tr>
-<td>SingleSpectrumLibrarySearchModule</td>
-<td>Single Spectrum library search</td>
-<td>Search single spectrum in a spectral library.</td>
-<td>Raw data</td>
-<td>Annotation</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/spectraldatabase/SingleSpectrumLibrarySearchModule.java</td>
-</tr>
-<tr>
-<td>SiriusExportModule</td>
-<td>Export for SIRIUS</td>
-<td>This method exports a MGF file that contains for each feature, (1) the deconvoluted MS1 isotopic pattern, and (2) the MS/MS spectrum (highest precursor ion intensity). This file can be open and processed with Sirius, https://bio.informatik.uni-jena.de/software/sirius/.</td>
+<td>Batch spectral library generation</td>
+<td>Uses metadata sheet to generate spectral library</td>
 <td>Feature IO</td>
 <td>Feature list export</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_sirius/SiriusExportModule.java</td>
+<td>Steffen Heuckeroth; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/spectraldbsubmit/batch/LibraryBatchGenerationModule.java</td>
 </tr>
 <tr>
-<td>SmoothingModule</td>
-<td>Smoothing</td>
-<td>Smooths intensity along the retention time and/or mobility dimension.</td>
-<td>Feature detection</td>
-<td>Resolving</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_smoothing/SmoothingModule.java</td>
-</tr>
-<tr>
-<td>SortDataFilesModule</td>
-<td>Sort raw data files</td>
-<td>Sort selected raw data files alphabetically</td>
-<td>Spectral data</td>
-<td>Raw data methods</td>
-<td>Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/tools/sortdatafiles/SortDataFilesModule.java</td>
-</tr>
-<tr>
-<td>SortFeatureListsModule</td>
-<td>Sort feature lists</td>
-<td>Sort selected feature lists alphabetically</td>
-<td>Feature detection</td>
-<td>Feature list methods</td>
-<td>Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/tools/sortfeaturelists/SortFeatureListsModule.java</td>
-</tr>
-<tr>
-<td>SortSpectralMatchesModule</td>
-<td>Sort results of spectra library search</td>
-<td>This method sorts all results of spectral library search.</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_spectral_match_sort/SortSpectralMatchesModule.java</td>
-</tr>
-<tr>
-<td>SpectraIdentificationResultsModule</td>
-<td>Library search results window</td>
-<td>Visualize spectral database search results.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Kevin-Murray; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; murra668; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/spectra/spectralmatchresults/SpectraIdentificationResultsModule.java</td>
-</tr>
-<tr>
-<td>SpectraStackVisualizerModule</td>
-<td>Spectra stack visualizer</td>
-<td>Visualize multiple spectra.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/visualization/spectra/spectra_stack/SpectraStackVisualizerModule.java</td>
-</tr>
-<tr>
-<td>SpectraVisualizerModule</td>
-<td>Spectra visualizer</td>
-<td>Spectra visualizer.</td>
-<td>Visualization</td>
-<td>Visualization</td>
-<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; SurajV; Tomas Pluskal; aiden; Robin Schmid; ?ukasz Fiszer</td>
-<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/SpectraVisualizerModule.java</td>
-</tr>
-<tr>
-<td>SpectralLibraryImportModule</td>
-<td>Import spectral library</td>
-<td>This method imports spectral libraries to speed up spectral library matching</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
-<td>Olena Mokshyna; Robin Schmid; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/import_spectral_library/SpectralLibraryImportModule.java</td>
-</tr>
-<tr>
-<td>SpectralLibrarySearchModule</td>
-<td>Spectral library search</td>
-<td>This method searches all feature list rows (from all feature lists) against a local spectral libraries (needs to be loaded first).</td>
-<td>Feature processing</td>
-<td>Annotation</td>
-<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/id_spectral_library_match/SpectralLibrarySearchModule.java</td>
-</tr>
-<tr>
-<td>StandardCompoundNormalizerModule</td>
-<td>Standard compound normalizer</td>
-<td>This module normalizes the feature heights and areas according to selected internal standards.</td>
-<td>Feature processing</td>
-<td>Normalization</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/norm_standardcompound/StandardCompoundNormalizerModule.java</td>
-</tr>
-<tr>
-<td>SumFormulaSpectraSearchModule</td>
-<td>Formula prediction on a single spectrum</td>
-<td>Predict formulae in a single spectrum.</td>
-<td>Raw data</td>
-<td>Annotation</td>
-<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/sumformula/SumFormulaSpectraSearchModule.java</td>
-</tr>
-<tr>
-<td>TDFImportModule</td>
 <td>Bruker TDF file import</td>
 <td>This module imports raw data into the project.</td>
 <td>Spectral data</td>
@@ -4090,70 +2614,406 @@ more detailed insight.</p>
 <td>src/main/java/io//mzmine/modules/io/import_rawdata_bruker_tdf/TDFImportModule.java</td>
 </tr>
 <tr>
-<td>TSFImportModule</td>
-<td>TSF import module</td>
-<td>Imports Bruker .d directories with tsf data files.</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
-<td>Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
-<td>src/main/java/io//mzmine/modules/io/import_rawdata_bruker_tsf/TSFImportModule.java</td>
+<td>CAMERA search</td>
+<td>This method searches for pseudo-spectra using the CAMERA algorithm.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_camera/CameraSearchModule.java</td>
 </tr>
 <tr>
-<td>TargetedFeatureDetectionModule</td>
-<td>Targeted feature detection</td>
-<td>Targeted feature detection</td>
-<td>Feature detection</td>
-<td>Chromatogram detection</td>
+<td>CCS calculation module</td>
+<td>Calculates CCS values for features.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; tarush.singh</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ccscalc/CCSCalcModule.java</td>
+</tr>
+<tr>
+<td>Calculate EC-MS potentials</td>
+<td>Calculates metabolite formation potentials in EC-MS experiments.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Tomas Pluskal; m_wesn01</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ecmscalcpotential/CalcEcmsPotentialModule.java</td>
+</tr>
+<tr>
+<td>CentWave resolver</td>
+<td>Resolves chromatograms to features.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
 <td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_targeted/TargetedFeatureDetectionModule.java</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/centwave/CentWaveResolverModule.java</td>
 </tr>
 <tr>
-<td>ThermoRawImportModule</td>
-<td>Thermo RAW file import</td>
-<td>This module imports raw data into the project.</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/import_rawdata_thermo_raw/ThermoRawImportModule.java</td>
+<td>Check all ion identities by MS/MS</td>
+<td>Checks ion identities (in-source fragments and multimers) by MS/MS</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/checkmsms/IonNetworkMSMSCheckModule.java</td>
 </tr>
 <tr>
-<td>TwoDVisualizerModule</td>
-<td>2D visualizer</td>
-<td>2D visualizer.</td>
+<td>Chromatogram and spectra visualizer</td>
+<td>Inspect LC-MS data by navigating through raw data.</td>
 <td>Visualization</td>
 <td>Visualization</td>
-<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/twod/TwoDVisualizerModule.java</td>
+<td>Annexhc; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; annexhc; knakul853; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/chromatogramandspectra/ChromatogramAndSpectraVisualizerModule.java</td>
 </tr>
 <tr>
-<td>VanKrevelenDiagramModule</td>
-<td>Van Krevelen Diagram</td>
-<td>Van Krevelen Diagram.</td>
+<td>Clear feature list annotations</td>
+<td>This method clears the annotations from the feature list</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_clearannotations/ClearFeatureAnnotationsModule.java</td>
+</tr>
+<tr>
+<td>Clear ion identites</td>
+<td>Deletes all ion identities and networks of all rows</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/clearionids/ClearIonIdentitiesModule.java</td>
+</tr>
+<tr>
+<td>Clear project</td>
+<td>Clearing all project files and feature lists</td>
+<td>Project</td>
+<td>Project</td>
+<td>Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/tools/clear_project/ClearProjectModule.java</td>
+</tr>
+<tr>
+<td>CliqueMS annotation</td>
+<td>This method groups features and annotates the groups/cliques using CliqueMS algorithm.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; SurajV; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_cliquems/CliqueMSModule.java</td>
+</tr>
+<tr>
+<td>Correlated features Î m/z histogram</td>
+<td>This module plots all m/z deltas between correlated features in a histogram and offers a Gaussian fit.</td>
 <td>Visualization</td>
 <td>Visualization feature list</td>
-<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/visualization/vankrevelendiagram/VanKrevelenDiagramModule.java</td>
+<td>Olena Mokshyna; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/scan_histogram/CorrelatedFeaturesMzHistogramModule.java</td>
 </tr>
 <tr>
-<td>VennExportModule</td>
-<td>Venn export module</td>
-<td>Exports detected/undetected features in a feature list so they can be plotted as a venn diagramm.</td>
+<td>Correlation coefficient histogram (grouped feature shapes)</td>
+<td>This module plots all correlations between feature shapes.</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/histo_feature_correlation/FeatureCorrelationHistogramModule.java</td>
+</tr>
+<tr>
+<td>Crop filter</td>
+<td>This module performs cropping of raw data files.</td>
+<td>Spectral data</td>
+<td>Raw data filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_cropfilter/CropFilterModule.java</td>
+</tr>
+<tr>
+<td>Custom DB search</td>
+<td>Search spectrum against local csv database</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/customdatabase/CustomDBSpectraSearchModule.java</td>
+</tr>
+<tr>
+<td>Custom database search</td>
+<td>This method searches a custom database (CSV file) using m/z and retention time values.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_localcsvsearch/LocalCSVDatabaseSearchModule.java</td>
+</tr>
+<tr>
+<td>DIA pseudo MS2 builder (experimental)</td>
+<td>Builds pseudo MS2 scans based on feature shape correlation.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Steffen Heuckeroth; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_diams2/DiaMs2CorrModule.java</td>
+</tr>
+<tr>
+<td>Data point processing</td>
+<td>Processes individual spectra with multiple steps like mass detection, deisotoping, annotation</td>
+<td>Raw data</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/datapointprocessing/DataPointProcessingModule.java</td>
+</tr>
+<tr>
+<td>Duplicate peak filter</td>
+<td>This method removes duplicate peaks (peaks with same retention times and m/z) from the feature list.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_duplicatefilter/DuplicateFilterModule.java</td>
+</tr>
+<tr>
+<td>Export CSV (legacy MZmine 2)</td>
+<td>Legacy MZmine 2 method: This method exports the feature list contents into a CSV (comma-separated values) file.</td>
 <td>Feature IO</td>
 <td>Feature list export</td>
-<td>Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/export_features_venn/VennExportModule.java</td>
-</tr>
-<tr>
-<td>WatersRawImportModule</td>
-<td>Waters RAW file import</td>
-<td>This module imports raw data into the project.</td>
-<td>Spectral data</td>
-<td>Raw data import</td>
 <td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
-<td>src/main/java/io//mzmine/modules/io/import_rawdata_waters_raw/WatersRawImportModule.java</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_csv_legacy/LegacyCSVExportModule.java</td>
 </tr>
 <tr>
-<td>XICManualPickerModule</td>
+<td>Export MS/MS spectra</td>
+<td>Export MS/MS spectra of detected features.</td>
+<td>Spectral data</td>
+<td>Export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/featurelisttable_modular/export/MSMSExportModule.java</td>
+</tr>
+<tr>
+<td>Export MSn trees</td>
+<td>This method exports the feature list contents into a CSV (comma-separated values) file.</td>
+<td>Spectral data</td>
+<td>Raw data export</td>
+<td>Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/export_msn_tree/MSnTreeExportModule.java</td>
+</tr>
+<tr>
+<td>Export feature networks to csv</td>
+<td>Export resutls from correlation/MS annotation as networks to csv</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; sanbit876</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/group_metacorrelate/export/ExportCorrAnnotationModule.java</td>
+</tr>
+<tr>
+<td>Export for SIRIUS</td>
+<td>This method exports a MGF file that contains for each feature, (1) the deconvoluted MS1 isotopic pattern, and (2) the MS/MS spectrum (highest precursor ion intensity). This file can be open and processed with Sirius, https://bio.informatik.uni-jena.de/software/sirius/.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_sirius/SiriusExportModule.java</td>
+</tr>
+<tr>
+<td>Export images to csv</td>
+<td>Exports spatially resolved data of features to csv files.</td>
+<td>Feature IO</td>
+<td>Export</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_image_csv/ImageToCsvExportModule.java</td>
+</tr>
+<tr>
+<td>Export isotope pattern</td>
+<td>Export isotope pattern of detected features.</td>
+<td>Spectral data</td>
+<td>Export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/featurelisttable_modular/export/IsotopePatternExportModule.java</td>
+</tr>
+<tr>
+<td>Export library analysis csv</td>
+<td>Cosine similarity of library to csv</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/export_library_analysis_csv/LibraryAnalysisCSVExportModule.java</td>
+</tr>
+<tr>
+<td>Export scans</td>
+<td>Export scans from raw data.</td>
+<td>Spectral data</td>
+<td>Export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_scans/ExportScansModule.java</td>
+</tr>
+<tr>
+<td>Export scans into one file</td>
+<td>Export scans or mass lists into one file</td>
+<td>Spectral data</td>
+<td>Raw data export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_scans/ExportScansFromRawFilesModule.java</td>
+</tr>
+<tr>
+<td>Export to CSV file (modular)</td>
+<td>This method exports the feature list contents into a CSV (comma-separated values) file.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_csv/CSVExportModularModule.java</td>
+</tr>
+<tr>
+<td>Export to GNPS-GC-MS (with ADAP)</td>
+<td>GNPS GC-EI-MS workflow. Export the mgf, quant table and Kovats reference file (optionally).</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_gnps/gc/GnpsGcExportAndSubmitModule.java</td>
+</tr>
+<tr>
+<td>Export to MGF file (ADAP)</td>
+<td>This method exports all ADAP clustered spectra in a feature lists to an MGF file. Used in the GNPS GC-MS workflow.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_mgf/AdapMgfExportModule.java</td>
+</tr>
+<tr>
+<td>Export to MSP file (ADAP)</td>
+<td>This method exports all ADAP clustered spectra in a feature lists to an MSP file.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_msp/AdapMspExportModule.java</td>
+</tr>
+<tr>
+<td>Export to MetaboAnalyst file</td>
+<td>This method exports the feature list contents into a CSV (comma-separated values) file that is formatted for easy processing by the MetaboAnalyst service (http://www.metaboanalyst.ca).</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_metaboanalyst/MetaboAnalystExportModule.java</td>
+</tr>
+<tr>
+<td>Export to SQL database</td>
+<td>This method exports the feature list contents into an SQL database using JDBC.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_sql/SQLExportModule.java</td>
+</tr>
+<tr>
+<td>Export to mzTab file</td>
+<td>This method exports the feature list contents into a mzTab file.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_mztab/MzTabExportModule.java</td>
+</tr>
+<tr>
+<td>Export to mzTab-m file.</td>
+<td>This method exports the feature list contents into a mzTab-m file.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_mztabm/MZTabmExportModule.java</td>
+</tr>
+<tr>
+<td>Export/Submit to GNPS-FBMN</td>
+<td>GNPS feature-based molecular networking export and submit module. Exports the MGF file for GNPS (only for MS/MS), the quant table (CSV export) and additional edges (ion identity networks and correlation)</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_gnps/fbmn/GnpsFbmnExportAndSubmitModule.java</td>
+</tr>
+<tr>
+<td>External CCS calibration</td>
+<td>Uses an externally calculated CCS calibration to calculate CCS values.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ccscalibration/external/ExternalCCSCalibrationModule.java</td>
+</tr>
+<tr>
+<td>Extract scans</td>
+<td>Extract a defined number of scans around a center time</td>
+<td>Spectral data</td>
+<td>Raw data export</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_extractscans/ExtractScansModule.java</td>
+</tr>
+<tr>
+<td>FTMS shoulder peaks filter</td>
+<td>This method filters mass lists and removes residual signals known as 'shoulder peaks' and commonly observed in FTMS data.</td>
+<td>Spectral data</td>
+<td>Raw data filtering</td>
+<td>Robin Schmid; Roman Bushuiev; Sonja-analytik; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_shoulderpeaksfilter/ShoulderPeaksFilterModule.java</td>
+</tr>
+<tr>
+<td>Feature intensity plot</td>
+<td>Feature intensity plot.</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/intensityplot/IntensityPlotModule.java</td>
+</tr>
+<tr>
+<td>Feature list blank subtraction</td>
+<td>Subtracts features appearing in (procedural) blank measurements feature list from an aligned feature list.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_blanksubtraction/FeatureListBlankSubtractionModule.java</td>
+</tr>
+<tr>
+<td>Feature list info visualizer</td>
+<td>Generates a batch from the list of applied methods to reproduce this feature list.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Roman Bushuiev; Tomas Pluskal; m_wesn01</td>
+<td>src/main/java/io//mzmine/modules/visualization/infovisualizer/InfoVisualizerModule.java</td>
+</tr>
+<tr>
+<td>Feature list rows filter</td>
+<td>This method removes certain rows from a feature list based on given restrictions.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_rowsfilter/RowsFilterModule.java</td>
+</tr>
+<tr>
+<td>Feature table</td>
+<td>MZmine 3 feature table.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Annexhc; Kirill Ponomarov; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/featurelisttable_modular/FeatureTableFXModule.java</td>
+</tr>
+<tr>
+<td>Formula prediction</td>
+<td>This method gets the predicted formula for each unknown compound</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_formulapredictionfeaturelist/FormulaPredictionFeatureListModule.java</td>
+</tr>
+<tr>
+<td>Formula prediction</td>
+<td>Predict molecular formulae for features.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Weiching Chen; knakul853</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_formulaprediction/FormulaPredictionModule.java</td>
+</tr>
+<tr>
+<td>Formula prediction (on annotation networks)</td>
+<td>This method predicts formulae for each ion identity in all annotation networks (generated by MS annotations module or similar)</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/formula/prediction/FormulaPredictionIonNetworkModule.java</td>
+</tr>
+<tr>
+<td>Formula prediction on a single spectrum</td>
+<td>Predict formulae in a single spectrum.</td>
+<td>Raw data</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/sumformula/SumFormulaSpectraSearchModule.java</td>
+</tr>
+<tr>
+<td>Frame visualizer</td>
+<td>Visualizes frames from ion mobility raw data files.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/frames/FrameVisualizerModule.java</td>
+</tr>
+<tr>
 <td>Graphical manual picker</td>
 <td>Manually pick or reintegrate features in EICs by point and click operations.</td>
 <td>Feature processing</td>
@@ -4162,13 +3022,964 @@ more detailed insight.</p>
 <td>src/main/java/io//mzmine/modules/dataprocessing/featdet_manual/XICManualPickerModule.java</td>
 </tr>
 <tr>
-<td>ZipImportModule</td>
+<td>Graphics export</td>
+<td>Export charts to vector or pixel graphics</td>
+<td>Visualization</td>
+<td></td>
+<td>Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/gui/chartbasics/graphicsexport/GraphicsExportModule.java</td>
+</tr>
+<tr>
+<td>GridMass - 2D feature detection</td>
+<td>This module detect peaks based on a 2D peak recognition procedure.</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_gridmass/GridMassModule.java</td>
+</tr>
+<tr>
+<td>Group MS2 scans with features</td>
+<td>This method assings all MS2 scans within range to all features in this feature list</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_groupms2/GroupMS2Module.java</td>
+</tr>
+<tr>
+<td>Hierachical aligner (GC)</td>
+<td>This method aligns detected peaks using a match score. This score is calculated based on the MZ profile and RT of each peak using preset tolerances.</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_hierarchical/HierarAlignerGcModule.java</td>
+</tr>
+<tr>
+<td>Hierarchical Clustering</td>
+<td>This method combines peaks into analytes and constructs fragmentation spectrum for each analyte</td>
+<td>Feature filtering</td>
+<td>Spectral deconvolution</td>
+<td>Aleksandr Smirnov; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Varun Suresh; tnguy271</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/adap_hierarchicalclustering/ADAPHierarchicalClusteringModule.java</td>
+</tr>
+<tr>
+<td>Histogram plot</td>
+<td>Histogram plot</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/histogram/HistogramVisualizerModule.java</td>
+</tr>
+<tr>
+<td>ICP MS CSV file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_icpms_csv/IcpMsCVSImportModule.java</td>
+</tr>
+<tr>
+<td>IMS Raw data visualizer</td>
+<td>Multidimensional raw data inspection of IMS raw data.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Annexhc; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; aiden; knakul853</td>
+<td>src/main/java/io//mzmine/modules/visualization/ims/ImsVisualizerModule.java</td>
+</tr>
+<tr>
+<td>IMS mobility mz plot</td>
+<td>Heatmap view for detected features.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/ims_mobilitymzplot/IMSMobilityMzPlotModule.java</td>
+</tr>
+<tr>
+<td>Image builder</td>
+<td>This module connects data points from mass lists and builds images.</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Annexhc; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_imagebuilder/ImageBuilderModule.java</td>
+</tr>
+<tr>
+<td>Image visualizer</td>
+<td>Image visualizer</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Annexhc; Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/image/ImageVisualizerModule.java</td>
+</tr>
+<tr>
+<td>Import GNPS results</td>
+<td>Imports GNPS feature based molecular networking results into the selected feature list (library matches)</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_gnpsresultsimport/GNPSResultsImportModule.java</td>
+</tr>
+<tr>
+<td>Import MS data</td>
+<td>This module combines the import of different MS data formats and provides advanced options</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; lms19880914; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_all/AllSpectralDataImportModule.java</td>
+</tr>
+<tr>
+<td>Import from csv file.</td>
+<td>This method imports the feature list contents from a csv file.</td>
+<td>Feature IO</td>
+<td>Feature list import</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_features_csv/CsvImportModule.java</td>
+</tr>
+<tr>
+<td>Import mzTab file</td>
+<td>This method imports a feature list from a mzTab file.</td>
+<td>Feature IO</td>
+<td>Feature list import</td>
+<td>Nils Hoffmann; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_features_mztab/MzTabImportModule.java</td>
+</tr>
+<tr>
+<td>Import mzTab-m file</td>
+<td>This method imports a feature list from a mzTab-m file.</td>
+<td>Feature IO</td>
+<td>Feature list import</td>
+<td>Nils Hoffmann; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_features_mztabm/MZTabmImportModule.java</td>
+</tr>
+<tr>
+<td>Import spectral library</td>
+<td>This method imports spectral libraries to speed up spectral library matching</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Olena Mokshyna; Robin Schmid; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/import_spectral_library/SpectralLibraryImportModule.java</td>
+</tr>
+<tr>
+<td>Ims expander</td>
+<td>Expands rt chromatograms in mobility dimension.</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_imsexpander/ImsExpanderModule.java</td>
+</tr>
+<tr>
+<td>Injection time analysis</td>
+<td>Plots the minimum signal intensity against the injection time to see trends in trap based mass spectrometers</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/injection_time/InjectTimeAnalysisModule.java</td>
+</tr>
+<tr>
+<td>Internal standard CCS calculation</td>
+<td>Calculates CCS values based on an reference compound list and it's detected features in a feature list.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ccscalibration/reference/ReferenceCCSCalibrationModule.java</td>
+</tr>
+<tr>
+<td>Ion Identity Molecular Networks</td>
+<td>Visualize the results of the MS annotation module</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/networking/AnnotationNetworkModule.java</td>
+</tr>
+<tr>
+<td>Ion identity network refinement</td>
+<td>Refinement of ion identity networks</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/refinement/IonNetworkRefinementModule.java</td>
+</tr>
+<tr>
+<td>Ion identity networking</td>
+<td>This method searches for adducts, in-source fragments, and clusters</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/ionidnetworking/IonNetworkingModule.java</td>
+</tr>
+<tr>
+<td>Ion mobility raw data overview</td>
+<td>Visualizes ion mobility raw data files.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/rawdataoverviewims/IMSRawDataOverviewModule.java</td>
+</tr>
+<tr>
+<td>Ion mobility trace builder</td>
+<td>Builds ion mobility traces for a raw data file</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Annexhc; Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_ionmobilitytracebuilder/IonMobilityTraceBuilderModule.java</td>
+</tr>
+<tr>
+<td>Isotope pattern preview</td>
+<td>Calculate and view isotope patterns.</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/tools/isotopepatternpreview/IsotopePatternPreviewModule.java</td>
+</tr>
+<tr>
+<td>Isotope peak scanner</td>
+<td>Searches for m/z and intensity distribution of a calculated isotope pattern within a feature list.</td>
+<td>Feature filtering</td>
+<td>Isotopes</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_isotopepeakscanner/IsotopePeakScannerModule.java</td>
+</tr>
+<tr>
+<td>Isotopic peaks finder</td>
+<td>Find isotope signals in the FWHM of all features in the list</td>
+<td>Feature filtering</td>
+<td>Isotopes</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; tarush.singh</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_isotopefinder/IsotopeFinderModule.java</td>
+</tr>
+<tr>
+<td>Join aligner</td>
+<td>This method aligns detected peaks using a match score. This score is calculated based on the mass and retention time of each peak using preset tolerance.</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_join/JoinAlignerModule.java</td>
+</tr>
+<tr>
+<td>Kendrick mass plot</td>
+<td>Kendrick mass plot.</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Annexhc; Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; annexhc; knakul853</td>
+<td>src/main/java/io//mzmine/modules/visualization/kendrickmassplot/KendrickMassPlotModule.java</td>
+</tr>
+<tr>
+<td>Kovats index extraction</td>
+<td>Extract Kovats indexes from a raw data file and save to csv.</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/tools/kovats/KovatsIndexExtractionModule.java</td>
+</tr>
+<tr>
+<td>LC-Image Aligner</td>
+<td>Aligns LC and imaging measurements based on m/z and mobility. Images are aligned to all LC features that match, only the best match is retained.</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Olena Mokshyna; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_lcimage/LcImageAlignerModule.java</td>
+</tr>
+<tr>
+<td>Learner module</td>
+<td>This module is for learners only</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/example/LearnerModule.java</td>
+</tr>
+<tr>
+<td>Library search results window</td>
+<td>Visualize spectral database search results.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Kevin-Murray; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; murra668; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/spectralmatchresults/SpectraIdentificationResultsModule.java</td>
+</tr>
+<tr>
+<td>Library submit</td>
+<td>Submit MS2 spectra for spectral libraries.</td>
+<td>Spectral data</td>
+<td>Export</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/spectraldbsubmit/LibrarySubmitModule.java</td>
+</tr>
+<tr>
+<td>Linear normalizer</td>
+<td>Linear normalizer divides the height (or area) of each feature in the feature list by a normalization factor, determined according to the given normalization type.</td>
+<td>Feature processing</td>
+<td>Normalization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; tnguy271</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/norm_linear/LinearNormalizerModule.java</td>
+</tr>
+<tr>
+<td>Lipid annotation</td>
+<td>This method searches and annotates for features which m/z value matches a predicted mass of selected lipids.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; SurajV; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_lipididentification/LipidSearchModule.java</td>
+</tr>
+<tr>
+<td>Lipid annotation</td>
+<td>Lipid annotation on individual spectra</td>
+<td>Raw data</td>
+<td>Annotation</td>
+<td>Annexhc; Robin Schmid; Steffen Heuckeroth; SurajV; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/lipidsearch/LipidSpectraSearchModule.java</td>
+</tr>
+<tr>
+<td>Local minimum resolver</td>
+<td>Resolves chromatograms to features.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/minimumsearch/MinimumSearchFeatureResolverModule.java</td>
+</tr>
+<tr>
+<td>MS/MS data visualizer</td>
+<td>Scatter plot for MS/MS data visualization, fouraxes types supported: retention time, precursor m/z, product m/z, neutral loss</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Sandeep; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/msms/MsMsVisualizerModule.java</td>
+</tr>
+<tr>
+<td>MS/MS quality export</td>
+<td>Exports metrics for MS/MS spectra</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Steffen Heuckeroth; SteffenHeu</td>
+<td>src/main/java/io//mzmine/modules/io/export_msmsquality/MsMsQualityExportModule.java</td>
+</tr>
+<tr>
+<td>MS/MS spectral networking (Molecular networking)</td>
+<td>Checks MS2 similarity of all rows within the groups or on all networks and between networks</td>
+<td>Feature processing</td>
+<td>Feature grouping</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/group_metacorrelate/msms/similarity/MS2SimilarityModule.java</td>
+</tr>
+<tr>
+<td>MS2 similarity search</td>
+<td>This method searches for similar MS2 fragmentation spectra between two feature lists</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ms2search/Ms2SearchModule.java</td>
+</tr>
+<tr>
+<td>MSn Tree Visualizer</td>
+<td>Visualizes MSn spectra in a tree structure and all spectra of the same level in one spectra chart</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Robin Schmid; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/msn_tree/MSnTreeVisualizerModule.java</td>
+</tr>
+<tr>
+<td>MSn feature list builder</td>
+<td>This module looks through the whole raw data for MSn scans and makes a list of chromatographic features using the precursor mass.</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Kevin-Murray; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_msn/MsnFeatureDetectionModule.java</td>
+</tr>
+<tr>
+<td>MSn tree feature list builder</td>
+<td>Builds all MSn trees and extracts chromatograms for the precursor m/z</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_msn_tree/MsnTreeFeatureDetectionModule.java</td>
+</tr>
+<tr>
+<td>MZ range from formula calcuator</td>
+<td>Calculate mz range from formula and mz tolerance</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/mzrangecalculator/MzRangeFormulaCalculatorModule.java</td>
+</tr>
+<tr>
+<td>MZ range from tolerance calculator</td>
+<td>Calculate mz range from mz tolerance and mass</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/mzrangecalculator/MzRangeMassCalculatorModule.java</td>
+</tr>
+<tr>
+<td>Main resolver</td>
+<td>Resolves chromatograms to features. Provides additional parameters and orchestrates the algoriithms</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/FeatureResolverModule.java</td>
+</tr>
+<tr>
+<td>Manual picker</td>
+<td>Manually pick or reintegrate features in EICs.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_manual/ManualFeaturePickerModule.java</td>
+</tr>
+<tr>
+<td>Mass calibration</td>
+<td>This module estimates systematic error of measurement by analysing differences between actual mass peaks and masses of assigned compounds, it then shifts the mass peaks to account against that bias.</td>
+<td>Spectral data</td>
+<td>Raw data methods</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_masscalibration/MassCalibrationModule.java</td>
+</tr>
+<tr>
+<td>Mass detection</td>
+<td>This module detects individual ions in each scan and builds a mass list for each scan.</td>
+<td>Spectral data</td>
+<td>Raw data methods</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_massdetection/MassDetectionModule.java</td>
+</tr>
+<tr>
+<td>Massvoltammogram chart</td>
+<td>A chart that combines a specific instrumental setup (redox cell) with mass spectrometry. Different timepoints are converted into the potentials applied to the sample, this is plotted as 3D spectra against this potential.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Tomas Pluskal; m_wesn01</td>
+<td>src/main/java/io//mzmine/modules/visualization/massvoltammogram/MassvoltommogramModule.java</td>
+</tr>
+<tr>
+<td>Merge files</td>
+<td>Merge all scans of multiple files to one raw data file</td>
+<td>Spectral data</td>
+<td>Raw data methods</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_merge/RawFileMergeModule.java</td>
+</tr>
+<tr>
+<td>Merge lists</td>
+<td>This method merges feature lists by appending all rows into a new list. Perform alignment before to align all features from comparable samples and use this method to merge feature lists that should not be aligned: e.g., positive and negative mode data.</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_append_rows/MergeAlignerModule.java</td>
+</tr>
+<tr>
+<td>Mobility scan merging module</td>
+<td>Merges mobility scans at the same retention time to a summed frame spectrum.</td>
+<td>Spectral data</td>
+<td>Raw data methods</td>
+<td>Olena Mokshyna; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_mobilityscanmerger/MobilityScanMergerModule.java</td>
+</tr>
+<tr>
+<td>Mobilogram summing</td>
+<td>Bins intensities within given mobility ranges to correct for noise in mobilograms.</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_mobilogram_summing/MobilogramBinningModule.java</td>
+</tr>
+<tr>
+<td>MsMs Spectra merge</td>
+<td>Merge multiple MS2 spectra to a single spectrum.</td>
+<td>Spectral data</td>
+<td></td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/msmsspectramerge/MsMsSpectraMergeModule.java</td>
+</tr>
+<tr>
+<td>Multivariate Curve Resolution</td>
+<td>This method combines peaks into analytes and constructs fragmentation spectrum for each analyte</td>
+<td>Feature filtering</td>
+<td>Spectral deconvolution</td>
+<td>Aleksandr Smirnov; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Varun Suresh; tnguy271</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/adap_mcr/ADAPMultivariateCurveResolutionModule.java</td>
+</tr>
+<tr>
+<td>NIST MS Search</td>
+<td>This method searches spectra against the NIST library.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Kevin-Murray; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; murra668; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_nist/NistMsSearchModule.java</td>
+</tr>
+<tr>
+<td>Neutral loss filter</td>
+<td>Searches for neutral losses within a feature list.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_neutralloss/NeutralLossFilterModule.java</td>
+</tr>
+<tr>
+<td>Noise amplitude resolver</td>
+<td>Resolves chromatograms to features.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/noiseamplitude/NoiseAmplitudeResolverModule.java</td>
+</tr>
+<tr>
+<td>Online DB search</td>
+<td>Online DB search on individual spectra</td>
+<td>Raw data</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/onlinedatabase/OnlineDBSpectraSearchModule.java</td>
+</tr>
+<tr>
+<td>Online database search</td>
+<td>This module attempts to find those peaks in a feature list, which form an isotope pattern.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; SurajV; Tomas Pluskal; knakul853</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_onlinecompounddb/OnlineDBSearchModule.java</td>
+</tr>
+<tr>
+<td>Open project</td>
+<td>This module opens an existing MZmine project. The current workspace will be discarded.</td>
+<td>Project</td>
+<td>Project I/O</td>
+<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/projectload/ProjectLoadModule.java</td>
+</tr>
+<tr>
+<td>Path aligner</td>
+<td>Description not yet available.</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_path/PathAlignerModule.java</td>
+</tr>
+<tr>
+<td>Peak comparison rows filter</td>
+<td>This method removes certain rows from a feature list based on peak comparisons.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_peakcomparisonrowfilter/PeakComparisonRowFilterModule.java</td>
+</tr>
+<tr>
+<td>Peak filter</td>
+<td>This method removes certain peak entries based on given restrictions.</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_featurefilter/FeatureFilterModule.java</td>
+</tr>
+<tr>
+<td>Peak finder</td>
+<td>Fill gaps in aligned feature lists of LC-MS measurements.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/gapfill_peakfinder/PeakFinderModule.java</td>
+</tr>
+<tr>
+<td>Peak finder (multithreaded)</td>
+<td>This method fills the missing peaks (gaps) in the feature list by searching for a peak in the raw data.</td>
+<td>Feature detection</td>
+<td>Gap filling</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/gapfill_peakfinder/multithreaded/MultiThreadPeakFinderModule.java</td>
+</tr>
+<tr>
+<td>Precursor search in spectral libraries</td>
+<td>This method searches all peaklist rows against a local spectral libraries to identify possible precursor ions</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_precursordbsearch/PrecursorDBSearchModule.java</td>
+</tr>
+<tr>
+<td>Processing wizard</td>
+<td>Creates processing batches with a reduced set of parameters.</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/tools/batchwizard/BatchWizardModule.java</td>
+</tr>
+<tr>
+<td>Project metadata import</td>
+<td>This module imports metadata into the project from .tsv-format files.</td>
+<td>Project</td>
+<td>Project metadata</td>
+<td>Kirill Ponomarov; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/projectmetadata/ProjectMetadataImportModule.java</td>
+</tr>
+<tr>
+<td>Quality parameters</td>
+<td>Calculates quality parameters such as FWHM, asymmetry factor, tailing factor, S/N ratio.</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/qualityparameters/QualityParametersModule.java</td>
+</tr>
+<tr>
+<td>RANSAC aligner</td>
+<td>Feature list aligner based on the RANSAC algorithm.</td>
+<td>Feature detection</td>
+<td>Alignment</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/align_ransac/RansacAlignerModule.java</td>
+</tr>
+<tr>
+<td>Raw data export</td>
+<td>This module exports raw data files from your MZmine project into various formats</td>
+<td>Spectral data</td>
+<td>Raw data export</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_rawdata_mzml/MzMLExportModule.java</td>
+</tr>
+<tr>
+<td>Raw data export to netCDF</td>
+<td>This module exports raw data files from your MZmine project into various formats</td>
+<td>Spectral data</td>
+<td>Raw data export</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_rawdata_netcdf/NetCDFExportModule.java</td>
+</tr>
+<tr>
+<td>Raw data file rename</td>
+<td>Renames raw data files.</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/rawfilerename/RawDataFileRenameModule.java</td>
+</tr>
+<tr>
+<td>Raw data overview</td>
+<td>Raw data overview</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/rawdataoverview/RawDataOverviewModule.java</td>
+</tr>
+<tr>
+<td>Recursive IMS Builder</td>
+<td>Builds m/z traces for ion mobility spectrometry data</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_recursiveimsbuilder/RecursiveIMSBuilderModule.java</td>
+</tr>
+<tr>
+<td>Relations between ion networks</td>
+<td>This method searches for relations between ion networks (e.g., chemical modifications, heterodimers, covalently bound multimers</td>
+<td>Feature processing</td>
+<td>Ion identity networking</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ion_identity_networking/relations/IonNetRelationsModule.java</td>
+</tr>
+<tr>
+<td>Retention time calibration</td>
+<td>The retention time calibration attempts to reduce the deviation of retention times between feature lists, by searching for common features in these lists and using them as calibration standards.</td>
+<td>Feature processing</td>
+<td>Normalization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/norm_rtcalibration/RTCalibrationModule.java</td>
+</tr>
+<tr>
+<td>Same RT and m/z range gap filler</td>
+<td>This method fills the missing peaks (gaps) in the feature list by looking at the whole m/z and retention time range of the feature list row and adding all raw data points in the same range.</td>
+<td>Feature detection</td>
+<td>Gap filling</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/gapfill_samerange/SameRangeGapFillerModule.java</td>
+</tr>
+<tr>
+<td>Save project</td>
+<td>This module saves the current MZmine project.</td>
+<td>Project</td>
+<td>Project I/O</td>
+<td>Annexhc; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/projectsave/ProjectSaveModule.java</td>
+</tr>
+<tr>
+<td>Save project as</td>
+<td>This module saves the current MZmine project.</td>
+<td>Project</td>
+<td>Project I/O</td>
+<td>Annexhc; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/projectsave/ProjectSaveAsModule.java</td>
+</tr>
+<tr>
+<td>Savitzky Golay resolver</td>
+<td>Resolves chromatograms to features.</td>
+<td>Feature processing</td>
+<td>Feature resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_chromatogramdeconvolution/savitzkygolay/SavitzkyGolayResolverModule.java</td>
+</tr>
+<tr>
+<td>Scan by scan filtering</td>
+<td>This module performs filtering algorithms on each scan individually.</td>
+<td>Spectral data</td>
+<td>Raw data filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; knakul853</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_scanfilters/ScanFiltersModule.java</td>
+</tr>
+<tr>
+<td>Scan smoothing (LC/MS or MS level 1)</td>
+<td>This module averages intensity values within a time-scan frame.</td>
+<td>Spectral data</td>
+<td>Raw data filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_scansmoothing/ScanSmoothingModule.java</td>
+</tr>
+<tr>
+<td>Scatter plot</td>
+<td>Scatter plot.</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Olena Mokshyna; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/scatterplot/ScatterPlotVisualizerModule.java</td>
+</tr>
+<tr>
+<td>Set CCS calibration</td>
+<td>Sets a CCS calibration to a raw data file.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_ccscalibration/setcalibration/SetCCSCalibrationModule.java</td>
+</tr>
+<tr>
+<td>Single Spectrum library search</td>
+<td>Search single spectrum in a spectral library.</td>
+<td>Raw data</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/spectraidentification/spectraldatabase/SingleSpectrumLibrarySearchModule.java</td>
+</tr>
+<tr>
+<td>Smoothing</td>
+<td>Smooths intensity along the retention time and/or mobility dimension.</td>
+<td>Feature detection</td>
+<td>Resolving</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_smoothing/SmoothingModule.java</td>
+</tr>
+<tr>
+<td>Sort feature lists</td>
+<td>Sort selected feature lists alphabetically</td>
+<td>Feature detection</td>
+<td>Feature list methods</td>
+<td>Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/sortfeaturelists/SortFeatureListsModule.java</td>
+</tr>
+<tr>
+<td>Sort formulas</td>
+<td>This module sorts all formula lists of rows in a feature list</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_formula_sort/FormulaSortModule.java</td>
+</tr>
+<tr>
+<td>Sort raw data files</td>
+<td>Sort selected raw data files alphabetically</td>
+<td>Spectral data</td>
+<td>Raw data methods</td>
+<td>Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/tools/sortdatafiles/SortDataFilesModule.java</td>
+</tr>
+<tr>
+<td>Sort results of spectra library search</td>
+<td>This method sorts all results of spectral library search.</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_spectral_match_sort/SortSpectralMatchesModule.java</td>
+</tr>
+<tr>
+<td>Spectra stack visualizer</td>
+<td>Visualize multiple spectra.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/spectra_stack/SpectraStackVisualizerModule.java</td>
+</tr>
+<tr>
+<td>Spectra visualizer</td>
+<td>Spectra visualizer.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; SurajV; Tomas Pluskal; aiden; Robin Schmid; ?ukasz Fiszer</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/SpectraVisualizerModule.java</td>
+</tr>
+<tr>
+<td>Spectral library search</td>
+<td>This method searches all feature list rows (from all feature lists) against a local spectral libraries (needs to be loaded first).</td>
+<td>Feature processing</td>
+<td>Annotation</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/id_spectral_library_match/SpectralLibrarySearchModule.java</td>
+</tr>
+<tr>
+<td>Spectral mirror (USI enabled)</td>
+<td>Compare spectra</td>
+<td>Other</td>
+<td>Tools</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/spectra/simplespectra/mirrorspectra/MirrorScanModule.java</td>
+</tr>
+<tr>
+<td>Standard compound normalizer</td>
+<td>This module normalizes the feature heights and areas according to selected internal standards.</td>
+<td>Feature processing</td>
+<td>Normalization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/norm_standardcompound/StandardCompoundNormalizerModule.java</td>
+</tr>
+<tr>
+<td>Submit GNPS MASST search</td>
+<td>Submit an MS2 spectrum to GNPS MASST search, searching against public data.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Robin Schmid; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_gnps/masst/GnpsMasstSubmitModule.java</td>
+</tr>
+<tr>
+<td>TIC/XIC visualizer</td>
+<td>TIC/XIC visualizer.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/chromatogram/ChromatogramVisualizerModule.java</td>
+</tr>
+<tr>
+<td>TSF import module</td>
+<td>Imports Bruker .d directories with tsf data files.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_bruker_tsf/TSFImportModule.java</td>
+</tr>
+<tr>
+<td>Targeted feature detection</td>
+<td>Targeted feature detection</td>
+<td>Feature detection</td>
+<td>Chromatogram detection</td>
+<td>Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/featdet_targeted/TargetedFeatureDetectionModule.java</td>
+</tr>
+<tr>
+<td>Thermo RAW file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_thermo_raw/ThermoRawImportModule.java</td>
+</tr>
+<tr>
+<td>Van Krevelen Diagram</td>
+<td>Van Krevelen Diagram.</td>
+<td>Visualization</td>
+<td>Visualization feature list</td>
+<td>Annexhc; Olena Mokshyna; Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/visualization/vankrevelendiagram/VanKrevelenDiagramModule.java</td>
+</tr>
+<tr>
+<td>Venn export module</td>
+<td>Exports detected/undetected features in a feature list so they can be plotted as a venn diagramm.</td>
+<td>Feature IO</td>
+<td>Feature list export</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/export_features_venn/VennExportModule.java</td>
+</tr>
+<tr>
+<td>Waters RAW file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_waters_raw/WatersRawImportModule.java</td>
+</tr>
+<tr>
 <td>ZIP/gZIP file import</td>
 <td>This module imports raw data into the project.</td>
 <td>Spectral data</td>
 <td>Raw data import</td>
 <td>Steffen Heuckeroth; Tomas Pluskal</td>
 <td>src/main/java/io//mzmine/modules/io/import_rawdata_zip/ZipImportModule.java</td>
+</tr>
+<tr>
+<td>iMZML file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_imzml/ImzMLImportModule.java</td>
+</tr>
+<tr>
+<td>m/z mobility region extraction</td>
+<td>Extracts regions of m/z-mobility regions</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Olena Mokshyna; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/filter_mobilitymzregionextraction/MobilityMzRegionExtractionModule.java</td>
+</tr>
+<tr>
+<td>metaCorrelate</td>
+<td>This method correlates and groups feature list rows based on multiple criteria (feature shape, intensity across samples, ...)</td>
+<td>Feature processing</td>
+<td>Feature grouping</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/dataprocessing/group_metacorrelate/corrgrouping/CorrelateGroupingModule.java</td>
+</tr>
+<tr>
+<td>module</td>
+<td>describe</td>
+<td>Feature filtering</td>
+<td>Feature list filtering</td>
+<td>Robin Schmid; Roman Bushuiev; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/example/EmptyFeatureListModule.java</td>
+</tr>
+<tr>
+<td>mzData file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_mzdata/MzDataImportModule.java</td>
+</tr>
+<tr>
+<td>mzML file import via MSDK</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Kirill Ponomarov; Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_mzml/MSDKmzMLImportModule.java</td>
+</tr>
+<tr>
+<td>mzML file import via jmzml</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/deprecated_jmzml/MzMLImportModule.java</td>
+</tr>
+<tr>
+<td>mzXML file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>Robin Schmid; Steffen Heuckeroth; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_mzxml/MzXMLImportModule.java</td>
+</tr>
+<tr>
+<td>netCDF file import</td>
+<td>This module imports raw data into the project.</td>
+<td>Spectral data</td>
+<td>Raw data import</td>
+<td>David Maek; Steffen Heuckeroth; Tomas Pluskal</td>
+<td>src/main/java/io//mzmine/modules/io/import_rawdata_netcdf/NetCDFImportModule.java</td>
+</tr>
+<tr>
+<td>scan histogram</td>
+<td>This module plots all values of all selected scans into one histogram and offers a Gaussian fit.</td>
+<td>Visualization</td>
+<td>Visualization</td>
+<td>Olena Mokshyna; Tomas Pluskal; Robin Schmid</td>
+<td>src/main/java/io//mzmine/modules/visualization/scan_histogram/ScanHistogramModule.java</td>
 </tr>
 </tbody>
 </table>
@@ -4178,7 +3989,7 @@ more detailed insight.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 9, 2022 16:43:06</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 9, 2022 19:39:21</span>
       
     
   </small>
