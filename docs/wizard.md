@@ -13,11 +13,11 @@ The processing wizard reduces the configuration of complex standardized workflow
 
 ## Parameters section
 
-![Processing wizard](reference_media/mzmine_wizard.png)
+![Processing wizard](img/wizard.png)
 
 Produces this batch:
 
-![Processing wizard](reference_media/mzmine_wizard_batch.png)
+![Processing wizard](img/wizard_batch.png)
 
 
 #### MS1/MS2 noise levels
