@@ -9,6 +9,7 @@ nav:
   - Home page: index.md
   - Getting started: getting_started.md
   - Main window overview: main-window-overview.md
+  - Processing wizard: wizard.md
   - Data conversion: data_conversion.md
   - Integration to other tools: tool_integration.md
   - Citations: citations.md
