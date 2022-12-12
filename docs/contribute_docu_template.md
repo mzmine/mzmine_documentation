@@ -10,28 +10,15 @@ Please start this section with the module's location within the MZmine menu as f
 
 :material-menu-open: **Menu1 → Menu2 → Module** 
 
-Provide here a concise description of the module functioning principles and usage. If possible, briefly describe also the algorithm(s) employed by the module. If a detailed description of the algorithm functioning is needed, provide it in the [Algorithm](contribute_docu_template.md#algorithm) section). 
+Provide here a concise description of the module functioning principles and usage. If possible, briefly describe also the algorithm(s) employed by the module. If a detailed description of the algorithm functioning is needed, provide it in the [Algorithm](contribute_docu_template.md#algorithm) section). Please cite relevant references in this section using the following box:
 
-## _Warnings and admonitions_
-Warnings, tips, and side contents in general can be provided throughout the document. In order not to interrupt the document flow, we encourage the use of admonition boxes. A few examples are provided below, while a variety of other admonition boxes is avaiable [here](https://squidfunk.github.io/mkdocs-material/reference/admonitions/).
+!!! info inline
 
-<br>
-
-!!! danger inline
-
-    This module is currently under maintenance / deprecated / etc.
-
-<br>
-
-!!! warning inline
-
-    Since mass lists are taken as input by EIC building algorithms, the Mass detection module must be run first
-
-<br>      
+    **References** 
     
-!!! tip inline
-
-    A good starting point for 'Parameter #1' is between 0.1 and 0.5.
+    1. Reference #1
+    2. Reference #2
+    3. ....
 
 ---
 
@@ -56,14 +43,26 @@ A more detailed description of the algorithm(s) employed by the module can be pr
 
 ---
 
-## **References**
-Please cite relevant references in this section using the following box:
+## _Warnings and admonitions_
+In order not to interrupt the document flow, we encourage the use of admonition boxes to provide warnings, tips, and side contents in general. A few examples are provided below, while a variety of other options is avaiable [here](https://squidfunk.github.io/mkdocs-material/reference/admonitions/).
 
-!!! info inline
+<br>
 
-    1. Reference #1
-    2. Reference #2
-    3. ....
+!!! danger inline
+
+    This module is currently under maintenance / deprecated / etc.
+
+<br>
+
+!!! warning inline
+
+    Since mass lists are taken as input by EIC building algorithms, the Mass detection module must be run first
+
+<br>      
+    
+!!! tip inline
+
+    A good starting point for 'Parameter #1' is between 0.1 and 0.5.
 
 ---
 
