@@ -1,6 +1,6 @@
 # **Markdown template to create online documentation for a processing module**
 
-To facilitate a consistent contribution to the MZmine onlined documentation from new users, please refer to the present Markdown template. Changes in the structure are of course allowed, but will have to be justified in the pull request.
+To facilitate a consistent contribution to the MZmine online documentation from new users, please refer to the present Markdown template. Changes in the structure are of course allowed, but will have to be justified in the pull request.
 
 --- 
 <br><br>
@@ -10,7 +10,7 @@ Please start this section with the module's location within the MZmine menu as f
 
 :material-menu-open: **Menu1 → Menu2 → Module** 
 
-Provide here a concise description of the module functioning principles and usage. If possible, briefly describe also the algorithm(s) employed by the module. If a detailed description of the algorithm functioning is needed, provide it in the [Algorithm](contribute_docu_template.md#algorithm) section). Please cite relevant references in this section using the following box:
+Provide here a concise description of the module functioning principles and usage. If possible, briefly describe the algorithm(s) employed by the module. If a detailed description of the algorithm functioning is needed, provide it in the [Algorithm](contribute_docu_template.md#algorithm) section). Please cite relevant references in this section using the following box:
 
 !!! info inline
 
@@ -23,7 +23,7 @@ Provide here a concise description of the module functioning principles and usag
 ---
 
 ## **Parameters**
-Provide here a concise description of each processing parameters to be set. When possible, provide instructions on how to finely tune the value
+Provide here a concise description of each processing parameter to be set. Where possible, provide default values and/or recommended values to start the tuning from.
 
 Please start this section with a screenshot of the module's dialogue box and continue with the parameters' description following the scheme provided below:
 
