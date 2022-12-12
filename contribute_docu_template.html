@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#markdown-template-for-a-module" class="md-skip">
+        <a href="#markdown-template-to-create-online-documentation-for-a-processing-module" class="md-skip">
           Skip to content
         </a>
       
@@ -2358,61 +2358,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Documentation template
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="contribute_docu_template.html" class="md-nav__link md-nav__link--active">
         Documentation template
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sections" class="md-nav__link">
-    Sections
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#description-section" class="md-nav__link">
-    Description section
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters-section" class="md-nav__link">
-    Parameters section
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -2475,42 +2423,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sections" class="md-nav__link">
-    Sections
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#description-section" class="md-nav__link">
-    Description section
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters-section" class="md-nav__link">
-    Parameters section
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2529,115 +2441,63 @@
   </a>
 
 
-<h1 id="markdown-template-for-a-module"><strong>Markdown template for a module</strong><a class="headerlink" href="#markdown-template-for-a-module" title="Permanent link">&para;</a></h1>
-<p>To make the creation of documentation easier, a convenient Markdown structure is discussed below. You can just copy, paste, and modify the provided template.</p>
-<pre><code># **Module Name**
-
-## **Description**
-
-:material-menu-open: **Menu1 → Menu2 → Module**
-
-[WARNINGS]
-
-[MAIN TEXT]
-
-[TIPS]
-
-## **References**
-
-!!! quote " "
-
-1. Reference 1
-2. ...
-
-## **Parameters**
-
-
-#### **Parameter 1**
-
-[Description of parameter 1]
-
-#### **Parameter 2**
-_Optional parameter_
-...
-
-<span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>Olena Mokshyna</a></span>
-</code></pre>
-<h2 id="sections"><strong>Sections</strong><a class="headerlink" href="#sections" title="Permanent link">&para;</a></h2>
-<p>The documentation page for the module should follow the following structure:</p>
-<pre><code># **Module Name**
-
-## **Description**
-
-### **Algorithms**
-
-## **References**
-
-## **Parameters**
-</code></pre>
-<h2 id="description-section"><strong>Description section</strong><a class="headerlink" href="#description-section" title="Permanent link">&para;</a></h2>
-<p>In this section you can provide a brief and concise description of what module does, which algorithms it uses, and when it can be applied (usage cases).</p>
-<p>The section should start with the module location <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Menu1 → Menu2 → Module</strong> </p>
-<pre><code>:material-menu-open: **Menu1 → Menu2 → Module** [Please, add the location of your module here]
-</code></pre>
-<p>Then you can supply any warning that a user needs to know to successfully use the module. For that you can use MkDocs warning admonition box.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Here you can put your warning. For example, 'This module requires aligned feature list'.</p>
-</div>
-<p>The Markdown for the warning is:</p>
-<pre><code>!!! warning
-
-Here you can put your warning. For example, 'This module requires aligned feature list'.
-</code></pre>
-<p>If the modules are under maintenance, additional danger box can be added </p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>This module is under maintenance/ has known bugs / is outdated and under update / etc.</p>
-</div>
-<p>The Markdown for this box is the following:</p>
-<pre><code>!!! danger
-
-This module is under maintenance/ has known bugs / is outdated and under update / etc.
-</code></pre>
-<p>After the warnings, the main description text should follow. At the end of the main text, one can include tips to further facilitate module usage.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Here you can put the tip. For example, 'The good starting value for the Parameter 1 might be between 0.1 and 0.5.</p>
-</div>
-<p>The Markdown for the tip is:</p>
-<pre><code>!!! tip
-
-Here you can put the tip. For example, 'The good starting value for the Parameter 1 might be between 0.1 and 0.5.
-</code></pre>
-<h2 id="references"><strong>References</strong><a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<p>For the references custom admonition box is used:</p>
-<div class="admonition quote">
-<p class="admonition-title"> </p>
+<h1 id="markdown-template-to-create-online-documentation-for-a-processing-module"><strong>Markdown template to create online documentation for a processing module</strong><a class="headerlink" href="#markdown-template-to-create-online-documentation-for-a-processing-module" title="Permanent link">&para;</a></h1>
+<p>To facilitate a consistent contribution to the MZmine online documentation from new users, please refer to the present Markdown template. Changes in the structure are of course allowed, but will have to be justified in the pull request.</p>
+<hr />
+<p><br><br></p>
+<h1 id="module-name"><strong>Module Name</strong><a class="headerlink" href="#module-name" title="Permanent link">&para;</a></h1>
+<p>Please start this section with the module's location within the MZmine menu as follow:</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Menu1 → Menu2 → Module</strong> </p>
+<p>Provide here a concise description of the module functioning principles and usage. If possible, briefly describe the algorithm(s) employed by the module. If a detailed description of the algorithm functioning is needed, provide it in the <a href="contribute_docu_template.html#algorithm">Algorithm</a> section). Please cite relevant references in this section using the following box:</p>
+<div class="admonition info inline">
+<p class="admonition-title">Info</p>
+<p><strong>References</strong> </p>
 <ol>
-<li>Reference 1</li>
-<li>...</li>
+<li>Reference #1</li>
+<li>Reference #2</li>
+<li>....</li>
 </ol>
 </div>
-<p>The Markdown for this box is:</p>
-<pre><code>!!! quote " "
-
-1. Reference 1
-2. ...
-</code></pre>
-<p>If a more detailed description for the used algorithms is needed, you can add it under a separate subsection "Algorithms".</p>
-<h2 id="parameters-section"><strong>Parameters section</strong><a class="headerlink" href="#parameters-section" title="Permanent link">&para;</a></h2>
-<p>Start the section with a screenshot of the parameter dialogue, with reference values of parameters included.
-Follow with a list of parameters, their brief descriptions, and available values for each parameter.
-If a parameter is optional it can be indicated after the parameter name.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>Olena Mokshyna</a></span></p>
+<hr />
+<h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<p>Provide here a concise description of each processing parameter to be set. Where possible, provide default values and/or recommended values to start the tuning from.</p>
+<p>Please start this section with a screenshot of the module's dialogue box and continue with the parameters' description following the scheme provided below:</p>
+<h4 id="parameter-1"><strong>Parameter #1</strong><a class="headerlink" href="#parameter-1" title="Permanent link">&para;</a></h4>
+<p>Provide here a brief description for Parameter #1.</p>
+<h4 id="parameter-2"><strong>Parameter #2</strong><a class="headerlink" href="#parameter-2" title="Permanent link">&para;</a></h4>
+<p>Provide here a brief description for Parameter #2.</p>
+<h4 id="parameter-3-optional"><strong>Parameter #3 <em>(Optional)</em></strong><a class="headerlink" href="#parameter-3-optional" title="Permanent link">&para;</a></h4>
+<p>Provide here a brief description for Parameter #3. Optional parameters should be labelled as <em>(Optional)</em> following the parameter's name.</p>
+<hr />
+<h2 id="algorithm"><strong>Algorithm</strong><a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
+<p>A more detailed description of the algorithm(s) employed by the module can be provided in this section.</p>
+<hr />
+<h2 id="warnings-and-admonitions"><em>Warnings and admonitions</em><a class="headerlink" href="#warnings-and-admonitions" title="Permanent link">&para;</a></h2>
+<p>In order not to interrupt the document flow, we encourage the use of admonition boxes to provide warnings, tips, and side contents in general. A few examples are provided below, while a variety of other options is avaiable <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">here</a>.</p>
+<p><br></p>
+<div class="admonition danger inline">
+<p class="admonition-title">Danger</p>
+<p>This module is currently under maintenance / deprecated / etc.</p>
+</div>
+<p><br></p>
+<div class="admonition warning inline">
+<p class="admonition-title">Warning</p>
+<p>Since mass lists are taken as input by EIC building algorithms, the Mass detection module must be run first</p>
+</div>
+<p><br>      </p>
+<div class="admonition tip inline">
+<p class="admonition-title">Tip</p>
+<p>A good starting point for 'Parameter #1' is between 0.1 and 0.5.</p>
+</div>
+<hr />
+<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>Olena Mokshyna</a> (33.33%), <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a> (66.67%)</span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 21, 2022 11:52:23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 12, 2022 09:34:28</span>
       
     
   </small>
