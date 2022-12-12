@@ -7,7 +7,10 @@
 This method aligns detected peaks in different samples through a **match score**. This score is calculated based on the mass
 and retention time of each peak and ranges of tolerance specified in the parameter setup dialog.
 
-![](join_aligner.png)
+![Alignment example](align_scores.png)
+ **Fig.** The alignment columns in feature tables (MZmine 3.3.0). **a**, After alignment, new columns provide results on the alignment, including the alignment rate (aligned/total samples) and mean differences between all samples to the mean m/z, RT, and mobility. The weighted distance score reflects the alignment score, calculated for the final aligned feature. The summed extra features counts all additional features that were found within the m/z, RT, and mobility tolerances. b, Show the LC-MS EICs of 13 samples extracted with the alignment m/z tolerance around feature ID2. With a wide RT tolerance, 17 additional LC-MS features were found that indicate closely eluting isomers or other ions that might interfere with the alignment.
+
+![Feature alignment](join_aligner.png)
 
 ### **Algorithm**
 
