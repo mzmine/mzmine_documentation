@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#command-line-arguments" class="md-skip">
+        <a href="#command-line-interface-cli-for-headless-batch-mode" class="md-skip">
           Skip to content
         </a>
       
@@ -2237,6 +2237,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    macOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#argument-table" class="md-nav__link">
     Argument table
   </a>
@@ -2459,6 +2473,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    macOS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#argument-table" class="md-nav__link">
     Argument table
   </a>
@@ -2485,9 +2513,9 @@
   </a>
 
 
-<h1 id="command-line-arguments">Command-line arguments<a class="headerlink" href="#command-line-arguments" title="Permanent link">&para;</a></h1>
+<h1 id="command-line-interface-cli-for-headless-batch-mode">Command-line interface (CLI) for headless batch mode<a class="headerlink" href="#command-line-interface-cli-for-headless-batch-mode" title="Permanent link">&para;</a></h1>
 <p>Command-line arguments offer a variety of options that generally override the corresponding parameters in the preferences.</p>
-<p><strong>Windows</strong></p>
+<h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
 <p>An easy way to start MZmine with arguments is to create a shortcut to the MZmine.exe, right-click, and define the target with additional arguments. This example runs MZMine in batch mode (headless), imports the specified batch file, overrides the memory management to <strong>none</strong> (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the <em>memory</em> or <em>temp</em> arguments, the values stored in the current <em>preferences</em> file will be used, or the default values if no <em>preferences</em> file was found.  </p>
 <p><strong>Start MZmine batch with memory mapping (</strong>DEFAULT<strong>)</strong>
 <div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory none -temp &quot;D:\tmpmzmine&quot;
@@ -2495,7 +2523,11 @@
 <p><strong>Start MZmine batch on machines with enough memory (RAM) with -memory all</strong>
 <div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory all -temp &quot;D:\tmpmzmine&quot;
 </code></pre></div></p>
-<h3 id="argument-table">Argument table<a class="headerlink" href="#argument-table" title="Permanent link">&para;</a></h3>
+<h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
+<p>If the app was installed to the <em>Applications</em> folder, run this command in the terminal to run a batch file:
+<div class="highlight"><pre><span></span><code>/Applications/MZmine.app/Contents/MacOS/MZmine -batch /path/to/batch_file.xml
+</code></pre></div></p>
+<h2 id="argument-table">Argument table<a class="headerlink" href="#argument-table" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -2522,14 +2554,14 @@
 </tr>
 </tbody>
 </table>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>Olena Mokshyna</a> (7.41%), <a href='mailto:steffen.heuckeroth@gmx.de'>SteffenHeu</a> (3.7%), <a href='mailto:robinschmid@uni-muenster.de'>Robin Schmid</a> (88.89%)</span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>Olena Mokshyna</a> (3.03%), <a href='mailto:robinschmid@uni-muenster.de'>Robin Schmid</a> (96.97%)</span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 21:13:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 12, 2022 16:26:41</span>
       
     
   </small>
