@@ -1,7 +1,7 @@
-# Command-line arguments
+# Command-line interface (CLI) for headless batch mode
 Command-line arguments offer a variety of options that generally override the corresponding parameters in the preferences.
 
-**Windows**
+## Windows
 
 An easy way to start MZmine with arguments is to create a shortcut to the MZmine.exe, right-click, and define the target with additional arguments. This example runs MZMine in batch mode (headless), imports the specified batch file, overrides the memory management to **none** (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the _memory_ or _temp_ arguments, the values stored in the current _preferences_ file will be used, or the default values if no _preferences_ file was found.  
 
@@ -16,7 +16,13 @@ An easy way to start MZmine with arguments is to create a shortcut to the MZmine
 "C:\Program Files\MZmine\MZmine.exe" -batch "D:\batch\my_batch_file.xml" -memory all -temp "D:\tmpmzmine"
 ```
 
-### Argument table
+## macOS
+If the app was installed to the _Applications_ folder, run this command in the terminal to run a batch file:
+```
+/Applications/MZmine.app/Contents/MacOS/MZmine -batch /path/to/batch_file.xml
+```
+
+## Argument table
 
 | Argument | Options (**default**) | Description |
 | --- | --- | --- |
