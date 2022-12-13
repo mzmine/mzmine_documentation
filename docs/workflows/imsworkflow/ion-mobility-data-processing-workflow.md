@@ -75,7 +75,7 @@ Bruker import).
 The basic principle of the workflow is illustrated below:
 ![IMS_adap_workflow_01.png](IMS_adap_workflow_01.png)
 **a**, IMS heatmaps are accumulated to frame spectra (**b**). From the accumulated frame
-spectra, [EICs](../../terminology/general-terminology.md#Extracted-ion-chromatogram) are built (**c**).
+spectra, [EICs](../../terminology/general-terminology.md#extracted-ion-chromatogram) are built (**c**).
 These EICs are resolved to individual features
 by a [resolver](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) (**d**).
 The resolved features are now defined by RT and m/z windows, which can be expanded in mobility
