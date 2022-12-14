@@ -19,9 +19,7 @@ can be set to specific MS levels (here MS1- for multistage fragmentation)
 "C:\Users\**USERNAME**\AppData\Local\Apps\ProteoWizard 3.0.22166.28b1b7b 64-bit\msconvert.exe" *.raw --filter "peakPicking true 1-" --zlib --numpressPic --numpressLinear -v -o mzml
 pause 1
 ```
-More details can be found in the proteowizard documentation. 
-
-https://proteowizard.sourceforge.io/tools/msconvert.html
+More details can be found in the [ProteoWizard documentation](https://proteowizard.sourceforge.io/tools/msconvert.html).
 
 ## Bruker: Recalibrated files to the data conversion guide
 
