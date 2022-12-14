@@ -74,7 +74,7 @@ Allows user to export only those rows that have associated MS/MS data or are ann
 
 :material-menu-open: **Feature list methods → Export feature list → Venn diagram export**
 
-Exports a feature list to a csv that can be plotted as a venn diagram by other software such as [VennDis](https://pubmed.ncbi.nlm.nih.gov/25545689/) or [VENNY](https://bioinfogp.cnb.csic.es/tools/venny/).
+Exports a feature list to a csv that can be plotted as a venn diagram by other software such as [VennDis](https://pubmed.ncbi.nlm.nih.gov/25545689/).
 
 ## **Parameters**
 
