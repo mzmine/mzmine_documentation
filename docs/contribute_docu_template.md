@@ -44,7 +44,7 @@ Provide here a concise description of the module functioning principles and usag
 
 
 ## Parameters
-![Example image description](../img/contribute/example_dialog.png)
+![Example image description](img/contribute/example_dialog.png)
 
 Screenshot of the module dialog should contain default values. If multiple sub dialogs are available from parameters, either create one or multiple dialog images.
 
