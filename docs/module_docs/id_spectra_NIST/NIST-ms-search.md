@@ -12,9 +12,14 @@ This module allows searching spectra against spectral libraries using the **NIST
 
 The MS level may be specified to limit a search to MS/MS fragment spectra, clustered spectra produced from any Spectral Deconvolution module, or MS1 precursors ions. The spectra will be searched using the default library search parameters in the NIST MS Search program. 
 
-To adjust these parameters: open the program, adjust the library search parameters, and save the configuration to a ***.ini** file. 
+To adjust these parameters: open the NIST MS Search software and adjust the library search parameters: **Options or Icon → Library Search Options → Search: enable automation → Libraries: choose the preferred libraries**.
+More information about the libraries and their abbreviations: https://www.nist.gov/srd/nist-standard-reference-database-1a
+
+Save the configuration to a ***.ini** file. 
+
 
 :material-lightbulb: Automation must be enabled in the library search options to enable automatic searching. Be sure all appropriate libraries are included before starting a search.
+
 
 Repeated MS/MS spectra may be merged between multiple data files using the Merge MS/MS (experimental) module. The input Mass list filters the fragment ions by intensity, and repeatable signals are assessed via cosine dot product.
 
