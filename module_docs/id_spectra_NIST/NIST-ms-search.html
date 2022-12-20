@@ -2632,7 +2632,9 @@
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> highlight the row, right-click on the selection and choose <strong> Search → NIST MS Search</strong> from the pop-up menu.</p>
 <p>This module allows searching spectra against spectral libraries using the <strong>NIST MS Search program</strong>, which accepts spectra as input to its searches. </p>
 <p>The MS level may be specified to limit a search to MS/MS fragment spectra, clustered spectra produced from any Spectral Deconvolution module, or MS1 precursors ions. The spectra will be searched using the default library search parameters in the NIST MS Search program. </p>
-<p>To adjust these parameters: open the program, adjust the library search parameters, and save the configuration to a <strong>*.ini</strong> file. </p>
+<p>To adjust these parameters: open the NIST MS Search software and adjust the library search parameters: <strong>Options or Icon → Library Search Options → Search: enable automation → Libraries: choose the preferred libraries</strong>.
+More information about the libraries and their abbreviations: https://www.nist.gov/srd/nist-standard-reference-database-1a</p>
+<p>Save the configuration to a <strong>*.ini</strong> file. </p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> Automation must be enabled in the library search options to enable automatic searching. Be sure all appropriate libraries are included before starting a search.</p>
 <p>Repeated MS/MS spectra may be merged between multiple data files using the Merge MS/MS (experimental) module. The input Mass list filters the fragment ions by intensity, and repeatable signals are assessed via cosine dot product.</p>
 <h3 id="requirements"><strong>Requirements</strong><a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
@@ -2655,14 +2657,14 @@
 <p>Available options are Sum or Maximum.</p>
 <h4 id="spectrum-import"><strong>Spectrum Import</strong><a class="headerlink" href="#spectrum-import" title="Permanent link">&para;</a></h4>
 <p>Options for import, can be by either <strong>Overwrite</strong> (overwriting previous spectra) or <strong>Append</strong> (appending new ones).</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>Olena Mokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>Olena Mokshyna</a> (90.91%), <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a> (9.09%)</span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 21:13:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 16, 2022 14:14:09</span>
       
     
   </small>
