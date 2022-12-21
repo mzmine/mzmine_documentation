@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#preferences" class="md-skip">
+        <a href="#tuning-modules" class="md-skip">
           Skip to content
         </a>
       
@@ -2218,6 +2218,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tuning-modules" class="md-nav__link">
+    Tuning modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Tuning modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-data-import" class="md-nav__link">
+    Advanced data import
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-orgininal-feature-lists" class="md-nav__link">
+    Handling orgininal feature lists
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#preferences" class="md-nav__link">
     Preferences
   </a>
@@ -2487,6 +2514,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tuning-modules" class="md-nav__link">
+    Tuning modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Tuning modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-data-import" class="md-nav__link">
+    Advanced data import
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-orgininal-feature-lists" class="md-nav__link">
+    Handling orgininal feature lists
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#preferences" class="md-nav__link">
     Preferences
   </a>
@@ -2550,6 +2604,20 @@
   <h1>Performance options</h1>
 
 <p>This section contains information on how to tune MZmine 3 for different systems.</p>
+<h2 id="tuning-modules">Tuning modules<a class="headerlink" href="#tuning-modules" title="Permanent link">&para;</a></h2>
+<h3 id="advanced-data-import">Advanced data import<a class="headerlink" href="#advanced-data-import" title="Permanent link">&para;</a></h3>
+<p>The advanced data import provides the option to apply mass detection during import and only 
+loading those filtered mass spectra. This is a great way to reduce the need for memory 
+mapping of raw spectra that are not used in most workflows (most use the masslists detected 
+by Mass detection step as a filtered centroid version of spectra). </p>
+<p>This option is great for large datasets and for profile mode data. </p>
+<p><img alt="Advanced import" src="img/advanced_import.png" /></p>
+<h3 id="handling-orgininal-feature-lists">Handling orgininal feature lists<a class="headerlink" href="#handling-orgininal-feature-lists" title="Permanent link">&para;</a></h3>
+<p>Most processing steps in MZmine create new feature lists and have options to handle the orgininal lists. 
+- KEEP: Use during optimization of the workflow. All feature lists are kept for comparison purposes and to backtrack issues.
+- REMOVE: Remove the original feature lists. Better for performance and memory constraints on large datasets.
+- PROCESS IN PLACE: Only available for some modules like the duplicate filter or the rows filter. Even better performance then REMOVE. </p>
+<p><img alt="Handle original" src="img/handle_original.png" /></p>
 <h2 id="preferences">Preferences<a class="headerlink" href="#preferences" title="Permanent link">&para;</a></h2>
 <p>The preferences can be changed in MZmine's graphical user interface by accessing <em>File/Set
 preferences</em> from the menu. The choices will be stored in a (hidden) <em>.mzmine3.conf</em> file in the
@@ -2586,14 +2654,14 @@ on <strong><a href="https://github.com/mzmine/mzmine3/issues">GitHub</a></strong
 <div class="highlight"><pre><span></span><code>java-options=-XX:InitialRAMPercentage=10
 java-options=-XX:MaxRAMPercentage=80
 </code></pre></div></p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>Olena Mokshyna</a> (3.77%), <a href='mailto:steffen.heuckeroth@gmx.de'>SteffenHeu</a> (50.94%), <a href='mailto:robinschmid@uni-muenster.de'>Robin Schmid</a> (26.42%), <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a> (18.87%)</span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>Olena Mokshyna</a> (2.7%), <a href='mailto:steffen.heuckeroth@gmx.de'>SteffenHeu</a> (36.49%), <a href='mailto:robinschmid@uni-muenster.de'>Robin Schmid</a> (18.92%), <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a> (41.89%)</span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 21:13:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 21, 2022 12:55:29</span>
       
     
   </small>
