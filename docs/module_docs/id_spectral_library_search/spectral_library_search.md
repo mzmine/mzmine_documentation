@@ -23,11 +23,17 @@ Depending on the **MS level** (MS1 or MS2), all corresponding query scans (e.g.,
 
     **Raw data methods → Raw data import → Spectral library import** or from **Feature list methods → Annotation → Search spectra → Import spectral libraries.**
 
+### Downloads for open spectral libraries
+
+- MassBank of North America: [download](https://mona.fiehnlab.ucdavis.edu/downloads)
+- MassBankEU: [download](https://github.com/MassBank/MassBank-data/releases/latest)
+- GNPS (ALL_GNPS_NO_PROPOGATED): [download](https://gnps-external.ucsd.edu/gnpslibrary)
+
 ### **Supported library formats**
 
-- *.json: MassBank of North America (MoNA) ([download](https://mona.fiehnlab.ucdavis.edu/downloads))
+- *.json: MassBank of North America (MoNA)
 - *.json: The Global Natural Product Social Molecular Networking (GNPS) (format from the spectral DB submission module)
-- *.mgf: GNPS ([download](https://gnps-external.ucsd.edu/gnpslibrary))
+- *.mgf: GNPS
 - *.msp: MoNA
 - *.msp: National Institute of Standards and Technology (NIST)
 - *.jdx: JCAMP-DX
