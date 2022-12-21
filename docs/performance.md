@@ -1,5 +1,26 @@
 This section contains information on how to tune MZmine 3 for different systems.
 
+## Tuning modules
+
+### Advanced data import
+The advanced data import provides the option to apply mass detection during import and only 
+loading those filtered mass spectra. This is a great way to reduce the need for memory 
+mapping of raw spectra that are not used in most workflows (most use the masslists detected 
+by Mass detection step as a filtered centroid version of spectra). 
+
+This option is great for large datasets and for profile mode data. 
+
+![Advanced import](img/advanced_import.png)
+
+### Handling orgininal feature lists
+Most processing steps in MZmine create new feature lists and have options to handle the orgininal lists. 
+- KEEP: Use during optimization of the workflow. All feature lists are kept for comparison purposes and to backtrack issues.
+- REMOVE: Remove the original feature lists. Better for performance and memory constraints on large datasets.
+- PROCESS IN PLACE: Only available for some modules like the duplicate filter or the rows filter. Even better performance then REMOVE. 
+
+![Handle original](img/handle_original.png)
+
+
 ## Preferences
 
 The preferences can be changed in MZmine's graphical user interface by accessing _File/Set
