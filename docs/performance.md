@@ -18,7 +18,7 @@ Most processing steps in MZmine create new feature lists and have options to han
 - REMOVE: Remove the original feature lists. Better for performance and memory constraints on large datasets.
 - PROCESS IN PLACE: Only available for some modules like the duplicate filter or the rows filter. Even better performance then REMOVE. 
 
-![Handle original](img/handle_original.png)
+![Handle original](img/handle_original.png){: style="width:400px"}
 
 
 ## Preferences
