@@ -30,13 +30,12 @@ REMOVE ALL TEXT ABOVE THIS LINE TO START YOUR OWN MODULE. CHANGE THE RECOMMENDED
 
 Provide here a concise description of the module functioning principles and usage. If possible, briefly describe the algorithm(s) employed by the module. If a detailed description of the algorithm functioning is needed, provide it in the [Algorithm](contribute_docu_template.md#algorithm) section). Please cite relevant references in this section using the following box:
 
+# Recommended citations
 !!! info
-
-    **Recommended citations** 
-    When using MZmine 3 for your work, please consider citing:
+    When using MZmine 3 for your work, please consider citing:<br>
     Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, In Review (2023)
 
-    When using this modules, please consider citing the corresponding publication(s):
+    When using this modules, please consider citing the corresponding publication(s):<br>
     Schmid, R., Petras, D., Nothias, LF. et al. Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment. Nat Commun 12, 3832 (2021). https://doi.org/10.1038/s41467-021-23953-9
 
 ---
