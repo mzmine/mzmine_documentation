@@ -4,41 +4,40 @@ To facilitate a consistent contribution to the MZmine online documentation from 
 
 In order not to interrupt the document flow, we encourage the use of admonition boxes insight any point of the document to provide warnings, tips, and side contents in general. A few examples are provided below, while a variety of other options is avaiable [here](https://squidfunk.github.io/mkdocs-material/reference/admonitions/).
 
-<br>
 
-!!! danger inline
+!!! danger
 
     This module is currently under maintenance / deprecated / etc.
 
-<br>
 
-!!! warning inline
+!!! warning
 
     Since mass lists are taken as input by EIC building algorithms, the Mass detection module must be run first
-
-<br>      
+     
     
-!!! tip inline
+!!! tip
 
     A good starting point for 'Parameter #1' is between 0.1 and 0.5.
 
 --- 
-<br><br>
+
+REMOVE ALL TEXT ABOVE THIS LINE TO START YOUR OWN MODULE. CHANGE THE RECOMMENDED CITATIONS.
+
 
 # Module name
-Point to the menu path to start the module:
 
 :material-menu-open: **Menu1 → Menu2 → Module** 
 
 Provide here a concise description of the module functioning principles and usage. If possible, briefly describe the algorithm(s) employed by the module. If a detailed description of the algorithm functioning is needed, provide it in the [Algorithm](contribute_docu_template.md#algorithm) section). Please cite relevant references in this section using the following box:
 
-!!! info inline
+!!! info
 
-    **References** 
-    When using this module, please consider citing the following:
+    **Recommended citations** 
+    When using MZmine 3 for your work, please consider citing:
+    Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, In Review (2023)
+
+    When using this modules, please consider citing the corresponding publication(s):
     Schmid, R., Petras, D., Nothias, LF. et al. Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment. Nat Commun 12, 3832 (2021). https://doi.org/10.1038/s41467-021-23953-9
-    2. Reference #2
-    3. ....
 
 ---
 
