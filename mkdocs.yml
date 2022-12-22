@@ -158,7 +158,7 @@ theme:
 plugins:
   - search
   - git-authors:
-      show_contribution: true
+      show_contribution: false
   - git-revision-date-localized:
       type: datetime
   - with-pdf:
