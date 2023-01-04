@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="699.999px" height="550px" viewBox="0 0 699.999 550" enable-background="new 0 0 699.999 550" xml:space="preserve">
+<g id="Layer_2" display="none">
+</g>
+<g id="Layer_1">
+	<text transform="matrix(1 0 0 1 34.3486 116.3535)" font-family="'ArialMT'" font-size="76">qTOF</text>
+	<g>
+		<g>
+			<path fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M51.571,349.319c168.016,0,221.02,0,221.02,0
+				c0,0,66.335-275.211,181.02-275.211c114.684,0,148.019,248.941,148.019,275.211"/>
+			<g>
+				<polygon points="591.656,346.401 601.629,363.672 611.602,346.401 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<defs>
+			<path id="SVGID_1_" d="M651.47,34.333H246.137c-6.628,0-12,5.373-12,12V125c0,6.627,5.372,12,12,12h76.498
+				c30.089-41.785,72.296-73.892,130.976-73.892S551.569,95.215,577.849,137h73.621c6.627,0,12-5.373,12-12V46.333
+				C663.47,39.706,658.097,34.333,651.47,34.333z"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		
+			<line clip-path="url(#SVGID_2_)" fill="none" stroke="#6D6E71" stroke-width="4" stroke-miterlimit="10" x1="255.465" y1="117" x2="644.132" y2="117"/>
+		
+			<line clip-path="url(#SVGID_2_)" fill="none" stroke="#58595B" stroke-width="4" stroke-miterlimit="10" x1="255.465" y1="96" x2="644.132" y2="96"/>
+		
+			<line clip-path="url(#SVGID_2_)" fill="none" stroke="#414042" stroke-width="4" stroke-miterlimit="10" x1="255.465" y1="75" x2="644.132" y2="75"/>
+		
+			<line clip-path="url(#SVGID_2_)" fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="255.465" y1="54" x2="644.132" y2="54"/>
+	</g>
+	<circle cx="289.868" cy="283.15" r="36.055"/>
+	<circle cx="341.299" cy="172.352" r="25.715"/>
+	<circle cx="456.632" cy="77" r="17.152"/>
+	<circle cx="558.799" cy="172.352" r="14.324"/>
+	<circle cx="591.93" cy="288.445" r="12.459"/>
+	<line fill="none" stroke="#231F20" stroke-width="9" stroke-miterlimit="10" x1="61.571" y1="323.116" x2="164.059" y2="323.116"/>
+	<line fill="none" stroke="#231F20" stroke-width="9" stroke-miterlimit="10" x1="51.571" y1="312.116" x2="154.059" y2="312.116"/>
+	<line fill="none" stroke="#231F20" stroke-width="9" stroke-miterlimit="10" x1="61.571" y1="378.115" x2="164.059" y2="378.115"/>
+	<line fill="none" stroke="#231F20" stroke-width="9" stroke-miterlimit="10" x1="51.571" y1="367.115" x2="154.059" y2="367.115"/>
+</g>
+</svg>
