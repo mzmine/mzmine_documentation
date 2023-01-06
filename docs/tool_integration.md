@@ -23,7 +23,7 @@ Links to the detailed documentation and specifications are provided in the table
 | [*Inventa*](https://github.com/luigiquiros/inventa)                                                                               | [Doc](https://luigiquiros.github.io/inventa/)                                                                                                                          | Export/submit GNPS-FBMN / Export to Sirius                                                                                                                |  .mgf<br>_quant.csv<br>_edges.csv | - Contains one representative MS2 spectrum per feature<br>- The feature list as an intensity (area/height) matrix<br>- The additional IIN edges between features |
 | [MEMO](https://github.com/mandelbrot-project/memo) | [Doc](https://memo-docs.readthedocs.io/en/latest/index.html) | Export/submit GNPS-FBMN | .mgf |- Contains one representative MS2 spectrum per feature |
 | [SLAW](https://github.com/zamboni-lab/SLAW) | [Doc](https://github.com/zamboni-lab/SLAW) | Export/submit GNPS-FBMN | .mgf<br>_quant.csv<br>_edges.csv | - Contains one representative MS2 spectrum per feature<br>- The feature list as an intensity (area/height) matrix<br>- The additional IIN edges between features |
-
+| [FERMO](https://github.com/mmzdouc/FERMO/) | [Doc](https://github.com/mmzdouc/FERMO/wiki/) | [Export/submit GNPS-FBMN](./module_docs/io/data-exchange-with-other-software.md#gnps-fbmniimn-export) | .mgf<br>_quant.csv | - Contains one representative MS2 spectrum per feature<br>- The feature list as an intensity (area/height) matrix |  
 
 ## Page Contributors
 
