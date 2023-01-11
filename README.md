@@ -1,3 +1,5 @@
+[![Auto Deploy](https://github.com/mzmine/mzmine_documentation/actions/workflows/autodeploy.yml/badge.svg)](https://github.com/mzmine/mzmine_documentation/actions/workflows/autodeploy.yml)  [![Links Check](https://github.com/mzmine/mzmine_documentation/actions/workflows/link_check.yml/badge.svg)](https://github.com/mzmine/mzmine_documentation/actions/workflows/link_check.yml)  [![CI](https://github.com/mzmine/mzmine_documentation/actions/workflows/main.yml/badge.svg)](https://github.com/mzmine/mzmine_documentation/actions/workflows/main.yml)
+
 # How to contribute
 
 ## Contribute to the MZmine documentation
