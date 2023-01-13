@@ -1,5 +1,7 @@
 # Markdown template to create online documentation for a processing module
 
+**Download** immediately usable template from [here](https://raw.githubusercontent.com/mzmine/mzmine_documentation/master/docs/contribute_docu_template.md)
+
 To facilitate a consistent contribution to the MZmine online documentation from new users, please refer to the present Markdown template. Changes in the structure are of course allowed, but will have to be justified in the pull request. Remove this top part from the new page and start at **Module name**.
 
 In order not to interrupt the document flow, we encourage the use of admonition boxes insight any point of the document to provide warnings, tips, and side contents in general. A few examples are provided below, while a variety of other options is avaiable [here](https://squidfunk.github.io/mkdocs-material/reference/admonitions/).
@@ -30,7 +32,7 @@ REMOVE ALL TEXT ABOVE THIS LINE TO START YOUR OWN MODULE. CHANGE THE RECOMMENDED
 
 Provide here a concise description of the module functioning principles and usage. If possible, briefly describe the algorithm(s) employed by the module. If a detailed description of the algorithm functioning is needed, provide it in the [Algorithm](contribute_docu_template.md#algorithm) section). Please cite relevant references in this section using the following box:
 
-# Recommended citations
+## Recommended citations
 !!! info
     When using MZmine 3 for your work, please consider citing:<br>
     Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, In Review (2023)
