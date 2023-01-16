@@ -20,7 +20,7 @@ Groups features based on various properties:
 
 
 ## Parameters
-![Example image description](dialog.png)
+![metaCorr dialog](dialog.png)
 
 
 #### RT tolerance
