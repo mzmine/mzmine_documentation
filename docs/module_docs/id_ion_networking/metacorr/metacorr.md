@@ -1,6 +1,6 @@
 # metaCorrelate feature grouping
 
-:material-menu-open: **Feature list methods → Feature grouping → Feature grouping (metaCorrelate)** 
+:material-menu-open: **Feature list methods → Feature grouping → Correlation grouping (metaCorrelate)** 
 
 This module groups features based on various properties:
 - Retention time
