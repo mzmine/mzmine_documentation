@@ -47,8 +47,8 @@ For calculating the cosine similarity, different weighting strategies for  m/z a
 Several weighting schemes are available:
 
 - None $m/z^0*I^1$ (weighting only by intensities)
-- SQRT $m/z^0*I^1$ (weighting only by intensities)
-- MassBank $m/z^2*\sqrt{I}$
+- SQRT $m/z^0*I^{0.5}$ (weighting only by intensities)
+- MassBank $m/z^2*I^{0.5}$
 - NIST11 (LC) $m/z^{1.3}*I^{0.53}$
 - NIST (GC) $m/z^3*I^{0.6}$
 
