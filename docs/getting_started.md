@@ -32,7 +32,8 @@ Applications folder.
 sudo xattr -cr ../MZmine.app
 
 # if this fails try
-sudo xattr -cr MZmine.app
+# the app will appear in the security preferences and you will be able to choose the "Open anyway" option
+sudo xattr -d com.apple.quarantine /Applications/MZmine.app
 ```
 
 ![](img/install_mac1.png){: style="height:150px"} ![](img/install_mac2.png){: style="width:150px"}
