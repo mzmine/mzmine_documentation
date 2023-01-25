@@ -43,8 +43,8 @@ For Bruker recalibrated data, it is recommended to perform **export analysis to 
 
 # Data sharing (FAIR)
 Nowadays, modern scientific knowledge requires the comprehensive description and accessibility of experimental and
-computational approaches used in a study. Therefore, the results should be Findable, Accessible, Interoperable,
-and Reusable (FAIR). This is critical in support of both the initial reviewing of a research article, and to ensure
+computational approaches used in a study. Therefore, the results should be **Findable, Accessible, Interoperable,
+and Reusable (FAIR)**. This is critical in support of both the initial reviewing of a research article, and to ensure
 its reproducibility and impact.
 When publishing, the following information should be added in the method/data availability section:
 
@@ -84,8 +84,9 @@ Data files should be uploaded to a public mass spectral data repository. Popular
 [MetaboLights](https://www.ebi.ac.uk/metabolights/), and
 [MetabolomicsWorkbench](https://www.metabolomicsworkbench.org/). All detailed information about the submission requirements
 and needed information can be found on each webpage. If possible and used for data processing, upload both the original
-raw and the converted (centroided) data files. Additionally, a metadata file should be added, containing information
-about the input files and their experimental information.
+raw and the converted (centroided) data files. The converted (open format) file enables the easy integration in other tools,
+while the original raw data might contain metadata and profile data that remains uncovered by the converted format. Additionally, a
+metadata file should be added, containing information about the input files and their experimental information.
 
 
 ## Page Contributors
