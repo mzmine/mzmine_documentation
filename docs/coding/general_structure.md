@@ -7,7 +7,7 @@ One of the main design goals is to keep a strict separation between the applicat
 
 [//]: # (TODO Update scheme)
 
-![Architecture](architecture.png)
+![Architecture](mzmine3-architecture-01.png)
 
 [//]: # (TODO Describe application core)
 [//]: # (Describe data processing modules)
