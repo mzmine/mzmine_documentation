@@ -2595,7 +2595,8 @@ Applications folder.</p>
 <div class="highlight"><pre><span></span><code>sudo xattr -cr ../MZmine.app
 
 # if this fails try
-sudo xattr -cr MZmine.app
+# the app will appear in the security preferences and you will be able to choose the &quot;Open anyway&quot; option
+sudo xattr -d com.apple.quarantine /Applications/MZmine.app
 </code></pre></div>
 <p><img alt="" src="img/install_mac1.png" style="height:150px" /> <img alt="" src="img/install_mac2.png" style="width:150px" /></p>
 <p>The Terminal does not output any log or message.
@@ -2626,7 +2627,7 @@ or <a href="workflows/imsworkflow/ion-mobility-data-processing-workflow.html">LC
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 21:13:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 24, 2023 10:50:09</span>
       
     
   </small>
