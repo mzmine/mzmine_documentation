@@ -2562,12 +2562,21 @@
 <h1 id="data-import"><strong>Data import</strong><a class="headerlink" href="#data-import" title="Permanent link">&para;</a></h1>
 <h2 id="lc-ms-data"><strong>LC-MS data</strong><a class="headerlink" href="#lc-ms-data" title="Permanent link">&para;</a></h2>
 <h3 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
-<p>Raw data can be imported via <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Raw data methods → Raw data import</strong>. </p>
-<p>Note that multiple data files/folders can be dropped into the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Raw data methods → Raw data import → MS data (advanced)</strong> dialog. </p>
-<p>If individual modules are used, folder based formats can only imported as one folder at a time. </p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> When using the <strong>MS data (advanced)</strong> dialog, inexperienced users should deactivate the direct mass detection steps, since they alter the raw data on the import. Mass detection is then performed, when the scans are loaded and only peaks above the noise level are imported.</p>
+<p>Raw data can be imported via <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Raw data methods → Raw data import</strong>. Select the data format and browse
+the files to import.</p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391465-c61eece6-0720-459f-8b2b-511021d7a058.png" /></p>
+<p>With another option, multiple data files/folders can be selected with the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Raw data methods → Raw data import → MS data (advanced)</strong> dialog. 
+In the dialog box, click <strong>From folder</strong> or choose the preferred data format (All<em>.) and browse the desired directory. All data files stored therein will be imported.
+The enabled option </em><em>in sub folders</em>* searches all files in the whole subdirectory tree.</p>
+<p>If individual modules are used, folder based formats can only be imported as one folder at a time. </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> When processing very large datasets, e.g., hundreds to thousands of data files, the mass detection
+can be run during the import. All signals below the specified noise level are not imported (altering the raw data on the import) thus saving memory and processing time.
+Therefore, use the <strong>Raw data methods → Raw data import → MS data (advanced)</strong> dialog, and tick the <strong>Advanced import</strong> checkbox
+and set the mass detection parameters as described in the Mass detection section. The noise level needs to be known
+in advance.</p>
+<p><img alt="ms_data_advanced" src="ms_data_advanced_import.png" /></p>
 <p>Alternatively, you can simply drag &amp; drop the raw data into the raw data list of the main window.</p>
-<p><img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391336-5722d04c-91c0-4c77-88db-00325e8ff41b.png" /> <img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391465-c61eece6-0720-459f-8b2b-511021d7a058.png" /></p>
+<p><img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391336-5722d04c-91c0-4c77-88db-00325e8ff41b.png" /> </p>
 <h2 id="lc-ims-ms-data"><strong>LC-IMS-MS data</strong><a class="headerlink" href="#lc-ims-ms-data" title="Permanent link">&para;</a></h2>
 <p>As any other data format, ion mobility data can be imported via <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span><strong>Raw data methods →
 Raw data import</strong>. </p>
@@ -2578,14 +2587,14 @@ scans are loaded and only peaks above the noise level are imported.</p>
 <p>Alternatively, you can simply drag &amp; drop the raw data into the raw data list of the main window.</p>
 <p><img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391336-5722d04c-91c0-4c77-88db-00325e8ff41b.png" />
 <img alt="grafik" src="https://user-images.githubusercontent.com/37407705/136391465-c61eece6-0720-459f-8b2b-511021d7a058.png" /></p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>Olena Mokshyna</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>Olena Mokshyna</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 21, 2022 11:52:23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 25, 2023 12:11:10</span>
       
     
   </small>
