@@ -70,7 +70,11 @@ The range of *m*/*z*-values to be shown in the mass voltammogram.
 
 ## References
 
+<!-- markdown-link-check-disable-next-line -->
 [1] [A. Baumann, U. Karst, Expert. *Opin. Drug. Metab. Toxicol.* **2010**, *6*, 715–731.](https://doi.org/10.1517/17425251003713527)<br>
-[2] W. Lohmann, U. Karst, *Anal. Bioanal. Chem.* **2008**, *391*, 79–96 <br>
+<!-- markdown-link-check-disable-next-line -->
+[2] [W. Lohmann, U. Karst, *Anal. Bioanal. Chem.* **2008**, *391*, 79–96](https://pubs.acs.org/doi/10.1021/ac071100r)<br>
+<!-- markdown-link-check-disable-next-line -->
 [3] [H. Faber, M. Vogel, U. Karst, *Anal. Chim. Acta.* **2014**, *834*, 9–21.](https://doi.org/10.1016/j.aca.2014.05.017) <br>
-[4] T. Herl, F.-M. Matysik, *ChemElectroChem.* **2020**, *7*, 2498–2512.<br>
+<!-- markdown-link-check-disable-next-line -->
+[4] [T. Herl, F.-M. Matysik, *ChemElectroChem.* **2020**, *7*, 2498–2512.](https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/celc.202000442)<br>
