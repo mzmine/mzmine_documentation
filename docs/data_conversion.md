@@ -41,6 +41,8 @@ More details can be found in the [ProteoWizard documentation](https://proteowiza
 
 For Bruker recalibrated data, it is recommended to perform **export analysis to mzXML** using the Bruker's Data Analysis software (for automation, apply Bruker’s processing script during data acquisition) prior to importing to MZmine. Compared to the mzML and mzData formats, the mzXML format best retains the full scan definition and sample recalibration properties. In mzML the MS1 scans were recalibrated but the MS2 scan definition of the precursor _m/z_ did stay unchanged, leading to differences between MS1 and MS2.
 
+The same problem is observed with Waters data. The solution is to use a precursor m/z values corrector by applying a script on .mzML or .mzXML files after conversion. The script and the manual how to use it can be found [here](https://github.com/elnurgar/mzxml-precursor-corrector).
+
 # Data sharing (FAIR)
 Nowadays, modern scientific knowledge requires the comprehensive description and accessibility of experimental and
 computational approaches used in a study. Therefore, the results should be **Findable, Accessible, Interoperable,
