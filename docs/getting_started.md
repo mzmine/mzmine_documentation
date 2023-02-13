@@ -32,7 +32,8 @@ Applications folder.
 sudo xattr -cr ../MZmine.app
 
 # if this fails try
-sudo xattr -cr MZmine.app
+# the app will appear in the security preferences and you will be able to choose the "Open anyway" option
+sudo xattr -d com.apple.quarantine /Applications/MZmine.app
 ```
 
 ![](img/install_mac1.png){: style="height:150px"} ![](img/install_mac2.png){: style="width:150px"}
@@ -61,3 +62,5 @@ here: [LC-MS workflow](workflows/lcmsworkflow/lcms-workflow.md)
 or [LC-IMS-IMS workflow](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)
 
 You can also check out the new processing wizard under _Processing wizard_ in the main menu. 
+
+{{ git_page_authors }}

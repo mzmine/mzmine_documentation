@@ -1,11 +1,53 @@
 # Mobility scan merging
 
-If a .mzML file is imported, the merged frame spectrum must be created via the **File merging →
-Mobility scan merging** module. This is required to gain access to MZmine's regular LC-MS
-functionality. This step uses the centroided and thresholded data produced by
+## **Description**
+
+:material-menu-open: **Raw data methods → File merging → Mobility scan merging** 
+
+This module merges mobility scans in each **single ion mobility data file** at the same retention time to a summed frame spectrum.
+
+The merged frame spectrum is used if a *.mzML file is imported. The merged frame spectrum is required to gain access to MZmine's LC-MS
+functionality. 
+
+:material-exclamation-thick: This step uses the centroided and thresholded data produced by
 the [mass detection](../featdet_mass_detection/mass-detection.md)
 step.
 
-**This step is not required when importing native Bruker .tdf or .tsf data from .d folders.**
-When importing native Bruker data, a merged spectrum for the frame is created automatically by the
+:warning: This step is not required when importing native **Bruker .tdf or .tsf** data from .d folders. When importing native Bruker data, a merged spectrum for the frame is created automatically by the
 vendor library.
+
+## **Parameters**
+
+#### **Raw data files**
+
+Raw data files the module will take as an input.
+
+#### **Noise level**
+
+Data points beyond the defined noise level threshold will be ignored.
+
+#### **Merging type**
+
+The way to calculate intensities. Intensities can be either averaged, summed, or the maximum value can be chosen.
+
+#### **m/z weighing**
+
+Chosen function is used to weigh m/z values by their intensities. The available options are:
+
++ None,
++ Linear,
++ log10,
++ log2,
++ square root,
++ or cube root.
+
+#### **Scans**
+
+Selects the scans that should be included.
+
+#### **m/z tolerance**
+
+Maximum allowed difference between two m/z values in order for them to be considered the same.
+
+{{ git_page_authors }}
+

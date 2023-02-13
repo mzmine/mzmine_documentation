@@ -1,5 +1,10 @@
-# Ion mobility raw data overview (LC-IMS-MS)
-The "Ion mobilitiy raw data visualization" module allow a comprehensive navigation of the complex LC-IM-MS raw data. The screenshot belows shows an example of LC-IM-MS data acquired with a Bruker timsTOF instrument:
+# **Ion mobility raw data overview (LC-IMS-MS)**
+
+## **Description**
+
+:material-menu-open: **Visualization  → Ion mobility raw data overview**
+
+The "Ion mobility raw data visualization" module allow a comprehensive navigation of the complex LC-IM-MS raw data. The screenshot belows shows an example of LC-IM-MS data acquired with a Bruker timsTOF instrument:
 
 ![im-data-overview](im-data-overview.jpg)
 
@@ -13,39 +18,51 @@ The MS spectrum corresponding to each [frame](../../terminology/ion-mobility-ter
 In this panel, the [base peak chromatogram](../../terminology/general-terminology.md#base-peak-chromatogram) is displayed. Each data point corresponds to an individual [frame](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames). Moving the cursor frame-by-frame automatically updateds the 'frame heatmap' and 'summed frame spectrum' panels. Moving the cursor frame-by-frame automatically updateds the 'summed frame spectrum' panels as changing data point in regular LC-MS data would display a different MS scan. Since each frame is made of several [mobily scans](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames), the 'mobilogram chart' and 'frame heatmap' panels automatically updates too.
 _Note_. It is currently not possible to display the [TIC chromatogram](../../terminology/general-terminology.md#total-ion-current-chromatogram))
 
-
 ## Mobility scan [3]
-Todo
-Note that this is the only panel that does not possess a cursor as [...].
+
+[//]: # (Todo Note that this is the only panel that does not possess a cursor as [...].)
 
 ## Mobilogram chart [4]
-Todo
-The signal intensity is displayed as a continuous colour scale.
+
+[//]: # (Todo The signal intensity is displayed as a continuous colour scale.)
 
 ## Frame heatmap [5]
-Todo
-The signal intensity is displayed as a continuous colour scale.
+
+[//]: # (Todo The signal intensity is displayed as a continuous colour scale.)
 
 ## Ion trace chart [6]
-Todo
+
+[//]: # (Todo)
 
 ## Displaying parameters [6]
 
 **Mobility scan noise level**: This parameter controls the signals shown in the XXX panels (panel n°X). For example, a noise level of 5.0E1 will show only the signals above this value (see below)
-                                                                    SCREENSHOT
+
+[//]: # ( TODO SCREENSHOT)
 
 **Frame noise level**: This parameter sets a threshold for the signals shown in the "Summed frame spectrum panel" (panel n°X). Signals from MS spectra acquired over the same frame are summed and shown
 
-**m/z tolerance**: Todo
+**m/z tolerance**
 
-**Scan selection**: Todo
+[//]: # (Todo)
 
-**Retention time width**: Todo
+**Scan selection**
 
-**Mobilogram bin width (abs)**: Todo
+[//]: # (Todo)
 
-**EIC/mobilogram ranges**: Todo
+**Retention time width** 
+
+[//]: # (Todo)
+
+**Mobilogram bin width (abs)** 
+
+[//]: # (Todo)
+
+**EIC/mobilogram ranges** 
+
+[//]: # (Todo)
 
 
-To-do list:
-- Explain EIC and EIC in mobilogram chart
+[//]: # (Todo list: - Explain EIC and EIC in mobilogram chart)
+
+{{ git_page_authors }}

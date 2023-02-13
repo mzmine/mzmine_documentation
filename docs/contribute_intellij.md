@@ -34,7 +34,7 @@ The code formatter is important for contributions to the main version of MZmine 
 1. Import the style format from `mzmine-intellij-code-formater.xml`
 2. Apply format to any file with CTRL+ALT+L
 3. Can also be applied on each file saved or each commited change (see below)
-4. Better exclude specific file formats from being formatted (see below screenshot 2)
+4. Better exclude specific file formats from being formatted (see below screenshot 2) (`.*{fxml,xml,htm,html,json,yml,css}`)
 
 ![](img/contribute/intellij_style.png)
 
@@ -117,3 +117,5 @@ If gradle tool window is not shown:
 2. To update the imports click the update gradle project button in the gradle tool window
  
 ![](img/contribute/intellij_gradle_update.png)
+
+{{ git_page_authors }}
