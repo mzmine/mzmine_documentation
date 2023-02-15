@@ -2500,6 +2500,7 @@ pause<span class="w"> </span><span class="m">1</span>
 More details can be found in the <a href="https://proteowizard.sourceforge.io/tools/msconvert.html">ProteoWizard documentation</a>.</p>
 <h2 id="bruker-recalibrated-files-to-the-data-conversion-guide">Bruker: Recalibrated files to the data conversion guide<a class="headerlink" href="#bruker-recalibrated-files-to-the-data-conversion-guide" title="Permanent link">&para;</a></h2>
 <p>For Bruker recalibrated data, it is recommended to perform <strong>export analysis to mzXML</strong> using the Bruker's Data Analysis software (for automation, apply Bruker’s processing script during data acquisition) prior to importing to MZmine. Compared to the mzML and mzData formats, the mzXML format best retains the full scan definition and sample recalibration properties. In mzML the MS1 scans were recalibrated but the MS2 scan definition of the precursor <em>m/z</em> did stay unchanged, leading to differences between MS1 and MS2.</p>
+<p>The same problem is observed with Waters data. The solution is to use a precursor m/z values corrector by applying a script on .mzML or .mzXML files after conversion. The script and the manual how to use it can be found <a href="https://github.com/elnurgar/mzxml-precursor-corrector">here</a>.</p>
 <h1 id="data-sharing-fair">Data sharing (FAIR)<a class="headerlink" href="#data-sharing-fair" title="Permanent link">&para;</a></h1>
 <p>Nowadays, modern scientific knowledge requires the comprehensive description and accessibility of experimental and
 computational approaches used in a study. Therefore, the results should be <strong>Findable, Accessible, Interoperable,
@@ -2544,14 +2545,14 @@ raw and the converted (centroided) data files. The converted (open format) file 
 while the original raw data might contain metadata and profile data that remains uncovered by the converted format. Additionally, a
 metadata file should be added, containing information about the input files and their experimental information.</p>
 <h2 id="page-contributors">Page Contributors<a class="headerlink" href="#page-contributors" title="Permanent link">&para;</a></h2>
-<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:plusik@gmail.com'>Tomas Pluskal</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:96451969+li-chin@users.noreply.github.com'>li-chin</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:plusik@gmail.com'>Tomas Pluskal</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:67260554+elnurgar@users.noreply.github.com'>elnurgar</a>, <a href='mailto:96451969+li-chin@users.noreply.github.com'>li-chin</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 25, 2023 08:55:12</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 6, 2023 11:18:59</span>
       
     
   </small>
