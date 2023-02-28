@@ -2416,6 +2416,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#postfix-templates" class="md-nav__link">
+    Postfix templates
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2639,6 +2646,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#postfix-templates" class="md-nav__link">
+    Postfix templates
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2776,6 +2790,19 @@ Generates the output in class Scan:
 <p><img alt="" src="img/contribute/intellij_template.png" /></p>
 <p>Another example to create Javadoc links for @l . The variable (here <span class="arithmatex">\(target\)</span>) places the cursor.</p>
 <p><img alt="" src="img/contribute/intellij_template2.png" /></p>
+<h3 id="postfix-templates">Postfix templates<a class="headerlink" href="#postfix-templates" title="Permanent link">&para;</a></h3>
+<p>Postfix templates allow to surround a preceeding variable or expression with code. Similar to live templates but after the expression. Go to the settings (CTRL+ALT S on Windows) and search for postfix templates. Click on the + button to add a new Java template. 
+Add a key, specify the minimum java version, check "Use static import if possible" and enter the following expression text:
+- <strong>key</strong>: nne 
+- <strong>expression</strong>: Objects.requireNonNullElse(<span class="arithmatex">\(EXPR\)</span>, <span class="arithmatex">\(END\)</span>)</p>
+<p>This will enable the following:
+<div class="highlight"><pre><span></span><code><span class="c1">// input as variable.nne ...</span>
+<span class="n">spectrum</span><span class="p">.</span><span class="na">nne</span>
+<span class="c1">// ... auto complete will produce with _ being the cursor position</span>
+<span class="n">Objects</span><span class="p">.</span><span class="na">requireNonNullElse</span><span class="p">(</span><span class="n">spectrum</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">)</span>
+<span class="c1">// ... or this when &quot;use static import&quot; is activated </span>
+<span class="n">requireNonNullElse</span><span class="p">(</span><span class="n">spectrum</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">)</span>
+</code></pre></div></p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <h3 id="correct-jdk-selection">Correct JDK selection<a class="headerlink" href="#correct-jdk-selection" title="Permanent link">&para;</a></h3>
 <p>Make sure the correct JDK is set in these places:
@@ -2801,7 +2828,7 @@ See https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 28, 2023 17:45:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 28, 2023 17:56:15</span>
       
     
   </small>
