@@ -133,6 +133,7 @@ nav:
   - Contribute:
       - Coding:
             - General structure: coding/general_structure.md
+            - macOS code signing: coding/macos_signing.md
             - MZmine development (in IntelliJ): contribute_intellij.md
             - Module development: coding/module_development.md
             - Modules list: coding/module_list.md
