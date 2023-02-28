@@ -72,7 +72,7 @@ Live templates are used to add custom entries to the code completion, e.g., to q
 Access **Settings/Editor/Live Templates** (CTRL+ALT+S on Windows) and add a new template (+ button). Define the
 abbreviation to trigger autocompletion at this statement, define the template text, and change the target context
 (“**Java**”) at the bottom. The template below generates a logger after typing log and pressing CTRL+SPACE. The variable
-**$CLASS_NAME$** was set to represent the current className() under **Edit variable**.
+`$CLASS_NAME$` was set to represent the current className() under **Edit variable**.
 
 The template:
 ```java
@@ -85,7 +85,7 @@ private static final Logger logger = Logger.getLogger(Scan.class.getName());
 
 ![](img/contribute/intellij_template.png)
 
-Another example to create Javadoc links for @l . The variable (here $target$) places the cursor.
+Another example to create Javadoc links for `@l` . The variable (here `$target$`) places the cursor.
 
 ![](img/contribute/intellij_template2.png)
 
@@ -93,8 +93,9 @@ Another example to create Javadoc links for @l . The variable (here $target$) pl
 ### Postfix templates
 Postfix templates allow to surround a preceeding variable or expression with code. Similar to live templates but after the expression. Go to the settings (CTRL+ALT S on Windows) and search for postfix templates. Click on the + button to add a new Java template. 
 Add a key, specify the minimum java version, check "Use static import if possible" and enter the following expression text:
+
 - **key**: nne 
-- **expression**: Objects.requireNonNullElse($EXPR$, $END$)
+- **expression**: `Objects.requireNonNullElse($EXPR$, $END$)`
 
 This will enable the following:
 ```java
