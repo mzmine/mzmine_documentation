@@ -2780,7 +2780,7 @@ Now the project structure (CTRL+SHIFT+ALT+S) should show the source, test, and r
 Access <strong>Settings/Editor/Live Templates</strong> (CTRL+ALT+S on Windows) and add a new template (+ button). Define the
 abbreviation to trigger autocompletion at this statement, define the template text, and change the target context
 (“<strong>Java</strong>”) at the bottom. The template below generates a logger after typing log and pressing CTRL+SPACE. The variable
-<strong><span class="arithmatex">\(CLASS_NAME\)</span></strong> was set to represent the current className() under <strong>Edit variable</strong>.</p>
+<code>$CLASS_NAME$</code> was set to represent the current className() under <strong>Edit variable</strong>.</p>
 <p>The template:
 <div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">logging</span><span class="p">.</span><span class="na">Logger</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">logging</span><span class="p">.</span><span class="na">Logger</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="n">$CLASSNAME$</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
 </code></pre></div>
@@ -2788,13 +2788,15 @@ Generates the output in class Scan:
 <div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="n">Scan</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
 </code></pre></div></p>
 <p><img alt="" src="img/contribute/intellij_template.png" /></p>
-<p>Another example to create Javadoc links for @l . The variable (here <span class="arithmatex">\(target\)</span>) places the cursor.</p>
+<p>Another example to create Javadoc links for <code>@l</code> . The variable (here <code>$target$</code>) places the cursor.</p>
 <p><img alt="" src="img/contribute/intellij_template2.png" /></p>
 <h3 id="postfix-templates">Postfix templates<a class="headerlink" href="#postfix-templates" title="Permanent link">&para;</a></h3>
 <p>Postfix templates allow to surround a preceeding variable or expression with code. Similar to live templates but after the expression. Go to the settings (CTRL+ALT S on Windows) and search for postfix templates. Click on the + button to add a new Java template. 
-Add a key, specify the minimum java version, check "Use static import if possible" and enter the following expression text:
-- <strong>key</strong>: nne 
-- <strong>expression</strong>: Objects.requireNonNullElse(<span class="arithmatex">\(EXPR\)</span>, <span class="arithmatex">\(END\)</span>)</p>
+Add a key, specify the minimum java version, check "Use static import if possible" and enter the following expression text:</p>
+<ul>
+<li><strong>key</strong>: nne </li>
+<li><strong>expression</strong>: <code>Objects.requireNonNullElse($EXPR$, $END$)</code></li>
+</ul>
 <p>This will enable the following:
 <div class="highlight"><pre><span></span><code><span class="c1">// input as variable.nne ...</span>
 <span class="n">spectrum</span><span class="p">.</span><span class="na">nne</span>
@@ -2828,7 +2830,7 @@ See https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 28, 2023 17:56:15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 28, 2023 18:07:12</span>
       
     
   </small>
