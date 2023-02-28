@@ -90,6 +90,22 @@ Another example to create Javadoc links for @l . The variable (here $target$) pl
 ![](img/contribute/intellij_template2.png)
 
 
+### Postfix templates
+Postfix templates allow to surround a preceeding variable or expression with code. Similar to live templates but after the expression. Go to the settings (CTRL+ALT S on Windows) and search for postfix templates. Click on the + button to add a new Java template. 
+Add a key, specify the minimum java version, check "Use static import if possible" and enter the following expression text:
+- **key**: nne 
+- **expression**: Objects.requireNonNullElse($EXPR$, $END$)
+
+This will enable the following:
+```java
+// input as variable.nne ...
+spectrum.nne
+// ... auto complete will produce with _ being the cursor position
+Objects.requireNonNullElse(spectrum, _)
+// ... or this when "use static import" is activated 
+requireNonNullElse(spectrum, _)
+```
+
 
 ## Troubleshooting
 ### Correct JDK selection
