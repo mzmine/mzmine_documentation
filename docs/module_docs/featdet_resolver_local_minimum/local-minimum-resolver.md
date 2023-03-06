@@ -65,7 +65,7 @@ Dimension to be resolved. Select _Retention time_ or _Mobility_ to run the modul
 
 #### **Chromatographic threshold**
 
-Percentage of data points in the EIC removed before local minima search. This represents an important filter for noisy chromatogram and significantly reduces the precessing time.
+Percentage of data points in the EIC removed before local minima search. This represents an important filter for noisy chromatogram and significantly reduces the processing time.
 The algorithm finds the intensity value (threshold) that leaves the specified percentage of data points in the EIC trace below the given value. All such data points are removed.
 
 For example, a **Chromatographic threshold** = 50% will discard the lowest-intense 50% data points in the EIC trace.
