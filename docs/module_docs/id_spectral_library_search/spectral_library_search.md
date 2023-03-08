@@ -1,4 +1,4 @@
-# **Spectral library search**
+~~# **Spectral library search**
 
 ## **Description**
 
@@ -47,23 +47,14 @@ Depending on the **MS level** (MS1 or MS2), all corresponding query scans (e.g.,
 The spectral libraries of interest need to be imported before applying spectral library search. 
 Either uses all imported spectral libraries or only the selected libraries.
 
-#### **MS level**
+#### **Scans for matching**
 
-Choose the MS level of the scans that should be compared with the library. 
+Choose the MS level of the scans that should be compared with the library and how to handle multiple spectra for one feature. 
+The option 'MS2 (merged)' merges all spectra of a feature into one scan,
+which reduces the amount of spectra for the matching. For matching all spectra individually, use the 'MS2 (all scans)' option.
+If multistep fragmentation was used, choose the MS level ≥ 2 and for GC-EI-MS 'MS1'. 
 
-Set the MS level to "1" to compare MS^1^ spectra, e.g., from GC-EI-MS or MALDI-imaging MS^1^ data. 
-
-Use "2" or higher for fragmentation scans. 
-
-:warning: In case of issues with the scan selection, check how the actual scan numbers are reported in the data files and in MZmine's raw data overview and scan list.
-
-#### **Check all scans (only for MS2)**
-
-This option enables the comparison of all MS2 scans.
-
-:warning: Otherwise, only the most intense MS^2^ scan (the highest TIC) is used for the matching.
-
-:warning: It does not apply to MS1 scans.
+:warning: In case of issues with the scan selection, check how the actual scan numbers are reported in the data files and in MZmine's raw data overview.
 
 #### **Precursor m/z tolerance**
 
@@ -75,14 +66,6 @@ Considering that the precursor isolation window is often far greater than the re
 
 Another aspect is the used library, which might contain uncalibrated reference spectra from lower resolution instruments.
 
-#### **Remove precursor**
-
-:warning: Can be selected only for MS level > 1. 
-
-Depending on the fragmentation method, e.g., collision induced dissociation (CID) or higher-energy collisional dissociation (HCD), the precursor can be detected with different intensities resulting in varying cosine similarities during the library matching. 
-
-Therefore, this option enables the removal of the precursor signal within the precursor m/z tolerance (parameter above) prior to the matching. 
-
 [//]: # (TODO Add separate entry on similarity measures)
 
 #### **Spectral m/z tolerance**
@@ -92,50 +75,13 @@ can be set in absolute (in m/z) and relative (in ppm) m/z tolerance, whereas
 the maximum tolerance for each m/z value is applied. It must be kept in mind, which mass resolutions are achieved 
 within the experimental spectra and within the spectral library.
 
-#### **CCS tolerance**
+#### **Remove precursor**
 
-The [collision cross-section (CCS)](../../terminology/ion-mobility-terminology.md#collisional-cross-section) tolerance can be used in a similar way as the retention time tolerance.
+:warning: Can be selected only for MS level > 1. 
 
-Accordingly, the CCS value of a query will be compared with the library entries and the maximum tolerance
-can be set in %.
+Depending on the fragmentation method, e.g., collision induced dissociation (CID) or higher-energy collisional dissociation (HCD), the precursor can be detected with different intensities resulting in varying cosine similarities during the library matching. 
 
-:warning: If the query or library entry was analyzed without ion mobility (no CCS values), no spectrum will be matched.
-
-#### **Retention time tolerance**
-
-The maximum allowed retention time difference when comparing the query and library scan. It can be set in absolute (min or sec) or relative (%) values.
-
-:material-lightbulb: This option is useful for in-house libraries or standardized libraries that follow the same acquisition protocol with the same set-up, e.g., column, instrument, and method). 
-
-#### **Crop spectra to m/z overlap**
-
-If query and library scans were acquired with different methods, e.g., mass range, fragmentation energy or mode, it can be helpful to crop the spectra to their overlapping m/z range (+ m/z tolerance). 
-This is done by using the maximum m/z range where both spectra contain signals.
-
-:warning: However, this method will boost false matches and needs strict manual interpretation.
-
-#### **Minimum ion intensity**
-
-Signals in the query scan below the minimum ion intensity will be filtered from the mass lists and are not taken into account during the library matching. Absolute values.
-
-#### **^13^C deisotoping**
-
-Removes ^13^C isotope signals from the mass list using the following parameters:
-
-- **m/z tolerance**: Maximum allowed difference between the measured and predicted isotope m/z values. The absolute (in m/z) and relative (in ppm) m/z tolerance can be set, whereas the maximum tolerance for each m/z value is applied.
-
-- **Monotonic shape**: If enabled, the monotonically decreasing height of isotope pattern is required.
-
-- **Maximum charge**: The maximum charge that will be considered for detecting the isotope pattern. For singly charged ions, the ^13^C isotope will be expected +1 whereas for doubly charged ions it will be +0.5 (+1 m/z divided by the charge 2). 
-
-#### **Min matched isotope signals**
-
-This option is only useful if the query AND library entries contain isotope patterns (e.g., in MS^1^ or with wider precursor isolation 
-windows). 
-
-The minimum number of matched signals of ^13^C isotopes. 
-
-:warning: It cannot be applied when ^13^C deisotoping is enabled.
+Therefore, this option enables the removal of the precursor signal (± 4 Da) prior to the matching. 
 
 #### **Min matched signals**
 
@@ -153,13 +99,65 @@ signals can result in spurious library hits.
 
 Several algorithms can be applied to calculate the similarity of the query and library scans and to filter the resulting library matches. The available algorithms are:
 
-- Weighted dot-product cosine,
-- Composite dot-product identity (similar to NIST search).
+- Weighted cosine similarity,
+- Composite cosine identity (e.g., GC-EI-MS; similar to NIST search).
 
 More details are available [here](spectral-similarity-measures.md).
 
-:material-lightbulb: The **weighted dot-product cosine** similarity is used for comparing MS^2^ data, whereas the
-**composite dot-product identity (similar to NIST search)** considers the relative intensity of
+:material-lightbulb: The **weighted cosine similarity** is used for comparing MS^2^ data, whereas the
+**composite cosine identity (e.g., GC-EI-MS; similar to NIST search)** considers the relative intensity of
 neighboring signals and is, therefore, applied to MS^1^ spectra from GC-EI-MS.
+
+
+#### **Retention time tolerance**
+
+These option can be used to include these values as further spectral matching identifiers. The maximum allowed retention time difference when comparing the query and library scan. It can be set in absolute (min or sec) or relative (%) values.
+
+
+:material-lightbulb: This option is intended for in-house libraries or standardized libraries that follow the same acquisition protocol with the same set-up, e.g., column, instrument, and method).
+
+:warning: However, this method will boost false matches and needs strict manual interpretation.
+
+#### **CCS tolerance**
+
+The [collision cross-section (CCS)](../../terminology/ion-mobility-terminology.md#collisional-cross-section) tolerance can be used in a similar way as the retention time tolerance.
+
+Accordingly, the CCS value of a query will be compared with the library entries and the maximum tolerance
+can be set in %.
+
+:warning: If the query or library entry was analyzed without ion mobility (no CCS values), no spectrum will be matched.
+
+
+#### **^13^C deisotoping**
+
+This option allows to remove potential ^13^C isotope signals in the experimental spectrum before the library search.
+It can be enabled when co-isolation of precursor’s ^13^C isotopes is expected during MS2 data acquisition (e.g., isolation window > 1 Da).
+Following parameters can be set:
+
+- **m/z tolerance**: Maximum allowed difference between the measured and predicted isotope m/z values. The absolute (in m/z) and relative (in ppm) m/z tolerance can be set, whereas the maximum tolerance for each m/z value is applied.
+
+- **Monotonic shape**: If enabled, the monotonically decreasing height of isotope pattern is required.
+
+- **Maximum charge**: The maximum charge that will be considered for detecting the isotope pattern. For singly charged ions, the ^13^C isotope will be expected +1 whereas for doubly charged ions it will be +0.5 (+1 m/z divided by the charge 2). 
+
+#### **Min matched isotope signals**
+
+This option can be used to set a minimum number of matched ^13^ isotopes signals. It is only useful if the query AND
+library entries contain isotope patterns (e.g., in MS^1^ or with wider precursor isolation 
+windows). 
+
+The minimum number of matched signals of ^13^C isotopes. 
+
+:warning: It cannot be applied when ^13^C deisotoping is enabled.
+
+#### **Crop spectra to m/z overlap**
+
+This option can be used to consider only the mass range where both the experimental and library spectra exhibit m/z
+signals. All other signals are ignored during the matching. For example, if query and library scans were acquired with different
+methods, e.g., mass range, fragmentation energy or mode, it can be helpful to crop the spectra to their overlapping m/z range (+ m/z tolerance). 
+This is done by using the maximum m/z range where both spectra contain signals. However, this tends to return more false
+positive matches. Therefore, we recommend extra curation of the matching results when this option is enabled.
+
+
 
 {{ git_page_authors }}
