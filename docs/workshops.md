@@ -2,11 +2,12 @@
 
 | Venue        | Description          | Dates | Speakers/Instructors | Material | Estimated Attendance |
 | ------------- |-------------| -----| -----| -----| ----- |
-| Wageningen, Spain | NPLinker eScience Workshop on Genome and Metabolome Mining | 2023-03-21 to 24 | Robin Schmid, Mitja Zdouc, Lindsay Caesar and more | [Video](https://www.youtube.com/watch?v=sX5hQQwMnJA&list=PL0JAF-4UFc8Nujp1ET-TwNdOGrBGsuZ7J) | 30+ |
+| ETH, Zürich, Switzerland | Non-target MS analysis and spectral library generation in MZmine | 2023-04-19 | Robin Schmid, Corinna Brungs | Soon |  |
+| Wageningen, The Netherlands | NPLinker eScience Workshop on Genome and Metabolome Mining | 2023-03-21 to 24 | Robin Schmid, Mitja Zdouc, Lindsay Caesar and more | Soon | 30+ |
 | Tuebingen, Germany | International Summer School on Non-Targeted Metabolomics 2022 | 2022-08-22 to 26 | Organizers of the Summer School | [Video](https://www.youtube.com/watch?v=sX5hQQwMnJA&list=PL0JAF-4UFc8Nujp1ET-TwNdOGrBGsuZ7J) | 75+online |
 | Valencia, Spain | Metabolomics conference: MZmine 3 workshop | 2022-06-19 | Steffen Heuckeroth, Robin Schmid, Tomas Pluskal, Tito Damiani, Daniel Petras |  | 100+ |
 | CMFI Mass Spec Seminar | Zoom Video Series | 2022-02 | Daniel Petras organized series | [Video](https://www.youtube.com/watch?v=hk7WeXibReg&list=PL0JAF-4UFc8N8DxAIOoF2cMSKy-wC4WWG&index=8) | 20-100+ |
-| Prague, Chechia | Computational metabolomics workshop on MZmine, GNPS, and SIRIUS | 2021-07-20 | Steffen Heuckeroth, Robin Schmid, Tomas Pluskal, Ansgar Korf, Daniel Petras, Marcus Ludwig | [Twitter](https://twitter.com/mzmine_project/status/1417388265095770113?s=20) | 70 |
+| IOCB, Prague, Chechia | Computational metabolomics workshop on MZmine, GNPS, and SIRIUS | 2021-07-20 | Steffen Heuckeroth, Robin Schmid, Tomas Pluskal, Ansgar Korf, Daniel Petras, Marcus Ludwig | [Twitter](https://twitter.com/mzmine_project/status/1417388265095770113?s=20) | 70 |
 |Zoom! | MZmine/GNPS Feature Based Molecular Networking in Portuguese - Part 1 | 12/09/2020 9AM PST | Anelize Bauermeister, Carlismari Grundmann, Helena Mannochio, Juliano Amaral, Tiago Leão| [Material](https://docs.google.com/document/d/1LVGZiifVoKELANRFOGUtCl5ptjTXH6q_W5g0rZTnJi4/edit?usp=sharing)| 200 |
 |Zoom! | MZmine/GNPS Feature Based Molecular Networking in Portuguese - Part 2 | 12/10/2020 9AM PST | Anelize Bauermeister, Carlismari Grundmann, Helena Mannochio, Juliano Amaral, Tiago Leão| [Material](https://docs.google.com/document/d/1rp5_xAiLWRhVRAfIt6a91gzhkxPs3IPEMWnp_NDMrOE/edit?usp=sharing)| 200 |
 | Zoom! | MZmine/GNPS Feature Based Molecular Networking in Espanol - Part 1	| 7/8/2020 9AM PST | Mauricio Caraballo, Daniel Petras | [Material](https://docs.google.com/document/d/1raBdT8QuHntm-im7DjxB3epG7_D_JEAXNY-_AoFvaWc/edit?usp=sharing) [Video](https://www.youtube.com/watch?v=0xWMAwM8x3U&feature=youtu.be)| 40 |
