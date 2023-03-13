@@ -115,6 +115,7 @@ nav:
           - Interactive Ion Identity Molecular Networks: visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md
           - Feature histograms: visualization_modules/feature_histograms/feature_hist.md
           - Additional tools: visualization_modules/processed_additional/processed_additional.md
+      - Massvoltammogram: visualization_modules/massvoltammogram/massvoltammogram.md
 
   - Workflows:
       - Untargeted LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
