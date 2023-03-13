@@ -2,6 +2,7 @@
 
 | Venue        | Description          | Dates | Speakers/Instructors | Material | Estimated Attendance |
 | ------------- |-------------| -----| -----| -----| ----- |
+| Copenhagen, Denmark | International Summer School on Non-Targeted Metabolomics 2023 | 2023-08 | Steffen Heuckeroth, Robin Schmid, Daniel Petras, and many more | Soon |  |
 | ETH, Zürich, Switzerland | Non-target MS analysis and spectral library generation in MZmine | 2023-04-19 | Robin Schmid, Corinna Brungs | Soon |  |
 | Wageningen, The Netherlands | NPLinker eScience Workshop on Genome and Metabolome Mining | 2023-03-21 to 24 | Robin Schmid, Mitja Zdouc, Lindsay Caesar and more | Soon | 30+ |
 | Tuebingen, Germany | International Summer School on Non-Targeted Metabolomics 2022 | 2022-08-22 to 26 | Organizers of the Summer School | [Video](https://www.youtube.com/watch?v=sX5hQQwMnJA&list=PL0JAF-4UFc8Nujp1ET-TwNdOGrBGsuZ7J) | 75+online |
