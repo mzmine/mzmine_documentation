@@ -5,8 +5,6 @@
 MZmine 3 is developed using Java technology, therefore it is completely platform independent, requiring only Java runtime for running. 
 One of the main design goals is to keep a strict separation between the application core and modules for data processing and visualization. The general architecture of the modules is presented at the following scheme.
 
-[//]: # (TODO Update scheme)
-
 ![Architecture](mzmine3-architecture-01.png)
 
 [//]: # (TODO Describe application core)
