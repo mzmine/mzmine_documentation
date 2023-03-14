@@ -6,7 +6,7 @@ Download MZmine 3 portable versions or installers from GitHub:
 
 [https://github.com/mzmine/mzmine3/releases/latest](https://github.com/mzmine/mzmine3/releases/latest)
 
-## Installation
+## Install
 
 On Windows and Linux the installers and portable versions should function directly. Windows users
 might be warned that MZmine is not signed or from a trusted source and have to click run anyways.
@@ -57,10 +57,14 @@ Before creating your first project, we recommend setting up some things.
 
 You can get familiar with the new GUI here: [Main window overview](main-window-overview.md)
 
+## Start processing 
+
+An excellent place to start would be [MZmine video tutorials on YouTube](https://www.youtube.com/@mzmineproject/playlists).
+
 A quick insight to data processing workflows can be found
 here: [LC-MS workflow](workflows/lcmsworkflow/lcms-workflow.md)
 or [LC-IMS-IMS workflow](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)
 
-You can also check out the new processing wizard under _Processing wizard_ in the main menu. 
+You can also check out the new processing wizard under [Processing wizard](wizard.md) in the main menu. 
 
 {{ git_page_authors }}
