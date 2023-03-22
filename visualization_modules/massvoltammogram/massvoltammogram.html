@@ -11,9 +11,13 @@
         <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/visualization_modules/massvoltammogram/massvoltammogram.html">
       
       
+        <link rel="prev" href="../processed_additional/processed_additional.html">
+      
+      
+        <link rel="next" href="../../workflows/lcmsworkflow/lcms-workflow.html">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
@@ -21,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7bf56d0a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4a75a56.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -1802,14 +1806,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
       
       
       
@@ -1818,7 +1824,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Visualization modules
@@ -2014,6 +2020,109 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Massvoltammogram
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="massvoltammogram.html" class="md-nav__link md-nav__link--active">
+        Massvoltammogram
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#electrochemistrymass-spectrometry" class="md-nav__link">
+    Electrochemistry/Mass Spectrometry
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter" class="md-nav__link">
+    Parameter
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-raw-data-file" class="md-nav__link">
+    From raw data file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-feature-list" class="md-nav__link">
+    From feature list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-parameter" class="md-nav__link">
+    General Parameter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2494,6 +2603,33 @@
     Parameter
   </a>
   
+    <nav class="md-nav" aria-label="Parameter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-raw-data-file" class="md-nav__link">
+    From raw data file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-feature-list" class="md-nav__link">
+    From feature list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-parameter" class="md-nav__link">
+    General Parameter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2524,35 +2660,46 @@
 <h1 id="massvoltammogram">Massvoltammogram<a class="headerlink" href="#massvoltammogram" title="Permanent link">&para;</a></h1>
 <h2 id="electrochemistrymass-spectrometry">Electrochemistry/Mass Spectrometry<a class="headerlink" href="#electrochemistrymass-spectrometry" title="Permanent link">&para;</a></h2>
 <p>The hyphenation of electrochemistry (EC) and mass spectrometry (MS) is an analytical technique for the instrumental simulation of the human metabolism.
-By applying an electric potential to an electrochemical cell, which contains the analyte solution, it is possible to electrochemically generate transformation products.
+By applying an electric potential to an electrochemical cell, that contains the analyte solution, it is possible to generate transformation products.
 These transformation products often closely resemble <em>in vivo</em>-metabolites.
 <sup>[1,2]</sup></p>
 <p>The applied potential is ramped in a given range to detect transformation products formed at different potentials.
-For an easy identification of the generated transformation products the collected data is  often shown in so-called mass voltammogramms.
-These mass voltammogramms are three-dimensional plots in which mass spectra are shown in dependence of the corresponding applied potential.
-Using a mass voltammogramm it is very easy to observe the different transformation products generated at different applied potentials.
+For an easy identification of the generated transformation products the collected data is  often shown in so-called mass voltammograms.
+These mass voltammograms are three-dimensional plots in which mass spectra are shown in dependence of the corresponding applied potential.
+Using a mass voltammogram it is very easy to observe the different transformation products generated at different applied potentials.
 <sup>[3,4]</sup></p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Visualization → Massvoltammogram</strong></p>
 <p>The "massvoltammogram" module allows the visualisation of EC/MS-data in the form of mass voltammograms. 
-The screenshot below shows a mass voltammogramm generated with MZmine3. 
-Mass voltammograms can be generated directly from the raw data files without the need for any other processing steps. </p>
+The screenshot below shows a mass voltammogram generated with MZmine3. 
+Mass voltammograms can be generated directly from the raw data files without the need for any other processing steps. 
+Otherwise ist is also possible to create mass voltammograms from processed feature lists.</p>
 <p><img alt="massvoltammogram" src="massvoltammogram.png" /></p>
-<p>The user can rotate and move the generated mass voltammogram by clicking the first two buttons in the toolbar.
-Using the mouse wheel the mass voltammogramm can be scaled.
+<p>The mass voltammogram can be moved and rotated via the first two buttons in the toolbar and scaled by using the mouse wheel.
 The third button in the toolbar can be used to reset the view.
 By right-clicking on any given point in the mass voltammogram the points exact coordinates are shown.
-Furthermore, by pressing the "<em>m</em>/<em>z</em>"-button in the toolbar the range of shown <em>m</em>/<em>z</em>-values can be readjusted.</p>
+Furthermore the range of shown <em>m</em>/<em>z</em>-values can be readjusted by pressing the "<em>m</em>/<em>z</em>"-button in the toolbar .</p>
 <p>To export the mass voltammogram the second-last button in the toolbar needs to be pressed. 
 There are two file formats available.
-The mass voltammogram can be exported as an image to a png-file or all mass spectra in the mass voltammogramm can be exported to single csv-files.</p>
+The mass voltammogram can be exported as an image to a png-file or all mass spectra in the mass voltammogram can be exported to single csv-files.</p>
 <h2 id="parameter">Parameter<a class="headerlink" href="#parameter" title="Permanent link">&para;</a></h2>
-<p>The screenshot below shows the input dialogue for the parameters needed to generate the mass voltammogramm.</p>
-<p><img alt="parameters" src="parameters.png" /></p>
+<h3 id="from-raw-data-file">From raw data file<a class="headerlink" href="#from-raw-data-file" title="Permanent link">&para;</a></h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Visualization → Massvoltammogram → From Raw Data File</strong></p>
+<p>This module generates the mass voltammogram from a raw data file.</p>
+<p><img alt="parametersFromFile" src="parametersFromFile.png" /></p>
 <p><strong>Raw data files</strong></p>
-<p>The raw data file of the EC/MS-experiment, which the mass voltammogram will be generated from.</p>
+<p>The raw data file of the EC/MS-experiment the mass voltammogram will be generated from.</p>
 <p><strong>Scan Selection</strong></p>
 <p>The scan selection filter used to define the scan types to be used for the generation of the mass voltammogram.
-For example, it is possible to select the MS level or the ion polarity.</p>
+For example is it possible to select the MS level or the ion polarity.</p>
+<h3 id="from-feature-list">From feature list<a class="headerlink" href="#from-feature-list" title="Permanent link">&para;</a></h3>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Visualization → Massvoltammogram → From Feature List</strong></p>
+<p>This module generates the mass voltammogram from a feature list.</p>
+<p><img alt="parametersFromList" src="parametersFromList.png" /></p>
+<p><strong>Feature lists</strong></p>
+<p>The feature list the mass voltammogram will be generated from.</p>
+<h3 id="general-parameter">General Parameter<a class="headerlink" href="#general-parameter" title="Permanent link">&para;</a></h3>
+<p>The following parameter are the same whether the mass voltammogram will be created from a raw data file or a feature list.</p>
 <p><strong>Reaction Mode</strong></p>
 <p>The mode the electrochemical cell was used in, whether oxidative or reductive.</p>
 <p><strong>Delay Time</strong></p>
@@ -2562,7 +2709,7 @@ For example, it is possible to select the MS level or the ion polarity.</p>
 <p><strong>Potential Range</strong></p>
 <p>The potential range of the applied potential ramp in mV.</p>
 <p><strong>Potential Steps</strong></p>
-<p>The potential step size in mV between the mass spectra that are shown in the mass voltammogramm.</p>
+<p>The potential step size in mV between the mass spectra that are shown in the mass voltammogram.</p>
 <p><strong>m/z Range</strong></p>
 <p>The range of <em>m</em>/<em>z</em>-values to be shown in the mass voltammogram.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
@@ -2580,7 +2727,7 @@ For example, it is possible to select the MS level or the ion polarity.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 13, 2023 09:34:10</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 22, 2023 13:51:54</span>
       
     
   </small>
@@ -2629,7 +2776,7 @@ For example, it is possible to select the MS level or the ion polarity.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fc8c2696.min.js"></script>
+      <script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
