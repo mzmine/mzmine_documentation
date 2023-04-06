@@ -2,6 +2,8 @@
 
 This section describes general format export modules. For the description of export modules for the specific software, please, refer to [Data export to other software](data-exchange-with-other-software.md).
 
+[//] # TODO
+
 ## **CSV**
 
 ### **Description**
@@ -67,6 +69,23 @@ Character to separate multiple identification results (if they are available) fo
 #### **Filter rows**
 
 Allows user to export only those rows that have associated MS/MS data or are annotated. 
+
+## **Export all annotations to CSV**
+
+### **Description**
+
+:material-menu-open: **Feature list methods → Export feature list → Export compound annotations to csv**
+
+Export all annotations from spectral library matching, local compound DB CSV matching, and others.  
+### **Parameters**
+
+#### **Filename**
+
+Base file name of all annotation file (Use {} to fill in the feature list name when exporting multiple feature lists at once).
+
+#### Top N per method
+Export the top N annotations per annoation method.
+
 
 ## **Venn diagram export**
 
