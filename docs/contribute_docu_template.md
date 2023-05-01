@@ -35,7 +35,7 @@ Provide here a concise description of the module functioning principles and usag
 ## Recommended citations
 !!! info
     When using MZmine 3 for your work, please consider citing:<br>
-    Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, In Review (2023)
+    Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.
 
     When using this modules, please consider citing the corresponding publication(s):<br>
     Schmid, R., Petras, D., Nothias, LF. et al. Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment. Nat Commun 12, 3832 (2021). https://doi.org/10.1038/s41467-021-23953-9
