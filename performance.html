@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tuning-modules" class="md-skip">
+        <a href="#general-remarks" class="md-skip">
           Skip to content
         </a>
       
@@ -2233,6 +2233,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Performance options
@@ -2248,6 +2250,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2576,6 +2580,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2669,9 +2675,22 @@
   
 
 
-  <h1>Performance options</h1>
-
-<p>This section contains information on how to tune MZmine 3 for different systems.</p>
+<h1 id="general-remarks">General remarks<a class="headerlink" href="#general-remarks" title="Permanent link">&para;</a></h1>
+<p>This section contains information on how to tune MZmine 3 for different systems. Generally these points can improve the throughput and memory constraints:</p>
+<ul>
+<li>Make sure to set the <strong>temporary</strong> files directory to a <strong>fast local drive</strong>, e.g., SSD</li>
+<li><a href="data_conversion.html">Convert files</a> to centroided open formats, e.g., mzML </li>
+<li>Run MZmine in <strong>headless mode</strong> as a <a href="commandline_tool.html">command-line tool</a> to avoid the graphical-user interface (GUI). Just provide a batch file and process on any computer or server.</li>
+<li>Use the <strong>advance data import</strong> to reduce the amount of data that needs to be loaded. This will apply mass detection during the import.</li>
+<li>Optimize your MZmine workflow in the batch mode, cosidering your data and study design:<ul>
+<li>Increase minimum feature height, noise levels, and other feature constraints. If a feature was detected in at least one sample - gap-filling will try to fill the gaps of missed features later.</li>
+<li>Use <strong>Join aligner</strong> and <strong>Peak finder (multi-threaded)</strong> gap-filling for large datasets as they are optimized</li>
+<li>Apply <strong>Rows filter</strong> between alignment and gap-filling with a minimum number of samples filter: "How many samples do I need for a significant feature?"</li>
+<li>Set all <strong>Handling orgininal feature lists</strong> parameters to <em>PROCESS IN PLACE</em> or <em>REMOVE</em></li>
+</ul>
+</li>
+<li>Upgrade the <strong>RAM</strong> of your system or run on a server</li>
+</ul>
 <h2 id="tuning-modules">Tuning modules<a class="headerlink" href="#tuning-modules" title="Permanent link">&para;</a></h2>
 <h3 id="advanced-data-import">Advanced data import<a class="headerlink" href="#advanced-data-import" title="Permanent link">&para;</a></h3>
 <p>The advanced data import provides the option to apply mass detection during import and only 
@@ -2729,7 +2748,7 @@ java-options=-XX:MaxRAMPercentage=80
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 1, 2023 10:57:25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 10, 2023 10:29:59</span>
       
     
   </small>
