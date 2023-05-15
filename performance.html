@@ -2711,8 +2711,13 @@
 <p>The advanced data import provides the option to apply mass detection during import and only 
 loading those filtered mass spectra. This is a great way to reduce the need for memory 
 mapping of raw spectra that are not used in most workflows (most use the masslists detected 
-by Mass detection step as a filtered centroid version of spectra). </p>
-<p>This option is great for large datasets and for profile mode data. </p>
+by Mass detection step as a filtered centroid version of spectra). This option is great for large datasets and for profile mode data. </p>
+<ol>
+<li>Open the Import MS data parameters</li>
+<li>Activate Advanced import and press Setup</li>
+<li>Define the MS1 and MS2 detectors as described in the Mass detection step</li>
+<li>Remove all other Mass detection steps from the batch configuration, usually applied after data import</li>
+</ol>
 <p><img alt="Advanced import" src="img/advanced_import.png" /></p>
 <h3 id="handling-orgininal-feature-lists">Handling orgininal feature lists<a class="headerlink" href="#handling-orgininal-feature-lists" title="Permanent link">&para;</a></h3>
 <p>Most processing steps in MZmine create new feature lists and have options to handle the orgininal lists. 
@@ -2763,7 +2768,7 @@ java-options=-XX:MaxRAMPercentage=80
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 15, 2023 15:31:58</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 15, 2023 16:20:13</span>
       
     
   </small>
