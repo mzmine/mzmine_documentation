@@ -146,6 +146,7 @@ nav:
       - Documentation template: contribute_docu_template.md
 
   - Acknowledgements: wikiacknowledgements.md
+  - Troubleshooting: troubleshooting.md
   - Changelog: changelog.md
   - Workshops: workshops.md
 
