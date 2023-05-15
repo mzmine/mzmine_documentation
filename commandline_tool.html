@@ -2600,16 +2600,24 @@
 <p>Command-line arguments offer a variety of options that generally override the corresponding parameters in the preferences.</p>
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
 <p>An easy way to start MZmine with arguments is to create a shortcut to the MZmine.exe, right-click, and define the target with additional arguments. This example runs MZMine in batch mode (headless), imports the specified batch file, overrides the memory management to <strong>none</strong> (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the <em>memory</em> or <em>temp</em> arguments, the values stored in the current <em>preferences</em> file will be used, or the default values if no <em>preferences</em> file was found.  </p>
-<p><strong>Start MZmine batch with memory mapping (</strong>DEFAULT<strong>)</strong>
+<p><strong>Process all .mzML files in a folder by the provided batch file</strong>
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -input &quot;D:\Data\*.mzML&quot;
+</code></pre></div></p>
+<p><strong>Defining the temp folder, otherwise uses the one specified in local configuration</strong>
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -temp &quot;D:\tmpmzmine&quot;
+</code></pre></div></p>
+<p><strong>Start MZmine batch with memory mapping (DEFAULT)</strong>
 <div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory none -temp &quot;D:\tmpmzmine&quot;
 </code></pre></div></p>
-<p><strong>Start MZmine batch on machines with enough memory (RAM) with -memory all</strong>
+<p><strong>Start MZmine batch on machines with enough memory (RAM) with -memory all</strong> this will disable memory mapping to temporary files. 
 <div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory all -temp &quot;D:\tmpmzmine&quot;
 </code></pre></div></p>
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
 <p>If the app was installed to the <em>Applications</em> folder, run this command in the terminal to run a batch file:
 <div class="highlight"><pre><span></span><code>/Applications/MZmine.app/Contents/MacOS/MZmine -batch /path/to/batch_file.xml
 </code></pre></div></p>
+<div class="highlight"><pre><span></span><code>/Applications/MZmine.app/Contents/MacOS/MZmine -batch /path/to/batch_file.xml -input &quot;/path/to/data/*.mzML&quot;
+</code></pre></div>
 <h2 id="argument-table">Argument table<a class="headerlink" href="#argument-table" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2621,19 +2629,29 @@
 </thead>
 <tbody>
 <tr>
-<td>-batch</td>
+<td>-b and -batch</td>
 <td>a path, e.g. "D:\batch.xml"</td>
 <td>Path to batch file</td>
 </tr>
 <tr>
-<td>-memory</td>
+<td>-i and -input</td>
+<td>a txt file or glob pattern, e.g., "D:\Data\*.mzML"</td>
+<td>input data files. Either defined in a .txt text file with one file per line or by glob pattern matching. To match all .mzML files in a path: -i "D:\Data\*.mzML"</td>
+</tr>
+<tr>
+<td>-m and -memory</td>
 <td><strong>none</strong>, all, features, centroids, raw, masses_features</td>
 <td>Defines what data is kept in memory (RAM) or otherwise memory mapped to the temp directory. Generally this setting should be <em>none</em>. If memory is no issue this option might be set to <em>all</em> process all spectral and feature data in memory. The option <em>masses_features</em> keeps centroid mass lists and features in memory while memory mapping raw spectral data.</td>
 </tr>
 <tr>
-<td>-temp</td>
+<td>-t and -temp</td>
 <td>a path, e.g., "-temp "D:\tmpmzmine\"</td>
 <td>The defined directory should be on a fast drive (usually SSD &gt; HDD &gt; network drive) with enough free space. Local drives are usually preferred. MZmine uses memory mapping to efficiently store and access spectral and feature data. This can lead to a considerable temporary consumption of disk space. Make sure that the selected drive has enough space (maybe 20 GB + 1 GB/10 files; generously over estimated).</td>
+</tr>
+<tr>
+<td>-p and -pref</td>
+<td>a path, e.g., "D:\config.xml"</td>
+<td>An MZmine configuration file in xml format. The general preferences.</td>
 </tr>
 </tbody>
 </table>
@@ -2644,7 +2662,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 15, 2023 14:09:37</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 15, 2023 15:31:58</span>
       
     
   </small>
