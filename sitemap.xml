@@ -61,6 +61,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/troubleshooting.html</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/wikiacknowledgements.html</loc>
          <lastmod>2023-05-15</lastmod>
          <changefreq>daily</changefreq>
