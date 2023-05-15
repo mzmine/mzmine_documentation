@@ -21,9 +21,13 @@ This section contains information on how to tune MZmine 3 for different systems.
 The advanced data import provides the option to apply mass detection during import and only 
 loading those filtered mass spectra. This is a great way to reduce the need for memory 
 mapping of raw spectra that are not used in most workflows (most use the masslists detected 
-by Mass detection step as a filtered centroid version of spectra). 
+by Mass detection step as a filtered centroid version of spectra). This option is great for large datasets and for profile mode data. 
 
-This option is great for large datasets and for profile mode data. 
+1. Open the Import MS data parameters
+2. Activate Advanced import and press Setup
+3. Define the MS1 and MS2 detectors as described in the Mass detection step
+4. Remove all other Mass detection steps from the batch configuration, usually applied after data import
+
 
 ![Advanced import](img/advanced_import.png)
 
