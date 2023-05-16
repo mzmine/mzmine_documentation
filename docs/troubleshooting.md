@@ -13,8 +13,9 @@ Maybe the MZmine configuration got corrupted (broke). Delete it and reinstall MZ
 Report issues on the [MZmine GitHub](https://github.com/mzmine/mzmine3/issues), providing all information to reproduce the issue.
 
 **This might include**
+
 - **Input data**? provide example file
--** Batch file** defining processing steps and settings
+- ** Batch file** defining processing steps and settings
 - attach the log file located in the user folder: **mzmine_0_0.log** 
-- Expected behavior
-- Issue 
+- **Expected behavior**
+- **Issue** 
