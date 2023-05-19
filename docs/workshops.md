@@ -1,5 +1,7 @@
 # Workshops
 
+<!-- markdown-link-check-disable -->
+
 | Venue        | Description          | Dates | Speakers/Instructors | Material | Estimated Attendance |
 | ------------- |-------------| -----| -----| -----| ----- |
 | Copenhagen, Denmark | International Summer School on Non-Targeted Metabolomics 2023 | 2023-08 | Steffen Heuckeroth, Robin Schmid, Daniel Petras, and many more |  |  |
@@ -21,3 +23,5 @@
 | Zoom! | MZmine/GNPS Feature Based Molecular Networking | 5/13/2020 9AM PST | Daniel Petras, Allegra Aron | [Material](https://docs.google.com/document/d/152tYylUf9Ka3J-avLzztlNBeWbg2xwBCC3orWyEw25c/edit?usp=sharing) [Video](https://www.youtube.com/watch?v=MwdJ6mVkdJY&feature=youtu.be)| 147 |
 | MIT | Molecular Networking with MZmine and GNPS| Dec 5 2019 | Tomas Pluska, Daniel Petras, Robin Schmid | [Twitter](https://twitter.com/mzmine_project/status/1202999316790439937?s=20) | 30 |
 | Prague | MZmine/GNPS Workshop (4h) | June 28| Mingxun Wang, Louis-Felix Nothias, Robin Schmid, Justin van der Hooft | TBA | 20 |
+
+<!-- markdown-link-check-enable -->

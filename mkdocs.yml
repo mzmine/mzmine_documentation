@@ -46,6 +46,8 @@ nav:
         - Ion mobility expander: module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.md
         - Ion mobility trace builder: module_docs/lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md
         - Recursive IMS builder: module_docs/lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.md
+      - MS imaging feature detection:
+        - Image builder: module_docs/imaging_featdet/featdet_image_builder/image-builder.md
       - Smoothing: module_docs/featdet_smoothing/smoothing.md
       - Resolving:
         - Local minimum resolver: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
@@ -120,6 +122,7 @@ nav:
   - Workflows:
       - Untargeted LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
       - Untargeted LC-IMS-MS workflow: workflows/imsworkflow/ion-mobility-data-processing-workflow.md
+      - Untargeted MS imaging workflow: workflows/imagingworkflow/imaging-workflow.md
       - Batch processing: workflows/batch_processing/batch-processing.md
 
   - Additional resources:
