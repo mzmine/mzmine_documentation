@@ -15,7 +15,7 @@ native Bruker (tdf) format and not supported in imzML data.
 
 The general procedure is similar to the [LC-MS workflow](../lcmsworkflow/lcms-workflow.md).
 The raw data is imported and noise is
-removed ([raw data processing](#Raw-data-import-and-processing)) prior
+removed ([raw data processing](#raw-data-import-and-processing)) prior
 to [feature detection](#feature-detection). Afterwards, multiple [filters](#feature-filtering) are
 available to refine the data.
 
@@ -40,7 +40,7 @@ the [Image builder](../../module_docs/imaging_featdet/featdet_image_builder/imag
 When working with IMS-MS imaging datasets, the ion mobility dimension should be added by
 the [IMS expander](../../module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.md)
 subsequent to the image detection. After expanding, the IMS dimension must
-be [resolved](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#resolving-the-ion-mobility-dimension)).
+be [resolved](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#resolving-the-ion-mobility-dimension).
 
 ## Feature filtering
 
