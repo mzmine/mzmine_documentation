@@ -5,8 +5,8 @@
 :material-menu-open: **Feature detection → Imaging → Image builder**
 
 The image builder will create ion image features from mass spectrometry (MS) imaging raw data.
-Similar to the [LC-MS feature detection](../../lc-ms_featdet/featdet_adap_chromatogram_builder), a
-[feature list](../../lc-ms_featdet/featdet_results) will be produced, containing images for every
+Similar to the [LC-MS feature detection](../../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md), a
+[feature list](../../lc-ms_featdet/featdet_results/featdet_results.md) will be produced, containing images for every
 detected m/z.
 
 ## Parameters
