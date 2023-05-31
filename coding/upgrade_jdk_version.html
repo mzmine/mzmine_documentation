@@ -2453,6 +2453,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#5-update-jdk-in-github-actions" class="md-nav__link">
+    5. Update JDK in GitHub actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pr-might-look-like" class="md-nav__link">
+    PR might look like:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#intellij-specifics" class="md-nav__link">
     IntelliJ specifics
   </a>
@@ -2680,6 +2694,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#5-update-jdk-in-github-actions" class="md-nav__link">
+    5. Update JDK in GitHub actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pr-might-look-like" class="md-nav__link">
+    PR might look like:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#intellij-specifics" class="md-nav__link">
     IntelliJ specifics
   </a>
@@ -2727,7 +2755,18 @@ https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrap
 }
 </code></pre></div>
 <h2 id="4-update-gradle-project">4. Update gradle project<a class="headerlink" href="#4-update-gradle-project" title="Permanent link">&para;</a></h2>
-<p>Run update all gradle projects</p>
+<p>Run update all gradle projects to update all dependencies.</p>
+<h2 id="5-update-jdk-in-github-actions">5. Update JDK in GitHub actions<a class="headerlink" href="#5-update-jdk-in-github-actions" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>    steps:
+        - uses: actions/checkout@v3
+        - uses: actions/setup-java@v3
+        with:
+            distribution: &#39;temurin&#39;
+            java-version: &#39;20.0.1&#39;
+            cache: &#39;gradle&#39;
+</code></pre></div>
+<h2 id="pr-might-look-like">PR might look like:<a class="headerlink" href="#pr-might-look-like" title="Permanent link">&para;</a></h2>
+<p><img alt="Install JDK" src="../img/contribute/jdk_update_pull.png" /></p>
 <h2 id="intellij-specifics">IntelliJ specifics<a class="headerlink" href="#intellij-specifics" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Download a new JDK</li>
@@ -2743,7 +2782,7 @@ https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrap
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 31, 2023 15:16:08</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 31, 2023 15:28:23</span>
       
     
   </small>
