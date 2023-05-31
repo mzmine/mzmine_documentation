@@ -29,7 +29,24 @@ java {
 ```
 
 ## 4. Update gradle project
-Run update all gradle projects
+Run update all gradle projects to update all dependencies.
+
+## 5. Update JDK in GitHub actions
+
+```
+    steps:
+        - uses: actions/checkout@v3
+        - uses: actions/setup-java@v3
+        with:
+            distribution: 'temurin'
+            java-version: '20.0.1'
+            cache: 'gradle'
+```
+
+
+## PR might look like:
+
+![Install JDK](../img/contribute/jdk_update_pull.png)
 
 
 ## IntelliJ specifics
