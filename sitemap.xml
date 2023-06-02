@@ -471,6 +471,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/tools_simsef/simsef.html</loc>
+         <lastmod>2023-06-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/terminology/general-terminology.html</loc>
          <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
@@ -552,6 +557,11 @@
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/workflows/lcmsworkflow/lcms-workflow.html</loc>
+         <lastmod>2023-06-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/workflows/simsef/simsef_workflow.html</loc>
          <lastmod>2023-06-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
