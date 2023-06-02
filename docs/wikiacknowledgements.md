@@ -10,6 +10,7 @@ the [GNPS](https://ccms-ucsd.github.io/GNPSDocumentation/) staff. We highly appr
 
 
 ## Libraries we use in MZmine
+<!-- markdown-link-check-disable -->
 - [Apache XML Graphics](https://xmlgraphics.apache.org/commons/) - EPS image export
 - [Chemistry Development Kit](http://cdk.sourceforge.net) - Isotope pattern and molecular calculations
 - [Freehep](http://java.freehep.org) - EMF image export
@@ -25,5 +26,6 @@ the [GNPS](https://ccms-ucsd.github.io/GNPSDocumentation/) staff. We highly appr
 - [WEKA](http://www.cs.waikato.ac.nz/ml/weka/) - Clustering and other machine learning algorithms
 - [Bruker TDF SDK](https://www.bruker.com/de.html) - Native tdf/tdf file import (requires VC++ 2017 redist.)
 - [Thermo raw file parser](https://github.com/compomics/ThermoRawFileParser) - Native Thermo raw import
+<!-- markdown-link-check-enable -->
 
 {{ git_page_authors }}
