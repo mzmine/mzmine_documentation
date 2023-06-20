@@ -38,12 +38,16 @@ If the app was installed to the _Applications_ folder, run this command in the t
 
 ## Argument table
 
+
 | Argument | Options (**default**) | Description |
 | --- | --- | --- |
 | -b and -batch | a path, e.g. "D:\batch.xml" | Path to batch file |
-| -i and -input | a txt file or glob pattern, e.g., "D:\\Data\\*.mzML" | input data files. Either defined in a .txt text file with one file per line or by glob pattern matching. To match all .mzML files in a path: -i "D:\\Data\\*.mzML" |
+| -i and -input | a txt file or glob pattern, e.g., "D:\\Data\\\*.mzML" | input data files. Either defined in a .txt text file with one file per line or by glob pattern matching. To match all .mzML files in a path: -i "D:\\Data\\\*.mzML" |
+| -l and -libraries | a txt file or glob pattern, e.g., "D:\\Data\\\*.json" | spectral library files. Either defined in a .txt text file with one file per line or by glob pattern matching. To match all .json or .mgf files in a path: -libraries "D:\\Data\\\*.json" |
 | -m and -memory | **none**, all, features, centroids, raw, masses_features | Defines what data is kept in memory (RAM) or otherwise memory mapped to the temp directory. Generally this setting should be _none_. If memory is no issue this option might be set to _all_ process all spectral and feature data in memory. The option _masses_features_ keeps centroid mass lists and features in memory while memory mapping raw spectral data. |
 | -t and -temp | a path, e.g., "-temp "D:\tmpmzmine\" | The defined directory should be on a fast drive (usually SSD > HDD > network drive) with enough free space. Local drives are usually preferred. MZmine uses memory mapping to efficiently store and access spectral and feature data. This can lead to a considerable temporary consumption of disk space. Make sure that the selected drive has enough space (maybe 20 GB + 1 GB/10 files; generously over estimated). |
 | -p and -pref | a path, e.g., "D:\config.xml" | An MZmine configuration file in xml format. The general preferences. | 
+| -c and -threads | int number of threads or 'auto' | replace the preference parameter with either 'auto' to detect the number of available cores - or an int number of threads for processing. |
+
 
 {{ git_page_authors }}
