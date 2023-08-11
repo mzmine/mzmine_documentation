@@ -8,6 +8,7 @@ use_directory_urls: false
 nav:
   - Home page: index.md
   - Getting started: getting_started.md
+  - Learners corner: learners_corner.md
   - Main window overview: main-window-overview.md
   - Processing wizard: wizard.md
   - Data conversion: data_conversion.md
@@ -153,6 +154,7 @@ nav:
   - Troubleshooting: troubleshooting.md
   - Changelog: changelog.md
   - Workshops: workshops.md
+  
 
 copyright: This documentation is licensed under the MIT License (MIT).
 
