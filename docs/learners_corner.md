@@ -2,6 +2,7 @@
 - [MZmine project](https://www.youtube.com/@mzmineproject/playlists)
 - [Robin Schmid](https://www.youtube.com/@rschmid1789/playlists)
 - [Functional Metabolomics Lab with Daniel Petras](https://www.youtube.com/@functionalmetabolomics/playlists)
+- [Dorrestein lab](https://www.youtube.com/@dorresteinlab4428/videos)
 
 
 ## MZmine videos
