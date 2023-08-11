@@ -5,10 +5,10 @@ IntelliJ and other IDEs need to be updated to handle new JDK versions.
 
 ## 2. Update gradle version in the wrapper
 Check the compatibility of gradle and JDKs. Sometimes gradle has to run on an earlier JDK but can compile with the latest JDK as target.
-https://docs.gradle.org/current/userguide/compatibility.html
+[](https://docs.gradle.org/current/userguide/compatibility.html)
 
 Try upgrading the gradle wrapper:
-https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper
+[](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper)
 
 Or change the gradle version manually in the **/gradle/wrapper/gradle-wrapper.properties** file:
 ```
