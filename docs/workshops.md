@@ -4,8 +4,8 @@
 
 | Venue        | Description          | Dates | Speakers/Instructors | Material | Estimated Attendance |
 | ------------- |-------------| -----| -----| -----| ----- |
-| SSI, Copenhagen, Denmark | International Summer School on Non-Targeted Metabolomics 2023 | 2023-08 | Steffen Heuckeroth, Corinna Brungs, Robin Schmid, Daniel Petras, and many more |  |  |
-| DTU, Copenhagen, Denmark | Computational mass spectrometry and spectral library generation in MZmine | 2023-08 | Corinna Brungs, Robin Schmid |  |  |
+| SSI, Copenhagen, Denmark | International Summer School on Non-Targeted Metabolomics 2023 | 2023-08 | Steffen Heuckeroth, Corinna Brungs, Robin Schmid, Daniel Petras, and many more |  | 75 (+150 online) |
+| DTU, Copenhagen, Denmark | Computational mass spectrometry and spectral library generation in MZmine | 2023-08 | Corinna Brungs, Robin Schmid |  | 50 |
 | Helmholtz, Munich, Germany | Munich Metabolomics Meeting: MZmine workshop | 2023-10-12 | Robin Schmid, Corinna Brungs |  |  |
 | EMBL, Heidelberg, Germany | Computational mass spectrometry and spectral library generation in MZmine | 2023-07-24 | Robin Schmid, Corinna Brungs |  |  |
 | Niagara Falls, Canada | Metabolomics Conference: IMS Workshop (with MZmine 3) | 2023-06-18 | Tomas Pluskal |  |  |
