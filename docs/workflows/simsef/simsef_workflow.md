@@ -6,7 +6,8 @@ The spatial ion mobility-scheduled exhaustive fragmentation (SIMSEF) module can 
 ion mobility (TIMS) imaging workflows to schedule fragmentation spectra acquisitions for every
 detected feature across the tissue. This achieves high MS2 coverage and allows more confident
 compound annotations. To use the SIMSEF tool, the prmMALDI prototype instrument control software is
-required, which is distributed by Bruker Daltonics to cooperation partners.
+required, which is distributed by Bruker Daltonics to cooperation partners. You can contact your
+Bruker representative to ask for the prmMALDI prototype and refer to SIMSEF.
 
 ## Requirements
 
