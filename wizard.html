@@ -476,8 +476,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ms1ms2-noise-levels" class="md-nav__link">
-    MS1/MS2 noise levels
+  <a href="#noise-threshold-ms1ms2" class="md-nav__link">
+    Noise threshold (MS1/MS2)
   </a>
   
 </li>
@@ -3872,8 +3872,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ms1ms2-noise-levels" class="md-nav__link">
-    MS1/MS2 noise levels
+  <a href="#noise-threshold-ms1ms2" class="md-nav__link">
+    Noise threshold (MS1/MS2)
   </a>
   
 </li>
@@ -4081,8 +4081,9 @@
 <h4 id="approximate-feature-fwhm_1">Approximate feature FWHM<a class="headerlink" href="#approximate-feature-fwhm_1" title="Permanent link">&para;</a></h4>
 <p>The full-width at half maximum for IMS features</p>
 <h2 id="ms-instrument-eg-orbitrap-qtof-fticr">MS instrument, e.g., Orbitrap, qTOF, FTICR<a class="headerlink" href="#ms-instrument-eg-orbitrap-qtof-fticr" title="Permanent link">&para;</a></h2>
-<h4 id="ms1ms2-noise-levels">MS1/MS2 noise levels<a class="headerlink" href="#ms1ms2-noise-levels" title="Permanent link">&para;</a></h4>
-<p>Separate noise levels to threshold spectra of MS level 1 and 2 (or above). So the MS2 noise level is used for MSn data with level &gt; 1. These parameters can be optimized by looking at the spectral raw data in the raw data overview.</p>
+<h4 id="noise-threshold-ms1ms2">Noise threshold (MS1/MS2)<a class="headerlink" href="#noise-threshold-ms1ms2" title="Permanent link">&para;</a></h4>
+<p>Choose the mass detector from the drop down menu. Choose the <strong>Factor of lowest signal</strong> for centroided data where each spectrum contains noise signals, often represented by many signals at the same low intensity (spectral grass). This may correspond to static noise or single counts. Otherwise use an <strong>absolute intensity</strong> threshold. </p>
+<p>Depending on the selected mass detector, separate absolute noise levels or factors are defined to threshold spectra of MS level 1 and 2 (or above). So the MS2 noise level is used for MSn data with level &gt; 1. These parameters can be optimized by looking at the spectral raw data in the raw data overview.</p>
 <h4 id="minimum-feature-height">Minimum feature height<a class="headerlink" href="#minimum-feature-height" title="Permanent link">&para;</a></h4>
 <p>The minimum height of chromatograms and features</p>
 <h4 id="scan-to-scan-mz-tolerance">Scan-to-scan m/z tolerance<a class="headerlink" href="#scan-to-scan-mz-tolerance" title="Permanent link">&para;</a></h4>
@@ -4098,7 +4099,7 @@ Used to align features across samples. Those m/z values are already averaged ove
 <h4 id="original-feature-list">Original feature list<a class="headerlink" href="#original-feature-list" title="Permanent link">&para;</a></h4>
 <p>Options to either <em>keep</em> or <em>remove</em> the original feature lists. <em>Keep</em> is valuable during workflow optimization whereas <em>remove</em> saves resources and allows for more performant processing or large datasets. (See section on performance).</p>
 <h4 id="min-samples-per-aligned-feature">Min samples per aligned feature<a class="headerlink" href="#min-samples-per-aligned-feature" title="Permanent link">&para;</a></h4>
-<p>Only keep aligned features that were detected in at least n samples. This parameter should usually scale with the sampleset size and if samples are relatively similar from their compounds.</p>
+<p>Only keep aligned features that were detected in at least n samples. This parameter should usually scale with the sampleset size and if samples are relatively similar from their compounds. Uses the maximum of an absolute and relative value.</p>
 <h4 id="only-keep-features-with-13c">Only keep features with 13C<a class="headerlink" href="#only-keep-features-with-13c" title="Permanent link">&para;</a></h4>
 <p>Detect isotope pattern and only keep feature with valid 13C isotope pattern. </p>
 <h2 id="annotation">Annotation<a class="headerlink" href="#annotation" title="Permanent link">&para;</a></h2>
@@ -4120,8 +4121,10 @@ Used to align features across samples. Those m/z values are already averaged ove
 <h3 id="general-parameters">General parameters<a class="headerlink" href="#general-parameters" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Define an export path and base file name, e.g., <em>"D:\analysis\date_project"</em>  this will create a new folder and save all files from export modules there. Each module will add a specific suffix to the file name.</li>
+<li>Apply spectral networking (FBMN/IIMN): Will compare all MS2 spectra across features to form molecular networks by spectral similarity. </li>
 <li>Export for molecular networking (e.g., GNPS, FBMN, IIMN, MetGem): Will export all files for molecular networking</li>
 <li>Export for SIRIUS: Will export all files needed for SIRIUS</li>
+<li>Export annotation graphics: Exports annotations like spectral library matches, lipid matches, etc to graphical reports. Contains options to also export chromatographic/ion mobility shapes, images, and other plots. </li>
 </ul>
 <h3 id="workflow-parameters-and-descriptions">Workflow parameters and descriptions<a class="headerlink" href="#workflow-parameters-and-descriptions" title="Permanent link">&para;</a></h3>
 <h4 id="dda">DDA<a class="headerlink" href="#dda" title="Permanent link">&para;</a></h4>
@@ -4135,7 +4138,7 @@ Used to align features across samples. Those m/z values are already averaged ove
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 4, 2023 07:18:12</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 4, 2023 07:33:39</span>
       
     
   </small>
