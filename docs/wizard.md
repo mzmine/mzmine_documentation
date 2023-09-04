@@ -63,11 +63,11 @@ The number of consecutive scans/datapoints in a valid ion mobilogram and feature
 The full-width at half maximum for IMS features
 
 
-
-
 ## MS instrument, e.g., Orbitrap, qTOF, FTICR
-#### MS1/MS2 noise levels
-Separate noise levels to threshold spectra of MS level 1 and 2 (or above). So the MS2 noise level is used for MSn data with level > 1. These parameters can be optimized by looking at the spectral raw data in the raw data overview.
+#### Noise threshold (MS1/MS2) 
+Choose the mass detector from the drop down menu. Choose the **Factor of lowest signal** for centroided data where each spectrum contains noise signals, often represented by many signals at the same low intensity (spectral grass). This may correspond to static noise or single counts. Otherwise use an **absolute intensity** threshold. 
+
+Depending on the selected mass detector, separate absolute noise levels or factors are defined to threshold spectra of MS level 1 and 2 (or above). So the MS2 noise level is used for MSn data with level > 1. These parameters can be optimized by looking at the spectral raw data in the raw data overview.
 
 #### Minimum feature height
 The minimum height of chromatograms and features
@@ -93,7 +93,7 @@ Options to either _keep_ or _remove_ the original feature lists. _Keep_ is valua
 
 
 #### Min samples per aligned feature
-Only keep aligned features that were detected in at least n samples. This parameter should usually scale with the sampleset size and if samples are relatively similar from their compounds.
+Only keep aligned features that were detected in at least n samples. This parameter should usually scale with the sampleset size and if samples are relatively similar from their compounds. Uses the maximum of an absolute and relative value.
 
 #### Only keep features with 13C 
 Detect isotope pattern and only keep feature with valid 13C isotope pattern. 
@@ -119,8 +119,10 @@ Most of the parameters in the workflow section define data output and some workf
 
 ### General parameters
 - Define an export path and base file name, e.g., *"D:\analysis\date_project"*  this will create a new folder and save all files from export modules there. Each module will add a specific suffix to the file name.
+- Apply spectral networking (FBMN/IIMN): Will compare all MS2 spectra across features to form molecular networks by spectral similarity. 
 - Export for molecular networking (e.g., GNPS, FBMN, IIMN, MetGem): Will export all files for molecular networking
 - Export for SIRIUS: Will export all files needed for SIRIUS
+- Export annotation graphics: Exports annotations like spectral library matches, lipid matches, etc to graphical reports. Contains options to also export chromatographic/ion mobility shapes, images, and other plots. 
 
 
 ### Workflow parameters and descriptions

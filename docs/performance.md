@@ -2,6 +2,7 @@
 # General remarks
 This section contains information on how to tune MZmine 3 for different systems. Generally these points can improve the throughput and memory constraints:
 
+- Check the latest [**Processing Wizard**](wizard.md) workflows that may contain new modules and options to speed up and enrich your analysis. You may want to remove unnecessary steps. 
 - Make sure to set the **temporary** files directory to a **fast local drive**, e.g., SSD
 - [Convert files](data_conversion.md) to centroided open formats, e.g., mzML 
 - Run MZmine in **headless mode** as a [command-line tool](commandline_tool.md) to avoid the graphical-user interface (GUI). Just provide a batch file and process on any computer or server.
