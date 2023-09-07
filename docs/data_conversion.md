@@ -37,6 +37,20 @@ pause 1
 ```
 More details can be found in the [ProteoWizard documentation](https://proteowizard.sourceforge.io/tools/msconvert.html).
 
+## ThermoRawFileParser
+It is used to convert ThermoFisher .raw files into .mgf, .mzML, .parquet. This converter is important if an 
+internal calibrant was used (e.g., EASY-IC). This mass is excluded in the FreeStyle view, whereas MSConvert
+remains all signals in the mzML, including this. If those masses together with some flagged signals by Thermo, should be
+removed use this converter with the option --excludeExceptionData.
+
+Example for command line interface with the exclusion of exception data:
+```bash
+"C:\Users\**USERNAME**\AppData\Local\Apps\ThermoRawFileParser\ThermoRawFileParser.exe" *.raw -d=INPUT_DIRECTORY -o="./mzml_ThermoRawFileParser_excl_data/" --excludeExceptionData 
+pause 1
+```
+
+More details can be found on [GitHub](https://github.com/compomics/ThermoRawFileParser).
+
 ## Bruker: Recalibrated files to the data conversion guide
 
 For Bruker recalibrated data, it is recommended to perform **export analysis to mzXML** using the Bruker's Data Analysis software (for automation, apply Bruker’s processing script during data acquisition) prior to importing to MZmine. Compared to the mzML and mzData formats, the mzXML format best retains the full scan definition and sample recalibration properties. In mzML the MS1 scans were recalibrated but the MS2 scan definition of the precursor _m/z_ did stay unchanged, leading to differences between MS1 and MS2.
