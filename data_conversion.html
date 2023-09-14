@@ -3456,6 +3456,16 @@ can be set to specific MS levels (here MS1- for multistage fragmentation)
 pause<span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 More details can be found in the <a href="https://proteowizard.sourceforge.io/tools/msconvert.html">ProteoWizard documentation</a>.</p>
+<h2 id="thermorawfileparser">ThermoRawFileParser<a class="headerlink" href="#thermorawfileparser" title="Permanent link">&para;</a></h2>
+<p>It is used to convert ThermoFisher .raw files into .mgf, .mzML, .parquet. This converter is important if an 
+internal calibrant was used (e.g., EASY-IC). This mass is excluded in the FreeStyle view, whereas MSConvert
+remains all signals in the mzML, including this. If those masses together with some flagged signals by Thermo, should be
+removed use this converter with the option --excludeExceptionData.</p>
+<p>Example for command line interface with the exclusion of exception data:
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;C:\Users\**USERNAME**\AppData\Local\Apps\ThermoRawFileParser\ThermoRawFileParser.exe&quot;</span><span class="w"> </span>*.raw<span class="w"> </span>-d<span class="o">=</span>INPUT_DIRECTORY<span class="w"> </span>-o<span class="o">=</span><span class="s2">&quot;./mzml_ThermoRawFileParser_excl_data/&quot;</span><span class="w"> </span>--excludeExceptionData<span class="w"> </span>
+pause<span class="w"> </span><span class="m">1</span>
+</code></pre></div></p>
+<p>More details can be found on <a href="https://github.com/compomics/ThermoRawFileParser">GitHub</a>.</p>
 <h2 id="bruker-recalibrated-files-to-the-data-conversion-guide">Bruker: Recalibrated files to the data conversion guide<a class="headerlink" href="#bruker-recalibrated-files-to-the-data-conversion-guide" title="Permanent link">&para;</a></h2>
 <p>For Bruker recalibrated data, it is recommended to perform <strong>export analysis to mzXML</strong> using the Bruker's Data Analysis software (for automation, apply Bruker’s processing script during data acquisition) prior to importing to MZmine. Compared to the mzML and mzData formats, the mzXML format best retains the full scan definition and sample recalibration properties. In mzML the MS1 scans were recalibrated but the MS2 scan definition of the precursor <em>m/z</em> did stay unchanged, leading to differences between MS1 and MS2.</p>
 <p>The same problem is observed with Waters data. The solution is to use a precursor m/z values corrector by applying a script on .mzML or .mzXML files after conversion. The script and the manual how to use it can be found <a href="https://github.com/elnurgar/mzxml-precursor-corrector">here</a>.</p>
@@ -3510,7 +3520,7 @@ metadata file should be added, containing information about the input files and 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 4, 2023 07:33:39</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 14, 2023 17:28:42</span>
       
     
   </small>
