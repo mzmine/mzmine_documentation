@@ -5,8 +5,10 @@
 :material-menu-open: **Feature list methods → Annotation → Search precursor
 mass → Local compound database (CSV) search**
 
-This method assigns identity to features according to their m/z and retention
-time values.
+This method assigns identity to features according to their m/z. Additionally, retention
+time, mobility, and CCS values can be provided to restrict the annotation. Otherwise, only the m/z
+is used for the matching, which can be used for the spectral library building. For compound annotation
+in complex samples, an additional identifier should be available.
 
 :material-lightbulb: If you want to filter your feature list for a list of target compounds
 afterwards, you can use
@@ -25,7 +27,7 @@ edited manually using a text editor.
 
 The following examples shows the structure of the database file:
 
-    ID,m/z,Retention time (min),Identity,Formula
+    ID,monoisotopic_mass,rt,compound_name,formula
     1,175.121,24.5,Arginine,C6H14N4O2
     2,133.063,11.9,Asparagine,C4H8N2O3
     3,134.047,11.7,Aspartate,C4H7NO4
@@ -38,19 +40,20 @@ peaks of 174.121 m/z without considering the retention time:
 
 The available fields in a library file include:
 
-| Field name   | Field description               |
-|--------------|---------------------------------|
-| neutral mass | Neutral mass                    |
-| mz           | Precursor m/z                   |
-| rt           | Retention time                  |
-| formula      | Formula                         |
-| smiles       | SMILES                          |
-| name         | Compound name                   |
-| CCS          | CCS, Å<sup>2</sup>              |
-| mobility     | Ion mobility                    |
-| comment      | Text comment                    |
-| adduct       | Information on adduct           |
-| PubChemID    | Compound ID in PubChem database |
+| Field name        | Field description               |
+|-------------------|---------------------------------|
+| monoisotopic_mass | Neutral mass                    |
+| mz                | Precursor m/z                   |
+| rt                | Retention time                  |
+| formula           | Formula                         |
+| smiles            | SMILES                          |
+| inchi             | InChI                           |
+| compound_name     | Compound name                   |
+| CCS               | CCS/ Å<sup>2</sup>              |
+| mobility          | Ion mobility                    |
+| comment           | Text comment                    |
+| adduct            | Information on adduct           |
+| pubchem_cid       | Compound ID in PubChem database |
 
 ## **Parameters**
 
@@ -91,3 +94,18 @@ against feature list. For this option, you have to provide a neutral mass, a
 formula or a smiles code to calculate the m/z from.
 
 {{ git_page_authors }}
+
+
+- Set the **Field separator** if the metadata table is tab, comma, ect separated (\t, or ,)
+- Set the **m/z tolerance** for matching the exact masses with the measured ones
+- If you provide a RT, mobility or CCS value in your metadata table, you can set the maximum allowed
+  difference for the matching.
+- Disable the isotope matcher
+- Enable the **use adducts**, if the precursor should be calculated, and click setup
+    - In the new window you can set the possible adducts. Be aware, if you set more possible adducts,
+      more sporious hits will be created, especially if multiple compounds are in one sample.
+    - One option for the modification might be, to limit the modification only for specific adducts.
+      This can be done by adding and combining them. For example M-H2O+H, by adding M-H2O and combining
+      it with the M+H.
+- The **Filter fielname header** should be already prefilled by your wizard settings
+- Click OK
