@@ -21,7 +21,7 @@ see below).
 
 ### **Database file**
 
-Database file has to be provided in ***.csv format** (Comma-Separated Values).
+Database file has to be provided in ***.csv** or ***.tsv format** (Comma-Separated or tab).
 Such files can be exported from a spreadsheet software such as MS Excel, or
 edited manually using a text editor.
 
@@ -59,21 +59,28 @@ The available fields in a library file include:
 
 #### **Database file**
 
-Name of file that contains information for peak identification.
+Path and Name of the file that contains information for peak identification.
 
 #### **Field separator**
 
 Character(s) used to separate fields in the database file.
+- *.csv = ,
+- *.tsv = \t
 
 #### **Columns**
 
-Columns that will be imported from the library file. The choice of columns
-depends on the availability of mobility data, information about adducts, and
-presence of PubChemID in your database file.
+Columns that should be imported from the library file are selected. The choice of columns
+depends on the availability of retention time, mobility data, information about adducts, and
+the presence of the PubChemID in your database file. If the exact mass should be calculated, the
+neutral mass (or structure information) needs to be provided and enabled together with the adduct
+settings. When only a structure is provided, MZmine calculates the monoisotopic mass based on the
+given information. If the table contains already the adduct m/z value, the precursor m/z can be selected. 
+This might be useful, when the ionization differs within one dataset. The column names can be adapted
+to your table by double click and pressing enter after changing.
 
 #### **m/z tolerance**
 
-Maximum allowed m/z difference to set an identification to a peak.
+Maximum allowed m/z difference to set an annotation to a peak (max. difference between exact and accurate mass).
 
 #### **Retention time tolerance**
 
@@ -81,31 +88,40 @@ Maximum allowed retention time difference to set an identification to a peak.
 
 #### **Mobility time tolerance**
 
-Maximum allowed tolerance between two mobility values.
+Maximum allowed tolerance to set an identification to a peak.
 
 #### **CCS tolerance (%)**
 
-Maximum allowed difference (in percents) between two CCS values.
+Maximum allowed difference (in percents) to set an identification to a peak.
+
+#### **Use isotope matcher**
+
+This option matches the predicted isotope pattern against the detected ones. It is only possible to
+use if the isotope finder was run before.
 
 #### **Use adducts**
 
-If chosen, m/z values for multiple adducts will be calculated and matched
-against feature list. For this option, you have to provide a neutral mass, a
-formula or a smiles code to calculate the m/z from.
+This can be used, if the precursor should be calculated. If chosen, m/z values for all set adducts
+will be calculated and matched against the feature list. For this option, you have to provide a neutral mass, a
+formula or a SMILES code to calculate the m/z from. Be aware, if multiple adducts are set,
+more sporious hits will be created. This is also important for the spectral library creation, when
+one sample contains multiple compounds. Therefore the modifications can be limit to specific adduct
+combinations. This can be done by adding and combining them. For example M-H2O+H, by adding M-H2O and combining
+it with the M+H.
+
+#### **Filter filename header**
+
+This option is important for the library building workflow. This column contains a unique sample id
+to link the compound to the corresponding acquisition file. The unique sample id can be either part
+of the filename or the complete filename. If data are acquired multiple times with differnet method,
+a part of the filename enables the option of one metadata file or one column for the identification.
+The unique sampel id can be a combination of library_id, the plate or rack location together with the well or rack
+position. It is important to notice, that the unique sample id should not end on a number, otherwise
+libid_Plate1_A2 is also contained in libid_Plate1_A20 ect.
+
+#### **Append comment fields**
+
+Multiple fields, that are appended to the comment. They are separated by comma. For example: Pathway,
+Synonyms,...
 
 {{ git_page_authors }}
-
-
-- Set the **Field separator** if the metadata table is tab, comma, ect separated (\t, or ,)
-- Set the **m/z tolerance** for matching the exact masses with the measured ones
-- If you provide a RT, mobility or CCS value in your metadata table, you can set the maximum allowed
-  difference for the matching.
-- Disable the isotope matcher
-- Enable the **use adducts**, if the precursor should be calculated, and click setup
-    - In the new window you can set the possible adducts. Be aware, if you set more possible adducts,
-      more sporious hits will be created, especially if multiple compounds are in one sample.
-    - One option for the modification might be, to limit the modification only for specific adducts.
-      This can be done by adding and combining them. For example M-H2O+H, by adding M-H2O and combining
-      it with the M+H.
-- The **Filter fielname header** should be already prefilled by your wizard settings
-- Click OK
