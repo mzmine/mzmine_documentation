@@ -142,7 +142,7 @@ minimum number of signals and minimum number of explained signals in each scan
 based on all subformula combinations.
 For more information about each parameter go to
 [Custom database search](../../module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md)
-and [Batch spectral library generation](../../module_docs\io_spectral_library_export\spectral_library_generation.md)
+and [Batch spectral library generation](../../module_docs/io_spectral_library_export/spectral_library_generation.md)
 
 During the spectral library export, all set quality parameter are checked and only spectra that fulfill
 all set criteria are exported. For chimeric spectra, instead of discarding those, they can be flagged
