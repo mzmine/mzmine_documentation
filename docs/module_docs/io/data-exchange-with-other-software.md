@@ -218,6 +218,6 @@ For details about MetaboAnalyst functions and capabilities, please refer to its 
 
 ## **Tidymass**
 
-Tidymass can import the csv feature table from MZmine, using `convert_mzmine2mass_dataset` function. For more details see [Tidymass tutorial](https://www.tidymass.org/start/create_mass_dataset/#mzmine-feature-table-to-mass_dataset-class).
+Tidymass can import the csv feature table from MZmine, using `convert_mzmine2mass_dataset` function. For more details see [Tidymass tutorial](https://www.tidymass.org/docs/chapter2/3-mass_dataset_other_tools/).
 
 {{ git_page_authors }}
