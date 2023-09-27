@@ -90,19 +90,12 @@ how to use it can be found [here](https://github.com/elnurgar/mzxml-precursor-co
 
 ### Waters
 
-Users frequently face problems when working with waters raw files. Common issues are,
-that the correct MS level is not maintained after file conversion for MSe data and that the scans
-are not sorted by retention time. Unfortunately, these issues do net seem to follow a regular
-pattern, sometimes they appear, sometimes they don't.
+Waters recently released a tool called **Waters data connect**, which allows conversion of DDA, DIA,
+and HD-DDA data to mzML. Lock mass correction is applied during the conversion. We also recommend to
+enable centroiding (2D peak picking).
 
-First, Waters files should be calibrated in m/z and ion mobility by the vendor software and
-centroiding/peak picking should be applied.
+The tool is available here: https://microapps.on-demand.waters.com/home/showmarkdown/data-as-a-product.
 
-1. Try to convert files with MSConvert. If files were not centroided, peak picking should be enabled. Make sure to put the peak picking
-   above the title maker, if the title maker is used.
-2. If that does not work, use this tool: https://github.com/AnP311/Waters2mzML
-
-To our knowledge, Waters is currently working on a solution.
 
 ## Data sharing (FAIR)
 
