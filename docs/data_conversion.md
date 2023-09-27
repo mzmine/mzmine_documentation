@@ -94,8 +94,9 @@ Waters recently released a tool called **Waters data connect**, which allows con
 and HD-DDA data to mzML. Lock mass correction is applied during the conversion. We also recommend to
 enable centroiding (2D peak picking).
 
-The tool is available here: https://microapps.on-demand.waters.com/home/showmarkdown/data-as-a-product.
-
+<!-- markdown-link-check-disable-next-line -->
+The tool is available
+[here](https://microapps.on-demand.waters.com/home/showmarkdown/data-as-a-product).
 
 ## Data sharing (FAIR)
 
