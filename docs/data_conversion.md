@@ -3,10 +3,8 @@
 MZmine supports both **open** (e.g., .mzML, .mzXML, .imzML, .netCDF, and .aird) and **proprietary**
 formats from
 Thermo Scientific .raw, and Bruker Daltonics .d and .tdf/tsf. All other raw data files from other
-vendors must
-be converted into an open format prior to the import. Therefore, a vendor-provided or third-party
-software can
-be used.
+vendors must be converted into an open format prior to the import. Therefore, a vendor-provided or
+third-party software can be used.
 
 The **recommendations** for the data handling are the conversion of the raw data to centroided .mzML
 data files,
@@ -19,7 +17,7 @@ to .imzML, except for the timsTOF fleX MS imaging data.
 ### MSConvert (ProteoWizard) to mzML
 
 MSConvert supports the conversion of AB SCIEX, Agilent, Bruker, Shimadzu, Thermo Scientific,
-and Waters raw data. More information about the formats can be found in
+and [Waters](data_conversion.md#waters) raw data. More information about the formats can be found in
 the [ProteoWizard Documentation for Users](https://proteowizard.sourceforge.io/doc_users.html).
 Furthermore, profile data can be centroided to reduce the file size and memory consumption,
 which can be important when processing larger datasets.
@@ -94,9 +92,11 @@ Waters recently released a tool called **Waters data connect**, which allows con
 and HD-DDA data to mzML. Lock mass correction is applied during the conversion. We also recommend to
 enable centroiding (2D peak picking).
 
-<!-- markdown-link-check-disable-next-line -->
+<!-- markdown-link-check-disable -->
 The tool is available
-[here](https://microapps.on-demand.waters.com/home/showmarkdown/data-as-a-product).
+[here](https://microapps.on-demand.waters.com/home/showmarkdown/data-as-a-product). (register to
+download)
+<!-- markdown-link-check-enable -->
 
 ## Data sharing (FAIR)
 
