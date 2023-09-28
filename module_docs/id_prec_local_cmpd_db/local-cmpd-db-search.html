@@ -2309,8 +2309,29 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#use-isotope-matcher" class="md-nav__link">
+    Use isotope matcher
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#use-adducts" class="md-nav__link">
     Use adducts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-filename-header" class="md-nav__link">
+    Filter filename header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#append-comment-fields" class="md-nav__link">
+    Append comment fields
   </a>
   
 </li>
@@ -3618,8 +3639,29 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#use-isotope-matcher" class="md-nav__link">
+    Use isotope matcher
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#use-adducts" class="md-nav__link">
     Use adducts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-filename-header" class="md-nav__link">
+    Filter filename header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#append-comment-fields" class="md-nav__link">
+    Append comment fields
   </a>
   
 </li>
@@ -3651,8 +3693,10 @@
 <h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Feature list methods → Annotation → Search precursor
 mass → Local compound database (CSV) search</strong></p>
-<p>This method assigns identity to features according to their m/z and retention
-time values.</p>
+<p>This method assigns identity to features according to their m/z. Additionally, retention
+time, mobility, and CCS values can be provided to restrict the annotation. Otherwise, only the m/z
+is used for the matching, which can be used for the spectral library building. For compound annotation
+in complex samples, an additional identifier should be available.</p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> If you want to filter your feature list for a list of target compounds
 afterwards, you can use
 the <a href="../feature_list_row_filter/feature_list_rows_filter.html">Feature list rows filter</a>
@@ -3661,11 +3705,11 @@ with the only identified option.</p>
 smiles strings to calculate m/zs from) and retention times in <strong>*.csv format</strong> (
 see below).</p>
 <h3 id="database-file"><strong>Database file</strong><a class="headerlink" href="#database-file" title="Permanent link">&para;</a></h3>
-<p>Database file has to be provided in <strong>*.csv format</strong> (Comma-Separated Values).
+<p>Database file has to be provided in <strong><em>.csv</em>* or </strong><em>.tsv format</em>* (Comma-Separated or tab).
 Such files can be exported from a spreadsheet software such as MS Excel, or
 edited manually using a text editor.</p>
 <p>The following examples shows the structure of the database file:</p>
-<pre><code>ID,m/z,Retention time (min),Identity,Formula
+<pre><code>ID,monoisotopic_mass,rt,compound_name,formula
 1,175.121,24.5,Arginine,C6H14N4O2
 2,133.063,11.9,Asparagine,C4H8N2O3
 3,134.047,11.7,Aspartate,C4H7NO4
@@ -3685,7 +3729,7 @@ peaks of 174.121 m/z without considering the retention time:</p>
 </thead>
 <tbody>
 <tr>
-<td>neutral mass</td>
+<td>monoisotopic_mass</td>
 <td>Neutral mass</td>
 </tr>
 <tr>
@@ -3705,12 +3749,16 @@ peaks of 174.121 m/z without considering the retention time:</p>
 <td>SMILES</td>
 </tr>
 <tr>
-<td>name</td>
+<td>inchi</td>
+<td>InChI</td>
+</tr>
+<tr>
+<td>compound_name</td>
 <td>Compound name</td>
 </tr>
 <tr>
 <td>CCS</td>
-<td>CCS, Å<sup>2</sup></td>
+<td>CCS/ Å<sup>2</sup></td>
 </tr>
 <tr>
 <td>mobility</td>
@@ -3725,32 +3773,57 @@ peaks of 174.121 m/z without considering the retention time:</p>
 <td>Information on adduct</td>
 </tr>
 <tr>
-<td>PubChemID</td>
+<td>pubchem_cid</td>
 <td>Compound ID in PubChem database</td>
 </tr>
 </tbody>
 </table>
 <h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <h4 id="database-file_1"><strong>Database file</strong><a class="headerlink" href="#database-file_1" title="Permanent link">&para;</a></h4>
-<p>Name of file that contains information for peak identification.</p>
+<p>Path and Name of the file that contains information for peak identification.</p>
 <h4 id="field-separator"><strong>Field separator</strong><a class="headerlink" href="#field-separator" title="Permanent link">&para;</a></h4>
-<p>Character(s) used to separate fields in the database file.</p>
+<p>Character(s) used to separate fields in the database file.
+- <em>.csv = ,
+- </em>.tsv = \t</p>
 <h4 id="columns"><strong>Columns</strong><a class="headerlink" href="#columns" title="Permanent link">&para;</a></h4>
-<p>Columns that will be imported from the library file. The choice of columns
-depends on the availability of mobility data, information about adducts, and
-presence of PubChemID in your database file.</p>
+<p>Columns that should be imported from the library file are selected. The choice of columns
+depends on the availability of retention time, mobility data, information about adducts, and
+the presence of the PubChemID in your database file. If the exact mass should be calculated, the
+neutral mass (or structure information) needs to be provided and enabled together with the adduct
+settings. When only a structure is provided, MZmine calculates the monoisotopic mass based on the
+given information. If the table contains already the adduct m/z value, the precursor m/z can be selected. 
+This might be useful, when the ionization differs within one dataset. The column names can be adapted
+to your table by double click and pressing enter after changing.</p>
 <h4 id="mz-tolerance"><strong>m/z tolerance</strong><a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum allowed m/z difference to set an identification to a peak.</p>
+<p>Maximum allowed m/z difference to set an annotation to a peak (max. difference between exact and accurate mass).</p>
 <h4 id="retention-time-tolerance"><strong>Retention time tolerance</strong><a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h4>
 <p>Maximum allowed retention time difference to set an identification to a peak.</p>
 <h4 id="mobility-time-tolerance"><strong>Mobility time tolerance</strong><a class="headerlink" href="#mobility-time-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum allowed tolerance between two mobility values.</p>
+<p>Maximum allowed tolerance to set an identification to a peak.</p>
 <h4 id="ccs-tolerance"><strong>CCS tolerance (%)</strong><a class="headerlink" href="#ccs-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum allowed difference (in percents) between two CCS values.</p>
+<p>Maximum allowed difference (in percents) to set an identification to a peak.</p>
+<h4 id="use-isotope-matcher"><strong>Use isotope matcher</strong><a class="headerlink" href="#use-isotope-matcher" title="Permanent link">&para;</a></h4>
+<p>This option matches the predicted isotope pattern against the detected ones. It is only possible to
+use if the isotope finder was run before.</p>
 <h4 id="use-adducts"><strong>Use adducts</strong><a class="headerlink" href="#use-adducts" title="Permanent link">&para;</a></h4>
-<p>If chosen, m/z values for multiple adducts will be calculated and matched
-against feature list. For this option, you have to provide a neutral mass, a
-formula or a smiles code to calculate the m/z from.</p>
+<p>This can be used, if the precursor should be calculated. If chosen, m/z values for all set adducts
+will be calculated and matched against the feature list. For this option, you have to provide a neutral mass, a
+formula or a SMILES code to calculate the m/z from. Be aware, if multiple adducts are set,
+more sporious hits will be created. This is also important for the spectral library creation, when
+one sample contains multiple compounds. Therefore the modifications can be limit to specific adduct
+combinations. This can be done by adding and combining them. For example M-H2O+H, by adding M-H2O and combining
+it with the M+H.</p>
+<h4 id="filter-filename-header"><strong>Filter filename header</strong><a class="headerlink" href="#filter-filename-header" title="Permanent link">&para;</a></h4>
+<p>This option is important for the library building workflow. This column contains a unique sample id
+to link the compound to the corresponding acquisition file. The unique sample id can be either part
+of the filename or the complete filename. If data are acquired multiple times with differnet method,
+a part of the filename enables the option of one metadata file or one column for the identification.
+The unique sampel id can be a combination of library_id, the plate or rack location together with the well or rack
+position. It is important to notice, that the unique sample id should not end on a number, otherwise
+libid_Plate1_A2 is also contained in libid_Plate1_A20 ect.</p>
+<h4 id="append-comment-fields"><strong>Append comment fields</strong><a class="headerlink" href="#append-comment-fields" title="Permanent link">&para;</a></h4>
+<p>Multiple fields, that are appended to the comment. They are separated by comma. For example: Pathway,
+Synonyms,...</p>
 <p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
 
   <hr>
@@ -3758,7 +3831,7 @@ formula or a smiles code to calculate the m/z from.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 27, 2023 11:02:19</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 28, 2023 11:02:11</span>
       
     
   </small>
