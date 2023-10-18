@@ -1,20 +1,14 @@
 # Getting Started
 
-## Download
+## Installation
+The latest version of MZmine 3 can be downloaded [here](https://github.com/mzmine/mzmine3/releases/latest). We provide both installer packages (preferred but might require admin permissions) and portable versions for Windows, macOS and Linux. Windows and macOS users might need to confirm to trust software from an unknown source.
 
-Download MZmine 3 portable versions or installers from GitHub:
-
-[https://github.com/mzmine/mzmine3/releases/latest](https://github.com/mzmine/mzmine3/releases/latest)
-
-## Install
-
-MZmine should work on Windows, macOS, and Linux using either the installers or the portable versions. There are **NO** further requirements as MZmine packages a specific Java Virtual Machine. This means the local Java installation has **no** impact on MZmine. Windows users might be warned that MZmine is not signed or from a trusted source and have to click run anyways. 
-
-Before creating your first project, we recommend to [set the preferences](#set-user-preferences). 
+!!! info
+  
+    MZmine comes integrated with _Java Runtime Environment_; therefore, the local _Java_ installation has no impact on MZmine. 
 
 ## Set User Preferences
-
-Before creating your first project, we recommend setting up some things.
+Before start processing your data, we recommend to [set up a few things](#set-user-preferences) to ensure a smooth running of the software:
 
 1. Set a temporary file directory. Go to _Project_ → _Set preferences_ → _Temporary file directory_.
    This requires a restart to take effect.
@@ -23,8 +17,6 @@ Before creating your first project, we recommend setting up some things.
     3. On Windows, old temporary files are deleted when a new session is started.
 2. MZmine 2 projects cannot be imported due to changes in the data structure.
 3. MZmine 2 batch files cannot be imported due to parameter optimizations.
-
-You can get familiar with the new GUI here: [Main window overview](main-window-overview.md)
 
 ## Start processing 
 
@@ -71,7 +63,6 @@ sudo xattr -d com.apple.quarantine /Applications/MZmine.app
 The Terminal does not output any log or message.
 ![](img/install_mac3.png)
 
-Before creating your first project, we recommend to [set the preferences](#set-user-preferences).
 
 
 {{ git_page_authors }}
