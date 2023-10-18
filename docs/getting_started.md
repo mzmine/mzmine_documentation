@@ -7,36 +7,26 @@ The latest version of MZmine 3 can be downloaded [here](https://github.com/mzmin
   
     MZmine comes integrated with _Java Runtime Environment_; therefore, the local _Java_ installation has no impact on MZmine. 
 
-## Set User Preferences
-Before start processing your data, we recommend to [set up a few things](#set-user-preferences) to ensure a smooth running of the software:
+## Set temporary file directory
+MZmine generates a significant amount (several gigabytes) of temporary files during processing. Therefore, we recommend to set the temporary file directory to a local drive (preferably SSD) with enough free space. To do so, go to '**Project → Set preferences → General → Temporary file directory**' and browse the desidered directory. On Windows, old temporary files are deleted when a new MZmine session is started.
 
-1. Set a temporary file directory. Go to _Project_ → _Set preferences_ → _Temporary file directory_.
-   This requires a restart to take effect.
-    2. We recommend setting the directory to an SSD with enough space for fast processing and
-       visualizations.
-    3. On Windows, old temporary files are deleted when a new session is started.
-2. MZmine 2 projects cannot be imported due to changes in the data structure.
-3. MZmine 2 batch files cannot be imported due to parameter optimizations.
+!!! warning
 
-## Start processing 
-
-An excellent place to start would be [MZmine video tutorials on YouTube](https://www.youtube.com/@mzmineproject/playlists).
-
-A quick insight to data processing workflows can be found
-here: [LC-MS workflow](workflows/lcmsworkflow/lcms-workflow.md)
-or [LC-IMS-IMS workflow](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)
-
-You can also check out the new processing wizard under [Processing wizard](wizard.md) in the main menu. 
+    Changes in the temporary file directory require a restart of the software to take effect.
 
 ## Running MZmine
+MZmine provides a user-friendly and interactive [graphical user interface](main-window-overview.md) (GUI) for data exploration, workflow optimization and results validation. Moreover, processing pipelines (including data import/export) can be run with a few clicks using the [batch mode](workflows/batch_processing/batch-processing.md). Finally, MZmine can also be run through the [command-line interface](commandline_tool.md) (CLI), which enable its integration into fully automated data analysis pipelines (e.g., QC systems).
 
-MZmine provides a user-friendly graphical user interface (GUI) that facilitates data exploration, batch optimization, and results validation. If the batch processing is optimized and the goal is to solely produce the output files without the need for GUI, we recommend [running MZmine as a command-line tool](commandline_tool.md). 
+## Useful resources
+**TO-DO**
 
 
 
+**TO-MOVE**
 ## Older MZmine versions on macOS
+If running MZmine versions prior to 3.4.0, please see here.
 
-Currently, MZmine 3 lacks a signature for macOS. While we are working on this, user can allow MZmine
+MZmine versions prior to 3.4.0 lack macOS signining. Therefore, users need to allow MZmine
 in the macOS Gatekeeper protection by running the following command in the terminal from the
 Applications folder.
 
