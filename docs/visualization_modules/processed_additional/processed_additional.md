@@ -119,7 +119,7 @@ If you use this module for your analysis or visualization, please cite:
 
 ### **Detailed functionality**
 
-This module allows to create 2 and 3 dimensional Kendrick mass plots. All possible feature characteristics can be plotted in a third dimension.
+This module allows to create 4 dimensional Kendrick mass plots. All possible feature characteristics can be plotted as color scale or bubble size.
 
 #### **Charge dependent Kendrick mass plots**
 
