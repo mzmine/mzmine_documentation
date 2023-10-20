@@ -152,8 +152,12 @@ nav:
       - Contribute to documentation: contribute.md
       - Documentation template: contribute_docu_template.md
 
+  - Misc:
+    - MacOS: macos_sign.md
   - Acknowledgements: wikiacknowledgements.md
-  - Troubleshooting: troubleshooting.md
+  - Troubleshooting:
+    - Troubleshooting: troubleshooting.md
+    - MacOS: macos_sign.md
   - Changelog: changelog.md
   - Workshops: workshops.md
   
