@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/io_spectral_library_export/spectral_library_generation.html">
       
       
+        <link rel="prev" href="../io/data-exchange-with-other-software.html">
+      
+      
+        <link rel="next" href="../featdet_file_merging/raw-files-merging.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Batch spectral library generation - MZmine 3 Documentation</title>
+        <title>Spectral library export - MZmine 3 Documentation</title>
       
     
     
@@ -100,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Batch spectral library generation
+              Spectral library export
             
           </span>
         </div>
@@ -400,17 +404,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
@@ -423,7 +429,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Processing modules
@@ -434,17 +440,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" checked>
         
           <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
             
@@ -457,7 +465,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11_1">
             <span class="md-nav__icon md-icon"></span>
             I/O
@@ -559,6 +567,196 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Spectral library export
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="spectral_library_generation.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Spectral library export
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export-file" class="md-nav__link">
+    Export file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-format" class="md-nav__link">
+    Export format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms-level-filter" class="md-nav__link">
+    MS level filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mz-tolerance-merging" class="md-nav__link">
+    m/z tolerance (merging)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handle-chimeric-spectra" class="md-nav__link">
+    Handle chimeric spectra
+  </a>
+  
+    <nav class="md-nav" aria-label="Handle chimeric spectra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-ion-mz-tolerance" class="md-nav__link">
+    Target ion m/z tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precursor-mz-isolation-tolerance" class="md-nav__link">
+    Precursor m/z isolation tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-precursor-purity" class="md-nav__link">
+    Minimum precursor purity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chimeric-spectra" class="md-nav__link">
+    Chimeric spectra
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-parameters" class="md-nav__link">
+    Quality Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimum-number-of-signals" class="md-nav__link">
+    Minimum number of signals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-explained-signals" class="md-nav__link">
+    **Minimum explained signals (%)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-explained-intensity" class="md-nav__link">
+    **Minimum explained intensity (%)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formula-mz-tolerance" class="md-nav__link">
+    Formula m/z tolerance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2910,6 +3108,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/librarygeneration/library_generation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Library generation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3619,14 +3837,14 @@ the explained signal one.</p>
 <h4 id="formula-mz-tolerance"><strong>Formula m/z tolerance</strong><a class="headerlink" href="#formula-mz-tolerance" title="Permanent link">&para;</a></h4>
 <p>This is the m/z tolerance to assign MSn signals to a subformula.</p>
 <hr />
-<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 16, 2023 12:20:47</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 20, 2023 13:37:35</span>
       
     
   </small>
