@@ -24,6 +24,7 @@ nav:
           -  Feature list import: module_docs/io/feat-list-import.md
           -  Feature list export: module_docs/io/feat-list-export.md
           -  Export to other software: module_docs/io/data-exchange-with-other-software.md
+          -  Spectral library export: module_docs/io_spectral_library_export/spectral_library_generation.md
 #         TODO Add feature list import/export
       - File merging:
         - Raw data files merging: module_docs/featdet_file_merging/raw-files-merging.md
@@ -127,6 +128,7 @@ nav:
       - Untargeted LC-IMS-MS workflow: workflows/imsworkflow/ion-mobility-data-processing-workflow.md
       - Untargeted MS imaging workflow: workflows/imagingworkflow/imaging-workflow.md
       - Batch processing: workflows/batch_processing/batch-processing.md
+      - Library generation: workflows/librarygeneration/library_generation.md
 
   - Additional resources:
       - General Terminology: terminology/general-terminology.md
