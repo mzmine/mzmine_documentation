@@ -1,77 +1,27 @@
 # Getting Started
 
-## Download
+## Installation
+The latest version of MZmine 3 can be downloaded [here](https://github.com/mzmine/mzmine3/releases/latest). We provide both installer packages (preferred but might require admin permissions) and portable versions for Windows, macOS and Linux. MZmine comes integrated with _Java Runtime Environment_; therefore, the local _Java_ installation has no impact on MZmine. Windows and macOS users might need to confirm to trust software from an unknown source.
 
-Download MZmine 3 portable versions or installers from GitHub:
+!!! warning
+  
+    Macos signature was introduced in MZmine version 3.4.0. If you are running older versions of the software, you will need to allow MZmine in the macOS Gatekeeper (see [here](macos_sign.md)).
+ 
 
-[https://github.com/mzmine/mzmine3/releases/latest](https://github.com/mzmine/mzmine3/releases/latest)
+## Set temporary file directory
+MZmine generates a significant amount (several gigabytes) of temporary files during processing. Therefore, we recommend to set the temporary file directory to a local drive (preferably SSD) with enough free space. To do so, go to '**Project → Set preferences → General → Temporary file directory**' and browse the desidered directory. On Windows, old temporary files are deleted when a new MZmine session is started.
 
-## Install
+!!! warning
 
-MZmine should work on Windows, macOS, and Linux using either the installers or the portable versions. There are **NO** further requirements as MZmine packages a specific Java Virtual Machine. This means the local Java installation has **no** impact on MZmine. Windows users might be warned that MZmine is not signed or from a trusted source and have to click run anyways. 
-
-Before creating your first project, we recommend to [set the preferences](#set-user-preferences). 
-
-## Set User Preferences
-
-Before creating your first project, we recommend setting up some things.
-
-1. Set a temporary file directory. Go to _Project_ → _Set preferences_ → _Temporary file directory_.
-   This requires a restart to take effect.
-    2. We recommend setting the directory to an SSD with enough space for fast processing and
-       visualizations.
-    3. On Windows, old temporary files are deleted when a new session is started.
-2. MZmine 2 projects cannot be imported due to changes in the data structure.
-3. MZmine 2 batch files cannot be imported due to parameter optimizations.
-
-You can get familiar with the new GUI here: [Main window overview](main-window-overview.md)
-
-## Start processing 
-
-An excellent place to start would be [MZmine video tutorials on YouTube](https://www.youtube.com/@mzmineproject/playlists).
-
-A quick insight to data processing workflows can be found
-here: [LC-MS workflow](workflows/lcmsworkflow/lcms-workflow.md)
-or [LC-IMS-IMS workflow](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)
-
-You can also check out the new processing wizard under [Processing wizard](wizard.md) in the main menu. 
+    Changes in the temporary file directory require a restart of the software to take effect.
 
 ## Running MZmine
+MZmine provides a user-friendly and interactive [graphical user interface](main-window-overview.md) (GUI) for data exploration, workflow optimization and results validation. Moreover, processing pipelines (including data import/export) can be run with a few clicks using the [batch mode](workflows/batch_processing/batch-processing.md). Finally, MZmine can also be run through the [command-line interface](commandline_tool.md) (CLI), which enable its integration into fully automated data analysis pipelines (e.g., QC systems).
 
-MZmine provides a user-friendly graphical user interface (GUI) that facilitates data exploration, batch optimization, and results validation. If the batch processing is optimized and the goal is to solely produce the output files without the need for GUI, we recommend [running MZmine as a command-line tool](commandline_tool.md). 
+## Useful resources
+If you are new to mass spectrometry data processing in MZmine, checkout our [learners corner](learners_corner.md) with tutorial videos, webinars and other resources!
 
-
-
-## Older MZmine versions on macOS
-
-Currently, MZmine 3 lacks a signature for macOS. While we are working on this, user can allow MZmine
-in the macOS Gatekeeper protection by running the following command in the terminal from the
-Applications folder.
-
-- Download MZmine and click the MZmine.dmg installer - Drag and drop MZmine into the Applications
-  folder
-- Open the Applciations folder, right click (CTRL click) anywhere, e.g., on the MZmine icon, and
-  choose "New Terminal at folder" from the context menu
-- Run the provided command to tell macOS to trust the installed version of MZmine. The terminal
-  directory has to be the Applications folder. (Depending on the actual folder use or omit the `../`
-  to jump to the parent directory).
-- Approve command with user password
-- Start MZmine
-
-```
-sudo xattr -cr ../MZmine.app
-
-# if this fails try
-# the app will appear in the security preferences and you will be able to choose the "Open anyway" option
-sudo xattr -d com.apple.quarantine /Applications/MZmine.app
-```
-
-![](img/install_mac1.png){: style="height:150px"} ![](img/install_mac2.png){: style="width:150px"}
-
-The Terminal does not output any log or message.
-![](img/install_mac3.png)
-
-Before creating your first project, we recommend to [set the preferences](#set-user-preferences).
+New MZmine users can also take advantage of the new [_Processing wizard_](wizard.md) for the quick and beginner-friendly generation of data processing workflows for different MS platforms.
 
 
 {{ git_page_authors }}
