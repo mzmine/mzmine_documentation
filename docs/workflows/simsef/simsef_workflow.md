@@ -12,11 +12,13 @@ Bruker representative to ask for the prmMALDI prototype and refer to SIMSEF.
 ## Requirements
 
 - access to timsTOF fleX instrument
-- access to the prototypic timsControl 4.1 with the prm-MALDI option
-- acquire MS1 data with a smaller laser spot size than raster size (= stage movement/pixel size)
-    - this leaves some tissue for MS2 acquisition
+- access to the prototypic timsControl 4.1 with the prm-MALDI option (contact your Bruker representative)
+- [Download](https://github.com/SteffenHeu/simsef_py/releases) SIMSEF acquistion tool
 
 ## Procedure
+
+**Note:** :warning: acquire MS1 data with a smaller laser spot size than raster size (= stage movement/pixel size)
+    - this leaves some tissue for MS2 acquisition
 
 1. Prepare the sample following your default procedure.
 2. Setup the imaging run in flexImaging. Set the raster size bigger than the laser spot size in your
