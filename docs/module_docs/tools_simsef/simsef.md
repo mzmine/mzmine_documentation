@@ -8,6 +8,9 @@ detected feature across the tissue. This achieves high MS2 coverage and allows m
 compound annotations. To use the SIMSEF tool, the prmMALDI prototype instrument control software is
 required, which is distributed by Bruker Daltonics to cooperation partners.
 
+**Note:** :warning: Due to the size of IMS-MS imaging data, we recommend to use 10,000-40,000 pixels
+in your MS1 run for SIMSEF experiments
+
 ## Parameters
 
 ### Feature lists
@@ -16,7 +19,8 @@ Select the feature list to create the MS2 events for.
 
 ### Data location
 
-File path to store the schedule in. This directory must also exist on the data acquisition PC.
+File path to store the schedule in. This directory must also exist on the data acquisition PC and
+not contain spaces or special characters.
 
 ### Path to msmsmaldi.exe
 
