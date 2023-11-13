@@ -129,6 +129,7 @@ nav:
       - Untargeted MS imaging workflow: workflows/imagingworkflow/imaging-workflow.md
       - Batch processing: workflows/batch_processing/batch-processing.md
       - Library generation: workflows/librarygeneration/library_generation.md
+      - SIMSEF: workflows/simsef/simsef_workflow.md
 
   - Additional resources:
       - General Terminology: terminology/general-terminology.md
