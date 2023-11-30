@@ -8,6 +8,9 @@ detected feature across the tissue. This achieves high MS2 coverage and allows m
 compound annotations. To use the SIMSEF tool, the prmMALDI prototype instrument control software is
 required, which is distributed by Bruker Daltonics to cooperation partners.
 
+**Note:** :warning: Due to the size of IMS-MS imaging data, we recommend to use 10,000-40,000 pixels
+in your MS1 run for SIMSEF experiments
+
 ## Parameters
 
 ### Feature lists
@@ -16,7 +19,8 @@ Select the feature list to create the MS2 events for.
 
 ### Data location
 
-File path to store the schedule in. This directory must also exist on the data acquisition PC.
+File path to store the schedule in. This directory must also exist on the data acquisition PC and
+not contain spaces or special characters.
 
 ### Path to msmsmaldi.exe
 
@@ -85,5 +89,10 @@ Laser Desorption/ionization-Mass Spectrometry - Tattoo Pigment Identification Su
 Ion Mobility Spectrometry. Anal. Chim. Acta 2023, 1242, 340796.
 <!-- markdown-link-check-disable-next-line -->
 doi: https://doi.org/10.1016/j.aca.2023.340796
+
+[2] Heuckeroth, S. et al. On-tissue dataset-dependent MALDI-TIMS-MS2 bioimaging. Nat Commun 14,
+7495 (2023).
+<!-- markdown-link-check-disable-next-line -->
+doi: https://doi.org/10.1038/s41467-023-43298-9
 
 {{ git_page_authors }}
