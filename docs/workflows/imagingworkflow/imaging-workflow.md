@@ -19,7 +19,7 @@ removed ([raw data processing](#raw-data-import-and-processing)) prior
 to [feature detection](#feature-detection). Afterwards, multiple [filters](#feature-filtering) are
 available to refine the data.
 
-![workflow-image](../../../reference_media/workflows/mzmine_workflows_3_imaging.png)
+![workflow-image](mzmine_workflows_3_imaging.png)
 
 ## Raw data import and processing
 

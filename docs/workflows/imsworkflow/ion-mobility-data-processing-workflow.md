@@ -86,7 +86,7 @@ create individual IMS features.
 
 
 This figure shows the workflow in a more detailed manner, with additional optional steps.
-![workflow-image](../../../reference_media/workflows/mzmine_workflows_1_lc.png)
+![workflow-image](../lcmsworkflow/mzmine_workflows_1_lc.png)
 
 ### LC-IMS-MS workflow
 
