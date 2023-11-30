@@ -66,6 +66,7 @@ nav:
           - Multivariate curve resolution: module_docs/featdet_multivariate_curve_res/featdet_multivar_curve_res.md
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
       - MS2 scan pairing: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
+      - MALDI MS2 scan pairing (SIMSEF): module_docs/featdet_ms2_scan_pairing/ms2_maldi_scan_pairing.md
       - Isotope filtering:
           - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md
           - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md
@@ -130,6 +131,9 @@ nav:
       - Batch processing: workflows/batch_processing/batch-processing.md
       - Library generation: workflows/librarygeneration/library_generation.md
       - SIMSEF: workflows/simsef/simsef_workflow.md
+
+  - Tools:
+      - SIMSEF scheduler: module_docs/tools_simsef/simsef.md
 
   - Additional resources:
       - General Terminology: terminology/general-terminology.md

@@ -90,4 +90,9 @@ Ion Mobility Spectrometry. Anal. Chim. Acta 2023, 1242, 340796.
 <!-- markdown-link-check-disable-next-line -->
 doi: https://doi.org/10.1016/j.aca.2023.340796
 
+[2] Heuckeroth, S. et al. On-tissue dataset-dependent MALDI-TIMS-MS2 bioimaging. Nat Commun 14,
+7495 (2023).
+<!-- markdown-link-check-disable-next-line -->
+doi: https://doi.org/10.1038/s41467-023-43298-9
+
 {{ git_page_authors }}
