@@ -58,7 +58,7 @@ in your MS1 run for SIMSEF experiments
 15. Run [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md) with the
     centroid mass detector and noise level 50-100 (starting point, for MS2 only!)
 16. Pair the MS2 spectra to the image features using
-    the [Assign MALDI MS2s to features](../../module_docs/featdet_MS2_scan_pairing/ms2_maldi_scan_pairing.md)
+    the [Assign MALDI MS2s to features](../../module_docs/featdet_ms2_scan_pairing/ms2_maldi_scan_pairing.md)
     module
 17. Annotate using any annotation module in MZmine
 
