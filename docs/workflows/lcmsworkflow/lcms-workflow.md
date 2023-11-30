@@ -1,7 +1,8 @@
 # Untargeted LC-MS Workflow
 The workflow proposed herein is intended as a general pipeline for untargeted LC-MS (or LC−MS/MS) data preprocessing. The main goal is essentially to turn the highly-complex LC-MS raw data into a list of features, and corresponding signal intensity, detected across the analysed samples. Such feature lists can then be exported for further downstream analysis (e.g., identification, search against spectral libraries, statistical analysis, etc.). A schematic representation of the workflow is shown below:
 
-![workflow-image](workflow-image.png)
+![workflow-image](mzmine_workflows_1_lc.png)
+The magenta steps only refer to ion mobility data processing and are omitted here.
 
 
 ## Raw data processing
@@ -16,18 +17,15 @@ This step produces a list (referred to as "mass list") of the m/z values found i
 ## Feature processing
 The goal of the "Feature processing" is to obtain a list of all the detected features (characterized by a RT and m/z value) from the raw LC-MS data.
 
-
 ### Chromatogram building
 The first step in the "Feature processing" is to build the so-called extracted ion chromatograms (EICs) for each detected mass (see "Mass detection").
 There are two modules in MZmine 3 that can fulfil this task: [ADAP chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) (widely used) and **Grid mass** (create docs).
 
 The "detected" features in each ﬁle are listed in the so-called "feature lists", which are then further processed and aligned to connect corresponding features across all samples.
 
-
 ### Smoothing in retention time dimension (optional)
 Depending on the LC peak shape (i.e. data noisiness), the user can perform smoothing in retention time dimension. 
 For more details see the [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md) and [Smoothing](../../module_docs/featdet_smoothing/smoothing.md) modules.
-
 
 ### Feature resolving
 Feature resolving step enables separation of co-eluting and overlapping chromatography peaks and as such is one of the pivotal steps in data preprocessing. For more detalis on the algorithm used and parameters settings, see the [Local minimum resolver](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) module.
@@ -36,7 +34,6 @@ Feature resolving step enables separation of co-eluting and overlapping chromato
 In order to remove redundant features, such as the ones generated due to the presence of isotopologues, isotope filter should be applied.
 [^13^C isotope filter (isotope grouper)](../../module_docs/filter_isotope_filter/isotope_filter.md) removes ^13^C isotope features from the feature list.
 Use the isotope finder for more sensitive detection of possible isotope signals.  
-
 
 ### Isotope pattern finder 
 Isotope pattern finder searches for the isotope signals of selected chemical elements in the mass list of each feature.
