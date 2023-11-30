@@ -84,6 +84,10 @@ the [Ims expander](../../module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-
 The resulting ion mobility traces (**f**), have to be resolved in mobility dimension afterwards, to
 create individual IMS features.
 
+
+This figure shows the workflow in a more detailed manner, with additional optional steps.
+![workflow-image](../lcmsworkflow/mzmine_workflows_1_lc.png)
+
 ### LC-IMS-MS workflow
 
 The LC-IMS-MS workflow will directly
