@@ -19,6 +19,8 @@ removed ([raw data processing](#raw-data-import-and-processing)) prior
 to [feature detection](#feature-detection). Afterwards, multiple [filters](#feature-filtering) are
 available to refine the data.
 
+![workflow-image](../../../reference_media/workflows/mzmine_workflows_3_imaging.png)
+
 ## Raw data import and processing
 
 Raw data is imported by a simple drag-and-drop gesture to the MS data files tab in the main window (
@@ -42,12 +44,19 @@ the [IMS expander](../../module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-
 subsequent to the image detection. After expanding, the IMS dimension must
 be [resolved](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#resolving-the-ion-mobility-dimension).
 
+## LC-Image aligner
+
+If an LC-MS dataset was acquired for the imaging sample, the results can be aligned using
+the [LC-Image Aligner](../../module_docs/align_lc-image/align_lc-image.md). This allows integration
+of the two datasets and can be used for more confident identifications in imaging experiments. (
+see https://www.nature.com/articles/s41587-023-01690-2)
+
 ## Feature filtering
 
 After feature detection, the ion image features can be filtered to refine the results, for example
 by the [Feature filter](../../module_docs/feature_filter/feature_filter.md) or
 the [Rows filter](../../module_docs/feature_list_row_filter/feature_list_rows_filter.md). Additional
 filters are found in the  :material-menu-open: **Feature list methods → Feature filtering** menu.
-When using the deisotoping modules, consider that there is no chromatographic separation. 
+When using the deisotoping modules, consider that there is no chromatographic separation.
 
 {{ git_page_authors }}
