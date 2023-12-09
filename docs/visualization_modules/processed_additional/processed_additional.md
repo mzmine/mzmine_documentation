@@ -207,10 +207,9 @@ Enter lower bound left and higher bound right. If you have choosen percentile fo
 
 Select the style of your paint scale. You can choose between rainbow and different monochrome color coded paint scales.
 
-## **Van Krevelen diagram**
+## Van Krevelen diagram
 
-### **Description**
-
+### Description
 **Van Krevelen diagrams** are graphical plots developed by Dirk Willem van Krevelen (chemist and professor of fuel technology at the TU Delft) that are used to assess the origin and maturity of kerogen and petroleum. 
 
 The diagram cross-plots the hydrogen:carbon (hydrogen index) as a function of the oxygen:carbon (oxygen index) atomic ratios of carbon compounds. 
@@ -220,19 +219,19 @@ The diagram cross-plots the hydrogen:carbon (hydrogen index) as a function of th
     1. Van Krevelen, D.W. (1950). "Graphical-statistical method for the study of structure and reaction processes of coal", Fuel, 29, 269-84
     2. https://en.wikipedia.org/wiki/Van_Krevelen_diagram
 
-### **Parameters**
+![vankrevelenexample](van-krevelen-example.png)
 
-#### **Peaks**
+### Parameters
+![vankrevelenparameters](vankrevelenparameters.png)
+#### Feature lists
+Select feature list to display as Van Krevelen Diagram.
 
-Select peaks from the feature list.
+#### Color scale
+Select which parameters you want to display as a color scale.
 
-#### **Z-Axis**
+#### Bubble size
+Select which parameters you want to display as bubble size.
 
-Select which parameters you want to display in the third dimension. If you select "none", a 2D Van Krevelen diagram will be generated.
-
-#### **Color scale**
-
-Select the style of your paint scale. You can choose between rainbow and monochrome color-coded scales.
 
 {{ git_page_authors }}
 
