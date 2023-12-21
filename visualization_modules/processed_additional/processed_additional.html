@@ -4402,8 +4402,7 @@
 <p>The Kendrick mass scale is calculated by multiplying the IUPAC mass scale with the factor 14.0000 u/14.01565 u = 0.9988834. This results in the same mass defect for homologous components, the so-called <strong>Kendrick mass defect (KMD)</strong>. The KMD is defined as the <span class="arithmatex">\(\Delta\)</span> of a nominal Kendrick mass and its associated Kendrick mass. Using the Kendrick mass scale has the purpose of data reduction.</p>
 <div class="arithmatex">\[KM(R)=m/z\cdot\frac{round(R)}{R}\]</div>
 <div class="arithmatex">\[KMD(R)=round(KM(R))-KM(R)\]</div>
-<p>where <span class="arithmatex">\(KM\)</span> is Kendrick mass, <span class="arithmatex">\(KMD\)</span> - Kendrick mass defect, <span class="arithmatex">\(R\)</span> - exact mass of selected base unit</p>
-<p>More information <a href="../../module_docs/feature_list_row_filter/kendrick_mass_defect.html">here</a> or at <a href="https://en.wikipedia.org/wiki/Kendrick_mass">https://en.wikipedia.org/wiki/Kendrick_mass</a>.</p>
+<p>where <span class="arithmatex">\(KM\)</span> is Kendrick mass, <span class="arithmatex">\(KMD\)</span> - Kendrick mass defect, <span class="arithmatex">\(R\)</span> - exact mass of selected base unit.</p>
 <p><img alt="Kendrick example" src="Kendrick_Polymer_Plot.png" /></p>
 <p>If you use this module for your analysis or visualization, please cite:</p>
 <div class="admonition quote">
@@ -4412,7 +4411,7 @@
 <p>Expanding the Kendrick Mass Plot Toolbox in MZmine 2 to Enable Rapid Polymer Characterization in Liquid Chromatography−Mass Spectrometry Data Sets A. Korf, T. Fouquet, R. Schmid, H. Hayen, and S. Hagenhoff, Analytical Chemistry 2020 92 (1), 628-633.</p>
 </div>
 <h3 id="detailed-functionality"><strong>Detailed functionality</strong><a class="headerlink" href="#detailed-functionality" title="Permanent link">&para;</a></h3>
-<p>This module allows to create 4 dimensional Kendrick mass plots. All possible feature characteristics can be plotted as color scale or bubble size.</p>
+<p>This module allows to create 4 dimensional Kendrick mass plots. Feature characteristics, such as retention time or feature area, can be plotted as color scale or bubble size.</p>
 <h4 id="charge-dependent-kendrick-mass-plots"><strong>Charge dependent Kendrick mass plots</strong><a class="headerlink" href="#charge-dependent-kendrick-mass-plots" title="Permanent link">&para;</a></h4>
 <p>Multiply charged ions can cause splits in Kendrick mass plot. Fouquet et al. have shown considering the charge for the calculation of the KM can help to overcome this problem through clustering of features.</p>
 <div class="arithmatex">\[KM(R,Z)=Z\cdot KM(R)=Z\cdot m/z\cdot \frac{round(R)}{R}\]</div>
@@ -4438,8 +4437,8 @@
 <p>Fouquet, Thierry, Takaya Satoh, and Hiroaki Sato. "First gut instincts are always right: the resolution required for a mass defect analysis of polymer ions can be as low as oligomeric." Analytical chemistry 90.4 (2018): 2404-2408.</p>
 </div>
 <h4 id="remainders-of-kendrick-masses-rkm"><strong>Remainders of Kendrick masses (RKM)</strong><a class="headerlink" href="#remainders-of-kendrick-masses-rkm" title="Permanent link">&para;</a></h4>
-<p>Another option to increase the resolution of Kendrick mass plots is the by Fouquet et al. proposed concept of RKM (remainders of Kendrick masses). By clicking the KMD/RKM button in the toolbar on the right side, KMDs are transformed to RKMs.</p>
-<div class="arithmatex">\[RKM(R)=\Bigg\{\frac{KM(R)}{round(R)}\Bigg\}\]</div>
+<p>Another option to increase the resolution of Kendrick mass plots is the by Fouquet et al. proposed concept of RKM (remainders of Kendrick masses). 
+[RKM(R)=\Bigg{\frac{KM(R)}{round(R)}\Bigg}]</p>
 <p>with <span class="arithmatex">\(\{ \}\)</span> being the fractional part function defined as <span class="arithmatex">\(x=x-floor(x)\)</span></p>
 <h3 id="parameters_3"><strong>Parameters</strong><a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h3>
 <p><img alt="Kendrick parameters" src="Kendrick_Mass_Plot_Parameters.png" /></p>
@@ -4479,14 +4478,14 @@
 <p>Select which parameters you want to display in the third dimension. If you select "none", a 2D Van Krevelen diagram will be generated.</p>
 <h4 id="color-scale_1"><strong>Color scale</strong><a class="headerlink" href="#color-scale_1" title="Permanent link">&para;</a></h4>
 <p>Select the style of your paint scale. You can choose between rainbow and monochrome color-coded scales.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:140096361+kyrasolaris01@users.noreply.github.com'>kyrasolaris01</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:kyrasolaris01@gmail.com'>kyrasolaris01</a>, <a href='mailto:140096361+kyrasolaris01@users.noreply.github.com'>kyrasolaris01</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 18, 2023 06:15:55</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 21, 2023 07:11:36</span>
       
     
   </small>
