@@ -109,17 +109,19 @@ where \(KM\) is Kendrick mass, \(KMD\) - Kendrick mass defect, \(R\) - exact mas
 
 More information [here](../../module_docs/feature_list_row_filter/kendrick_mass_defect.md) or at <https://en.wikipedia.org/wiki/Kendrick_mass>.
 
-![Kendrick example](kendrickscreenshot.png)
+![Kendrick example](Kendrick_Polymer_Plot.png)
 
 If you use this module for your analysis or visualization, please cite:
 
 !!! quote " "
 
-    *Three‐dimensional Kendrick mass plots as a tool for graphical lipid identification. A. Korf, C. Vosse, R. Schmid, P. O. Helmer, V. Jeck, H. Hayen, Rapid Communications in Mass Spectrometry 32.12 (2018): 981-991.*
+    Three‐dimensional Kendrick mass plots as a tool for graphical lipid identification. A. Korf, C. Vosse, R. Schmid, P. O. Helmer, V. Jeck, H. Hayen, Rapid Communications in Mass Spectrometry 32.12 (2018): 981-991.
+
+    Expanding the Kendrick Mass Plot Toolbox in MZmine 2 to Enable Rapid Polymer Characterization in Liquid Chromatography−Mass Spectrometry Data Sets A. Korf, T. Fouquet, R. Schmid, H. Hayen, and S. Hagenhoff, Analytical Chemistry 2020 92 (1), 628-633.
 
 ### **Detailed functionality**
 
-This module allows to create 2 and 3 dimensional Kendrick mass plots. All possible feature characteristics can be plotted in a third dimension.
+This module allows to create 4 dimensional Kendrick mass plots. All possible feature characteristics can be plotted as color scale or bubble size.
 
 #### **Charge dependent Kendrick mass plots**
 
@@ -166,47 +168,43 @@ Another option to increase the resolution of Kendrick mass plots is the by Fouqu
 with \(\{ \}\) being the fractional part function defined as \(x=x-floor(x)\)
 
 ### **Parameters**
+![Kendrick parameters](Kendrick_Mass_Plot_Parameters.png)
 
-#### **Peak list** 
+#### **Feature List**
 
-Select the targeted peak list.
+Select one feature or aligned featurel list.
 
-#### **Peaks**
+#### **X-axis**
 
-Add peaks from the peak list.
+Select which metric you want to display on the X-Axis. Possible metrics are m/z, Kendrick Mass, Kendrick Mass Defect, Remainder of Kendrick Mass, Retention Time, Mobility, Intensity, Area, Tailing Factor, and Asymetry Factor.
 
-#### **Kendrick mass base for y-Axis**
+#### **Repeating unit for X-Axis**
 
-Enter a sum formula which will be used as Kendrick mass base for the y-Axis.
+Enter a molecular formula which will be used for Kendrick Mass calculation. The field is only acitve if Kendrick, Kendrick Mass Defect, or Remainder of Kendrick Mass is selected.
 
-#### **X-axis value**
+#### **Y-axis**
 
-Select which parameters you want to display on the X-Axis (Kendrick mass (KM) or m/z).
+Select which metric you want to display on the Y-Axis. Possible metrics are m/z, Kendrick Mass, Kendrick Mass Defect, Remainder of Kendrick Mass, Retention Time, Mobility, Intensity, Area, Tailing Factor, and Asymetry Factor.
 
-#### **Kendrick mass base for x-Axis**
+#### **Repeating unit for Y-Axis**
 
-If you want to display a Kendrick mass defect on the x-axis, check the check box and enter a sum formula as Kendrick mass base.
+Enter a molecular formula which will be used for Kendrick Mass calculation. The field is only acitve if Kendrick, Kendrick Mass Defect, or Remainder of Kendrick Mass is selected.
 
-#### **Z-axis value**
+#### **Color scale**
 
-Select which parameters you want to display in the third dimension. If you select "none", a 2D Kendrick mass plot will be generated.
+Select which metric you want to display as a color scale. Possible metrics are m/z, Kendrick Mass, Kendrick Mass Defect, Remainder of Kendrick Mass, Retention Time, Mobility, Intensity, Area, Tailing Factor, and Asymetry Factor.
 
-#### **Kendrick mass base for Z-Axis**
+#### **Repeating unit for color scale**
 
-If you want to display a Kendrick mass defect on the z-axis in form of a heatmap, check the check box and enter a sum formula as Kendrick mass base.
+Enter a molecular formula which will be used for Kendrick Mass calculation. The field is only acitve if Kendrick, Kendrick Mass Defect, or Remainder of Kendrick Mass is selected.
 
-#### **Z-axis scale value**
+#### **Bubble size**
 
-Choose the bounds for the Z-axis. "Percentile" allows to exclude values of a selected percentile bellow and/or above from the paint scale. Values below will be displayed in black, values above will be displayed in magenta. "Custom" allows to set custom ranges.
+Select which metric you want to display as bubble size. Possible metrics are m/z, Kendrick Mass, Kendrick Mass Defect, Remainder of Kendrick Mass, Retention Time, Mobility, Intensity, Area, Tailing Factor, and Asymetry Factor.
 
-#### **Range for z-axis scale**
+#### **Repeating unit for bubble size**
 
-Enter lower bound left and higher bound right. If you have choosen percentile for Z-axis scale the values must be between 0 and 100. If you enter 0 and 100, all values will be included in the paint scale.
-
-#### **Heatmap style**
-
-Select the style of your paint scale. You can choose between rainbow and different monochrome color coded paint scales.
-
+Enter a molecular formula which will be used for Kendrick Mass calculation. The field is only acitve if Kendrick, Kendrick Mass Defect, or Remainder of Kendrick Mass is selected.
 ## **Van Krevelen diagram**
 
 ### **Description**
