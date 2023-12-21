@@ -105,9 +105,8 @@ The Kendrick mass scale is calculated by multiplying the IUPAC mass scale with t
 
 \[KMD(R)=round(KM(R))-KM(R)\]
 
-where \(KM\) is Kendrick mass, \(KMD\) - Kendrick mass defect, \(R\) - exact mass of selected base unit
+where \(KM\) is Kendrick mass, \(KMD\) - Kendrick mass defect, \(R\) - exact mass of selected base unit.
 
-More information [here](../../module_docs/feature_list_row_filter/kendrick_mass_defect.md) or at <https://en.wikipedia.org/wiki/Kendrick_mass>.
 
 ![Kendrick example](Kendrick_Polymer_Plot.png)
 
@@ -121,7 +120,7 @@ If you use this module for your analysis or visualization, please cite:
 
 ### **Detailed functionality**
 
-This module allows to create 4 dimensional Kendrick mass plots. All possible feature characteristics can be plotted as color scale or bubble size.
+This module allows to create 4 dimensional Kendrick mass plots. Feature characteristics, such as retention time or feature area, can be plotted as color scale or bubble size.
 
 #### **Charge dependent Kendrick mass plots**
 
@@ -161,8 +160,7 @@ If both charge and fractional base unit are changed, the following equation is u
 
 #### **Remainders of Kendrick masses (RKM)**
 
-Another option to increase the resolution of Kendrick mass plots is the by Fouquet et al. proposed concept of RKM (remainders of Kendrick masses). By clicking the KMD/RKM button in the toolbar on the right side, KMDs are transformed to RKMs.
-
+Another option to increase the resolution of Kendrick mass plots is the by Fouquet et al. proposed concept of RKM (remainders of Kendrick masses). 
 \[RKM(R)=\Bigg\{\frac{KM(R)}{round(R)}\Bigg\}\]
 
 with \(\{ \}\) being the fractional part function defined as \(x=x-floor(x)\)
