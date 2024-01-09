@@ -3179,15 +3179,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#peaks_1" class="md-nav__link">
-    Peaks
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#z-axis" class="md-nav__link">
-    Z-Axis
+  <a href="#feature-lists" class="md-nav__link">
+    Feature lists
   </a>
   
 </li>
@@ -3195,6 +3188,13 @@
           <li class="md-nav__item">
   <a href="#color-scale_1" class="md-nav__link">
     Color scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-size_1" class="md-nav__link">
+    Bubble size
   </a>
   
 </li>
@@ -4302,15 +4302,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#peaks_1" class="md-nav__link">
-    Peaks
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#z-axis" class="md-nav__link">
-    Z-Axis
+  <a href="#feature-lists" class="md-nav__link">
+    Feature lists
   </a>
   
 </li>
@@ -4318,6 +4311,13 @@
           <li class="md-nav__item">
   <a href="#color-scale_1" class="md-nav__link">
     Color scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bubble-size_1" class="md-nav__link">
+    Bubble size
   </a>
   
 </li>
@@ -4460,24 +4460,30 @@
 <p>Select which metric you want to display as bubble size. Possible metrics are m/z, Kendrick Mass, Kendrick Mass Defect, Remainder of Kendrick Mass, Retention Time, Mobility, Intensity, Area, Tailing Factor, and Asymetry Factor.</p>
 <h4 id="repeating-unit-for-bubble-size"><strong>Repeating unit for bubble size</strong><a class="headerlink" href="#repeating-unit-for-bubble-size" title="Permanent link">&para;</a></h4>
 <p>Enter a molecular formula which will be used for Kendrick Mass calculation. The field is only acitve if Kendrick, Kendrick Mass Defect, or Remainder of Kendrick Mass is selected.</p>
-<h2 id="van-krevelen-diagram"><strong>Van Krevelen diagram</strong><a class="headerlink" href="#van-krevelen-diagram" title="Permanent link">&para;</a></h2>
-<h3 id="description_5"><strong>Description</strong><a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h3>
-<p><strong>Van Krevelen diagrams</strong> are graphical plots developed by Dirk Willem van Krevelen (chemist and professor of fuel technology at the TU Delft) that are used to assess the origin and maturity of kerogen and petroleum. </p>
-<p>The diagram cross-plots the hydrogen:carbon (hydrogen index) as a function of the oxygen:carbon (oxygen index) atomic ratios of carbon compounds. </p>
+<h2 id="van-krevelen-diagram">Van Krevelen diagram<a class="headerlink" href="#van-krevelen-diagram" title="Permanent link">&para;</a></h2>
+<h3 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h3>
+<p><strong>Van Krevelen diagrams</strong> are graphical plots developed by Dirk Willem van Krevelen (chemist and professor of fuel technology at the TU Delft) that are used to assess the origin and maturity of kerogen and petroleum.</p>
+<p>The diagram cross-plots the hydrogen:carbon (hydrogen index) as a function of the oxygen:carbon (oxygen index) atomic ratios of carbon compounds.</p>
 <div class="admonition quote">
 <p class="admonition-title"> </p>
+</div>
 <ol>
 <li>Van Krevelen, D.W. (1950). "Graphical-statistical method for the study of structure and reaction processes of coal", Fuel, 29, 269-84</li>
 <li>https://en.wikipedia.org/wiki/Van_Krevelen_diagram</li>
 </ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Since element ratios are plotted only annotated features are considered. </p>
 </div>
-<h3 id="parameters_4"><strong>Parameters</strong><a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h3>
-<h4 id="peaks_1"><strong>Peaks</strong><a class="headerlink" href="#peaks_1" title="Permanent link">&para;</a></h4>
-<p>Select peaks from the feature list.</p>
-<h4 id="z-axis"><strong>Z-Axis</strong><a class="headerlink" href="#z-axis" title="Permanent link">&para;</a></h4>
-<p>Select which parameters you want to display in the third dimension. If you select "none", a 2D Van Krevelen diagram will be generated.</p>
-<h4 id="color-scale_1"><strong>Color scale</strong><a class="headerlink" href="#color-scale_1" title="Permanent link">&para;</a></h4>
-<p>Select the style of your paint scale. You can choose between rainbow and monochrome color-coded scales.</p>
+<p><img alt="vankrevelenexample" src="van_krevelen_example.png" /></p>
+<h3 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h3>
+<p><img alt="vankrevelenparameters" src="vankrevelenparameters.png" /></p>
+<h4 id="feature-lists">Feature lists<a class="headerlink" href="#feature-lists" title="Permanent link">&para;</a></h4>
+<p>Select feature list to display as Van Krevelen diagram.</p>
+<h4 id="color-scale_1">Color scale<a class="headerlink" href="#color-scale_1" title="Permanent link">&para;</a></h4>
+<p>Select which parameters you want to display as a color scale.</p>
+<h4 id="bubble-size_1">Bubble size<a class="headerlink" href="#bubble-size_1" title="Permanent link">&para;</a></h4>
+<p>Select which parameters you want to display as bubble size.</p>
 <p><span class='git-page-authors git-authors'><a href='mailto:kyrasolaris01@gmail.com'>kyrasolaris01</a>, <a href='mailto:140096361+kyrasolaris01@users.noreply.github.com'>kyrasolaris01</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
   <hr>
@@ -4485,7 +4491,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 21, 2023 07:11:36</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2024 13:55:58</span>
       
     
   </small>
