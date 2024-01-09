@@ -203,32 +203,32 @@ Select which metric you want to display as bubble size. Possible metrics are m/z
 #### **Repeating unit for bubble size**
 
 Enter a molecular formula which will be used for Kendrick Mass calculation. The field is only acitve if Kendrick, Kendrick Mass Defect, or Remainder of Kendrick Mass is selected.
-## **Van Krevelen diagram**
 
-### **Description**
+## Van Krevelen diagram
+### Description
+**Van Krevelen diagrams** are graphical plots developed by Dirk Willem van Krevelen (chemist and professor of fuel technology at the TU Delft) that are used to assess the origin and maturity of kerogen and petroleum.
 
-**Van Krevelen diagrams** are graphical plots developed by Dirk Willem van Krevelen (chemist and professor of fuel technology at the TU Delft) that are used to assess the origin and maturity of kerogen and petroleum. 
-
-The diagram cross-plots the hydrogen:carbon (hydrogen index) as a function of the oxygen:carbon (oxygen index) atomic ratios of carbon compounds. 
-
+The diagram cross-plots the hydrogen:carbon (hydrogen index) as a function of the oxygen:carbon (oxygen index) atomic ratios of carbon compounds.
 !!! quote " "
+1. Van Krevelen, D.W. (1950). "Graphical-statistical method for the study of structure and reaction processes of coal", Fuel, 29, 269-84
+2. https://en.wikipedia.org/wiki/Van_Krevelen_diagram
 
-    1. Van Krevelen, D.W. (1950). "Graphical-statistical method for the study of structure and reaction processes of coal", Fuel, 29, 269-84
-    2. https://en.wikipedia.org/wiki/Van_Krevelen_diagram
+!!! warning
 
-### **Parameters**
+    Since element ratios are plotted only annotated features are considered. 
 
-#### **Peaks**
+![vankrevelenexample](van_krevelen_example.png)
 
-Select peaks from the feature list.
+### Parameters
+![vankrevelenparameters](vankrevelenparameters.png)
+#### Feature lists
+Select feature list to display as Van Krevelen diagram.
 
-#### **Z-Axis**
+#### Color scale
+Select which parameters you want to display as a color scale.
 
-Select which parameters you want to display in the third dimension. If you select "none", a 2D Van Krevelen diagram will be generated.
-
-#### **Color scale**
-
-Select the style of your paint scale. You can choose between rainbow and monochrome color-coded scales.
+#### Bubble size
+Select which parameters you want to display as bubble size.
 
 {{ git_page_authors }}
 
