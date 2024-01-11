@@ -33,10 +33,10 @@ Optional: Only consider values below the selected percentile, 0.99 is recommende
 
     Using the optional parameters Median filter window, Ignore intesities below percentile, and Ignore very high intensity outliers may result in better co-localization results.
 
-#### Measure
+#### Similarity measure
 Select similarity measure.
 
-#### Similarity measure
+#### Minimum similarity
 "Minimum percentage for image similarity to be considered co-located."
 
 #### Suffix (or auto)
