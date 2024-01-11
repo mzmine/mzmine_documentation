@@ -117,6 +117,7 @@ nav:
           - Additional tools:  visualization_modules/raw_data_overview/raw_data_additional.md
       - Ion mobility data visualisation:  visualization_modules/ims_raw_data_overview/IM-data-visualisation.md
       - Image viewer: visualization_modules/image_raw_data/image_viewer.md
+      - Image co-localization: module_docs/group_imagecorrelate/image-colocalization.md
       - Processed data visualition:
           - MSMS Visualizer: visualization_modules/msmsplot/msms-plot.md
           - Interactive Ion Identity Molecular Networks: visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md
