@@ -105,21 +105,22 @@ The Kendrick mass scale is calculated by multiplying the IUPAC mass scale with t
 
 \[KMD(R)=round(KM(R))-KM(R)\]
 
-where \(KM\) is Kendrick mass, \(KMD\) - Kendrick mass defect, \(R\) - exact mass of selected base unit
+where \(KM\) is Kendrick mass, \(KMD\) - Kendrick mass defect, \(R\) - exact mass of selected base unit.
 
-More information [here](../../module_docs/feature_list_row_filter/kendrick_mass_defect.md) or at <https://en.wikipedia.org/wiki/Kendrick_mass>.
 
-![Kendrick example](kendrickscreenshot.png)
+![Kendrick example](Kendrick_Polymer_Plot.png)
 
 If you use this module for your analysis or visualization, please cite:
 
 !!! quote " "
 
-    *Three‐dimensional Kendrick mass plots as a tool for graphical lipid identification. A. Korf, C. Vosse, R. Schmid, P. O. Helmer, V. Jeck, H. Hayen, Rapid Communications in Mass Spectrometry 32.12 (2018): 981-991.*
+    Three‐dimensional Kendrick mass plots as a tool for graphical lipid identification. A. Korf, C. Vosse, R. Schmid, P. O. Helmer, V. Jeck, H. Hayen, Rapid Communications in Mass Spectrometry 32.12 (2018): 981-991.
+
+    Expanding the Kendrick Mass Plot Toolbox in MZmine 2 to Enable Rapid Polymer Characterization in Liquid Chromatography−Mass Spectrometry Data Sets A. Korf, T. Fouquet, R. Schmid, H. Hayen, and S. Hagenhoff, Analytical Chemistry 2020 92 (1), 628-633.
 
 ### **Detailed functionality**
 
-This module allows to create 2 and 3 dimensional Kendrick mass plots. All possible feature characteristics can be plotted in a third dimension.
+This module allows to create 4 dimensional Kendrick mass plots. Feature characteristics, such as retention time or feature area, can be plotted as color scale or bubble size.
 
 #### **Charge dependent Kendrick mass plots**
 
@@ -159,80 +160,75 @@ If both charge and fractional base unit are changed, the following equation is u
 
 #### **Remainders of Kendrick masses (RKM)**
 
-Another option to increase the resolution of Kendrick mass plots is the by Fouquet et al. proposed concept of RKM (remainders of Kendrick masses). By clicking the KMD/RKM button in the toolbar on the right side, KMDs are transformed to RKMs.
-
+Another option to increase the resolution of Kendrick mass plots is the by Fouquet et al. proposed concept of RKM (remainders of Kendrick masses). 
 \[RKM(R)=\Bigg\{\frac{KM(R)}{round(R)}\Bigg\}\]
 
 with \(\{ \}\) being the fractional part function defined as \(x=x-floor(x)\)
 
 ### **Parameters**
+![Kendrick parameters](Kendrick_Mass_Plot_Parameters.png)
 
-#### **Peak list** 
+#### **Feature List**
 
-Select the targeted peak list.
+Select one feature or aligned featurel list.
 
-#### **Peaks**
+#### **X-axis**
 
-Add peaks from the peak list.
+Select which metric you want to display on the X-Axis. Possible metrics are m/z, Kendrick Mass, Kendrick Mass Defect, Remainder of Kendrick Mass, Retention Time, Mobility, Intensity, Area, Tailing Factor, and Asymetry Factor.
 
-#### **Kendrick mass base for y-Axis**
+#### **Repeating unit for X-Axis**
 
-Enter a sum formula which will be used as Kendrick mass base for the y-Axis.
+Enter a molecular formula which will be used for Kendrick Mass calculation. The field is only acitve if Kendrick, Kendrick Mass Defect, or Remainder of Kendrick Mass is selected.
 
-#### **X-axis value**
+#### **Y-axis**
 
-Select which parameters you want to display on the X-Axis (Kendrick mass (KM) or m/z).
+Select which metric you want to display on the Y-Axis. Possible metrics are m/z, Kendrick Mass, Kendrick Mass Defect, Remainder of Kendrick Mass, Retention Time, Mobility, Intensity, Area, Tailing Factor, and Asymetry Factor.
 
-#### **Kendrick mass base for x-Axis**
+#### **Repeating unit for Y-Axis**
 
-If you want to display a Kendrick mass defect on the x-axis, check the check box and enter a sum formula as Kendrick mass base.
-
-#### **Z-axis value**
-
-Select which parameters you want to display in the third dimension. If you select "none", a 2D Kendrick mass plot will be generated.
-
-#### **Kendrick mass base for Z-Axis**
-
-If you want to display a Kendrick mass defect on the z-axis in form of a heatmap, check the check box and enter a sum formula as Kendrick mass base.
-
-#### **Z-axis scale value**
-
-Choose the bounds for the Z-axis. "Percentile" allows to exclude values of a selected percentile bellow and/or above from the paint scale. Values below will be displayed in black, values above will be displayed in magenta. "Custom" allows to set custom ranges.
-
-#### **Range for z-axis scale**
-
-Enter lower bound left and higher bound right. If you have choosen percentile for Z-axis scale the values must be between 0 and 100. If you enter 0 and 100, all values will be included in the paint scale.
-
-#### **Heatmap style**
-
-Select the style of your paint scale. You can choose between rainbow and different monochrome color coded paint scales.
-
-## **Van Krevelen diagram**
-
-### **Description**
-
-**Van Krevelen diagrams** are graphical plots developed by Dirk Willem van Krevelen (chemist and professor of fuel technology at the TU Delft) that are used to assess the origin and maturity of kerogen and petroleum. 
-
-The diagram cross-plots the hydrogen:carbon (hydrogen index) as a function of the oxygen:carbon (oxygen index) atomic ratios of carbon compounds. 
-
-!!! quote " "
-
-    1. Van Krevelen, D.W. (1950). "Graphical-statistical method for the study of structure and reaction processes of coal", Fuel, 29, 269-84
-    2. https://en.wikipedia.org/wiki/Van_Krevelen_diagram
-
-### **Parameters**
-
-#### **Peaks**
-
-Select peaks from the feature list.
-
-#### **Z-Axis**
-
-Select which parameters you want to display in the third dimension. If you select "none", a 2D Van Krevelen diagram will be generated.
+Enter a molecular formula which will be used for Kendrick Mass calculation. The field is only acitve if Kendrick, Kendrick Mass Defect, or Remainder of Kendrick Mass is selected.
 
 #### **Color scale**
 
-Select the style of your paint scale. You can choose between rainbow and monochrome color-coded scales.
+Select which metric you want to display as a color scale. Possible metrics are m/z, Kendrick Mass, Kendrick Mass Defect, Remainder of Kendrick Mass, Retention Time, Mobility, Intensity, Area, Tailing Factor, and Asymetry Factor.
+
+#### **Repeating unit for color scale**
+
+Enter a molecular formula which will be used for Kendrick Mass calculation. The field is only acitve if Kendrick, Kendrick Mass Defect, or Remainder of Kendrick Mass is selected.
+
+#### **Bubble size**
+
+Select which metric you want to display as bubble size. Possible metrics are m/z, Kendrick Mass, Kendrick Mass Defect, Remainder of Kendrick Mass, Retention Time, Mobility, Intensity, Area, Tailing Factor, and Asymetry Factor.
+
+#### **Repeating unit for bubble size**
+
+Enter a molecular formula which will be used for Kendrick Mass calculation. The field is only acitve if Kendrick, Kendrick Mass Defect, or Remainder of Kendrick Mass is selected.
+
+## Van Krevelen diagram
+### Description
+**Van Krevelen diagrams** are graphical plots developed by Dirk Willem van Krevelen (chemist and professor of fuel technology at the TU Delft) that are used to assess the origin and maturity of kerogen and petroleum.
+
+The diagram cross-plots the hydrogen:carbon (hydrogen index) as a function of the oxygen:carbon (oxygen index) atomic ratios of carbon compounds.
+!!! quote " "
+1. Van Krevelen, D.W. (1950). "Graphical-statistical method for the study of structure and reaction processes of coal", Fuel, 29, 269-84
+2. https://en.wikipedia.org/wiki/Van_Krevelen_diagram
+
+!!! warning
+
+    Since element ratios are plotted only annotated features are considered. 
+
+![vankrevelenexample](van_krevelen_example.png)
+
+### Parameters
+![vankrevelenparameters](vankrevelenparameters.png)
+#### Feature lists
+Select feature list to display as Van Krevelen diagram.
+
+#### Color scale
+Select which parameters you want to display as a color scale.
+
+#### Bubble size
+Select which parameters you want to display as bubble size.
 
 {{ git_page_authors }}
 
