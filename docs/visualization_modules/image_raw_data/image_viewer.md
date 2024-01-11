@@ -14,7 +14,7 @@ The top right panel gives information about the raw file and imaging parameters 
 
 !!! tip
     
-    The Settings menu below can be used to change the imaging parameters.
+    The Settings menu on top can be used to change the imaging parameters.
 
 ## Parameters and Settings
 

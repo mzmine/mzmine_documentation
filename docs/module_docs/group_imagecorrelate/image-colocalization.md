@@ -36,7 +36,7 @@ Optional: Only consider values below the selected percentile, 0.99 is recommende
 #### Measure
 Select similarity measure.
 
-#### Min image correlation
+#### Similarity measure
 "Minimum percentage for image similarity to be considered co-located."
 
 #### Suffix (or auto)
