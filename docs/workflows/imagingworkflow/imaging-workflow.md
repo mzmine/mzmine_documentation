@@ -59,4 +59,8 @@ the [Rows filter](../../module_docs/feature_list_row_filter/feature_list_rows_fi
 filters are found in the  :material-menu-open: **Feature list methods → Feature filtering** menu.
 When using the deisotoping modules, consider that there is no chromatographic separation.
 
+## Additional tools
+
+Find co-located molecules using the [Image co-localization module](../../module_docs/group_imagecorrelate/image-colocalization.md).  
+
 {{ git_page_authors }}
