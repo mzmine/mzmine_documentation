@@ -38,8 +38,8 @@ Process of sampling to capture the signals. Different modes have been introduced
 In MS data can be acquired using three main modes:
 
 - [Full scan acquisition mode](general-terminology.md#full-scan-acquisition-mode)
-- [Data-dependent acqusition mode](general-terminology.md#data-dependent-acqusition-mode-dda)
-- [Data-independent acquisition mode](general-terminology.md#data-independent-acqusition-mode-dia)
+- [Data-dependent acqusition mode](general-terminology.md#data-dependent-acquisition-mode-dda)
+- [Data-independent acquisition mode](general-terminology.md#data-independent-acquisition-mode-dia)
 
 Read more: [Comparison of data-dependent and data-independent modes](https://www.technologynetworks.com/proteomics/lists/data-dependent-vs-data-independent-proteomic-analysis-331712)
 
