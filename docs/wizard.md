@@ -74,7 +74,7 @@ The minimum height of chromatograms and features
 
 #### Scan-to-scan m/z tolerance
 Relative and absolute m/z tolerance. Always applies the maximum tolerance based on the m/z this means that smaller and higher values are stronger affected by the absolute and relative tolerance, respectively. 
-Used to find the same signal in different scans when connecting chromatigrams. Reflects on the mass accuracy between scans in the same raw data file.
+Used to find the same signal in different scans when connecting chromatograms. Reflects on the mass accuracy between scans in the same raw data file.
 
 #### Feature-to-feature m/z tolerance
 Relative and absolute m/z tolerance. Always applies the maximum tolerance based on the m/z this means that smaller and higher values are stronger affected by the absolute and relative tolerance, respectively. 
