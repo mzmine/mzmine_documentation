@@ -3,9 +3,9 @@
 ## **MS**
 
 ### **Precursor and fragment ions**
-The **precuror ion** (a.k.a. "parent ion") is the ion that dissociates to a smaller fragment ions in MS/MS experiment. 
+The **precursor ion** (or "parent ion") is the selected ion used for MS/MS experiments. 
 
-A **fragment ion** (a.k.a. "daughter ion" or "product ion") is the charged product of an ion dissociation. A fragment ion may be stable or may dissociate further to form other charged fragment ions and neutral species of successively lower mass.
+A **fragment ion** ("daughter ion" or "product ion") is the charged product of an ion dissociation. A fragment ion may be stable or may dissociate further to form other charged fragment ions and neutral species of successively lower mass.
 
 ### **Accurate mass, exact mass and mass accuracy** 
 The **accurate mass** is the experimentally-determined mass of an ion measured with a high-resolution mass spectrometer. 
@@ -15,14 +15,14 @@ The **exact mass** is the calculated mass of an ion based on its elemental formu
 The **mass accuracy** is defined as the difference between the measured value (accurate mass) and the true value (exact mass). It can be expressed either in **absolute (mDa)** or **relative (ppm)** units.
 
 ### **Monoisotopic mass**
-Exact mass of an ion calculated using the mass of the lightest isotope of each element.
+Exact mass of an ion calculated by using the mass of the naturally most abundant isotope of each element.
 
 ### **Isotopic pattern**
 
 Isotopic (or isotope) pattern describes a set of peaks related to the ions with the same chemical formula but containing different isotopes; e.g. the 16 and 17 mass/charge peaks in a CH4 sample arising from <sup>12</sup>CH<sub>4</sub><sup>+</sup> and <sup>13</sup>CH<sub>4</sub><sup>+</sup> ions.
 
 ### **Mass resolution** 
-**Resolution** describes an ability of MS method to distinguish two peaks of different mass-to-charge ratios. 
+**Resolution** describes an ability of mass spectrometers to distinguish two peaks of different mass-to-charge ratios. 
 Can be interchangeably used with [mass resolving power](general-terminology.md#mass-resolving-power)
 
 [Wikipedia article on MS resolution](https://en.wikipedia.org/wiki/Resolution_(mass_spectrometry))
@@ -51,23 +51,23 @@ Widely used as it allows to capture most of the relevant ions.
 
 Further confirmation of statistically significant features is typically carried out by a separate LC-MS/MS run in a targeted manner.
 
-### **Data-dependent acqusition mode (DDA)**
+### **Data-dependent acquisition mode (DDA)**
 
 Mode of the data collection in **tandem mass spectrometry**. In data-dependent acquisition (**DDA**) schemes, the mass spectrometer detects 'suitable' precursor ions in each MS scan and selects them for fragmentation in consecutive MS2 scans.<br>
 
-:warning: DDA can redundantly identify high-abundance features, while neglecting low-abundance ones.
+:warning: DDA can redundantly identify high-abundant features, while neglecting low-abundant ones.
 
 **TopN acquisition scheme**
 
-In TopN scheme, the set of N ions is selected for fragmentation by their intensity in the latest MS1 survey scan.
+In TopN scheme, the set of N ions is selected for fragmentation by their intensity in the latest MS survey scan.
 
-### **Data-independent acqusition mode (DIA)**
+### **Data-independent acquisition mode (DIA)**
 
 DIA can be conducted either by fragmenting all ions that enter the instrument at a given time (called broadband DIA) or by sequentially focusing on a m/z window of precursors and fragmenting all precursors detected within that window.
 
 **Cycle time acquisition scheme**
 
-In cycle time acquistion, a set of precursor ions is selected using m/z values  (usually 1.0 to 2.0 m/z range). A full MS/MS fragment ion spectrum is collected for each ion. Cycle time is determined by scan times of all scans in the set.
+In cycle time acquisition, a set of precursor ions is selected using m/z values  (usually 1.0 to 2.0 m/z range). A full MS/MS fragment ion spectrum is collected for each ion. Cycle time is determined by scan times of all scans in the set.
 
 ## **LC-MS**
 
@@ -79,7 +79,7 @@ The total ion current (TIC) chromatogram displays the summed signal intensity (y
 :material-lightbulb: In complex samples, the TIC chromatogram often provides limited information as multiple analytes elute simultaneously, obscuring individual species.
 
 ### Base peak chromatogram
-The base peak chromatogram (BPC) displays the signal intensity of the most intense maass peak in the MS spectra at any one retention time point (x-axis) in the LC-MS run. The following figure shows the same data as above, visualized in BPI mode.
+The base peak chromatogram (BPC) displays the signal intensity of the most intense mass peak in the MS spectra at any one retention time point (x-axis) in the LC-MS run. The following figure shows the same data as above, visualized in BPI mode.
 ![BPC](BPC.png)
 
 
@@ -88,7 +88,7 @@ The extracted ion chromatogram (EIC) displays the signal intensity of a specific
 ![EIC](EIC.png)
 
 ### Chromatographic resolving
-Peak overlapping, or co-elution, is a common problem in any chromatographic separation technique. In the case of LC-MS (especially untargeted _omics_ analysis), it is virtually impossible to obtain a full baseline separation for the hundreds (or thousands) of analytes eluted through the column. The split of partially-overlapping and shoulder peaks into indivual features is generally referred to as _chromatographic resolving_ and is one of the most crucial steps of data processing. TO FINISH.
+Peak overlapping, or co-elution, is a common problem in any chromatographic separation technique. In the case of LC-MS (especially untargeted _omics_ analysis), it is virtually impossible to obtain a full baseline separation for the hundreds (or thousands) of analytes eluted through the column. The split of partially-overlapping and shoulder peaks into individual features is generally referred to as _chromatographic resolving_ and is one of the most crucial steps of data processing. TO FINISH.
 
 ### Missing values
 MISSING VALUE DEFINITION (see https://www.nature.com/articles/s41598-017-19120-0). 
@@ -141,9 +141,18 @@ In MZmine, **feature lists** are the output of the **feature detection** process
 
 The set of detected features in each LC-MS run is stored as a list, hence the name "feature list" (see, for example, [ADAP chromatogram builder](../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local mimimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) for more details). Multiple feature lists can undergo further processing (_e.g._ feature alingment) which results in a table (often referred to as **feature table**) where samples are arranged in columns, features in rows and each entry contains the signal intensity detected for the corresponding feature in the corresponding sample.
 
-### **Intra and inter-scan tolerances**
+### **_m/z_ tolerances**
 
-m/z tolerance is defined as maximum allowed difference between m/z values in order for them to be considered the same. Can be defined as **intra-scan m/z tolerance** for values with one scan (used, _e.g._, in [Mass detection of isotope signals](../module_docs/featdet_mass_detection/mass-detection.md#detect-isotope-signals-below-noise-level)) or **inter-scan m/z tolerance** for values between different scans (in, _e.g._, [ADAP Chromatogram Builder](../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md))
+- scan-to-scan
+- intra-sample
+- sample to sample
+
+The _m/z_ tolerance is defined as maximum allowed difference between _m/z_ values in order to be considered
+the same or belonging to each other (isotopes or different adducts). The **scan-to-scan _m/z_ tolerance**
+is used for values between different scans (in, _e.g._, [ADAP Chromatogram Builder](../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)). 
+The **m/z tolerance (intra-sample)** is used for features in the same scan that belong together (used, _e.g._, in [<sup>13</sup>C isotope filter](../module_docs/filter_isotope_filter/isotope_filter.md)).
+The **m/z tolerance (sample-sample)** takes the fluctuation of the same feature in different samples into account.
+This tolerance is used in the [Join aligner](../module_docs/align_join_aligner/join_aligner.md)). 
 
 ### **Chromatogram resolving**
 
