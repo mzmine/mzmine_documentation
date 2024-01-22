@@ -2,25 +2,28 @@
 
 Mass detection can be done with the following six algorithms:
 
+- Factor of lowest signal
 - Centroid 
-- Factor of the lowest signal
 - Exact mass
 - Local maxima
 - Recursive threshold
 - Wavelet transform
 - Auto
 
+## **Factor of lowest signal**
+
+:material-lightbulb: This mass detector is suitable for centroid or profile data.
+
+Choose the **Factor of lowest signal** for both centroided or profile data where each spectrum contains noise signals, often represented by many signals at the same low intensity (spectral grass). This may correspond to static noise or single counts. This algorithm removes all data points below a spectrum's lowest intensity multiplied by a factor. If the spectra are free of noise, for example
+because they were already filtered, use an **absolute intensity** threshold.
+
 ## **Centroid**
 
 :material-lightbulb: This mass detector is suitable for already centroided data.
 
-Centroid algorithm assumes that each signal above a given noise level is a detected ion.
+Centroid algorithm assumes that each signal above a given noise level is a detected ion. Here, the noise
+level is set as an absolute fixed value for each MSn level.
 
-## **Factor of the lowest signal**
-
-:material-lightbulb: This mass detector is suitable for already centroided data. 
-
-It removes all data points below a spectrum's lowest intensity multiplied by a factor.
 
 ## **Exact mass** 
 
@@ -95,7 +98,7 @@ The lower (LL) and upper (UL) limits, where the Mexican Hat wavelet is evaluated
 
 **Scale level**
 
-Number of wavelet coeficients to use in m/z feature detection. Serves as the scale factor that either dilates or compresses the wavelet signal. 
+Number of wavelet coefficients to use in m/z feature detection. Serves as the scale factor that either dilates or compresses the wavelet signal. 
 
 When the scale factor is relatively low, the signal is more contracted, which results in a more detailed resulting graph and more noisy peaks are detected. On the other hand, when the scale factor is high, the signal is stretched out, which means that the resulting graph will be less detailed with a smoothed signal.
 

@@ -65,7 +65,8 @@ The full-width at half maximum for IMS features
 
 ## MS instrument, e.g., Orbitrap, qTOF, FTICR
 #### Noise threshold (MS1/MS2) 
-Choose the mass detector from the drop down menu. Choose the **Factor of lowest signal** for centroided data where each spectrum contains noise signals, often represented by many signals at the same low intensity (spectral grass). This may correspond to static noise or single counts. Otherwise use an **absolute intensity** threshold. 
+Choose the mass detector from the drop down menu. Choose the **Factor of lowest signal** for both centroided or profile data where each spectrum contains noise signals, often represented by many signals at the same low intensity (spectral grass). This may correspond to static noise or single counts. If the spectra are free of noise, for example 
+because they were already filtered, use an **absolute intensity** threshold. 
 
 Depending on the selected mass detector, separate absolute noise levels or factors are defined to threshold spectra of MS level 1 and 2 (or above). So the MS2 noise level is used for MSn data with level > 1. These parameters can be optimized by looking at the spectral raw data in the raw data overview.
 
@@ -74,7 +75,7 @@ The minimum height of chromatograms and features
 
 #### Scan-to-scan m/z tolerance
 Relative and absolute m/z tolerance. Always applies the maximum tolerance based on the m/z this means that smaller and higher values are stronger affected by the absolute and relative tolerance, respectively. 
-Used to find the same signal in different scans when connecting chromatigrams. Reflects on the mass accuracy between scans in the same raw data file.
+Used to find the same signal in different scans when connecting chromatograms. Reflects on the mass accuracy between scans in the same raw data file.
 
 #### Feature-to-feature m/z tolerance
 Relative and absolute m/z tolerance. Always applies the maximum tolerance based on the m/z this means that smaller and higher values are stronger affected by the absolute and relative tolerance, respectively. 
@@ -82,7 +83,7 @@ Used to group isotopes and adducts of the same molecule. Those m/z values are al
 
 #### Sample-to-sample m/z tolerance
 Relative and absolute m/z tolerance. Always applies the maximum tolerance based on the m/z this means that smaller and higher values are stronger affected by the absolute and relative tolerance, respectively. 
-Used to align features across samples. Those m/z values are already averaged over their features but originate from differnt samples.
+Used to align features across samples. Those m/z values are already averaged over their features but originate from different samples.
 
 
 
