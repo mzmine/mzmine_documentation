@@ -31,7 +31,7 @@ This rule-based annotation approach follows Lipidomics Standards Initiative guid
 This parameter lists all pre-configured lipid classes in MZmine. Each selected lipid class will be added to the search scope.  
 
 #### Side chain parameters
-![matched-signals](side-chain-parameters.png)
+![side-chains](side-chain-parameters.png)
 
 Set the allowed min and max for chain length (number of carbons) and double bond equivalents (DBE) in a lipid chain. The number of chains is defined in the lipid class.
 12 to 26 carbons and 0 to 6 DBEs is recommended as a starting point.
@@ -48,7 +48,7 @@ Set the allowed min and max for chain length (number of carbons) and double bond
 Enter m/z tolerance for exact mass matching on MS1 level. Lipids outside the m/z tolerance will not be matched.
 
 #### Search for lipid class-specific fragments in MS/MS spectra
-![side-chains](side-chain-parameters.png)
+![msms-parameters](MSMS-Parameters.png)
 
 Activate this parameter to highly increase lipid annotation confidence.
 
@@ -57,7 +57,7 @@ Activate this parameter to highly increase lipid annotation confidence.
     Mass detection on MS2 level needs to be performed first.
 
 Set a mz tolerance for matching signals in MS2 spectra.
-Set a Minimum MS/MS score to accept a lipid annotation. The score is the explained intensity [%] of all signals in MS/MS spectrum. Matches below the set score will be removed, except the optional parameter Keep unconfirmed annotations is selected.
+Set a Minimum Explained intensity to accept a lipid annotation. Matches below the set value will be removed, except the optional parameter Keep unconfirmed annotations is selected.
 Unconfirmed annotations will be marked with a comment in the feature list.
 
 #### Search for custom lipid class
