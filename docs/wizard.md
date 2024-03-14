@@ -44,7 +44,7 @@ Apply smoothing to the chromatograms. Smoothing should not be used for data low 
 rates (e.g. below 5 data points per chromatographic peak/feature).
 
 Influences batch steps:
-[Smoothing](module_docs/featdet_smoothing)
+[Smoothing](module_docs/featdet_smoothing/smoothing.md)
 
 #### Stable ionization across samples
 
@@ -85,7 +85,7 @@ Only keep chromatograms and features with at least X data points in retention ti
 
 Influences batch steps:
 [Local minimum feature resolver](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md),
-[Smoothing](module_docs/featdet_smoothing), [Gap filling](module_docs/gapfill_peak_finder)
+[Smoothing](module_docs/featdet_smoothing/smoothing.md), [Gap filling](module_docs/gapfill_peak_finder/gap-filling.md)
 
 #### Approximate feature FWHM
 
@@ -93,7 +93,8 @@ The full-width at half maximum of peaks in retention time dimension. Best extrac
 tables of already processed test datasets or from the raw data overview.
 
 Influences batch steps:
-[Local minimum feature resolver](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) ([Minimum search range](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#minimum-search-range-rtmobility-absolute))
+[Local minimum feature resolver](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md),
+([Minimum search range](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#minimum-search-range-rtmobility-absolute))
 
 #### RT tolerance (intra-sample)
 
@@ -109,8 +110,8 @@ Influences batch steps:
 Retention time tolerance to align features across all samples. Dependent on retention time shifts.
 
 Influences batch steps:
-[Join Aligner](module_docs/align_join_aligner/join_aligner.md)
-[Gap filling](module_docs/gapfill_peak_finder/gap-filling.md)
+[Join Aligner](module_docs/align_join_aligner/join_aligner.md),
+[Gap filling](module_docs/gapfill_peak_finder/gap-filling.md),
 [Local compound database search](module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md)
 
 ## Ion mobility instrument
@@ -129,7 +130,7 @@ The number of consecutive scans/datapoints in a valid ion mobilogram and feature
 longer ramps in TIMS instruments.
 
 Influences batch steps:
-[Smoothing (mobility dimension)](module_docs/featdet_smoothing/smoothing.md#mobility-dimension)
+[Smoothing (mobility dimension)](module_docs/featdet_smoothing/smoothing.md#mobility-dimension),
 [Local minimum resolver (mobility dimension)](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#resolving-the-ion-mobility-dimension)
 
 #### Approximate feature FWHM
@@ -163,10 +164,10 @@ for [ion mobility scans](terminology/ion-mobility-terminology.md#accumulations-m
 The minimum height of chromatograms and features.
 
 Influences batch steps:
-[ADAP Chromatogram builder](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)
-[Local minimum feature resolver (RT dimension)](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md)
-[Local minimum feature resolver (IMS dimension)](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md)
-DIA MS2 grouping (todo documentation)
+[ADAP Chromatogram builder](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md),
+[Local minimum feature resolver (RT dimension)](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md),
+[Local minimum feature resolver (IMS dimension)](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md),
+DIA MS2 grouping (todo documentation),
 [RT Calibration](module_docs/norm_rt_calibration/norm_rt_calibration.md)
 
 #### Scan-to-scan m/z tolerance
@@ -178,12 +179,12 @@ Used to find the same signal in different scans when connecting chromatigrams. R
 accuracy between scans in the same raw data file.
 
 Influences batch steps:
-[Mobility scan merging](module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md)
-[ADAP Chromatogram builder](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)
-[Gap filling](module_docs/gapfill_peak_finder/gap-filling.md)
-[Lipid annotation (MS2)](module_docs/id_lipid_annotation/lipid-annotation.md)
-[Spectral library search](module_docs/id_spectral_library_search/spectral_library_search.md)
-Spectral/Molecular networking (todo: documentation)
+[Mobility scan merging](module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md),
+[ADAP Chromatogram builder](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md),
+[Gap filling](module_docs/gapfill_peak_finder/gap-filling.md),
+[Lipid annotation (MS2)](module_docs/id_lipid_annotation/lipid-annotation.md),
+[Spectral library search](module_docs/id_spectral_library_search/spectral_library_search.md),
+Spectral/Molecular networking (todo: documentation),
 DIA MS2 grouping (todo documentation)
 
 #### Feature-to-feature m/z tolerance
