@@ -3687,43 +3687,81 @@
 
 
 <h1 id="macos-code-signing">macOS code signing<a class="headerlink" href="#macos-code-signing" title="Permanent link">&para;</a></h1>
-<p>Code signing is a security feature provided by Apple's macOS that allows developers to digitally sign their applications and verify their identity. This ensures that the application is not tampered with or altered by a third party, and that it can be trusted by users.</p>
-<p>MZmine 3 codebase is signed with the Developer ID Application Certificate of the Czech Technical University in Prague (<code>"Developer ID Application: Ceske vysoke uceni technicke v Praze (LK4H72N842)"</code>) under the Apple ID <code>mzmine.devel@gmail.com</code>. The procedure is implemented in the <a href="https://github.com/mzmine/mzmine3/blob/master/build.gradle">gradle build file</a> and consists of three main steps described below: signing, notarization, and stapling.</p>
+<p>Code signing is a security feature provided by Apple's macOS that allows developers to digitally
+sign their applications and verify their identity. This ensures that the application is not tampered
+with or altered by a third party, and that it can be trusted by users.</p>
+<p>MZmine 3 codebase is signed with the Developer ID Application Certificate of the Czech Technical
+University in
+Prague (<code>"Developer ID Application: Ceske vysoke uceni technicke v Praze (LK4H72N842)"</code>) under the
+Apple ID <code>mzmine.devel@gmail.com</code>. The procedure is implemented in
+the <a href="https://github.com/mzmine/mzmine3/blob/master/mzmine-community/build.gradle">gradle build file</a>
+and consists of
+three main steps described below: signing, notarization, and stapling.</p>
 <h2 id="signing">Signing<a class="headerlink" href="#signing" title="Permanent link">&para;</a></h2>
-<p>Signing is a step embedding a digital signature in the MZmine codebase, which allows macOS to verify the integrity of the application before it is run.</p>
-<p>The necessary condition for the code signing is a Developer ID Application certificate from a Certificate Authority, which is the Czech Technical University in Prague in our case. <code>base64</code>-encoded certificated and the associated password are stored as GitHub secrets under the names <code>MACOS_DEVELOPER_CERTIFICATE</code> and <code>MACOS_DEVELOPER_CERTIFICATE_PWD</code> respectively. In order to use the certificate in <a href="https://github.com/mzmine/mzmine3/blob/e35aceb5a0737a184038b4749b7e29646172954d/.github/workflows/dev_build_release.yml#L96">CI/CD build of MZmine</a>, we add it to macOS keychain with <code>security set-key-partition-list</code> command following <a href="https://localazy.com/blog/how-to-automatically-sign-macos-apps-using-github-actions">Jan Bílek's tutorial</a>.</p>
+<p>Signing is a step embedding a digital signature in the MZmine codebase, which allows macOS to verify
+the integrity of the application before it is run.</p>
+<p>The necessary condition for the code signing is a Developer ID Application certificate from a
+Certificate Authority, which is the Czech Technical University in Prague in our case. <code>base64</code>
+-encoded certificated and the associated password are stored as GitHub secrets under the
+names <code>MACOS_DEVELOPER_CERTIFICATE</code> and <code>MACOS_DEVELOPER_CERTIFICATE_PWD</code> respectively. In order to
+use the certificate
+in <a href="https://github.com/mzmine/mzmine3/blob/master/.github/workflows/dev_build_release.yml">CI/CD build of MZmine</a>,
+we add it to macOS keychain with <code>security set-key-partition-list</code> command
+following <a href="https://localazy.com/blog/how-to-automatically-sign-macos-apps-using-github-actions">Jan Bílek's tutorial</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Notice, that the Developer ID Application certificate is not publicly available. Therefore, a manually built version of MZmine cannot be signed. Nevertheless, it still can be normally built.</p>
 </div>
-<p>To sign MZmine code with the certificate, <code>jpackage</code> utility needs to be supplied with an additional (constant) argument <code>--mac-sign</code> and its dependencies such as <code>--mac-package-identifier "io.github.mzmine.main"</code> and <code>--mac-signing-key-user-name "Developer ID Application: Ceske vysoke uceni technicke v Praze (LK4H72N842)"</code>. Nevertheless, <code>jpackage</code> is not able to automatically sign all native libraries. For that reason, we manually traverse the entire codebase and sign all such libraries which can be classified into three categories:
-1. Any file with one of the following extensions: <code>.dylib</code>, <code>.so</code>, <code>.dll</code>, <code>.a</code>, <code>.lib</code>.
-2. Any file with an extension from point 1. but nested inside of <code>.jar</code> archives.
-3. Content of ThermoRawFileParser <code>.zip</code> archive.</p>
+<p>Notice, that the Developer ID Application certificate is not publicly available. Therefore, a
+manually built version of MZmine cannot be signed. Nevertheless, it still can be normally built.</p>
+<p>To sign MZmine code with the certificate, <code>jpackage</code> utility needs to be supplied with an
+additional (constant) argument <code>--mac-sign</code> and its dependencies such
+as <code>--mac-package-identifier "io.github.mzmine.main"</code>
+and <code>--mac-signing-key-user-name "Developer ID Application: Ceske vysoke uceni technicke v Praze (LK4H72N842)"</code>.
+Nevertheless, <code>jpackage</code> is not able to automatically sign all native libraries. For that reason, we
+manually traverse the entire codebase and sign all such libraries which can be classified into three
+categories:</p>
+<ol>
+<li>Any file with one of the following extensions: <code>.dylib</code>, <code>.so</code>, <code>.dll</code>, <code>.a</code>, <code>.lib</code>.</li>
+<li>Any file with an extension from point 1. but nested inside of <code>.jar</code> archives.</li>
+<li>Content of ThermoRawFileParser <code>.zip</code> archive.</li>
+</ol>
 <p>The libraries are signed with</p>
-<p><div class="highlight"><pre><span></span><code>codesign<span class="w"> </span>--deep<span class="w"> </span>--force<span class="w"> </span>--timestamp<span class="w"> </span>-s<span class="w"> </span><span class="si">${</span><span class="nv">developerID</span><span class="si">}</span><span class="w"> </span>--options<span class="w"> </span>runtime<span class="w"> </span>--entitlements<span class="w"> </span><span class="si">${</span><span class="nv">entitlementsPth</span><span class="si">}</span><span class="w"> </span>-f<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">p</span><span class="si">}</span>
+<div class="highlight"><pre><span></span><code>codesign<span class="w"> </span>--deep<span class="w"> </span>--force<span class="w"> </span>--timestamp<span class="w"> </span>-s<span class="w"> </span><span class="si">${</span><span class="nv">developerID</span><span class="si">}</span><span class="w"> </span>--options<span class="w"> </span>runtime<span class="w"> </span>--entitlements<span class="w"> </span><span class="si">${</span><span class="nv">entitlementsPth</span><span class="si">}</span><span class="w"> </span>-f<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">p</span><span class="si">}</span>
 </code></pre></div>
-, where <code>${deveperID}</code> is <code>"Developer ID Application: Ceske vysoke uceni technicke v Praze (LK4H72N842)"</code>, <code>${entitlementsPth}</code> contains <a href="https://github.com/mzmine/mzmine3/blob/master/gradle/macos.entitlements">privileges</a> granted to the MZmine executable, and <code>${p}</code> is a path to the file to be signed. The files nested in archives are unarchived, signed, and then archived back.</p>
+<p>, where <code>${deveperID}</code>
+is <code>"Developer ID Application: Ceske vysoke uceni technicke v Praze (LK4H72N842)"</code>, <code>${entitlementsPth}</code>
+contains <a href="https://github.com/mzmine/mzmine3/blob/master/mzmine-community/gradle/macos.entitlements">privileges</a>
+granted to the MZmine executable, and <code>${p}</code> is a path to the file to be signed. The files nested in
+archives are unarchived, signed, and then archived back.</p>
 <h2 id="notarization">Notarization<a class="headerlink" href="#notarization" title="Permanent link">&para;</a></h2>
-<p>Notarization is an additional security step that is performed by Apple after an application is signed and is required to distribute MZmine outside of the Mac App Store. During this step signed MZmine code is uploaded to Apple's servers, where it is scanned for malware and other malicious content. Note, that this procedure usually takes around 10 minutes to be completed.</p>
+<p>Notarization is an additional security step that is performed by Apple after an application is
+signed and is required to distribute MZmine outside of the Mac App Store. During this step signed
+MZmine code is uploaded to Apple's servers, where it is scanned for malware and other malicious
+content. Note, that this procedure usually takes around 10 minutes to be completed.</p>
 <p>The notarization is performed using <code>xcrun notarytool</code> utility</p>
 <div class="highlight"><pre><span></span><code>xcrun<span class="w"> </span>notarytool<span class="w"> </span>submit<span class="w"> </span>--wait<span class="w"> </span>--apple-id<span class="w"> </span><span class="si">${</span><span class="nv">appleID</span><span class="si">}</span><span class="w"> </span>--password<span class="w"> </span><span class="si">${</span><span class="nv">appleIDPassword</span><span class="si">}</span><span class="w"> </span>--team-id<span class="w"> </span><span class="si">${</span><span class="nv">appleTeamID</span><span class="si">}</span><span class="w"> </span><span class="s2">&quot;MZmine_macOS_portable.zip&quot;</span>
 </code></pre></div>
-<p>, where <code>${appleTeamID}</code> is <code>mzmine.devel@gmail.com</code> and <code>${appleTeamID}</code> is the team of the Developer ID - <code>LK4H72N842</code>.</p>
+<p>, where <code>${appleTeamID}</code> is <code>mzmine.devel@gmail.com</code> and <code>${appleTeamID}</code> is the team of the
+Developer ID - <code>LK4H72N842</code>.</p>
 <h2 id="stapling">Stapling<a class="headerlink" href="#stapling" title="Permanent link">&para;</a></h2>
-<p>Stapling is the process of attaching a notarization ticket to a signed application. When an application is stapled, the notarization ticket is embedded in the application's code, which allows macOS to verify the notarization status of the application even if it is not connected to the internet.</p>
+<p>Stapling is the process of attaching a notarization ticket to a signed application. When an
+application is stapled, the notarization ticket is embedded in the application's code, which allows
+macOS to verify the notarization status of the application even if it is not connected to the
+internet.</p>
 <p>Stapling is performed with</p>
 <div class="highlight"><pre><span></span><code>xcrun<span class="w"> </span>stapler<span class="w"> </span>staple<span class="w"> </span><span class="s2">&quot;MZmine.app&quot;</span>
 </code></pre></div>
 <h2 id="distribution-of-disk-image">Distribution of disk image<a class="headerlink" href="#distribution-of-disk-image" title="Permanent link">&para;</a></h2>
-<p>The output of the steps described above is signed portable MZmine <code>.app</code>. Since it is more convenient to distribute macOS software as a <code>.dmg</code> disk image, we additionally pack the portable into <code>.dmg</code> using <a href="https://github.com/LinusU/node-appdmg"><code>appdmg</code></a> utility.</p>
+<p>The output of the steps described above is signed portable MZmine <code>.app</code>. Since it is more
+convenient to distribute macOS software as a <code>.dmg</code> disk image, we additionally pack the portable
+into <code>.dmg</code> using <a href="https://github.com/LinusU/node-appdmg"><code>appdmg</code></a> utility.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 22, 2023 21:44:01</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 14, 2024 07:41:50</span>
       
     
   </small>
