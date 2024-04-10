@@ -1556,8 +1556,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#minimum-number-of-peaks" class="md-nav__link">
-    Minimum Number of Peaks
+  <a href="#minimum-number-of-features" class="md-nav__link">
+    Minimum number of features
   </a>
   
 </li>
@@ -3786,8 +3786,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#minimum-number-of-peaks" class="md-nav__link">
-    Minimum Number of Peaks
+  <a href="#minimum-number-of-features" class="md-nav__link">
+    Minimum number of features
   </a>
   
 </li>
@@ -3823,30 +3823,33 @@
 
 
 <h1 id="spectral-deconvolution-multivariate-curve-resolution"><strong>Spectral deconvolution: Multivariate Curve Resolution</strong><a class="headerlink" href="#spectral-deconvolution-multivariate-curve-resolution" title="Permanent link">&para;</a></h1>
-<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f6a7.svg" title=":construction:" /> This module is being updated, which might affect its functionality</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>This module is not supported on macOS</p>
+</div>
 <h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Feature list methods → Spectral deconvolution (GC) → Multivariate Curve Resolution</strong></p>
-<p>This <strong>ADAP-based method</strong> performs Spectral Deconvolution of detected peaks. It finds components (compounds, analytes, etc.) and determines their model peaks and fragmentation mass spectra.</p>
-<p>The spectral deconvolution uses both constructed chromatograms and detected peaks. The feature list of constructed chromatograms is specified by selecting Specific peak lists for parameter Chromatograms, clicking on the ellipsis button, and choosing one or more lists with chromatograms in the popup window. The list of detected peaks is specified by selecting Specific peak lists for parameter Peaks, clicking on the ellipsis button, and choosing one or more lists with detected peaks in the popup window.</p>
+<p>This <strong>ADAP-based method</strong> performs Spectral Deconvolution of detected features. It finds components (compounds, analytes, etc.) and determines their model feature and pseudo fragmentation mass spectra.</p>
+<p>The spectral deconvolution uses both constructed chromatograms and detected features. The feature list of constructed chromatograms is specified by selecting specific feature lists for parameter chromatograms and choosing one or more lists with chromatograms in the popup window. The list of detected peaks is specified by selecting Specific peak lists for parameter Peaks, clicking on the ellipsis button, and choosing one or more lists with detected peaks in the popup window.</p>
 <p>The Spectral Deconvolution consists of <strong>two steps</strong>:</p>
 <ol>
 <li>
 <p>Entire retention time interval is split into deconvolution windows so that</p>
 </li>
 <li>
-<p>Peaks produced by the same component or by coeluting components belong to the same deconvolution window,</p>
+<p>Features produced by the same component or by coeluting components belong to the same deconvolution window,</p>
 </li>
-<li>Number of peaks in deconvolution window is significantly smaller than the total number of peaks.</li>
+<li>Number of features in deconvolution window is significantly smaller than the total number of features.</li>
 </ol>
-<p>The deconvolution windows are displayed in the top plot of the preview, where small dash lines denote peaks in the (retention time, m/z)-plane, and peaks belonging to one deconvolution window have the same color. The vertical sequences of peaks usually mark the presence of one or several compounds, so it is important that those peaks are assigned to the same deconvolution window, i.e. they have the same color on the plot. The deconvolution windows are controlled by the <strong>Deconvolution window width</strong> parameter.</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> If deconvolution windows contain too many peaks, it will significantly slow down the spectral deconvolution computations, so the deconvolution windows should be as short (in the retention time domain) as possible.
-2. The algorithm infers the number of components in each deconvolution window and construct their model peaks and fragmentation spectra. The inferred number of components is controlled by three parameters: <strong>Retention time tolerance (min)</strong>, <strong>Minimum Number of Peaks</strong>, and <strong>Adjust Apex Ret Times</strong>.</p>
+<p>The deconvolution windows are displayed in the top plot of the preview, where small dash lines denote features in the (retention time, m/z)-plane, and features belonging to one deconvolution window have the same color. The vertical sequences of features usually mark the presence of one or several compounds, so it is important that those features are assigned to the same deconvolution window, i.e. they have the same color on the plot. The deconvolution windows are controlled by the <strong>Deconvolution window width</strong> parameter.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> If deconvolution windows contain too many features, it will significantly slow down the spectral deconvolution computations, so the deconvolution windows should be as short (in the retention time domain) as possible.
+2. The algorithm infers the number of components in each deconvolution window and construct their model feature and pseudo fragmentation spectra. The inferred number of components is controlled by three parameters: <strong>Retention time tolerance (min)</strong>, <strong>Minimum Number of Peaks</strong>, and <strong>Adjust Apex Ret Times</strong>.</p>
 <h2 id="references"><strong>References</strong><a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<div class="admonition quote">
-<p class="admonition-title"> </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <ol>
 <li>
-<p>Pluskal, T., Castillo, S., Villar-Briones, A. &amp; Oresic, M. MZmine 2: Modular framework for processing, visualizing, and analyzing mass spectrometry-based molecular profile data. <em>BMC Bioinformatics</em> (2010). DOI: <a>10.1186/1471-2105-11-395</a></p>
+<p>Robin Schmid, Steffen Heuckeroth, Ansgar Korf et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3. Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2 </p>
 </li>
 <li>
 <p>Smirnov A, Jia W, Walker D, Jones D, Du X: ADAP-GC 3.2: Graphical Software Tool for Efficient Spectral Deconvolution of Gas Cromatography—High-Resolution Mass Spectrometry Metabolomics Data. J. Proteome Res 2017, DOI: <a>10.1021/acs.jproteome.7b00633</a></p>
@@ -3861,19 +3864,19 @@
 <p>The algorithm will produce deconvolution windows so that their width (in retention time domain) does not exceed the value of this parameter.</p>
 <h4 id="retention-time-tolerance-min"><strong>Retention time tolerance (min)</strong><a class="headerlink" href="#retention-time-tolerance-min" title="Permanent link">&para;</a></h4>
 <p>The smallest time-gap between any two components.</p>
-<h4 id="minimum-number-of-peaks"><strong>Minimum Number of Peaks</strong><a class="headerlink" href="#minimum-number-of-peaks" title="Permanent link">&para;</a></h4>
-<p>The smallest number of detected peaks to form a component.</p>
+<h4 id="minimum-number-of-features"><strong>Minimum number of features</strong><a class="headerlink" href="#minimum-number-of-features" title="Permanent link">&para;</a></h4>
+<p>The smallest number of detected features to form a component.</p>
 <h4 id="adjust-apex-ret-times"><strong>Adjust Apex Ret Times</strong><a class="headerlink" href="#adjust-apex-ret-times" title="Permanent link">&para;</a></h4>
 <p>If <strong>false</strong>, then the retention time of each detected peak is determined by the retention time of its highest data point. 
 If <strong>true</strong>, then the retention time of each detected peak is determined by fitting a parabola into the top half of that peak.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:kyrasolaris01@gmail.com'>kyrasolaris01</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 21:13:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 19, 2024 07:31:14</span>
       
     
   </small>
