@@ -3,7 +3,7 @@
 The processing wizard reduces the configuration of complex standardized workflows into few
 parameters. Those values are used to estimate or calculate all other parameters from spectral
 processing over feature detection and alignment to annotation and data export. The wizard organizes
-the different parts of the instrumentatl setup to define a workflow split up into: Sample
+the different parts of the instrumental setup to define a workflow split up into: Sample
 introduction, IMS, MS instrument, workflow. More specific workflows are planned and we are open for
 ideas and contributions. Feel free to reach out if your workflow might be a candidate for a wizard
 setup.
@@ -144,10 +144,11 @@ Influences batch steps:
 
 #### Noise threshold (MS1/MS2)
 
-Choose the mass detector from the drop down menu. Choose the **Factor of lowest signal** for
-centroided data where each spectrum contains noise signals, often represented by many signals at the
-same low intensity (spectral grass). This may correspond to static noise or single counts. Otherwise
-use an **absolute intensity** threshold.
+Choose the mass detector from the drop down menu. Choose the **Factor of lowest signal** for both
+centroided or profile data where each spectrum contains noise signals, often represented by many
+signals at the same low intensity (spectral grass). This may correspond to static noise or single
+counts. If the spectra are free of noise, for example
+because they were already filtered, use an **absolute intensity** threshold.
 
 Depending on the selected mass detector, separate absolute noise levels or factors are defined to
 threshold spectra of MS level 1 and 2 (or above). So the MS2 noise level is used for MSn data with
