@@ -175,7 +175,7 @@ DIA MS2 grouping (todo documentation),
 Relative and absolute m/z tolerance. Always applies the maximum tolerance based on the m/z this
 means that smaller and higher values are stronger affected by the absolute and relative tolerance,
 respectively.
-Used to find the same signal in different scans when connecting chromatigrams. Reflects on the mass
+Used to find the same signal in different scans when connecting chromatograms. Reflects on the mass
 accuracy between scans in the same raw data file.
 
 Influences batch steps:
@@ -297,3 +297,4 @@ More method and contributor **metadata** is required to build spectral libraries
 produces reference libraries with options to filter and merge spectra.
 
 {{ git_page_authors }}
+
