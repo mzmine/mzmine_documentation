@@ -16,7 +16,7 @@ When an aligned peak list, i.e. multiple peaks per row, is filtered then the ave
 #### **Name suffix**
 Suffix to be added to feature list name.
 
-#### **Minimum features in a row (abs or %)**
+#### **Minimum features in a row (abs or percent)**
 Minimum number of features detected in a row required to not remove it. Values < 1 will be interpreted as %.
 
 #### **Minimum features in an isotope pattern**

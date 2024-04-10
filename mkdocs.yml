@@ -1,4 +1,4 @@
-site_name: MZmine 3 Documentation
+site_name: mzmine documentation
 site_url: https://mzmine.github.io/mzmine_documentation/
 edit_uri: https://github.com/mzmine/mzmine_documentation/edit/master/docs/
 repo_name: mzmine/mzmine_documentation
@@ -71,7 +71,9 @@ nav:
           - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md
           - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md
           - Isotope peak scanner: module_docs/filter_isotope_peak_scanner/isotope_peak_scanner.md
-#      TODO Add feature grouping
+      - Feature grouping:
+          - Correlation grouping: module_docs/id_ion_networking/metacorr/metacorr.md
+          - Ion identity networking: module_docs/id_ion_networking/iin/iin.md
       - Feature list filtering:
         - Duplicate feature filter: module_docs/filter_duplicate_features/duplicate_feature_filter.md
         - Feature list rows filter: module_docs/feature_list_row_filter/feature_list_rows_filter.md
@@ -171,7 +173,7 @@ extra_css:
 
 theme:
   name: material
-  logo: img/MZMine_logo_white.png
+  logo: img/mzmine_logo_white.png
 
 plugins:
   - search
@@ -181,8 +183,8 @@ plugins:
       type: datetime
   - with-pdf:
       output_path: documentation.pdf
-      author: The MZmine Community
-      cover_title: MZmine 3
+      author: The mzmine Community
+      cover_title: mzmine
       cover_subtitle: Documentation
       cover_logo: docs/img/MZmine_logo_CMYK.png
 
