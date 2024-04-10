@@ -4097,7 +4097,7 @@ This rule-based annotation approach follows Lipidomics Standards Initiative guid
 <h4 id="lipid-classes">Lipid classes<a class="headerlink" href="#lipid-classes" title="Permanent link">&para;</a></h4>
 <p>This parameter lists all pre-configured lipid classes in MZmine. Each selected lipid class will be added to the search scope.  </p>
 <h4 id="side-chain-parameters">Side chain parameters<a class="headerlink" href="#side-chain-parameters" title="Permanent link">&para;</a></h4>
-<p><img alt="matched-signals" src="side-chain-parameters.png" /></p>
+<p><img alt="side-chains" src="side-chain-parameters.png" /></p>
 <p>Set the allowed min and max for chain length (number of carbons) and double bond equivalents (DBE) in a lipid chain. The number of chains is defined in the lipid class.
 12 to 26 carbons and 0 to 6 DBEs is recommended as a starting point.</p>
 <div class="admonition warning">
@@ -4111,14 +4111,14 @@ This rule-based annotation approach follows Lipidomics Standards Initiative guid
 <h4 id="mz-tolerance-ms1-level">m/z tolerance MS1 level<a class="headerlink" href="#mz-tolerance-ms1-level" title="Permanent link">&para;</a></h4>
 <p>Enter m/z tolerance for exact mass matching on MS1 level. Lipids outside the m/z tolerance will not be matched.</p>
 <h4 id="search-for-lipid-class-specific-fragments-in-msms-spectra">Search for lipid class-specific fragments in MS/MS spectra<a class="headerlink" href="#search-for-lipid-class-specific-fragments-in-msms-spectra" title="Permanent link">&para;</a></h4>
-<p><img alt="side-chains" src="side-chain-parameters.png" /></p>
+<p><img alt="msms-parameters" src="MSMS-Parameters.png" /></p>
 <p>Activate this parameter to highly increase lipid annotation confidence.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Mass detection on MS2 level needs to be performed first.</p>
 </div>
 <p>Set a mz tolerance for matching signals in MS2 spectra.
-Set a Minimum MS/MS score to accept a lipid annotation. The score is the explained intensity [%] of all signals in MS/MS spectrum. Matches below the set score will be removed, except the optional parameter Keep unconfirmed annotations is selected.
+Set a Minimum Explained intensity to accept a lipid annotation. Matches below the set value will be removed, except the optional parameter Keep unconfirmed annotations is selected.
 Unconfirmed annotations will be marked with a comment in the feature list.</p>
 <h4 id="search-for-custom-lipid-class">Search for custom lipid class<a class="headerlink" href="#search-for-custom-lipid-class" title="Permanent link">&para;</a></h4>
 <p><img alt="custom-lipid-class-parameter" src="custom-lipid-class-parameter.png" />
@@ -4265,7 +4265,7 @@ E.g. for Sphingosine use C3H9N as the lipid backbone formula. Missing oxygens wi
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 6, 2023 14:43:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 26, 2024 16:20:56</span>
       
     
   </small>
