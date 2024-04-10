@@ -930,15 +930,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#centroid" class="md-nav__link">
-    Centroid
+  <a href="#factor-of-lowest-signal" class="md-nav__link">
+    Factor of lowest signal
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#factor-of-the-lowest-signal" class="md-nav__link">
-    Factor of the lowest signal
+  <a href="#centroid" class="md-nav__link">
+    Centroid
   </a>
   
 </li>
@@ -3777,15 +3777,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#centroid" class="md-nav__link">
-    Centroid
+  <a href="#factor-of-lowest-signal" class="md-nav__link">
+    Factor of lowest signal
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#factor-of-the-lowest-signal" class="md-nav__link">
-    Factor of the lowest signal
+  <a href="#centroid" class="md-nav__link">
+    Centroid
   </a>
   
 </li>
@@ -3879,20 +3879,22 @@
 <h1 id="mass-detection-algorithms"><strong>Mass detection algorithms</strong><a class="headerlink" href="#mass-detection-algorithms" title="Permanent link">&para;</a></h1>
 <p>Mass detection can be done with the following six algorithms:</p>
 <ul>
+<li>Factor of lowest signal</li>
 <li>Centroid </li>
-<li>Factor of the lowest signal</li>
 <li>Exact mass</li>
 <li>Local maxima</li>
 <li>Recursive threshold</li>
 <li>Wavelet transform</li>
 <li>Auto</li>
 </ul>
+<h2 id="factor-of-lowest-signal"><strong>Factor of lowest signal</strong><a class="headerlink" href="#factor-of-lowest-signal" title="Permanent link">&para;</a></h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> This mass detector is suitable for centroid or profile data.</p>
+<p>Choose the <strong>Factor of lowest signal</strong> for both centroided or profile data where each spectrum contains noise signals, often represented by many signals at the same low intensity (spectral grass). This may correspond to static noise or single counts. This algorithm removes all data points below a spectrum's lowest intensity multiplied by a factor. If the spectra are free of noise, for example
+because they were already filtered, use an <strong>absolute intensity</strong> threshold.</p>
 <h2 id="centroid"><strong>Centroid</strong><a class="headerlink" href="#centroid" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> This mass detector is suitable for already centroided data.</p>
-<p>Centroid algorithm assumes that each signal above a given noise level is a detected ion.</p>
-<h2 id="factor-of-the-lowest-signal"><strong>Factor of the lowest signal</strong><a class="headerlink" href="#factor-of-the-lowest-signal" title="Permanent link">&para;</a></h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> This mass detector is suitable for already centroided data. </p>
-<p>It removes all data points below a spectrum's lowest intensity multiplied by a factor.</p>
+<p>Centroid algorithm assumes that each signal above a given noise level is a detected ion. Here, the noise
+level is set as an absolute fixed value for each MSn level.</p>
 <h2 id="exact-mass"><strong>Exact mass</strong><a class="headerlink" href="#exact-mass" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> The exact mass algorithm is highly recommended for profile MS data.</p>
 <p>This mass detector first searches for all local maxima within the spectrum, which then form candidate ions. </p>
@@ -3934,21 +3936,21 @@ With these four points it calculates two points (cP1, cP2) that define the width
 <p>The lower (LL) and upper (UL) limits, where the Mexican Hat wavelet is evaluated, are from -5 until 5. The incremental step used in this range is the result of limits range division by 60,000.</p>
 <h4 id="additional-parameters_1"><strong>Additional parameters</strong><a class="headerlink" href="#additional-parameters_1" title="Permanent link">&para;</a></h4>
 <p><strong>Scale level</strong></p>
-<p>Number of wavelet coeficients to use in m/z feature detection. Serves as the scale factor that either dilates or compresses the wavelet signal. </p>
+<p>Number of wavelet coefficients to use in m/z feature detection. Serves as the scale factor that either dilates or compresses the wavelet signal. </p>
 <p>When the scale factor is relatively low, the signal is more contracted, which results in a more detailed resulting graph and more noisy peaks are detected. On the other hand, when the scale factor is high, the signal is stretched out, which means that the resulting graph will be less detailed with a smoothed signal.</p>
 <p><strong>Wavelet window size (%)</strong>
 The size of the window used to calculated the wavelet signal. When the size of the window is small, more noisy peaks can be detected. The proper value of this parameter may help to avoid the undesired noise peaks.</p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> The Wavelet transform mass detector is particularly suitable for low-resolution and noisy data.</p>
 <h2 id="auto"><strong>Auto</strong><a class="headerlink" href="#auto" title="Permanent link">&para;</a></h2>
 <p>Auto mass detector recognizes if the spectrum is of profile or centroided data type and applies centroid or exact mass algorithms correspondingly.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 21:13:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 22, 2024 08:55:07</span>
       
     
   </small>

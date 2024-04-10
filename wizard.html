@@ -4284,7 +4284,7 @@
 <p>The processing wizard reduces the configuration of complex standardized workflows into few
 parameters. Those values are used to estimate or calculate all other parameters from spectral
 processing over feature detection and alignment to annotation and data export. The wizard organizes
-the different parts of the instrumentatl setup to define a workflow split up into: Sample
+the different parts of the instrumental setup to define a workflow split up into: Sample
 introduction, IMS, MS instrument, workflow. More specific workflows are planned and we are open for
 ideas and contributions. Feel free to reach out if your workflow might be a candidate for a wizard
 setup.</p>
@@ -4380,10 +4380,11 @@ longer ramps in TIMS instruments.</p>
 <a href="module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#resolving-the-ion-mobility-dimension">Local minimum resolver (mobility dimension)</a></p>
 <h2 id="ms-instrument-eg-orbitrap-qtof-fticr">MS instrument, e.g., Orbitrap, qTOF, FTICR<a class="headerlink" href="#ms-instrument-eg-orbitrap-qtof-fticr" title="Permanent link">&para;</a></h2>
 <h4 id="noise-threshold-ms1ms2">Noise threshold (MS1/MS2)<a class="headerlink" href="#noise-threshold-ms1ms2" title="Permanent link">&para;</a></h4>
-<p>Choose the mass detector from the drop down menu. Choose the <strong>Factor of lowest signal</strong> for
-centroided data where each spectrum contains noise signals, often represented by many signals at the
-same low intensity (spectral grass). This may correspond to static noise or single counts. Otherwise
-use an <strong>absolute intensity</strong> threshold.</p>
+<p>Choose the mass detector from the drop down menu. Choose the <strong>Factor of lowest signal</strong> for both
+centroided or profile data where each spectrum contains noise signals, often represented by many
+signals at the same low intensity (spectral grass). This may correspond to static noise or single
+counts. If the spectra are free of noise, for example
+because they were already filtered, use an <strong>absolute intensity</strong> threshold.</p>
 <p>Depending on the selected mass detector, separate absolute noise levels or factors are defined to
 threshold spectra of MS level 1 and 2 (or above). So the MS2 noise level is used for MSn data with
 level &gt; 1. These parameters can be optimized by looking at the spectral raw data in the raw data
@@ -4504,7 +4505,7 @@ produces reference libraries with options to filter and merge spectra.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 10, 2024 14:18:02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 10, 2024 14:33:56</span>
       
     
   </small>
