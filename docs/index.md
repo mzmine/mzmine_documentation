@@ -1,8 +1,4 @@
-!!! info
-When using MZmine, please cite the corresponding paper:</br>
-Robin Schmid, Steffen Heuckeroth, Ansgar Korf et al. Integrative analysis of multimodal mass
-spectrometry data in MZmine 3. Nature Biotechnology (
-2023), [doi:10.1038/s41587-023-01690-2](https://www.nature.com/articles/s41587-023-01690-2).
+!!! info When using MZmine, please cite the corresponding paper:</br> Robin Schmid, Steffen Heuckeroth, Ansgar Korf et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3. Nature Biotechnology (2023), [doi:10.1038/s41587-023-01690-2](https://www.nature.com/articles/s41587-023-01690-2).
 
 # Welcome to the mzmine documentation!
 
@@ -23,32 +19,21 @@ Furthermore, mzmine allows generation of custom spectral spectral libraries.
 ## Want to get started with mzmine?
 
 Check out our **[getting started](getting_started.md)** page or *
-*[MZmine video tutorials on YouTube](https://www.youtube.com/@mzmineproject/playlists)**!
+*[MZmine video tutorials on YouTube](https://www.youtube.com/watch?v=jUHd3Sj7x0M&list=PL7kvpfzg8JkV7XKBUUX0xxOJimiK1VCOg)**!
 
 ![Youtube channel](index-youtube-channel.png)
  
 ---
 
-## What's new compared to MZmine 2?
+## History of mzmine
 
-mzmine comes with a redesigned and fully customizable [GUI](main-window-overview.md) based on the
-JavaFX technology that allow an interactive visualization and validation of results from every
-processing step.
-
-A completely new data structure provides the flexibility to process any type of mass spectrometry,
-including LC-MS, GC-MS and MS-imaging. Moreover, MZmine 3 now supports ion mobility, with a
-dedicated [LC-IM-MS data visualization](visualization_modules/ims_raw_data_overview/IM-data-visualisation.md)
-module and [feature detection](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)
-algorithms.
-
+MZmine 3 was developed as a community effort, lead by Robin Schmid, Steffen Heuckeroth, Ansgar Korf and Tomas Pluskal.
+It introduced a redesigned [GUI](main-window-overview.md), a completely new data structure which provided 
+the flexibility to process any type of mass spectrometry data. This included LC-MS, GC-MS and MS-imaging and introduced ion mobility support
+(see [LC-IM-MS data visualization](visualization_modules/ims_raw_data_overview/IM-data-visualisation.md)
+ and [feature detection](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)).
 Finally, significant effort was devoted to trace memory issues and bottlenecks, resulting in an
 unprecendent processing performance and scalability.
-
-The latest changelog can be found [here](changelog.md)!
-
----
-
-## History of mzmine
 
 Since the introduction of MZmine 2 in 2010, the project has matured into a community-driven, highly
 collaborative platform and its functions continue to expand based on the users' needs and feedbacks.
