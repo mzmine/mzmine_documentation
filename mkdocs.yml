@@ -71,7 +71,9 @@ nav:
           - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md
           - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md
           - Isotope peak scanner: module_docs/filter_isotope_peak_scanner/isotope_peak_scanner.md
-#      TODO Add feature grouping
+      - Feature grouping:
+          - Correlation grouping: module_docs/id_ion_networking/metacorr/metacorr.md
+          - Ion identity networking: module_docs/id_ion_networking/iin/iin.md
       - Feature list filtering:
         - Duplicate feature filter: module_docs/filter_duplicate_features/duplicate_feature_filter.md
         - Feature list rows filter: module_docs/feature_list_row_filter/feature_list_rows_filter.md
