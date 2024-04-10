@@ -3316,15 +3316,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-dependent-acqusition-mode-dda" class="md-nav__link">
-    Data-dependent acqusition mode (DDA)
+  <a href="#data-dependent-acquisition-mode-dda" class="md-nav__link">
+    Data-dependent acquisition mode (DDA)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-independent-acqusition-mode-dia" class="md-nav__link">
-    Data-independent acqusition mode (DIA)
+  <a href="#data-independent-acquisition-mode-dia" class="md-nav__link">
+    Data-independent acquisition mode (DIA)
   </a>
   
 </li>
@@ -3895,15 +3895,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-dependent-acqusition-mode-dda" class="md-nav__link">
-    Data-dependent acqusition mode (DDA)
+  <a href="#data-dependent-acquisition-mode-dda" class="md-nav__link">
+    Data-dependent acquisition mode (DDA)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-independent-acqusition-mode-dia" class="md-nav__link">
-    Data-independent acqusition mode (DIA)
+  <a href="#data-independent-acquisition-mode-dia" class="md-nav__link">
+    Data-independent acquisition mode (DIA)
   </a>
   
 </li>
@@ -3989,18 +3989,18 @@
 <h1 id="general-terminology"><strong>General terminology</strong><a class="headerlink" href="#general-terminology" title="Permanent link">&para;</a></h1>
 <h2 id="ms"><strong>MS</strong><a class="headerlink" href="#ms" title="Permanent link">&para;</a></h2>
 <h3 id="precursor-and-fragment-ions"><strong>Precursor and fragment ions</strong><a class="headerlink" href="#precursor-and-fragment-ions" title="Permanent link">&para;</a></h3>
-<p>The <strong>precuror ion</strong> (a.k.a. "parent ion") is the ion that dissociates to a smaller fragment ions in MS/MS experiment. </p>
-<p>A <strong>fragment ion</strong> (a.k.a. "daughter ion" or "product ion") is the charged product of an ion dissociation. A fragment ion may be stable or may dissociate further to form other charged fragment ions and neutral species of successively lower mass.</p>
+<p>The <strong>precursor ion</strong> (or "parent ion") is the selected ion used for MS/MS experiments. </p>
+<p>A <strong>fragment ion</strong> ("daughter ion" or "product ion") is the charged product of an ion dissociation. A fragment ion may be stable or may dissociate further to form other charged fragment ions and neutral species of successively lower mass.</p>
 <h3 id="accurate-mass-exact-mass-and-mass-accuracy"><strong>Accurate mass, exact mass and mass accuracy</strong><a class="headerlink" href="#accurate-mass-exact-mass-and-mass-accuracy" title="Permanent link">&para;</a></h3>
 <p>The <strong>accurate mass</strong> is the experimentally-determined mass of an ion measured with a high-resolution mass spectrometer. </p>
 <p>The <strong>exact mass</strong> is the calculated mass of an ion based on its elemental formula, isotopic composition and charge state. While the accurate mass is an experimentally-measured quantity, the exact mass is a theoretically-calculated quantity. </p>
 <p>The <strong>mass accuracy</strong> is defined as the difference between the measured value (accurate mass) and the true value (exact mass). It can be expressed either in <strong>absolute (mDa)</strong> or <strong>relative (ppm)</strong> units.</p>
 <h3 id="monoisotopic-mass"><strong>Monoisotopic mass</strong><a class="headerlink" href="#monoisotopic-mass" title="Permanent link">&para;</a></h3>
-<p>Exact mass of an ion calculated using the mass of the lightest isotope of each element.</p>
+<p>Exact mass of an ion calculated by using the mass of the naturally most abundant isotope of each element.</p>
 <h3 id="isotopic-pattern"><strong>Isotopic pattern</strong><a class="headerlink" href="#isotopic-pattern" title="Permanent link">&para;</a></h3>
 <p>Isotopic (or isotope) pattern describes a set of peaks related to the ions with the same chemical formula but containing different isotopes; e.g. the 16 and 17 mass/charge peaks in a CH4 sample arising from <sup>12</sup>CH<sub>4</sub><sup>+</sup> and <sup>13</sup>CH<sub>4</sub><sup>+</sup> ions.</p>
 <h3 id="mass-resolution"><strong>Mass resolution</strong><a class="headerlink" href="#mass-resolution" title="Permanent link">&para;</a></h3>
-<p><strong>Resolution</strong> describes an ability of MS method to distinguish two peaks of different mass-to-charge ratios. 
+<p><strong>Resolution</strong> describes an ability of mass spectrometers to distinguish two peaks of different mass-to-charge ratios. 
 Can be interchangeably used with <a href="general-terminology.html#mass-resolving-power">mass resolving power</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Resolution_(mass_spectrometry)">Wikipedia article on MS resolution</a></p>
 <h3 id="mass-resolving-power"><strong>Mass resolving power</strong><a class="headerlink" href="#mass-resolving-power" title="Permanent link">&para;</a></h3>
@@ -4011,36 +4011,36 @@ m/Δm.</p>
 In MS data can be acquired using three main modes:</p>
 <ul>
 <li><a href="general-terminology.html#full-scan-acquisition-mode">Full scan acquisition mode</a></li>
-<li><a href="general-terminology.html#data-dependent-acqusition-mode-dda">Data-dependent acqusition mode</a></li>
-<li><a href="general-terminology.html#data-independent-acqusition-mode-dia">Data-independent acquisition mode</a></li>
+<li><a href="general-terminology.html#data-dependent-acquisition-mode-dda">Data-dependent acquisition mode</a></li>
+<li><a href="general-terminology.html#data-independent-acquisition-mode-dia">Data-independent acquisition mode</a></li>
 </ul>
 <p>Read more: <a href="https://www.technologynetworks.com/proteomics/lists/data-dependent-vs-data-independent-proteomic-analysis-331712">Comparison of data-dependent and data-independent modes</a></p>
 <h3 id="full-scan-acquisition-mode"><strong>Full scan acquisition mode</strong><a class="headerlink" href="#full-scan-acquisition-mode" title="Permanent link">&para;</a></h3>
 <p>In full-scan mode, the mass spectrometer runs on MS1-only mode, and measures m/z values and abundances of all the metabolic features. </p>
 <p>Widely used as it allows to capture most of the relevant ions.</p>
 <p>Further confirmation of statistically significant features is typically carried out by a separate LC-MS/MS run in a targeted manner.</p>
-<h3 id="data-dependent-acqusition-mode-dda"><strong>Data-dependent acqusition mode (DDA)</strong><a class="headerlink" href="#data-dependent-acqusition-mode-dda" title="Permanent link">&para;</a></h3>
+<h3 id="data-dependent-acquisition-mode-dda"><strong>Data-dependent acquisition mode (DDA)</strong><a class="headerlink" href="#data-dependent-acquisition-mode-dda" title="Permanent link">&para;</a></h3>
 <p>Mode of the data collection in <strong>tandem mass spectrometry</strong>. In data-dependent acquisition (<strong>DDA</strong>) schemes, the mass spectrometer detects 'suitable' precursor ions in each MS scan and selects them for fragmentation in consecutive MS2 scans.<br></p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> DDA can redundantly identify high-abundance features, while neglecting low-abundance ones.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> DDA can redundantly identify high-abundant features, while neglecting low-abundant ones.</p>
 <p><strong>TopN acquisition scheme</strong></p>
-<p>In TopN scheme, the set of N ions is selected for fragmentation by their intensity in the latest MS1 survey scan.</p>
-<h3 id="data-independent-acqusition-mode-dia"><strong>Data-independent acqusition mode (DIA)</strong><a class="headerlink" href="#data-independent-acqusition-mode-dia" title="Permanent link">&para;</a></h3>
+<p>In TopN scheme, the set of N ions is selected for fragmentation by their intensity in the latest MS survey scan.</p>
+<h3 id="data-independent-acquisition-mode-dia"><strong>Data-independent acquisition mode (DIA)</strong><a class="headerlink" href="#data-independent-acquisition-mode-dia" title="Permanent link">&para;</a></h3>
 <p>DIA can be conducted either by fragmenting all ions that enter the instrument at a given time (called broadband DIA) or by sequentially focusing on a m/z window of precursors and fragmenting all precursors detected within that window.</p>
 <p><strong>Cycle time acquisition scheme</strong></p>
-<p>In cycle time acquistion, a set of precursor ions is selected using m/z values  (usually 1.0 to 2.0 m/z range). A full MS/MS fragment ion spectrum is collected for each ion. Cycle time is determined by scan times of all scans in the set.</p>
+<p>In cycle time acquisition, a set of precursor ions is selected using m/z values  (usually 1.0 to 2.0 m/z range). A full MS/MS fragment ion spectrum is collected for each ion. Cycle time is determined by scan times of all scans in the set.</p>
 <h2 id="lc-ms"><strong>LC-MS</strong><a class="headerlink" href="#lc-ms" title="Permanent link">&para;</a></h2>
 <h3 id="total-ion-current-chromatogram"><strong>Total ion current chromatogram</strong><a class="headerlink" href="#total-ion-current-chromatogram" title="Permanent link">&para;</a></h3>
 <p>The total ion current (TIC) chromatogram displays the summed signal intensity (y-axis) over the entire m/z range at any one retention time point (x-axis) in the LC-MS run. The following figure shows a TIC chromatogram of a 9-compounds mixture analysed on LC-MS system.
 <img alt="TIC" src="TIC.png" /></p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> In complex samples, the TIC chromatogram often provides limited information as multiple analytes elute simultaneously, obscuring individual species.</p>
 <h3 id="base-peak-chromatogram">Base peak chromatogram<a class="headerlink" href="#base-peak-chromatogram" title="Permanent link">&para;</a></h3>
-<p>The base peak chromatogram (BPC) displays the signal intensity of the most intense maass peak in the MS spectra at any one retention time point (x-axis) in the LC-MS run. The following figure shows the same data as above, visualized in BPI mode.
+<p>The base peak chromatogram (BPC) displays the signal intensity of the most intense mass peak in the MS spectra at any one retention time point (x-axis) in the LC-MS run. The following figure shows the same data as above, visualized in BPI mode.
 <img alt="BPC" src="BPC.png" /></p>
 <h3 id="extracted-ion-chromatogram">Extracted ion chromatogram<a class="headerlink" href="#extracted-ion-chromatogram" title="Permanent link">&para;</a></h3>
 <p>The extracted ion chromatogram (EIC) displays the signal intensity of a specific m/z value, within a defined tolerance (e.g. ± 5 ppm), at any one retention time point in the LC-MS run. The following figure shows the EIC of <em>m/z</em> 455.2945 ± 5 ppm (same sample as above).
 <img alt="EIC" src="EIC.png" /></p>
 <h3 id="chromatographic-resolving">Chromatographic resolving<a class="headerlink" href="#chromatographic-resolving" title="Permanent link">&para;</a></h3>
-<p>Peak overlapping, or co-elution, is a common problem in any chromatographic separation technique. In the case of LC-MS (especially untargeted <em>omics</em> analysis), it is virtually impossible to obtain a full baseline separation for the hundreds (or thousands) of analytes eluted through the column. The split of partially-overlapping and shoulder peaks into indivual features is generally referred to as <em>chromatographic resolving</em> and is one of the most crucial steps of data processing. TO FINISH.</p>
+<p>Peak overlapping, or co-elution, is a common problem in any chromatographic separation technique. In the case of LC-MS (especially untargeted <em>omics</em> analysis), it is virtually impossible to obtain a full baseline separation for the hundreds (or thousands) of analytes eluted through the column. The split of partially-overlapping and shoulder peaks into individual features is generally referred to as <em>chromatographic resolving</em> and is one of the most crucial steps of data processing. TO FINISH.</p>
 <h3 id="missing-values">Missing values<a class="headerlink" href="#missing-values" title="Permanent link">&para;</a></h3>
 <p>MISSING VALUE DEFINITION (see https://www.nature.com/articles/s41598-017-19120-0). </p>
 <p>Missing values_ can be caused by biological and/or technical reasons.
@@ -4071,8 +4071,18 @@ A gap (match-to-nothing) is defined as a missing value in an alignment. Peaks th
 <h3 id="feature-list"><strong>Feature list</strong><a class="headerlink" href="#feature-list" title="Permanent link">&para;</a></h3>
 <p>In MZmine, <strong>feature lists</strong> are the output of the <strong>feature detection</strong> process (see <a href="#masses-and-features">Masses and features</a>). </p>
 <p>The set of detected features in each LC-MS run is stored as a list, hence the name "feature list" (see, for example, <a href="../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP chromatogram builder</a> and <a href="../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local mimimum resolver</a> for more details). Multiple feature lists can undergo further processing (<em>e.g.</em> feature alingment) which results in a table (often referred to as <strong>feature table</strong>) where samples are arranged in columns, features in rows and each entry contains the signal intensity detected for the corresponding feature in the corresponding sample.</p>
-<h3 id="intra-and-inter-scan-tolerances"><strong>Intra and inter-scan tolerances</strong><a class="headerlink" href="#intra-and-inter-scan-tolerances" title="Permanent link">&para;</a></h3>
-<p>m/z tolerance is defined as maximum allowed difference between m/z values in order for them to be considered the same. Can be defined as <strong>intra-scan m/z tolerance</strong> for values with one scan (used, <em>e.g.</em>, in <a href="../module_docs/featdet_mass_detection/mass-detection.html#detect-isotope-signals-below-noise-level">Mass detection of isotope signals</a>) or <strong>inter-scan m/z tolerance</strong> for values between different scans (in, <em>e.g.</em>, <a href="../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP Chromatogram Builder</a>)</p>
+<h3 id="mz-tolerances"><strong><em>m/z</em> tolerances</strong><a class="headerlink" href="#mz-tolerances" title="Permanent link">&para;</a></h3>
+<ul>
+<li>scan-to-scan</li>
+<li>intra-sample</li>
+<li>sample to sample</li>
+</ul>
+<p>The <em>m/z</em> tolerance is defined as maximum allowed difference between <em>m/z</em> values in order to be considered
+the same or belonging to each other (isotopes or different adducts). The <strong>scan-to-scan <em>m/z</em> tolerance</strong>
+is used for values between different scans (in, <em>e.g.</em>, <a href="../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP Chromatogram Builder</a>). 
+The <strong>m/z tolerance (intra-sample)</strong> is used for features in the same scan that belong together (used, <em>e.g.</em>, in <a href="../module_docs/filter_isotope_filter/isotope_filter.html"><sup>13</sup>C isotope filter</a>).
+The <strong>m/z tolerance (sample-sample)</strong> takes the fluctuation of the same feature in different samples into account.
+This tolerance is used in the <a href="../module_docs/align_join_aligner/join_aligner.html">Join aligner</a>). </p>
 <h3 id="chromatogram-resolving"><strong>Chromatogram resolving</strong><a class="headerlink" href="#chromatogram-resolving" title="Permanent link">&para;</a></h3>
 <p>Was referred to as <strong>Deconvolution</strong> in MZmine 2. Process of splitting "imperfect" - overlapping and partially co-eluting - peaks, which are retained as single features, into the separate features. </p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
@@ -4083,14 +4093,14 @@ A gap (match-to-nothing) is defined as a missing value in an alignment. Peaks th
 <li>IUPAC. Compendium of Chemical Terminology, 2nd ed. (the "Gold Book"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997). Online version (2019-) created by S. J. Chalk. ISBN 0-9678550-9-8. <a>10.1351/goldbook</a></li>
 <li>Guo, J., Huan T. Evaluation of significant features discovered from different data acquisition modes in mass spectrometry-based untargeted metabolomics. <em>Analytica Chimica Acta</em> (2020). DOI: <a>10.1016/j.aca.2020.08.065</a></li>
 </ul>
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 21:13:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 19, 2024 13:07:07</span>
       
     
   </small>

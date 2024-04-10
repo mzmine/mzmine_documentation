@@ -3883,17 +3883,17 @@ Each data file is processed individually. The <a href="../../../terminology/gene
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> A good starting point for this parameter is 7-10 times the noise level used in the <a href="../../featdet_mass_detection/mass-detection.html">Mass detection</a>, <strong>if</strong> the instrumental noise is used as cutoff. See also <a href="../../featdet_mass_detection/mass-detection.html#how-do-i-determine-the-noise-level-in-my-data">How do I determine the noise level in my data?</a> for more details.</p>
 <h4 id="scan-to-scan-accuracy-mz"><strong>Scan to scan accuracy (m/z)</strong><a class="headerlink" href="#scan-to-scan-accuracy-mz" title="Permanent link">&para;</a></h4>
 <p>Maximum allowed difference between an EIC-associated <em>m/z</em> and a new data point to be added to the existing EIC trace. It is essentially the maximum allowed mass accuracy deviation between consecutive data points in the EICs. The tolerance can be specified as absolute tolerance (in <em>m/z</em>), relative tolerance (in ppm), or both. When both are specified, the tolerance range is calculated using the maximum between the absolute and relative tolerances.</p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> This is an <a href="../../../terminology/general-terminology.html#intra-and-inter-scan-tolerances">inter-scan <em>m/z</em> tolerance</a>, and it depends on the mass accuracy, resolution and stability of the instrument. The best way to optimize this parameter is by manually inspecting the raw data and determining the typical fluctuation of the accurate mass measurement over consecutive scans. A good starting point is 0.002-0.005 <em>m/z</em> and 5-10 ppm for Orbitrap instruments, while 0.005 <em>m/z</em> and 10-15 ppm can be used for TOF devices.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> This is an <a href="../../../terminology/general-terminology.html#mz-tolerances"><em>m/z</em> tolerance (scan-to-scan)</a>, and it depends on the mass accuracy, resolution and stability of the instrument. The best way to optimize this parameter is by manually inspecting the raw data and determining the typical fluctuation of the accurate mass measurement over consecutive scans. A good starting point is 0.002-0.005 <em>m/z</em> and 5-10 ppm for Orbitrap instruments, while 0.005 <em>m/z</em> and 10-15 ppm can be used for TOF devices.</p>
 <h4 id="suffix"><strong>Suffix</strong><a class="headerlink" href="#suffix" title="Permanent link">&para;</a></h4>
 <p>String added to the filename as suffix when creating the corresponding feature list.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 21:13:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 19, 2024 13:14:16</span>
       
     
   </small>
