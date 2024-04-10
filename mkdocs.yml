@@ -1,4 +1,4 @@
-site_name: MZmine 3 Documentation
+site_name: mzmine documentation
 site_url: https://mzmine.github.io/mzmine_documentation/
 edit_uri: https://github.com/mzmine/mzmine_documentation/edit/master/docs/
 repo_name: mzmine/mzmine_documentation
@@ -173,7 +173,7 @@ extra_css:
 
 theme:
   name: material
-  logo: img/MZMine_logo_white.png
+  logo: img/mzmine_logo_white.png
 
 plugins:
   - search
@@ -183,8 +183,8 @@ plugins:
       type: datetime
   - with-pdf:
       output_path: documentation.pdf
-      author: The MZmine Community
-      cover_title: MZmine 3
+      author: The mzmine Community
+      cover_title: mzmine
       cover_subtitle: Documentation
       cover_logo: docs/img/MZmine_logo_CMYK.png
 

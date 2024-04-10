@@ -2,13 +2,13 @@
 
 ## Download
 
-Download MZmine 3 portable versions or installers from GitHub:
+Download mzmine portable versions or installers from GitHub:
 
 [https://github.com/mzmine/mzmine3/releases/latest](https://github.com/mzmine/mzmine3/releases/latest)
 
 ## Install
 
-MZmine should work on Windows, macOS, and Linux using either the installers or the portable versions. There are **NO** further requirements as MZmine packages a specific Java Virtual Machine. This means the local Java installation has **no** impact on MZmine. Windows users might be warned that MZmine is not signed or from a trusted source and have to click run anyways. 
+mzmine should work on Windows, macOS, and Linux using either the installers or the portable versions. There are **NO** further requirements as MZmine packages a specific Java Virtual Machine. This means the local Java installation has **no** impact on MZmine. Windows users might be warned that MZmine is not signed or from a trusted source and have to click run anyways. 
 
 Before creating your first project, we recommend to [set the preferences](#set-user-preferences). 
 
@@ -28,7 +28,7 @@ You can get familiar with the new GUI here: [Main window overview](main-window-o
 
 ## Start processing 
 
-An excellent place to start would be [MZmine video tutorials on YouTube](https://www.youtube.com/@mzmineproject/playlists).
+An excellent place to start would be [mzmine video tutorials on YouTube](https://www.youtube.com/@mzmineproject/playlists).
 
 A quick insight to data processing workflows can be found
 here: [LC-MS workflow](workflows/lcmsworkflow/lcms-workflow.md)
@@ -36,9 +36,9 @@ or [LC-IMS-IMS workflow](workflows/imsworkflow/ion-mobility-data-processing-work
 
 You can also check out the new processing wizard under [Processing wizard](wizard.md) in the main menu. 
 
-## Running MZmine
+## Running mzmine
 
-MZmine provides a user-friendly graphical user interface (GUI) that facilitates data exploration, batch optimization, and results validation. If the batch processing is optimized and the goal is to solely produce the output files without the need for GUI, we recommend [running MZmine as a command-line tool](commandline_tool.md). 
+mzmine provides a user-friendly graphical user interface (GUI) that facilitates data exploration, batch optimization, and results validation. If the batch processing is optimized and the goal is to solely produce the output files without the need for GUI, we recommend [running MZmine as a command-line tool](commandline_tool.md). 
 
 
 
