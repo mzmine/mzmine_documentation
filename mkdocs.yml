@@ -8,6 +8,7 @@ use_directory_urls: false
 nav:
   - Home page: index.md
   - Getting started: getting_started.md
+  - User account: services/users.md
   - Learners corner: learners_corner.md
   - Main window overview: main-window-overview.md
   - Processing wizard: wizard.md
