@@ -31,7 +31,7 @@ to the other system and drag-and-drop them into mzmine. The users will be instal
 Finally, open the **Users/User management** and select the active user.
 
 
-## Changing user detail (email address)
+## User account console - changing user details
 
 Open the [mzio user account console](https://auth.mzio.io/realms/mzio/account/) and sign in with your user 
 credentials. Go to personal information to update any details. When changing the **email** the user is automatically 
