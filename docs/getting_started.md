@@ -12,6 +12,11 @@ mzmine should work on Windows, macOS, and Linux using either the installers or t
 
 Before creating your first project, we recommend to [set the preferences](#set-user-preferences). 
 
+## Sign in / Sign up for a free user account
+
+Open the **Users/User management** to sign in to an existing user or sign up for a free user account ([more details](services/users.md)). 
+
+
 ## Set User Preferences
 
 Before creating your first project, we recommend setting up some things.
