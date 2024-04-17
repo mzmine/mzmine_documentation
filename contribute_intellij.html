@@ -3926,30 +3926,47 @@
 <h1 id="development-in-intellij">Development in IntelliJ<a class="headerlink" href="#development-in-intellij" title="Permanent link">&para;</a></h1>
 <h2 id="set-up">Set up<a class="headerlink" href="#set-up" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Fork the mzmine (https://github.com/mzmine/mzmine3) GitHub repository (needs free GitHub account) (See https://help.github.com/en/github/getting-started-with-github/fork-a-repo)</li>
-<li>Download &amp; Install IntelliJ IDEA (there is a free educational license for students and teachers) from https://www.jetbrains.com/idea/download/</li>
-<li>Download &amp; Install the current JDK. We recommend the OpenJDK. However, you can also use any other distribution, e.g., the Oracle JDK. This can be done from within IntelliJ. Open <em>File/Project Structure</em> (CTRL+ALT+SHIFT+S) and select SDKs and add the latest JDK with the +button:</li>
+<li>Fork the mzmine (https://github.com/mzmine/mzmine3) GitHub repository (needs free GitHub
+   account) (See https://help.github.com/en/github/getting-started-with-github/fork-a-repo)</li>
+<li>Download &amp; Install IntelliJ IDEA (there is a free educational license for students and teachers)
+   from https://www.jetbrains.com/idea/download/</li>
+<li>Download &amp; Install the current JDK. We recommend the OpenJDK. However, you can also use any other
+   distribution, e.g., the Oracle JDK. This can be done from within IntelliJ. Open <em>File/Project
+   Structure</em> (CTRL+ALT+SHIFT+S) and select SDKs and add the latest JDK with the +button:</li>
 </ol>
-<p><img alt="" src="img/contribute/intellij_jdk.png" />
-4. Add your GitHub account via <strong>Settings/Version Control/GitHub</strong> +button. Below exemplified with the Log in with Token... option:
-    - Log in with Token… <strong>Generate</strong> - redirects to GitHub
-    - Make sure to select the <strong>Workflow</strong> scope to avoid conflicts that arise from changing GitHub actions</p>
+<p><img alt="" src="img/contribute/intellij_jdk.png" /></p>
+<ol>
+<li>Add your GitHub account via <strong>Settings/Version Control/GitHub</strong> +button. Below exemplified with
+   the Log in with Token... option:<ul>
+<li>Log in with Token… <strong>Generate</strong> - redirects to GitHub</li>
+<li>Make sure to select the <strong>Workflow</strong> scope to avoid conflicts that arise from changing GitHub
+  actions</li>
+</ul>
+</li>
+</ol>
 <p><img alt="" src="img/contribute/intellij_gh.png" />
-<img alt="" src="img/contribute/intellij_token.png" />
-5. Clone GitHub project via version control: <strong>File/New/Project from version control</strong> use your user name to get your fork: <code>https://github.com/YOUR USERNAME/mzmine3.git</code></p>
+<img alt="" src="img/contribute/intellij_token.png" /></p>
+<ol>
+<li>Clone GitHub project via version control: <strong>File/New/Project from version control</strong> use your user
+   name to get your fork: <code>https://github.com/YOUR USERNAME/mzmine3.git</code></li>
+</ol>
 <p><img alt="" src="img/contribute/intellij_project.png" /></p>
 <ol>
-<li>Make sure that gradle runs and updates the project. Otherwise, click on <strong>Reload Gradle Project</strong>. 
-Now the project structure (CTRL+SHIFT+ALT+S) should show the source, test, and resource folders which are described in the build.gradle.</li>
+<li>Make sure that gradle runs and updates the project. Otherwise, click on <strong>Reload Gradle Project
+   </strong>.
+   Now the project structure (CTRL+SHIFT+ALT+S) should show the source, test, and resource folders
+   which are described in the build.gradle.</li>
 </ol>
 <p><img alt="" src="img/contribute/intellij_gradle.png" />
 <img alt="" src="img/contribute/intellij_project_structure.png" /></p>
 <ol>
 <li>
-<p>Click on Add a Configuration. Select “Application” from the template list). via the + button (don’t just edit the template):</p>
+<p>Click on Add a Configuration. Select “Application” from the template list). via the + button (
+   don’t just edit the template):</p>
 <ul>
 <li>Main class: <code>io.github.mzmine.main.MZmineCore</code></li>
-<li>Environment var: <code>-Djava.util.logging.config.class=io.github.mzmine.main.MZmineLoggingConfiguration -Xmx12G</code></li>
+<li>Environment
+  var: <code>-Djava.util.logging.config.class=io.github.mzmine.main.MZmineLoggingConfiguration -Xmx12G</code></li>
 </ul>
 </li>
 <li>
@@ -3958,17 +3975,22 @@ Now the project structure (CTRL+SHIFT+ALT+S) should show the source, test, and r
 </ol>
 <p><img alt="" src="img/contribute/intellij_run2.png" /></p>
 <h2 id="code-formatter">Code formatter<a class="headerlink" href="#code-formatter" title="Permanent link">&para;</a></h2>
-<p>The code formatter is important for contributions to the main version of MZmine and each java file should contain the license header.
-1. Import the style format from <code>mzmine-intellij-code-formater.xml</code>
-2. Apply format to any file with CTRL+ALT+L
-3. Can also be applied on each file saved or each commited change (see below)
-4. Better exclude specific file formats from being formatted (see below screenshot 2) (<code>*.{fxml,xml,htm,html,json,yml,css}</code>)</p>
+<p>The code formatter is important for contributions to the main version of MZmine and each java file
+should contain the license header.</p>
+<ol>
+<li>Import the style format from <code>mzmine-intellij-code-formater.xml</code></li>
+<li>Apply format to any file with CTRL+ALT+L</li>
+<li>Can also be applied on each file saved or each commited change (see below)</li>
+<li>Better exclude specific file formats from being formatted (see below screenshot
+   2) (<code>*.{fxml,xml,htm,html,json,yml,css}</code>)</li>
+</ol>
 <p><img alt="" src="img/contribute/intellij_style.png" /></p>
 <p><img alt="" src="img/contribute/intellij_style2.png" /></p>
 <h2 id="copyright-header">Copyright header<a class="headerlink" href="#copyright-header" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Add the license header to each file - the easiest way is to add the copyright profile to intelliJ</li>
-<li>Import the copyright from <code>mzmine_intellij_licence_header.xml</code> or create a new one with the exact text specified in <code>license_header.txt</code></li>
+<li>Import the copyright from <code>mzmine_intellij_licence_header.xml</code> or create a new one with the exact
+   text specified in <code>license_header.txt</code></li>
 <li>Add a new scope for all project files</li>
 <li>Apply after file save or commit operation or run the <strong>Update copyright...</strong> action</li>
 </ol>
@@ -3989,61 +4011,80 @@ Now the project structure (CTRL+SHIFT+ALT+S) should show the source, test, and r
 <p><img alt="" src="img/contribute/intellij_save_actions.png" />
 <img alt="" src="img/contribute/intellij_commit.png" /></p>
 <h3 id="live-templates">Live templates<a class="headerlink" href="#live-templates" title="Permanent link">&para;</a></h3>
-<p>Live templates are used to add custom entries to the code completion, e.g., to quickly create a class-specific logger.
-Access <strong>Settings/Editor/Live Templates</strong> (CTRL+ALT+S on Windows) and add a new template (+ button). Define the
-abbreviation to trigger autocompletion at this statement, define the template text, and change the target context
-(“<strong>Java</strong>”) at the bottom. The template below generates a logger after typing log and pressing CTRL+SPACE. The variable
+<p>Live templates are used to add custom entries to the code completion, e.g., to quickly create a
+class-specific logger.
+Access <strong>Settings/Editor/Live Templates</strong> (CTRL+ALT+S on Windows) and add a new template (+ button).
+Define the
+abbreviation to trigger autocompletion at this statement, define the template text, and change the
+target context
+(“<strong>Java</strong>”) at the bottom. The template below generates a logger after typing log and pressing
+CTRL+SPACE. The variable
 <code>$CLASS_NAME$</code> was set to represent the current className() under <strong>Edit variable</strong>.</p>
-<p>The template:
-<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">logging</span><span class="p">.</span><span class="na">Logger</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">logging</span><span class="p">.</span><span class="na">Logger</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="n">$CLASSNAME$</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+<p>The template:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">logging</span><span class="p">.</span><span class="na">Logger</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">logging</span><span class="p">.</span><span class="na">Logger</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span>
+<span class="w">    </span><span class="n">$CLASSNAME$</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
 </code></pre></div>
-Generates the output in class Scan:
+<p>Generates the output in class Scan:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="n">Scan</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
-</code></pre></div></p>
+</code></pre></div>
 <p><img alt="" src="img/contribute/intellij_template.png" /></p>
 <p>Another example to create Javadoc links for <code>@l</code> . The variable (here <code>$target$</code>) places the cursor.</p>
 <p><img alt="" src="img/contribute/intellij_template2.png" /></p>
 <h3 id="postfix-templates">Postfix templates<a class="headerlink" href="#postfix-templates" title="Permanent link">&para;</a></h3>
-<p>Postfix templates allow to surround a preceeding variable or expression with code. Similar to live templates but after the expression. Go to the settings (CTRL+ALT S on Windows) and search for postfix templates. Click on the + button to add a new Java template. 
-Add a key, specify the minimum java version, check "Use static import if possible" and enter the following expression text:</p>
+<p>Postfix templates allow to surround a preceeding variable or expression with code. Similar to live
+templates but after the expression. Go to the settings (CTRL+ALT S on Windows) and search for
+postfix templates. Click on the + button to add a new Java template.
+Add a key, specify the minimum java version, check "Use static import if possible" and enter the
+following expression text:</p>
 <ul>
-<li><strong>key</strong>: nne </li>
+<li><strong>key</strong>: nne</li>
 <li><strong>expression</strong>: <code>Objects.requireNonNullElse($EXPR$, $END$)</code></li>
 </ul>
-<p>This will enable the following:
+<p>This will enable the following:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// input as variable.nne ...</span>
 <span class="n">spectrum</span><span class="p">.</span><span class="na">nne</span>
 <span class="c1">// ... auto complete will produce with _ being the cursor position</span>
-<span class="n">Objects</span><span class="p">.</span><span class="na">requireNonNullElse</span><span class="p">(</span><span class="n">spectrum</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">)</span>
+<span class="n">Objects</span><span class="p">.</span>
+
+<span class="nf">requireNonNullElse</span><span class="p">(</span><span class="n">spectrum</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">)</span>
+
 <span class="c1">// ... or this when &quot;use static import&quot; is activated </span>
 <span class="n">requireNonNullElse</span><span class="p">(</span><span class="n">spectrum</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <h3 id="correct-jdk-selection">Correct JDK selection<a class="headerlink" href="#correct-jdk-selection" title="Permanent link">&para;</a></h3>
-<p>Make sure the correct JDK is set in these places:
-1. File/Project Structure/SDKs
-2. File/Settings/Build, Execution, Deployment/Build Tools → Gradle → Gradle JVM → “Project SDK” this will update
-   automatically if the project SDK changes.
-3. File/Settings/Build, Execution, Deployment/Java Compiler → Project Bytecode version → 17 (for JDK 17)
-   Correct run configuration: Select Default JRE (this will update with the project sdk) or select the correct one manually.</p>
+<p>Make sure the correct JDK is set in these places:</p>
+<ol>
+<li>File/Project Structure/SDKs</li>
+<li>File/Settings/Build, Execution, Deployment/Build Tools → Gradle → Gradle JVM → “Project SDK” this
+   will update
+   automatically if the project SDK changes.</li>
+<li>File/Settings/Build, Execution, Deployment/Java Compiler → Project Bytecode version → 21 (for JDK
+   21)
+   Correct run configuration: Select Default JRE (this will update with the project sdk) or select
+   the correct one manually.</li>
+</ol>
 <h3 id="could-not-target-platform">Could not target platform<a class="headerlink" href="#could-not-target-platform" title="Permanent link">&para;</a></h3>
-<p>Error: When building via gradlew: “Could not target platform: 'Java SE 17' using tool chain: 'JDK 13 (13)'”
-Solution (Windows): Set the JAVA_HOME environment variable to the JDK 17 root directory.
-See https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html </p>
+<p>Error: When building via gradlew: “Could not target platform: 'Java SE 21' using tool chain: 'JDK
+13 (13)'”
+Solution (Windows): Set the JAVA_HOME environment variable to the JDK 21 root directory.
+See https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html</p>
 <h3 id="gradle-project-not-imported">Gradle project not imported<a class="headerlink" href="#gradle-project-not-imported" title="Permanent link">&para;</a></h3>
-<p>If gradle tool window is not shown:
-1. To import the Gradle project navigate to the build.gradle in the project tool window
-   right click → import gradle project. The gradle tool window should now be visible.
-2. To update the imports click the update gradle project button in the gradle tool window</p>
+<p>If gradle tool window is not shown:</p>
+<ol>
+<li>To import the Gradle project navigate to the build.gradle in the project tool window
+   right click → import gradle project. The gradle tool window should now be visible.</li>
+<li>To update the imports click the update gradle project button in the gradle tool window</li>
+</ol>
 <p><img alt="" src="img/contribute/intellij_gradle_update.png" /></p>
-<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:wesner.mark@web.de'>m_wesn01</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 13, 2023 12:42:51</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 17, 2024 07:07:18</span>
       
     
   </small>
