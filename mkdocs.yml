@@ -125,6 +125,8 @@ nav:
           - MSMS Visualizer: visualization_modules/msmsplot/msms-plot.md
           - Interactive Ion Identity Molecular Networks: visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md
           - Feature histograms: visualization_modules/feature_histograms/feature_hist.md
+          - 4D features plot (Kendrick): visualization_modules/kendrickmass/kendrick_mass_plot.md
+          - Van Krevelen plot: visualization_modules/vankrevelen/van_krevelen_plot.md
           - Additional tools: visualization_modules/processed_additional/processed_additional.md
       - Massvoltammogram: visualization_modules/massvoltammogram/massvoltammogram.md
 
