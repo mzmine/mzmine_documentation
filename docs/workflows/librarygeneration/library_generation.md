@@ -6,7 +6,7 @@ processing at any time and enables the data extraction for each compound in the 
 Therefore, a unique sample id in the metadata table that is also used as part of the filename links the mass 
 spectrometry data with the analyzed compounds, which is used during the MZmine processing.
 
-![white_library_building_workflow_paper.png](white_library_building_workflow_paper.png)
+![white_library_building_workflow_paper.png](simple_workflow_automatic_library_workflow.png)
 
 ## Overview
 
@@ -21,10 +21,10 @@ The following steps are included:
 ## Related resources
 
 - [Metadata Template](https://docs.google.com/spreadsheets/d/1v6_IlGS3VgycGc-mSSdNeocY-CFXpONVZbuh3XNLX2E/edit?usp=sharing)
-- [Metadata cleanup]()
-- [Metadata upload]()
-- [Sequence creation]()
-- [MZmine batch example]()
+- [Metadata cleanup](https://github.com/corinnabrungs/msn_tree_library)
+- [Metadata upload](https://github.com/merlin-ms/mass-spectral-library-network)
+- [Sequence creation](https://github.com/corinnabrungs/msn_tree_library)
+- [MZmine batch example](https://github.com/merlin-ms/templates-and-example)
 
 
 ## Providing of metadata
@@ -43,6 +43,8 @@ All other columns are optional and can be filled during the clean up step.
 
 ### Cleaning of metadata
 
+![metadata_cleanup](Msn_method_paper_workflow_metadata_cleanup.png)
+
 We provide a Python written metadata clean up script to remove salts from SMILES structures and to 
 search for structure information in PubChem if only a name or PubChem CID is given. Based on the cleaned
 SMILES, different structure information are computed, including the canonical and isomeric SMILES, SMARTS,
@@ -53,7 +55,7 @@ unique sample id is build by the library id, e.g., group+library, and the well/v
 the plate/rack and ending with _id. Furthermore, we included searches in public databases to gather
 additional information about each compound, especially drug related information, e.g., in any
 clinical phase or indication. The script can be found on
-[GitHub]().
+[GitHub](https://github.com/corinnabrungs/msn_tree_library).
 
 
 ### Uploading of metadata and raw data
@@ -63,9 +65,11 @@ to their metadata to optimize the spectra extraction based on new knowledge, qua
 contamination in the future. Normally, library spectra are exported, maybe manually curated and stay
 as they are within the spectral database, without further knowledge about the processing behind. A
 repository to upload the metadata and raw data can be found on
-[GitHub](https://github.com/orgs/merlin-ms/repositories).
+[GitHub](https://github.com/merlin-ms/mass-spectral-library-network).
 
 ## Sequence creation for data acquisition
+
+![Msn_method_paper_workflow_sample_prep.png](Msn_method_paper_workflow_sample_prep.png)
 
 The shape of the data acquisition sequence table is vendor specific. We provide a python script for
 XCalibur Thermo and we will update it for further instruments. The columns should be named as in the
@@ -87,11 +91,11 @@ The sequence is exported individually for each plate or rack and as a combined s
 sequence will have the Blank and QC in the beginning and end of the sequence and after the set number of injections.
 The data acquisition file names will be a combination of the date, unique sample id, the method
 suffix, and polarity.
-[GitHub]()
+[GitHub](https://github.com/corinnabrungs/msn_tree_library)
 
-## Data processing in MZmine
+## Data processing in mzmine
 
-![white_general_library_building_flow_compact.png](white_general_library_building_flow_compact.png)
+![Msn_method_paper_workflow_data_processing.png](Msn_method_paper_workflow_data_processing.png)
 
 Data should be converted to open data formats, e.g., mzML before importing in MZmine. This step guarantees
 the import at any time, since the vendor formats can change. For more information and possibilities go to
