@@ -4,18 +4,18 @@ This workflow is intended to extract library spectra automatically from your mas
 The general idea is, to link the metadata to your mass spectrometry data. This facilitates the data
 processing at any time and enables the data extraction for each compound in the corresponding injection.
 Therefore, a unique sample id in the metadata table that is also used as part of the filename links the mass 
-spectrometry data with the analyzed compounds, which is used during the MZmine processing.
+spectrometry data with the analyzed compounds, which is used during the mzmine processing.
 
 ![white_library_building_workflow_paper.png](simple_workflow_automatic_library_workflow.png)
 
 ## Overview
 
 The following steps are included:
-- Metadata clean up (Python script)
+- Metadata cleanup (Python script)
 - Sequence creation (Python script for Thermo)
 - Data acquisition
 - Data conversion to mzML and centroiding (MSConvert, ThermoRawFileParser,...)
-- Automatic library building workflow in MZmine by using the converted data files + cleaned Metadata
+- Automatic library building workflow in mzmine by using the converted data files + cleaned Metadata
 - Uploading of the raw data files, the library file(s) and the cleaned metadata
 
 ## Related resources
@@ -24,12 +24,12 @@ The following steps are included:
 - [Metadata cleanup](https://github.com/corinnabrungs/msn_tree_library)
 - [Metadata upload](https://github.com/merlin-ms/mass-spectral-library-network)
 - [Sequence creation](https://github.com/corinnabrungs/msn_tree_library)
-- [MZmine batch example](https://github.com/merlin-ms/templates-and-example)
+- [mzmine batch example](https://github.com/merlin-ms/templates-and-example)
 
 
 ## Providing of metadata
 
-The metadata are used for further processing including a clean up step, which means cleaning a given
+The metadata are used for further processing including a cleanup step, which means cleaning a given
 structure or searching for missing structures by a unique identifier, e.g., PubChem CID, or name, and adding further
 information by public database search. 
 Therefore, we provide this
@@ -39,13 +39,13 @@ the rack or plate and well location. The library id can be used to link the data
 standard library or subset that you used. The unique sample id will be build during the metadata clean up
 to link the dataset with the metadata. This can be also the whole filename or part of it if data were already acquired.
 If a full filename is used, this identifier needs to be changed if data are newly acquired and the filename changes. 
-All other columns are optional and can be filled during the clean up step.
+All other columns are optional and can be filled during the cleanup step.
 
 ### Cleaning of metadata
 
 ![metadata_cleanup](Msn_method_paper_workflow_metadata_cleanup.png)
 
-We provide a Python written metadata clean up script to remove salts from SMILES structures and to 
+We provide a Python written metadata cleanup script to remove salts from SMILES structures and to 
 search for structure information in PubChem if only a name or PubChem CID is given. Based on the cleaned
 SMILES, different structure information are computed, including the canonical and isomeric SMILES, SMARTS,
 the monoisotopic mass, InChI and InChIKey. Especially the monoisotopic mass is important for the automatic
@@ -60,7 +60,7 @@ clinical phase or indication. The script can be found on
 
 ### Uploading of metadata and raw data
 
-The library building is a non-static workflow. Accordingly it is important to link raw data
+The library building is a non-static workflow. Accordingly, it is important to link raw data
 to their metadata to optimize the spectra extraction based on new knowledge, quality parameters and
 contamination in the future. Normally, library spectra are exported, maybe manually curated and stay
 as they are within the spectral database, without further knowledge about the processing behind. A
@@ -97,11 +97,11 @@ suffix, and polarity.
 
 ![Msn_method_paper_workflow_data_processing.png](Msn_method_paper_workflow_data_processing.png)
 
-Data should be converted to open data formats, e.g., mzML before importing in MZmine. This step guarantees
+Data should be converted to open data formats, e.g., mzML before importing in mzmine. This step guarantees
 the import at any time, since the vendor formats can change. For more information and possibilities go to
 [Data conversion](../../data_conversion.md).
 
-In MZmine, open the Processing wizard to creat your own batch configuration. Change the instrument 
+In mzmine, open the Processing wizard to creat your own batch configuration. Change the instrument 
 settings to your instrument set up, e.g., Flow inject, and Orbitrap, and to **Library generation**.
 For more information, go to the [Processing wizard](../../wizard.md) page. The default settings are
 only suggestions and need to be updated and optimized for each dataset.
@@ -121,7 +121,7 @@ creation, the filename is created by the date, unique sample id, method suffix a
   - The unique sample id should not end on a number, as this will enable false matches, e.g., A2 is
   also in A20, A200,... 
 - Select all column you want to import
-  - Enable the Neutral mass type in MZmine, if you want to calculate the precursors, otherwise use the 
+  - Enable the Neutral mass type in mzmine, if you want to calculate the precursors, otherwise use the 
   Precursor m/z type
   - you can change the name by double click, changing the name,
   and pressing enter
@@ -134,14 +134,14 @@ Go to **Library generation** tab:
 acquired the data, or who is the PI,...)
 - Set the **Export path** to store the extracted library
 
-After you set everything, you can safe the presets. You can safe the library method separately from
+After you set everything, you can safe the presets. You can save the library method separately from
 the sample introduction and instrument, to stitch the library settings together with any other instrument
 setup. Click the **Create batch** button, which opens a new window. Every algorithm is prefilled by
 the wizard settings.
 
 Go to the **Custom database search** to change more library settings, especially possible adducts.
 Go to the **Batch spectral library generation** to set the format and the MS level for the export.
-Furthermore you can set additional quality settings, including the handling of chimeric spectra, 
+Furthermoreb you can set additional quality settings, including the handling of chimeric spectra, 
 minimum number of signals and minimum number of explained signals in each scan
 based on all subformula combinations.
 For more information about each parameter go to
