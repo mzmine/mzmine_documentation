@@ -1,3 +1,7 @@
+!!! danger
+
+    This module is currently under maintenance / deprecated / etc.
+
 # **Spectral deconvolution: Hierarchical Clustering**
 
 :construction: This module is being updated, which might affect its functionality

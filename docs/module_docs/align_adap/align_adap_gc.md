@@ -1,3 +1,7 @@
+!!! danger
+
+    This module is currently under maintenance
+
 # **ADAP Aligner (GC)**
 
 ## **Description**
