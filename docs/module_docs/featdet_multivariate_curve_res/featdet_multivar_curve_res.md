@@ -1,3 +1,7 @@
+!!! danger
+
+    This module is currently under maintenance / deprecated / etc.
+
 # **Spectral deconvolution: Multivariate Curve Resolution**
 
 !!! danger
