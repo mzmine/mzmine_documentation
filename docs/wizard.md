@@ -214,7 +214,8 @@ Influences batch steps:
 [Join Aligner](module_docs/align_join_aligner/join_aligner.md)
 [Local compound database search](module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md)
 [Lipid annotation (MS1)](module_docs/id_lipid_annotation/lipid-annotation.md)
-[ADAP aligner](module_docs/align_adap/align_adap_gc.md)
+
+[//]: # ([ADAP aligner]&#40;module_docs/align_adap/align_adap_gc.md&#41;)
 
 ## Filters
 

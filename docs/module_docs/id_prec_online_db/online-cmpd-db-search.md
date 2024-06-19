@@ -1,5 +1,7 @@
 # **Online compound database search**
 
+**Module is currently removed and no longer maintained.**
+
 :construction: This module has known bugs and is being updated, which might affect its functionality
 
 ## **Description**
@@ -38,6 +40,7 @@ If selected, only results which fit the required isotope pattern similarity scor
 
 Supported databases are listed below. Support for other databases may be implemented as additional plugins.
 
+<!-- markdown-link-check-disable -->
 - **KEGG**
 
     KEGG database (<a>http://www.genome.jp/kegg/</a>) contains metabolites and other biomolecules present in natural metabolic pathways.
@@ -69,5 +72,7 @@ Supported databases are listed below. Support for other databases may be impleme
 - **MetaCyc**
 
     MetaCyc (<a>https://metacyc.org/</a>) is a curated database of experimentally elucidated metabolic pathways from all biological domains. MetaCyc currently contains 2937 pathways, 17,780 reactions and 18,124 metabolites.
+
+<!-- markdown-link-check-enable -->
 
 {{ git_page_authors }}
