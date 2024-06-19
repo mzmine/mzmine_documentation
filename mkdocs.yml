@@ -63,8 +63,9 @@ nav:
         - Savitzky-Golay resolver: module_docs/featdet_resolver_savitzky-golay/savitzky-golay-resolver.md
 #      TODO Add mobilogram binning
       - Spectral deconvolution (GC):
-          - Hierarchical clustering: module_docs/featdet_hierarch_clustering/featdet_hierarch_clustering.md
-          - Multivariate curve resolution: module_docs/featdet_multivariate_curve_res/featdet_multivar_curve_res.md
+          - GC-EI spectral deconvolution: module_docs/featdet_spectraldeconvolutiongc/spectraldeconvolutiongc.md
+          #- Hierarchical clustering: module_docs/featdet_hierarch_clustering/featdet_hierarch_clustering.md
+          #- Multivariate curve resolution: module_docs/featdet_multivariate_curve_res/featdet_multivar_curve_res.md
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
       - MS2 scan pairing: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
       - MALDI MS2 scan pairing (SIMSEF): module_docs/featdet_ms2_scan_pairing/ms2_maldi_scan_pairing.md
@@ -87,8 +88,8 @@ nav:
           - Join aligner: module_docs/align_join_aligner/join_aligner.md
           - Merge lists: module_docs/align_merge_lists/align_merge_lists.md
           - RANSAC aligner: module_docs/align_ransac/align_ransac.md
-          - Hierachical aligner (GC): module_docs/align_hierarch/align_hierarch.md
-          - ADAP aligner (GC): module_docs/align_adap/align_adap_gc.md
+          #- Hierachical aligner (GC): module_docs/align_hierarch/align_hierarch.md
+          #- ADAP aligner (GC): module_docs/align_adap/align_adap_gc.md
           - LC Image Aligner: module_docs/align_lc-image/align_lc-image.md
       - Gap filling:
         - Peak finder: module_docs/gapfill_peak_finder/gap-filling.md

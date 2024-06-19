@@ -33,6 +33,13 @@ Maximum allowed difference between two retention time values for them to be clus
 #### Minimum Number of Signals
 Minimum number of deconvoluted signals in a pseudo spectrum.
 
+### hierarchical clustering
+#### Retention Time Tolerance (min)
+Maximum allowed difference between two retention time values for them to be clustered together.
+
+#### Minimum Number of Signals
+Minimum number of deconvoluted signals in a pseudo spectrum.
+
 ## Exclude m/z-values
 Optional parameter
 Optionally, the user can specify a list of deprecated m/z values such that EIC peaks with those m/z values could not be chosen as model peaks. It is possible to specify single m/z values as well as ranges of m/z values.
