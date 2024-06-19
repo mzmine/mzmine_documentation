@@ -155,28 +155,3 @@ removed or loaded and saved using the respective buttons.
 !!! Batch mode: To use the ROI extraction in the batch mode, set up the desired ROI using the 4D
 chart and save the region or extract it. You can either save the whole batch from the feature list
 summary or load the regions into the 'Region extraction' module.
-
-## **Automatic Repeating Unit Suggestion**
-
-### **Description**
-
-The `Repeating Unit Suggester` in mzmine is designed to automatically predict repeating units based on the m/z values of features in a feature list.
-This functionality is crucial for simplifying the identification of repeating units in polymer analysis,
-lipid identification, and other applications requiring pattern recognition in mass spectrometry data.
-
-### **Functionality**
-
-The `Repeating Unit Suggester` performs the following steps to suggest repeating units. The results are displayed on the right side of the [parameter setup dialog](Kendrick_Mass_Plot_Parameters.png):
-
-
-1. **Extract m/z Values**: The m/z values are extracted from the provided feature list, taking into account the detected charge states of the features, if available (default charge = 1).
-
-2. **Calculate Delta Frequencies**: The frequency of all m/z deltas is calculated to identify common mass differences between features.
-
-3. **Identify Top Deltas**: The top N delta medians are identified based on their frequency, which helps in pinpointing the most common repeating units.
-
-4. **Filter Multimers**: The deltas are filtered to remove multimers, ensuring that only the most relevant repeating units are considered.
-
-5. **Predict Formulas**: Potential molecular formulas corresponding to the identified deltas are predicted. This involves:
-   - Generating molecular formulas.
-   - Applying heuristic checks (RDBE, elemental, and nitrogen rule) to validate the predicted formulas.
