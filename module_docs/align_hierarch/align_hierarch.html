@@ -11,10 +11,6 @@
         <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/align_hierarch/align_hierarch.html">
       
       
-        <link rel="prev" href="../align_ransac/align_ransac.html">
-      
-      
-        <link rel="next" href="../align_adap/align_adap_gc.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Hierachical aligner (GC) - mzmine documentation</title>
+        <title>Hierachical aligner GC (or Hierarchical Clustering aligner) - mzmine documentation</title>
       
     
     
@@ -104,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hierachical aligner (GC)
+              Hierachical aligner GC (or Hierarchical Clustering aligner)
             
           </span>
         </div>
@@ -423,19 +419,17 @@
       
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
@@ -448,7 +442,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Processing modules
@@ -1471,31 +1465,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../featdet_hierarch_clustering/featdet_hierarch_clustering.html" class="md-nav__link">
+      <a href="../featdet_spectraldeconvolutiongc/spectraldeconvolutiongc.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Hierarchical clustering
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../featdet_multivariate_curve_res/featdet_multivar_curve_res.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Multivariate curve resolution
+    GC-EI spectral deconvolution
   </span>
   
 
@@ -1943,19 +1917,17 @@
                 
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_17" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_17" >
         
           <label class="md-nav__link" for="__nav_12_17" id="__nav_12_17_label" tabindex="0">
             
@@ -1968,7 +1940,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_17_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_17_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12_17">
             <span class="md-nav__icon md-icon"></span>
             Alignment
@@ -2026,202 +1998,6 @@
   
   <span class="md-ellipsis">
     RANSAC aligner
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Hierachical aligner (GC)
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="align_hierarch.html" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Hierachical aligner (GC)
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
-  </a>
-  
-    <nav class="md-nav" aria-label="Description">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general-algorithm" class="md-nav__link">
-    General Algorithm
-  </a>
-  
-    <nav class="md-nav" aria-label="General Algorithm">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#available-linkage-criteria" class="md-nav__link">
-    Available linkage criteria
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mzmine-gc-specific-considerations" class="md-nav__link">
-    MZmine GC: Specific considerations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getting-clusters-from-rooted-binary-tree" class="md-nav__link">
-    Getting clusters from rooted binary tree
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#method-parameters" class="md-nav__link">
-    Method parameters
-  </a>
-  
-    <nav class="md-nav" aria-label="Method parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clustering-strategy" class="md-nav__link">
-    Clustering strategy
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#feature-list-name" class="md-nav__link">
-    Feature list name
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mz-tolerance" class="md-nav__link">
-    m/z tolerance
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#weight-for-mz" class="md-nav__link">
-    Weight for m/z
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#retention-time-tolerance" class="md-nav__link">
-    Retention time tolerance
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#weight-for-rt" class="md-nav__link">
-    Weight for RT
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#export-dendrogram-as-txtcdt" class="md-nav__link">
-    Export dendrogram as TXT/CDT
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dendrogram-output-text-filename" class="md-nav__link">
-    Dendrogram output text filename
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../align_adap/align_adap_gc.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ADAP aligner (GC)
   </span>
   
 
@@ -2508,26 +2284,6 @@
   
   <span class="md-ellipsis">
     Precursor search in local spectral MS/MS library
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../id_prec_online_db/online-cmpd-db-search.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Online compound database search
   </span>
   
 
