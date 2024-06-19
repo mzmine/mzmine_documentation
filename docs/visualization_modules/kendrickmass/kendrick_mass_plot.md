@@ -84,11 +84,11 @@ with \(\{ \}\) being the fractional part function defined as \(x=x-floor(x)\)
 
 ## **Parameters**
 
-![Kendrick parameters](Kendrick_Mass_Plot_Parameters.png)
+![Kendrick parameters](kendrick_mass_plot_parameters.png)
 
 #### **Feature List**
 
-Select one feature or aligned featurel list.
+Select one feature or aligned feature list.
 
 #### **X-axis**
 
@@ -160,23 +160,32 @@ summary or load the regions into the 'Region extraction' module.
 
 ### **Description**
 
-The `Repeating Unit Suggester` in mzmine is designed to automatically predict repeating units based on the m/z values of features in a feature list.
-This functionality is crucial for simplifying the identification of repeating units in polymer analysis,
-lipid identification, and other applications requiring pattern recognition in mass spectrometry data.
+The `Repeating Unit Suggester` in mzmine is designed to automatically predict repeating units based
+on the m/z values of features in a feature list.
+This functionality is crucial for simplifying the identification of repeating units in polymer
+analysis,
+lipid identification, and other applications requiring pattern recognition in mass spectrometry
+data.
 
 ### **Functionality**
 
-The `Repeating Unit Suggester` performs the following steps to suggest repeating units. The results are displayed on the right side of the [parameter setup dialog](Kendrick_Mass_Plot_Parameters.png):
+The `Repeating Unit Suggester` performs the following steps to suggest repeating units. The results
+are displayed on the right side of the [parameter setup dialog](#parameters):
 
+1. **Extract m/z Values**: The m/z values are extracted from the provided feature list, taking into
+   account the detected charge states of the features, if available (default charge = 1).
 
-1. **Extract m/z Values**: The m/z values are extracted from the provided feature list, taking into account the detected charge states of the features, if available (default charge = 1).
+2. **Calculate Delta Frequencies**: The frequency of all m/z deltas is calculated to identify common
+   mass differences between features.
 
-2. **Calculate Delta Frequencies**: The frequency of all m/z deltas is calculated to identify common mass differences between features.
+3. **Identify Top Deltas**: The top N delta medians are identified based on their frequency, which
+   helps in pinpointing the most common repeating units.
 
-3. **Identify Top Deltas**: The top N delta medians are identified based on their frequency, which helps in pinpointing the most common repeating units.
+4. **Filter Multimers**: The deltas are filtered to remove multimers, ensuring that only the most
+   relevant repeating units are considered.
 
-4. **Filter Multimers**: The deltas are filtered to remove multimers, ensuring that only the most relevant repeating units are considered.
-
-5. **Predict Formulas**: Potential molecular formulas corresponding to the identified deltas are predicted. This involves:
-   - Generating molecular formulas.
-   - Applying heuristic checks (RDBE, elemental, and nitrogen rule) to validate the predicted formulas.
+5. **Predict Formulas**: Potential molecular formulas corresponding to the identified deltas are
+   predicted. This involves:
+    - Generating molecular formulas.
+    - Applying heuristic checks (RDBE, elemental, and nitrogen rule) to validate the predicted
+      formulas.
