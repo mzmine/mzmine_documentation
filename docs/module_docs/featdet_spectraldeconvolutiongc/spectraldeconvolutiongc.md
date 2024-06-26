@@ -33,6 +33,9 @@ Maximum allowed difference between two retention time values for them to be clus
 #### Minimum Number of Signals
 Minimum number of deconvoluted signals in a pseudo spectrum.
 
+#### Minimum shape similarity
+Minimum shape similarity of a feature to be added to a pseudo spectrum. Features not meeting the shape similarity (Pearson correlation) are not considered in the pseudo spectrum.
+
 ### hierarchical clustering
 #### Retention Time Tolerance (min)
 Maximum allowed difference between two retention time values for them to be clustered together.
