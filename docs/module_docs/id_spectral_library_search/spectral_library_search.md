@@ -1,4 +1,4 @@
-~~# **Spectral library search**
+# **Spectral library search**
 
 ## **Description**
 
@@ -25,9 +25,10 @@ Depending on the **MS level** (MS1 or MS2), all corresponding query scans (e.g.,
 
 ### Downloads for open spectral libraries
 
-- MassBank of North America: [download](https://mona.fiehnlab.ucdavis.edu/downloads)
-- MassBankEU: [download](https://github.com/MassBank/MassBank-data/releases/latest)
-- GNPS (ALL_GNPS_NO_PROPOGATED): [download](https://gnps-external.ucsd.edu/gnpslibrary)
+- MassBank of North America: [download](https://mona.fiehnlab.ucdavis.edu/downloads) (download .json)
+- MassBankEU: [download](https://github.com/MassBank/MassBank-data/releases/latest) (download .msp)
+- GNPS (ALL_GNPS_NO_PROPOGATED): [download](https://gnps-external.ucsd.edu/gnpslibrary) (download .json)
+- MSnLib: [download](https://zenodo.org/records/11163381) (download .mgf)
 
 ### **Supported library formats**
 
