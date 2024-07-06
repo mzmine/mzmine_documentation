@@ -414,6 +414,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#selecting-a-user" class="md-nav__link">
+    Selecting a user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#windows" class="md-nav__link">
     Windows
   </a>
@@ -3691,6 +3698,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#selecting-a-user" class="md-nav__link">
+    Selecting a user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#windows" class="md-nav__link">
     Windows
   </a>
@@ -3731,25 +3745,29 @@
 
 <h1 id="command-line-interface-cli-for-headless-batch-mode">Command-line interface (CLI) for headless batch mode<a class="headerlink" href="#command-line-interface-cli-for-headless-batch-mode" title="Permanent link">&para;</a></h1>
 <p>Command-line arguments offer a variety of options that generally override the corresponding parameters in the preferences.</p>
+<h2 id="selecting-a-user">Selecting a user<a class="headerlink" href="#selecting-a-user" title="Permanent link">&para;</a></h2>
+<p>Running mzmine in CLI mode requires a <a href="services/users.html">user</a>. Either login via graphical-user interface (GUI) or via command-line argument <strong>-login</strong>. 
+Then locate the user file in your system USER directory under /.mzmine/users/. The most recently active user is automatically selected for mzmine processing,
+but an .mzuser file can be passed in as command-line argument to <strong>-user</strong>.</p>
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
-<p>An easy way to start MZmine with arguments is to create a shortcut to the MZmine.exe, right-click, and define the target with additional arguments. This example runs MZMine in batch mode (headless), imports the specified batch file, overrides the memory management to <strong>none</strong> (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the <em>memory</em> or <em>temp</em> arguments, the values stored in the current <em>preferences</em> file will be used, or the default values if no <em>preferences</em> file was found.  </p>
+<p>An easy way to start mzmine with arguments is to create a shortcut to the mzmine.exe, right-click, and define the target with additional arguments. This example runs mzmine in batch mode (headless), imports the specified batch file, overrides the memory management to <strong>none</strong> (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the <em>memory</em> or <em>temp</em> arguments, the values stored in the current <em>preferences</em> file will be used, or the default values if no <em>preferences</em> file was found.  </p>
 <p><strong>Process all .mzML files in a folder by the provided batch file</strong>
-<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -input &quot;D:\Data\*.mzML&quot;
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\mzmine\mzmine.exe&quot; -user &quot;D:\user\testuser.mzuser&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -input &quot;D:\Data\*.mzML&quot;
 </code></pre></div></p>
 <p><strong>Defining the temp folder, otherwise uses the one specified in local configuration</strong>
-<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -temp &quot;D:\tmpmzmine&quot;
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\mzmine\mzmine.exe&quot; -user &quot;D:\user\testuser.mzuser&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -temp &quot;D:\tmpmzmine&quot;
 </code></pre></div></p>
-<p><strong>Start MZmine batch with memory mapping (DEFAULT)</strong>
-<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory none -temp &quot;D:\tmpmzmine&quot;
+<p><strong>Start mzmine batch with memory mapping (DEFAULT)</strong>
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\mzmine\mzmine.exe&quot; -user &quot;D:\user\testuser.mzuser&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory none -temp &quot;D:\tmpmzmine&quot;
 </code></pre></div></p>
-<p><strong>Start MZmine batch on machines with enough memory (RAM) with -memory all</strong> this will disable memory mapping to temporary files. 
-<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\MZmine\MZmine.exe&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory all -temp &quot;D:\tmpmzmine&quot;
+<p><strong>Start mzmine batch on machines with enough memory (RAM) with -memory all</strong> this will disable memory mapping to temporary files. 
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\mzmine\mzmine.exe&quot; -user &quot;D:\user\testuser.mzuser&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory all -temp &quot;D:\tmpmzmine&quot;
 </code></pre></div></p>
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
 <p>If the app was installed to the <em>Applications</em> folder, run this command in the terminal to run a batch file:
-<div class="highlight"><pre><span></span><code>/Applications/MZmine.app/Contents/MacOS/MZmine -batch /path/to/batch_file.xml
+<div class="highlight"><pre><span></span><code>/Applications/mzmine.app/Contents/MacOS/mzmine -user &quot;path/to/testuser.mzuser&quot; -batch /path/to/batch_file.xml
 </code></pre></div></p>
-<div class="highlight"><pre><span></span><code>/Applications/MZmine.app/Contents/MacOS/MZmine -batch /path/to/batch_file.xml -input &quot;/path/to/data/*.mzML&quot;
+<div class="highlight"><pre><span></span><code>/Applications/mzmine.app/Contents/MacOS/mzmine -user &quot;path/to/testuser.mzuser&quot; -batch /path/to/batch_file.xml -input &quot;/path/to/data/*.mzML&quot;
 </code></pre></div>
 <h2 id="argument-table">Argument table<a class="headerlink" href="#argument-table" title="Permanent link">&para;</a></h2>
 <table>
@@ -3762,19 +3780,44 @@
 </thead>
 <tbody>
 <tr>
+<td>-h and -help</td>
+<td>no argument</td>
+<td>show help</td>
+</tr>
+<tr>
+<td>-u and -user</td>
+<td>a path, e.g., "D:\myuser.mzuser"</td>
+<td>Path to an .mzuser file to login a user. This file is copied to the users directory. To obtain a user file, login in the mzmine graphical user interface (GUI) or command line interface (CLI). User files can be found in your system USER directory in /.mzmine/users/ after login. A user can be used in an offline environment for a certain duration.</td>
+</tr>
+<tr>
+<td>-login</td>
+<td>no argument</td>
+<td>Use command-line to login to a user. This will open the login website in the system internet browser, if supported, or prompts an input for the user credentials into the console. After successful login, a user file will be copied to your system USER directory in /.mzmine/users/. And the current user will be saved to the configuration. The created user file can be accessed with the -user argument on the next startup.</td>
+</tr>
+<tr>
+<td>-list-users</td>
+<td>no argument</td>
+<td>List all users available on this system. The users are read from the system USER directory /.mzmine/users/.</td>
+</tr>
+<tr>
 <td>-b and -batch</td>
-<td>a path, e.g. "D:\batch.xml"</td>
-<td>Path to batch file</td>
+<td>a path, e.g., "D:\batch.xml"</td>
+<td>Path to batch file that will be run in command-line mode.</td>
 </tr>
 <tr>
 <td>-i and -input</td>
-<td>a txt file or glob pattern, e.g., "D:\Data\*.mzML"</td>
+<td>a txt file or glob pattern, e.g., "D:\Data*.mzML"</td>
 <td>input data files. Either defined in a .txt text file with one file per line or by glob pattern matching. To match all .mzML files in a path: -i "D:\Data\*.mzML"</td>
 </tr>
 <tr>
 <td>-l and -libraries</td>
-<td>a txt file or glob pattern, e.g., "D:\Data\*.json"</td>
+<td>a txt file or glob pattern, e.g., "D:\Data*.json"</td>
 <td>spectral library files. Either defined in a .txt text file with one file per line or by glob pattern matching. To match all .json or .mgf files in a path: -libraries "D:\Data\*.json"</td>
+</tr>
+<tr>
+<td>-o and -output</td>
+<td>An output path and base filename, e.g., "D:\basename"</td>
+<td>The base file name will be extended by default module names to export all files.</td>
 </tr>
 <tr>
 <td>-m and -memory</td>
@@ -3784,12 +3827,12 @@
 <tr>
 <td>-t and -temp</td>
 <td>a path, e.g., "-temp "D:\tmpmzmine\"</td>
-<td>The defined directory should be on a fast drive (usually SSD &gt; HDD &gt; network drive) with enough free space. Local drives are usually preferred. MZmine uses memory mapping to efficiently store and access spectral and feature data. This can lead to a considerable temporary consumption of disk space. Make sure that the selected drive has enough space (maybe 20 GB + 1 GB/10 files; generously over estimated).</td>
+<td>The defined directory should be on a fast drive (usually SSD &gt; HDD &gt; network drive) with enough free space. Local drives are usually preferred. mzmine uses memory mapping to efficiently store and access spectral and feature data. This can lead to a considerable temporary consumption of disk space. Make sure that the selected drive has enough space (maybe 20 GB + 1 GB/10 files; generously over estimated).</td>
 </tr>
 <tr>
 <td>-p and -pref</td>
 <td>a path, e.g., "D:\config.xml"</td>
-<td>An MZmine configuration file in xml format. The general preferences.</td>
+<td>An mzmine configuration file in xml format. The general preferences.</td>
 </tr>
 <tr>
 <td>-threads</td>
@@ -3805,7 +3848,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 21, 2023 12:57:27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 6, 2024 06:56:42</span>
       
     
   </small>
