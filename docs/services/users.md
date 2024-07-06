@@ -83,3 +83,17 @@ a few minutes.
 5. Check your license status in mzmine. Every user will receive a 30-day trial license or a non-profit academic license. Please reach out if your academic institution still needs our automatic validation.   
 
 ![users_users.png](img%2Fusers_users.png)
+
+
+## Command-line interface (CLI)
+
+Users can be logged in via command-line arguments to run mzmine in batch mode. See [CLI tools](../commandline_tool.md) for more information.
+
+
+## Frequently asked questions (FAQ)
+
+1. Why is the link to verify my email address missing?
+    - Your email provider may remove links as a security measure. Please reach out to your postmaster or IT administrator with _info@mzio.io_ in Cc to resolve this issue. Please provide the information that links are missing and that the domain mzio.io can be trusted.  
+
+2. Why am I not receiving any verification email?
+    - Your email provider may falsely block the mzio.io domain. Please reach out to your postmaster or IT administrator with _info@mzio.io_ in Cc to resolve this issue. Please provide the information that the domain mzio.io can be trusted.
