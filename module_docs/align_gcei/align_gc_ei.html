@@ -8,25 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/coding/macos_signing.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/align_gcei/align_gc_ei.html">
       
       
-        <link rel="prev" href="general_structure.html">
+        <link rel="prev" href="../align_ransac/align_ransac.html">
       
       
-        <link rel="next" href="module_development.html">
+        <link rel="next" href="../align_lc-image/align_lc-image.html">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
     
     
       
-        <title>macOS code signing - mzmine documentation</title>
+        <title>GC-EI aligner - mzmine documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
       
       
 
@@ -45,9 +45,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macos-code-signing" class="md-skip">
+        <a href="#gc-ei-feature-alignment" class="md-skip">
           Skip to content
         </a>
       
@@ -85,9 +85,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="mzmine documentation" class="md-header__button md-logo" aria-label="mzmine documentation" data-md-component="logo">
+    <a href="../../index.html" title="mzmine documentation" class="md-header__button md-logo" aria-label="mzmine documentation" data-md-component="logo">
       
-  <img src="../img/mzmine_logo_white.png" alt="logo">
+  <img src="../../img/mzmine_logo_white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              macOS code signing
+              GC-EI aligner
             
           </span>
         </div>
@@ -188,9 +188,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="mzmine documentation" class="md-nav__button md-logo" aria-label="mzmine documentation" data-md-component="logo">
+    <a href="../../index.html" title="mzmine documentation" class="md-nav__button md-logo" aria-label="mzmine documentation" data-md-component="logo">
       
-  <img src="../img/mzmine_logo_white.png" alt="logo">
+  <img src="../../img/mzmine_logo_white.png" alt="logo">
 
     </a>
     mzmine documentation
@@ -216,7 +216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -235,7 +235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started.html" class="md-nav__link">
+      <a href="../../getting_started.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -254,7 +254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../services/users.html" class="md-nav__link">
+      <a href="../../services/users.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -273,7 +273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../learners_corner.html" class="md-nav__link">
+      <a href="../../learners_corner.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../main-window-overview.html" class="md-nav__link">
+      <a href="../../main-window-overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -311,7 +311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wizard.html" class="md-nav__link">
+      <a href="../../wizard.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -330,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_conversion.html" class="md-nav__link">
+      <a href="../../data_conversion.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -349,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../performance.html" class="md-nav__link">
+      <a href="../../performance.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -368,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../commandline_tool.html" class="md-nav__link">
+      <a href="../../commandline_tool.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -387,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tool_integration.html" class="md-nav__link">
+      <a href="../../tool_integration.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -406,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../citations.html" class="md-nav__link">
+      <a href="../../citations.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -423,17 +423,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
@@ -446,7 +448,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Processing modules
@@ -493,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io/data-import.html" class="md-nav__link">
+      <a href="../io/data-import.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -513,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io/data-export.html" class="md-nav__link">
+      <a href="../io/data-export.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io/feat-list-import.html" class="md-nav__link">
+      <a href="../io/feat-list-import.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io/feat-list-export.html" class="md-nav__link">
+      <a href="../io/feat-list-export.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io/data-exchange-with-other-software.html" class="md-nav__link">
+      <a href="../io/data-exchange-with-other-software.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -593,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io_spectral_library_export/spectral_library_generation.html" class="md-nav__link">
+      <a href="../io_spectral_library_export/spectral_library_generation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_file_merging/raw-files-merging.html" class="md-nav__link">
+      <a href="../featdet_file_merging/raw-files-merging.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -675,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_mobility_scan_merging/mobility-scan-merging.html" class="md-nav__link">
+      <a href="../featdet_mobility_scan_merging/mobility-scan-merging.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_raw_data/filter-scan-by-scan.html" class="md-nav__link">
+      <a href="../filter_raw_data/filter-scan-by-scan.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_raw_data/crop-filter.html" class="md-nav__link">
+      <a href="../filter_raw_data/crop-filter.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_raw_data/baseline-corrections.html" class="md-nav__link">
+      <a href="../filter_raw_data/baseline-corrections.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -797,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_raw_data/align-scans.html" class="md-nav__link">
+      <a href="../filter_raw_data/align-scans.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -817,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_raw_data/scan_smoothing.html" class="md-nav__link">
+      <a href="../filter_raw_data/scan_smoothing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -879,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_mass_detection/mass-detection.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/mass-detection.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_mass_detection/mass-detection-algorithms.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/mass-detection-algorithms.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -919,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/FTMS-shoulder-peak-filter.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -939,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_mass_detection/mass-calibration.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/mass-calibration.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html" class="md-nav__link">
+      <a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1021,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ms_featdet/featdet_gridmass/gridmass.html" class="md-nav__link">
+      <a href="../lc-ms_featdet/featdet_gridmass/gridmass.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1041,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.html" class="md-nav__link">
+      <a href="../lc-ms_featdet/targeted_featdet/targeted-featdet.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1061,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ms_featdet/featdet_results/featdet_results.html" class="md-nav__link">
+      <a href="../lc-ms_featdet/featdet_results/featdet_results.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.html" class="md-nav__link">
+      <a href="../lc-ims-ms_featdet/featdet_ims_expander/ims-expander.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-nav__link">
+      <a href="../lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1163,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.html" class="md-nav__link">
+      <a href="../lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1225,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/imaging_featdet/featdet_image_builder/image-builder.html" class="md-nav__link">
+      <a href="../imaging_featdet/featdet_image_builder/image-builder.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,7 +1255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_smoothing/smoothing.html" class="md-nav__link">
+      <a href="../featdet_smoothing/smoothing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1307,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1327,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_resolver_adap/adap-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_adap/adap-resolver.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1347,7 +1349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_resolver_baseline/baseline-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_baseline/baseline-resolver.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1367,7 +1369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_resolver_centwave/centwave-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_centwave/centwave-resolver.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1387,7 +1389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_resolver_noise_ampl/noise-ampl-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_noise_ampl/noise-ampl-resolver.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1407,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_resolver_savitzky-golay/savitzky-golay-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_savitzky-golay/savitzky-golay-resolver.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1469,7 +1471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_spectraldeconvolutiongc/spectraldeconvolutiongc.html" class="md-nav__link">
+      <a href="../featdet_spectraldeconvolutiongc/spectraldeconvolutiongc.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1497,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_ccs_calibration/ccs_calibration.html" class="md-nav__link">
+      <a href="../id_ccs_calibration/ccs_calibration.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1517,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.html" class="md-nav__link">
+      <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1537,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_ms2_scan_pairing/ms2_maldi_scan_pairing.html" class="md-nav__link">
+      <a href="../featdet_ms2_scan_pairing/ms2_maldi_scan_pairing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1591,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_isotope_filter/isotope_filter.html" class="md-nav__link">
+      <a href="../filter_isotope_filter/isotope_filter.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1611,7 +1613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_isotope_finder/isotope_finder.html" class="md-nav__link">
+      <a href="../filter_isotope_finder/isotope_finder.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1631,7 +1633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_isotope_peak_scanner/isotope_peak_scanner.html" class="md-nav__link">
+      <a href="../filter_isotope_peak_scanner/isotope_peak_scanner.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1693,7 +1695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_ion_networking/metacorr/metacorr.html" class="md-nav__link">
+      <a href="../id_ion_networking/metacorr/metacorr.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1713,7 +1715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_ion_networking/iin/iin.html" class="md-nav__link">
+      <a href="../id_ion_networking/iin/iin.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1775,7 +1777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_duplicate_features/duplicate_feature_filter.html" class="md-nav__link">
+      <a href="../filter_duplicate_features/duplicate_feature_filter.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1795,7 +1797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/feature_list_row_filter/feature_list_rows_filter.html" class="md-nav__link">
+      <a href="../feature_list_row_filter/feature_list_rows_filter.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1815,7 +1817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/feature_filter/feature_filter.html" class="md-nav__link">
+      <a href="../feature_filter/feature_filter.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1835,7 +1837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_peakcomparison_row_filter/filter_peakcomparison_row_filter.html" class="md-nav__link">
+      <a href="../filter_peakcomparison_row_filter/filter_peakcomparison_row_filter.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1855,7 +1857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_neutral_loss/filter_neutral_loss.html" class="md-nav__link">
+      <a href="../filter_neutral_loss/filter_neutral_loss.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1875,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_mobilitymzregionextraction/filter_mobilitymzregionextraction.html" class="md-nav__link">
+      <a href="../filter_mobilitymzregionextraction/filter_mobilitymzregionextraction.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1895,7 +1897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_blanksubtraction/filter_blanksubtraction.html" class="md-nav__link">
+      <a href="../filter_blanksubtraction/filter_blanksubtraction.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1921,17 +1923,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_17" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_17" checked>
         
           <label class="md-nav__link" for="__nav_12_17" id="__nav_12_17_label" tabindex="0">
             
@@ -1944,7 +1948,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_17_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_17_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12_17">
             <span class="md-nav__icon md-icon"></span>
             Alignment
@@ -1957,7 +1961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/align_join_aligner/join_aligner.html" class="md-nav__link">
+      <a href="../align_join_aligner/join_aligner.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1977,7 +1981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/align_merge_lists/align_merge_lists.html" class="md-nav__link">
+      <a href="../align_merge_lists/align_merge_lists.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1997,7 +2001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/align_ransac/align_ransac.html" class="md-nav__link">
+      <a href="../align_ransac/align_ransac.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2015,9 +2019,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../module_docs/align_gcei/align_gc_ei.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    GC-EI aligner
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="align_gc_ei.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2026,6 +2050,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-lists" class="md-nav__link">
+    Feature Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mz-tolerance" class="md-nav__link">
+    m/z Tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retention-time-tolerance-min" class="md-nav__link">
+    Retention Time Tolerance (min)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weight-for-rt" class="md-nav__link">
+    Weight for RT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#similarity-function" class="md-nav__link">
+    Similarity Function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-list-name" class="md-nav__link">
+    Feature List Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handle-original-feature-list" class="md-nav__link">
+    Handle Original Feature List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2037,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/align_lc-image/align_lc-image.html" class="md-nav__link">
+      <a href="../align_lc-image/align_lc-image.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2099,7 +2212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/gapfill_peak_finder/gap-filling.html" class="md-nav__link">
+      <a href="../gapfill_peak_finder/gap-filling.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2119,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/gapfill_same_mz_and_RT_range/same_mz_and_RT_range_gap_filler.html" class="md-nav__link">
+      <a href="../gapfill_same_mz_and_RT_range/same_mz_and_RT_range_gap_filler.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2181,7 +2294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/norm_rt_calibration/norm_rt_calibration.html" class="md-nav__link">
+      <a href="../norm_rt_calibration/norm_rt_calibration.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2201,7 +2314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/norm_linear/norm_linear.html" class="md-nav__link">
+      <a href="../norm_linear/norm_linear.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2221,7 +2334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/norm_stand_cmpd/norm_stand_cmpd.html" class="md-nav__link">
+      <a href="../norm_stand_cmpd/norm_stand_cmpd.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2283,7 +2396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.html" class="md-nav__link">
+      <a href="../id_prec_local_cmpd_db/local-cmpd-db-search.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2303,7 +2416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_prec_local_spectra_lib/local-spectra-lib-search.html" class="md-nav__link">
+      <a href="../id_prec_local_spectra_lib/local-spectra-lib-search.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2365,7 +2478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_spectral_library_search/spectral_library_search.html" class="md-nav__link">
+      <a href="../id_spectral_library_search/spectral_library_search.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2385,7 +2498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_spectra_NIST/NIST-ms-search.html" class="md-nav__link">
+      <a href="../id_spectra_NIST/NIST-ms-search.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2405,7 +2518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_spectra_chem_formula/chem-formula-pred.html" class="md-nav__link">
+      <a href="../id_spectra_chem_formula/chem-formula-pred.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2425,7 +2538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_lipid_annotation/lipid-annotation.html" class="md-nav__link">
+      <a href="../id_lipid_annotation/lipid-annotation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2445,7 +2558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_ms2_similarity/ms2-similarity-search.html" class="md-nav__link">
+      <a href="../id_ms2_similarity/ms2-similarity-search.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2507,7 +2620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io/merge_ms2_kai.html" class="md-nav__link">
+      <a href="../io/merge_ms2_kai.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2527,7 +2640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/align_join_aligner/spectra_similarity.html" class="md-nav__link">
+      <a href="../align_join_aligner/spectra_similarity.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2596,7 +2709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/visualization_overview/visualization-overview.html" class="md-nav__link">
+      <a href="../../visualization_modules/visualization_overview/visualization-overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2650,7 +2763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/raw_data_overview/raw_data_overview.html" class="md-nav__link">
+      <a href="../../visualization_modules/raw_data_overview/raw_data_overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2670,7 +2783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/raw_data_overview/raw_data_additional.html" class="md-nav__link">
+      <a href="../../visualization_modules/raw_data_overview/raw_data_additional.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2698,7 +2811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/ims_raw_data_overview/IM-data-visualisation.html" class="md-nav__link">
+      <a href="../../visualization_modules/ims_raw_data_overview/IM-data-visualisation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2718,7 +2831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/image_raw_data/image_viewer.html" class="md-nav__link">
+      <a href="../../visualization_modules/image_raw_data/image_viewer.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2738,7 +2851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/group_imagecorrelate/image-colocalization.html" class="md-nav__link">
+      <a href="../group_imagecorrelate/image-colocalization.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2792,7 +2905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
+      <a href="../../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2812,7 +2925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.html" class="md-nav__link">
+      <a href="../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2832,7 +2945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/feature_histograms/feature_hist.html" class="md-nav__link">
+      <a href="../../visualization_modules/feature_histograms/feature_hist.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2852,7 +2965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/kendrickmass/kendrick_mass_plot.html" class="md-nav__link">
+      <a href="../../visualization_modules/kendrickmass/kendrick_mass_plot.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2872,7 +2985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/vankrevelen/van_krevelen_plot.html" class="md-nav__link">
+      <a href="../../visualization_modules/vankrevelen/van_krevelen_plot.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2892,7 +3005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/processed_additional/processed_additional.html" class="md-nav__link">
+      <a href="../../visualization_modules/processed_additional/processed_additional.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2920,7 +3033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/massvoltammogram/massvoltammogram.html" class="md-nav__link">
+      <a href="../../visualization_modules/massvoltammogram/massvoltammogram.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2981,7 +3094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
+      <a href="../../workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3001,7 +3114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/imsworkflow/ion-mobility-data-processing-workflow.html" class="md-nav__link">
+      <a href="../../workflows/imsworkflow/ion-mobility-data-processing-workflow.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3021,7 +3134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/imagingworkflow/imaging-workflow.html" class="md-nav__link">
+      <a href="../../workflows/imagingworkflow/imaging-workflow.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3041,7 +3154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/batch_processing/batch-processing.html" class="md-nav__link">
+      <a href="../../workflows/batch_processing/batch-processing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3061,7 +3174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/librarygeneration/library_generation.html" class="md-nav__link">
+      <a href="../../workflows/librarygeneration/library_generation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3081,7 +3194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/simsef/simsef_workflow.html" class="md-nav__link">
+      <a href="../../workflows/simsef/simsef_workflow.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3142,7 +3255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/tools_simsef/simsef.html" class="md-nav__link">
+      <a href="../tools_simsef/simsef.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3203,7 +3316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terminology/general-terminology.html" class="md-nav__link">
+      <a href="../../terminology/general-terminology.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3223,7 +3336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terminology/ion-mobility-terminology.html" class="md-nav__link">
+      <a href="../../terminology/ion-mobility-terminology.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3243,7 +3356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
+      <a href="../../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3263,7 +3376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/feature_list_row_filter/kendrick_mass_defect.html" class="md-nav__link">
+      <a href="../feature_list_row_filter/kendrick_mass_defect.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3283,7 +3396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_spectral_library_search/spectral-similarity-measures.html" class="md-nav__link">
+      <a href="../id_spectral_library_search/spectral-similarity-measures.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3308,19 +3421,17 @@
       
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
         
           <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
             
@@ -3333,7 +3444,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_17">
             <span class="md-nav__icon md-icon"></span>
             Contribute
@@ -3344,19 +3455,17 @@
                 
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_1" >
         
           <label class="md-nav__link" for="__nav_17_1" id="__nav_17_1_label" tabindex="0">
             
@@ -3369,7 +3478,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_17_1">
             <span class="md-nav__icon md-icon"></span>
             Coding
@@ -3382,7 +3491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contribute_intellij.html" class="md-nav__link">
+      <a href="../../contribute_intellij.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3402,7 +3511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="upgrade_jdk_version.html" class="md-nav__link">
+      <a href="../../coding/upgrade_jdk_version.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3422,7 +3531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="general_structure.html" class="md-nav__link">
+      <a href="../../coding/general_structure.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3440,29 +3549,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    macOS code signing
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="macos_signing.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../coding/macos_signing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3471,54 +3560,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#signing" class="md-nav__link">
-    Signing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notarization" class="md-nav__link">
-    Notarization
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stapling" class="md-nav__link">
-    Stapling
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#distribution-of-disk-image" class="md-nav__link">
-    Distribution of disk image
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3530,7 +3571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="module_development.html" class="md-nav__link">
+      <a href="../../coding/module_development.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3550,7 +3591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="module_list.html" class="md-nav__link">
+      <a href="../../coding/module_list.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3578,7 +3619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contribute.html" class="md-nav__link">
+      <a href="../../contribute.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3598,7 +3639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contribute_docu_template.html" class="md-nav__link">
+      <a href="../../contribute_docu_template.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3625,7 +3666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wikiacknowledgements.html" class="md-nav__link">
+      <a href="../../wikiacknowledgements.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3644,7 +3685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting.html" class="md-nav__link">
+      <a href="../../troubleshooting.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3663,7 +3704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog.html" class="md-nav__link">
+      <a href="../../changelog.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3682,7 +3723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workshops.html" class="md-nav__link">
+      <a href="../../workshops.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3722,30 +3763,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#signing" class="md-nav__link">
-    Signing
+  <a href="#description" class="md-nav__link">
+    Description
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notarization" class="md-nav__link">
-    Notarization
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-lists" class="md-nav__link">
+    Feature Lists
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#stapling" class="md-nav__link">
-    Stapling
+        
+          <li class="md-nav__item">
+  <a href="#mz-tolerance" class="md-nav__link">
+    m/z Tolerance
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#distribution-of-disk-image" class="md-nav__link">
-    Distribution of disk image
+        
+          <li class="md-nav__item">
+  <a href="#retention-time-tolerance-min" class="md-nav__link">
+    Retention Time Tolerance (min)
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weight-for-rt" class="md-nav__link">
+    Weight for RT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#similarity-function" class="md-nav__link">
+    Similarity Function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-list-name" class="md-nav__link">
+    Feature List Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handle-original-feature-list" class="md-nav__link">
+    Handle Original Feature List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3767,82 +3849,41 @@
   
 
 
-<h1 id="macos-code-signing">macOS code signing<a class="headerlink" href="#macos-code-signing" title="Permanent link">&para;</a></h1>
-<p>Code signing is a security feature provided by Apple's macOS that allows developers to digitally
-sign their applications and verify their identity. This ensures that the application is not tampered
-with or altered by a third party, and that it can be trusted by users.</p>
-<p>MZmine 3 codebase is signed with the Developer ID Application Certificate of the Czech Technical
-University in
-Prague (<code>"Developer ID Application: Ceske vysoke uceni technicke v Praze (LK4H72N842)"</code>) under the
-Apple ID <code>mzmine.devel@gmail.com</code>. The procedure is implemented in
-the <a href="https://github.com/mzmine/mzmine3/blob/master/mzmine-community/build.gradle">gradle build file</a>
-and consists of
-three main steps described below: signing, notarization, and stapling.</p>
-<h2 id="signing">Signing<a class="headerlink" href="#signing" title="Permanent link">&para;</a></h2>
-<p>Signing is a step embedding a digital signature in the MZmine codebase, which allows macOS to verify
-the integrity of the application before it is run.</p>
-<p>The necessary condition for the code signing is a Developer ID Application certificate from a
-Certificate Authority, which is the Czech Technical University in Prague in our case. <code>base64</code>
--encoded certificated and the associated password are stored as GitHub secrets under the
-names <code>MACOS_DEVELOPER_CERTIFICATE</code> and <code>MACOS_DEVELOPER_CERTIFICATE_PWD</code> respectively. In order to
-use the certificate
-in <a href="https://github.com/mzmine/mzmine3/blob/master/.github/workflows/dev_build_release.yml">CI/CD build of MZmine</a>,
-we add it to macOS keychain with <code>security set-key-partition-list</code> command
-following <a href="https://localazy.com/blog/how-to-automatically-sign-macos-apps-using-github-actions">Jan Bílek's tutorial</a>.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
+<h1 id="gc-ei-feature-alignment">GC-EI Feature Alignment<a class="headerlink" href="#gc-ei-feature-alignment" title="Permanent link">&para;</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> Feature list methods → Alignment → GC aligner</p>
+<p>This module aligns GC/EI-MS feature lists by grouping deconvoluted features based on their retention times and spectral similarities to ensure accurate alignment of features across different samples.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before using this module run GC-EI spectral deconvolution </p>
 </div>
-<p>Notice, that the Developer ID Application certificate is not publicly available. Therefore, a
-manually built version of MZmine cannot be signed. Nevertheless, it still can be normally built.</p>
-<p>To sign MZmine code with the certificate, <code>jpackage</code> utility needs to be supplied with an
-additional (constant) argument <code>--mac-sign</code> and its dependencies such
-as <code>--mac-package-identifier "io.github.mzmine.main"</code>
-and <code>--mac-signing-key-user-name "Developer ID Application: Ceske vysoke uceni technicke v Praze (LK4H72N842)"</code>.
-Nevertheless, <code>jpackage</code> is not able to automatically sign all native libraries. For that reason, we
-manually traverse the entire codebase and sign all such libraries which can be classified into three
-categories:</p>
-<ol>
-<li>Any file with one of the following extensions: <code>.dylib</code>, <code>.so</code>, <code>.dll</code>, <code>.a</code>, <code>.lib</code>.</li>
-<li>Any file with an extension from point 1. but nested inside of <code>.jar</code> archives.</li>
-<li>Content of ThermoRawFileParser <code>.zip</code> archive.</li>
-</ol>
-<p>The libraries are signed with</p>
-<div class="highlight"><pre><span></span><code>codesign<span class="w"> </span>--deep<span class="w"> </span>--force<span class="w"> </span>--timestamp<span class="w"> </span>-s<span class="w"> </span><span class="si">${</span><span class="nv">developerID</span><span class="si">}</span><span class="w"> </span>--options<span class="w"> </span>runtime<span class="w"> </span>--entitlements<span class="w"> </span><span class="si">${</span><span class="nv">entitlementsPth</span><span class="si">}</span><span class="w"> </span>-f<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">p</span><span class="si">}</span>
-</code></pre></div>
-<p>, where <code>${deveperID}</code>
-is <code>"Developer ID Application: Ceske vysoke uceni technicke v Praze (LK4H72N842)"</code>, <code>${entitlementsPth}</code>
-contains <a href="https://github.com/mzmine/mzmine3/blob/master/mzmine-community/gradle/macos.entitlements">privileges</a>
-granted to the MZmine executable, and <code>${p}</code> is a path to the file to be signed. The files nested in
-archives are unarchived, signed, and then archived back.</p>
-<h2 id="notarization">Notarization<a class="headerlink" href="#notarization" title="Permanent link">&para;</a></h2>
-<p>Notarization is an additional security step that is performed by Apple after an application is
-signed and is required to distribute MZmine outside of the Mac App Store. During this step signed
-MZmine code is uploaded to Apple's servers, where it is scanned for malware and other malicious
-content. Note, that this procedure usually takes around 10 minutes to be completed.</p>
-<p>The notarization is performed using <code>xcrun notarytool</code> utility</p>
-<div class="highlight"><pre><span></span><code>xcrun<span class="w"> </span>notarytool<span class="w"> </span>submit<span class="w"> </span>--wait<span class="w"> </span>--apple-id<span class="w"> </span><span class="si">${</span><span class="nv">appleID</span><span class="si">}</span><span class="w"> </span>--password<span class="w"> </span><span class="si">${</span><span class="nv">appleIDPassword</span><span class="si">}</span><span class="w"> </span>--team-id<span class="w"> </span><span class="si">${</span><span class="nv">appleTeamID</span><span class="si">}</span><span class="w"> </span><span class="s2">&quot;MZmine_macOS_portable.zip&quot;</span>
-</code></pre></div>
-<p>, where <code>${appleTeamID}</code> is <code>mzmine.devel@gmail.com</code> and <code>${appleTeamID}</code> is the team of the
-Developer ID - <code>LK4H72N842</code>.</p>
-<h2 id="stapling">Stapling<a class="headerlink" href="#stapling" title="Permanent link">&para;</a></h2>
-<p>Stapling is the process of attaching a notarization ticket to a signed application. When an
-application is stapled, the notarization ticket is embedded in the application's code, which allows
-macOS to verify the notarization status of the application even if it is not connected to the
-internet.</p>
-<p>Stapling is performed with</p>
-<div class="highlight"><pre><span></span><code>xcrun<span class="w"> </span>stapler<span class="w"> </span>staple<span class="w"> </span><span class="s2">&quot;MZmine.app&quot;</span>
-</code></pre></div>
-<h2 id="distribution-of-disk-image">Distribution of disk image<a class="headerlink" href="#distribution-of-disk-image" title="Permanent link">&para;</a></h2>
-<p>The output of the steps described above is signed portable MZmine <code>.app</code>. Since it is more
-convenient to distribute macOS software as a <code>.dmg</code> disk image, we additionally pack the portable
-into <code>.dmg</code> using <a href="https://github.com/LinusU/node-appdmg"><code>appdmg</code></a> utility.</p>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h3 id="feature-lists">Feature Lists<a class="headerlink" href="#feature-lists" title="Permanent link">&para;</a></h3>
+<p>Select the feature lists to be aligned.</p>
+<h3 id="mz-tolerance">m/z Tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h3>
+<p>Tolerance for m/z values used for spectral similarity matching. </p>
+<h3 id="retention-time-tolerance-min">Retention Time Tolerance (min)<a class="headerlink" href="#retention-time-tolerance-min" title="Permanent link">&para;</a></h3>
+<p>Maximum allowed difference between two retention time values for them to be considered for alignment.</p>
+<h3 id="weight-for-rt">Weight for RT<a class="headerlink" href="#weight-for-rt" title="Permanent link">&para;</a></h3>
+<p>Score for perfectly matching RT values. The RT delta is divided by the RT tolerance and scaled 0-1. The weight then multiplies this score so that higher RT delta gives a penalty. The RT weight shifts the focus on RT or spectral similarity.</p>
+<h3 id="similarity-function">Similarity Function<a class="headerlink" href="#similarity-function" title="Permanent link">&para;</a></h3>
+<p>Algorithm to calculate spectral similarity between samples. Pseudo spectra from GC-EI spectral deconvolution will be compared. </p>
+<h3 id="feature-list-name">Feature List Name<a class="headerlink" href="#feature-list-name" title="Permanent link">&para;</a></h3>
+<p>Name for the aligned feature list.</p>
+<h3 id="handle-original-feature-list">Handle Original Feature List<a class="headerlink" href="#handle-original-feature-list" title="Permanent link">&para;</a></h3>
+<p>If checked, the original feature list will be removed.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The alignment is performed independtly of the representative feature. Only spectral similarity and retention time are taken into account. The final representative feature will be determined as during the alignment. </p>
+</div>
+<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>ansgarkorf</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 14, 2024 07:41:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 26, 2024 14:09:17</span>
       
     
   </small>
@@ -3888,12 +3929,12 @@ into <code>.dmg</code> using <a href="https://github.com/LinusU/node-appdmg"><co
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
