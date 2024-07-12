@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#retention-time-calibration" class="md-skip">
+        <a href="#retention-time-correction" class="md-skip">
           Skip to content
         </a>
       
@@ -2238,6 +2238,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#identifying-rt-correction-standards" class="md-nav__link">
+    Identifying RT correction standards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#averaging-rts-of-correction-standards" class="md-nav__link">
+    Averaging RTs of correction standards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correcting-retention-times" class="md-nav__link">
+    Correcting retention times
+  </a>
+  
+    <nav class="md-nav" aria-label="Correcting retention times">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1-feature-is-a-rt-correction-standard" class="md-nav__link">
+    Case 1: Feature is a RT correction standard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2-feature-between-two-rt-correction-standards" class="md-nav__link">
+    Case 2: Feature between two RT correction standards
+  </a>
+  
+    <nav class="md-nav" aria-label="Case 2: Feature between two RT correction standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    Explanation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3-only-one-standard" class="md-nav__link">
+    Case 3: Only One Standard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     Parameters
   </a>
@@ -3756,6 +3817,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#identifying-rt-correction-standards" class="md-nav__link">
+    Identifying RT correction standards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#averaging-rts-of-correction-standards" class="md-nav__link">
+    Averaging RTs of correction standards
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correcting-retention-times" class="md-nav__link">
+    Correcting retention times
+  </a>
+  
+    <nav class="md-nav" aria-label="Correcting retention times">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1-feature-is-a-rt-correction-standard" class="md-nav__link">
+    Case 1: Feature is a RT correction standard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2-feature-between-two-rt-correction-standards" class="md-nav__link">
+    Case 2: Feature between two RT correction standards
+  </a>
+  
+    <nav class="md-nav" aria-label="Case 2: Feature between two RT correction standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    Explanation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3-only-one-standard" class="md-nav__link">
+    Case 3: Only One Standard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     Parameters
   </a>
@@ -3821,31 +3943,71 @@
   
 
 
-<h1 id="retention-time-calibration"><strong>Retention time calibration</strong><a class="headerlink" href="#retention-time-calibration" title="Permanent link">&para;</a></h1>
-<h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Feature list methods → Normalization → Retention time calibration</strong></p>
-<p>The retention time normalizer attempts to reduce the deviation of retention times between feature lists, by searching for common features in these feature lists and using them as normalization standards.</p>
-<p>Ions present in all given feature lists (according to given m/z, RT tolerance and minimum intensity) in exactly one instance are considered as standards. Retention times of the standards are then averaged and equalized in all samples, and retention times of all other features are adjusted according to the retention times of neighboring standard features.</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> The method requires multiple feature lists of different samples, processed by deconvolution (for example, <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html">Local minimum resolver</a>) but prior to alignment.</p>
-<h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h4 id="name-suffix"><strong>Name suffix</strong><a class="headerlink" href="#name-suffix" title="Permanent link">&para;</a></h4>
+<h1 id="retention-time-correction">Retention time correction<a class="headerlink" href="#retention-time-correction" title="Permanent link">&para;</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> Feature list methods → Normalization → Retention time correction</p>
+<p>The retention time correction module attempts to reduce the deviation of retention times between feature lists, by searching for common features in these feature lists and using them as RT correction standards.</p>
+<p>This process involves identifying standard features, calculating their average RTs, and adjusting the RTs of other features based on these standards. The RT correction value will be added to each feature.</p>
+<h2 id="identifying-rt-correction-standards">Identifying RT correction standards<a class="headerlink" href="#identifying-rt-correction-standards" title="Permanent link">&para;</a></h2>
+<p>RT correction standards are features that:</p>
+<ul>
+<li>Meet a minimum intensity threshold.</li>
+<li>Are present in all feature lists.</li>
+<li>Fall within specified m/z and RT tolerances.</li>
+</ul>
+<h2 id="averaging-rts-of-correction-standards">Averaging RTs of correction standards<a class="headerlink" href="#averaging-rts-of-correction-standards" title="Permanent link">&para;</a></h2>
+<p>RTs of identified RT correction standards are averaged. The averaged RT is set as RT for the calibration standard features across all samples.</p>
+<h2 id="correcting-retention-times">Correcting retention times<a class="headerlink" href="#correcting-retention-times" title="Permanent link">&para;</a></h2>
+<p>The correction of RTs is performed based on the relationship between the original RTs of features and the RTs of the calibration standards. The following cases describe how the corrected RTs are calculated:</p>
+<h3 id="case-1-feature-is-a-rt-correction-standard">Case 1: Feature is a RT correction standard<a class="headerlink" href="#case-1-feature-is-a-rt-correction-standard" title="Permanent link">&para;</a></h3>
+<p>The RT for this feature is set to its averaged RT calculated from all samples.</p>
+<h3 id="case-2-feature-between-two-rt-correction-standards">Case 2: Feature between two RT correction standards<a class="headerlink" href="#case-2-feature-between-two-rt-correction-standards" title="Permanent link">&para;</a></h3>
+<p>For features that are not calibration standards and fall between the RTs of two identified calibration standards:</p>
+<p>The corrected RT is calculated by linear interpolation between the closest previous and next standards. </p>
+<p>For a feature <span class="arithmatex">\( F \)</span> with an original retention time <span class="arithmatex">\( RT_F \)</span>, situated between two standards <span class="arithmatex">\( S_{\text{prev}} \)</span> and <span class="arithmatex">\( S_{\text{next}} \)</span> with original retention times <span class="arithmatex">\( RT_{\text{prev}} \)</span> and <span class="arithmatex">\( RT_{\text{next}} \)</span>, and corrected retention times <span class="arithmatex">\( \text{RT}_{\text{prev, cor}} \)</span> and <span class="arithmatex">\( \text{RT}_{\text{next, cor}} \)</span>:</p>
+<ol>
+<li>
+<p><strong>Calculate the weight</strong>:
+   [
+   \text{weight} = \frac{RT_F - RT_{\text{prev}}}{RT_{\text{next}} - RT_{\text{prev}}}
+   ]</p>
+</li>
+<li>
+<p><strong>Calculate the corrected RT</strong>:
+   [
+   RT_{F, \text{cor}} = RT_{\text{prev, cor}} + \text{weight} \times (RT_{\text{next, cor}} - RT_{\text{prev, cor}})
+   ]</p>
+</li>
+</ol>
+<h4 id="explanation">Explanation<a class="headerlink" href="#explanation" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Weight</strong>: Represents the relative position of feature <span class="arithmatex">\( F \)</span> between the two standards <span class="arithmatex">\( S_{\text{prev}} \)</span> and <span class="arithmatex">\( S_{\text{next}} \)</span>.</li>
+<li><strong>Corrected RT</strong>: Computed by linearly interpolating between the corrected RTs of the two surrounding RT correction standards, weighted by the relative position of <span class="arithmatex">\( F \)</span>.</li>
+</ul>
+<h3 id="case-3-only-one-standard">Case 3: Only One Standard<a class="headerlink" href="#case-3-only-one-standard" title="Permanent link">&para;</a></h3>
+<p>If only one RT correction standard is identified:</p>
+<p>The corrected RT is adjusted by adding the difference between the original RT of the standard and its averaged RT to the original RT of the feature.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> The method requires at least two resolved (for example, <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html">Local minimum resolver</a>) feature lists. This step needs to be performed before alignment.</p>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h4 id="name-suffix">Name suffix<a class="headerlink" href="#name-suffix" title="Permanent link">&para;</a></h4>
 <p>Suffix to be added to a processed feature list name</p>
-<h4 id="mz-tolerance"><strong>m/z tolerance</strong><a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
+<h4 id="mz-tolerance">m/z tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
 <p>Maximum allowed m/z difference for two values to be considered the same</p>
-<h4 id="retention-time-tolerance"><strong>Retention time tolerance</strong><a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h4>
+<h4 id="retention-time-tolerance">Retention time tolerance<a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h4>
 <p>Maximum allowed difference between two retention time values</p>
-<h4 id="minimum-standard-intensity"><strong>Minimum standard intensity</strong><a class="headerlink" href="#minimum-standard-intensity" title="Permanent link">&para;</a></h4>
-<p>Minimum height of a feature to be selected as normalization standard</p>
-<h4 id="original-feature-list"><strong>Original feature list</strong><a class="headerlink" href="#original-feature-list" title="Permanent link">&para;</a></h4>
+<h4 id="minimum-standard-intensity">Minimum standard intensity<a class="headerlink" href="#minimum-standard-intensity" title="Permanent link">&para;</a></h4>
+<p>Minimum height of a feature to be selected as RT correction standard</p>
+<h4 id="original-feature-list">Original feature list<a class="headerlink" href="#original-feature-list" title="Permanent link">&para;</a></h4>
 <p>If REMOVE option is selected, the original feature list is  removed, allowing to save memory.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><img alt="retention_time_correction_parameters.png" src="retention_time_correction_parameters.png" /></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>ansgarkorf</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 21:13:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 9, 2024 08:06:21</span>
       
     
   </small>
