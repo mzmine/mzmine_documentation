@@ -57,7 +57,7 @@ Gap-filling can be performed on the aligned feature lists to cope with missing f
 ## Export
 Depending on the downstream analyses, there are several export options which are accessible through **Feature list methods** → **Export feature list**.
 
-For GNPS-Feature based molecular networking, see [GNPS-FBMN](../../module_docs/io/data-exchange-with-other-software.md#gnps-fbmniimn-export)
+For GNPS-Feature based molecular networking, see [GNPS-FBMN](../../module_docs/io/data-exchange-with-other-software.md#gnps-fbmniimn-export) or apply molecular networking directly in mzmine [molecular_networking.md](../../module_docs/group_spectral_net/molecular_networking.md)
 
 ## References
 
