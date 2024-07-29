@@ -86,11 +86,6 @@ fragmentation data.
 
 Minimum cosine for matches between fragmentation spectra.
 
-#### Check MS2 neutral loss similarity
-
-Adds another algorithm that also checks neutral losses and creates additional edges based on the
-frequency of neutral losses.
-
 #### Signal filters:
 
 Additional signal filters that reduce the spectral complexity while retaining most of the spectral
