@@ -185,7 +185,7 @@ Influences batch steps:
 [Gap filling](module_docs/gapfill_peak_finder/gap-filling.md),
 [Lipid annotation (MS2)](module_docs/id_lipid_annotation/lipid-annotation.md),
 [Spectral library search](module_docs/id_spectral_library_search/spectral_library_search.md),
-Spectral/Molecular networking (todo: documentation),
+[Spectral/ Molecular Networking](module_docs/group_spectral_net/molecular_networking.md),
 DIA MS2 grouping (todo documentation)
 
 #### Feature-to-feature m/z tolerance
@@ -276,7 +276,7 @@ parameters.
 - Define an export path and base file name, e.g., *"D:\analysis\date_project"*  this will create a
   new folder and save all files from export modules there. Each module will add a specific suffix to
   the file name.
-- Apply spectral networking (FBMN/IIMN): Will compare all MS2 spectra across features to form
+- Apply [spectral networking](module_docs/group_spectral_net/molecular_networking.md) (FBMN/IIMN): Will compare all MS2 spectra across features to form
   molecular networks by spectral similarity.
 - Export for molecular networking (e.g., GNPS, FBMN, IIMN, MetGem): Will export all files for
   molecular networking
