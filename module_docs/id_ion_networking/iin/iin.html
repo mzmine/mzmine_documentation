@@ -14,7 +14,7 @@
         <link rel="prev" href="../metacorr/metacorr.html">
       
       
-        <link rel="next" href="../../filter_duplicate_features/duplicate_feature_filter.html">
+        <link rel="next" href="../../group_spectral_net/molecular_networking.html">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Ion identity networking - mzmine documentation</title>
+        <title>Ion Identity Networking - mzmine documentation</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ion identity networking
+              Ion Identity Networking
             
           </span>
         </div>
@@ -1730,7 +1730,7 @@
           
   
   <span class="md-ellipsis">
-    Ion identity networking
+    Ion Identity Networking
   </span>
   
 
@@ -1741,7 +1741,7 @@
         
   
   <span class="md-ellipsis">
-    Ion identity networking
+    Ion Identity Networking
   </span>
   
 
@@ -1821,6 +1821,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../group_spectral_net/molecular_networking.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spectral / Molecular Networking
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3822,59 +3842,80 @@
 
 
 <h1 id="ion-identity-networking">Ion identity networking<a class="headerlink" href="#ion-identity-networking" title="Permanent link">&para;</a></h1>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Feature list methods → Feature grouping → Ion identity networking</strong> </p>
-<p>Annotates grouped features (same retention time + optionally, feature shape and height correlation) as ion adducts, in 
-source fragments, and multimers. Also used as input to the [Ion Identity Molecular Networking workflow]
-(https://ccms-ucsd.github.io/GNPSDocumentation/fbmn-iin/) on GNPS. Searches all feature pairs against an ion library 
-for each possible combination.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Feature list methods → Feature grouping → Ion identity networking</strong></p>
+<p>Annotates grouped features (same retention time + optionally, feature shape and height correlation)
+as ion adducts, in
+source fragments, and multimers. Also used as input to
+the [Ion Identity Molecular Networking workflow]
+(https://ccms-ucsd.github.io/GNPSDocumentation/fbmn-iin/) on GNPS. Searches all feature pairs
+against an ion library
+for each possible combination. Great in combination with
+the <a href="../../group_spectral_net/molecular_networking.html">Molecular Networking</a> module that calculates
+fragmentation pattern similarities in mzmine and allows for interactive visualization.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Apply <a href="../metacorr/metacorr.html">metaCorrelate</a> before running this module</p>
 </div>
+<p>Apply <a href="../metacorr/metacorr.html">metaCorrelate</a> before running this module</p>
 <h2 id="recommended-citations">Recommended citations<a class="headerlink" href="#recommended-citations" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>When using this modules, please consider citing the corresponding publication(s):<br>
-Schmid, R., Petras, D., Nothias, LF. et al. Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment. Nat Commun 12, 3832 (2021). https://doi.org/10.1038/s41467-021-23953-9</p>
-<p>Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, In Review (2023)</p>
 </div>
+<p>When using this modules, please consider citing the corresponding publication(s):<br>
+Schmid, R., Petras, D., Nothias, LF. et al. Ion identity molecular networking for mass
+spectrometry-based metabolomics in the GNPS environment. Nat Commun 12, 3832 (
+2021). https://doi.org/10.1038/s41467-021-23953-9</p>
+<pre><code>Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, In Review (2023)
+</code></pre>
 <hr />
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <p><img alt="IIN dialog" src="dialog.png" /></p>
 <h4 id="mz-tolerance"><em>m/z</em> tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
-<p>Intra sample <em>m/z</em> tolerance describes the difference between two ions of the same molecule at the same retention 
-time. This tolerance is usually very small and depends on the mass resolution. Orbitrap instruments for example 3 ppm.</p>
+<p>Intra sample <em>m/z</em> tolerance describes the difference between two ions of the same molecule at the
+same retention
+time. This tolerance is usually very small and depends on the mass resolution. Orbitrap instruments
+for example 3 ppm.</p>
 <h4 id="check">Check<a class="headerlink" href="#check" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>ONE FEATURE</strong>: Only one feature needs to match (<em>m/z</em> difference within one sample) </li>
-<li><strong>ALL FEATURES</strong>: All features need to match (<em>m/z</em> difference within ALL samples) </li>
-<li><strong>AVERAGE</strong>: Matches the <em>m/z</em> difference of average values </li>
+<li><strong>ONE FEATURE</strong>: Only one feature needs to match (<em>m/z</em> difference within one sample)</li>
+<li><strong>ALL FEATURES</strong>: All features need to match (<em>m/z</em> difference within ALL samples)</li>
+<li><strong>AVERAGE</strong>: Matches the <em>m/z</em> difference of average values</li>
 </ul>
 <h4 id="min-height">Min height<a class="headerlink" href="#min-height" title="Permanent link">&para;</a></h4>
-<p>Minimum height of features to consider. Leave at 0 to use all features that passed the feature detection workflow 
+<p>Minimum height of features to consider. Leave at 0 to use all features that passed the feature
+detection workflow
 criteria.</p>
 <h4 id="ion-identity-library">Ion identity library<a class="headerlink" href="#ion-identity-library" title="Permanent link">&para;</a></h4>
-<p>Defines the ions to search. When two features, applied with two ions, result in the same neutral mass - an 
-annotation is made. New ions can be defined. Adducts (left) and neutral modifications (right) are combined to create 
-the final ion library. </p>
+<p>Defines the ions to search. When two features, applied with two ions, result in the same neutral
+mass - an
+annotation is made. New ions can be defined. Adducts (left) and neutral modifications (right) are
+combined to create
+the final ion library.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>This step should only focus on the main ions that are typically detected in the MS method. 
-Later the <em>Add more ion identities</em> module can add strange ions to existing networks.</p>
 </div>
+<p>This step should only focus on the main ions that are typically detected in the MS method.
+Later the <em>Add more ion identities</em> module can add strange ions to existing networks.</p>
 <p><img alt="IIN library" src="ion_library.png" /></p>
 <h4 id="annotation-refinement-optional">Annotation refinement <em>(optional)</em><a class="headerlink" href="#annotation-refinement-optional" title="Permanent link">&para;</a></h4>
-<p>Annotation refinement is optional but should be applied to finalize ion identities, after all subsequent optional 
-steps of <em>Add more ion identities</em> steps. </p>
-<p><strong>Parameters:</strong>
-- <em>Minimum size (optional)</em>: Only retain ion networks with at least n ions (often 3). The more ions the higher the 
-  confidence in the annotation.
-- <em>Delete small networks without major ion (optional)</em>: Major ions are defined as M+H, M+Na, M+NH4, M-H2O+H
-- <em>Delete smaller networks: Link threshold (optional)</em>: Important parameter to only keep the best annotation, when 
-  this annotation is supported by n-1 ions (network size n). 
-- <em>Delete networks without monomer (optional)</em>: Only keep a network if at least one is M+... and not a multimer like 
-  2M, 3M...
-- <em>Delete rows without ion id</em>: Remove all rows from the feature list that have no ion identity annotation</p>
+<p>Annotation refinement is optional but should be applied to finalize ion identities, after all
+subsequent optional
+steps of <em>Add more ion identities</em> steps.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><em>Minimum size (optional)</em>: Only retain ion networks with at least n ions (often 3). The more ions
+  the higher the
+  confidence in the annotation.</li>
+<li><em>Delete small networks without major ion (optional)</em>: Major ions are defined as M+H, M+Na, M+NH4,
+  M-H2O+H</li>
+<li><em>Delete smaller networks: Link threshold (optional)</em>: Important parameter to only keep the best
+  annotation, when
+  this annotation is supported by n-1 ions (network size n).</li>
+<li><em>Delete networks without monomer (optional)</em>: Only keep a network if at least one is M+... and not
+  a multimer like
+  2M, 3M...</li>
+<li><em>Delete rows without ion id</em>: Remove all rows from the feature list that have no ion identity
+  annotation</li>
+</ul>
 <p><img alt="IIN refinement" src="ion_refinement.png" /></p>
 <hr />
 <p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a></span></p>
@@ -3884,7 +3925,7 @@ steps of <em>Add more ion identities</em> steps. </p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 16, 2023 17:34:14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 26, 2024 15:36:51</span>
       
     
   </small>
