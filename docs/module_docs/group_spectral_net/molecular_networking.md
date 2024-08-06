@@ -110,21 +110,22 @@ Remove signals so that X% of intensity is retained. This removes lower abundant 
 minor role in matching. Overall this can speed up matching.
 
 ### Algorithm: MS2Deepscore
-
-This algorithm uses a deep neural network to train embeddings that aim for spectral similarities
+This algorithm uses a deep neural network to predict embeddings that aim for spectral similarities
 that approach structural similarities. The module allows loading of pre-trained models in the
-PyTorch script format.
+PyTorch script format. More information about MS2Deepscore can be found on [github](https://github.com/matchms/ms2deepscore). If you use MS2Deepscore, please cite [de Jonge et al. 2024](https://doi.org/10.1101/2024.03.25.586580) and [Huber et al. 2021](https://link.springer.com/article/10.1186/s13321-021-00558-4).
 
 #### MS2Deepscore model
+The latest model can be downloaded by clicking select -> download: ![image](https://github.com/user-attachments/assets/f5c06bc7-dbc1-46c5-9834-fce69917951c)
 
-A pre-trained MS2Deepscore model can be downloaded
+Alternatively the pre-trained MS2Deepscore model can be downloaded
 from [https://zenodo.org/records/12628369](https://zenodo.org/records/12628369)
 and contains the PyTorch script model (.pt) which should be selected in this parameter.
 The same folder should contain the settings.json file also supplied on Zenodo.
+If you want to convert a different MS2Deepscore model to a java/mzmine compatible format, you can find the relevant scripts in [this repository](https://github.com/niekdejonge/ms2deepscore_java_conversion).
 
 #### Minimum signals
 
-Minimum number of signals to consider a fragment spectrum. This is **not** the number of matched
+Minimum number of signals (fragments) to consider a fragment spectrum. This is **not** the number of matched
 signals because MS2Deepscore works by comparing its embeddings.
 
 #### Min similarity
