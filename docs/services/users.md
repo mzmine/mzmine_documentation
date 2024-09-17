@@ -135,7 +135,7 @@ try the alternative sign in by username and password directly. The mzmine CLI al
 
 3. The login page in mzmine is not loading, what can I do?
     - The poxy settings and alternative sign in page may open automatically or is available by
-      clicking on the tool button ![btn_tool.png](imt/btn_tool.png) on the _Sign in/Sign up_ page.
+      clicking on the tool button ![btn_tool.png](img/btn_tool.png) on the _Sign in/Sign up_ page.
     - Check your computers proxy settings and apply them on this page and press update proxy to
       retry.
     - Otherwise, try the alternative sign in by username and password. This requires an existing
