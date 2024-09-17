@@ -23,7 +23,11 @@ Download the latest version, install mzmine, login, and run mzmine. See mzmine [
 
 # or find installer at https://github.com/mzmine/mzmine/releases/latest 
 wget https://github.com/mzmine/mzmine/releases/download/text-action-release/mzmine_4.3.1_amd64.deb
+
+# create required dir and install mzmine
+sudo mkdir -p /usr/share/desktop-directories/
 sudo apt install mzmine*.deb
+
 # potential dependencies that may be required 
 # sudo apt-get install xdg-utils
 # sudo apt-get install libgl1
