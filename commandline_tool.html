@@ -435,6 +435,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#argument-table" class="md-nav__link">
     Argument table
   </a>
@@ -3759,6 +3766,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#argument-table" class="md-nav__link">
     Argument table
   </a>
@@ -3786,7 +3800,7 @@
 <h1 id="command-line-interface-cli-for-headless-batch-mode">Command-line interface (CLI) for headless batch mode<a class="headerlink" href="#command-line-interface-cli-for-headless-batch-mode" title="Permanent link">&para;</a></h1>
 <p>Command-line arguments offer a variety of options that generally override the corresponding parameters in the preferences.</p>
 <h2 id="selecting-a-user">Selecting a user<a class="headerlink" href="#selecting-a-user" title="Permanent link">&para;</a></h2>
-<p>Running mzmine in CLI mode requires a <a href="services/users.html">user</a>. Either login via graphical-user interface (GUI) or via command-line argument <strong>-login</strong>. 
+<p>Running mzmine in CLI mode requires a <a href="services/users.html">user</a>. Either login via graphical-user interface (GUI) or via command-line argument <strong>-login</strong> (web browser support required) or via <strong>-login-console</strong>. 
 Then locate the user file in your system USER directory under /.mzmine/users/. The most recently active user is automatically selected for mzmine processing,
 but an .mzuser file can be passed in as command-line argument to <strong>-user</strong>.</p>
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
@@ -3808,6 +3822,15 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
 <div class="highlight"><pre><span></span><code>/Applications/mzmine.app/Contents/MacOS/mzmine -user &quot;path/to/testuser.mzuser&quot; -batch /path/to/batch_file.xml
 </code></pre></div></p>
 <div class="highlight"><pre><span></span><code>/Applications/mzmine.app/Contents/MacOS/mzmine -user &quot;path/to/testuser.mzuser&quot; -batch /path/to/batch_file.xml -input &quot;/path/to/data/*.mzML&quot;
+</code></pre></div>
+<h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
+<p>If mzmine was installed (see instructions) correctly, run the code below to start mzmine in GUI mode or CLI batch mode:
+<div class="highlight"><pre><span></span><code>/opt/mzmine/bin/mzmine
+<span class="c1"># some older versions or bad installations may be in:</span>
+<span class="c1"># /opt/mzmine-linux-installer/bin/mzmine</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># login and run batch</span>
+/opt/mzmine/bin/mzmine<span class="w"> </span>-login-console<span class="w"> </span>-batch<span class="w"> </span>/path/to/batch_file.xml
 </code></pre></div>
 <h2 id="argument-table">Argument table<a class="headerlink" href="#argument-table" title="Permanent link">&para;</a></h2>
 <table>
@@ -3832,7 +3855,12 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
 <tr>
 <td>-login</td>
 <td>no argument</td>
-<td>Use command-line to login to a user. This will open the login website in the system internet browser, if supported, or prompts an input for the user credentials into the console. After successful login, a user file will be copied to your system USER directory in /.mzmine/users/. And the current user will be saved to the configuration. The created user file can be accessed with the -user argument on the next startup.</td>
+<td>Use the command-line to login to a user. This will open the login website in the system internet browser, if supported, or prompts an input for the user credentials into the console. After successful login, a user file will be copied to your system USER directory in /.mzmine/users/. And the current user will be saved to the configuration. The created user file can be accessed with the -user argument on the next startup.</td>
+</tr>
+<tr>
+<td>-login-console</td>
+<td>no argument</td>
+<td>Use the command-line to login to a user. This option prompts the user for username and password. After successful login, a user file will be copied to your system USER directory in /.mzmine/users/. And the current user will be saved to the configuration. The created user file can be accessed with the -user argument on the next startup.</td>
 </tr>
 <tr>
 <td>-list-users</td>
@@ -3888,7 +3916,7 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 6, 2024 06:56:42</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 16, 2024 19:22:39</span>
       
     
   </small>

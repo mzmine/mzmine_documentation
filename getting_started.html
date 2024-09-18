@@ -292,6 +292,19 @@
     Install
   </a>
   
+    <nav class="md-nav" aria-label="Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-on-linux" class="md-nav__link">
+    Installation on Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -324,7 +337,7 @@
       
         <li class="md-nav__item">
   <a href="#older-mzmine-versions-on-macos" class="md-nav__link">
-    Older MZmine versions on macOS
+    Older mzmine versions on macOS
   </a>
   
 </li>
@@ -3770,6 +3783,19 @@
     Install
   </a>
   
+    <nav class="md-nav" aria-label="Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-on-linux" class="md-nav__link">
+    Installation on Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3802,7 +3828,7 @@
       
         <li class="md-nav__item">
   <a href="#older-mzmine-versions-on-macos" class="md-nav__link">
-    Older MZmine versions on macOS
+    Older mzmine versions on macOS
   </a>
   
 </li>
@@ -3830,8 +3856,31 @@
 <p>Download mzmine portable versions or installers from GitHub:</p>
 <p><a href="https://github.com/mzmine/mzmine3/releases/latest">https://github.com/mzmine/mzmine3/releases/latest</a></p>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
-<p>mzmine should work on Windows, macOS, and Linux using either the installers or the portable versions. There are <strong>NO</strong> further requirements as MZmine packages a specific Java Virtual Machine. This means the local Java installation has <strong>no</strong> impact on MZmine. Windows users might be warned that MZmine is not signed or from a trusted source and have to click run anyways. </p>
-<p>Before creating your first project, we recommend to <a href="#set-user-preferences">set the preferences</a>. </p>
+<p>mzmine should work on Windows, macOS, and Linux using either the installers or the portable versions. There are <strong>NO</strong> further requirements as mzmine packages a specific Java Virtual Machine. This means the local Java installation has <strong>no</strong> impact on mzmine. Windows users might be warned that mzmine is not signed or from a trusted source and have to click run anyways. </p>
+<p>Before creating your first project, we recommend to <a href="#set-user-preferences">set the preferences</a>.</p>
+<h3 id="installation-on-linux">Installation on Linux<a class="headerlink" href="#installation-on-linux" title="Permanent link">&para;</a></h3>
+<p>Download the latest version, install mzmine, login, and run mzmine. See mzmine <a href="commandline_tool.html">command-line interface</a> as a reference.<br />
+<div class="highlight"><pre><span></span><code><span class="c1"># with gh (github) installed, download of latest .deb installer is quite easy</span>
+<span class="c1"># gh auth login</span>
+<span class="c1"># sudo apt install gh</span>
+<span class="c1"># gh release download --repo mzmine/mzmine --pattern &quot;mzmine*.deb&quot;</span>
+
+<span class="c1"># or find installer at https://github.com/mzmine/mzmine/releases/latest </span>
+wget<span class="w"> </span>https://github.com/mzmine/mzmine/releases/download/text-action-release/mzmine_4.3.1_amd64.deb
+
+<span class="c1"># create required dir and install mzmine</span>
+sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/usr/share/desktop-directories/
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>mzmine*.deb
+
+<span class="c1"># potential dependencies that may be required </span>
+<span class="c1"># sudo apt-get install xdg-utils</span>
+<span class="c1"># sudo apt-get install libgl1</span>
+<span class="c1"># sudo apt-get install libgtk-3-0</span>
+<span class="c1"># sudo apt-get install libxtst6</span>
+
+<span class="c1"># run mzmine and print help. also check -login-console -batch</span>
+/opt/mzmine/bin/mzmine<span class="w"> </span>-help
+</code></pre></div></p>
 <h2 id="sign-in-sign-up-for-a-free-user-account">Sign in / Sign up for a free user account<a class="headerlink" href="#sign-in-sign-up-for-a-free-user-account" title="Permanent link">&para;</a></h2>
 <p>Open the <strong>Users/User management</strong> to sign in to an existing user or sign up for a free user account (<a href="services/users.html">more details</a>). </p>
 <h2 id="set-user-preferences">Set User Preferences<a class="headerlink" href="#set-user-preferences" title="Permanent link">&para;</a></h2>
@@ -3844,8 +3893,8 @@
 <li>On Windows, old temporary files are deleted when a new session is started.</li>
 </ol>
 </li>
-<li>MZmine 2 projects cannot be imported due to changes in the data structure.</li>
-<li>MZmine 2 batch files cannot be imported due to parameter optimizations.</li>
+<li>mzmine 2 projects cannot be imported due to changes in the data structure.</li>
+<li>mzmine 2 batch files cannot be imported due to parameter optimizations.</li>
 </ol>
 <p>You can get familiar with the new GUI here: <a href="main-window-overview.html">Main window overview</a></p>
 <h2 id="start-processing">Start processing<a class="headerlink" href="#start-processing" title="Permanent link">&para;</a></h2>
@@ -3855,27 +3904,27 @@ here: <a href="workflows/lcmsworkflow/lcms-workflow.html">LC-MS workflow</a>
 or <a href="workflows/imsworkflow/ion-mobility-data-processing-workflow.html">LC-IMS-IMS workflow</a></p>
 <p>You can also check out the new processing wizard under <a href="wizard.html">Processing wizard</a> in the main menu. </p>
 <h2 id="running-mzmine">Running mzmine<a class="headerlink" href="#running-mzmine" title="Permanent link">&para;</a></h2>
-<p>mzmine provides a user-friendly graphical user interface (GUI) that facilitates data exploration, batch optimization, and results validation. If the batch processing is optimized and the goal is to solely produce the output files without the need for GUI, we recommend <a href="commandline_tool.html">running MZmine as a command-line tool</a>. </p>
-<h2 id="older-mzmine-versions-on-macos">Older MZmine versions on macOS<a class="headerlink" href="#older-mzmine-versions-on-macos" title="Permanent link">&para;</a></h2>
-<p>Currently, MZmine 3 lacks a signature for macOS. While we are working on this, user can allow MZmine
+<p>mzmine provides a user-friendly graphical user interface (GUI) that facilitates data exploration, batch optimization, and results validation. If the batch processing is optimized and the goal is to solely produce the output files without the need for GUI, we recommend <a href="commandline_tool.html">running mzmine as a command-line tool</a>. </p>
+<h2 id="older-mzmine-versions-on-macos">Older mzmine versions on macOS<a class="headerlink" href="#older-mzmine-versions-on-macos" title="Permanent link">&para;</a></h2>
+<p>Older mzmine versions lack a signature for macOS. User can allow mzmine
 in the macOS Gatekeeper protection by running the following command in the terminal from the
 Applications folder.</p>
 <ul>
-<li>Download MZmine and click the MZmine.dmg installer - Drag and drop MZmine into the Applications
+<li>Download mzmine and click the mzmine.dmg installer - Drag and drop mzmine into the Applications
   folder</li>
-<li>Open the Applciations folder, right click (CTRL click) anywhere, e.g., on the MZmine icon, and
+<li>Open the Applciations folder, right click (CTRL click) anywhere, e.g., on the mzmine icon, and
   choose "New Terminal at folder" from the context menu</li>
-<li>Run the provided command to tell macOS to trust the installed version of MZmine. The terminal
+<li>Run the provided command to tell macOS to trust the installed version of mzmine. The terminal
   directory has to be the Applications folder. (Depending on the actual folder use or omit the <code>../</code>
   to jump to the parent directory).</li>
 <li>Approve command with user password</li>
-<li>Start MZmine</li>
+<li>Start mzmine</li>
 </ul>
-<div class="highlight"><pre><span></span><code>sudo xattr -cr ../MZmine.app
+<div class="highlight"><pre><span></span><code>sudo xattr -cr ../mzmine.app
 
 # if this fails try
 # the app will appear in the security preferences and you will be able to choose the &quot;Open anyway&quot; option
-sudo xattr -d com.apple.quarantine /Applications/MZmine.app
+sudo xattr -d com.apple.quarantine /Applications/mzmine.app
 </code></pre></div>
 <p><img alt="" src="img/install_mac1.png" style="height:150px" /> <img alt="" src="img/install_mac2.png" style="width:150px" /></p>
 <p>The Terminal does not output any log or message.
@@ -3888,7 +3937,7 @@ sudo xattr -d com.apple.quarantine /Applications/MZmine.app
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 12, 2024 21:44:03</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 17, 2024 08:36:31</span>
       
     
   </small>
