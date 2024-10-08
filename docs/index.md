@@ -1,5 +1,3 @@
-!!! info 
- When using mzmine, please cite the corresponding paper:</br> Robin Schmid, Steffen Heuckeroth, Ansgar Korf et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3. Nature Biotechnology (2023), [doi:10.1038/s41587-023-01690-2](https://www.nature.com/articles/s41587-023-01690-2).
 
 # Welcome to the mzmine documentation!
 
@@ -16,6 +14,9 @@ mzmine allows you to transform your spectral raw data into meaningful feature li
 compound annotation approaches by spectral library
 matching, exact mass searches, rule based lipid annotation, and formula prediction.
 Furthermore, mzmine allows generation of custom spectral spectral libraries.
+
+!!! info 
+ When using mzmine, please cite the corresponding paper:</br> Robin Schmid, Steffen Heuckeroth, Ansgar Korf et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3. Nature Biotechnology (2023), [doi:10.1038/s41587-023-01690-2](https://www.nature.com/articles/s41587-023-01690-2).
 
 ## Want to get started with mzmine?
 
