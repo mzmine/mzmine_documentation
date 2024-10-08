@@ -125,7 +125,7 @@ The assigned weight for RT difference at the moment of match score calculation b
 
 If checked, exports the resulting dendrogram to the given *txt file. 
 
-The dendrogram can be then browsed using common applications such as TreeView <a>https://sourceforge.net/projects/jtreeview/</a>.
+[//]: #  (The dendrogram can be then browsed using common applications such as TreeView <a>https://sourceforge.net/projects/jtreeview/</a>.)
 
 #### **Dendrogram output text filename**
 
