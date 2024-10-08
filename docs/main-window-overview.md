@@ -1,6 +1,6 @@
 # Main window overview
 
-The MZmine 3 man window is made up of mainly four important building blocks.
+The mzmine main window is made up of mainly four important building blocks.
 
 ![MZmine main window overview](https://user-images.githubusercontent.com/37407705/136389356-d612dffd-89bd-4eca-87ae-a581eaaa01ab.png)
 
