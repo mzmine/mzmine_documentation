@@ -19,11 +19,18 @@ Furthermore, mzmine allows generation of custom spectral spectral libraries.
 
 ## Want to get started with mzmine?
 
-Check out our **[getting started](getting_started.md)** page or *
-*[MZmine video tutorials on YouTube](https://www.youtube.com/watch?v=jUHd3Sj7x0M&list=PL7kvpfzg8JkV7XKBUUX0xxOJimiK1VCOg)**!
+Check out our **[getting started](getting_started.md)** page or **[mzmine video tutorials on YouTube](https://www.youtube.com/watch?v=jUHd3Sj7x0M&list=PL7kvpfzg8JkV7XKBUUX0xxOJimiK1VCOg)**
 
-![Youtube channel](index-youtube-channel.png)
+![Youtube channel](Youtube_tutorials.png)
  
+---
+
+## mzmine news
+
+Check out latest **[mzmine news](https://mzio.io/mzmine-news/)**.
+
+![mzmine news](mzmine_news.png)
+
 ---
 
 ## History of mzmine
@@ -55,21 +62,17 @@ distributed all over the world!
 
 Here you can find documentation for both processing and visualization modules in mzmine. Moreover,
 data processing pipelines for untargeted [LC-MS](workflows/lcmsworkflow/lcms-workflow.md)
-and [LC-IMS-MS](workflows/imsworkflow/ion-mobility-data-processing-workflow.md) feature detection
-are described and general recommendations are given.
-
-**COMING SOON!** We are currently working on a series of short videotutorials to help get you
-started with the main features of mzmine!
+and [LC-IMS-MS](workflows/imsworkflow/ion-mobility-data-processing-workflow.md) feature detection as well as [MS-Imaging](workflows/imagingworkflow/imaging-workflow.md) are described and general recommendations are given.
 
 ---
 
 ## How to contribute
 
-The MZmine community is always welcoming new developers and contributions! You can contribute by
+The mzmine community is always welcoming new developers and contributions! You can contribute by
 improving existing modules or even adding new featurs in mzmine! Please, check out our
 brief [tutorial](http://mzmine.github.io/development.html).
 
-You can also contribute to this wiki and help new users to get started with MZmine 3!
+You can also contribute to this wiki and help new users to get started with mzmine!
 See [here](contribute.md) how to contribute to the documentation.
 
 {{ git_page_authors }}
