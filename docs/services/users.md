@@ -12,7 +12,7 @@ including:
 - **Username**: Fixed identifier that cannot be changed
 - **Define your use case**: The intended use of this user profile, either **commercial use** or *
   *non-profit academic use**
-- **Email**: Either an academic, company, or personal email address. It is important to use an
+- **Email**: Either an academic or company email address. It is important to use an
   academic email address to gain a non-profit academic license
 - **Read and accept the [Terms and Conditions](https://mzio.io/general-terms-and-conditions/)**
 
