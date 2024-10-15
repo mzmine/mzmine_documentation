@@ -1,5 +1,5 @@
 # Processing wizard
-![Processing wizard](img/logo300_mzwizard.png)
+![mzwizard_logo](img/logo300_mzwizard.png)
 The processing wizard reduces the configuration of complex standardized workflows into few
 parameters. Those values are used to estimate or calculate all other parameters from spectral
 processing over feature detection and alignment to annotation and data export. The mzwizard organizes
@@ -7,6 +7,8 @@ the different parts of the instrumental setup to define a workflow split up into
 introduction, IMS, MS instrument, and workflow. Ideas for a workflow? We are open for
 ideas and contributions. Feel free to reach out if your workflow might be a candidate for a wizard
 setup.
+
+<video src="../reference_media/videos/mzwizard_docu.mp4" width="960" height="540" controls></video>
 
 :material-menu-open: **Processing wizard**
 
