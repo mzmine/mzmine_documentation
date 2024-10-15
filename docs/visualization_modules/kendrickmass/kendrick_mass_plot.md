@@ -1,8 +1,8 @@
-# **4D features plot (Kendrick mass plot)**
+# **4D feature plot (Kendrick mass plot)**
 
 ## **Description**
 
-:material-menu-open: **Visualization → 4D features plot (Kendrick)**
+:material-menu-open: **Visualization → 4D feature plot (Kendrick)**
 
 In 1963 Kendrick published his idea of a mass scale, the so-called Kendrick mass scale, which is
 based on defining the mass of CH2 as 14.0000 u.
