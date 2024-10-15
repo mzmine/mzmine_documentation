@@ -4,8 +4,9 @@
 
 The diagram cross-plots the hydrogen:carbon (hydrogen index) as a function of the oxygen:carbon (oxygen index) atomic ratios of carbon compounds.
 !!! quote " "
-1. Van Krevelen, D.W. (1950). "Graphical-statistical method for the study of structure and reaction processes of coal", Fuel, 29, 269-84
-2. https://en.wikipedia.org/wiki/Van_Krevelen_diagram
+
+    1. Van Krevelen, D.W. (1950). "Graphical-statistical method for the study of structure and reaction processes of coal", Fuel, 29, 269-84
+    2. https://en.wikipedia.org/wiki/Van_Krevelen_diagram
 
 !!! warning
 
