@@ -148,7 +148,7 @@ nav:
       - General Terminology: terminology/general-terminology.md
       - IMS Terminology: terminology/ion-mobility-terminology.md
       - LC-MS and LC-IMS-MS data comparison: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
-      - Kendrick mass defect: module_docs/feature_list_row_filter/kendrick_mass_defect.md
+#      - Kendrick mass defect: module_docs/feature_list_row_filter/kendrick_mass_defect.md
       - Spectral similarity measures: module_docs/id_spectral_library_search/spectral-similarity-measures.md
 
   - Contribute:
