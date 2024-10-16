@@ -488,10 +488,10 @@
       
         <li class="md-nav__item">
   <a href="#ms-instrument-eg-orbitrap-qtof-fticr" class="md-nav__link">
-    MS instrument, e.g., Orbitrap, qTOF, FTICR
+    MS instrument, e.g., Orbitrap, QTOF, FTICR
   </a>
   
-    <nav class="md-nav" aria-label="MS instrument, e.g., Orbitrap, qTOF, FTICR">
+    <nav class="md-nav" aria-label="MS instrument, e.g., Orbitrap, QTOF, FTICR">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -577,15 +577,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#spectral-library-files" class="md-nav__link">
-    Spectral library files
+  <a href="#local-compound-database" class="md-nav__link">
+    Local compound database
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#custom-database-search-csv" class="md-nav__link">
-    Custom database search (CSV)
+  <a href="#annotate-lipids" class="md-nav__link">
+    Annotate lipids
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-library-files" class="md-nav__link">
+    Spectral library files
   </a>
   
 </li>
@@ -626,8 +633,36 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#dia" class="md-nav__link">
+    DIA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#library-generation" class="md-nav__link">
     Library generation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imaging" class="md-nav__link">
+    Imaging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target-plate" class="md-nav__link">
+    Target plate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-deconvolution" class="md-nav__link">
+    Spectral deconvolution
   </a>
   
 </li>
@@ -4087,10 +4122,10 @@
       
         <li class="md-nav__item">
   <a href="#ms-instrument-eg-orbitrap-qtof-fticr" class="md-nav__link">
-    MS instrument, e.g., Orbitrap, qTOF, FTICR
+    MS instrument, e.g., Orbitrap, QTOF, FTICR
   </a>
   
-    <nav class="md-nav" aria-label="MS instrument, e.g., Orbitrap, qTOF, FTICR">
+    <nav class="md-nav" aria-label="MS instrument, e.g., Orbitrap, QTOF, FTICR">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4176,15 +4211,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#spectral-library-files" class="md-nav__link">
-    Spectral library files
+  <a href="#local-compound-database" class="md-nav__link">
+    Local compound database
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#custom-database-search-csv" class="md-nav__link">
-    Custom database search (CSV)
+  <a href="#annotate-lipids" class="md-nav__link">
+    Annotate lipids
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-library-files" class="md-nav__link">
+    Spectral library files
   </a>
   
 </li>
@@ -4225,8 +4267,36 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#dia" class="md-nav__link">
+    DIA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#library-generation" class="md-nav__link">
     Library generation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imaging" class="md-nav__link">
+    Imaging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target-plate" class="md-nav__link">
+    Target plate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-deconvolution" class="md-nav__link">
+    Spectral deconvolution
   </a>
   
 </li>
@@ -4260,18 +4330,21 @@
 
 
 <h1 id="processing-wizard">Processing wizard<a class="headerlink" href="#processing-wizard" title="Permanent link">&para;</a></h1>
-<p>The processing wizard reduces the configuration of complex standardized workflows into few
+<p><img alt="mzwizard_logo" src="img/logo300_mzwizard.png" />
+The processing wizard reduces the configuration of complex standardized workflows into few
 parameters. Those values are used to estimate or calculate all other parameters from spectral
-processing over feature detection and alignment to annotation and data export. The wizard organizes
+processing over feature detection and alignment to annotation and data export. The mzwizard organizes
 the different parts of the instrumental setup to define a workflow split up into: Sample
-introduction, IMS, MS instrument, workflow. More specific workflows are planned and we are open for
+introduction, IMS, MS instrument, and workflow. Ideas for a workflow? We are open for
 ideas and contributions. Feel free to reach out if your workflow might be a candidate for a wizard
 setup.</p>
+<video src="../reference_media/videos/mzwizard_docu.mp4" width="960" height="540" controls></video>
+
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Processing wizard</strong></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 </div>
-<p>The wizard is split into sections, most importantly, the MS part and the chromatography part.
+<p>The mzwizard is split into sections, most importantly, the MS part and the sample introduction.
 Parameters here reflect the sensitivity, resolution, and accuracy of these parts of the hyphenation.
 Selecting one of the default presets actually populates the initial values.</p>
 <div class="admonition danger">
@@ -4296,8 +4369,7 @@ rates (e.g. below 5 data points per chromatographic peak/feature).</p>
 <a href="module_docs/featdet_smoothing/smoothing.html">Smoothing</a></p>
 <h4 id="stable-ionization-across-samples">Stable ionization across samples<a class="headerlink" href="#stable-ionization-across-samples" title="Permanent link">&para;</a></h4>
 <p>Used during feature grouping of adducts and other ions of the same molecule. Only use if the
-matrix (
-e.g., salt content, same culture medium, only fresh OR sea water samples) and ionization
+matrix (e.g., salt content, same culture medium, only fresh OR sea water samples) and ionization
 efficiencies are comparable across the whole study.</p>
 <p>Influences batch steps:
 <a href="module_docs/id_ion_networking/metacorr/metacorr.html">Correlation grouping</a></p>
@@ -4307,17 +4379,13 @@ the chromatograms. The start is often diverted into the waist and the end often 
 procedure.</p>
 <p>Influences batch steps:
 <a href="module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">Chromatogram building</a>
-<a href="module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local minimum feature resolver</a> (
-Calculation
-of <a href="module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#chromatographic-threshold">chromatographic threshold</a>)</p>
+<a href="module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local minimum feature resolver</a> (Calculation of <a href="module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#chromatographic-threshold">chromatographic threshold</a>)</p>
 <h4 id="max-peaks-in-chromatogram">Max peaks in chromatogram<a class="headerlink" href="#max-peaks-in-chromatogram" title="Permanent link">&para;</a></h4>
 <p>An estimate of the number of isomers and isobaric ions in the chromatograms. Used to estimate the
 percentage of data points that hold useful data for the feature resolving step. (Chromatographic
 threshold in local minimum resolver).</p>
 <p>Influences batch steps:
-<a href="module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local minimum feature resolver</a> (
-Calculation
-of <a href="module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#chromatographic-threshold">chromatographic threshold</a>)</p>
+<a href="module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local minimum feature resolver</a> (Calculation of <a href="module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#chromatographic-threshold">chromatographic threshold</a>)</p>
 <h4 id="minimum-consecutive-scans">Minimum consecutive scans<a class="headerlink" href="#minimum-consecutive-scans" title="Permanent link">&para;</a></h4>
 <p>Only keep chromatograms and features with at least X data points in retention time dimension.</p>
 <p>Influences batch steps:
@@ -4357,7 +4425,7 @@ longer ramps in TIMS instruments.</p>
 <p>The full-width at half maximum for IMS features with regard to the IMS dimension.</p>
 <p>Influences batch steps:
 <a href="module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#resolving-the-ion-mobility-dimension">Local minimum resolver (mobility dimension)</a></p>
-<h2 id="ms-instrument-eg-orbitrap-qtof-fticr">MS instrument, e.g., Orbitrap, qTOF, FTICR<a class="headerlink" href="#ms-instrument-eg-orbitrap-qtof-fticr" title="Permanent link">&para;</a></h2>
+<h2 id="ms-instrument-eg-orbitrap-qtof-fticr">MS instrument, e.g., Orbitrap, QTOF, FTICR<a class="headerlink" href="#ms-instrument-eg-orbitrap-qtof-fticr" title="Permanent link">&para;</a></h2>
 <h4 id="noise-threshold-ms1ms2">Noise threshold (MS1/MS2)<a class="headerlink" href="#noise-threshold-ms1ms2" title="Permanent link">&para;</a></h4>
 <p>Choose the mass detector from the drop down menu. Choose the <strong>Factor of lowest signal</strong> for both
 centroided or profile data where each spectrum contains noise signals, often represented by many
@@ -4433,57 +4501,81 @@ maximum of an absolute and relative value.</p>
 <p>Influences batch steps:
 <a href="module_docs/feature_list_row_filter/feature_list_rows_filter.html#validate-13c-isotope-pattern">Feature list rows filter</a></p>
 <h2 id="annotation">Annotation<a class="headerlink" href="#annotation" title="Permanent link">&para;</a></h2>
-<h4 id="spectral-library-files">Spectral library files<a class="headerlink" href="#spectral-library-files" title="Permanent link">&para;</a></h4>
-<p>Select all spectral libraries to import and use during spectral library matching to annotate
-compounds in the final aligned feature list.</p>
-<p>Influences batch steps:
-<a href="module_docs/id_spectral_library_search/spectral_library_search.html">Spectral library search</a></p>
-<h4 id="custom-database-search-csv">Custom database search (CSV)<a class="headerlink" href="#custom-database-search-csv" title="Permanent link">&para;</a></h4>
+<h4 id="local-compound-database">Local compound database<a class="headerlink" href="#local-compound-database" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Specify the database file (csv or tsv format).</li>
-<li>Select m/z option to either<ul>
+<li>Select precursor m/z option to either<ul>
 <li>calculate from given neutral mass (or formula/structure)</li>
 <li>use provided precursor m/z in column</li>
 </ul>
 </li>
 <li>Filename column is only used for the library generation workflow</li>
-<li>Columns map the table column headers to the internal names in MZmine</li>
+<li>Columns map the table column headers to the internal names in mzmine<ul>
+<li>Select data types present in local compound database</li>
 </ul>
+</li>
+</ul>
+<h4 id="annotate-lipids">Annotate lipids<a class="headerlink" href="#annotate-lipids" title="Permanent link">&para;</a></h4>
+<p>Select if you want to annotate lipids. Lipid database scope can be defined in the <a href="module_docs/id_lipid_annotation/lipid-annotation.html">Lipid annotation</a>.</p>
+<h4 id="spectral-library-files">Spectral library files<a class="headerlink" href="#spectral-library-files" title="Permanent link">&para;</a></h4>
+<p>Select all spectral libraries to import and use during spectral library matching to annotate
+compounds in the final aligned feature list.</p>
 <p>Influences batch steps:
-<a href="module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.html">Custom database search</a></p>
+<a href="module_docs/id_spectral_library_search/spectral_library_search.html">Spectral library search</a></p>
+<p>Influences batch steps:
+<a href="module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.html">Local compound database</a></p>
 <h2 id="workflows">Workflows<a class="headerlink" href="#workflows" title="Permanent link">&para;</a></h2>
 <p>Most of the parameters in the workflow section define data output and some workflow specific
 parameters.</p>
 <h3 id="general-parameters">General parameters<a class="headerlink" href="#general-parameters" title="Permanent link">&para;</a></h3>
 <ul>
+<li>Apply <a href="module_docs/group_spectral_net/molecular_networking.html">spectral networking</a> (FBMN/IIMN): Will compare all MS2 spectra across features to form
+  molecular networks by spectral similarity.</li>
 <li>Define an export path and base file name, e.g., <em>"D:\analysis\date_project"</em>  this will create a
   new folder and save all files from export modules there. Each module will add a specific suffix to
   the file name.</li>
-<li>Apply <a href="module_docs/group_spectral_net/molecular_networking.html">spectral networking</a> (FBMN/IIMN): Will compare all MS2 spectra across features to form
-  molecular networks by spectral similarity.</li>
 <li>Export for molecular networking (e.g., GNPS, FBMN, IIMN, MetGem): Will export all files for
   molecular networking</li>
 <li>Export for SIRIUS: Will export all files needed for SIRIUS</li>
-<li>Export annotation graphics: Exports annotations like spectral library matches, lipid matches, etc
+<li>Export annotation graphics: Exports annotations like spectral library matches, lipid matches, etc.
   to graphical reports. Contains options to also export chromatographic/ion mobility shapes, images,
   and other plots.</li>
 </ul>
 <h3 id="workflow-parameters-and-descriptions">Workflow parameters and descriptions<a class="headerlink" href="#workflow-parameters-and-descriptions" title="Permanent link">&para;</a></h3>
 <h4 id="dda">DDA<a class="headerlink" href="#dda" title="Permanent link">&para;</a></h4>
 <p>The data-dependent acquisition workflow is the default non target workflow. We recommend to also use
-this workflow for targeted analysis and combine it with the local CSV database search and spectral
-library search (<em>Annotation</em>).</p>
+this workflow for targeted analysis and combine it with the <a href="module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.html">Local compound database search</a> or <a href="module_docs/id_spectral_library_search/spectral_library_search.html">Spectral library search</a> annotation modules.</p>
+<h4 id="dia">DIA<a class="headerlink" href="#dia" title="Permanent link">&para;</a></h4>
+<p>The data-independent acquisition workflow is can process any type of MSe, broad band CID, or all ion fragmentation experiments. Add a minimum DIA correlation coefficient and a minimum number correlated data points in of MS2 data points.</p>
 <h4 id="library-generation">Library generation<a class="headerlink" href="#library-generation" title="Permanent link">&para;</a></h4>
 <p>More method and contributor <strong>metadata</strong> is required to build spectral libraries. This workflow
 produces reference libraries with options to filter and merge spectra.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
+<h4 id="imaging">Imaging<a class="headerlink" href="#imaging" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>This workflow is only available for the sampling techniques: <strong>MALDI</strong>, <strong>LDI</strong>, <strong>DESI</strong>, <strong>SIMS</strong></p>
+<p>Select if you want to co-localize images.</p>
+<h4 id="target-plate">Target plate<a class="headerlink" href="#target-plate" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>This workflow is only available for the sampling technique: <strong>MALDI</strong> (Bruker timsTOF only)</p>
+<p>Select if you want to co-localize images.</p>
+<h4 id="spectral-deconvolution">Spectral deconvolution<a class="headerlink" href="#spectral-deconvolution" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+</div>
+<p>This workflow is only available for the sampling technique: <strong>GC-EI</strong> </p>
+<p>Select the minimum number of signals in a deconvoluted spectrum</p>
+<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 26, 2024 15:36:51</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 15, 2024 20:31:19</span>
       
     
   </small>
