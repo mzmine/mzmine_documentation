@@ -41,16 +41,16 @@ the flexibility to process any type of mass spectrometry data. This included LC-
 (see [LC-IM-MS data visualization](visualization_modules/ims_raw_data_overview/IM-data-visualisation.md)
 and [feature detection](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)).
 Finally, significant effort was devoted to trace memory issues and bottlenecks, resulting in an
-unprecendent processing performance and scalability.
+unprecedented processing performance and scalability.
 
 Since the introduction of MZmine 2 in 2010, the project has matured into a community-driven, highly
 collaborative platform and its functions continue to expand based on the users' needs and feedbacks.
 This has also enabled the tight integration of the mzmine ecosystem with popular third-party
 software for MS data analysis, such as
-the [SIRIUS](https://bio.informatik.uni-jena.de/software/sirius/) suite for _in silico_ metabolite
+the [SIRIUS](https://bio.informatik.uni-jena.de/software/sirius/) suite for _in-silico_ metabolite
 annotation, the [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp?redirect=auth)
 platform with Ion Identity Molecular Networking, the [MetaboAnalyst](https://www.metaboanalyst.ca/)
-web app for univariate and multivariate statistical anlysis, _etc._
+web app for univariate and multivariate statistical analysis, _etc._
 
 Such a great progress was made possible by the invaluable contribution of
 many [developers](https://github.com/mzmine/mzmine3/graphs/contributors) from research labs
