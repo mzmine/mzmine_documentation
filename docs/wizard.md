@@ -20,21 +20,18 @@ The defaults are only suggestions and different acquisition methods and instrume
 different noise levels etc. The **raw data overview** and **aligned feature lists** are useful to
 optimize these parameters.
 
-## Parameter tabs
+## mzwizard parameter tabs
 
 ![Processing wizard](img/wizard.png)
 
-Produces this batch:
-
-![Processing wizard](img/wizard_batch.png)
-
-## Data import
+## [1] Data import
 
 Specify all data files that need to be processed
 
-## Sample introduction system
+## [2] Sample introduction system
 
-Depends on the selected sampling system, e.g., MALDI, HPLC, ...
+!!! info
+Depends on the selected sampling system, e.g. **MALDI**, **HPLC**, **DESI**
 
 ### Chromatography-based
 
@@ -109,7 +106,19 @@ Influences batch steps:
 [Gap filling](module_docs/gapfill_peak_finder/gap-filling.md),
 [Local compound database search](module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md)
 
-## Ion mobility instrument
+### Imaging based
+
+!!! info
+Supported techniques: **MALDI**, **SIMS**, **DESI**, **LDI**
+
+#### Minimum number of pixels
+
+The minimum number of pixels containing the same m/z.
+Influences batch steps:
+[Image Builder](module_docs/imaging_featdet/featdet_image_builder/image-builder.md)
+
+
+## [3] Ion mobility instrument
 
 #### Smoothing
 
@@ -135,7 +144,7 @@ The full-width at half maximum for IMS features with regard to the IMS dimension
 Influences batch steps:
 [Local minimum resolver (mobility dimension)](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#resolving-the-ion-mobility-dimension)
 
-## MS instrument, e.g., Orbitrap, QTOF, FTICR
+## [4] MS instrument, e.g., Orbitrap, QTOF, FTICR
 
 #### Noise threshold (MS1/MS2)
 
@@ -212,7 +221,7 @@ Influences batch steps:
 
 [//]: # ([ADAP aligner]&#40;module_docs/align_adap/align_adap_gc.md&#41;)
 
-## Filters
+## [5] Filters
 
 #### Original feature list
 
@@ -239,7 +248,7 @@ Detect isotope pattern and only keep feature with valid 13C isotope pattern.
 Influences batch steps:
 [Feature list rows filter](module_docs/feature_list_row_filter/feature_list_rows_filter.md#validate-13c-isotope-pattern)
 
-## Annotation
+## [6] Annotation
 
 #### Local compound database 
 
@@ -265,7 +274,7 @@ Influences batch steps:
 Influences batch steps:
 [Local compound database](module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md)
 
-## Workflows
+## [7] Workflows
 
 Most of the parameters in the workflow section define data output and some workflow specific
 parameters.
@@ -317,6 +326,12 @@ Select if you want to co-localize images.
 This workflow is only available for the sampling technique: **GC-EI** 
 
 Select the minimum number of signals in a deconvoluted spectrum
+
+## [8] Create Batch
+
+Select on the "Create batch" button to open a batch queue. Each step in the batch queue can be modified via double click. Find more information how to modify a [batch queue](workflows/batch_processing/batch-processing.md).
+Click on "OK" to start the processing.
+![Processing wizard](img/wizard_batch.png)
 
 {{ git_page_authors }}
 
