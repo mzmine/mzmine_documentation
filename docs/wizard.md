@@ -8,8 +8,6 @@ introduction, IMS, MS instrument, and workflow. Ideas for a workflow? We are ope
 ideas and contributions. Feel free to reach out if your workflow might be a candidate for a wizard
 setup.
 
-<video src="../reference_media/videos/mzwizard_docu.mp4" width="960" height="540" controls></video>
-
 :material-menu-open: **Processing wizard**
 
 !!! tip
