@@ -75,7 +75,8 @@ nav:
           - Isotope peak scanner: module_docs/filter_isotope_peak_scanner/isotope_peak_scanner.md
       - Feature grouping:
           - Correlation grouping: module_docs/id_ion_networking/metacorr/metacorr.md
-          - Ion identity networking: module_docs/id_ion_networking/iin/iin.md
+          - Ion Identity Networking: module_docs/id_ion_networking/iin/iin.md
+          - Spectral / Molecular Networking: module_docs/group_spectral_net/molecular_networking.md
       - Feature list filtering:
         - Duplicate feature filter: module_docs/filter_duplicate_features/duplicate_feature_filter.md
         - Feature list rows filter: module_docs/feature_list_row_filter/feature_list_rows_filter.md
@@ -147,15 +148,15 @@ nav:
       - General Terminology: terminology/general-terminology.md
       - IMS Terminology: terminology/ion-mobility-terminology.md
       - LC-MS and LC-IMS-MS data comparison: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
-      - Kendrick mass defect: module_docs/feature_list_row_filter/kendrick_mass_defect.md
+#      - Kendrick mass defect: module_docs/feature_list_row_filter/kendrick_mass_defect.md
       - Spectral similarity measures: module_docs/id_spectral_library_search/spectral-similarity-measures.md
 
   - Contribute:
       - Coding:
-            - MZmine development (in IntelliJ): contribute_intellij.md
+            - mzmine development (in IntelliJ): contribute_intellij.md
             - Upgrade JDK version: coding/upgrade_jdk_version.md
             - General structure: coding/general_structure.md
-            - macOS code signing: coding/macos_signing.md
+#            - macOS code signing: coding/macos_signing.md
             - Module development: coding/module_development.md
             - Modules list: coding/module_list.md
 

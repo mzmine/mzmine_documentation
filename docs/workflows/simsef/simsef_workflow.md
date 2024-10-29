@@ -12,9 +12,11 @@ Bruker representative to ask for the prmMALDI prototype and refer to SIMSEF.
 ## Requirements
 
 - access to timsTOF fleX instrument
-- access to the prototypic timsControl 4.1/5.0 with the prm-MALDI option (contact your Bruker
+- access to 
+  - the prototypic timsControl 4.1/5.0 with the prm-MALDI option (contact your Bruker
   representative)
-- [Download](https://github.com/SteffenHeu/simsef_py/releases) SIMSEF acquisition tool
+  - timsControl 5.1 with prmMALDI enabled (contact your Bruker representative)
+- [Download](https://github.com/SteffenHeu/simsef_py/releases) SIMSEF acquisition tool for the respective timsControl version
 
 ## Procedure
 
@@ -49,6 +51,7 @@ in your MS1 run for SIMSEF experiments
       energy settings.
     - Enable MALDI mode, save the method.
     - Set MS mode to MS/MS in the MALDI settings.
+    - Increase the laser size to the raster size
 11. Set instrument to operate and recalibrate if needed (recommended).
 12. Select the correct geometry file on the instrument computer (saved in step 3)
 12. Run "simsef_pewpew.exe" on the instrument computer, select the acquisition.txt and click "Run
