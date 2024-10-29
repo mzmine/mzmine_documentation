@@ -92,7 +92,8 @@ Boundary around the currently selected retention time to build ion traces for th
 **Mobilogram bin width (abs)**:
 Bins the given number of mobility scans together. Achieves a smoother visualisation.
 May be used to manually investigate the effects of altering the bin width in
-the [IMS expander](../../module_docs/featdet_ims_expander/ims-expander.md#override-default-mobility-bin-width-scans)
+the 
+[IMS expander](../../module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.md#override-default-mobility-bin-width-scans)
 to also achieve smoother mobilograms during feature detection.
 
 **EIC/mobilogram ranges**:
