@@ -130,6 +130,7 @@ nav:
           - Feature histograms: visualization_modules/feature_histograms/feature_hist.md
           - 4D features plot (Kendrick): visualization_modules/kendrickmass/kendrick_mass_plot.md
           - Van Krevelen plot: visualization_modules/vankrevelen/van_krevelen_plot.md
+          - Lipid annotation summary: visualization_modules/lipid_annotation_summary/lipid_annotation_summary.md
           - Additional tools: visualization_modules/processed_additional/processed_additional.md
       - Massvoltammogram: visualization_modules/massvoltammogram/massvoltammogram.md
 
