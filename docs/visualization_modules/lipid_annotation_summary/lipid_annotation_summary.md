@@ -1,5 +1,9 @@
 # Lipid Annotation summary
 
+!!! warning
+
+    This module requires lipid annotations from the [Lipid Annotation module](module_docs/id_lipid_annotation/lipid-annotation.md)
+
 ## Description
 
 :material-menu-open: **Visualization → Lipid annotation summary**
