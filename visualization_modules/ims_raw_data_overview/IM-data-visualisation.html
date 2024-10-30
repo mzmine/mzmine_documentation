@@ -2766,13 +2766,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#summed-frame-spectrum-panel-1" class="md-nav__link">
     Summed frame spectrum panel [1]
   </a>
@@ -3728,13 +3721,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#summed-frame-spectrum-panel-1" class="md-nav__link">
     Summed frame spectrum panel [1]
   </a>
@@ -3801,37 +3787,88 @@
   
 
 
-<h1 id="ion-mobility-raw-data-overview-lc-ims-ms"><strong>Ion mobility raw data overview (LC-IMS-MS)</strong><a class="headerlink" href="#ion-mobility-raw-data-overview-lc-ims-ms" title="Permanent link">&para;</a></h1>
-<h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Visualization  → Ion mobility raw data overview</strong></p>
-<p>The "Ion mobility raw data visualization" module allow a comprehensive navigation of the complex LC-IM-MS raw data. The screenshot belows shows an example of LC-IM-MS data acquired with a Bruker timsTOF instrument:</p>
-<p><img alt="im-data-overview" src="im-data-overview.jpg" /></p>
-<p>The main window consists of 5 panels and a set of displaying parameters. All the panels are interconnected, which means that moving the cursor in one panel, automatically updates the others. Cursors are displayed as light-blue solid lines in the panels.</p>
+<h1 id="ion-mobility-raw-data-overview-lc-ims-ms">Ion mobility raw data overview (LC-IMS-MS)<a class="headerlink" href="#ion-mobility-raw-data-overview-lc-ims-ms" title="Permanent link">&para;</a></h1>
+<p>The "Ion mobility raw data visualization" module allow a comprehensive navigation of the complex
+LC-IM-MS raw data. The screenshot belows shows an example of LC-IM-MS data acquired with a Bruker
+timsTOF instrument:</p>
+<p><img alt="im-data-overview" src="im-data-overview.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you don't see any data in the Summed frame [1] or BPC panel [2], the IMS raw data was probably imported from an mzml file. IMS-mzmls do not contain accumulated spectra. Therefore, two processing steps are required, before the data can be displayed: <a href="../../module_docs/featdet_mass_detection/mass-detection.html">Mass detection for all mobility scans</a> and <a href="../../module_docs/featdet_mobility_scan_merging/mobility-scan-merging.html">Mobility scan merging</a>. Both steps are done automatically, if the file is imported through the mzwizard. </p>
+</div>
+<p>The main window consists of 5 panels and a set of displaying parameters. All the panels are
+interconnected, which means that moving the cursor in one panel, automatically updates the others.
+Cursors are displayed as light-blue solid lines in the panels.</p>
 <h2 id="summed-frame-spectrum-panel-1">Summed frame spectrum panel [1]<a class="headerlink" href="#summed-frame-spectrum-panel-1" title="Permanent link">&para;</a></h2>
-<p>The MS spectrum corresponding to each <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">frame</a> is shown in this panel. The displayed MS spectrum is the sum of all the <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">mobility scans</a> acquired over that frame (see <a href="../../terminology/ion-mobility-terminology.html">Ion mobility spectrometry terminology</a>).</p>
+<p>The MS spectrum corresponding to
+each <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">frame</a>
+is shown in this panel. The displayed MS spectrum is the sum of all
+the <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">mobility scans</a>
+acquired over that frame (
+see <a href="../../terminology/ion-mobility-terminology.html">Ion mobility spectrometry terminology</a>).</p>
 <h2 id="bpc-panel-2">BPC panel [2]<a class="headerlink" href="#bpc-panel-2" title="Permanent link">&para;</a></h2>
-<p>In this panel, the <a href="../../terminology/general-terminology.html#base-peak-chromatogram">base peak chromatogram</a> is displayed. Each data point corresponds to an individual <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">frame</a>. Moving the cursor frame-by-frame automatically updateds the 'frame heatmap' and 'summed frame spectrum' panels. Moving the cursor frame-by-frame automatically updateds the 'summed frame spectrum' panels as changing data point in regular LC-MS data would display a different MS scan. Since each frame is made of several <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">mobily scans</a>, the 'mobilogram chart' and 'frame heatmap' panels automatically updates too.
-<em>Note</em>. It is currently not possible to display the <a href="../../terminology/general-terminology.html#total-ion-current-chromatogram">TIC chromatogram</a>)</p>
+<p>In this panel,
+the <a href="../../terminology/general-terminology.html#base-peak-chromatogram">base peak chromatogram</a> is
+displayed.
+Each data point corresponds to an
+individual <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">frame</a>.
+Moving the cursor frame-by-frame automatically updates the 'frame heatmap' and 'summed frame
+spectrum' panels.
+Moving the cursor frame-by-frame automatically updates the 'summed frame spectrum' panels as
+changing data point in regular LC-MS data would display a different MS scan.
+Since each frame is made of
+several <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">mobily scans</a>,
+the 'mobilogram chart' and 'frame heatmap' panels automatically updates too.
+<em>Note</em>. It is currently not possible to display
+the <a href="../../terminology/general-terminology.html#total-ion-current-chromatogram">TIC chromatogram</a>)</p>
+<p>Clicking in the chromatogram updates the selected frame.</p>
 <h2 id="mobility-scan-3">Mobility scan [3]<a class="headerlink" href="#mobility-scan-3" title="Permanent link">&para;</a></h2>
+<p>Displays the scan at the current selected mobility value. A scan can be selected by clicking in the
+mobilogram plot, the frame heatmap or the ion trace chart.</p>
+<p>Clicking in the spectrum updates the selected m/z value.</p>
 <h2 id="mobilogram-chart-4">Mobilogram chart [4]<a class="headerlink" href="#mobilogram-chart-4" title="Permanent link">&para;</a></h2>
+<p>Displays the total ion mobilogram at the selected retention time/frame (see frame spectrum) in the
+colour of the selected raw data file.
+Additional ranges for mobilograms can be added using the displaying parameters.</p>
+<p>Clicking in the mobilogram updates the selected mobility value.</p>
 <h2 id="frame-heatmap-5">Frame heatmap [5]<a class="headerlink" href="#frame-heatmap-5" title="Permanent link">&para;</a></h2>
+<p>Displays the selected frame as a 2D-heatmap. The signal intensity is displayed as a continuous
+colour scale.</p>
+<p>Clicking in the heatmap updates the selected mobility and m/z values.</p>
 <h2 id="ion-trace-chart-6">Ion trace chart [6]<a class="headerlink" href="#ion-trace-chart-6" title="Permanent link">&para;</a></h2>
+<p>Plots the intensity distribution of the selected m/z value along the retention time (domain) and
+mobility (range) axes within the currently set <strong>Retention time width</strong> (
+see <a href="#displaying-parameters-6">displaying parameters</a>)</p>
 <h2 id="displaying-parameters-6">Displaying parameters [6]<a class="headerlink" href="#displaying-parameters-6" title="Permanent link">&para;</a></h2>
-<p><strong>Mobility scan noise level</strong>: This parameter controls the signals shown in the XXX panels (panel n°X). For example, a noise level of 5.0E1 will show only the signals above this value (see below)</p>
-<p><strong>Frame noise level</strong>: This parameter sets a threshold for the signals shown in the "Summed frame spectrum panel" (panel n°X). Signals from MS spectra acquired over the same frame are summed and shown</p>
-<p><strong>m/z tolerance</strong></p>
-<p><strong>Scan selection</strong></p>
-<p><strong>Retention time width</strong> </p>
-<p><strong>Mobilogram bin width (abs)</strong> </p>
-<p><strong>EIC/mobilogram ranges</strong> </p>
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
+<p>Parameters to adjust the visualisation.</p>
+<p><strong>Mobility scan noise level</strong>: This parameter controls the signals shown in
+the <a href="#mobility-scan-3">Mobility scan panel (3)</a> and the <a href="#frame-heatmap-5">Frame heatmap (5)</a>. For
+example, a noise level of 5.0E1 will remove signals below this intensity.</p>
+<p><strong>Frame noise level</strong>: This parameter sets a threshold for the signals shown in the <a href="#summed-frame-spectrum-panel-1">Summed frame
+spectrum panel</a>.</p>
+<p><strong>m/z tolerance</strong>: A tolerance range for displaying chromatograms, mobilograms, and ion traces of
+the selected m/z value.</p>
+<p><strong>Scan selection</strong>: Use this to switch between the selected scans, e.g., MS1 and MS2.</p>
+<p><strong>Retention time width</strong>:
+Boundary around the currently selected retention time to build ion traces for the selected m/z.</p>
+<p><strong>Mobilogram bin width (abs)</strong>:
+Bins the given number of mobility scans together. Achieves a smoother visualisation.
+May be used to manually investigate the effects of altering the bin width in
+the 
+<a href="../../module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.html#override-default-mobility-bin-width-scans">IMS expander</a>
+to also achieve smoother mobilograms during feature detection.</p>
+<p><strong>EIC/mobilogram ranges</strong>:
+Manually add m/z ranges that are visualised constantly. Either define a range, or just define the
+center of the range and click add. In the latter case, the <strong>m/z tolerance</strong> is used around the
+given
+m/z.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 21:13:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 29, 2024 17:21:09</span>
       
     
   </small>
