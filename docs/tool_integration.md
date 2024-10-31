@@ -6,6 +6,8 @@ MZmine3 data can be easily exchanged with and integrated into other software and
 
 Links to the detailed documentation and specifications are provided in the table.
 
+<!-- markdown-link-check-disable -->
+
 | **Tool**                                                                                                                          | **Doc**                                                                                                                                                                | **Applicable MZmine module(s)**                                                                                                                           | **Format**                       | **Description**                                                                                                                                                  |
 |-----------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [SIRIUS](https://bio.informatik.uni-jena.de/software/sirius/)                                                                     | [Doc](https://ccms-ucsd.github.io/GNPSDocumentation/sirius/#with-the-feature-based-molecular-networking)                                                               | Export to SIRIUS                                                                                                                                          | .mgf                             | Contains MS2 spectra and MS1 or correlated MS1 spectra for each feature list row                                                                                 |
@@ -24,6 +26,8 @@ Links to the detailed documentation and specifications are provided in the table
 | [MEMO](https://github.com/mandelbrot-project/memo) | [Doc](https://memo-docs.readthedocs.io/en/latest/index.html) | Export/submit GNPS-FBMN | .mgf |- Contains one representative MS2 spectrum per feature |
 | [SLAW](https://github.com/zamboni-lab/SLAW) | [Doc](https://github.com/zamboni-lab/SLAW) | Export/submit GNPS-FBMN | .mgf<br>_quant.csv<br>_edges.csv | - Contains one representative MS2 spectrum per feature<br>- The feature list as an intensity (area/height) matrix<br>- The additional IIN edges between features |
 | [FERMO](https://github.com/mmzdouc/FERMO/) | [Doc](https://github.com/mmzdouc/FERMO/wiki/) | [Export/submit GNPS-FBMN](./module_docs/io/data-exchange-with-other-software.md#gnps-fbmniimn-export) | .mgf<br>_quant.csv | - Contains one representative MS2 spectrum per feature<br>- The feature list as an intensity (area/height) matrix |  
+
+<!-- markdown-link-check-enable -->
 
 ## Page Contributors
 
