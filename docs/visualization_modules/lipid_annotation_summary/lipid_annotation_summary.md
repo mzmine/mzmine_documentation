@@ -2,7 +2,7 @@
 
 !!! warning
 
-    This module requires lipid annotations from the [Lipid Annotation module](module_docs/id_lipid_annotation/lipid-annotation.md)
+    This module requires lipid annotations from the [Lipid Annotation module](/docs/module_docs/id_lipid_annotation/lipid-annotation.md)
 
 ## Description
 

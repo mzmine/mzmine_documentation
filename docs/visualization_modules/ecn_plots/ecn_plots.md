@@ -2,13 +2,12 @@
 
 !!! warning
 
-    This module requires lipid annotations from the [Lipid Annotation module](module_docs/id_lipid_annotation/lipid-annotation.md)
+    This module requires lipid annotations from the [Lipid Annotation module](/docs/module_docs/id_lipid_annotation/lipid-annotation.md)
 
 ## Description
-
 :material-menu-open: **Visualization → (Equivalent Carbon Number) plot**
 
-This module groups lipids of the same lipid sub class with the same number of double bond equivalents (DBEs).
+This module groups lipids of the same lipid subclass with the same number of double bond equivalents (DBEs).
 Retention time against the number of carbons is plotted for each group to evaluate the annotation quality in context of
 the chromatographic behaviour. Trend line and score are added to assist the evaluation.
 
