@@ -68,9 +68,9 @@ Clicking in the heatmap updates the selected mobility and m/z values.
 
 Plots the intensity distribution of the selected m/z value along the retention time (domain) and
 mobility (range) axes within the currently set **Retention time width** (
-see [displaying parameters](#displaying-parameters-6))
+see [displaying parameters](#displaying-parameters-7))
 
-## Displaying parameters [6]
+## Displaying parameters [7]
 
 Parameters to adjust the visualisation.
 

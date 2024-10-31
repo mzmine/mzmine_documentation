@@ -62,9 +62,11 @@ where $d$ is the chosen metric.
 To obtain a **distance matrix** between all pairs of observations:
 
 1. A similarity score based on **chemical likelihood only (chemSimScore)** is computed.
-
+2. 
+<!-- markdown-link-check-disable -->
     Calculation of the dot product is based on work by [Stein and Scott (1994)](https://link.springer.com/article/10.1016/1044-0305(94)87009-8), which is the most popular approach for spectrum similarity measure.
-    
+<!-- markdown-link-check-enable -->
+
     Between two mass spectra $I_{t_j}$ and $I_{r_i}$ of two peaks $t_j$ and $r_i$ similarity is calculated as follows:
 
     $$S(t_j,r_i)=dot(I_{t_j},I_{r_i})=<I_{t_j},I_{r_i}>/ (\lvert I_{t_j} \rvert \lvert I_{r_i} \rvert)$$
