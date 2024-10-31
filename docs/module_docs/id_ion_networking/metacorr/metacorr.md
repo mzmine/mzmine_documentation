@@ -7,7 +7,7 @@ This module groups features based on various properties:
 - Feature shape Pearson correlation (optional: Only apply if at least 5 data points)
 - Feature height correlation
 
-
+<!-- markdown-link-check-disable -->
 ## Recommended citations
 !!! info
     When using this modules, please consider citing the corresponding publications:<br>
@@ -15,8 +15,8 @@ This module groups features based on various properties:
     
     Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, In Review (2023)
 
-
 ---
+<!-- markdown-link-check-enable -->
 
 
 ## Parameters
