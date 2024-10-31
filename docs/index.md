@@ -41,7 +41,7 @@ the flexibility to process any type of mass spectrometry data. This included LC-
 (see [LC-IM-MS data visualization](visualization_modules/ims_raw_data_overview/IM-data-visualisation.md)
 and [feature detection](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)).
 Finally, significant effort was devoted to trace memory issues and bottlenecks, resulting in an
-unprecendent processing performance and scalability.
+unprecedented processing performance and scalability.
 
 Since the introduction of MZmine 2 in 2010, the project has matured into a community-driven, highly
 collaborative platform and its functions continue to expand based on the users' needs and feedbacks.
