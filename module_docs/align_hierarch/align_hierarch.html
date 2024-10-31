@@ -3863,12 +3863,19 @@
 <h3 id="mzmine-gc-specific-considerations"><strong>MZmine GC: Specific considerations</strong><a class="headerlink" href="#mzmine-gc-specific-considerations" title="Permanent link">&para;</a></h3>
 <p>To obtain a <strong>distance matrix</strong> between all pairs of observations:</p>
 <ol>
-<li>
-<p>A similarity score based on <strong>chemical likelihood only (chemSimScore)</strong> is computed.</p>
-<p>Calculation of the dot product is based on work by <a href="https://link.springer.com/article/10.1016/1044-0305(94)87009-8">Stein and Scott (1994)</a>, which is the most popular approach for spectrum similarity measure.</p>
-<p>Between two mass spectra <span class="arithmatex">\(I_{t_j}\)</span> and <span class="arithmatex">\(I_{r_i}\)</span> of two peaks <span class="arithmatex">\(t_j\)</span> and <span class="arithmatex">\(r_i\)</span> similarity is calculated as follows:</p>
-<div class="arithmatex">\[S(t_j,r_i)=dot(I_{t_j},I_{r_i})=&lt;I_{t_j},I_{r_i}&gt;/ (\lvert I_{t_j} \rvert \lvert I_{r_i} \rvert)\]</div>
-</li>
+<li>A similarity score based on <strong>chemical likelihood only (chemSimScore)</strong> is computed.</li>
+<li></li>
+</ol>
+<!-- markdown-link-check-disable -->
+<pre><code>Calculation of the dot product is based on work by [Stein and Scott (1994)](https://link.springer.com/article/10.1016/1044-0305(94)87009-8), which is the most popular approach for spectrum similarity measure.
+</code></pre>
+<!-- markdown-link-check-enable -->
+
+<pre><code>Between two mass spectra $I_{t_j}$ and $I_{r_i}$ of two peaks $t_j$ and $r_i$ similarity is calculated as follows:
+
+$$S(t_j,r_i)=dot(I_{t_j},I_{r_i})=&lt;I_{t_j},I_{r_i}&gt;/ (\lvert I_{t_j} \rvert \lvert I_{r_i} \rvert)$$
+</code></pre>
+<ol>
 <li>
 <p>Then a similarity score based on <strong>RT likelihood only (rtScore)</strong> is computed. </p>
 <p>Retention time score is normalized relatively to the RT window tolerance provided by the user</p>
@@ -3905,14 +3912,14 @@
 <p>If checked, exports the resulting dendrogram to the given *txt file. </p>
 <h4 id="dendrogram-output-text-filename"><strong>Dendrogram output text filename</strong><a class="headerlink" href="#dendrogram-output-text-filename" title="Permanent link">&para;</a></h4>
 <p>Name of the resulting TXT file to write the clustering resulting dendrogram to. If the file already exists, it will be overwritten.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 8, 2024 11:14:23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 31, 2024 12:26:16</span>
       
     
   </small>

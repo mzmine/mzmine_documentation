@@ -4084,10 +4084,13 @@ to 50 signals so the final number of signals may be higher.</p>
 <h4 id="intensity-filter-at-n-signals">Intensity filter at &gt;N signals<a class="headerlink" href="#intensity-filter-at-n-signals" title="Permanent link">&para;</a></h4>
 <p>Remove signals so that X% of intensity is retained. This removes lower abundant signals that play a
 minor role in matching. Overall this can speed up matching.</p>
+<!-- markdown-link-check-disable -->
 <h3 id="algorithm-ms2deepscore">Algorithm: MS2Deepscore<a class="headerlink" href="#algorithm-ms2deepscore" title="Permanent link">&para;</a></h3>
 <p>This algorithm uses a deep neural network to predict embeddings that aim for spectral similarities
 that approach structural similarities. The module allows loading of pre-trained models in the
 PyTorch script format. More information about MS2Deepscore can be found on <a href="https://github.com/matchms/ms2deepscore">github</a>. If you use MS2Deepscore, please cite <a href="https://doi.org/10.1101/2024.03.25.586580">de Jonge et al. 2024</a> and <a href="https://link.springer.com/article/10.1186/s13321-021-00558-4">Huber et al. 2021</a>.</p>
+<!-- markdown-link-check-enable -->
+
 <h4 id="ms2deepscore-model">MS2Deepscore model<a class="headerlink" href="#ms2deepscore-model" title="Permanent link">&para;</a></h4>
 <p>The latest model can be downloaded by clicking select -&gt; download: <img alt="image" src="https://github.com/user-attachments/assets/f5c06bc7-dbc1-46c5-9834-fce69917951c" /></p>
 <p>Alternatively the pre-trained MS2Deepscore model can be downloaded
@@ -4102,14 +4105,14 @@ signals because MS2Deepscore works by comparing its embeddings.</p>
 <p>Minimum MS2Deepscore spectral similarity to consider matched. The score is scaled from 0-1 with 1
 being the best match.</p>
 <hr />
-<p><span class='git-page-authors git-authors'><a href='mailto:76995965+niekdejonge@users.noreply.github.com'>Niek de Jonge</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:76995965+niekdejonge@users.noreply.github.com'>Niek de Jonge</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 6, 2024 09:29:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 31, 2024 12:26:16</span>
       
     
   </small>
