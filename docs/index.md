@@ -53,7 +53,7 @@ annotation, the [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp?r
 platform with Ion Identity Molecular Networking, the [MetaboAnalyst](https://www.metaboanalyst.ca/)
 web app for univariate and multivariate statistical analysis, _etc._
 
-Such a great progress was made possible by the invaluable contribution of
+Such great progress was made possible by the invaluable contribution of
 many [developers](https://github.com/mzmine/mzmine3/graphs/contributors) from research labs
 distributed all over the world!
 
