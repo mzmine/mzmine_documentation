@@ -17,7 +17,7 @@ the chromatographic behaviour. Trend line and score are added to assist the eval
     ECN models are most practicale in combination with reversed phase chromatography. 
 
 
-![ecnmodels](ecn_models_example.png)
+![ecnmodels](ECN_models_example.png)
 
 ## Parameters
 ![ecnplotparameters](ecn_plot_parameters.png)
