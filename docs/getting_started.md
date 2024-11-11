@@ -81,7 +81,8 @@ You can get familiar with the new GUI here: [Main window overview](main-window-o
 
 As a quick start you can use the [mzwizard](wizard.md) in the main menu or directly on the landing page. 
 
-You may consider watching one of the [mzmine video tutorials on YouTube](https://www.youtube.com/watch?v=jUHd3Sj7x0M&list=PL7kvpfzg8JkV7XKBUUX0xxOJimiK1VCOg).
+A good starting point is watching this [mzmine video tutorial on YouTube](https://www.youtube.com/watch?v=UnqVtZngzl0&list=PL0JAF-4UFc8NgyAOQhTKI9GZvSBcxe1AD).
+![YouTube tutorial](youtube_video_tutorial.png)
 
 A quick insight to data processing workflows can be found
 here:
