@@ -17,6 +17,7 @@ Apply [metaCorrelate](../metacorr/metacorr.md) before running this module
 
 ## Recommended citations
 
+<!-- markdown-link-check-disable -->
 !!! info
 When using this modules, please consider citing the corresponding publication(s):<br>
 Schmid, R., Petras, D., Nothias, LF. et al. Ion identity molecular networking for mass
@@ -26,6 +27,7 @@ spectrometry-based metabolomics in the GNPS environment. Nat Commun 12, 3832 (
     Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, In Review (2023)
 
 ---
+<!-- markdown-link-check-enable -->
 
 ## Parameters
 

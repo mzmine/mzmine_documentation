@@ -91,7 +91,9 @@ The extracted ion chromatogram (EIC) displays the signal intensity of a specific
 Peak overlapping, or co-elution, is a common problem in any chromatographic separation technique. In the case of LC-MS (especially untargeted _omics_ analysis), it is virtually impossible to obtain a full baseline separation for the hundreds (or thousands) of analytes eluted through the column. The split of partially-overlapping and shoulder peaks into individual features is generally referred to as _chromatographic resolving_ and is one of the most crucial steps of data processing. TO FINISH.
 
 ### Missing values
+<!-- markdown-link-check-disable -->
 MISSING VALUE DEFINITION (see https://www.nature.com/articles/s41598-017-19120-0). 
+<!-- markdown-link-check-enable -->
 
 Missing values_ can be caused by biological and/or technical reasons.
 A gap (match-to-nothing) is defined as a missing value in an alignment. Peaks that cannot be aligned (corresponding to a gap) are designated with a value of “NA” (missing value).
@@ -106,9 +108,9 @@ A simple gap-filling approach is to integrate the area where the peak is expecte
 The other alternative for gap filling is the [Same RT and m/z range gap filler](../module_docs/gapfill_same_mz_and_RT_range/same_mz_and_RT_range_gap_filler.md), which limits the gap fill to features within the original detected peak window. This leads to much cleaner results. 
 :warning: However, this module causes MISSING VALUE IMPUTATION. For purposes of further data processing, noise should be always preferred to zero values.
 
-:material-lightbulb: MZmine 3 does not support missing-value imputation.
+:material-lightbulb: mzmine does not support missing-value imputation.
 
-# **MZmine-specific terminology**
+# **mzmine-specific terminology**
 
 ### **Masses and Features**
 In MS data processing, the term **mass** is normally used to refer to an individual signal in a mass spectrum, which corresponds to an ion detected by the mass spectrometer (see [Mass detection](../module_docs/featdet_mass_detection/mass-detection.md)).
@@ -117,7 +119,7 @@ In LC-MS, a **feature** is defined as a bounded, two-dimensional (_m/z_ and RT d
 
 In LC-IM-MS, a **feature** is also characterized by the ion mobility value recorded for the ion (see [LC-MS and LC-IMS-MS data comparison](../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md). 
 
-**MZmine 3** provides a selection of different algorithms for LC-(IM)-MS feature detection, depending on the nature of the MS data (_e.g._ mass accuracy and resolution). All the algorithms follow the same logic: 
+**mzmine** provides a selection of different algorithms for LC-(IM)-MS feature detection, depending on the nature of the MS data (_e.g._ mass accuracy and resolution). All the algorithms follow the same logic: 
 
 - [EICs](#extracted-ion-chromatogram) are constructed starting from each _m/z_ value in the mass lists 
 - Then, EICs are subsequently deconvoluted into individual features (see figure). 
@@ -129,7 +131,7 @@ In LC-IM-MS, a **feature** is also characterized by the ion mobility value recor
 
 ### **Mass list**
 
-In MZmine, we call **mass list** the output of the [mass detection](../module_docs/featdet_mass_detection/mass-detection.md) module. 
+In mzmine, we call **mass list** the output of the [mass detection](../module_docs/featdet_mass_detection/mass-detection.md) module. 
 
 A **mass list** is a list of _m/z_ values and corresponding signal intensities, found in each mass spectrum (MS or MSn) of each processed raw data file. 
 
@@ -137,7 +139,7 @@ Every mass spectrum contained in the raw file is processed individually. The sig
 
 ### **Feature list**
 
-In MZmine, **feature lists** are the output of the **feature detection** process (see [Masses and features](#masses-and-features)). 
+In mzmine, **feature lists** are the output of the **feature detection** process (see [Masses and features](#masses-and-features)). 
 
 The set of detected features in each LC-MS run is stored as a list, hence the name "feature list" (see, for example, [ADAP chromatogram builder](../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local mimimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) for more details). Multiple feature lists can undergo further processing (_e.g._ feature alingment) which results in a table (often referred to as **feature table**) where samples are arranged in columns, features in rows and each entry contains the signal intensity detected for the corresponding feature in the corresponding sample.
 

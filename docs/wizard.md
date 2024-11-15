@@ -1,17 +1,17 @@
 # Processing wizard
-
+![mzwizard_logo](img/logo300_mzwizard.png)
 The processing wizard reduces the configuration of complex standardized workflows into few
 parameters. Those values are used to estimate or calculate all other parameters from spectral
-processing over feature detection and alignment to annotation and data export. The wizard organizes
+processing over feature detection and alignment to annotation and data export. The mzwizard organizes
 the different parts of the instrumental setup to define a workflow split up into: Sample
-introduction, IMS, MS instrument, workflow. More specific workflows are planned and we are open for
+introduction, IMS, MS instrument, and workflow. Ideas for a workflow? We are open for
 ideas and contributions. Feel free to reach out if your workflow might be a candidate for a wizard
 setup.
 
 :material-menu-open: **Processing wizard**
 
 !!! tip
-The wizard is split into sections, most importantly, the MS part and the chromatography part.
+The mzwizard is split into sections, most importantly, the MS part and the sample introduction.
 Parameters here reflect the sensitivity, resolution, and accuracy of these parts of the hyphenation.
 Selecting one of the default presets actually populates the initial values.
 
@@ -20,21 +20,18 @@ The defaults are only suggestions and different acquisition methods and instrume
 different noise levels etc. The **raw data overview** and **aligned feature lists** are useful to
 optimize these parameters.
 
-## Parameter tabs
+## mzwizard parameter tabs
 
 ![Processing wizard](img/wizard.png)
 
-Produces this batch:
-
-![Processing wizard](img/wizard_batch.png)
-
-## Data import
+## [1] Data import
 
 Specify all data files that need to be processed
 
-## Sample introduction system
+## [2] Sample introduction system
 
-Depends on the selected sampling system, e.g., MALDI, HPLC, ...
+!!! info
+Depends on the selected sampling system, e.g. **MALDI**, **HPLC**, **DESI**
 
 ### Chromatography-based
 
@@ -49,8 +46,7 @@ Influences batch steps:
 #### Stable ionization across samples
 
 Used during feature grouping of adducts and other ions of the same molecule. Only use if the
-matrix (
-e.g., salt content, same culture medium, only fresh OR sea water samples) and ionization
+matrix (e.g., salt content, same culture medium, only fresh OR sea water samples) and ionization
 efficiencies are comparable across the whole study.
 
 Influences batch steps:
@@ -64,9 +60,7 @@ procedure.
 
 Influences batch steps:
 [Chromatogram building](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)
-[Local minimum feature resolver](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) (
-Calculation
-of [chromatographic threshold](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#chromatographic-threshold))
+[Local minimum feature resolver](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) (Calculation of [chromatographic threshold](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#chromatographic-threshold))
 
 #### Max peaks in chromatogram
 
@@ -75,9 +69,7 @@ percentage of data points that hold useful data for the feature resolving step. 
 threshold in local minimum resolver).
 
 Influences batch steps:
-[Local minimum feature resolver](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) (
-Calculation
-of [chromatographic threshold](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#chromatographic-threshold))
+[Local minimum feature resolver](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) (Calculation of [chromatographic threshold](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#chromatographic-threshold))
 
 #### Minimum consecutive scans
 
@@ -114,7 +106,19 @@ Influences batch steps:
 [Gap filling](module_docs/gapfill_peak_finder/gap-filling.md),
 [Local compound database search](module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md)
 
-## Ion mobility instrument
+### Imaging based
+
+!!! info
+Supported techniques: **MALDI**, **SIMS**, **DESI**, **LDI**
+
+#### Minimum number of pixels
+
+The minimum number of pixels containing the same m/z.
+Influences batch steps:
+[Image Builder](module_docs/imaging_featdet/featdet_image_builder/image-builder.md)
+
+
+## [3] Ion mobility instrument
 
 #### Smoothing
 
@@ -140,7 +144,7 @@ The full-width at half maximum for IMS features with regard to the IMS dimension
 Influences batch steps:
 [Local minimum resolver (mobility dimension)](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#resolving-the-ion-mobility-dimension)
 
-## MS instrument, e.g., Orbitrap, qTOF, FTICR
+## [4] MS instrument, e.g., Orbitrap, QTOF, FTICR
 
 #### Noise threshold (MS1/MS2)
 
@@ -217,7 +221,7 @@ Influences batch steps:
 
 [//]: # ([ADAP aligner]&#40;module_docs/align_adap/align_adap_gc.md&#41;)
 
-## Filters
+## [5] Filters
 
 #### Original feature list
 
@@ -244,7 +248,20 @@ Detect isotope pattern and only keep feature with valid 13C isotope pattern.
 Influences batch steps:
 [Feature list rows filter](module_docs/feature_list_row_filter/feature_list_rows_filter.md#validate-13c-isotope-pattern)
 
-## Annotation
+## [6] Annotation
+
+#### Local compound database 
+
+- Specify the database file (csv or tsv format).
+- Select precursor m/z option to either
+    - calculate from given neutral mass (or formula/structure)
+    - use provided precursor m/z in column
+- Filename column is only used for the library generation workflow
+- Columns map the table column headers to the internal names in mzmine
+    - Select data types present in local compound database
+
+#### Annotate lipids
+Select if you want to annotate lipids. Lipid database scope can be defined in the [Lipid annotation](module_docs/id_lipid_annotation/lipid-annotation.md).
 
 #### Spectral library files
 
@@ -254,34 +271,25 @@ compounds in the final aligned feature list.
 Influences batch steps:
 [Spectral library search](module_docs/id_spectral_library_search/spectral_library_search.md)
 
-#### Custom database search (CSV)
-
-- Specify the database file (csv or tsv format).
-- Select m/z option to either
-    - calculate from given neutral mass (or formula/structure)
-    - use provided precursor m/z in column
-- Filename column is only used for the library generation workflow
-- Columns map the table column headers to the internal names in MZmine
-
 Influences batch steps:
-[Custom database search](module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md)
+[Local compound database](module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md)
 
-## Workflows
+## [7] Workflows
 
 Most of the parameters in the workflow section define data output and some workflow specific
 parameters.
 
 ### General parameters
 
+- Apply [spectral networking](module_docs/group_spectral_net/molecular_networking.md) (FBMN/IIMN): Will compare all MS2 spectra across features to form
+  molecular networks by spectral similarity.
 - Define an export path and base file name, e.g., *"D:\analysis\date_project"*  this will create a
   new folder and save all files from export modules there. Each module will add a specific suffix to
   the file name.
-- Apply [spectral networking](module_docs/group_spectral_net/molecular_networking.md) (FBMN/IIMN): Will compare all MS2 spectra across features to form
-  molecular networks by spectral similarity.
 - Export for molecular networking (e.g., GNPS, FBMN, IIMN, MetGem): Will export all files for
   molecular networking
 - Export for SIRIUS: Will export all files needed for SIRIUS
-- Export annotation graphics: Exports annotations like spectral library matches, lipid matches, etc
+- Export annotation graphics: Exports annotations like spectral library matches, lipid matches, etc.
   to graphical reports. Contains options to also export chromatographic/ion mobility shapes, images,
   and other plots.
 
@@ -290,13 +298,40 @@ parameters.
 #### DDA
 
 The data-dependent acquisition workflow is the default non target workflow. We recommend to also use
-this workflow for targeted analysis and combine it with the local CSV database search and spectral
-library search (*Annotation*).
+this workflow for targeted analysis and combine it with the [Local compound database search](module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md) or [Spectral library search](module_docs/id_spectral_library_search/spectral_library_search.md) annotation modules.
+
+#### DIA
+
+The data-independent acquisition workflow is can process any type of MSe, broad band CID, or all ion fragmentation experiments. Add a minimum DIA correlation coefficient and a minimum number correlated data points in of MS2 data points.
 
 #### Library generation
 
 More method and contributor **metadata** is required to build spectral libraries. This workflow
 produces reference libraries with options to filter and merge spectra.
+
+#### Imaging
+!!! info
+This workflow is only available for the sampling techniques: **MALDI**, **LDI**, **DESI**, **SIMS**
+
+Select if you want to co-localize images.
+
+#### Target plate
+!!! info
+This workflow is only available for the sampling technique: **MALDI** (Bruker timsTOF only)
+
+Select if you want to co-localize images.
+
+#### Spectral deconvolution
+!!! info
+This workflow is only available for the sampling technique: **GC-EI** 
+
+Select the minimum number of signals in a deconvoluted spectrum
+
+## [8] Create Batch
+
+Select on the "Create batch" button to open a batch queue. Each step in the batch queue can be modified via double click. Find more information how to modify a [batch queue](workflows/batch_processing/batch-processing.md).
+Click on "OK" to start the processing.
+![Processing wizard](img/wizard_batch.png)
 
 {{ git_page_authors }}
 
