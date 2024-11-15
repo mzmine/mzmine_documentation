@@ -20,7 +20,7 @@ provided [here](../../terminology/ion-mobility-terminology.md).
 
 ## Feature detection workflows
 
-Ion mobility data can be processed in MZmine 3 in two ways. The first few steps are different for
+Ion mobility data can be processed in mzmine in two ways. The first few steps are different for
 the two workflows (see below).
 
 1. [LC-IMS-MS workflow via **ADAP Chromatogram builder and IMS expander** **(

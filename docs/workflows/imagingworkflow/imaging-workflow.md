@@ -59,7 +59,7 @@ If an LC-MS dataset was acquired for the imaging sample, the results can be alig
 the [LC-Image Aligner](../../module_docs/align_lc-image/align_lc-image.md). This allows integration
 of the two datasets and can be used for more confident identifications in imaging experiments. (
 see https://www.nature.com/articles/s41587-023-01690-2)
-<!-- markdown-link-check-ensable -->
+<!-- markdown-link-check-enable -->
 
 ![workflow-image](mzmine_workflows_4_integrative_MALDI.png)
 
