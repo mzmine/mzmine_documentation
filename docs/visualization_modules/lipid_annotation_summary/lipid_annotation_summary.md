@@ -20,7 +20,7 @@ Unfolding the accordion "Filter Annotations" allows to control which hierarchy l
 The left plot shows the total of all lipid annotations, including multiple annotations per feature. Multiple annotation levels (species and molecular species level) are not counted.
 The right plot shows the unique number of lipids, meaning the number of annotated features.
 
-![lipidannotationsummary](/reference_media/lipid/lipid_summary.png)
+![lipidannotationsummary](lipid_summary.png)
 
 Both plots can be filtered individually. You can display:
 - "All", including all lipid annotations regardless of annotation quality
