@@ -138,6 +138,7 @@ nav:
   - Workflows:
       - Untargeted LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
       - Untargeted LC-IMS-MS workflow: workflows/imsworkflow/ion-mobility-data-processing-workflow.md
+      - Untargeted GC-MS workflow: workflows/gcmsworkflow/gcms-workflow.md
       - Untargeted MS imaging workflow: workflows/imagingworkflow/imaging-workflow.md
       - Batch processing: workflows/batch_processing/batch-processing.md
       - Library generation: workflows/librarygeneration/library_generation.md

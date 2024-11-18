@@ -1,6 +1,6 @@
 # Imaging Workflow
 
-This page describes the MZmine workflow for non targeted feature detection in imaging datasets. The
+This page describes the mzmine workflow for non targeted feature detection in imaging datasets. The
 workflow is designed for MS imaging data and tested with matrix-assisted laser
 desorption/ionisation (MALDI)-MS data.
 
@@ -26,13 +26,10 @@ available to refine the data.
 Raw data is imported by a simple drag-and-drop gesture to the MS data files tab in the main window (
 see [Raw data import](../../module_docs/io/data-import.md). After the data import, noise must be
 filtered from the raw data via
-the [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md) module. Please not
-that this heavily impacts the performance of the whole workflow, since imaging spectra are usually
+the [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md) module. Please note that this heavily impacts the performance of the whole workflow, since imaging spectra are usually
 richer in information than LC-MS spectra. If you experience performance (e.g., RAM issues), consider
-using a higher cutoff. IMS-MS imaging data sets require mass detection on
-the [Frame](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames)
-and [mobility scan](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames)
-level.
+using a higher cutoff. IMS-MS imaging data sets require mass detection on the [Frame](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames)
+and [mobility scan](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames) level.
 
 ## Feature detection
 
@@ -41,8 +38,19 @@ the [Image builder](../../module_docs/imaging_featdet/featdet_image_builder/imag
 
 When working with IMS-MS imaging datasets, the ion mobility dimension should be added by
 the [IMS expander](../../module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.md)
-subsequent to the image detection. After expanding, the IMS dimension must
+after the image detection. After expanding, the IMS dimension must
 be [resolved](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#resolving-the-ion-mobility-dimension).
+
+## Isotope pattern and annotation
+
+Isotope filtering, pattern finding, and feature annotation can be performed analog as described in the [LC-MS workflow](../lcmsworkflow/lcms-workflow.md). 
+!!! warning
+
+    Tools, such as spectral library matching require MS2 spectra. Make sure yoour imaging data was acquired with MS/MS experiments.
+
+## Co-localization
+
+Find co-located molecules using the [Image co-localization module](../../module_docs/group_imagecorrelate/image-colocalization.md).  
 
 ## LC-Image aligner
 
@@ -51,7 +59,9 @@ If an LC-MS dataset was acquired for the imaging sample, the results can be alig
 the [LC-Image Aligner](../../module_docs/align_lc-image/align_lc-image.md). This allows integration
 of the two datasets and can be used for more confident identifications in imaging experiments. (
 see https://www.nature.com/articles/s41587-023-01690-2)
-<!-- markdown-link-check-ensable -->
+<!-- markdown-link-check-enable -->
+
+![workflow-image](mzmine_workflows_4_integrative_MALDI.png)
 
 ## Feature filtering
 
@@ -61,8 +71,5 @@ the [Rows filter](../../module_docs/feature_list_row_filter/feature_list_rows_fi
 filters are found in the  :material-menu-open: **Feature list methods → Feature filtering** menu.
 When using the deisotoping modules, consider that there is no chromatographic separation.
 
-## Additional tools
-
-Find co-located molecules using the [Image co-localization module](../../module_docs/group_imagecorrelate/image-colocalization.md).  
 
 {{ git_page_authors }}
