@@ -106,7 +106,7 @@ A simple gap-filling approach is to integrate the area where the peak is expecte
 The other alternative for gap filling is the [Same RT and m/z range gap filler](../module_docs/gapfill_same_mz_and_RT_range/same_mz_and_RT_range_gap_filler.md), which limits the gap fill to features within the original detected peak window. This leads to much cleaner results. 
 :warning: However, this module causes MISSING VALUE IMPUTATION. For purposes of further data processing, noise should be always preferred to zero values.
 
-:material-lightbulb: MZmine 3 does not support missing-value imputation.
+:material-lightbulb: mzmine does not support missing-value imputation.
 
 # **MZmine-specific terminology**
 

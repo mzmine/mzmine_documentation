@@ -101,7 +101,7 @@ feature intensities from the LC-IMS-MS workflow might not exactly match the fram
 to summing being executed prior to thresholding (for native Bruker data). Furthermore, multiple
 isomers might hide behind a single chromatographic peak.
 
-- [Data import](../../module_docs/io/data-import.md#lc-ims-ms-data)
+- [Data import](../../module_docs/io/data-import.md#ms-data)
 - [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
 - [Ion mobility trace builder](../../module_docs/lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md)
 - [Smoothing in retention time dimension (optional)](../../module_docs/featdet_smoothing/smoothing.md)
