@@ -183,6 +183,9 @@ extra_css:
 theme:
   name: material
   logo: img/mzmine_logo_white.png
+  palette:
+    scheme: default
+    primary: custom
 
 plugins:
   - search
