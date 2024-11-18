@@ -56,7 +56,7 @@ module
 is a mandatory step, if the data was imported from an .mzML file (automatically generated via native
 Bruker import).
 
-- [Data import](../../module_docs/io/data-import.md#lc-ims-ms-data)
+- [Data import](../../module_docs/io/data-import.md#ms-data)
 - [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
 - [Mobility scan merging](../../module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md) (
   mzML
