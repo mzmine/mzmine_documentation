@@ -5,6 +5,12 @@ you can use the **Import MS data** module.
 
 ![draganddrop.png](draganddrop.png)
 
+!!! info
+
+    mzmine can use MSConvert for raw data conversion automatically. Make sure to setup the MSConvert installation path in the mzmine preferences.
+
+![MSConvert_settings](../../MSConvert_settings.png)
+
 ## **MS data**
 
 ### **Description**
