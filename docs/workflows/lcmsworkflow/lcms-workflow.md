@@ -9,7 +9,7 @@ The magenta steps only refer to ion mobility data processing and are omitted her
 The raw data processing consists of essentially two steps: [Data import](../../module_docs/io/data-import.md#ms-data) and [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
   
 ### Raw data import
-Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in mzmine. All the supported formats can be found [here](../../module_docs/io/data-import.md#lc-ms-data).
+Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in mzmine. All the supported formats can be found [here](../../module_docs/io/data-import.md#ms-data).
 
 ### Mass detection
 This step produces a list (referred to as "mass list") of the m/z values found in each MS scan across the LC run that exceed a user-defined threshold (i.e. noise level). For more details see the [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md) module.
