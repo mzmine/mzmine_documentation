@@ -601,6 +601,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/workflows/gcmsworkflow/gcms-workflow.html</loc>
+         <lastmod>2024-11-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/workflows/imagingworkflow/imaging-workflow.html</loc>
          <lastmod>2024-11-18</lastmod>
          <changefreq>daily</changefreq>

@@ -3259,6 +3259,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../gcmsworkflow/gcms-workflow.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Untargeted GC-MS workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../imagingworkflow/imaging-workflow.html" class="md-nav__link">
         
   
@@ -4008,14 +4028,14 @@ The magenta steps only refer to ion mobility data processing and are omitted her
 <h2 id="raw-data-processing">Raw data processing<a class="headerlink" href="#raw-data-processing" title="Permanent link">&para;</a></h2>
 <p>The raw data processing consists of essentially two steps: <a href="../../module_docs/io/data-import.html#ms-data">Data import</a> and <a href="../../module_docs/featdet_mass_detection/mass-detection.html">Mass detection</a></p>
 <h3 id="raw-data-import">Raw data import<a class="headerlink" href="#raw-data-import" title="Permanent link">&para;</a></h3>
-<p>Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in MZmine 3. All the supported formats are listed here (LINK to Doc). For more details see the <a href="../../module_docs/io/data-import.html#ms-data">Data import</a> module.</p>
+<p>Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in mzmine. All the supported formats can be found <a href="../../module_docs/io/data-import.html#ms-data">here</a>.</p>
 <h3 id="mass-detection">Mass detection<a class="headerlink" href="#mass-detection" title="Permanent link">&para;</a></h3>
 <p>This step produces a list (referred to as "mass list") of the m/z values found in each MS scan across the LC run that exceed a user-defined threshold (i.e. noise level). For more details see the <a href="../../module_docs/featdet_mass_detection/mass-detection.html">Mass detection</a> module.</p>
 <h2 id="feature-processing">Feature processing<a class="headerlink" href="#feature-processing" title="Permanent link">&para;</a></h2>
 <p>The goal of the "Feature processing" is to obtain a list of all the detected features (characterized by a RT and m/z value) from the raw LC-MS data.</p>
 <h3 id="chromatogram-building">Chromatogram building<a class="headerlink" href="#chromatogram-building" title="Permanent link">&para;</a></h3>
 <p>The first step in the "Feature processing" is to build the so-called extracted ion chromatograms (EICs) for each detected mass (see "Mass detection").
-There are two modules in MZmine 3 that can fulfil this task: <a href="../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP chromatogram builder</a> (widely used) and <strong>Grid mass</strong> (create docs).</p>
+For this, use the <a href="../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">Chromatogram builder</a> module.</p>
 <p>The "detected" features in each ﬁle are listed in the so-called "feature lists", which are then further processed and aligned to connect corresponding features across all samples.</p>
 <h3 id="smoothing-in-retention-time-dimension-optional">Smoothing in retention time dimension (optional)<a class="headerlink" href="#smoothing-in-retention-time-dimension-optional" title="Permanent link">&para;</a></h3>
 <p>Depending on the LC peak shape (i.e. data noisiness), the user can perform smoothing in retention time dimension. 
@@ -4042,20 +4062,20 @@ For more information, see the <a href="../../module_docs/align_join_aligner/join
 <p>Gap-filling can be performed on the aligned feature lists to cope with missing features that might be artifacts of the feature-detection process. For more details see the <a href="../../module_docs/gapfill_peak_finder/gap-filling.html">Gap-filling (peak finder)</a> module.</p>
 <h2 id="export">Export<a class="headerlink" href="#export" title="Permanent link">&para;</a></h2>
 <p>Depending on the downstream analyses, there are several export options which are accessible through <strong>Feature list methods</strong> → <strong>Export feature list</strong>.</p>
-<p>For GNPS-Feature based molecular networking, see <a href="../../module_docs/io/data-exchange-with-other-software.html#gnps-fbmniimn-export">GNPS-FBMN</a> or apply molecular networking directly in mzmine <a href="../../module_docs/group_spectral_net/molecular_networking.html">molecular_networking.md</a></p>
+<p>For GNPS-Feature based molecular networking, see <a href="../../module_docs/io/data-exchange-with-other-software.html#gnps-fbmniimn-export">GNPS-FBMN</a> or apply Interactive Molecular Networking directly in mzmine <a href="../../module_docs/group_spectral_net/molecular_networking.html">molecular_networking.md</a></p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <p>Karaman, I.; Climaco Pinto, R.; Graça, G. Chapter Eight - Metabolomics Data Preprocessing: From Raw Data to Features for Statistical Analysis. In Comprehensive Analytical Chemistry; Jaumot, J., Bedia, C., Tauler, R., Eds.; Elsevier, 2018; Vol. 82, pp 197–225.</p>
 <p>Pluskal, T.; Korf, A.; Smirnov, A.; Schmid, R.; Fallon, T. R.; Du, X.; Weng, J.-K. CHAPTER 7:Metabolomics Data Analysis Using MZmine. In Processing Metabolomics and Proteomics Data with Open Software; 2020; pp 232–254.</p>
 <p>Du, X.; Smirnov, A.; Pluskal, T.; Jia, W.; Sumner, S. Metabolomics Data Preprocessing Using ADAP and MZmine 2. In Computational Methods and Data Analysis for Metabolomics; Li, S., Ed.; Springer US: New York, NY, 2020; pp 25–48.</p>
 <h2 id="page-contributors">Page Contributors<a class="headerlink" href="#page-contributors" title="Permanent link">&para;</a></h2>
-<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:98109751+lalalana5@users.noreply.github.com'>lalalana5</a>, <a href='mailto:lana.mutabdzija@gmail.com'>lalalana5</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:98109751+lalalana5@users.noreply.github.com'>lalalana5</a>, <a href='mailto:lana.mutabdzija@gmail.com'>lalalana5</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 18, 2024 09:37:59</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 18, 2024 14:47:45</span>
       
     
   </small>
