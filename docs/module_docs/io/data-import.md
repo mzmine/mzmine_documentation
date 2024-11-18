@@ -1,51 +1,68 @@
 # **Data import**
 
-You can simply drag & drop the raw data into the raw data list of the main window. Alternatively,
-more options are listed below.
+You can simply drag & drop the raw data into the MS data files tab of the main window. Alternatively,
+you can use the **Import MS data** module.
 
 ![draganddrop.png](draganddrop.png)
 
-## **LC-MS data**
+## **MS data**
 
 ### **Description**
 
-Raw data can be imported via :material-menu-open: **Raw data methods → Raw data import**. Select the data format and browse
-the files to import.
-
-![grafik](https://user-images.githubusercontent.com/37407705/136391465-c61eece6-0720-459f-8b2b-511021d7a058.png)
-
-With another option, multiple data files/folders can be selected with the :material-menu-open: **Raw data methods → Raw data import → MS data (advanced)** dialog. 
-In the dialog box, click **From folder** or choose the preferred data format (All*.) and browse the desired directory. All data files stored therein will be imported.
-The enabled option **in sub folders** searches all files in the whole subdirectory tree.
-
-If individual modules are used, folder based formats can only be imported as one folder at a time. 
-
-:material-lightbulb: When processing very large datasets, e.g., hundreds to thousands of data files, the mass detection
-can be run during the import. All signals below the specified noise level are not imported (altering the raw data on the import) thus saving memory and processing time.
-Therefore, use the **Raw data methods → Raw data import → MS data (advanced)** dialog, and tick the **Advanced import** checkbox
-and set the mass detection parameters as described in the Mass detection section. The noise level needs to be known
-in advance.
+Raw data can be imported via :material-menu-open: **Raw data methods → Import MS data**.
 
 ![ms_data_advanced](ms_data_advanced_import.png)
 
-![grafik](https://user-images.githubusercontent.com/37407705/136391336-5722d04c-91c0-4c77-88db-00325e8ff41b.png) 
+### **File names**
 
-[//]: # (TODO Add images not in German)
+Click **Select files** or choose the preferred data format (All*.) and browse the desired directory. All data files stored therein will be imported.
+The enabled option **in sub folders** searches all files in the whole subdirectory tree.
 
-## **LC-IMS-MS data**
+### **Advanced import**
 
-As any other data format, ion mobility data can be imported via :material-menu-open:**Raw data methods →
-Raw data import**. 
+#### **Scan filter**
+You can set up the scan filter to reduce the overall data. Options include e.g. polarity, or retention time range.
 
-Note that multiple .tdf data folders can be dropped into the
-**MS data (advanced)** dialog. The Bruker TDF import can only select a single folder. 
+#### **Crop MS1 m/z**
+You can filter for a specified m/z range.
 
-:material-lightbulb: When using the **MS data (advanced)** dialog, inexperienced users should deactivate the direct mass detection steps, since they alter the raw data on the import. Mass detection is then performend, when the
-scans are loaded and only peaks above the noise level are imported.
+#### **MS1 detector and MS2 detector**
+!!! tip
 
-Alternatively, you can simply drag & drop the raw data into the raw data list of the main window.
+    When processing very large datasets (hundreds to thousands of data files), the mass detection
+    can be run during the import. All signals below the specified noise level are not imported (altering the raw data on the import), thus saving memory and processing time.
 
-![grafik](https://user-images.githubusercontent.com/37407705/136391336-5722d04c-91c0-4c77-88db-00325e8ff41b.png)
-![grafik](https://user-images.githubusercontent.com/37407705/136391465-c61eece6-0720-459f-8b2b-511021d7a058.png)
+Set the mass detection parameters as described in the Mass detection section. 
+
+!!! warning
+
+    While it is slightly more efficient to do this during data import, only the processed data is stored
+    and the unprocessed data is discarded. Only use this method if you have tested that the final
+    results are the same, compared to splitting the data import and mass detection into two separate
+    steps.
+
+!!! caution
+
+    If you use a mzbatch file created by the mzwizard, make sure to remove the mass detection steps if you apply MS1 and MS2 detection during the import.
+
+#### **Denormalize fragment scans (traps)**
+This option denormalizes scans with MS level > 1, acquired with trap instruments, including Orbitrap or trapped ion mobility spectrometry (TIMS).
+When enabled, each scan is multiplied with the injection time resulting in "raw" intensities. If the injection time is missing in the data file, the scans remain unprocessed.
+This option is encouraged before spectral merging to reduce the intensity differences between scans acquired with different injection times.
+
+### **Metadata file**
+Select this option,if you have a .csv of .tsv file with your metadata. If you need a template it is recommended to import all your raw data files into mzmine and then navigate to
+:material-menu-open: **Project → Sample metadata**. Select the export button in the bottom toolbar. The **Format** *mzmine internal* is recommended.
+
+### **Sort and color**
+!!! warning
+
+    This option requires metadata
+
+If selected, the raw data will be colored based on *sample_type*, which covers **blank**, **QC**, and **sample**.
+
+### **Spectral library files**
+Select all spectral library files you want to import.
+
 
 {{ git_page_authors }}
