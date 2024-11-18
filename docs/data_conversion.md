@@ -1,6 +1,6 @@
 # Data handling (supported formats)
 
-MZmine supports both **open** (e.g., .mzML, .mzXML, .imzML, .netCDF, and .aird) and **proprietary**
+mzmine supports both **open** (e.g., .mzML, .mzXML, .imzML, .netCDF, and .aird) and **proprietary**
 formats from
 Thermo Scientific .raw, and Bruker Daltonics .d and .tdf/tsf. All other raw data files from other
 vendors must be converted into an open format prior to the import. Therefore, a vendor-provided or
@@ -15,6 +15,12 @@ to .imzML, except for the timsTOF fleX MS imaging data.
 ## Data conversion to open formats (.mzML / .imzML)
 
 ### MSConvert (ProteoWizard) to mzML
+
+!!! info
+
+    mzmine can use MSConvert automatically. Make sure to setup the MSConvert installation path in the mzmine preferences.
+
+![MSConvert_settings](MSConvert_settings.png)
 
 MSConvert supports the conversion of AB SCIEX, Agilent, Bruker, Shimadzu, Thermo Scientific,
 and [Waters](data_conversion.md#waters) raw data. More information about the formats can be found in
@@ -77,7 +83,7 @@ More details can be found on [GitHub](https://github.com/compomics/ThermoRawFile
 
 For Bruker recalibrated data, it is recommended to perform **export analysis to mzXML** using the
 Bruker's Data Analysis software (for automation, apply Bruker’s processing script during data
-acquisition) prior to importing to MZmine. Compared to the mzML and mzData formats, the mzXML format
+acquisition) prior to importing to mzmine. Compared to the mzML and mzData formats, the mzXML format
 best retains the full scan definition and sample recalibration properties. In mzML the MS1 scans
 were recalibrated but the MS2 scan definition of the precursor _m/z_ did stay unchanged, leading to
 differences between MS1 and MS2.
@@ -122,17 +128,17 @@ When publishing, the following information should be added in the method/data av
   Best if
   already stored within the data repository.
 
-+ MZmine Version
++ mzmine Version
 
-  The MZmine version, for example MZmine 3.3.0, that was used for processing the data and describes
+  The mzmine version, for example mzmine 4.3.0, that was used for processing the data and describes
   the major.minor.patch
-  version. Stable releases are provided through GitHub permanently. In contrast, the MZmine
-  developement versions
+  version. Stable releases are provided through GitHub permanently. In contrast, the mzmine
+  development versions
   are not permanently available. When using such a version for a publication either make sure the
   results are the same
   with the previous or next release, or upload and provide a link to the version on a permanent
   storage.
-+ MZmine batch file
++ mzmine .mzbatch file
 
   This batch contains all parameters of the processing. Starting with MZmine 3.4.0, batch files also
   contain information
@@ -146,7 +152,7 @@ When publishing, the following information should be added in the method/data av
   These files, e.g., feature lists or .mgf files, can be used for direct statistical (re-)analysis
   and spectral
   (re-)annotations.
-+ MZmine project file
++ mzmine project file
 
   Although this file can be very large, sharing it remains the best approach to make your data 100%
   FAIR.
