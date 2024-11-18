@@ -4,6 +4,10 @@
 .md-typeset h4,
 .md-typeset h5,
 .md-typeset h6 {
-    color: #335183;
+    color: #0072b2;
     font-weight: bold;
 }
+.md-header {
+    background-color: #0072b2;
+}
+
