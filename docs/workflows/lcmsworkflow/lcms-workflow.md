@@ -6,13 +6,13 @@ The magenta steps only refer to ion mobility data processing and are omitted her
 
 
 ## Raw data processing
-The raw data processing consists of essentially two steps: [Data import](../../module_docs/io/data-import.md#lc-ms-data) and [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
+The raw data processing consists of essentially two steps: [Data import](../../module_docs/io/data-import.md#ms-data) and [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
   
 ### Raw data import
-Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in MZmine 3. All the supported formats are listed here (LINK to Doc). For more details see the [Data import](../../module_docs/io/data-import.md#lc-ms-data) module.
+Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in MZmine 3. All the supported formats are listed here (LINK to Doc). For more details see the [Data import](../../module_docs/io/data-import.md#ms-data) module.
 
 ### Mass detection
-This step produces a list (referred to as "mass list") of the m/z values found in each MS scan across the LC run that exceed a user-defined threeshold (i.e. noise level). For more details see the [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md) module.
+This step produces a list (referred to as "mass list") of the m/z values found in each MS scan across the LC run that exceed a user-defined threshold (i.e. noise level). For more details see the [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md) module.
 
 ## Feature processing
 The goal of the "Feature processing" is to obtain a list of all the detected features (characterized by a RT and m/z value) from the raw LC-MS data.
