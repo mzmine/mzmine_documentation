@@ -53,9 +53,9 @@ mzmine will create multiple temporary files at various times of the processing s
 importing spectral data, running mass detection, or creating feature lists. These files will be
 stored in a folder that can be specified in the preferences.
 
-We recommend putting this folder on an SSD drive, ideally an M.2 for the best performance. The
-temporary files will be deleted when mzmine is closed (Mac & Linux) or when a new session is
-started (Windows).
+We recommend putting this folder on an SSD drive, ideally an M.2 for the best performance. Until version < 4.3 the
+temporary files were deleted when mzmine was closed (Mac & Linux) or when a new session is
+started (Windows). With mzmine version 4.3 > temporary files are deleted as soon as possible.
 
 ![tempdir](img/performance_param.png){: style="width:500px"}
 
