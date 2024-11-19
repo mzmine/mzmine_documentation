@@ -1,4 +1,6 @@
 # Citations
-How to cite different parts of MZmine: Workflows, tools, etc.
+How to cite different parts of mzmine: Workflows, tools, etc.
+
+
 
 

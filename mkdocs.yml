@@ -16,7 +16,7 @@ nav:
   - Performance options: performance.md
   - Command line tool (batch mode): commandline_tool.md
   - Integration to other tools: tool_integration.md
-  - Citations: citations.md
+#  - Citations: citations.md
 
   - Processing modules:
       - I/O:
