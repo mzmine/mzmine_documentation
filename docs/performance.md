@@ -6,7 +6,7 @@ This section contains information on how to tune mzmine for different systems. G
 - Make sure to set the **temporary** files directory to a **fast local drive**, e.g., SSD
 - [Convert files](data_conversion.md) to centroided open formats, e.g., mzML 
 - Run mzmine in **headless mode** as a [command-line tool](commandline_tool.md) to avoid the graphical-user interface (GUI). Just provide an .mzbatch file and process on any computer or server.
-- Use the **advance data import** to reduce the amount of data that needs to be loaded. This will apply mass detection [during the import](../../mzmine_documentation/docs/module_docs/io/data-import.md).
+- Use the **advance data import** to reduce the amount of data that needs to be loaded. This will apply mass detection during the import.
 - Optimize your mzmine workflow in the batch mode, considering your data and study design:
     - Increase minimum feature height, noise levels, and other feature constraints. If a feature was detected in at least one sample - gap-filling will try to fill the gaps of missed features later.
     - Use **Join aligner** and **Peak finder (multithreaded)** gap-filling for large datasets. Both modules are optimized for performance.
@@ -20,7 +20,7 @@ This section contains information on how to tune mzmine for different systems. G
 The advanced data import provides the option to apply mass detection during import and only 
 loading those filtered mass spectra. This is a great way to reduce the need for memory 
 mapping of raw spectra that are not used in most workflows (most use the masslists detected 
-by [Mass detection](../../mzmine_documentation/docs/module_docs/featdet_mass_detection/mass-detection.md) step as a filtered centroid version of spectra).
+by Mass detection step as a filtered centroid version of spectra).
 This option is great for large datasets and for profile mode data. 
 
 1. Open the Import MS data parameters
