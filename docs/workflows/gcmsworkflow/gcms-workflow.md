@@ -42,9 +42,6 @@ Feature alignment enables alignment of corresponding features across multiple sa
 This module aligns detected features in different samples through a match score. The score is calculated based on the retention time and spectral similarity of each feature. 
 For more information, see the [GC aligner](../../module_docs/align_gcei/align_gc_ei.md) module. 
 
-## Gap-filling 
-Absence of features in some samples can either reflect the truth - the metabolite is absent in the given sample, or it can be due to data preprocessing.To account for  this, gap filling is applied as the next step.
-
 ## Annotation, Filtering, Statistics and Export
 Depending on the downstream analyses, there are several options which are accessible through the **Feature list methods** menu. Annotate compounds using [spectral library search](../../module_docs/id_spectral_library_search/spectral_library_search.md),
 apply various filtering criteria, explore the results using the statistics dashboard, or export the results.
