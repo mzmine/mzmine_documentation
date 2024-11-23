@@ -1,10 +1,5 @@
 # Spectral / Molecular Networking
 
-!!! warning
-
-    Molecular networking in mzmine currently only supports fragmentation data with precursor m/z. 
-    Therefore, GC-EI-MS data will result in unpredictable results due to the missing precursor information.     
-
 :material-menu-open: **Feature list methods → Feature grouping → Spectral / Molecular Networking**
 
 !!! info
