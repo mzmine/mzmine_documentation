@@ -5,7 +5,7 @@
 
 This ADAP inspired method groups resolved features into pseudo spectra, representing deconvoluted GC-EI spectra. It clusters features based on retention time and other parameters to construct fragmentation spectra for analytes.
 
-info!!!
+info !!!
     
     This module requires resolved features. Run this module after feature resolving, e.g. Local Minimum Resolver.
 
