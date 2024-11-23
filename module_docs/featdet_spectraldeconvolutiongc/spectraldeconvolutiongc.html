@@ -4016,6 +4016,9 @@
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> Feature list methods → Spectral deconvolution (GC) → GC-EI spectral deconvolution</p>
 <p>This ADAP inspired method groups resolved features into pseudo spectra, representing deconvoluted GC-EI spectra. It clusters features based on retention time and other parameters to construct fragmentation spectra for analytes.</p>
+<p>info!!!</p>
+<pre><code>This module requires resolved features. Run this module after feature resolving, e.g. Local Minimum Resolver.
+</code></pre>
 <p>The following steps are performed depending on the selected Deconvolution algorithm:</p>
 <h3 id="deconvolution-algorithm-rt-grouping-and-shape-correlation">Deconvolution algorithm: rt grouping and shape correlation<a class="headerlink" href="#deconvolution-algorithm-rt-grouping-and-shape-correlation" title="Permanent link">&para;</a></h3>
 <p>All features are clustered based on their retention times. The user can specify the maximum retention time tolerance and the minimum number of signals in a pseudo spectrum.
@@ -4030,8 +4033,8 @@ If all features in a cluster pair fall within the specified RT tolerance, the cl
 References</p>
 <div class="admonition quote">
 <p class="admonition-title"> </p>
-</div>
 <p>Smirnov A, Jia W, Walker D, Jones D, Du X: ADAP-GC 3.2: Graphical Software Tool for Efficient Spectral Deconvolution of Gas Chromatography—High-Resolution Mass Spectrometry Metabolomics Data. J. Proteome Res 2017, DOI: <a>10.1021/acs.jproteome.7b00633</a></p>
+</div>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <h2 id="deconvolution-algorithm">Deconvolution algorithm<a class="headerlink" href="#deconvolution-algorithm" title="Permanent link">&para;</a></h2>
 <h3 id="rt-grouping-and-shape-correlation">rt grouping and shape correlation<a class="headerlink" href="#rt-grouping-and-shape-correlation" title="Permanent link">&para;</a></h3>
@@ -4064,7 +4067,7 @@ For example: 1-50, 73, 100.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 26, 2024 13:44:53</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 23, 2024 08:22:45</span>
       
     
   </small>
