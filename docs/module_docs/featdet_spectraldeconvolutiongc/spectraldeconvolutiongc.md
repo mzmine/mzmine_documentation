@@ -5,6 +5,10 @@
 
 This ADAP inspired method groups resolved features into pseudo spectra, representing deconvoluted GC-EI spectra. It clusters features based on retention time and other parameters to construct fragmentation spectra for analytes.
 
+info!!!
+    
+    This module requires resolved features. Run this module after feature resolving, e.g. Local Minimum Resolver.
+
 The following steps are performed depending on the selected Deconvolution algorithm:
 
 ### Deconvolution algorithm: rt grouping and shape correlation 
@@ -21,7 +25,7 @@ Also read:
 References
 !!! quote " "
  
-Smirnov A, Jia W, Walker D, Jones D, Du X: ADAP-GC 3.2: Graphical Software Tool for Efficient Spectral Deconvolution of Gas Chromatography—High-Resolution Mass Spectrometry Metabolomics Data. J. Proteome Res 2017, DOI: <a>10.1021/acs.jproteome.7b00633</a>
+    Smirnov A, Jia W, Walker D, Jones D, Du X: ADAP-GC 3.2: Graphical Software Tool for Efficient Spectral Deconvolution of Gas Chromatography—High-Resolution Mass Spectrometry Metabolomics Data. J. Proteome Res 2017, DOI: <a>10.1021/acs.jproteome.7b00633</a>
 
 ## Parameters
 
