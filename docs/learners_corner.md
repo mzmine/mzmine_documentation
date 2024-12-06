@@ -1,14 +1,16 @@
 ## Useful channels
-- [MZmine project](https://www.youtube.com/@mzmineproject/playlists)
+- [mzio YouTube channel](https://www.youtube.com/@mzioGmbH/playlists)
+- [mzmine project](https://www.youtube.com/@mzmineproject/playlists)
 - [Robin Schmid](https://www.youtube.com/@rschmid1789/playlists)
 - [Functional Metabolomics Lab with Daniel Petras](https://www.youtube.com/@functionalmetabolomics/playlists)
 - [Dorrestein lab](https://www.youtube.com/@dorresteinlab4428/videos)
 
 
-## MZmine videos
-- [MZmine at CMFI web seminars](https://www.youtube.com/watch?v=hk7WeXibReg&list=PLF2cWlaW-PCLzftyjWLOhEXEHCYtWUBND&index=2)
-- [MZmine at 2nd international summer school on non-targeted metabolomics 2022](https://www.youtube.com/watch?v=vJw3y0t_l3Q&list=PLF2cWlaW-PCLzftyjWLOhEXEHCYtWUBND&index=3)
-- [Coding with MZmine](https://www.youtube.com/watch?v=T02H4rwyCvk&list=PL4L2Xw5k8ITzQEq677w-UicporguCgAt3&index=1&t=658s)
+## mzmine videos
+- [mzmine at VMOL webinars](https://www.youtube.com/watch?v=UnqVtZngzl0&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=1)
+- [mzmine at CMFI webinars](https://www.youtube.com/watch?v=hk7WeXibReg&list=PLF2cWlaW-PCLzftyjWLOhEXEHCYtWUBND&index=2)
+- [mzmine at 2nd international summer school on non-targeted metabolomics 2022](https://www.youtube.com/watch?v=vJw3y0t_l3Q&list=PLF2cWlaW-PCLzftyjWLOhEXEHCYtWUBND&index=3)
+- [Coding with mzmine](https://www.youtube.com/watch?v=T02H4rwyCvk&list=PL4L2Xw5k8ITzQEq677w-UicporguCgAt3&index=1&t=658s)
 
 ## General Mass Spectrometry
 - [Mass spectrometry introduction by Corinna Brungs, Summer School Copenhagen, 2023](https://www.youtube.com/watch?v=rOkbRltKWQs&list=PL0JAF-4UFc8Oo6MMEnMI1HKgRTcM1-uHX&index=2)

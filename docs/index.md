@@ -20,7 +20,7 @@ Furthermore, mzmine allows generation of custom spectral libraries.
 
 ## Want to get started with mzmine?
 
-Check out our **[getting started](getting_started.md)** page or **[mzmine video tutorials on YouTube](https://www.youtube.com/watch?v=jUHd3Sj7x0M&list=PL7kvpfzg8JkV7XKBUUX0xxOJimiK1VCOg)**
+Check out our **[getting started](getting_started.md)** page or **[mzmine video tutorials on YouTube](https://www.youtube.com/watch?v=UnqVtZngzl0&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=1)** and [other videos](https://www.youtube.com/watch?v=jUHd3Sj7x0M&list=PL7kvpfzg8JkV7XKBUUX0xxOJimiK1VCOg).
 
 ![Youtube channel](Youtube_tutorials.png)
  
