@@ -113,6 +113,7 @@ nav:
           - Lipid annotation: module_docs/id_lipid_annotation/lipid-annotation.md
           - MS2 similarity search: module_docs/id_ms2_similarity/ms2-similarity-search.md
       - Other parameters:
+        - Merge & select fragment scans: module_docs/filter_scan_merge_select/scan_merge_select.md
         - Merge MS/MS: module_docs/io/merge_ms2_kai.md
         - Spectra similarity: module_docs/align_join_aligner/spectra_similarity.md
 
