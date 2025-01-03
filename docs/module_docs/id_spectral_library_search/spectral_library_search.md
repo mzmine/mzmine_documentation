@@ -49,14 +49,21 @@ Depending on the **MS level** (MS1 or MS2), all corresponding query scans (e.g.,
 The spectral libraries of interest need to be imported before applying spectral library search. 
 Either uses all imported spectral libraries or only the selected libraries.
 
-#### **Scans for matching**
+#### **Merge & select fragment scans**
 
-Choose the MS level of the scans that should be compared with the library and how to handle multiple spectra for one feature. 
-The option 'MS2 (merged)' merges all spectra of a feature into one scan,
-which reduces the amount of spectra for the matching. For matching all spectra individually, use the 'MS2 (all scans)' option.
-If multistep fragmentation was used, choose the MS level ≥ 2 and for GC-EI-MS 'MS1'. 
+This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis 
+(see [detailed description](../filter_scan_merge_select/scan_merge_select.md)). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options. 
 
-:warning: In case of issues with the scan selection, check how the actual scan numbers are reported in the data files and in MZmine's raw data overview.
+For spectral library matching mzmine recommends using the representative scans = one for each fragmentation energy and one merged across all.
+
+#### **MS level filter**
+
+Select MS2 for fragment spectra with precursor m/z.
+
+Select MS1 for GC-EI-MS spectra. 
+
+:warning: In case of issues with the scan selection, check how the actual scan numbers are reported in the data files and in mzmine's raw data overview.
 
 #### **Precursor m/z tolerance**
 

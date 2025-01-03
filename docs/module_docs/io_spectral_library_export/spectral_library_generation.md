@@ -33,16 +33,13 @@ Various information about the acquired data can be stored her. For example, who 
 which instrument was used, ect. On the description information about the compounds or library can be
 given. The Ion mode is only need, when the polarity is not safed in the data files. 
 
-#### **m/z tolerance (merging)**
+#### **Merge & select fragment scans**
 
-This is the m/z tolerance for grouping signals acquired by same or different collision energies or 
-fragmentation steps and to merge those spectra. For multistep fragmentation, pseudo MS2 spectra are generated that can be used for
-other tools that can handle MS2 data only. The merging information is stored in the corresponding 
-spectra as SPECTYPE:
-- SAME_ENERGY (multiple scans with same settings for same precursor)
-- ALL_ENERGIES (similar to stepped collision energy, when multiple energies are combined
-  into one scan during data acquisition)
-- ALL_MSN_TO_PSEUDO_MS2
+This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis
+(see [detailed description](../filter_scan_merge_select/scan_merge_select.md)). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options.
+
+For library generation, mzmine recommends the simple preset **Representative scans or MSn tree**.
 
 #### **Handle chimeric spectra**
 
