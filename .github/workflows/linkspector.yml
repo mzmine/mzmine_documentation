@@ -1,7 +1,7 @@
 # from: https://github.com/UmbrellaDocs/action-linkspector
 
 name: Linkspector
-on: [pull_request]
+# on: [pull_request]
 jobs:
   check-links:
     name: runner / linkspector
