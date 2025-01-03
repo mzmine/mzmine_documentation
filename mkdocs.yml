@@ -20,12 +20,13 @@ nav:
 
   - Processing modules:
       - I/O:
-          -  Raw data import: module_docs/io/data-import.md
-          -  Raw data export: module_docs/io/data-export.md
-          -  Feature list import: module_docs/io/feat-list-import.md
-          -  Feature list export: module_docs/io/feat-list-export.md
-          -  Export to other software: module_docs/io/data-exchange-with-other-software.md
-          -  Spectral library export: module_docs/io_spectral_library_export/spectral_library_generation.md
+        - Raw data import: module_docs/io/data-import.md
+        - Raw data export: module_docs/io/data-export.md
+        - Feature list import: module_docs/io/feat-list-import.md
+        - Feature list export: module_docs/io/feat-list-export.md
+        - Export to other software: module_docs/io/data-exchange-with-other-software.md
+        - Spectral library export: module_docs/io_spectral_library_export/spectral_library_generation.md
+        - Export scans (feature list): module_docs/io_scans_feature/export-scans-feature.md
 #         TODO Add feature list import/export
       - File merging:
         - Raw data files merging: module_docs/featdet_file_merging/raw-files-merging.md
