@@ -54,7 +54,7 @@ Options to apply intensity normalization to all signals. Scientific format is pr
 #### **Handle chimeric spectra**
 
 Score the isolation purity and handle chimeric precursor ion isolation. See full description of all parameters in
-[**Spectral library batch generation**](../io_spectral_library_export/spectral_library_generation.md#Chimeric-spectra).
+[**Spectral library batch generation**](../io_spectral_library_export/spectral_library_generation.md#handle-chimeric-spectra).
 
 #### **Merge & select fragment scans**
 
