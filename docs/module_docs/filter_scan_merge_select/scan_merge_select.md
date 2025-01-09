@@ -76,19 +76,19 @@ Select one or multiple options how to handle multiple samples:
 
 Options to disable merging and choose the input scans instead. This is either:
 
-1. The **Single most intense scan** - one scan with the highest total signal intensity across all
-   samples
-2. **All scans** - all input scans across all samples
+1. **Most intense scan across samples**: One scan per fragmentation energy across all samples with the highest summed intensity
+2. **Most intense scan per sample**: One scan per fragmentation energy for each sample with the highest summed intensity
+3. **All scans**: All input scans will be selected
 
 ### 4. Advanced
 
 This is the full setup with the highest flexibility. The advanced option allows to combine multiple
 different scan selections.
 
-#### Include scan types
+#### Merging options
 
 Select multiple options that will be combined with each other. Options include handling of multiple
-samples, fragmentation energies, input scans, and MS^n data.
+samples, fragmentation energies, and MS^n data.
 
 1. **Across samples** - Merging happens across all samples .
 2. **Each sample** - Merging happens for each sample separately and also across samples if selected.
@@ -96,12 +96,19 @@ samples, fragmentation energies, input scans, and MS^n data.
 4. **Each energy** - Merging happens for each fragmentation energy and also across energies if
    selected.
 5. **MS^n tree** - Merging happens for each MS^n tree node (precursor) - this option will be
-   combined with sample and energy handling.
-6. **MS^n to pseudo MS^2** - Merges all MS^n spectra into a single 'MS^2' spectrum.
-7. **Single most intense scan** - Selects the single most intense scan in each sample or across
-   samples, depending on the selection.
-8. **All input scans** - Selects all input scans without merging. Combined with the other options
-   this means that raw input scans and merged scans will be exported.
+   combined with sample and energy handling. This has no effect on MS^2 data.
+6. **MS^n to pseudo MS^2** - Merges all MS^n spectra into a single 'MS^2' spectrum. This has no effect on MS^2 data.
+
+#### Also include input scans
+
+Also include unmerged input scans into the final scan selection. This is from the "raw" or "source" scans that are input to the merging. 
+
+1. **Most intense scan across samples**: One scan per fragmentation energy across all samples with the highest summed intensity
+2. **Most intense scan per sample**: One scan per fragmentation energy for each sample with the highest summed intensity
+3. **All scans**: All input scans will be selected
+4. **None**: Select **no** input scan but rely only on merged scans. This requires merging to be active, by selecting valid **merging options**
+
+#### Examples
 
 **Example 1:** **Across samples + across energies**: This will produce a single scan that is merged
 across all scans of all energies and samples.
