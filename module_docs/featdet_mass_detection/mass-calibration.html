@@ -3959,7 +3959,11 @@
 <li>
 <p><strong>SCL-only parameters</strong></p>
 <p><em>Standard Calibrant Library file</em></p>
-<p>File with a list of ion formulas and retention times (xls, xlsx and csv files are supported). This list should contain ions that are expected to be detected in the samples. Files need to contain a first column with the retention time in minutes and a second column with the ion formula strings. Additional columns are optional. Sample standards list file:</p>
+<p>File with a list of ion formulas and retention times (xls, xlsx and csv (tab, comma or semicolon delimited files are supported). This list should contain ions that are expected to be detected in the samples. Files need to contain a first column with the retention time in minutes and a second column with the ionic formula strings. Optionally, column 3 is used as a name of the standard and column 4 is used the m/z. If only a mz but no name shall be provided, column 3 must exist, but be empty. All rows in the file must have the same length. Sample standards list file:
+  <div class="highlight"><pre><span></span><code>1.4,C3H7COO-,butyric acid,1337.1337
+1.4,C3H7COO-,,1337.1337
+1.4,C3H7COO-,,
+</code></pre></div></p>
 <p><em>Retention time tolerance (only for SCL)</em></p>
 <p>Maximum difference in retention time between an actual measured ion and a calibrant to consider a match.</p>
 </li>
@@ -4062,14 +4066,14 @@ With the estimation model we can shift/calibrate the mass peaks at different par
 <h2 id="examples"><strong>Examples</strong><a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p><img alt="Mass calibration example" src="mass-calibration-example.png" /></p>
 <p><code>This module was intially created during a GSoC 2020 project with MZmine by Łukasz Fiszer and MZmine team.</code></p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 21:13:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 14, 2025 09:19:53</span>
       
     
   </small>
