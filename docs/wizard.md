@@ -11,14 +11,14 @@ setup.
 :material-menu-open: **Processing wizard**
 
 !!! tip
-The mzwizard is split into sections, most importantly, the MS part and the sample introduction.
-Parameters here reflect the sensitivity, resolution, and accuracy of these parts of the hyphenation.
-Selecting one of the default presets actually populates the initial values.
+    The mzwizard is split into sections, most importantly, the MS part and the sample introduction.
+    Parameters here reflect the sensitivity, resolution, and accuracy of these parts of the hyphenation.
+    Selecting one of the default presets actually populates the initial values.
 
 !!! danger
-The defaults are only suggestions and different acquisition methods and instruments produce
-different noise levels etc. The **raw data overview** and **aligned feature lists** are useful to
-optimize these parameters.
+    The defaults are only suggestions and different acquisition methods and instruments produce
+    different noise levels etc. The **raw data overview** and **aligned feature lists** are useful to
+    optimize these parameters.
 
 ## mzwizard parameter tabs
 
@@ -31,7 +31,7 @@ Specify all data files that need to be processed
 ## [2] Sample introduction system
 
 !!! info
-Depends on the selected sampling system, e.g. **MALDI**, **HPLC**, **DESI**
+    Depends on the selected sampling system, e.g. **MALDI**, **HPLC**, **DESI**
 
 ### Chromatography-based
 
@@ -109,7 +109,7 @@ Influences batch steps:
 ### Imaging based
 
 !!! info
-Supported techniques: **MALDI**, **SIMS**, **DESI**, **LDI**
+    Supported techniques: **MALDI**, **SIMS**, **DESI**, **LDI**
 
 #### Minimum number of pixels
 
@@ -311,19 +311,19 @@ produces reference libraries with options to filter and merge spectra.
 
 #### Imaging
 !!! info
-This workflow is only available for the sampling techniques: **MALDI**, **LDI**, **DESI**, **SIMS**
+    This workflow is only available for the sampling techniques: **MALDI**, **LDI**, **DESI**, **SIMS**
 
 Select if you want to co-localize images.
 
 #### Target plate
 !!! info
-This workflow is only available for the sampling technique: **MALDI** (Bruker timsTOF only)
+    This workflow is only available for the sampling technique: **MALDI** (Bruker timsTOF only)
 
 Select if you want to co-localize images.
 
 #### Spectral deconvolution
 !!! info
-This workflow is only available for the sampling technique: **GC-EI** 
+    This workflow is only available for the sampling technique: **GC-EI** 
 
 Select the minimum number of signals in a deconvoluted spectrum
 
