@@ -34,8 +34,13 @@ Using this module, the user can export the feature list needed for the manual su
 #### **Filename**
 Name to be given to the output files (.MGF and .CSV). In this field, the user can either write the path where they want to save the file, or click "select", navigate into the desired output folder, write the output name in the "file name" field and click save. Once that is done, the path should be visible in the Filename field in the GNPS export module.
 
-#### **Merge MS/MS (experimental)**
-If checked, high quality MS/MS spectra that correspond to one feature are merged, instead of exporting only the most intense MS/MS spectrum. See [MS/MS merger](merge_ms2_kai.md) for additional information.
+#### **Merge & select fragment scans**
+
+This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis
+(see [detailed description](../filter_scan_merge_select/scan_merge_select.md)). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options.
+
+For GNPS export, mzmine recommends using the preset **Single scan: Merged across energies** as GNPS requires one MS2 per feature.
 
 #### **Filter rows**
 In the final output files, the user can select to export all the rows without any filters applied, rows only with MS/MS spectra, rows with MS/MS and Ion Identity (it gives MS/MS and the adduct information) and rows with MS/MS or Ion Identity. Normally, for FBMN you want to retain features with MS/MS spectra.
@@ -138,9 +143,13 @@ Name of the feature list(s) to be exported.
 #### **Filename**
 Base name for the output files
 
-#### **Merge MS/MS**
+#### Merge & select fragment scans
 
-Merge high qualitative MS/MS into one spectrum instead of exporting all MS/MS separately.
+This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis
+(see [detailed description](../filter_scan_merge_select/scan_merge_select.md)). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options.
+
+For SIRIUS handles merging internally, mzmine recommends exporting either **All input scans** or using a simple preset for merging in mzmine.
 
 #### **m/z tolerance**
 
