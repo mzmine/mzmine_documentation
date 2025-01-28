@@ -8,7 +8,7 @@
 
 Since Triple-Quadrupole MRM or SRM workflows typically produce one or more transition chromatograms 
 per compound instead of individual spectra, the data must be pre-processed to fit into the regular 
-mzmine workflow. This is achieved by the this module.
+mzmine workflow. This is achieved by this module.
 
 ![mrm_converted.png](mrm_converted.png)
 
