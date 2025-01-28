@@ -649,8 +649,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#merge-msms-experimental" class="md-nav__link">
-    Merge MS/MS (experimental)
+  <a href="#merge-select-fragment-scans" class="md-nav__link">
+    Merge &amp; select fragment scans
   </a>
   
 </li>
@@ -833,8 +833,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#merge-msms" class="md-nav__link">
-    Merge MS/MS
+  <a href="#merge-select-fragment-scans_1" class="md-nav__link">
+    Merge &amp; select fragment scans
   </a>
   
 </li>
@@ -985,6 +985,26 @@
   
   <span class="md-ellipsis">
     Spectral library export
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_scans_feature/export-scans-feature.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export scans (feature list)
   </span>
   
 
@@ -2914,11 +2934,11 @@
   
   
     <li class="md-nav__item">
-      <a href="merge_ms2_kai.html" class="md-nav__link">
+      <a href="../filter_scan_merge_select/scan_merge_select.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Merge MS/MS
+    Merge & select fragment scans
   </span>
   
 
@@ -4114,8 +4134,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#merge-msms-experimental" class="md-nav__link">
-    Merge MS/MS (experimental)
+  <a href="#merge-select-fragment-scans" class="md-nav__link">
+    Merge &amp; select fragment scans
   </a>
   
 </li>
@@ -4298,8 +4318,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#merge-msms" class="md-nav__link">
-    Merge MS/MS
+  <a href="#merge-select-fragment-scans_1" class="md-nav__link">
+    Merge &amp; select fragment scans
   </a>
   
 </li>
@@ -4470,8 +4490,11 @@
 <h3 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
 <h4 id="filename"><strong>Filename</strong><a class="headerlink" href="#filename" title="Permanent link">&para;</a></h4>
 <p>Name to be given to the output files (.MGF and .CSV). In this field, the user can either write the path where they want to save the file, or click "select", navigate into the desired output folder, write the output name in the "file name" field and click save. Once that is done, the path should be visible in the Filename field in the GNPS export module.</p>
-<h4 id="merge-msms-experimental"><strong>Merge MS/MS (experimental)</strong><a class="headerlink" href="#merge-msms-experimental" title="Permanent link">&para;</a></h4>
-<p>If checked, high quality MS/MS spectra that correspond to one feature are merged, instead of exporting only the most intense MS/MS spectrum. See <a href="merge_ms2_kai.html">MS/MS merger</a> for additional information.</p>
+<h4 id="merge-select-fragment-scans"><strong>Merge &amp; select fragment scans</strong><a class="headerlink" href="#merge-select-fragment-scans" title="Permanent link">&para;</a></h4>
+<p>This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis
+(see <a href="../filter_scan_merge_select/scan_merge_select.html">detailed description</a>). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options.</p>
+<p>For GNPS export, mzmine recommends using the preset <strong>Single scan: Merged across energies</strong> as GNPS requires one MS2 per feature.</p>
 <h4 id="filter-rows"><strong>Filter rows</strong><a class="headerlink" href="#filter-rows" title="Permanent link">&para;</a></h4>
 <p>In the final output files, the user can select to export all the rows without any filters applied, rows only with MS/MS spectra, rows with MS/MS and Ion Identity (it gives MS/MS and the adduct information) and rows with MS/MS or Ion Identity. Normally, for FBMN you want to retain features with MS/MS spectra.</p>
 <h4 id="feature-intensity"><strong>Feature intensity</strong><a class="headerlink" href="#feature-intensity" title="Permanent link">&para;</a></h4>
@@ -4553,8 +4576,11 @@ The input files uploaded to GNPS with the "Submit to GNPS" option are not saved 
 <p>Name of the feature list(s) to be exported.</p>
 <h4 id="filename_2"><strong>Filename</strong><a class="headerlink" href="#filename_2" title="Permanent link">&para;</a></h4>
 <p>Base name for the output files</p>
-<h4 id="merge-msms"><strong>Merge MS/MS</strong><a class="headerlink" href="#merge-msms" title="Permanent link">&para;</a></h4>
-<p>Merge high qualitative MS/MS into one spectrum instead of exporting all MS/MS separately.</p>
+<h4 id="merge-select-fragment-scans_1">Merge &amp; select fragment scans<a class="headerlink" href="#merge-select-fragment-scans_1" title="Permanent link">&para;</a></h4>
+<p>This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis
+(see <a href="../filter_scan_merge_select/scan_merge_select.html">detailed description</a>). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options.</p>
+<p>For SIRIUS handles merging internally, mzmine recommends exporting either <strong>All input scans</strong> or using a simple preset for merging in mzmine.</p>
 <h4 id="mz-tolerance"><strong>m/z tolerance</strong><a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
 <p>m/z tolerance to exclude duplicates in correlated spectrum.</p>
 <h4 id="renumber-ids"><strong>Renumber IDs</strong><a class="headerlink" href="#renumber-ids" title="Permanent link">&para;</a></h4>
@@ -4601,14 +4627,14 @@ The input files uploaded to GNPS with the "Submit to GNPS" option are not saved 
 <p>For details about MetaboAnalyst functions and capabilities, please refer to its documentation.</p>
 <h2 id="tidymass"><strong>Tidymass</strong><a class="headerlink" href="#tidymass" title="Permanent link">&para;</a></h2>
 <p>Tidymass can import the csv feature table from MZmine, using <code>convert_mzmine2mass_dataset</code> function. For more details see <a href="https://www.tidymass.org/docs/chapter2/3-mass_dataset_other_tools/">Tidymass tutorial</a>.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 27, 2023 09:22:16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 3, 2025 16:08:43</span>
       
     
   </small>

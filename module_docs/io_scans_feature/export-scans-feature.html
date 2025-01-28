@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/id_prec_online_db/online-cmpd-db-search.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/io_scans_feature/export-scans-feature.html">
       
       
+        <link rel="prev" href="../io_spectral_library_export/spectral_library_generation.html">
+      
+      
+        <link rel="next" href="../featdet_file_merging/raw-files-merging.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Online compound database search - mzmine documentation</title>
+        <title>Export scans (feature list) - mzmine documentation</title>
       
     
     
@@ -71,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#online-compound-database-search" class="md-skip">
+        <a href="#export-scans-feature-list" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Online compound database search
+              Export scans (feature list)
             
           </span>
         </div>
@@ -408,17 +412,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
@@ -431,7 +437,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Processing modules
@@ -442,17 +448,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" checked>
         
           <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
             
@@ -465,7 +473,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11_1">
             <span class="md-nav__icon md-icon"></span>
             I/O
@@ -596,9 +604,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../io_scans_feature/export-scans-feature.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Export scans (feature list)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="export-scans-feature.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -607,6 +635,142 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export-file" class="md-nav__link">
+    Export file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-format" class="md-nav__link">
+    Export format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-wide-metadata" class="md-nav__link">
+    Sample wide metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skip-annotated-features" class="md-nav__link">
+    Skip annotated features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-ms1" class="md-nav__link">
+    Export MS1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intensity-normalization" class="md-nav__link">
+    Intensity normalization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-fragment-scans" class="md-nav__link">
+    Export fragment scans
+  </a>
+  
+    <nav class="md-nav" aria-label="Export fragment scans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handle-chimeric-spectra" class="md-nav__link">
+    Handle chimeric spectra
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-select-fragment-scans" class="md-nav__link">
+    Merge &amp; select fragment scans
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-signals" class="md-nav__link">
+    Minimum signals
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    Advanced
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compact-usi" class="md-nav__link">
+    Compact USI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3695,13 +3859,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     Parameters
   </a>
@@ -3710,44 +3867,105 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#database" class="md-nav__link">
-    Database
+  <a href="#export-file" class="md-nav__link">
+    Export file
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ionization-type" class="md-nav__link">
-    Ionization type
+  <a href="#export-format" class="md-nav__link">
+    Export format
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#number-of-results" class="md-nav__link">
-    Number of results
+  <a href="#metadata" class="md-nav__link">
+    Metadata
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mz-tolerance" class="md-nav__link">
-    m/z tolerance
+  <a href="#sample-wide-metadata" class="md-nav__link">
+    Sample wide metadata
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#isotope-pattern-filter" class="md-nav__link">
-    Isotope pattern filter
+  <a href="#skip-annotated-features" class="md-nav__link">
+    Skip annotated features
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#currently-supported-databases" class="md-nav__link">
-    Currently supported databases
+  <a href="#export-ms1" class="md-nav__link">
+    Export MS1
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intensity-normalization" class="md-nav__link">
+    Intensity normalization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-fragment-scans" class="md-nav__link">
+    Export fragment scans
+  </a>
+  
+    <nav class="md-nav" aria-label="Export fragment scans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handle-chimeric-spectra" class="md-nav__link">
+    Handle chimeric spectra
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-select-fragment-scans" class="md-nav__link">
+    Merge &amp; select fragment scans
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-signals" class="md-nav__link">
+    Minimum signals
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    Advanced
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compact-usi" class="md-nav__link">
+    Compact USI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3774,71 +3992,63 @@
   
 
 
-<h1 id="online-compound-database-search"><strong>Online compound database search</strong><a class="headerlink" href="#online-compound-database-search" title="Permanent link">&para;</a></h1>
-<p><strong>Module is currently removed and no longer maintained.</strong></p>
-<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f6a7.svg" title=":construction:" /> This module has known bugs and is being updated, which might affect its functionality</p>
-<h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Feature list methods → Annotation → Search precursor mass → Online compound database search</strong></p>
-<p>This module allows identification of peaks or whole peak lists using an on-line compound database. Databases are queried for the calculated neutral mass of the peak and matching compounds are returned.</p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> If a user is interested in more comprehensive online compound database search, they can export their data to <a href="https://bio.informatik.uni-jena.de/software/sirius/">Sirius</a> software. </p>
-<h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h4 id="database"><strong>Database</strong><a class="headerlink" href="#database" title="Permanent link">&para;</a></h4>
-<p>On-line database to search (<a href="#currently-supported-databases">list of the available databases</a>).</p>
-<h4 id="ionization-type"><strong>Ionization type</strong><a class="headerlink" href="#ionization-type" title="Permanent link">&para;</a></h4>
-<p>Type of ionization that produced the peak subjected to identification. </p>
-<h4 id="number-of-results"><strong>Number of results</strong><a class="headerlink" href="#number-of-results" title="Permanent link">&para;</a></h4>
-<p>Limit for the number of results to be retrieved from the on-line database.</p>
-<h4 id="mz-tolerance"><strong>m/z tolerance</strong><a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum allowed m/z difference to set an identification to a peak.</p>
-<h4 id="isotope-pattern-filter"><strong>Isotope pattern filter</strong><a class="headerlink" href="#isotope-pattern-filter" title="Permanent link">&para;</a></h4>
-<p>If selected, only results which fit the required isotope pattern similarity score will be returned.</p>
-<h3 id="currently-supported-databases"><strong>Currently supported databases</strong><a class="headerlink" href="#currently-supported-databases" title="Permanent link">&para;</a></h3>
-<p>Supported databases are listed below. Support for other databases may be implemented as additional plugins.</p>
-<!-- markdown-link-check-disable -->
+<h1 id="export-scans-feature-list">Export scans (feature list)<a class="headerlink" href="#export-scans-feature-list" title="Permanent link">&para;</a></h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Feature list methods → Export feature lists → Export scans (feature list)</strong> </p>
+<p>A module to export spectra in different formats like mgf, msp, json (mzmine) with many options to customize the scan selection and output.
+One application of this module is to export fragment scans merged on various levels. 
+Furthermore, this module allows to generate "blank" or "sample" libraries of unknown spectra with added identifiers from sample wide metadata.</p>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h4 id="export-file"><strong>Export file</strong><a class="headerlink" href="#export-file" title="Permanent link">&para;</a></h4>
+<p>The path and name of the exported spectra.</p>
+<h4 id="export-format"><strong>Export format</strong><a class="headerlink" href="#export-format" title="Permanent link">&para;</a></h4>
+<p>Here, you can set the export format. It mostly depends on your next steps and where to import the
+library. Every format works, but we recommend the .json format.</p>
+<h4 id="metadata"><strong>Metadata</strong><a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h4>
+<p>Various information about the acquired data can be stored her. For example, who acquired the data,
+which instrument was used, ect. On the description information about the compounds or library can be
+given. The Ion mode is only need, when the polarity is not safed in the data files.</p>
+<h4 id="sample-wide-metadata"><strong>Sample wide metadata</strong><a class="headerlink" href="#sample-wide-metadata" title="Permanent link">&para;</a></h4>
+<p>This is metadata that is imported as project metadata for each sample, usually from a tsv or csv table.
+This parameter allows to map the values from specific columns to all scans of these samples. So if a spectrum was merged from two samples, 
+the compound name or entry description will contain the values from all source samples. </p>
+<p>This option was added to allow for <strong>blank libraries</strong> or <strong>sample libraries</strong>. Measure various blanks like 
+"well plate, manufacturer XY" and load this information as sample metadata. Then define the column to be used as compound name or description 
+to export all scans from this sample labelled as potentially originating from this blank.</p>
+<h4 id="skip-annotated-features"><strong>Skip annotated features</strong><a class="headerlink" href="#skip-annotated-features" title="Permanent link">&para;</a></h4>
+<p>If true, annotated features will be skipped and only "unknown" features will be exported. 
+This is useful when all annotated features were already exported by the 
+<a href="../io_spectral_library_export/spectral_library_generation.html"><strong>Spectral library batch generation</strong></a>. </p>
+<h4 id="export-ms1"><strong>Export MS1</strong><a class="headerlink" href="#export-ms1" title="Permanent link">&para;</a></h4>
+<p>Option to export MS1 scans, either the most intense MS1 across all samples or a correlated MS1 of isotopologue and adduct signals.
+The MS1 data may be exported together with fragment scans or into a separate file. </p>
+<h4 id="intensity-normalization"><strong>Intensity normalization</strong><a class="headerlink" href="#intensity-normalization" title="Permanent link">&para;</a></h4>
+<p>Options to apply intensity normalization to all signals. Scientific format is preferred as it best accounts for many orders of magnitude.</p>
+<h3 id="export-fragment-scans"><strong>Export fragment scans</strong><a class="headerlink" href="#export-fragment-scans" title="Permanent link">&para;</a></h3>
+<h4 id="handle-chimeric-spectra"><strong>Handle chimeric spectra</strong><a class="headerlink" href="#handle-chimeric-spectra" title="Permanent link">&para;</a></h4>
+<p>Score the isolation purity and handle chimeric precursor ion isolation. See full description of all parameters in
+<a href="../io_spectral_library_export/spectral_library_generation.html#handle-chimeric-spectra"><strong>Spectral library batch generation</strong></a>.</p>
+<h4 id="merge-select-fragment-scans"><strong>Merge &amp; select fragment scans</strong><a class="headerlink" href="#merge-select-fragment-scans" title="Permanent link">&para;</a></h4>
+<p>This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis
+(see <a href="../filter_scan_merge_select/scan_merge_select.html">detailed description</a>). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options.</p>
+<h4 id="minimum-signals"><strong>Minimum signals</strong><a class="headerlink" href="#minimum-signals" title="Permanent link">&para;</a></h4>
+<p>Threshold to exclude low informative spectra from export.</p>
+<h3 id="advanced"><strong>Advanced</strong><a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h3>
+<h4 id="compact-usi"><strong>Compact USI</strong><a class="headerlink" href="#compact-usi" title="Permanent link">&para;</a></h4>
+<p>Universal spectrum identifiers:</p>
 <ul>
-<li>
-<p><strong>KEGG</strong></p>
-<p>KEGG database (<a>http://www.genome.jp/kegg/</a>) contains metabolites and other biomolecules present in natural metabolic pathways.</p>
-</li>
-<li>
-<p><strong>PubChem</strong></p>
-<p>PubChem database (<a>http://pubchem.ncbi.nlm.nih.gov/</a>) contains millions of chemical compound structures. </p>
-</li>
-<li>
-<p><strong>HMDB</strong></p>
-<p>The Human Metabolome Database (HMDB) (<a>http://www.hmdb.ca/</a>) contains over 7,000 known metabolites found in human body. </p>
-</li>
-<li>
-<p><strong>YMDB</strong></p>
-<p>The Yeast Metabolome Database (YMDB) (<a>http://www.ymdb.ca</a>) is a manually curated database of small molecule metabolites found in or produced by Saccharomyces cerevisiae (also known as Baker’s yeast and Brewer’s yeast).</p>
-</li>
-<li>
-<p><strong>LipidMaps</strong></p>
-<p>LipidMaps Structure Database (LMSD) (<a>https://www.lipidmaps.org/databases/lmsd</a>) is a database of structures and annotations of biologically relevant lipids, containing over 47000 different lipids.</p>
-</li>
-<li>
-<p><strong>MassBank.eu</strong></p>
-<p>MassBank (<a>https://massbank.eu/MassBank/</a>) is an open source mass spectral library for the identification of small chemical molecules of metabolomics, exposomics and environmental relevance. The majority of MassBank contents now features high-resolution mass spectrometry data.</p>
-</li>
-<li>
-<p><strong>ChemSpider</strong></p>
-<p>The ChemSpider database (<a>http://www.chemspider.com/</a>) contains over 67 million compounds. To search ChemSpider you must provide a "Security key" from your ChemSpider API account. If you don't have an account, please register at <a>https://developer.rsc.org</a>.</p>
-</li>
-<li>
-<p><strong>MetaCyc</strong></p>
-<p>MetaCyc (<a>https://metacyc.org/</a>) is a curated database of experimentally elucidated metabolic pathways from all biological domains. MetaCyc currently contains 2937 pathways, 17,780 reactions and 18,124 metabolites.</p>
-</li>
+<li>Compact USI are non canonical USI for merged spectra and export a list of USI for each sample one, where all source scan number are reduced to number ranges as in 1-5,9 for the scans from 1 to 5 and scan 9. This greatly reduces the redundancy compared to regular USI.</li>
+<li>Regular USI export a list of USI, one for each source scan of a merged spectrum. </li>
 </ul>
-<!-- markdown-link-check-enable -->
-
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<hr />
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 19, 2024 14:05:26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 6, 2025 06:05:58</span>
       
     
   </small>

@@ -14,7 +14,7 @@
         <link rel="prev" href="../io/data-exchange-with-other-software.html">
       
       
-        <link rel="next" href="../featdet_file_merging/raw-files-merging.html">
+        <link rel="next" href="../io_scans_feature/export-scans-feature.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -668,8 +668,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mz-tolerance-merging" class="md-nav__link">
-    m/z tolerance (merging)
+  <a href="#merge-select-fragment-scans" class="md-nav__link">
+    Merge &amp; select fragment scans
   </a>
   
 </li>
@@ -732,14 +732,14 @@
         
           <li class="md-nav__item">
   <a href="#minimum-explained-signals" class="md-nav__link">
-    **Minimum explained signals (%)
+    Minimum explained signals (%)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#minimum-explained-intensity" class="md-nav__link">
-    **Minimum explained intensity (%)
+    Minimum explained intensity (%)
   </a>
   
 </li>
@@ -765,6 +765,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_scans_feature/export-scans-feature.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export scans (feature list)
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2690,11 +2710,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../io/merge_ms2_kai.html" class="md-nav__link">
+      <a href="../filter_scan_merge_select/scan_merge_select.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Merge MS/MS
+    Merge & select fragment scans
   </span>
   
 
@@ -3889,8 +3909,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mz-tolerance-merging" class="md-nav__link">
-    m/z tolerance (merging)
+  <a href="#merge-select-fragment-scans" class="md-nav__link">
+    Merge &amp; select fragment scans
   </a>
   
 </li>
@@ -3953,14 +3973,14 @@
         
           <li class="md-nav__item">
   <a href="#minimum-explained-signals" class="md-nav__link">
-    **Minimum explained signals (%)
+    Minimum explained signals (%)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#minimum-explained-intensity" class="md-nav__link">
-    **Minimum explained intensity (%)
+    Minimum explained intensity (%)
   </a>
   
 </li>
@@ -4010,72 +4030,68 @@ information about the acquired data can be added, for example, instrument, who a
 Single best spectra but also merged spectra are exported (same energy, multiple collision energies,
 or multistep fragmentation)</p>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h4 id="export-file"><strong>Export file</strong><a class="headerlink" href="#export-file" title="Permanent link">&para;</a></h4>
+<h4 id="export-file">Export file<a class="headerlink" href="#export-file" title="Permanent link">&para;</a></h4>
 <p>The path and name of the exported library spectra.</p>
-<h4 id="export-format"><strong>Export format</strong><a class="headerlink" href="#export-format" title="Permanent link">&para;</a></h4>
+<h4 id="export-format">Export format<a class="headerlink" href="#export-format" title="Permanent link">&para;</a></h4>
 <p>Here, you can set the export format. It mostly depends on your next steps and where to import the 
 library. Every format works, but we recommend the .json format.</p>
-<h4 id="ms-level-filter"><strong>MS level filter</strong><a class="headerlink" href="#ms-level-filter" title="Permanent link">&para;</a></h4>
+<h4 id="ms-level-filter">MS level filter<a class="headerlink" href="#ms-level-filter" title="Permanent link">&para;</a></h4>
 <p>If data were acquired with multistep fragmentation, the MS2 or all MSn data can be exported individually.
 If you only acquired MS2 data or want to export MSn, the setting can remain MSn</p>
-<h4 id="metadata"><strong>Metadata</strong><a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h4>
+<h4 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h4>
 <p>Various information about the acquired data can be stored her. For example, who acquired the data, 
 which instrument was used, ect. On the description information about the compounds or library can be
 given. The Ion mode is only need, when the polarity is not safed in the data files. </p>
-<h4 id="mz-tolerance-merging"><strong>m/z tolerance (merging)</strong><a class="headerlink" href="#mz-tolerance-merging" title="Permanent link">&para;</a></h4>
-<p>This is the m/z tolerance for grouping signals acquired by same or different collision energies or 
-fragmentation steps and to merge those spectra. For multistep fragmentation, pseudo MS2 spectra are generated that can be used for
-other tools that can handle MS2 data only. The merging information is stored in the corresponding 
-spectra as SPECTYPE:
-- SAME_ENERGY (multiple scans with same settings for same precursor)
-- ALL_ENERGIES (similar to stepped collision energy, when multiple energies are combined
-  into one scan during data acquisition)
-- ALL_MSN_TO_PSEUDO_MS2</p>
-<h4 id="handle-chimeric-spectra"><strong>Handle chimeric spectra</strong><a class="headerlink" href="#handle-chimeric-spectra" title="Permanent link">&para;</a></h4>
+<h4 id="merge-select-fragment-scans">Merge &amp; select fragment scans<a class="headerlink" href="#merge-select-fragment-scans" title="Permanent link">&para;</a></h4>
+<p>This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis
+(see <a href="../filter_scan_merge_select/scan_merge_select.html">detailed description</a>). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options.</p>
+<p>For library generation, mzmine recommends the simple preset <strong>Representative scans or MSn tree</strong>.</p>
+<h4 id="handle-chimeric-spectra">Handle chimeric spectra<a class="headerlink" href="#handle-chimeric-spectra" title="Permanent link">&para;</a></h4>
 <p>This option checks the MS1 scans for chimeric precursor selection. A minimum for this purity can be
 set and how to handle chimeric spectra.
 <img alt="workflow_library_building_chimeric.png" src="workflow_library_building_chimeric.png" /></p>
-<h5 id="target-ion-mz-tolerance"><strong>Target ion m/z tolerance</strong><a class="headerlink" href="#target-ion-mz-tolerance" title="Permanent link">&para;</a></h5>
+<h5 id="target-ion-mz-tolerance">Target ion m/z tolerance<a class="headerlink" href="#target-ion-mz-tolerance" title="Permanent link">&para;</a></h5>
 <p>This is the mass tolerance for the precursor signal. The tolerance is usually smaller than the
 precursor isolation window and depends on the accuracy and resolution of the instrument.</p>
-<h5 id="precursor-mz-isolation-tolerance"><strong>Precursor m/z isolation tolerance</strong><a class="headerlink" href="#precursor-mz-isolation-tolerance" title="Permanent link">&para;</a></h5>
+<h5 id="precursor-mz-isolation-tolerance">Precursor m/z isolation tolerance<a class="headerlink" href="#precursor-mz-isolation-tolerance" title="Permanent link">&para;</a></h5>
 <p>This should be the set precursor isolation window, to check for co-isolated signals in this mass 
 window. Be aware, that some QTOF instruments have a wider isolation window than a unit, resulting
 in co-isolation of isotope signals.</p>
-<h5 id="minimum-precursor-purity"><strong>Minimum precursor purity</strong><a class="headerlink" href="#minimum-precursor-purity" title="Permanent link">&para;</a></h5>
+<h5 id="minimum-precursor-purity">Minimum precursor purity<a class="headerlink" href="#minimum-precursor-purity" title="Permanent link">&para;</a></h5>
 <p>MS1 spectra with a precursor signal explaining less then X% of the total signal intensity within 
 the set precursor isolation window will be flagged as chimeric.</p>
-<h4 id="chimeric-spectra"><strong>Chimeric spectra</strong><a class="headerlink" href="#chimeric-spectra" title="Permanent link">&para;</a></h4>
+<h4 id="chimeric-spectra">Chimeric spectra<a class="headerlink" href="#chimeric-spectra" title="Permanent link">&para;</a></h4>
 <p>Here, spectra that are flagged as chimeric can be skipped or flagged. We suggest that flagging is a
 better option, as the flagging state will be exported and can be removed afterwards as it contains
 still information about the precursor ion. But matches need to be inspected carefully.</p>
-<h3 id="quality-parameters"><strong>Quality Parameters</strong><a class="headerlink" href="#quality-parameters" title="Permanent link">&para;</a></h3>
+<h3 id="quality-parameters">Quality Parameters<a class="headerlink" href="#quality-parameters" title="Permanent link">&para;</a></h3>
 <p>Quality parameter can be set before exporting the spectra. Only spectra that fullfil those criteria
 will be exported.</p>
-<h4 id="minimum-number-of-signals"><strong>Minimum number of signals</strong><a class="headerlink" href="#minimum-number-of-signals" title="Permanent link">&para;</a></h4>
+<h4 id="minimum-number-of-signals">Minimum number of signals<a class="headerlink" href="#minimum-number-of-signals" title="Permanent link">&para;</a></h4>
 <p>Number of signals an MSn scan must contain to be exported. Depends also on the fragmentation pattern
 of the compounds (very rich pattern, more signals, less informative spectra less signals). At least
 3 signals might be a good compromise if the compounds show a very different fragmentation behavior.</p>
-<h4 id="minimum-explained-signals">**Minimum explained signals (%)<a class="headerlink" href="#minimum-explained-signals" title="Permanent link">&para;</a></h4>
+<h4 id="minimum-explained-signals">Minimum explained signals (%)<a class="headerlink" href="#minimum-explained-signals" title="Permanent link">&para;</a></h4>
 <p>The number of explained signals within the MSn scan based on a subformula level, without taking the
 chemical structure into account.</p>
-<h4 id="minimum-explained-intensity">**Minimum explained intensity (%)<a class="headerlink" href="#minimum-explained-intensity" title="Permanent link">&para;</a></h4>
+<h4 id="minimum-explained-intensity">Minimum explained intensity (%)<a class="headerlink" href="#minimum-explained-intensity" title="Permanent link">&para;</a></h4>
 <p>The minimum number of the explained spectra intensity. This increases the value of more abundant signals
 that should be explained in a fragmentation spectrum based on the subformula level for an 
 annotated compound. Low abundant signals can correspond to unfiltered noise, ect. and shouldn't be
 taken into account in the same way as high abundant signals. Therefore, we recommend this setting before
 the explained signal one.</p>
-<h4 id="formula-mz-tolerance"><strong>Formula m/z tolerance</strong><a class="headerlink" href="#formula-mz-tolerance" title="Permanent link">&para;</a></h4>
+<h4 id="formula-mz-tolerance">Formula m/z tolerance<a class="headerlink" href="#formula-mz-tolerance" title="Permanent link">&para;</a></h4>
 <p>This is the m/z tolerance to assign MSn signals to a subformula.</p>
 <hr />
-<p><span class='git-page-authors git-authors'><a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 18, 2023 17:03:03</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 6, 2025 06:05:58</span>
       
     
   </small>

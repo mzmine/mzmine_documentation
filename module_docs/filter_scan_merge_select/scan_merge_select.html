@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/id_prec_online_db/online-cmpd-db-search.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/filter_scan_merge_select/scan_merge_select.html">
       
       
+        <link rel="prev" href="../id_ms2_similarity/ms2-similarity-search.html">
+      
+      
+        <link rel="next" href="../align_join_aligner/spectra_similarity.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Online compound database search - mzmine documentation</title>
+        <title>Merge & select fragment scans - mzmine documentation</title>
       
     
     
@@ -71,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#online-compound-database-search" class="md-skip">
+        <a href="#merge-select-fragment-scans" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Online compound database search
+              Merge & select fragment scans
             
           </span>
         </div>
@@ -408,17 +412,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
@@ -431,7 +437,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Processing modules
@@ -2496,17 +2502,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_22" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_22" checked>
         
           <label class="md-nav__link" for="__nav_11_22" id="__nav_11_22_label" tabindex="0">
             
@@ -2519,7 +2527,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_22_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_22_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11_22">
             <span class="md-nav__icon md-icon"></span>
             Other parameters
@@ -2530,9 +2538,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../filter_scan_merge_select/scan_merge_select.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Merge & select fragment scans
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="scan_merge_select.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2541,6 +2569,128 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-four-configuration-options-are" class="md-nav__link">
+    The four configuration options are:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-merged-simple" class="md-nav__link">
+    1. Merged (simple)
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Merged (simple)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#presets" class="md-nav__link">
+    Presets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging-mz-tolerance" class="md-nav__link">
+    Merging m/z tolerance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-merged-advanced" class="md-nav__link">
+    2. Merged (advanced)
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Merged (advanced)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#merge" class="md-nav__link">
+    Merge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intensity-merging-mode" class="md-nav__link">
+    Intensity merging mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-input-scans" class="md-nav__link">
+    3. Input scans
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-advanced" class="md-nav__link">
+    4. Advanced
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#merging-options" class="md-nav__link">
+    Merging options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#also-include-input-scans" class="md-nav__link">
+    Also include input scans
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3695,58 +3845,98 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
+  <a href="#the-four-configuration-options-are" class="md-nav__link">
+    The four configuration options are:
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    Parameters
+  <a href="#1-merged-simple" class="md-nav__link">
+    1. Merged (simple)
   </a>
   
-    <nav class="md-nav" aria-label="Parameters">
+    <nav class="md-nav" aria-label="1. Merged (simple)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#database" class="md-nav__link">
-    Database
+  <a href="#presets" class="md-nav__link">
+    Presets
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ionization-type" class="md-nav__link">
-    Ionization type
+  <a href="#merging-mz-tolerance" class="md-nav__link">
+    Merging m/z tolerance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-merged-advanced" class="md-nav__link">
+    2. Merged (advanced)
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Merged (advanced)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#merge" class="md-nav__link">
+    Merge
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#number-of-results" class="md-nav__link">
-    Number of results
+  <a href="#intensity-merging-mode" class="md-nav__link">
+    Intensity merging mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-input-scans" class="md-nav__link">
+    3. Input scans
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-advanced" class="md-nav__link">
+    4. Advanced
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#merging-options" class="md-nav__link">
+    Merging options
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mz-tolerance" class="md-nav__link">
-    m/z tolerance
+  <a href="#also-include-input-scans" class="md-nav__link">
+    Also include input scans
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#isotope-pattern-filter" class="md-nav__link">
-    Isotope pattern filter
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#currently-supported-databases" class="md-nav__link">
-    Currently supported databases
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
@@ -3774,71 +3964,122 @@
   
 
 
-<h1 id="online-compound-database-search"><strong>Online compound database search</strong><a class="headerlink" href="#online-compound-database-search" title="Permanent link">&para;</a></h1>
-<p><strong>Module is currently removed and no longer maintained.</strong></p>
-<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f6a7.svg" title=":construction:" /> This module has known bugs and is being updated, which might affect its functionality</p>
-<h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>Feature list methods → Annotation → Search precursor mass → Online compound database search</strong></p>
-<p>This module allows identification of peaks or whole peak lists using an on-line compound database. Databases are queried for the calculated neutral mass of the peak and matching compounds are returned.</p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg></span> If a user is interested in more comprehensive online compound database search, they can export their data to <a href="https://bio.informatik.uni-jena.de/software/sirius/">Sirius</a> software. </p>
-<h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h4 id="database"><strong>Database</strong><a class="headerlink" href="#database" title="Permanent link">&para;</a></h4>
-<p>On-line database to search (<a href="#currently-supported-databases">list of the available databases</a>).</p>
-<h4 id="ionization-type"><strong>Ionization type</strong><a class="headerlink" href="#ionization-type" title="Permanent link">&para;</a></h4>
-<p>Type of ionization that produced the peak subjected to identification. </p>
-<h4 id="number-of-results"><strong>Number of results</strong><a class="headerlink" href="#number-of-results" title="Permanent link">&para;</a></h4>
-<p>Limit for the number of results to be retrieved from the on-line database.</p>
-<h4 id="mz-tolerance"><strong>m/z tolerance</strong><a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum allowed m/z difference to set an identification to a peak.</p>
-<h4 id="isotope-pattern-filter"><strong>Isotope pattern filter</strong><a class="headerlink" href="#isotope-pattern-filter" title="Permanent link">&para;</a></h4>
-<p>If selected, only results which fit the required isotope pattern similarity score will be returned.</p>
-<h3 id="currently-supported-databases"><strong>Currently supported databases</strong><a class="headerlink" href="#currently-supported-databases" title="Permanent link">&para;</a></h3>
-<p>Supported databases are listed below. Support for other databases may be implemented as additional plugins.</p>
-<!-- markdown-link-check-disable -->
+<h1 id="merge-select-fragment-scans">Merge &amp; select fragment scans<a class="headerlink" href="#merge-select-fragment-scans" title="Permanent link">&para;</a></h1>
+<p>This parameter is used in many modules like spectral library search, molecular networking, scan
+export, etc. to control which fragment spectra are filtered, merged, and selected.
+The final list of scans used in those modules may be input scans, e.g., a single MS2 scan or a
+GC-EI-MS pseudo MS2 scan, or they grouped and merged on various levels.
+To make this complex process simple and to provide options, there are multiple ways to configure
+this parameter.</p>
+<p><strong>Merging is generally done in this order:</strong></p>
 <ul>
-<li>
-<p><strong>KEGG</strong></p>
-<p>KEGG database (<a>http://www.genome.jp/kegg/</a>) contains metabolites and other biomolecules present in natural metabolic pathways.</p>
-</li>
-<li>
-<p><strong>PubChem</strong></p>
-<p>PubChem database (<a>http://pubchem.ncbi.nlm.nih.gov/</a>) contains millions of chemical compound structures. </p>
-</li>
-<li>
-<p><strong>HMDB</strong></p>
-<p>The Human Metabolome Database (HMDB) (<a>http://www.hmdb.ca/</a>) contains over 7,000 known metabolites found in human body. </p>
-</li>
-<li>
-<p><strong>YMDB</strong></p>
-<p>The Yeast Metabolome Database (YMDB) (<a>http://www.ymdb.ca</a>) is a manually curated database of small molecule metabolites found in or produced by Saccharomyces cerevisiae (also known as Baker’s yeast and Brewer’s yeast).</p>
-</li>
-<li>
-<p><strong>LipidMaps</strong></p>
-<p>LipidMaps Structure Database (LMSD) (<a>https://www.lipidmaps.org/databases/lmsd</a>) is a database of structures and annotations of biologically relevant lipids, containing over 47000 different lipids.</p>
-</li>
-<li>
-<p><strong>MassBank.eu</strong></p>
-<p>MassBank (<a>https://massbank.eu/MassBank/</a>) is an open source mass spectral library for the identification of small chemical molecules of metabolomics, exposomics and environmental relevance. The majority of MassBank contents now features high-resolution mass spectrometry data.</p>
-</li>
-<li>
-<p><strong>ChemSpider</strong></p>
-<p>The ChemSpider database (<a>http://www.chemspider.com/</a>) contains over 67 million compounds. To search ChemSpider you must provide a "Security key" from your ChemSpider API account. If you don't have an account, please register at <a>https://developer.rsc.org</a>.</p>
-</li>
-<li>
-<p><strong>MetaCyc</strong></p>
-<p>MetaCyc (<a>https://metacyc.org/</a>) is a curated database of experimentally elucidated metabolic pathways from all biological domains. MetaCyc currently contains 2937 pathways, 17,780 reactions and 18,124 metabolites.</p>
-</li>
+<li>split scans by samples</li>
+<li>merge for each energy and across energies (for each sample)</li>
+<li>merge across all samples</li>
 </ul>
-<!-- markdown-link-check-enable -->
-
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><strong>For MS^n data:</strong></p>
+<ul>
+<li>merge MS^n scans for each MS^n tree node (precursor ion) for each energy and across energies (for
+  each sample)</li>
+<li>merge all MS^n scans to a pseudo MS^2 scan</li>
+</ul>
+<h3 id="the-four-configuration-options-are">The four configuration options are:<a class="headerlink" href="#the-four-configuration-options-are" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Merged (simple)</strong>: Presets with few settings</li>
+<li><strong>Merged (preset)</strong>: Presets with more control</li>
+<li><strong>Input scans</strong>: Input scans without merging</li>
+<li><strong>Advanced</strong>: All options</li>
+</ol>
+<h3 id="1-merged-simple">1. Merged (simple)<a class="headerlink" href="#1-merged-simple" title="Permanent link">&para;</a></h3>
+<p>Simple preset-based scan selection that will always merge scans across all samples. For more
+control, choose <strong>Merged (preset)</strong>.
+The final selection of scans is based on presets defined below.
+In general, all presets include a scan merged across all energies and for MS^n data a pseudo MS^2
+scan that merges the whole MS^n tree.</p>
+<h4 id="presets">Presets<a class="headerlink" href="#presets" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Single scan: Merged across energies</strong> - Merge all input MS^2 scans. For MS^n data also merge
+   all MS^n to an additional pseudo MS^2. A great option for speed by limiting the number of
+   fragment scans.</li>
+<li><strong>Representative scans: Each energy &amp; merged across energies</strong> - Like <strong>1</strong> and adds scans for
+   each fragmentation energy. This is a great option for algorithms where the intensity differences
+   in various energies is important - like spectral library matching by cosine similarity.</li>
+<li><strong>MS^n tree: Merged across energies &amp; pseudo MS^2</strong> - Like <strong>1</strong> when used on MS^2 data - but for
+   MS^n one spectrum per tree node (precursor ion) will be added. This option can be used with MS^2
+   data as well.</li>
+<li><strong>Representative scans or MS^n tree: Each energy, merged across energies &amp; pseudo MS^2</strong> - Like *
+   <em>2</em><em> and </em><em>3</em>* this module will add spectra for each MS^n tree node and fragmentation energy for
+   each. This option can be used with MS^2 data as well.</li>
+</ol>
+<h4 id="merging-mz-tolerance">Merging m/z tolerance<a class="headerlink" href="#merging-mz-tolerance" title="Permanent link">&para;</a></h4>
+<p>Used to match signals across scans and merge them. This tolerance is typically higher than the
+advertised mass accuracy. As it is from scan-to-scan and across samples.</p>
+<h3 id="2-merged-advanced">2. Merged (advanced)<a class="headerlink" href="#2-merged-advanced" title="Permanent link">&para;</a></h3>
+<p>Similar to the simple preset-based setup. The same presets but with more additional parameters, as
+described below:</p>
+<h4 id="merge">Merge<a class="headerlink" href="#merge" title="Permanent link">&para;</a></h4>
+<p>Select one or multiple options how to handle multiple samples:</p>
+<ul>
+<li>Across samples (like the simple setup)</li>
+<li>Each sample</li>
+</ul>
+<h4 id="intensity-merging-mode">Intensity merging mode<a class="headerlink" href="#intensity-merging-mode" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Summed</strong> - suppresses low intensity signals and spurious noise but changes the amplitude</li>
+<li><strong>Maximum value</strong> - retains the general amplitude </li>
+<li><strong>Average</strong> - average intensity of signals across all merged scans</li>
+</ul>
+<h3 id="3-input-scans">3. Input scans<a class="headerlink" href="#3-input-scans" title="Permanent link">&para;</a></h3>
+<p>Options to disable merging and choose the input scans instead. This is either:</p>
+<ol>
+<li><strong>Most intense scan across samples</strong>: One scan per fragmentation energy across all samples with the highest summed intensity</li>
+<li><strong>Most intense scan per sample</strong>: One scan per fragmentation energy for each sample with the highest summed intensity</li>
+<li><strong>All scans</strong>: All input scans will be selected</li>
+</ol>
+<h3 id="4-advanced">4. Advanced<a class="headerlink" href="#4-advanced" title="Permanent link">&para;</a></h3>
+<p>This is the full setup with the highest flexibility. The advanced option allows to combine multiple
+different scan selections.</p>
+<h4 id="merging-options">Merging options<a class="headerlink" href="#merging-options" title="Permanent link">&para;</a></h4>
+<p>Select multiple options that will be combined with each other. Options include handling of multiple
+samples, fragmentation energies, and MS^n data.</p>
+<ol>
+<li><strong>Across samples</strong> - Merging happens across all samples .</li>
+<li><strong>Each sample</strong> - Merging happens for each sample separately and also across samples if selected.</li>
+<li><strong>Across energies</strong> - Merging happens across energies to combine all into one.</li>
+<li><strong>Each energy</strong> - Merging happens for each fragmentation energy and also across energies if
+   selected.</li>
+<li><strong>MS^n tree</strong> - Merging happens for each MS^n tree node (precursor) - this option will be
+   combined with sample and energy handling. This has no effect on MS^2 data.</li>
+<li><strong>MS^n to pseudo MS^2</strong> - Merges all MS^n spectra into a single 'MS^2' spectrum. This has no effect on MS^2 data.</li>
+</ol>
+<h4 id="also-include-input-scans">Also include input scans<a class="headerlink" href="#also-include-input-scans" title="Permanent link">&para;</a></h4>
+<p>Also include unmerged input scans into the final scan selection. This is from the "raw" or "source" scans that are input to the merging. </p>
+<ol>
+<li><strong>Most intense scan across samples</strong>: One scan per fragmentation energy across all samples with the highest summed intensity</li>
+<li><strong>Most intense scan per sample</strong>: One scan per fragmentation energy for each sample with the highest summed intensity</li>
+<li><strong>All scans</strong>: All input scans will be selected</li>
+<li><strong>None</strong>: Select <strong>no</strong> input scan but rely only on merged scans. This requires merging to be active, by selecting valid <strong>merging options</strong></li>
+</ol>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<p><strong>Example 1:</strong> <strong>Across samples + across energies</strong>: This will produce a single scan that is merged
+across all scans of all energies and samples.
+Adding <strong>each sample</strong> will then also export one more scan for each sample (if this sample has
+fragmentation spectra).
+Adding <strong>each energy</strong> will then add scans for each energy state. If across samples and each sample
+are selected, this means there will be spectra added for each sample and then merged across all
+samples.</p>
+<p><strong>Example 2:</strong> <strong>Each sample</strong> + <strong>Single most intense scan</strong> + <strong>across energies</strong>: This
+combination will export the single best scan in each sample and then one merged scan per sample -
+both only if there are fragment scans in this sample.</p>
+<hr />
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">June 19, 2024 14:05:26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2025 20:58:14</span>
       
     
   </small>

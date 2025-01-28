@@ -598,6 +598,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_scans_feature/export-scans-feature.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export scans (feature list)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2466,8 +2486,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scans-for-matching" class="md-nav__link">
-    Scans for matching
+  <a href="#merge-select-fragment-scans" class="md-nav__link">
+    Merge &amp; select fragment scans
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms-level-filter" class="md-nav__link">
+    MS level filter
   </a>
   
 </li>
@@ -2684,11 +2711,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../io/merge_ms2_kai.html" class="md-nav__link">
+      <a href="../filter_scan_merge_select/scan_merge_select.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Merge MS/MS
+    Merge & select fragment scans
   </span>
   
 
@@ -3889,8 +3916,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scans-for-matching" class="md-nav__link">
-    Scans for matching
+  <a href="#merge-select-fragment-scans" class="md-nav__link">
+    Merge &amp; select fragment scans
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms-level-filter" class="md-nav__link">
+    MS level filter
   </a>
   
 </li>
@@ -4032,12 +4066,15 @@ or
 <h4 id="spectral-libraries"><strong>Spectral libraries</strong><a class="headerlink" href="#spectral-libraries" title="Permanent link">&para;</a></h4>
 <p>The spectral libraries of interest need to be imported before applying spectral library search. 
 Either uses all imported spectral libraries or only the selected libraries.</p>
-<h4 id="scans-for-matching"><strong>Scans for matching</strong><a class="headerlink" href="#scans-for-matching" title="Permanent link">&para;</a></h4>
-<p>Choose the MS level of the scans that should be compared with the library and how to handle multiple spectra for one feature. 
-The option 'MS2 (merged)' merges all spectra of a feature into one scan,
-which reduces the amount of spectra for the matching. For matching all spectra individually, use the 'MS2 (all scans)' option.
-If multistep fragmentation was used, choose the MS level ≥ 2 and for GC-EI-MS 'MS1'. </p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> In case of issues with the scan selection, check how the actual scan numbers are reported in the data files and in MZmine's raw data overview.</p>
+<h4 id="merge-select-fragment-scans"><strong>Merge &amp; select fragment scans</strong><a class="headerlink" href="#merge-select-fragment-scans" title="Permanent link">&para;</a></h4>
+<p>This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis 
+(see <a href="../filter_scan_merge_select/scan_merge_select.html">detailed description</a>). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options. </p>
+<p>For spectral library matching mzmine recommends using the representative scans = one for each fragmentation energy and one merged across all.</p>
+<h4 id="ms-level-filter"><strong>MS level filter</strong><a class="headerlink" href="#ms-level-filter" title="Permanent link">&para;</a></h4>
+<p>Select MS2 for fragment spectra with precursor m/z.</p>
+<p>Select MS1 for GC-EI-MS spectra. </p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> In case of issues with the scan selection, check how the actual scan numbers are reported in the data files and in mzmine's raw data overview.</p>
 <h4 id="precursor-mz-tolerance"><strong>Precursor m/z tolerance</strong><a class="headerlink" href="#precursor-mz-tolerance" title="Permanent link">&para;</a></h4>
 <p>This option is only used for MS level &gt; 1. Here, the library entries are filtered by their precursor m/z reducing the number of spectral-pairs to match. </p>
 <p>The absolute (in m/z) and relative (in ppm) m/z tolerance can be set. The <strong>maximum tolerance</strong> for each precursor is applied. </p>
@@ -4112,7 +4149,7 @@ positive matches. Therefore, we recommend extra curation of the matching results
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 26, 2024 15:52:01</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 3, 2025 16:08:43</span>
       
     
   </small>

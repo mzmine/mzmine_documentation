@@ -598,6 +598,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io_scans_feature/export-scans-feature.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export scans (feature list)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1802,8 +1822,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#only-best-ms2-scan" class="md-nav__link">
-    Only best MS2 scan
+  <a href="#merge-select-fragment-scans" class="md-nav__link">
+    Merge &amp; select fragment scans
   </a>
   
 </li>
@@ -2697,11 +2717,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../io/merge_ms2_kai.html" class="md-nav__link">
+      <a href="../filter_scan_merge_select/scan_merge_select.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Merge MS/MS
+    Merge & select fragment scans
   </span>
   
 
@@ -3890,8 +3910,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#only-best-ms2-scan" class="md-nav__link">
-    Only best MS2 scan
+  <a href="#merge-select-fragment-scans" class="md-nav__link">
+    Merge &amp; select fragment scans
   </a>
   
 </li>
@@ -4071,9 +4091,12 @@ transformed to balance the contribution of medium and high intensity signals.</p
 <p>Tolerance to group fragment signals by m/z. Fragments are group by direct match of m/z or by having
 the same neutral loss mass difference to the precursor ion. Most intense fragment signals are
 considered first.</p>
-<h4 id="only-best-ms2-scan">Only best MS2 scan<a class="headerlink" href="#only-best-ms2-scan" title="Permanent link">&para;</a></h4>
-<p>If checked the algorithm will only use the top most intense MS2 scan. Otherwise, all scans are
-compared.</p>
+<h4 id="merge-select-fragment-scans">Merge &amp; select fragment scans<a class="headerlink" href="#merge-select-fragment-scans" title="Permanent link">&para;</a></h4>
+<p>This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis
+(see <a href="../filter_scan_merge_select/scan_merge_select.html">detailed description</a>). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options.</p>
+<p>Molecular networking checks all features against each other - this is an expensive task and therefore, mzmine recommends using the <strong>Single scan: Merged across energies</strong> preset. 
+For more density and checks, consider using the preset <strong>Representative scans</strong> which also adds scans for each fragmentation energy. The more scans the longer the task.   </p>
 <h4 id="max-precursor-mz-delta">Max precursor m/z delta<a class="headerlink" href="#max-precursor-mz-delta" title="Permanent link">&para;</a></h4>
 <p>If checked only features with precursor m/z difference lower than the specified value are compared.</p>
 <h4 id="minimum-matched-signals">Minimum matched signals<a class="headerlink" href="#minimum-matched-signals" title="Permanent link">&para;</a></h4>
@@ -4123,7 +4146,7 @@ being the best match.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 23, 2024 08:04:46</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 3, 2025 16:08:43</span>
       
     
   </small>
