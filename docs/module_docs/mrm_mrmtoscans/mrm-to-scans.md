@@ -49,7 +49,7 @@ The default feature detection and integration of the MRM workflow runs on the ge
 #### Chromatogram generation
 Chromatograms are generated for a single grouped compound (see [transition grouping](#transition-grouping)).
 A feature list is generated from these compounds. Since a feature may now have multiple transitions,
-the most intense transition is set as the quantifier by default and used to represent the feature with it's chromatographic shape. Since a static background may be present, the lowest non-zero intensity may be subtracted using the [static baseline subtraction](#-static-baseline-subtraction) parameter (recommended). 
+the most intense transition is set as the quantifier by default and used to represent the feature with it's chromatographic shape. Since a static background may be present, the lowest non-zero intensity may be subtracted using the [static baseline subtraction](#static-baseline-subtraction) parameter (recommended). 
 
 
 ---
