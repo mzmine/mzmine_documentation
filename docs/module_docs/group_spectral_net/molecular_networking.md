@@ -70,10 +70,14 @@ Tolerance to group fragment signals by m/z. Fragments are group by direct match 
 the same neutral loss mass difference to the precursor ion. Most intense fragment signals are
 considered first.
 
-#### Only best MS2 scan
+#### Merge & select fragment scans
 
-If checked the algorithm will only use the top most intense MS2 scan. Otherwise, all scans are
-compared.
+This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis
+(see [detailed description](../filter_scan_merge_select/scan_merge_select.md)). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options.
+
+Molecular networking checks all features against each other - this is an expensive task and therefore, mzmine recommends using the **Single scan: Merged across energies** preset. 
+For more density and checks, consider using the preset **Representative scans** which also adds scans for each fragmentation energy. The more scans the longer the task.   
 
 #### Max precursor m/z delta
 

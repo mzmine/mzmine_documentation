@@ -20,12 +20,13 @@ nav:
 
   - Processing modules:
       - I/O:
-          -  Raw data import: module_docs/io/data-import.md
-          -  Raw data export: module_docs/io/data-export.md
-          -  Feature list import: module_docs/io/feat-list-import.md
-          -  Feature list export: module_docs/io/feat-list-export.md
-          -  Export to other software: module_docs/io/data-exchange-with-other-software.md
-          -  Spectral library export: module_docs/io_spectral_library_export/spectral_library_generation.md
+        - Raw data import: module_docs/io/data-import.md
+        - Raw data export: module_docs/io/data-export.md
+        - Feature list import: module_docs/io/feat-list-import.md
+        - Feature list export: module_docs/io/feat-list-export.md
+        - Export to other software: module_docs/io/data-exchange-with-other-software.md
+        - Spectral library export: module_docs/io_spectral_library_export/spectral_library_generation.md
+        - Export scans (feature list): module_docs/io_scans_feature/export-scans-feature.md
 #         TODO Add feature list import/export
       - File merging:
         - Raw data files merging: module_docs/featdet_file_merging/raw-files-merging.md
@@ -113,7 +114,7 @@ nav:
           - Lipid annotation: module_docs/id_lipid_annotation/lipid-annotation.md
           - MS2 similarity search: module_docs/id_ms2_similarity/ms2-similarity-search.md
       - Other parameters:
-        - Merge MS/MS: module_docs/io/merge_ms2_kai.md
+        - Merge & select fragment scans: module_docs/filter_scan_merge_select/scan_merge_select.md
         - Spectra similarity: module_docs/align_join_aligner/spectra_similarity.md
 
   - Visualization modules:
