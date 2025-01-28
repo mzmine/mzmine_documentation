@@ -501,6 +501,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/mrm_mrmtoscans/mrm-to-scans.html</loc>
+         <lastmod>2025-01-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/norm_linear/norm_linear.html</loc>
          <lastmod>2025-01-28</lastmod>
          <changefreq>daily</changefreq>
@@ -637,6 +642,11 @@
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/workflows/librarygeneration/library_generation.html</loc>
+         <lastmod>2025-01-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/workflows/mrmworkflow/mrm-workflow.html</loc>
          <lastmod>2025-01-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
