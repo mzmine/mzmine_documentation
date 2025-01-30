@@ -56,6 +56,7 @@ nav:
           - Image builder: module_docs/imaging_featdet/featdet_image_builder/image-builder.md
       - MRM feature detection:
           - MRM to Scans: module_docs/mrm_mrmtoscans/mrm-to-scans.md
+          - Set MRM quantifiers: module_docs/mrm_setquant/mrm-set-quant-mass.md
       - Smoothing: module_docs/featdet_smoothing/smoothing.md
       - Resolving:
           - Local minimum resolver: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
@@ -96,6 +97,7 @@ nav:
           #          - ADAP aligner (GC): module_docs/align_adap/align_adap_gc.md
           - GC-EI aligner: module_docs/align_gcei/align_gc_ei.md
           - LC Image Aligner: module_docs/align_lc-image/align_lc-image.md
+          - MRM aligner: module_docs/align_mrm/mrm-aligner.md
       - Gap filling:
           - Peak finder: module_docs/gapfill_peak_finder/gap-filling.md
           - Same RT and m/z range gap filler: module_docs/gapfill_same_mz_and_RT_range/same_mz_and_RT_range_gap_filler.md
