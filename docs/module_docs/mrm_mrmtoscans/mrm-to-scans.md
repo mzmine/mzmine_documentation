@@ -8,7 +8,7 @@
 
 Since Triple-Quadrupole MRM or SRM workflows typically produce one or more transition chromatograms 
 per compound instead of individual spectra, the data must be pre-processed to fit into the regular 
-mzmine workflow. This is achieved by the this module.
+mzmine workflow. This is achieved by this module.
 
 ![mrm_converted.png](mrm_converted.png)
 
@@ -24,8 +24,7 @@ If enabled, the lowest non-zero intensity of a transition will be subtracted alo
 
 !!! tip
     Visualizing features of MRM data will not "fill" the whole area of the extracted XIC, which is accessible from the feature table context menu. This is caused by the summation of all transitions to compute the MS1 intensity (see [Pseudo MS1 generation](#pseudo-ms1-generation)) and the [static baseline subtraction](#static-baseline-subtraction), which is not applied to the spectra.
-
-
+    ![mrm-xic-not-covered.png](mrm-xic-not-covered.png)
 
 ## Algorithm
 
