@@ -37,3 +37,6 @@ Set an RT tolerance between the entry in the [quantifier ion list](#quantifier-i
 
 Set an _m_/_z_ tolerance between the entry in the [quantifier ion list](#quantifier-ion-list) and the _m_/_z_ in the feature list. Usually, the _m_/_z_ is the set _m_/_z_ in the acquisition software and does not fluctuate as it would in HRMS, where the actual _m_/_z_ value is part of the detection.
 
+---
+
+{{ git_page_authors }}

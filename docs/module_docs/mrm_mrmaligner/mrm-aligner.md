@@ -35,3 +35,8 @@ Specify if the feature lists that are aligned in this step shall be removed from
 The MRM aligner searches for matches in all feature lists within the given _m_/_z_ and RT tolerances. All matching features will then be checked for the same MRMs, if the [Only allow matches to same MRM](#only-allow-matches-to-same-mrm) parameter is enabled. In case there are multiple rows, that match the criteria, only the RT will be used to find the best match.
 
 After the alignment, all aligned rows will be set to the same quantifier ion _m_/_z_. By default, this is the quantifier of the most intense feature. If the [Only allow matches to same MRM](#only-allow-matches-to-same-mrm) was disabled and the most intense feature has a quantifier transition set, that is not available in all aligned features, an error will be produced and the alignment will fail, because the results would not be valid. To circumvent that, only align features with the same MRM, or manually set a quantifier ion that appears in all samples using the [Set MRM quantifiers](../mrm_setquant/mrm-set-quant-mass.md) module prior to the alignment step.
+
+---
+
+{{ git_page_authors }}
+
