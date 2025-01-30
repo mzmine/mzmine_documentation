@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/mrm_mrmaligner/mrm-aligner.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/align_mrm/mrm-aligner.html">
       
       
+        <link rel="prev" href="../align_lc-image/align_lc-image.html">
+      
+      
+        <link rel="next" href="../gapfill_peak_finder/gap-filling.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -408,17 +412,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
@@ -431,7 +437,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Processing modules
@@ -1306,6 +1312,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mrm_setquant/mrm-set-quant-mass.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set MRM quantifiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2008,17 +2034,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_18" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_18" checked>
         
           <label class="md-nav__link" for="__nav_11_18" id="__nav_11_18_label" tabindex="0">
             
@@ -2031,7 +2059,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_18_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_18_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11_18">
             <span class="md-nav__icon md-icon"></span>
             Alignment
@@ -2133,6 +2161,128 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MRM aligner
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="mrm-aligner.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    MRM aligner
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-lists" class="md-nav__link">
+    Feature lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mz-tolerance-sample-to-sample" class="md-nav__link">
+    m/z tolerance (sample-to-sample)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retention-time-tolerance" class="md-nav__link">
+    Retention time tolerance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#only-allow-matches-to-same-mrm" class="md-nav__link">
+    Only allow matches to same MRM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-list-name" class="md-nav__link">
+    Feature list name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#original-feature-list" class="md-nav__link">
+    Original feature list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    Algorithm
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3867,7 +4017,7 @@ c. they have the same quantifier ion mass
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 30, 2025 16:08:17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 30, 2025 17:25:53</span>
       
     
   </small>

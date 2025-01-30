@@ -161,6 +161,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/align_mrm/mrm-aligner.html</loc>
+         <lastmod>2025-01-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/align_ransac/align_ransac.html</loc>
          <lastmod>2025-01-30</lastmod>
          <changefreq>daily</changefreq>
@@ -497,11 +502,6 @@
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.html</loc>
-         <lastmod>2025-01-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/mrm_mrmaligner/mrm-aligner.html</loc>
          <lastmod>2025-01-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
