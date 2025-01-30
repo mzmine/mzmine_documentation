@@ -3981,7 +3981,7 @@ included for PRO customers. Academics can reach out to info[at]mzio.io to reques
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span> <strong>MRM → MRM to scans and chromatograms</strong></p>
 <p>Since Triple-Quadrupole MRM or SRM workflows typically produce one or more transition chromatograms 
 per compound instead of individual spectra, the data must be pre-processed to fit into the regular 
-mzmine workflow. This is achieved by the this module.</p>
+mzmine workflow. This is achieved by this module.</p>
 <p><img alt="mrm_converted.png" src="mrm_converted.png" /></p>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <h4 id="raw-data-files">Raw data files<a class="headerlink" href="#raw-data-files" title="Permanent link">&para;</a></h4>
@@ -3992,7 +3992,8 @@ mzmine workflow. This is achieved by the this module.</p>
 <p>If enabled, the lowest non-zero intensity of a transition will be subtracted along the retention time (recommended). </p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Visualizing features of MRM data will not "fill" the whole area of the extracted XIC, which is accessible from the feature table context menu. This is caused by the summation of all transitions to compute the MS1 intensity (see <a href="#pseudo-ms1-generation">Pseudo MS1 generation</a>) and the <a href="#static-baseline-subtraction">static baseline subtraction</a>, which is not applied to the spectra.</p>
+<p>Visualizing features of MRM data will not "fill" the whole area of the extracted XIC, which is accessible from the feature table context menu. This is caused by the summation of all transitions to compute the MS1 intensity (see <a href="#pseudo-ms1-generation">Pseudo MS1 generation</a>) and the <a href="#static-baseline-subtraction">static baseline subtraction</a>, which is not applied to the spectra.
+<img alt="mrm-xic-not-covered.png" src="mrm-xic-not-covered.png" /></p>
 </div>
 <h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
 <h4 id="transition-grouping">Transition grouping<a class="headerlink" href="#transition-grouping" title="Permanent link">&para;</a></h4>
@@ -4021,7 +4022,7 @@ the most intense transition is set as the quantifier by default and used to repr
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 28, 2025 11:06:08</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 30, 2025 13:35:35</span>
       
     
   </small>
