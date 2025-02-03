@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/workflows/mrmworkflow/mrm-workflow.html">
       
       
+        <link rel="prev" href="../simsef/simsef_workflow.html">
+      
+      
+        <link rel="next" href="../../module_docs/tools_simsef/simsef.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -603,6 +607,26 @@
   
   <span class="md-ellipsis">
     Export scans (feature list)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../module_docs/io_mrmtotsv/mrm-to-tsv.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export MRM to TSV
   </span>
   
 
@@ -3112,17 +3136,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
         
           <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
             
@@ -3135,7 +3161,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Workflows
@@ -3277,6 +3303,121 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MRM workflow
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="mrm-workflow.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    MRM workflow
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-raw-data" class="md-nav__link">
+    Import raw data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mrm-to-scans" class="md-nav__link">
+    MRM to scans
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-quantifier-masses" class="md-nav__link">
+    Set quantifier masses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smoothing-in-retention-time-dimension-optional" class="md-nav__link">
+    Smoothing in retention time dimension (optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-resolving" class="md-nav__link">
+    Feature resolving
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-alignment" class="md-nav__link">
+    Feature alignment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3818,6 +3959,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#set-quantifier-masses" class="md-nav__link">
+    Set quantifier masses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smoothing-in-retention-time-dimension-optional" class="md-nav__link">
+    Smoothing in retention time dimension (optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-resolving" class="md-nav__link">
+    Feature resolving
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-alignment" class="md-nav__link">
+    Feature alignment
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3858,13 +4027,24 @@ to handling, since workflows usuallys start with a set of centroided spectra alo
 <p>The imported raw data is converted using the <a href="../../module_docs/mrm_mrmtoscans/mrm-to-scans.html">MRM to scans</a>
 module. This creates pseudo MS1 and MS2 spectra as well as a feature list, which groups the MRM transitions
 by their retention time and precursor ion mass. </p>
+<h3 id="set-quantifier-masses">Set quantifier masses<a class="headerlink" href="#set-quantifier-masses" title="Permanent link">&para;</a></h3>
+<p>mzmine automatically selects the quantifier mass based on the intensity of the MRM transitions and sets the most intense ion as a quantifier. If other ions shall be used as quantifiers, this module allows the selection.
+<a href="../../module_docs/mrm_setquant/mrm-set-quant-mass.html">mrm-set-quant-mass.md</a></p>
+<h3 id="smoothing-in-retention-time-dimension-optional">Smoothing in retention time dimension (optional)<a class="headerlink" href="#smoothing-in-retention-time-dimension-optional" title="Permanent link">&para;</a></h3>
+<p>Depending on the LC peak shape (i.e. data noisiness), the user can perform smoothing in retention time dimension. </p>
+<h3 id="feature-resolving">Feature resolving<a class="headerlink" href="#feature-resolving" title="Permanent link">&para;</a></h3>
+<p>Feature resolving step enables separation of co-eluting and overlapping chromatography peaks and as such is one of the pivotal steps in data preprocessing. For more detalis on the algorithm used and parameters settings, see the <a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local minimum resolver</a> module.</p>
+<h3 id="feature-alignment">Feature alignment<a class="headerlink" href="#feature-alignment" title="Permanent link">&para;</a></h3>
+<p>mzmine offers a specific alignment module for MRM data. The <a href="../../module_docs/align_mrm/mrm-aligner.html">MRM aligner</a> takes the transitions of a feature into account and only allows alignment of features with the same transitions (in default settings). In principle, MRM feature lists can be aligned to HRMS feature lists using the <a href="../../module_docs/align_join_aligner/join_aligner.html">Join aligner</a>. For downsides of this procedure, see the <a href="../../module_docs/align_mrm/mrm-aligner.html#mrm-aligner">the MRM aligner documentation</a></p>
+<hr />
+<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 27, 2025 17:32:37</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 3, 2025 11:07:08</span>
       
     
   </small>
