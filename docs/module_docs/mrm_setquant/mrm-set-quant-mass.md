@@ -1,9 +1,10 @@
 # Set MRM quantifiers
 
 !!! warning
-    To process multiple reaction monitoring (MRM) data, the MRM service of mzmine is required. This is
-    included for PRO customers. Academics can reach out to info[at]mzio.io to request a free license.
-    
+    To process multiple reaction monitoring (MRM) data, the MRM service of mzmine is required. This feature is
+    included in the mzmine PRO subscription. Academic program and other users can reach out to inquire
+    [access options](https://mzio.io/#contact).
+
 :material-menu-open: **MRM → Set MRM quantifiers**
 
 The [MRM to Scans module](../mrm_mrmtoscans/mrm-to-scans.md) automatically sets the most intense transition as the quantifier ion. However, some MRMs may be more challenging and shall be quantified by a different transition. Here, the Set MRM quantifiers module can help to select the specific ions needed for accurate quantification.
