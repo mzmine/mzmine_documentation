@@ -89,4 +89,11 @@ java-options=-XX:InitialRAMPercentage=10
 java-options=-XX:MaxRAMPercentage=80
 ```
 
+## Limit number of cores
+For HPC applications, limiting the number of threads may not be sufficient. In case the usage of the actual number of cores shall be limited, the java option
+```
+java-options=-XX:ActiveProcessorCount=10
+```
+in the **mzmine/app/MZmine.cfg** in the mzmine install directory or portable version. (see [Maximum memory](#maximum-memory))
+
 {{ git_page_authors }}
