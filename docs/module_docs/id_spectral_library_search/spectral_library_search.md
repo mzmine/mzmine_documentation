@@ -127,6 +127,7 @@ These option can be used to include these values as further spectral matching id
 
 :warning: However, this method will boost false matches and needs strict manual interpretation.
 
+
 #### **CCS tolerance**
 
 The [collision cross-section (CCS)](../../terminology/ion-mobility-terminology.md#collisional-cross-section) tolerance can be used in a similar way as the retention time tolerance.
@@ -135,6 +136,14 @@ Accordingly, the CCS value of a query will be compared with the library entries 
 can be set in %.
 
 :warning: If the query or library entry was analyzed without ion mobility (no CCS values), no spectrum will be matched.
+
+#### **Retention index tolerance**
+
+This option can be used to exclude library entries that are not sufficiently close in retention index.
+
+#### **Skip library entries without RIs**
+
+This option can be used to exclude library entries that do not have a defined retention index for the selected column type. Otherwise, those library entries can be used to match any row.
 
 
 #### **^13^C deisotoping**
