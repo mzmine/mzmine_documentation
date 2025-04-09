@@ -134,6 +134,7 @@ nav:
           - Lipid annotation summary: visualization_modules/lipid_annotation_summary/lipid_annotation_summary.md
           - Additional tools: visualization_modules/processed_additional/processed_additional.md
       - Massvoltammogram: visualization_modules/massvoltammogram/massvoltammogram.md
+      - Statistics dashboard: visualization_modules/statistics_dashboard/statistics_dashboard.md
 
   - Workflows:
       - Untargeted LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
