@@ -10,27 +10,39 @@ but an .mzuser file can be passed in as command-line argument to **-user**.
 
 ## Windows
 
-An easy way to start mzmine with arguments is to create a shortcut to the mzmine.exe, right-click, and define the target with additional arguments. This example runs mzmine in batch mode (headless), imports the specified batch file, overrides the memory management to **none** (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the _memory_ or _temp_ arguments, the values stored in the current _preferences_ file will be used, or the default values if no _preferences_ file was found.  
+For command-line mode, the mzmine_console.exe is preferred as it will print the logging output to the console. 
+
+An easy way to start mzmine with arguments is to create a shortcut to the mzmine.exe or the mzmine_console.exe, right-click, and define the target with additional arguments. This example runs mzmine in batch mode (headless), imports the specified batch file, overrides the memory management to **none** (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the _memory_ or _temp_ arguments, the values stored in the current _preferences_ file will be used, or the default values if no _preferences_ file was found.  
+
+**Login to a user in command-line mode**
+```
+# login in browser
+"C:\Program Files\mzmine\mzmine_console.exe" -login
+
+# or in the terminal
+"C:\Program Files\mzmine\mzmine_console.exe" -login-console 
+```
+
 
 **Process all .mzML files in a folder by the provided batch file**
 ```
-"C:\Program Files\mzmine\mzmine.exe" -user "D:\user\testuser.mzuser" -batch "D:\batch\my_batch_file.xml" -input "D:\Data\*.mzML"
+"C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser" -batch "D:\batch\my_batch_file.xml" -input "D:\Data\*.mzML"
 ```
 
 **Defining the temp folder, otherwise uses the one specified in local configuration**
 ```
-"C:\Program Files\mzmine\mzmine.exe" -user "D:\user\testuser.mzuser" -batch "D:\batch\my_batch_file.xml" -temp "D:\tmpmzmine"
+"C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser" -batch "D:\batch\my_batch_file.xml" -temp "D:\tmpmzmine"
 ```
 
 **Start mzmine batch with memory mapping (DEFAULT)**
 ```
-"C:\Program Files\mzmine\mzmine.exe" -user "D:\user\testuser.mzuser" -batch "D:\batch\my_batch_file.xml" -memory none -temp "D:\tmpmzmine"
+"C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser" -batch "D:\batch\my_batch_file.xml" -memory none -temp "D:\tmpmzmine"
 ```
 
 
 **Start mzmine batch on machines with enough memory (RAM) with -memory all** this will disable memory mapping to temporary files. 
 ```
-"C:\Program Files\mzmine\mzmine.exe" -user "D:\user\testuser.mzuser" -batch "D:\batch\my_batch_file.xml" -memory all -temp "D:\tmpmzmine"
+"C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser" -batch "D:\batch\my_batch_file.xml" -memory all -temp "D:\tmpmzmine"
 ```
 
 ## macOS
