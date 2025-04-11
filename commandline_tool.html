@@ -4502,18 +4502,26 @@
 Then locate the user file in your system USER directory under /.mzmine/users/. The most recently active user is automatically selected for mzmine processing,
 but an .mzuser file can be passed in as command-line argument to <strong>-user</strong>.</p>
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
-<p>An easy way to start mzmine with arguments is to create a shortcut to the mzmine.exe, right-click, and define the target with additional arguments. This example runs mzmine in batch mode (headless), imports the specified batch file, overrides the memory management to <strong>none</strong> (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the <em>memory</em> or <em>temp</em> arguments, the values stored in the current <em>preferences</em> file will be used, or the default values if no <em>preferences</em> file was found.  </p>
+<p>For command-line mode, the mzmine_console.exe is preferred as it will print the logging output to the console. </p>
+<p>An easy way to start mzmine with arguments is to create a shortcut to the mzmine.exe or the mzmine_console.exe, right-click, and define the target with additional arguments. This example runs mzmine in batch mode (headless), imports the specified batch file, overrides the memory management to <strong>none</strong> (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the <em>memory</em> or <em>temp</em> arguments, the values stored in the current <em>preferences</em> file will be used, or the default values if no <em>preferences</em> file was found.  </p>
+<p><strong>Login to a user in command-line mode</strong>
+<div class="highlight"><pre><span></span><code># login in browser
+&quot;C:\Program Files\mzmine\mzmine_console.exe&quot; -login
+
+# or in the terminal
+&quot;C:\Program Files\mzmine\mzmine_console.exe&quot; -login-console 
+</code></pre></div></p>
 <p><strong>Process all .mzML files in a folder by the provided batch file</strong>
-<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\mzmine\mzmine.exe&quot; -user &quot;D:\user\testuser.mzuser&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -input &quot;D:\Data\*.mzML&quot;
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\mzmine\mzmine_console.exe&quot; -user &quot;D:\user\testuser.mzuser&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -input &quot;D:\Data\*.mzML&quot;
 </code></pre></div></p>
 <p><strong>Defining the temp folder, otherwise uses the one specified in local configuration</strong>
-<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\mzmine\mzmine.exe&quot; -user &quot;D:\user\testuser.mzuser&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -temp &quot;D:\tmpmzmine&quot;
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\mzmine\mzmine_console.exe&quot; -user &quot;D:\user\testuser.mzuser&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -temp &quot;D:\tmpmzmine&quot;
 </code></pre></div></p>
 <p><strong>Start mzmine batch with memory mapping (DEFAULT)</strong>
-<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\mzmine\mzmine.exe&quot; -user &quot;D:\user\testuser.mzuser&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory none -temp &quot;D:\tmpmzmine&quot;
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\mzmine\mzmine_console.exe&quot; -user &quot;D:\user\testuser.mzuser&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory none -temp &quot;D:\tmpmzmine&quot;
 </code></pre></div></p>
 <p><strong>Start mzmine batch on machines with enough memory (RAM) with -memory all</strong> this will disable memory mapping to temporary files. 
-<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\mzmine\mzmine.exe&quot; -user &quot;D:\user\testuser.mzuser&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory all -temp &quot;D:\tmpmzmine&quot;
+<div class="highlight"><pre><span></span><code>&quot;C:\Program Files\mzmine\mzmine_console.exe&quot; -user &quot;D:\user\testuser.mzuser&quot; -batch &quot;D:\batch\my_batch_file.xml&quot; -memory all -temp &quot;D:\tmpmzmine&quot;
 </code></pre></div></p>
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
 <p>If the app was installed to the <em>Applications</em> folder, run this command in the terminal to run a batch file:
@@ -4628,7 +4636,7 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="September 16, 2024 19:22:39">September 16, 2024 19:22:39</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="April 11, 2025 13:51:03">April 11, 2025 13:51:03</span>
   </span>
 
     
