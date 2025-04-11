@@ -110,6 +110,18 @@ a few minutes.
 Users can be logged in via command-line arguments to run mzmine in batch mode.
 See [CLI tools](../commandline_tool.md) for more information.
 
+The most important commands on Windows are:
+```
+# login in browser
+"C:\Program Files\mzmine\mzmine_console.exe" -login
+
+# login in the terminal console
+"C:\Program Files\mzmine\mzmine_console.exe" -login-console
+ 
+# list all users
+"C:\Program Files\mzmine\mzmine_console.exe" -list-users 
+```
+
 ## Alternative Sign in / Sign up
 
 Alternatively users can register on the mzio.io
