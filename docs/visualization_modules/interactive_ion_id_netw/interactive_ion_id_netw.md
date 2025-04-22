@@ -14,7 +14,7 @@ This module can be used to reveal unknown ion-ligand complexes, enhance annotati
 
 More detailed description of theory behind IIMN can be found in the following video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=UnqVtZngzl0&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=1&t=2516s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UnqVtZngzl0?si=qpwvpW-0HT2H2ZAF&amp;start=2517" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## **Parameters**
 
