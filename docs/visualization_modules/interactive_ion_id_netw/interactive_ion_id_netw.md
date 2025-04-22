@@ -10,11 +10,11 @@ To overcome this bottleneck, MZmine employes **Ion Identity Molecular Networking
 
 This module can be used to reveal unknown ion-ligand complexes, enhance annotation within molecular networks, and facilitate the expansion of spectral reference libraries. 
 
-:material-lightbulb: Using IIMN it is possible to query [GNPS](https://gnps.ucsd.edu/ProteoSAFe/libraries.jsp) and other spectral libraries for matches.
+:material-lightbulb: Using IIMN it is possible to query [GNPS](https://external.gnps2.org/gnpslibrary) and other spectral libraries for matches.
 
 More detailed description of theory behind IIMN can be found in the following video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YzMBx_oSvb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=UnqVtZngzl0&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=1&t=2516s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## **Parameters**
 
