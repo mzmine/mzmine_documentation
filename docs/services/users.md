@@ -17,8 +17,7 @@ including:
 - **Read and accept the [Terms and Conditions](https://mzio.io/general-terms-and-conditions/)**
 
 After clicking the register button, a verification email is sent to the provided address. This can
-take
-a few minutes.
+take a few minutes.
 
 1. Please open the email
 2. Click the verification link that redirects to the user portal
@@ -133,6 +132,18 @@ the ![btn_tool.png](img/btn_tool.png). Set a proxy and retry with the login scre
 try the alternative sign in by username and password directly. The mzmine CLI also provides the *
 *-login-console** argument for alternative sign in.
 
+## mzmine's educational non-profit program
+
+During your registration in mzmine, you may enter an email address of your educational institution. 
+This will grant automatic access to our academic non-profit program if your institution is already
+listed with us. If you receive a trial version, please reach out to us and provide any information 
+required to prove the educational non-profit status. 
+
+Each year, academic users will need to update their user profile, potentially changing to their 
+current institution and new email address, and to verify their email. This will renew your academic 
+license if your institution is still in our program. Otherwise, users are granted a trial version.   
+
+
 ## Frequently asked questions (FAQ)
 
 1. Why is the link to verify my email address missing?
@@ -152,3 +163,7 @@ try the alternative sign in by username and password directly. The mzmine CLI al
       retry.
     - Otherwise, try the alternative sign in by username and password. This requires an existing
       mzmine user that can also be registered on the website. 
+
+4. My academic account expires soon, how to renew my account?
+    - Once the license is expired, on your next login you will need to update your user details and revalidate your academic email address. If successful this will grant another year in our academic non-profit program.
+    - During your profile update, you will have the chance to change to your new institution and email address.
