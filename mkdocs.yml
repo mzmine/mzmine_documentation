@@ -106,6 +106,7 @@ nav:
           - Retention time calibration: module_docs/norm_rt_calibration/norm_rt_calibration.md
           - Linear normalizer: module_docs/norm_linear/norm_linear.md
           - Standard compound normalizer: module_docs/norm_stand_cmpd/norm_stand_cmpd.md
+          - Retention index calculation: module_docs/norm_ri/norm_ri.md
       #      TODO decide what to do with spectral lib creation
       #  - Spectral library creation: module_docs/id_spectral_library_creation/spectral_library_creation.md
       - Precursor mass search:
