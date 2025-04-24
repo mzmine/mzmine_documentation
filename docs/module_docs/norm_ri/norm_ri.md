@@ -31,7 +31,12 @@ A list of CSV files, each with a list of straight-chain alkanes and their respec
 | 10       | 21.615 |
 | 11       | 26.181 |
 
-Each file's name should contain the date that the measurements were taken.
+Each file's name should contain the date that the measurements were taken. Accepted formats:
+
+- yyyy-MM-dd like 2025-12-25
+- yyyyMMdd like 20251225
+- with time: yyyy-MM-ddTHH-mm-ss like 2025-12-25T20-30-15
+- with time: yyyy-MM-dd_HH-mm-ss like 2025-12-25_20-30-15
 
 
 #### **Extrapolation**
