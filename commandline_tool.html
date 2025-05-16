@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
@@ -4573,6 +4573,7 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
 <th>Argument</th>
 <th>Options (<strong>default</strong>)</th>
 <th>Description</th>
+<th style="text-align: left;">Available since</th>
 </tr>
 </thead>
 <tbody>
@@ -4580,70 +4581,89 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
 <td>-h and -help</td>
 <td>no argument</td>
 <td>show help</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td>-u and -user</td>
 <td>a path, e.g., "D:\myuser.mzuser"</td>
 <td>Path to an .mzuser file to login a user. This file is copied to the users directory. To obtain a user file, login in the mzmine graphical user interface (GUI) or command line interface (CLI). User files can be found in your system USER directory in /.mzmine/users/ after login. A user can be used in an offline environment for a certain duration.</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td>-login</td>
 <td>no argument</td>
 <td>Use the command-line to login to a user. This will open the login website in the system internet browser, if supported, or prompts an input for the user credentials into the console. After successful login, a user file will be copied to your system USER directory in /.mzmine/users/. And the current user will be saved to the configuration. The created user file can be accessed with the -user argument on the next startup.</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td>-login-console</td>
 <td>no argument</td>
 <td>Use the command-line to login to a user. This option prompts the user for username and password. After successful login, a user file will be copied to your system USER directory in /.mzmine/users/. And the current user will be saved to the configuration. The created user file can be accessed with the -user argument on the next startup.</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td>-list-users</td>
 <td>no argument</td>
 <td>List all users available on this system. The users are read from the system USER directory /.mzmine/users/.</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td>-b and -batch</td>
 <td>a path, e.g., "D:\batch.mzbatch"</td>
 <td>Path to batch file that will be run in command-line mode.</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td>-i and -input</td>
 <td>a txt file or glob pattern, e.g., "D:\Data*.mzML"</td>
 <td>input data files. Either defined in a .txt text file with one file per line or by glob pattern matching. To match all .mzML files in a path: -i "D:\Data\*.mzML"</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td>-l and -libraries</td>
 <td>a txt file or glob pattern, e.g., "D:\Data*.json"</td>
 <td>spectral library files. Either defined in a .txt text file with one file per line or by glob pattern matching. To match all .json or .mgf files in a path: -libraries "D:\Data\*.json"</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td>-o and -output</td>
 <td>An output path and base filename, e.g., "D:\basename"</td>
 <td>The base file name will be extended by default module names to export all files.</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td>-m and -memory</td>
 <td><strong>none</strong>, all, features, centroids, raw, masses_features</td>
 <td>Defines what data is kept in memory (RAM) or otherwise memory mapped to the temp directory. Generally this setting should be <em>none</em>. If memory is no issue this option might be set to <em>all</em> process all spectral and feature data in memory. The option <em>masses_features</em> keeps centroid mass lists and features in memory while memory mapping raw spectral data.</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td>-t and -temp</td>
 <td>a path, e.g., "-temp "D:\tmpmzmine\"</td>
 <td>The defined directory should be on a fast drive (usually SSD &gt; HDD &gt; network drive) with enough free space. Local drives are usually preferred. mzmine uses memory mapping to efficiently store and access spectral and feature data. This can lead to a considerable temporary consumption of disk space. Make sure that the selected drive has enough space (maybe 20 GB + 1 GB/10 files; generously over estimated).</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td>-p and -pref</td>
 <td>a path, e.g., "D:\config.mzconfig"</td>
 <td>An mzmine configuration file in xml format. The general preferences.</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td>-threads</td>
 <td>int number of threads or 'auto'</td>
 <td>replace the preference parameter with either 'auto' to detect the number of available cores - or an int number of threads for processing.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td>-ignore-parameter-warnings</td>
+<td>no argument</td>
+<td>When a .mzbatch file from an older mzmine version was loaded that may have an influence on the mzmine processing, the cli mode will fail by default, printing a message of the affected parameters. If this argument is set, the warnings will be ignored and the batch will be run anyway.</td>
+<td style="text-align: left;">4.6.14</td>
 </tr>
 </tbody>
 </table>
-<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -4664,7 +4684,7 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="April 30, 2025 20:43:40">April 30, 2025 20:43:40</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="May 16, 2025 10:33:40">May 16, 2025 10:33:40</span>
   </span>
 
     
@@ -4681,6 +4701,7 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
     <nav>
       
         <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
+        <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
     </nav>
   </span>
@@ -4733,10 +4754,10 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="javascripts/mathjax.js"></script>
       

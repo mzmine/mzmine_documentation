@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -4290,7 +4290,7 @@
         <li class="md-nav__item">
   <a href="#9-integrate-a-newly-created-module-into-mzmine-gui" class="md-nav__link">
     <span class="md-ellipsis">
-      9. Integrate a newly created module into MZmine GUI
+      9. Integrate a newly created module into mzmine GUI
     </span>
   </a>
   
@@ -4614,7 +4614,7 @@
         <li class="md-nav__item">
   <a href="#9-integrate-a-newly-created-module-into-mzmine-gui" class="md-nav__link">
     <span class="md-ellipsis">
-      9. Integrate a newly created module into MZmine GUI
+      9. Integrate a newly created module into mzmine GUI
     </span>
   </a>
   
@@ -4666,13 +4666,13 @@
   
 
 
-<h1 id="key-steps-to-mzmine-module-development"><strong>Key steps to MZmine module development</strong><a class="headerlink" href="#key-steps-to-mzmine-module-development" title="Permanent link">&para;</a></h1>
+<h1 id="key-steps-to-mzmine-module-development"><strong>Key steps to mzmine module development</strong><a class="headerlink" href="#key-steps-to-mzmine-module-development" title="Permanent link">&para;</a></h1>
 <h2 id="coding-tutorials">Coding tutorials<a class="headerlink" href="#coding-tutorials" title="Permanent link">&para;</a></h2>
 <p>Detailed coding tutorials by Robin Schmid:</p>
 <p><a href="https://www.youtube.com/watch?v=T02H4rwyCvk&amp;list=PL4L2Xw5k8ITzQEq677w-UicporguCgAt3&amp;ab_channel=RobinSchmid">01. First module and new columns</a></p>
 <p><a href="https://www.youtube.com/watch?v=tTJSoxw8fjU&amp;ab_channel=RobinSchmid">02. Git, GitHub, contribute code to MZmine</a></p>
 <h2 id="1-define-the-role-and-functionality-of-your-module"><strong>1. Define the role and functionality of your module</strong><a class="headerlink" href="#1-define-the-role-and-functionality-of-your-module" title="Permanent link">&para;</a></h2>
-<p>Each module in MZmine belongs to some module category (see <a href="general_structure.html">MZmine architecture</a>). Before starting, try to define category, to which your module will belong - raw data processing, feature detection, visualization, etc.</p>
+<p>Each module in mzmine belongs to some module category (see <a href="general_structure.html">MZmine architecture</a>). Before starting, try to define category, to which your module will belong - raw data processing, feature detection, visualization, etc.</p>
 <p>A good idea is to browse already existing modules. Currently, MZmine contains more than 100 modules, so there are high chances that one of the existing modules may carry similar functionality to the one you want to code. This can help you to create your own module. Assess the scale of the added functionality and how the new module can be integrated with the existing ones.
 For example, if you'd like to add a new filter for the feature list rows, the best option might be not to create a new module but to add the new option as a parameter to the already existing Feature list rows filter.</p>
 <h2 id="2-create-a-new-branch-locally-for-your-changes"><strong>2. Create a new branch locally for your changes</strong><a class="headerlink" href="#2-create-a-new-branch-locally-for-your-changes" title="Permanent link">&para;</a></h2>
@@ -4712,15 +4712,15 @@ You can modify the message by the logger, check for cancelled state, and update 
 <p class="admonition-title">Tip</p>
 <p>If you have to implement some method to process scans, check ScanUtils first, it might already have been implemented.</p>
 </div>
-<h2 id="9-integrate-a-newly-created-module-into-mzmine-gui"><strong>9. Integrate a newly created module into MZmine GUI</strong><a class="headerlink" href="#9-integrate-a-newly-created-module-into-mzmine-gui" title="Permanent link">&para;</a></h2>
-<p>As the last step, for your module to be accessible, add it to MainMenu.fxml file. If you wish your module to be accessible in the batch mode, add it in the BatchModeModulesList</p>
+<h2 id="9-integrate-a-newly-created-module-into-mzmine-gui"><strong>9. Integrate a newly created module into mzmine GUI</strong><a class="headerlink" href="#9-integrate-a-newly-created-module-into-mzmine-gui" title="Permanent link">&para;</a></h2>
+<p>As the last step, for your module to be accessible, add it to the AbstractWorkspace.java or the AcademicWorkspace.java file. If you wish your module to be accessible in the batch mode, add it in the BatchModeModulesList</p>
 <h2 id="10-test-and-debug"><strong>10. Test and debug</strong><a class="headerlink" href="#10-test-and-debug" title="Permanent link">&para;</a></h2>
 <p>Before pushing your final changes to the remote branch, try to thoroughly test your code. Think about corner cases and possible bugs. Using IDE tools can be extremely useful in this step.</p>
 <h2 id="11-create-documentation"><strong>11. Create documentation</strong><a class="headerlink" href="#11-create-documentation" title="Permanent link">&para;</a></h2>
 <p>Prepare a description for your module that will go into the documentation. Creating a thorough documentation will help more people to used and understand your module. The documentation template can be found <a href="../contribute_docu_template.html">here</a></p>
 <h2 id="12-push-to-the-remote-branch-and-create-a-pull-request"><strong>12. Push to the remote branch and create a pull request</strong><a class="headerlink" href="#12-push-to-the-remote-branch-and-create-a-pull-request" title="Permanent link">&para;</a></h2>
 <p>After you coded and tested your module, you can push your changes to the remote branch and create a pull request. After your pull request will be reviewed by one of the main contributors. There might be some comments that you'll have to address. After that, your module will be merged into the master branch and become a part of MZmine!</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -4741,7 +4741,7 @@ You can modify the message by the logger, check for cancelled state, and update 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 24, 2022 21:13:07">November 24, 2022 21:13:07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="May 16, 2025 10:36:49">May 16, 2025 10:36:49</span>
   </span>
 
     
@@ -4752,11 +4752,12 @@ You can modify the message by the logger, check for cancelled state, and update 
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
       
     </span>
     <nav>
       
+        <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
     </nav>
   </span>
@@ -4809,10 +4810,10 @@ You can modify the message by the logger, check for cancelled state, and update 
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
