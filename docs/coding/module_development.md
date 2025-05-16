@@ -1,4 +1,4 @@
-# **Key steps to MZmine module development**
+# **Key steps to mzmine module development**
 
 ## Coding tutorials
 
@@ -10,7 +10,7 @@ Detailed coding tutorials by Robin Schmid:
 
 ## **1. Define the role and functionality of your module**
 
-Each module in MZmine belongs to some module category (see [MZmine architecture](general_structure.md)). Before starting, try to define category, to which your module will belong - raw data processing, feature detection, visualization, etc.
+Each module in mzmine belongs to some module category (see [MZmine architecture](general_structure.md)). Before starting, try to define category, to which your module will belong - raw data processing, feature detection, visualization, etc.
 
 A good idea is to browse already existing modules. Currently, MZmine contains more than 100 modules, so there are high chances that one of the existing modules may carry similar functionality to the one you want to code. This can help you to create your own module. Assess the scale of the added functionality and how the new module can be integrated with the existing ones.
 For example, if you'd like to add a new filter for the feature list rows, the best option might be not to create a new module but to add the new option as a parameter to the already existing Feature list rows filter.
@@ -63,9 +63,9 @@ You can modify the message by the logger, check for cancelled state, and update 
     If you have to implement some method to process scans, check ScanUtils first, it might already have been implemented.
 
 
-## **9. Integrate a newly created module into MZmine GUI**
+## **9. Integrate a newly created module into mzmine GUI**
 
-As the last step, for your module to be accessible, add it to MainMenu.fxml file. If you wish your module to be accessible in the batch mode, add it in the BatchModeModulesList
+As the last step, for your module to be accessible, add it to the AbstractWorkspace.java or the AcademicWorkspace.java file. If you wish your module to be accessible in the batch mode, add it in the BatchModeModulesList
 
 ## **10. Test and debug**
 
