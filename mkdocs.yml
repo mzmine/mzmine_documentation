@@ -28,6 +28,7 @@ nav:
           - Spectral library export: module_docs/io_spectral_library_export/spectral_library_generation.md
           - Export scans (feature list): module_docs/io_scans_feature/export-scans-feature.md
           - Export MRM to TSV: module_docs/io_mrmtotsv/mrm-to-tsv.md
+          - Export feature data: module_docs/io_export_feature_data/export-feature-data.md
       #         TODO Add feature list import/export
       - File merging:
           - Raw data files merging: module_docs/featdet_file_merging/raw-files-merging.md
