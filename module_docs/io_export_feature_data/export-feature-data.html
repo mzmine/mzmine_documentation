@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/coding/upgrade_jdk_version.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/io_export_feature_data/export-feature-data.html">
       
       
-        <link rel="prev" href="../contribute_intellij.html">
+        <link rel="prev" href="../io_mrmtotsv/mrm-to-tsv.html">
       
       
-        <link rel="next" href="general_structure.html">
+        <link rel="next" href="../featdet_file_merging/raw-files-merging.html">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Upgrade JDK version - mzmine documentation</title>
+        <title>Export feature data - mzmine documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#upgrading-jdk-version-in-development-builds" class="md-skip">
+        <a href="#export-feature-data" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +90,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="mzmine documentation" class="md-header__button md-logo" aria-label="mzmine documentation" data-md-component="logo">
+    <a href="../../index.html" title="mzmine documentation" class="md-header__button md-logo" aria-label="mzmine documentation" data-md-component="logo">
       
-  <img src="../img/mzmine_logo_white.png" alt="logo">
+  <img src="../../img/mzmine_logo_white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Upgrade JDK version
+              Export feature data
             
           </span>
         </div>
@@ -199,9 +199,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="mzmine documentation" class="md-nav__button md-logo" aria-label="mzmine documentation" data-md-component="logo">
+    <a href="../../index.html" title="mzmine documentation" class="md-nav__button md-logo" aria-label="mzmine documentation" data-md-component="logo">
       
-  <img src="../img/mzmine_logo_white.png" alt="logo">
+  <img src="../../img/mzmine_logo_white.png" alt="logo">
 
     </a>
     mzmine documentation
@@ -228,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -250,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started.html" class="md-nav__link">
+      <a href="../../getting_started.html" class="md-nav__link">
         
   
   
@@ -272,7 +272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../services/users.html" class="md-nav__link">
+      <a href="../../services/users.html" class="md-nav__link">
         
   
   
@@ -294,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../learners_corner.html" class="md-nav__link">
+      <a href="../../learners_corner.html" class="md-nav__link">
         
   
   
@@ -316,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../main-window-overview.html" class="md-nav__link">
+      <a href="../../main-window-overview.html" class="md-nav__link">
         
   
   
@@ -338,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wizard.html" class="md-nav__link">
+      <a href="../../wizard.html" class="md-nav__link">
         
   
   
@@ -360,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_conversion.html" class="md-nav__link">
+      <a href="../../data_conversion.html" class="md-nav__link">
         
   
   
@@ -382,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../performance.html" class="md-nav__link">
+      <a href="../../performance.html" class="md-nav__link">
         
   
   
@@ -404,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../commandline_tool.html" class="md-nav__link">
+      <a href="../../commandline_tool.html" class="md-nav__link">
         
   
   
@@ -426,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tool_integration.html" class="md-nav__link">
+      <a href="../../tool_integration.html" class="md-nav__link">
         
   
   
@@ -445,18 +445,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
@@ -472,7 +474,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Processing modules
@@ -483,18 +485,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" checked>
         
           
           <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
@@ -510,7 +514,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11_1">
             <span class="md-nav__icon md-icon"></span>
             I/O
@@ -524,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io/data-import.html" class="md-nav__link">
+      <a href="../io/data-import.html" class="md-nav__link">
         
   
   
@@ -547,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io/data-export.html" class="md-nav__link">
+      <a href="../io/data-export.html" class="md-nav__link">
         
   
   
@@ -570,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io/feat-list-import.html" class="md-nav__link">
+      <a href="../io/feat-list-import.html" class="md-nav__link">
         
   
   
@@ -593,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io/feat-list-export.html" class="md-nav__link">
+      <a href="../io/feat-list-export.html" class="md-nav__link">
         
   
   
@@ -616,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io/data-exchange-with-other-software.html" class="md-nav__link">
+      <a href="../io/data-exchange-with-other-software.html" class="md-nav__link">
         
   
   
@@ -639,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io_spectral_library_export/spectral_library_generation.html" class="md-nav__link">
+      <a href="../io_spectral_library_export/spectral_library_generation.html" class="md-nav__link">
         
   
   
@@ -662,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io_scans_feature/export-scans-feature.html" class="md-nav__link">
+      <a href="../io_scans_feature/export-scans-feature.html" class="md-nav__link">
         
   
   
@@ -685,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/io_mrmtotsv/mrm-to-tsv.html" class="md-nav__link">
+      <a href="../io_mrmtotsv/mrm-to-tsv.html" class="md-nav__link">
         
   
   
@@ -705,10 +709,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../module_docs/io_export_feature_data/export-feature-data.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Export feature data
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="export-feature-data.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -719,6 +745,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature lists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-file-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export file name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export format
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -777,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_file_merging/raw-files-merging.html" class="md-nav__link">
+      <a href="../featdet_file_merging/raw-files-merging.html" class="md-nav__link">
         
   
   
@@ -800,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_mobility_scan_merging/mobility-scan-merging.html" class="md-nav__link">
+      <a href="../featdet_mobility_scan_merging/mobility-scan-merging.html" class="md-nav__link">
         
   
   
@@ -869,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_raw_data/filter-scan-by-scan.html" class="md-nav__link">
+      <a href="../filter_raw_data/filter-scan-by-scan.html" class="md-nav__link">
         
   
   
@@ -892,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_raw_data/crop-filter.html" class="md-nav__link">
+      <a href="../filter_raw_data/crop-filter.html" class="md-nav__link">
         
   
   
@@ -915,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_raw_data/baseline-corrections.html" class="md-nav__link">
+      <a href="../filter_raw_data/baseline-corrections.html" class="md-nav__link">
         
   
   
@@ -938,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_raw_data/align-scans.html" class="md-nav__link">
+      <a href="../filter_raw_data/align-scans.html" class="md-nav__link">
         
   
   
@@ -961,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_raw_data/scan_smoothing.html" class="md-nav__link">
+      <a href="../filter_raw_data/scan_smoothing.html" class="md-nav__link">
         
   
   
@@ -1030,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_mass_detection/mass-detection.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/mass-detection.html" class="md-nav__link">
         
   
   
@@ -1053,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_mass_detection/mass-detection-algorithms.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/mass-detection-algorithms.html" class="md-nav__link">
         
   
   
@@ -1076,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/FTMS-shoulder-peak-filter.html" class="md-nav__link">
         
   
   
@@ -1099,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_mass_detection/mass-calibration.html" class="md-nav__link">
+      <a href="../featdet_mass_detection/mass-calibration.html" class="md-nav__link">
         
   
   
@@ -1168,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html" class="md-nav__link">
+      <a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html" class="md-nav__link">
         
   
   
@@ -1191,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ms_featdet/featdet_gridmass/gridmass.html" class="md-nav__link">
+      <a href="../lc-ms_featdet/featdet_gridmass/gridmass.html" class="md-nav__link">
         
   
   
@@ -1214,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.html" class="md-nav__link">
+      <a href="../lc-ms_featdet/targeted_featdet/targeted-featdet.html" class="md-nav__link">
         
   
   
@@ -1237,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ms_featdet/featdet_results/featdet_results.html" class="md-nav__link">
+      <a href="../lc-ms_featdet/featdet_results/featdet_results.html" class="md-nav__link">
         
   
   
@@ -1306,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.html" class="md-nav__link">
+      <a href="../lc-ims-ms_featdet/featdet_ims_expander/ims-expander.html" class="md-nav__link">
         
   
   
@@ -1329,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-nav__link">
+      <a href="../lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.html" class="md-nav__link">
         
   
   
@@ -1352,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.html" class="md-nav__link">
+      <a href="../lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.html" class="md-nav__link">
         
   
   
@@ -1421,7 +1509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/imaging_featdet/featdet_image_builder/image-builder.html" class="md-nav__link">
+      <a href="../imaging_featdet/featdet_image_builder/image-builder.html" class="md-nav__link">
         
   
   
@@ -1490,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/mrm_mrmtoscans/mrm-to-scans.html" class="md-nav__link">
+      <a href="../mrm_mrmtoscans/mrm-to-scans.html" class="md-nav__link">
         
   
   
@@ -1513,7 +1601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/mrm_setquant/mrm-set-quant-mass.html" class="md-nav__link">
+      <a href="../mrm_setquant/mrm-set-quant-mass.html" class="md-nav__link">
         
   
   
@@ -1544,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_smoothing/smoothing.html" class="md-nav__link">
+      <a href="../featdet_smoothing/smoothing.html" class="md-nav__link">
         
   
   
@@ -1605,7 +1693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html" class="md-nav__link">
         
   
   
@@ -1628,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_resolver_adap/adap-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_adap/adap-resolver.html" class="md-nav__link">
         
   
   
@@ -1651,7 +1739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_resolver_baseline/baseline-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_baseline/baseline-resolver.html" class="md-nav__link">
         
   
   
@@ -1674,7 +1762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_resolver_centwave/centwave-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_centwave/centwave-resolver.html" class="md-nav__link">
         
   
   
@@ -1697,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_resolver_noise_ampl/noise-ampl-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_noise_ampl/noise-ampl-resolver.html" class="md-nav__link">
         
   
   
@@ -1720,7 +1808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_resolver_savitzky-golay/savitzky-golay-resolver.html" class="md-nav__link">
+      <a href="../featdet_resolver_savitzky-golay/savitzky-golay-resolver.html" class="md-nav__link">
         
   
   
@@ -1789,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_spectraldeconvolutiongc/spectraldeconvolutiongc.html" class="md-nav__link">
+      <a href="../featdet_spectraldeconvolutiongc/spectraldeconvolutiongc.html" class="md-nav__link">
         
   
   
@@ -1820,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_ccs_calibration/ccs_calibration.html" class="md-nav__link">
+      <a href="../id_ccs_calibration/ccs_calibration.html" class="md-nav__link">
         
   
   
@@ -1843,7 +1931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.html" class="md-nav__link">
+      <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html" class="md-nav__link">
         
   
   
@@ -1866,7 +1954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/featdet_ms2_scan_pairing/ms2_maldi_scan_pairing.html" class="md-nav__link">
+      <a href="../featdet_ms2_scan_pairing/ms2_maldi_scan_pairing.html" class="md-nav__link">
         
   
   
@@ -1927,7 +2015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_isotope_filter/isotope_filter.html" class="md-nav__link">
+      <a href="../filter_isotope_filter/isotope_filter.html" class="md-nav__link">
         
   
   
@@ -1950,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_isotope_finder/isotope_finder.html" class="md-nav__link">
+      <a href="../filter_isotope_finder/isotope_finder.html" class="md-nav__link">
         
   
   
@@ -1973,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_isotope_peak_scanner/isotope_peak_scanner.html" class="md-nav__link">
+      <a href="../filter_isotope_peak_scanner/isotope_peak_scanner.html" class="md-nav__link">
         
   
   
@@ -2042,7 +2130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_ion_networking/metacorr/metacorr.html" class="md-nav__link">
+      <a href="../id_ion_networking/metacorr/metacorr.html" class="md-nav__link">
         
   
   
@@ -2065,7 +2153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_ion_networking/iin/iin.html" class="md-nav__link">
+      <a href="../id_ion_networking/iin/iin.html" class="md-nav__link">
         
   
   
@@ -2088,7 +2176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/group_spectral_net/molecular_networking.html" class="md-nav__link">
+      <a href="../group_spectral_net/molecular_networking.html" class="md-nav__link">
         
   
   
@@ -2157,7 +2245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_duplicate_features/duplicate_feature_filter.html" class="md-nav__link">
+      <a href="../filter_duplicate_features/duplicate_feature_filter.html" class="md-nav__link">
         
   
   
@@ -2180,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/feature_list_row_filter/feature_list_rows_filter.html" class="md-nav__link">
+      <a href="../feature_list_row_filter/feature_list_rows_filter.html" class="md-nav__link">
         
   
   
@@ -2203,7 +2291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/feature_filter/feature_filter.html" class="md-nav__link">
+      <a href="../feature_filter/feature_filter.html" class="md-nav__link">
         
   
   
@@ -2226,7 +2314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_peakcomparison_row_filter/filter_peakcomparison_row_filter.html" class="md-nav__link">
+      <a href="../filter_peakcomparison_row_filter/filter_peakcomparison_row_filter.html" class="md-nav__link">
         
   
   
@@ -2249,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_neutral_loss/filter_neutral_loss.html" class="md-nav__link">
+      <a href="../filter_neutral_loss/filter_neutral_loss.html" class="md-nav__link">
         
   
   
@@ -2272,7 +2360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_mobilitymzregionextraction/filter_mobilitymzregionextraction.html" class="md-nav__link">
+      <a href="../filter_mobilitymzregionextraction/filter_mobilitymzregionextraction.html" class="md-nav__link">
         
   
   
@@ -2295,7 +2383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_blanksubtraction/filter_blanksubtraction.html" class="md-nav__link">
+      <a href="../filter_blanksubtraction/filter_blanksubtraction.html" class="md-nav__link">
         
   
   
@@ -2364,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/align_join_aligner/join_aligner.html" class="md-nav__link">
+      <a href="../align_join_aligner/join_aligner.html" class="md-nav__link">
         
   
   
@@ -2387,7 +2475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/align_merge_lists/align_merge_lists.html" class="md-nav__link">
+      <a href="../align_merge_lists/align_merge_lists.html" class="md-nav__link">
         
   
   
@@ -2410,7 +2498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/align_ransac/align_ransac.html" class="md-nav__link">
+      <a href="../align_ransac/align_ransac.html" class="md-nav__link">
         
   
   
@@ -2433,7 +2521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/align_gcei/align_gc_ei.html" class="md-nav__link">
+      <a href="../align_gcei/align_gc_ei.html" class="md-nav__link">
         
   
   
@@ -2456,7 +2544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/align_lc-image/align_lc-image.html" class="md-nav__link">
+      <a href="../align_lc-image/align_lc-image.html" class="md-nav__link">
         
   
   
@@ -2479,7 +2567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/align_mrm/mrm-aligner.html" class="md-nav__link">
+      <a href="../align_mrm/mrm-aligner.html" class="md-nav__link">
         
   
   
@@ -2548,7 +2636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/gapfill_peak_finder/gap-filling.html" class="md-nav__link">
+      <a href="../gapfill_peak_finder/gap-filling.html" class="md-nav__link">
         
   
   
@@ -2571,7 +2659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/gapfill_same_mz_and_RT_range/same_mz_and_RT_range_gap_filler.html" class="md-nav__link">
+      <a href="../gapfill_same_mz_and_RT_range/same_mz_and_RT_range_gap_filler.html" class="md-nav__link">
         
   
   
@@ -2640,7 +2728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/norm_rt_calibration/norm_rt_calibration.html" class="md-nav__link">
+      <a href="../norm_rt_calibration/norm_rt_calibration.html" class="md-nav__link">
         
   
   
@@ -2663,7 +2751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/norm_linear/norm_linear.html" class="md-nav__link">
+      <a href="../norm_linear/norm_linear.html" class="md-nav__link">
         
   
   
@@ -2686,7 +2774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/norm_stand_cmpd/norm_stand_cmpd.html" class="md-nav__link">
+      <a href="../norm_stand_cmpd/norm_stand_cmpd.html" class="md-nav__link">
         
   
   
@@ -2709,7 +2797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/norm_ri/norm_ri.html" class="md-nav__link">
+      <a href="../norm_ri/norm_ri.html" class="md-nav__link">
         
   
   
@@ -2778,7 +2866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.html" class="md-nav__link">
+      <a href="../id_prec_local_cmpd_db/local-cmpd-db-search.html" class="md-nav__link">
         
   
   
@@ -2801,7 +2889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_prec_local_spectra_lib/local-spectra-lib-search.html" class="md-nav__link">
+      <a href="../id_prec_local_spectra_lib/local-spectra-lib-search.html" class="md-nav__link">
         
   
   
@@ -2870,7 +2958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_spectral_library_search/spectral_library_search.html" class="md-nav__link">
+      <a href="../id_spectral_library_search/spectral_library_search.html" class="md-nav__link">
         
   
   
@@ -2893,7 +2981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_spectra_NIST/NIST-ms-search.html" class="md-nav__link">
+      <a href="../id_spectra_NIST/NIST-ms-search.html" class="md-nav__link">
         
   
   
@@ -2916,7 +3004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_spectra_chem_formula/chem-formula-pred.html" class="md-nav__link">
+      <a href="../id_spectra_chem_formula/chem-formula-pred.html" class="md-nav__link">
         
   
   
@@ -2939,7 +3027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_lipid_annotation/lipid-annotation.html" class="md-nav__link">
+      <a href="../id_lipid_annotation/lipid-annotation.html" class="md-nav__link">
         
   
   
@@ -2962,7 +3050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_ms2_similarity/ms2-similarity-search.html" class="md-nav__link">
+      <a href="../id_ms2_similarity/ms2-similarity-search.html" class="md-nav__link">
         
   
   
@@ -3031,7 +3119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/filter_scan_merge_select/scan_merge_select.html" class="md-nav__link">
+      <a href="../filter_scan_merge_select/scan_merge_select.html" class="md-nav__link">
         
   
   
@@ -3054,7 +3142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/align_join_aligner/spectra_similarity.html" class="md-nav__link">
+      <a href="../align_join_aligner/spectra_similarity.html" class="md-nav__link">
         
   
   
@@ -3130,7 +3218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/visualization_overview/visualization-overview.html" class="md-nav__link">
+      <a href="../../visualization_modules/visualization_overview/visualization-overview.html" class="md-nav__link">
         
   
   
@@ -3191,7 +3279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/raw_data_overview/raw_data_overview.html" class="md-nav__link">
+      <a href="../../visualization_modules/raw_data_overview/raw_data_overview.html" class="md-nav__link">
         
   
   
@@ -3214,7 +3302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/raw_data_overview/raw_data_additional.html" class="md-nav__link">
+      <a href="../../visualization_modules/raw_data_overview/raw_data_additional.html" class="md-nav__link">
         
   
   
@@ -3245,7 +3333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/ims_raw_data_overview/IM-data-visualisation.html" class="md-nav__link">
+      <a href="../../visualization_modules/ims_raw_data_overview/IM-data-visualisation.html" class="md-nav__link">
         
   
   
@@ -3268,7 +3356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/image_raw_data/image_viewer.html" class="md-nav__link">
+      <a href="../../visualization_modules/image_raw_data/image_viewer.html" class="md-nav__link">
         
   
   
@@ -3291,7 +3379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/group_imagecorrelate/image-colocalization.html" class="md-nav__link">
+      <a href="../group_imagecorrelate/image-colocalization.html" class="md-nav__link">
         
   
   
@@ -3352,7 +3440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
+      <a href="../../visualization_modules/msmsplot/msms-plot.html" class="md-nav__link">
         
   
   
@@ -3375,7 +3463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.html" class="md-nav__link">
+      <a href="../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.html" class="md-nav__link">
         
   
   
@@ -3398,7 +3486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/feature_histograms/feature_hist.html" class="md-nav__link">
+      <a href="../../visualization_modules/feature_histograms/feature_hist.html" class="md-nav__link">
         
   
   
@@ -3421,7 +3509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/kendrickmass/kendrick_mass_plot.html" class="md-nav__link">
+      <a href="../../visualization_modules/kendrickmass/kendrick_mass_plot.html" class="md-nav__link">
         
   
   
@@ -3444,7 +3532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/vankrevelen/van_krevelen_plot.html" class="md-nav__link">
+      <a href="../../visualization_modules/vankrevelen/van_krevelen_plot.html" class="md-nav__link">
         
   
   
@@ -3467,7 +3555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/ecn_plots/ecn_plots.html" class="md-nav__link">
+      <a href="../../visualization_modules/ecn_plots/ecn_plots.html" class="md-nav__link">
         
   
   
@@ -3490,7 +3578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/lipid_annotation_summary/lipid_annotation_summary.html" class="md-nav__link">
+      <a href="../../visualization_modules/lipid_annotation_summary/lipid_annotation_summary.html" class="md-nav__link">
         
   
   
@@ -3513,7 +3601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/processed_additional/processed_additional.html" class="md-nav__link">
+      <a href="../../visualization_modules/processed_additional/processed_additional.html" class="md-nav__link">
         
   
   
@@ -3544,7 +3632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/massvoltammogram/massvoltammogram.html" class="md-nav__link">
+      <a href="../../visualization_modules/massvoltammogram/massvoltammogram.html" class="md-nav__link">
         
   
   
@@ -3567,7 +3655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visualization_modules/statistics_dashboard/statistics_dashboard.html" class="md-nav__link">
+      <a href="../../visualization_modules/statistics_dashboard/statistics_dashboard.html" class="md-nav__link">
         
   
   
@@ -3635,7 +3723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
+      <a href="../../workflows/lcmsworkflow/lcms-workflow.html" class="md-nav__link">
         
   
   
@@ -3658,7 +3746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/imsworkflow/ion-mobility-data-processing-workflow.html" class="md-nav__link">
+      <a href="../../workflows/imsworkflow/ion-mobility-data-processing-workflow.html" class="md-nav__link">
         
   
   
@@ -3681,7 +3769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/gcmsworkflow/gcms-workflow.html" class="md-nav__link">
+      <a href="../../workflows/gcmsworkflow/gcms-workflow.html" class="md-nav__link">
         
   
   
@@ -3704,7 +3792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/imagingworkflow/imaging-workflow.html" class="md-nav__link">
+      <a href="../../workflows/imagingworkflow/imaging-workflow.html" class="md-nav__link">
         
   
   
@@ -3727,7 +3815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/batch_processing/batch-processing.html" class="md-nav__link">
+      <a href="../../workflows/batch_processing/batch-processing.html" class="md-nav__link">
         
   
   
@@ -3750,7 +3838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/librarygeneration/library_generation.html" class="md-nav__link">
+      <a href="../../workflows/librarygeneration/library_generation.html" class="md-nav__link">
         
   
   
@@ -3773,7 +3861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/simsef/simsef_workflow.html" class="md-nav__link">
+      <a href="../../workflows/simsef/simsef_workflow.html" class="md-nav__link">
         
   
   
@@ -3796,7 +3884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/mrmworkflow/mrm-workflow.html" class="md-nav__link">
+      <a href="../../workflows/mrmworkflow/mrm-workflow.html" class="md-nav__link">
         
   
   
@@ -3864,7 +3952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/tools_simsef/simsef.html" class="md-nav__link">
+      <a href="../tools_simsef/simsef.html" class="md-nav__link">
         
   
   
@@ -3932,7 +4020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terminology/general-terminology.html" class="md-nav__link">
+      <a href="../../terminology/general-terminology.html" class="md-nav__link">
         
   
   
@@ -3955,7 +4043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terminology/ion-mobility-terminology.html" class="md-nav__link">
+      <a href="../../terminology/ion-mobility-terminology.html" class="md-nav__link">
         
   
   
@@ -3978,7 +4066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
+      <a href="../../workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.html" class="md-nav__link">
         
   
   
@@ -4001,7 +4089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../module_docs/id_spectral_library_search/spectral-similarity-measures.html" class="md-nav__link">
+      <a href="../id_spectral_library_search/spectral-similarity-measures.html" class="md-nav__link">
         
   
   
@@ -4028,20 +4116,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
         
           
           <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
@@ -4057,7 +4143,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_16">
             <span class="md-nav__icon md-icon"></span>
             Contribute
@@ -4068,20 +4154,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_1" >
         
           
           <label class="md-nav__link" for="__nav_16_1" id="__nav_16_1_label" tabindex="0">
@@ -4097,7 +4181,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_16_1">
             <span class="md-nav__icon md-icon"></span>
             Coding
@@ -4111,7 +4195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contribute_intellij.html" class="md-nav__link">
+      <a href="../../contribute_intellij.html" class="md-nav__link">
         
   
   
@@ -4131,32 +4215,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Upgrade JDK version
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="upgrade_jdk_version.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../coding/upgrade_jdk_version.html" class="md-nav__link">
         
   
   
@@ -4167,89 +4229,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-update-your-ide" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Update your IDE
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-update-gradle-version-in-the-wrapper" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Update gradle version in the wrapper
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-change-target-jdk-in-buildgradle" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Change target JDK in build.gradle
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-update-gradle-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Update gradle project
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-update-jdk-in-github-actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Update JDK in GitHub actions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pr-might-look-like" class="md-nav__link">
-    <span class="md-ellipsis">
-      PR might look like:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#intellij-specifics" class="md-nav__link">
-    <span class="md-ellipsis">
-      IntelliJ specifics
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4262,7 +4241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="general_structure.html" class="md-nav__link">
+      <a href="../../coding/general_structure.html" class="md-nav__link">
         
   
   
@@ -4285,7 +4264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="module_development.html" class="md-nav__link">
+      <a href="../../coding/module_development.html" class="md-nav__link">
         
   
   
@@ -4308,7 +4287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="module_list.html" class="md-nav__link">
+      <a href="../../coding/module_list.html" class="md-nav__link">
         
   
   
@@ -4339,7 +4318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contribute.html" class="md-nav__link">
+      <a href="../../contribute.html" class="md-nav__link">
         
   
   
@@ -4362,7 +4341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contribute_docu_template.html" class="md-nav__link">
+      <a href="../../contribute_docu_template.html" class="md-nav__link">
         
   
   
@@ -4392,7 +4371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wikiacknowledgements.html" class="md-nav__link">
+      <a href="../../wikiacknowledgements.html" class="md-nav__link">
         
   
   
@@ -4414,7 +4393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting.html" class="md-nav__link">
+      <a href="../../troubleshooting.html" class="md-nav__link">
         
   
   
@@ -4436,7 +4415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog.html" class="md-nav__link">
+      <a href="../../changelog.html" class="md-nav__link">
         
   
   
@@ -4458,7 +4437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workshops.html" class="md-nav__link">
+      <a href="../../workshops.html" class="md-nav__link">
         
   
   
@@ -4500,65 +4479,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-update-your-ide" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Update your IDE
+      Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature lists
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2-update-gradle-version-in-the-wrapper" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#export-file-name" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Update gradle version in the wrapper
+      Export file name
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-change-target-jdk-in-buildgradle" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#export-format" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Change target JDK in build.gradle
+      Export format
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-update-gradle-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Update gradle project
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-update-jdk-in-github-actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Update JDK in GitHub actions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pr-might-look-like" class="md-nav__link">
-    <span class="md-ellipsis">
-      PR might look like:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#intellij-specifics" class="md-nav__link">
-    <span class="md-ellipsis">
-      IntelliJ specifics
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4581,50 +4539,244 @@
   
 
 
-<h1 id="upgrading-jdk-version-in-development-builds">Upgrading JDK version in development builds<a class="headerlink" href="#upgrading-jdk-version-in-development-builds" title="Permanent link">&para;</a></h1>
-<h2 id="1-update-your-ide">1. Update your IDE<a class="headerlink" href="#1-update-your-ide" title="Permanent link">&para;</a></h2>
-<p>IntelliJ and other IDEs need to be updated to handle new JDK versions.</p>
-<h2 id="2-update-gradle-version-in-the-wrapper">2. Update gradle version in the wrapper<a class="headerlink" href="#2-update-gradle-version-in-the-wrapper" title="Permanent link">&para;</a></h2>
-<p>Check the compatibility of gradle and JDKs. Sometimes gradle has to run on an earlier JDK but can compile with the latest JDK as target.
-<a href="https://docs.gradle.org/current/userguide/compatibility.html"></a></p>
-<p>Try upgrading the gradle wrapper:
-<a href="https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper"></a></p>
-<p>Or change the gradle version manually in the <strong>/gradle/wrapper/gradle-wrapper.properties</strong> file:
-<div class="highlight"><pre><span></span><code>distributionUrl=https\://services.gradle.org/distributions/gradle-8.1.1-bin.zip
-</code></pre></div></p>
-<h2 id="3-change-target-jdk-in-buildgradle">3. Change target JDK in <strong>build.gradle</strong><a class="headerlink" href="#3-change-target-jdk-in-buildgradle" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(20)
-        vendor = JvmVendorSpec.ADOPTIUM  // force use ADOPTIUM TEMURIN JDK
-    }
-    // not needed with toolchain command
-//    sourceCompatibility = &quot;20&quot;
-//    targetCompatibility = &quot;20&quot;
-}
+<h1 id="export-feature-data">Export feature data<a class="headerlink" href="#export-feature-data" title="Permanent link">&para;</a></h1>
+<p>This module will export the data of all features in a feature list to a file.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → Export feature data</strong></p>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h4 id="feature-lists">Feature lists<a class="headerlink" href="#feature-lists" title="Permanent link">&para;</a></h4>
+<p>Select the feature list(s) you want to export to a file. If multiple feature lists shall be
+exported, make sure to use the placeholder <code>{}</code> in the <a href="#export-file-name">Export file name</a>.</p>
+<h4 id="export-file-name">Export file name<a class="headerlink" href="#export-file-name" title="Permanent link">&para;</a></h4>
+<p>Specify the name of the file to export the feature data into. Use <code>{}</code> to automatically insert the
+name of the respective exported feature list.</p>
+<h4 id="export-format">Export format<a class="headerlink" href="#export-format" title="Permanent link">&para;</a></h4>
+<p>Specify the export format. XML is currently the only available option.</p>
+<p>An example XML file may look like this (Some entries were removed to keep it more or less concise):</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;</span>
+<span class="nt">&lt;featurelist</span>
+<span class="w">  </span><span class="na">featurelistname=</span><span class="s">&quot;Aligned feature list 13C peak gaps dup corr PEARSON r greq 0.85 dp greq 5&quot;</span>
+<span class="w">  </span><span class="na">numberofrows=</span><span class="s">&quot;4204&quot;</span><span class="w"> </span><span class="na">date=</span><span class="s">&quot;2025/05/16 12:15:41&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;row</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;49&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;area&quot;</span><span class="nt">&gt;</span>3262872.0<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;rt&quot;</span><span class="nt">&gt;</span>0.32390267<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;mz_range&quot;</span><span class="nt">&gt;</span>[175.11827087402344;175.1194610595703]<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;charge&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fragment_scans&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;scan</span><span class="w"> </span><span class="na">scantype=</span><span class="s">&quot;simplescan&quot;</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_media_02.mzML&quot;</span><span class="w"> </span><span class="na">scanindex=</span><span class="s">&quot;151&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;scan</span><span class="w"> </span><span class="na">scantype=</span><span class="s">&quot;simplescan&quot;</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_media_03.mzML&quot;</span><span class="w"> </span><span class="na">scanindex=</span><span class="s">&quot;153&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;feature_shape&quot;</span><span class="nt">&gt;</span>true<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;alignment_scores&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;subtypes&gt;</span>
+<span class="w">        </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;rate&quot;</span><span class="nt">&gt;</span>0.3043478<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">        </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;aligned_features_n&quot;</span><span class="nt">&gt;</span>7<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">        </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;align_extra_features&quot;</span><span class="nt">&gt;</span>5<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">        </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;weighted_distance_score&quot;</span><span class="nt">&gt;</span>0.8496631<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">        </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;mz_diff_ppm&quot;</span><span class="nt">&gt;</span>4.4820127<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">        </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;mz_diff&quot;</span><span class="nt">&gt;</span>7.84884589847934E-4<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">        </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;rt_absolute_error&quot;</span><span class="nt">&gt;</span>0.021971852<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">        </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;ion_mobility_absolute_error&quot;</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/subtypes&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;rt_range&quot;</span><span class="nt">&gt;</span>[0.30016744;0.44724196]<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;mz&quot;</span><span class="nt">&gt;</span>175.11891174473593<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;spectral_db_matches&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;feature_annotation</span><span class="w"> </span><span class="na">annotation_type=</span><span class="s">&quot;spectral_library_annotation&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;spectraldatabaseentry</span><span class="w"> </span><span class="na">library_file=</span><span class="s">&quot;MoNA-export-LC-MS-MS_Spectra.json (150211 spectra)&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;mzs&gt;</span>
+<span class="w">            </span>60.05536;70.06634;72.08131;112.0877;114.1043;115.0878;116.0718;130.0988;157.1094;158.0937;175.1232
+<span class="w">          </span><span class="nt">&lt;/mzs&gt;</span>
+<span class="w">          </span><span class="nt">&lt;intensities&gt;</span>
+<span class="w">            </span>50.218311;69.503389;4.296692;4.05231;1.387287;1.208214;38.124055;16.18238;2.837249;14.222061;100.0
+<span class="w">          </span><span class="nt">&lt;/intensities&gt;</span>
+<span class="w">          </span><span class="nt">&lt;databasefieldslist&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;INSTRUMENT_TYPE&quot;</span><span class="nt">&gt;</span>LC-ESI-QTOF<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MS_LEVEL&quot;</span><span class="nt">&gt;</span>MS2<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;INCHI&quot;</span><span class="nt">&gt;</span>
+<span class="w">              </span>InChI=1S/C6H14N4O2/c7-4(5(11)12)2-1-3-10-6(8)9/h4H,1-3,7H2,(H,11,12)(H4,8,9,10)/t4-/m0/s1
+<span class="w">            </span><span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PRECURSOR_MZ&quot;</span><span class="nt">&gt;</span>175.118957519531<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;POLARITY&quot;</span><span class="nt">&gt;</span>positive<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ION_TYPE&quot;</span><span class="nt">&gt;</span>[M+H]+<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ION_SOURCE&quot;</span><span class="nt">&gt;</span>ESI<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;DATA_COLLECTOR&quot;</span><span class="nt">&gt;</span>Isabel<span class="w"> </span>Meister,<span class="w"> </span>Romanas<span class="w"> </span>Chaleckis<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SMILES&quot;</span><span class="nt">&gt;</span>O=C(O)C(N)CCCNC(=N)N<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PRINCIPAL_INVESTIGATOR&quot;</span><span class="nt">&gt;</span>Isabel<span class="w"> </span>Meister,<span class="w"> </span>Romanas<span class="w"> </span>Chaleckis<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;INCHIKEY&quot;</span><span class="nt">&gt;</span>ODKSFYDXXFIFQN-BYPYZUCNSA-N<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;FORMULA&quot;</span><span class="nt">&gt;</span>C6H14N4O2<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;NAME&quot;</span><span class="nt">&gt;</span>Arginine;<span class="w"> </span>LC-tDDA;<span class="w"> </span>CE10<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;RT&quot;</span><span class="nt">&gt;</span>12.65<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;INSTRUMENT&quot;</span><span class="nt">&gt;</span>Agilent<span class="w"> </span>6550<span class="w"> </span>iFunnel<span class="nt">&lt;/entry&gt;</span>
+<span class="w">            </span><span class="nt">&lt;entry</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;COLLISION_ENERGY&quot;</span><span class="nt">&gt;</span>10<span class="nt">&lt;/entry&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/databasefieldslist&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/spectraldatabaseentry&gt;</span>
+<span class="w">        </span><span class="nt">&lt;spectralsimilarity&gt;</span>
+<span class="w">          </span><span class="nt">&lt;similairtyfunction&gt;</span>Weighted<span class="w"> </span>cosine<span class="w"> </span>similarity<span class="nt">&lt;/similairtyfunction&gt;</span>
+<span class="w">          </span><span class="nt">&lt;overlappingpeaks&gt;</span>10<span class="nt">&lt;/overlappingpeaks&gt;</span>
+<span class="w">          </span><span class="nt">&lt;score&gt;</span>0.991997389209482<span class="nt">&lt;/score&gt;</span>
+<span class="w">          </span><span class="nt">&lt;explainedLibraryIntensity&gt;</span>1.0<span class="nt">&lt;/explainedLibraryIntensity&gt;</span>
+<span class="w">          </span><span class="nt">&lt;libraryspectrum&gt;</span>
+<span class="w">            </span><span class="nt">&lt;mzs&gt;</span>
+<span class="w">              </span>60.05536;70.06634;72.08131;112.0877;114.1043;115.0878;116.0718;130.0988;157.1094;158.0937
+<span class="w">            </span><span class="nt">&lt;/mzs&gt;</span>
+<span class="w">            </span><span class="nt">&lt;intensities&gt;</span>
+<span class="w">              </span>50.218311;69.503389;4.296692;4.05231;1.387287;1.208214;38.124055;16.18238;2.837249;14.222061
+<span class="w">            </span><span class="nt">&lt;/intensities&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/libraryspectrum&gt;</span>
+<span class="w">          </span><span class="nt">&lt;queryspectrum&gt;</span>
+<span class="w">            </span><span class="nt">&lt;mzs&gt;</span>
+<span class="w">              </span>60.05648689221877;70.06589447026973;72.08146690621223;112.08713629620883;114.10296712134367;115.0865468821093;116.0707957060524;130.09748713358292;157.10848530129516;158.09225213474215
+<span class="w">            </span><span class="nt">&lt;/mzs&gt;</span>
+<span class="w">            </span><span class="nt">&lt;intensities&gt;</span>
+<span class="w">              </span>1.700311924990654E7;2.792031528575635E7;5692692.274521589;2063768.8710607588;505617.66608789563;535806.9913217761;1.6561022981089354E7;6705487.050384879;1057548.0377922803;5742073.7107543945
+<span class="w">            </span><span class="nt">&lt;/intensities&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/queryspectrum&gt;</span>
+<span class="w">          </span><span class="nt">&lt;alignedspectrumlist</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;alignedspectrum&gt;</span>
+<span class="w">              </span><span class="nt">&lt;mzs&gt;</span>
+<span class="w">                </span>60.05536;70.06634;72.08131;112.0877;114.1043;115.0878;116.0718;130.0988;157.1094;158.0937
+<span class="w">              </span><span class="nt">&lt;/mzs&gt;</span>
+<span class="w">              </span><span class="nt">&lt;intensities&gt;</span>
+<span class="w">                </span>50.218311;69.503389;4.296692;4.05231;1.387287;1.208214;38.124055;16.18238;2.837249;14.222061
+<span class="w">              </span><span class="nt">&lt;/intensities&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/alignedspectrum&gt;</span>
+<span class="w">            </span><span class="nt">&lt;alignedspectrum&gt;</span>
+<span class="w">              </span><span class="nt">&lt;mzs&gt;</span>
+<span class="w">                </span>60.05648689221877;70.06589447026973;72.08146690621223;112.08713629620883;114.10296712134367;115.0865468821093;116.0707957060524;130.09748713358292;157.10848530129516;158.09225213474215
+<span class="w">              </span><span class="nt">&lt;/mzs&gt;</span>
+<span class="w">              </span><span class="nt">&lt;intensities&gt;</span>
+<span class="w">                </span>1.700311924990654E7;2.792031528575635E7;5692692.274521589;2063768.8710607588;505617.66608789563;535806.9913217761;1.6561022981089354E7;6705487.050384879;1057548.0377922803;5742073.7107543945
+<span class="w">              </span><span class="nt">&lt;/intensities&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/alignedspectrum&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/alignedspectrumlist&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/spectralsimilarity&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ccserror&gt;</span>NULL_VALUE<span class="nt">&lt;/ccserror&gt;</span>
+<span class="w">        </span><span class="nt">&lt;testedmz&gt;</span>175.11891174473593<span class="nt">&lt;/testedmz&gt;</span>
+<span class="w">        </span><span class="nt">&lt;testedrt&gt;</span>0.32390267<span class="nt">&lt;/testedrt&gt;</span>
+<span class="w">        </span><span class="nt">&lt;scan</span><span class="w"> </span><span class="na">scantype=</span><span class="s">&quot;simplemergedmsmsspectrum&quot;</span><span class="w"> </span><span class="na">mslevel=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">merge_spec_type=</span><span class="s">&quot;SAME_ENERGY&quot;</span>
+<span class="w">          </span><span class="na">ce=</span><span class="s">&quot;30.0&quot;</span><span class="w"> </span><span class="na">mergingtype=</span><span class="s">&quot;MAXIMUM&quot;</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_media_05.mzML&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;msmsinfo</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;ddamsmsinfo&quot;</span><span class="w"> </span><span class="na">precursormz=</span><span class="s">&quot;175.118453979492&quot;</span><span class="w"> </span><span class="na">charge=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">energy=</span><span class="s">&quot;30.0&quot;</span>
+<span class="w">            </span><span class="na">activationtype=</span><span class="s">&quot;HCD&quot;</span><span class="w"> </span><span class="na">mslevel=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">isolationwindow=</span><span class="s">&quot;[174.618453979492;175.618453979492]&quot;</span><span class="nt">/&gt;</span>
+<span class="w">          </span><span class="nt">&lt;mzs&gt;</span>
+<span class="w">            </span>60.05648689221877;70.06589447026973;72.08146690621223;112.08713629620883;114.10296712134367;115.0865468821093;116.0707957060524;130.09748713358292;157.10848530129516;158.09225213474215;175.118826887203
+<span class="w">          </span><span class="nt">&lt;/mzs&gt;</span>
+<span class="w">          </span><span class="nt">&lt;intensities&gt;</span>
+<span class="w">            </span>1.700311924990654E7;2.792031528575635E7;5692692.274521589;2063768.8710607588;505617.66608789563;535806.9913217761;1.6561022981089354E7;6705487.050384879;1057548.0377922803;5742073.7107543945;2.654460362855494E7
+<span class="w">          </span><span class="nt">&lt;/intensities&gt;</span>
+<span class="w">          </span><span class="nt">&lt;scans</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_media_03.mzML&quot;</span><span class="nt">&gt;</span>{153}[]<span class="nt">&lt;/scans&gt;</span>
+<span class="w">          </span><span class="nt">&lt;scans</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_media_06.mzML&quot;</span><span class="nt">&gt;</span>{149}[]<span class="nt">&lt;/scans&gt;</span>
+<span class="w">          </span><span class="nt">&lt;scans</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_media_04.mzML&quot;</span><span class="nt">&gt;</span>{144}[]<span class="nt">&lt;/scans&gt;</span>
+<span class="w">          </span><span class="nt">&lt;scans</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_media_05.mzML&quot;</span><span class="nt">&gt;</span>{150}[]<span class="nt">&lt;/scans&gt;</span>
+<span class="w">          </span><span class="nt">&lt;scans</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_media_02.mzML&quot;</span><span class="nt">&gt;</span>{151}[]<span class="nt">&lt;/scans&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/scan&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/feature_annotation&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;intensity_range&quot;</span><span class="nt">&gt;</span>[171891.52;7.5953896E7]<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;feature_group&quot;</span><span class="nt">&gt;</span>27<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;id&quot;</span><span class="nt">&gt;</span>49<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;height&quot;</span><span class="nt">&gt;</span>7.5953896E7<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;feature</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_M1_01.mzML&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;area&quot;</span><span class="nt">&gt;</span>28286.621<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;rt&quot;</span><span class="nt">&gt;</span>0.32012287<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;mz_range&quot;</span><span class="nt">&gt;</span>[175.11862182617188;175.11878967285156]<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;best_ms1_scan_number&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;scan</span><span class="w"> </span><span class="na">scantype=</span><span class="s">&quot;simplescan&quot;</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_M1_01.mzML&quot;</span><span class="w"> </span><span class="na">scanindex=</span><span class="s">&quot;144&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fwhm&quot;</span><span class="nt">&gt;</span>0.019634774<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;rt_range&quot;</span><span class="nt">&gt;</span>[0.30645204;0.34960598]<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;feature_state&quot;</span><span class="nt">&gt;</span>ESTIMATED<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;datafile&quot;</span><span class="nt">&gt;</span>171103_PMA_TK_M1_01.mzML<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;mz&quot;</span><span class="nt">&gt;</span>175.11867991636373<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;intensity_range&quot;</span><span class="nt">&gt;</span>[290797.88;1358260.6]<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;asymmetry_factor&quot;</span><span class="nt">&gt;</span>2.1566434<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;feature_data&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;feature_data&gt;</span>
+<span class="w">          </span><span class="nt">&lt;simpleiontimeseries&gt;</span>
+<span class="w">            </span><span class="nt">&lt;scans</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>136;140;144;148;152;156;160<span class="nt">&lt;/scans&gt;</span>
+<span class="w">            </span><span class="nt">&lt;intensities</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>
+<span class="w">              </span>0.0;584109.4375;1358260.625;1170476.875;665673.75;290797.875;0.0
+<span class="w">            </span><span class="nt">&lt;/intensities&gt;</span>
+<span class="w">            </span><span class="nt">&lt;mzs</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>
+<span class="w">              </span>175.11877432337528;175.1186981201172;175.11862182617188;175.11865234375;175.11878967285156;175.1187744140625;175.11877432337528
+<span class="w">            </span><span class="nt">&lt;/mzs&gt;</span>
+<span class="w">            </span><span class="nt">&lt;rts</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>
+<span class="w">              </span>0.30645203590393066;0.3132686913013458;0.3201228678226471;0.32709363102912903;0.3339269161224365;0.3407540023326874;0.3496059775352478
+<span class="w">            </span><span class="nt">&lt;/rts&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/simpleiontimeseries&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/feature_data&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;tailing_factor&quot;</span><span class="nt">&gt;</span>1.5783217<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;height&quot;</span><span class="nt">&gt;</span>1358260.6<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/feature&gt;</span>
+<span class="w">    </span><span class="nt">&lt;feature</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_M1_02.mzML&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;area&quot;</span><span class="nt">&gt;</span>26188.146<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;rt&quot;</span><span class="nt">&gt;</span>0.31954175<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;mz_range&quot;</span><span class="nt">&gt;</span>[175.11877432337528;175.1194610595703]<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;best_ms1_scan_number&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;scan</span><span class="w"> </span><span class="na">scantype=</span><span class="s">&quot;simplescan&quot;</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_M1_02.mzML&quot;</span><span class="w"> </span><span class="na">scanindex=</span><span class="s">&quot;144&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fwhm&quot;</span><span class="nt">&gt;</span>0.02036497<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;rt_range&quot;</span><span class="nt">&gt;</span>[0.30587724;0.34912074]<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;feature_state&quot;</span><span class="nt">&gt;</span>ESTIMATED<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;datafile&quot;</span><span class="nt">&gt;</span>171103_PMA_TK_M1_02.mzML<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;mz&quot;</span><span class="nt">&gt;</span>175.11930236793012<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;intensity_range&quot;</span><span class="nt">&gt;</span>[222693.89;1360981.8]<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;asymmetry_factor&quot;</span><span class="nt">&gt;</span>1.7352959<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;feature_data&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;feature_data&gt;</span>
+<span class="w">          </span><span class="nt">&lt;simpleiontimeseries&gt;</span>
+<span class="w">            </span><span class="nt">&lt;scans</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>136;140;144;148;152;156;160<span class="nt">&lt;/scans&gt;</span>
+<span class="w">            </span><span class="nt">&lt;intensities</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>
+<span class="w">              </span>0.0;881861.4375;1360981.75;924455.9375;405910.3125;222693.890625;0.0
+<span class="w">            </span><span class="nt">&lt;/intensities&gt;</span>
+<span class="w">            </span><span class="nt">&lt;mzs</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>
+<span class="w">              </span>175.11877432337528;175.1192169189453;175.11924743652344;175.1194305419922;175.11929321289062;175.1194610595703;175.11877432337528
+<span class="w">            </span><span class="nt">&lt;/mzs&gt;</span>
+<span class="w">            </span><span class="nt">&lt;rts</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>
+<span class="w">              </span>0.3058772385120392;0.3126917779445648;0.3195417523384094;0.3263646066188812;0.33320000767707825;0.34002700448036194;0.34912073612213135
+<span class="w">            </span><span class="nt">&lt;/rts&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/simpleiontimeseries&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/feature_data&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;tailing_factor&quot;</span><span class="nt">&gt;</span>1.5823284<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;height&quot;</span><span class="nt">&gt;</span>1360981.8<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/feature&gt;</span>
+<span class="w">    </span><span class="nt">&lt;feature</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_M1_03.mzML&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;area&quot;</span><span class="nt">&gt;</span>19992.443<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;rt&quot;</span><span class="nt">&gt;</span>0.32646403<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;mz_range&quot;</span><span class="nt">&gt;</span>[175.11877432337528;175.1190643310547]<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;best_ms1_scan_number&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;scan</span><span class="w"> </span><span class="na">scantype=</span><span class="s">&quot;simplescan&quot;</span><span class="w"> </span><span class="na">rawdatafile=</span><span class="s">&quot;171103_PMA_TK_M1_03.mzML&quot;</span><span class="w"> </span><span class="na">scanindex=</span><span class="s">&quot;148&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;fwhm&quot;</span><span class="nt">&gt;</span>0.021426953<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;rt_range&quot;</span><span class="nt">&gt;</span>[0.30597037;0.34899095]<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;feature_state&quot;</span><span class="nt">&gt;</span>ESTIMATED<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;datafile&quot;</span><span class="nt">&gt;</span>171103_PMA_TK_M1_03.mzML<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;mz&quot;</span><span class="nt">&gt;</span>175.1189857310156<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;intensity_range&quot;</span><span class="nt">&gt;</span>[269273.7;865271.25]<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;asymmetry_factor&quot;</span><span class="nt">&gt;</span>1.0992143<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;feature_data&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;feature_data&gt;</span>
+<span class="w">          </span><span class="nt">&lt;simpleiontimeseries&gt;</span>
+<span class="w">            </span><span class="nt">&lt;scans</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>136;140;144;148;152;156;160<span class="nt">&lt;/scans&gt;</span>
+<span class="w">            </span><span class="nt">&lt;intensities</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>
+<span class="w">              </span>0.0;367347.625;859838.75;865271.25;523678.3125;269273.6875;0.0
+<span class="w">            </span><span class="nt">&lt;/intensities&gt;</span>
+<span class="w">            </span><span class="nt">&lt;mzs</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>
+<span class="w">              </span>175.11877432337528;175.11904907226562;175.11891174316406;175.11898803710938;175.1190185546875;175.1190643310547;175.11877432337528
+<span class="w">            </span><span class="nt">&lt;/mzs&gt;</span>
+<span class="w">            </span><span class="nt">&lt;rts</span><span class="w"> </span><span class="na">numvalues=</span><span class="s">&quot;7&quot;</span><span class="nt">&gt;</span>
+<span class="w">              </span>0.30597037076950073;0.31278908252716064;0.31963691115379333;0.3264640271663666;0.33330148458480835;0.34013262391090393;0.34899094700813293
+<span class="w">            </span><span class="nt">&lt;/rts&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/simpleiontimeseries&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/feature_data&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;tailing_factor&quot;</span><span class="nt">&gt;</span>1.0496072<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">      </span><span class="nt">&lt;datatype</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;height&quot;</span><span class="nt">&gt;</span>865271.25<span class="nt">&lt;/datatype&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/feature&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/row&gt;</span>
+<span class="nt">&lt;/featurelist&gt;</span>
 </code></pre></div>
-<h2 id="4-update-gradle-project">4. Update gradle project<a class="headerlink" href="#4-update-gradle-project" title="Permanent link">&para;</a></h2>
-<p>Run update all gradle projects to update all dependencies.</p>
-<h2 id="5-update-jdk-in-github-actions">5. Update JDK in GitHub actions<a class="headerlink" href="#5-update-jdk-in-github-actions" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>    steps:
-        - uses: actions/checkout@v3
-        - uses: actions/setup-java@v3
-        with:
-            distribution: &#39;temurin&#39;
-            java-version: &#39;20.0.1&#39;
-            cache: &#39;gradle&#39;
-</code></pre></div>
-<h2 id="pr-might-look-like">PR might look like:<a class="headerlink" href="#pr-might-look-like" title="Permanent link">&para;</a></h2>
-<p><img alt="Install JDK" src="../img/contribute/jdk_update_pull.png" /></p>
-<h2 id="intellij-specifics">IntelliJ specifics<a class="headerlink" href="#intellij-specifics" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Download a new JDK</li>
-<li>Set the language Level (preview?)</li>
-<li>Set the project jdk gradle should use and run tests on intellij (faster)</li>
-</ol>
-<p><img alt="Install JDK" src="../img/contribute/intellij_jdk_install.png" /></p>
-<p><img alt="Select JDK" src="../img/contribute/intellij_jdk_select.png" /></p>
-<p><img alt="Project JDK Gradle" src="../img/contribute/intellij_project_gradle.png" /></p>
 
 
 
@@ -4645,7 +4797,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="August 11, 2023 07:08:55">August 11, 2023 07:08:55</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="May 19, 2025 13:08:10">May 19, 2025 13:08:10</span>
   </span>
 
     
@@ -4656,13 +4808,12 @@
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
       
     </span>
     <nav>
       
-        <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
-        <a href="mailto:53823597+corinnabrungs@users.noreply.github.com">corinnabrungs</a>
+        <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>
     </nav>
   </span>
 
@@ -4714,12 +4865,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
