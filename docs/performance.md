@@ -83,7 +83,10 @@ on **[GitHub](https://github.com/mzmine/mzmine3/issues)**.
 ## Maximum memory
 The maximum Java heap size (the main part of the RAM available to mzmine) is set to 80%. This is usually a good value, considering that mzmine and its Java Virtual Machine (JVM) will use memory extending over this 80% threshold for specific tasks. There is one way to change the maximum heap size before starting mzmine, however, it requires administrator access.
 
-Find the **mzmine/app/MZmine.cfg** file in the mzmine install directory or portable version. Under Window, this file is write protected, which needs to be changed under **File/Properties/Security/** select Users and click Edit to grant write access. Now change the _MaxRAMPercentage_ to grant more RAM.
+Find the **mzmine/app/mzmine.cfg** file in the mzmine install directory or portable version. Under Windows, this file is write protected, which needs to be changed under **File/Properties/Security/** select Users and click Edit to grant write access. Now change the _MaxRAMPercentage_ to grant more RAM. 
+
+**Note**: You'll need to modify the **mzmine_console.cfg** if you run mzmine_console (on Windows).
+
 ```
 java-options=-XX:InitialRAMPercentage=10
 java-options=-XX:MaxRAMPercentage=80
