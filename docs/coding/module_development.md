@@ -53,7 +53,7 @@ Here you are creating a task that will be launched after user has chosen paramet
 
 ## **8. Work on your Task class**
 
-As you extend the AbstractTask class, some functionality will already be defined. To get the values of the parameters from ParameterSet, use the following approach `parameters.getValue(YourClassParameters.paramererName.getValue()`. 
+As you extend the AbstractTask class, some functionality will already be defined. To get the values of the parameters from ParameterSet, use the following approach `parameters.getValue(YourClassParameters.parameterName)`. 
 You can modify the message by the logger, check for cancelled state, and update progress. Before progress update, implement the logic of your calculations. 
 
 !!! warning 
@@ -65,7 +65,7 @@ You can modify the message by the logger, check for cancelled state, and update 
 
 ## **9. Integrate a newly created module into mzmine GUI**
 
-As the last step, for your module to be accessible, add it to the AbstractWorkspace.java or the AcademicWorkspace.java file. If you wish your module to be accessible in the batch mode, add it in the BatchModeModulesList
+As the last step, for your module to be accessible, add it to the `AbstractWorkspace.java` or the `AcademicWorkspace.java` file. If you wish your module to be accessible in the batch mode, add it in the `BatchModeModulesList.java`
 
 ## **10. Test and debug**
 
