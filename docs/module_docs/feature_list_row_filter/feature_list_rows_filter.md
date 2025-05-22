@@ -2,49 +2,63 @@
 
 ## **Description**
 
-:material-menu-open: **Feature list methods → Feature list filtering → Feature list rows filter** 
+:material-menu-open: **Feature list methods → Feature list filtering → Feature list rows filter**
 
-This filter deletes all rows in a selected peak list that do not meet requirements defined by the user.
+This filter deletes all rows in a selected peak list that do not meet requirements defined by the
+user.
 
-A range of different requirements can be set, such as the minimum number of features in the row, the minimum number of features in an isotope pattern, peak duration etc. 
+A range of different requirements can be set, such as the minimum number of features in the row, the
+minimum number of features in an isotope pattern, peak duration etc.
 
-When an aligned peak list, i.e. multiple peaks per row, is filtered then the average of each row's peak duration, m/z and retention time values are used to filter the row.
-
+When an aligned peak list, i.e. multiple peaks per row, is filtered then the average of each row's
+peak duration, m/z and retention time values are used to filter the row.
 
 ## **Parameters**
 
 #### **Name suffix**
+
 Suffix to be added to feature list name.
 
 #### **Minimum features in a row (abs or percent)**
-Minimum number of features detected in a row required to not remove it. Values < 1 will be interpreted as %.
+
+Minimum number of features detected in a row required to not remove it. Values < 1 will be
+interpreted as %.
 
 #### **Minimum features in an isotope pattern**
 
 Minimum number of features in a row's isotope pattern required to not remove it.
 
 #### **Validate 13C isotope pattern**
-If ticked, searches for a +1 13C signal (considering possible charge states) within estimated range of carbon atoms. Uses [13C isotope filter](../filter_isotope_filter/isotope_filter.md).
+
+If ticked, searches for a +1 13C signal (considering possible charge states) within estimated range
+of carbon atoms. Uses [13C isotope filter](../filter_isotope_filter/isotope_filter.md).
 
 #### **m/z**
+
 Range of acceptable (average) m/z values in a row required to not remove it.
 
 #### **Retention time**
+
 Range of acceptable (average) retention times in minutes.
 
 #### **Features duration range**
+
 Range of acceptable (average) feature durations in a row required not to remove it.
 
 #### **Chromatographic FWHM**
+
 Range of permissible FWHM in a row required not to remove it.
 
 #### **Charge**
+
 Range of Charge in a row required not to remove it.
 
 :warning: Please, run isotopic peaks grouper prior to using this.
 
 #### **Kendrick mass defect**
-Filter features in a Kendrick mass defect (KMD) range. For more details see [Kendrick mass defect](../../visualization_modules/kendrickmass/kendrick_mass_plot.md).
+
+Filter features in a Kendrick mass defect (KMD) range. For more details
+see [Kendrick mass defect](../../visualization_modules/kendrickmass/kendrick_mass_plot.md).
 
 If KMD is used, following parameters can be changed in the setup.
 
@@ -61,34 +75,48 @@ If KMD is used, following parameters can be changed in the setup.
 - **Use Remainder of Kendrick mass**
   Use Remainder of Kendrick mass (RKM) instead of Kendrick mass defect (KMD)
 
-#### **Parameter**
-Paremeter defining the group of each sample.
-
 #### **Only identified?**
+
 If the checkbox is selected, only identified compounds will be retained.
 
 #### **Text in identity**
+
 Only rows that contain this text in their peak identity field will be retained.
 
 #### **Text in comment**
+
 Only rows that contain this text in their comment field will be retained.
 
+#### CV filter
+
+Define a sample group by selecting a metadata column and a group in that metadata column that may
+only show a maximum coefficient of variation (= relative standard deviation). Only rows that show a
+CV below the given value, will be retained. A good sample group for this application are pooled QC
+samples. If a feature is not detected in all QC samples, it will be retained anyway.
+
 #### **Keep or remove rows**
+
 User can select to either keep or remove the rows that match the defined criteria.
 
 #### **Feature with MS2 scan**
+
 If checked, only features that have MS2 scan will be kept.
 
 #### **Never remove feature with MS2**
+
 If checked, all rows with MS2 are retained without applying any further filters on them.
 
 #### **Reset the feature number ID**
+
 If checked, row IDs will be reset.
 
 #### **Mass defect**
-Mass defect as a feature filter can be used for selective detection of compounds of interest, and the values accepted are 0.314-0.5 or 0.90-0.15.
+
+Mass defect as a feature filter can be used for selective detection of compounds of interest, and
+the values accepted are 0.314-0.5 or 0.90-0.15.
 
 #### **Original feature list**
+
 It can be either processed in place, kept or removed.
 
 {{ git_page_authors }}
