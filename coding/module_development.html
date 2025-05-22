@@ -4725,7 +4725,7 @@ After you have described all parameters, add parameters to the constructor of yo
 <h2 id="7-define-runmodule-method-for-the-runnable-modules"><strong>7. Define <code>runModule()</code> method [For the runnable modules]</strong><a class="headerlink" href="#7-define-runmodule-method-for-the-runnable-modules" title="Permanent link">&para;</a></h2>
 <p>Here you are creating a task that will be launched after user has chosen parameters. You do not need to worry about task scheduling here, the task is only created and passed here.</p>
 <h2 id="8-work-on-your-task-class"><strong>8. Work on your Task class</strong><a class="headerlink" href="#8-work-on-your-task-class" title="Permanent link">&para;</a></h2>
-<p>As you extend the AbstractTask class, some functionality will already be defined. To get the values of the parameters from ParameterSet, use the following approach <code>parameters.getValue(YourClassParameters.paramererName.getValue()</code>. 
+<p>As you extend the AbstractTask class, some functionality will already be defined. To get the values of the parameters from ParameterSet, use the following approach <code>parameters.getValue(YourClassParameters.parameterName)</code>. 
 You can modify the message by the logger, check for cancelled state, and update progress. Before progress update, implement the logic of your calculations. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -4736,7 +4736,7 @@ You can modify the message by the logger, check for cancelled state, and update 
 <p>If you have to implement some method to process scans, check ScanUtils first, it might already have been implemented.</p>
 </div>
 <h2 id="9-integrate-a-newly-created-module-into-mzmine-gui"><strong>9. Integrate a newly created module into mzmine GUI</strong><a class="headerlink" href="#9-integrate-a-newly-created-module-into-mzmine-gui" title="Permanent link">&para;</a></h2>
-<p>As the last step, for your module to be accessible, add it to the AbstractWorkspace.java or the AcademicWorkspace.java file. If you wish your module to be accessible in the batch mode, add it in the BatchModeModulesList</p>
+<p>As the last step, for your module to be accessible, add it to the <code>AbstractWorkspace.java</code> or the <code>AcademicWorkspace.java</code> file. If you wish your module to be accessible in the batch mode, add it in the <code>BatchModeModulesList.java</code></p>
 <h2 id="10-test-and-debug"><strong>10. Test and debug</strong><a class="headerlink" href="#10-test-and-debug" title="Permanent link">&para;</a></h2>
 <p>Before pushing your final changes to the remote branch, try to thoroughly test your code. Think about corner cases and possible bugs. Using IDE tools can be extremely useful in this step.</p>
 <h2 id="11-create-documentation"><strong>11. Create documentation</strong><a class="headerlink" href="#11-create-documentation" title="Permanent link">&para;</a></h2>
@@ -4764,7 +4764,7 @@ You can modify the message by the logger, check for cancelled state, and update 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="May 16, 2025 10:36:49">May 16, 2025 10:36:49</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="May 22, 2025 08:41:41">May 22, 2025 08:41:41</span>
   </span>
 
     
