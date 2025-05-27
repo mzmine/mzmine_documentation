@@ -43,11 +43,21 @@ Peaks with a tailing factor outside the entered range will be removed.
 Peaks with an asymmetry factor outside the entered range will be removed.
 [//]: # (TODO EXplain asymmetry factor)
 
-#### Shape score
+#### Minimum RT shape score
 
 (since mzmine 4.7)
 
 Tries to fit a chromatographic peak with a Gaussian, a bi-Gaussian, or two Gaussian functions.
+The Gaussian function models an ideal case. The bi-Gaussian models each side with by a
+different gaussian function, creating a fronting or tailing gaussian. The model with two Gaussian
+functions describes a feature that has not been completely resolved during
+the [feature resolving step](../featdet_resolver_local_minimum/local-minimum-resolver.md).
+
+#### Minimum mobilogram shape score
+
+(since mzmine 4.7)
+
+Tries to fit a mobilogram with a Gaussian, a bi-Gaussian, or two Gaussian functions.
 The Gaussian function models an ideal case. The bi-Gaussian models each side with by a
 different gaussian function, creating a fronting or tailing gaussian. The model with two Gaussian
 functions describes a feature that has not been completely resolved during
@@ -58,7 +68,7 @@ the [feature resolving step](../featdet_resolver_local_minimum/local-minimum-res
 (since mzmine 4.7)
 
 Determines the top-to-edge ratio of the chromatographic peak by dividing the highest by the lowest
-point of the feature.
+point of the feature (see [feature resolving](../featdet_resolver_local_minimum/local-minimum-resolver.md#min-ratio-of-peak-topedge)).
 
 #### **Keep only features with MS/MS scans**
 
