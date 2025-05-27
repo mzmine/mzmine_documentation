@@ -2343,15 +2343,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#parameter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#only-identified" class="md-nav__link">
     <span class="md-ellipsis">
       Only identified?
@@ -2373,6 +2364,15 @@
   <a href="#text-in-comment" class="md-nav__link">
     <span class="md-ellipsis">
       Text in comment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsd-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      RSD filter
     </span>
   </a>
   
@@ -4750,15 +4750,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#parameter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#only-identified" class="md-nav__link">
     <span class="md-ellipsis">
       Only identified?
@@ -4780,6 +4771,15 @@
   <a href="#text-in-comment" class="md-nav__link">
     <span class="md-ellipsis">
       Text in comment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsd-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      RSD filter
     </span>
   </a>
   
@@ -4865,19 +4865,24 @@
 
 <h1 id="feature-list-rows-filter"><strong>Feature list rows filter</strong><a class="headerlink" href="#feature-list-rows-filter" title="Permanent link">&para;</a></h1>
 <h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Feature list filtering → Feature list rows filter</strong> </p>
-<p>This filter deletes all rows in a selected peak list that do not meet requirements defined by the user.</p>
-<p>A range of different requirements can be set, such as the minimum number of features in the row, the minimum number of features in an isotope pattern, peak duration etc. </p>
-<p>When an aligned peak list, i.e. multiple peaks per row, is filtered then the average of each row's peak duration, m/z and retention time values are used to filter the row.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Feature list filtering → Feature list rows filter</strong></p>
+<p>This filter deletes all rows in a selected peak list that do not meet requirements defined by the
+user.</p>
+<p>A range of different requirements can be set, such as the minimum number of features in the row, the
+minimum number of features in an isotope pattern, peak duration etc.</p>
+<p>When an aligned peak list, i.e. multiple peaks per row, is filtered then the average of each row's
+peak duration, m/z and retention time values are used to filter the row.</p>
 <h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <h4 id="name-suffix"><strong>Name suffix</strong><a class="headerlink" href="#name-suffix" title="Permanent link">&para;</a></h4>
 <p>Suffix to be added to feature list name.</p>
 <h4 id="minimum-features-in-a-row-abs-or-percent"><strong>Minimum features in a row (abs or percent)</strong><a class="headerlink" href="#minimum-features-in-a-row-abs-or-percent" title="Permanent link">&para;</a></h4>
-<p>Minimum number of features detected in a row required to not remove it. Values &lt; 1 will be interpreted as %.</p>
+<p>Minimum number of features detected in a row required to not remove it. Values &lt; 1 will be
+interpreted as %.</p>
 <h4 id="minimum-features-in-an-isotope-pattern"><strong>Minimum features in an isotope pattern</strong><a class="headerlink" href="#minimum-features-in-an-isotope-pattern" title="Permanent link">&para;</a></h4>
 <p>Minimum number of features in a row's isotope pattern required to not remove it.</p>
 <h4 id="validate-13c-isotope-pattern"><strong>Validate 13C isotope pattern</strong><a class="headerlink" href="#validate-13c-isotope-pattern" title="Permanent link">&para;</a></h4>
-<p>If ticked, searches for a +1 13C signal (considering possible charge states) within estimated range of carbon atoms. Uses <a href="../filter_isotope_filter/isotope_filter.html">13C isotope filter</a>.</p>
+<p>If ticked, searches for a +1 13C signal (considering possible charge states) within estimated range
+of carbon atoms. Uses <a href="../filter_isotope_filter/isotope_filter.html">13C isotope filter</a>.</p>
 <h4 id="mz"><strong>m/z</strong><a class="headerlink" href="#mz" title="Permanent link">&para;</a></h4>
 <p>Range of acceptable (average) m/z values in a row required to not remove it.</p>
 <h4 id="retention-time"><strong>Retention time</strong><a class="headerlink" href="#retention-time" title="Permanent link">&para;</a></h4>
@@ -4890,7 +4895,8 @@
 <p>Range of Charge in a row required not to remove it.</p>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Please, run isotopic peaks grouper prior to using this.</p>
 <h4 id="kendrick-mass-defect"><strong>Kendrick mass defect</strong><a class="headerlink" href="#kendrick-mass-defect" title="Permanent link">&para;</a></h4>
-<p>Filter features in a Kendrick mass defect (KMD) range. For more details see <a href="../../visualization_modules/kendrickmass/kendrick_mass_plot.html">Kendrick mass defect</a>.</p>
+<p>Filter features in a Kendrick mass defect (KMD) range. For more details
+see <a href="../../visualization_modules/kendrickmass/kendrick_mass_plot.html">Kendrick mass defect</a>.</p>
 <p>If KMD is used, following parameters can be changed in the setup.</p>
 <ul>
 <li><strong>Kendrick mass defect</strong>
@@ -4906,14 +4912,18 @@
 <li><strong>Use Remainder of Kendrick mass</strong>
   Use Remainder of Kendrick mass (RKM) instead of Kendrick mass defect (KMD)</li>
 </ul>
-<h4 id="parameter"><strong>Parameter</strong><a class="headerlink" href="#parameter" title="Permanent link">&para;</a></h4>
-<p>Paremeter defining the group of each sample.</p>
 <h4 id="only-identified"><strong>Only identified?</strong><a class="headerlink" href="#only-identified" title="Permanent link">&para;</a></h4>
 <p>If the checkbox is selected, only identified compounds will be retained.</p>
 <h4 id="text-in-identity"><strong>Text in identity</strong><a class="headerlink" href="#text-in-identity" title="Permanent link">&para;</a></h4>
 <p>Only rows that contain this text in their peak identity field will be retained.</p>
 <h4 id="text-in-comment"><strong>Text in comment</strong><a class="headerlink" href="#text-in-comment" title="Permanent link">&para;</a></h4>
 <p>Only rows that contain this text in their comment field will be retained.</p>
+<h4 id="rsd-filter">RSD filter<a class="headerlink" href="#rsd-filter" title="Permanent link">&para;</a></h4>
+<p>Define a sample group by selecting a metadata column and a group in that metadata column that may
+only show a maximum relative standard deviation (= coefficient of variation). Only rows that show a
+CV below the given value, will be retained. A good sample group for this application are pooled QC
+samples. If a feature is not detected in all QC samples, it will be removed, unless the "Keep
+undetected" option is enabled.</p>
 <h4 id="keep-or-remove-rows"><strong>Keep or remove rows</strong><a class="headerlink" href="#keep-or-remove-rows" title="Permanent link">&para;</a></h4>
 <p>User can select to either keep or remove the rows that match the defined criteria.</p>
 <h4 id="feature-with-ms2-scan"><strong>Feature with MS2 scan</strong><a class="headerlink" href="#feature-with-ms2-scan" title="Permanent link">&para;</a></h4>
@@ -4923,10 +4933,11 @@
 <h4 id="reset-the-feature-number-id"><strong>Reset the feature number ID</strong><a class="headerlink" href="#reset-the-feature-number-id" title="Permanent link">&para;</a></h4>
 <p>If checked, row IDs will be reset.</p>
 <h4 id="mass-defect"><strong>Mass defect</strong><a class="headerlink" href="#mass-defect" title="Permanent link">&para;</a></h4>
-<p>Mass defect as a feature filter can be used for selective detection of compounds of interest, and the values accepted are 0.314-0.5 or 0.90-0.15.</p>
+<p>Mass defect as a feature filter can be used for selective detection of compounds of interest, and
+the values accepted are 0.314-0.5 or 0.90-0.15.</p>
 <h4 id="original-feature-list"><strong>Original feature list</strong><a class="headerlink" href="#original-feature-list" title="Permanent link">&para;</a></h4>
 <p>It can be either processed in place, kept or removed.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:98109751+lalalana5@users.noreply.github.com'>lalalana5</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:98109751+lalalana5@users.noreply.github.com'>lalalana5</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -4947,7 +4958,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 15, 2024 19:26:37">October 15, 2024 19:26:37</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="May 27, 2025 09:54:12 UTC">May 27, 2025 09:54:12</span>
   </span>
 
     
@@ -4963,7 +4974,6 @@
     </span>
     <nav>
       
-        <a href="mailto:ansgar.korf@mzio.io">Ansgar Korf</a>, 
         <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
         <a href="mailto:98109751+lalalana5@users.noreply.github.com">lalalana5</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
