@@ -87,12 +87,13 @@ Only rows that contain this text in their peak identity field will be retained.
 
 Only rows that contain this text in their comment field will be retained.
 
-#### CV filter
+#### RSD filter
 
 Define a sample group by selecting a metadata column and a group in that metadata column that may
-only show a maximum coefficient of variation (= relative standard deviation). Only rows that show a
+only show a maximum relative standard deviation (= coefficient of variation). Only rows that show a
 CV below the given value, will be retained. A good sample group for this application are pooled QC
-samples. If a feature is not detected in all QC samples, it will be retained anyway.
+samples. If a feature is not detected in all QC samples, it will be removed, unless the "Keep
+undetected" option is enabled.
 
 #### **Keep or remove rows**
 
