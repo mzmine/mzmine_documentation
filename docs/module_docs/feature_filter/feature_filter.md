@@ -51,7 +51,8 @@ Tries to fit a chromatographic peak with a Gaussian, a bi-Gaussian, or two Gauss
 The Gaussian function models an ideal case. The bi-Gaussian models each side with by a
 different gaussian function, creating a fronting or tailing gaussian. The model with two Gaussian
 functions describes a feature that has not been completely resolved during
-the [feature resolving step](../featdet_resolver_local_minimum/local-minimum-resolver.md).
+the [feature resolving step](../featdet_resolver_local_minimum/local-minimum-resolver.md). Features
+with less than 5 points will be removed automatically.
 
 #### Minimum mobilogram shape score
 
@@ -61,14 +62,16 @@ Tries to fit a mobilogram with a Gaussian, a bi-Gaussian, or two Gaussian functi
 The Gaussian function models an ideal case. The bi-Gaussian models each side with by a
 different gaussian function, creating a fronting or tailing gaussian. The model with two Gaussian
 functions describes a feature that has not been completely resolved during
-the [feature resolving step](../featdet_resolver_local_minimum/local-minimum-resolver.md).
+the [feature resolving step](../featdet_resolver_local_minimum/local-minimum-resolver.md). Features
+with less than 5 points will be removed automatically.
 
 #### Top to edge ratio
 
 (since mzmine 4.7)
 
 Determines the top-to-edge ratio of the chromatographic peak by dividing the highest by the lowest
-point of the feature (see [feature resolving](../featdet_resolver_local_minimum/local-minimum-resolver.md#min-ratio-of-peak-topedge)).
+point of the feature (
+see [feature resolving](../featdet_resolver_local_minimum/local-minimum-resolver.md#min-ratio-of-peak-topedge)).
 
 #### **Keep only features with MS/MS scans**
 
