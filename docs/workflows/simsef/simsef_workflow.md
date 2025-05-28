@@ -12,10 +12,11 @@ Bruker representative to ask for the prmMALDI prototype and refer to SIMSEF.
 ## Requirements
 
 - access to timsTOF fleX instrument
-- access to 
-  - the prototypic timsControl 4.1/5.0 with the prm-MALDI option (contact your Bruker
+- access to either of:
+  - the prototypic timsControl 4.1/5.0with the prm-MALDI option (contact your Bruker
   representative)
   - timsControl 5.1 with prmMALDI enabled (contact your Bruker representative)
+  - timsControl 6.1 (prmMALDI released)
 - [Download](https://github.com/SteffenHeu/simsef_py/releases) SIMSEF acquisition tool for the respective timsControl version
 
 ## Procedure
@@ -37,14 +38,16 @@ in your MS1 run for SIMSEF experiments
 5. Start the MS1 imaging run.
 6. Copy the raw data to a powerful data analysis machine (Windows and Linux support Bruker raw data)
 7. Analyse the MS1 data and filter it to your liking (
-   see [imaging worflow](../imagingworkflow/imaging-workflow.md)). If your IMS seperation allows,
+   see [imaging worflow](../imagingworkflow/imaging-workflow.md)). If your IMS separation allows,
    filter for
    [isotopic peaks](../../module_docs/filter_isotope_filter/isotope_filter.md).
 8. Run the [SIMSEF scheduler](../../module_docs/tools_simsef/simsef.md). Using the preview, evaluate
    the fragmentation schedules and optimise the parameters. Check the task manager for running
    tasks. The scheduling may need some time.
+    - In SIMSEF for timsControl versions 4.1, 5.0, and 5.1 the path of the exported schedule must not contain any spaces and must be the same on the analysis and the instrument computer
+    - In SIMSEF for timsControl 6.1 this limitation does not exist
 9. Copy the schedule to the instrument computer. (**Must be the same path as selected on the
-   analysis computer, not including spaces or special characters**)
+   analysis computer, not including spaces or special characters**, unless you are using timsControl 6.1)
 10. Load the instrument method, you want to acquire the MS2 spectra with. Make sure the method is
     appropriate for your expected fragment ion m/z range.
     - Disable MALDI mode, enable PASEF mode, ensure that "advanced" is disabled for the collision
@@ -63,6 +66,6 @@ in your MS1 run for SIMSEF experiments
 16. Pair the MS2 spectra to the image features using
     the [Assign MALDI MS2s to features](../../module_docs/featdet_ms2_scan_pairing/ms2_maldi_scan_pairing.md)
     module
-17. Annotate using any annotation module in MZmine
+17. Annotate using any annotation module in mzmine
 
 {{ git_page_authors }}
