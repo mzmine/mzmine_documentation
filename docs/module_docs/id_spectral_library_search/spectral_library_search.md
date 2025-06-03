@@ -26,7 +26,7 @@ Depending on the **MS level** (MS1 or MS2), all corresponding query scans (e.g.,
 ### Downloads for open spectral libraries
 
 - MassBank of North America: [download](https://mona.fiehnlab.ucdavis.edu/downloads) (download .json)
-- MassBankEU: [download](https://github.com/MassBank/MassBank-data/releases/latest) (download .msp)
+- MassBankEU: [download](https://github.com/MassBank/MassBank-data/releases/latest) (download *_NIST.msp)
 - GNPS (ALL_GNPS_NO_PROPOGATED): [download](https://external.gnps2.org/gnpslibrary) (download .json)
 - MSnLib: [download](https://zenodo.org/records/11163381) (download .mgf)
 - GC/EI-HRMS for lipids: [download](https://github.com/gc-hrms-spectra/Database-of-archeological-relevant-compounds) (download .json)
@@ -36,8 +36,7 @@ Depending on the **MS level** (MS1 or MS2), all corresponding query scans (e.g.,
 - *.json: MassBank of North America (MoNA)
 - *.json: The Global Natural Product Social Molecular Networking (GNPS) (format from the spectral DB submission module)
 - *.mgf: GNPS
-- *.msp: MoNA
-- *.msp: National Institute of Standards and Technology (NIST)
+- *.msp: MoNA, MassBankEU (NIST compatible), National Institute of Standards and Technology (NIST)
 - *.jdx: JCAMP-DX
 
 ## **Parameters**

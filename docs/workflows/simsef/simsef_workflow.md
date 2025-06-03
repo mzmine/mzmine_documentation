@@ -21,10 +21,13 @@ Bruker representative to ask for the prmMALDI prototype and refer to SIMSEF.
 
 ## Procedure
 
-**Note:** :warning: acquire MS1 data with a smaller laser spot size than raster size (= stage
-movement/pixel size)
-**Note:** :warning: Due to the size of IMS-MS imaging data, we recommend to use 10,000-40,000 pixels
-in your MS1 run for SIMSEF experiments
+!!! warning
+    **Note:** :warning: acquire MS1 data with a smaller laser spot size than raster size (= stage
+    movement/pixel size)
+
+!!! warning
+    **Note:** :warning: Due to the size of IMS-MS imaging data, we recommend to use 10,000-40,000 pixels
+    in your MS1 run for SIMSEF experiments
 
 - this leaves some tissue for MS2 acquisition
 
@@ -53,7 +56,7 @@ in your MS1 run for SIMSEF experiments
     - Disable MALDI mode, enable PASEF mode, ensure that "advanced" is disabled for the collision
       energy settings.
     - Enable MALDI mode, save the method.
-    - Set MS mode to MS/MS in the MALDI settings.
+    - Set MS mode to MS/MS in the MALDI settings. (prmPASEF in timsControl 6.1 and higher)
     - Increase the laser size to the raster size
 11. Set instrument to operate and recalibrate if needed (recommended).
 12. Select the correct geometry file on the instrument computer (saved in step 3)
