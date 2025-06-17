@@ -99,10 +99,15 @@ and HD-DDA data to mzML. Lock mass correction is applied during the conversion. 
 enable centroiding (2D peak picking).
 
 <!-- markdown-link-check-disable -->
-The tool is available
-[here](https://microapps.on-demand.waters.com/home/showmarkdown/data-as-a-product). (register to
-download)
+The tool is available for
+[UNIFI](https://videos.waters.com/detail/video/6233843222001/export-data-in-mzml-format-in-unifi?q=How%20to%20set%20up%20MS%20Convert)
+and [MassLynx](https://videos.waters.com/detail/video/6342765707112/set-up-msconvert-with-waters_connect-3.0.0).
+Additional information can be
+found [here](https://support.waters.com/KB_Inf/Other/WKB238107_How_to_obtain_Waters_software_using_the_Waters_Digital_Software_Delivery_and_License_Entitlement_platform)
 <!-- markdown-link-check-enable -->
+
+Alternatively, you can try to import the .raw file directly into mzmine, if you have MSConvert
+installed on your computer.
 
 ## Data sharing (FAIR)
 
