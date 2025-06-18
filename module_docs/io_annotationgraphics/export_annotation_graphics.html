@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/align_merge_lists/align_merge_lists.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/io_annotationgraphics/export_annotation_graphics.html">
       
       
-        <link rel="prev" href="../align_join_aligner/join_aligner.html">
+        <link rel="prev" href="../io_export_feature_data/export-feature-data.html">
       
       
-        <link rel="next" href="../align_ransac/align_ransac.html">
+        <link rel="next" href="../featdet_file_merging/raw-files-merging.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Merge lists - mzmine documentation</title>
+        <title>Annotation graphics export - mzmine documentation</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#merge-lists" class="md-skip">
+        <a href="#annotation-graphics-export" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Merge lists
+              Annotation graphics export
             
           </span>
         </div>
@@ -485,18 +485,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" checked>
         
           
           <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
@@ -512,7 +514,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11_1">
             <span class="md-nav__icon md-icon"></span>
             I/O
@@ -730,10 +732,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../io_annotationgraphics/export_annotation_graphics.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Annotation graphics export
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="export_annotation_graphics.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -744,6 +768,158 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#export-in-batch-mode-head-less-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export in batch mode (head less, CLI)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature lists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-of-matches-to-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of matches to export
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dpi-scaling-factor" class="md-nav__link">
+    <span class="md-ellipsis">
+      DPI scaling factor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export shapes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-mobilograms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export mobilograms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-lipid-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export lipid matches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-spectral-library-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export spectral library matches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export PDF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-png" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export PNG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chart-export-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart export parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2348,20 +2524,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_18" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_18" >
         
           
           <label class="md-nav__link" for="__nav_11_18" id="__nav_11_18_label" tabindex="0">
@@ -2377,7 +2551,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_18_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_11_18">
             <span class="md-nav__icon md-icon"></span>
             Alignment
@@ -2411,32 +2585,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Merge lists
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="align_merge_lists.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../align_merge_lists/align_merge_lists.html" class="md-nav__link">
         
   
   
@@ -2447,68 +2599,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      Description
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#feature-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Feature lists
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#feature-list-name" class="md-nav__link">
-    <span class="md-ellipsis">
-      Feature list name
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4502,9 +4592,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
+  <a href="#export-in-batch-mode-head-less-cli" class="md-nav__link">
     <span class="md-ellipsis">
-      Description
+      Export in batch mode (head less, CLI)
     </span>
   </a>
   
@@ -4521,6 +4611,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#export-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#feature-lists" class="md-nav__link">
     <span class="md-ellipsis">
       Feature lists
@@ -4530,9 +4629,90 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#feature-list-name" class="md-nav__link">
+  <a href="#number-of-matches-to-export" class="md-nav__link">
     <span class="md-ellipsis">
-      Feature list name
+      Number of matches to export
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dpi-scaling-factor" class="md-nav__link">
+    <span class="md-ellipsis">
+      DPI scaling factor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export shapes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-mobilograms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export mobilograms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-lipid-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export lipid matches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-spectral-library-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export spectral library matches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export PDF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-png" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export PNG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chart-export-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart export parameters
     </span>
   </a>
   
@@ -4562,17 +4742,47 @@
   
 
 
-<h1 id="merge-lists"><strong>Merge lists</strong><a class="headerlink" href="#merge-lists" title="Permanent link">&para;</a></h1>
-<h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Alignment → Merge lists</strong></p>
-<p>This method merges feature lists by appending all rows into a new list. </p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Perform alignment before to align all features from comparable samples and use this method to merge feature lists that should not be aligned: e.g., positive and negative mode data.</p>
-<h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h4 id="feature-lists"><strong>Feature lists</strong><a class="headerlink" href="#feature-lists" title="Permanent link">&para;</a></h4>
-<p>Feature lists this module will take as an input</p>
-<h4 id="feature-list-name"><strong>Feature list name</strong><a class="headerlink" href="#feature-list-name" title="Permanent link">&para;</a></h4>
-<p>Resulting feature list name</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<h1 id="annotation-graphics-export">Annotation graphics export<a class="headerlink" href="#annotation-graphics-export" title="Permanent link">&para;</a></h1>
+<h2 id="export-in-batch-mode-head-less-cli">Export in batch mode (head less, CLI)<a class="headerlink" href="#export-in-batch-mode-head-less-cli" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To export the annotation graphics in head less mode, a display needs to be configured to render the
+graphics.
+If you are running on a desktop computer, this is usually the case. 
+If you are running on a server, e.g., ubuntu, you can use GTK and run it via Xvfb.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This export only covers annotated features. Features without an annotation will not be exported.</p>
+</div>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h4 id="export-directory">Export directory<a class="headerlink" href="#export-directory" title="Permanent link">&para;</a></h4>
+<p>Set a parent directory to which the graphics shall be exported. A sub directory with the name of the selected feature list will be created by the export module. An individual file will be created for each of the exported graphics. The file names follow this pattern:</p>
+<p><code>%d-%s_mz-%s_score-%s_%s_match-%d</code></p>
+<p>which will be replaced like this:</p>
+<p><code>&lt;featureid&gt;-&lt;graphic type&gt;_mz-&lt;feature mz&gt;_score-&lt;match score&gt;_&lt;additional note&gt;_match-&lt;match number&gt;</code></p>
+<h4 id="feature-lists">Feature lists<a class="headerlink" href="#feature-lists" title="Permanent link">&para;</a></h4>
+<p>Select the feature lists to export</p>
+<h4 id="number-of-matches-to-export">Number of matches to export<a class="headerlink" href="#number-of-matches-to-export" title="Permanent link">&para;</a></h4>
+<p>Define how many matches per annotation type (supported: spectral library matches and lipid annotations) shall be exported to a graphic. The match number will refer to the ranking in an annotation type.</p>
+<h4 id="dpi-scaling-factor">DPI scaling factor<a class="headerlink" href="#dpi-scaling-factor" title="Permanent link">&para;</a></h4>
+<p>Defines a scaling factor for pixels in exported png images.</p>
+<h4 id="export-shapes">Export shapes<a class="headerlink" href="#export-shapes" title="Permanent link">&para;</a></h4>
+<p>If selected, chromatogram charts will be exported for each row.</p>
+<h4 id="export-mobilograms">Export mobilograms<a class="headerlink" href="#export-mobilograms" title="Permanent link">&para;</a></h4>
+<p>If selected, mobilogram charts will be exported for each row.</p>
+<h4 id="export-images">Export images<a class="headerlink" href="#export-images" title="Permanent link">&para;</a></h4>
+<p>If selected, each feature will be exported as ion image (for imaging data files).</p>
+<h4 id="export-lipid-matches">Export lipid matches<a class="headerlink" href="#export-lipid-matches" title="Permanent link">&para;</a></h4>
+<p>If selected, a chart of the matched lipid signals in the MS2 spectrum will be exported.</p>
+<h4 id="export-spectral-library-matches">Export spectral library matches<a class="headerlink" href="#export-spectral-library-matches" title="Permanent link">&para;</a></h4>
+<p>If selected, the spectral library match will be exported as a mirror plot with metadata information. The png export will contain more metadata information, but cannot be edited. The pdf export can be edited using a vector graphics tool.</p>
+<h4 id="export-pdf">Export PDF<a class="headerlink" href="#export-pdf" title="Permanent link">&para;</a></h4>
+<p>If selected, the plots will be exported as PDF.</p>
+<h4 id="export-png">Export PNG<a class="headerlink" href="#export-png" title="Permanent link">&para;</a></h4>
+<p>If selected, the plots will be exported as PNG.</p>
+<h4 id="chart-export-parameters">Chart export parameters<a class="headerlink" href="#chart-export-parameters" title="Permanent link">&para;</a></h4>
+<p>Define chart export parameters.</p>
 
 
 
@@ -4593,7 +4803,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 24, 2022 21:13:07 UTC">November 24, 2022 21:13:07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="June 16, 2025 10:18:17 UTC">June 16, 2025 10:18:17</span>
   </span>
 
     
@@ -4609,7 +4819,7 @@
     </span>
     <nav>
       
-        <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
+        <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>
     </nav>
   </span>
 
