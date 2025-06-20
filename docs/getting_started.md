@@ -11,6 +11,9 @@ Download mzmine portable versions or installers from GitHub:
 mzmine should work on Windows, macOS, and Linux using either the installers or the portable versions. There are **NO** further requirements as mzmine packages a specific Java Virtual Machine. This means the local Java installation has **no** impact on mzmine. Windows and macOS users might be warned that mzmine is not signed or from a trusted source and have to click run anyway. 
 
 Before creating your first project, we recommend to [set the preferences](#set-user-preferences).
+
+**Sytem requirements** are available [here](system_requirements.md)
+
 ### Installation on macOS
 Download the latest version of the mzmine_macOS_installer_academia.dmg. Double click to start installation and drag and drop mzmine.app into the Applications folder.
 
@@ -67,9 +70,7 @@ Before creating your first project, we recommend setting up some things.
 
 1. Set a temporary file directory. Go to _Project_ → _Set preferences_ → _Temporary file directory_.
    This requires a restart to take effect.
-    2. We recommend setting the directory to an SSD with enough space for fast processing and
-       visualizations.
-    3. On Windows, old temporary files are deleted when a new session is started.
+   1. We recommend setting the directory to an SSD other than your system drive with enough space for fast processing and visualizations.
        ![settings](getting_started_set_parameters.png)
 
 2. mzmine 2  and mzmine 3 projects cannot be imported due to changes in the data structure.

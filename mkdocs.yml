@@ -159,6 +159,7 @@ nav:
       - SIMSEF scheduler: module_docs/tools_simsef/simsef.md
 
   - Additional resources:
+      - System requirements: system_requirements.md
       - General Terminology: terminology/general-terminology.md
       - IMS Terminology: terminology/ion-mobility-terminology.md
       - LC-MS and LC-IMS-MS data comparison: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
