@@ -26,12 +26,12 @@ Recommended (medium to large data sets ≥ 100 LC-MS files, or IMS-MS in general
 - Keyboard and mouse
 
 !!! Info
-  Offline login is possible, see [Offline use](services/users.md#offline-use).
+    Offline login is possible, see [Offline use](services/users.md#offline-use).
 
 !!! Info
-  Processing speed scales with CPU cores/threads and speed of the SSD for temporary files. We 
-  recommend setting the temporary files directory to a fast, secondary SSD in the mzmine 
-  preferences (CTRL+P, **Project -> Preferences**). (see [](getting_started.md#set-user-preferences))
+    Processing speed scales with CPU cores/threads and speed of the SSD for temporary files. We 
+    recommend setting the temporary files directory to a fast, secondary SSD in the mzmine 
+    preferences (CTRL+P, **Project -> Preferences**). (see [](getting_started.md#set-user-preferences))
 
 ## Software requirements
 
