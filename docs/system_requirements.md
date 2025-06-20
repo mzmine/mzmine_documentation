@@ -35,9 +35,11 @@ Recommended (medium to large data sets ≥ 100 LC-MS files, or IMS-MS in general
 
 ## Software requirements
 
+<!-- markdown-link-check-disable -->
+
 - Up-to-date operating system, e.g., Windows 10 or newer, recent Linux or Mac versions
 - mzmine does not require a dedicated Java installation, even though it is a Java software. All
-  requirements are shipped with mzmine
+requirements are shipped with mzmine
 - Microsoft Visual Studio C++
   Redist [download page](https://learn.microsoft.com/de-de/cpp/windows/latest-supported-vc-redist?view=msvc-170)
   for Bruker raw data import
@@ -47,6 +49,7 @@ Recommended (medium to large data sets ≥ 100 LC-MS files, or IMS-MS in general
       Linux [download page](https://github.com/pluskal-lab/ThermoRawFileParserMacLinux/releases)
     - ThermoRawFileParser does not need to be installed but only downloaded and imported via the
       mzmine preferences
+<!-- markdown-link-check-enable -->
 
 ## Internet connection
 
@@ -56,8 +59,13 @@ Recommended (medium to large data sets ≥ 100 LC-MS files, or IMS-MS in general
   for spectral networking using MS2Deepscore and DReaMS, an internet connection is required
 - A proxy may need to be set in the **Preferences** if your University/Company uses one (**Project -> Preferences**, CTRL+P)
 - Required URLS:
+
+<!-- markdown-link-check-disable -->
+
   - https://auth.mzio.io/ must be accessible user login
   - https://zenodo.org/ machine learning models
   - https://djl.ai/ machine learning models
   - https://zenodo.org/ spectral libraries
   - https://external.gnps2.org/gnpslibrary spectral libraries
+
+<!-- markdown-link-check-enable -->
