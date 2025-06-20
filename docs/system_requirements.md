@@ -9,19 +9,19 @@ permissions.
 
 ## Hardware requirements
 
-Minimum (small datasets < 30 LC-MS files):
+**Minimum** (small datasets < 30 LC-MS files):
 
-- 64 bit CPU, 4 Cores (2.5 GHz, Intel Core i5 or AMD Ryzen 5), 16 GB RAM, secondary Sata SSD drive,
+- 64 bit CPU, 4 Cores (2.5 GHz, Intel Core i5 or AMD Ryzen 5), 16 GB RAM, secondary Sata SSD drive (512 GB),
   integrated graphics
-- Display 1280 x 768 pixel
+- Display 1920 x 1080 pixel (Full HD)
 - Internet connection for login and spectral library/machine learning model download
 - Keyboard and mouse
 
-Recommended (medium to large data sets ≥ 100 LC-MS files, or IMS-MS in general):
+**Recommended** (medium to large data sets ≥ 100 LC-MS files, or IMS-MS in general):
 
-- 64 bit CPU, ≥ 6 Cores (≥3 GHz, HT), ⩾ 32 GB RAM (scales with data files), secondary NVMe SSD
-  drive, integrated graphics
-- Display 1920 x 1080 pixel (Full HD) or higher
+- 64 bit CPU, ≥ 16 Cores (≥3 GHz, Hyper threading), ≥ 64 GB RAM (scales with data files), secondary NVMe SSD
+  drive (≥ 1 TB), integrated graphics
+- Display 2160 x 1440 pixel or higher
 - Internet connection for login and spectral library/machine learning model download
 - Keyboard and mouse
 
@@ -40,9 +40,7 @@ Recommended (medium to large data sets ≥ 100 LC-MS files, or IMS-MS in general
 - Up-to-date operating system, e.g., Windows 10 or newer, recent Linux or Mac versions
 - mzmine does not require a dedicated Java installation, even though it is a Java software. All
 requirements are shipped with mzmine
-- Microsoft Visual Studio C++
-  Redist [download page](https://learn.microsoft.com/de-de/cpp/windows/latest-supported-vc-redist?view=msvc-170)
-  for Bruker raw data import
+- Microsoft Visual Studio C++ Redist for Bruker raw data import [download page](https://learn.microsoft.com/de-de/cpp/windows/latest-supported-vc-redist?view=msvc-170)
 - MSConvert (on Windows) for native Sciex, Waters, Shimadzu, MOBILion, Thermo data
   support [download page](https://proteowizard.sourceforge.io/download.html)
     - Thermo alternative: ThermoRawFileParser for native Thermo support on Windows, Mac, and
@@ -56,16 +54,13 @@ requirements are shipped with mzmine
 - An internet connection is recommended, but not strictly required for core processing
 - Offline user login is possible, see [Offline use](services/users.md#offline-use).
 - To allow mzmine to download spectral libraries and the recent versions of machine learing models
-  for spectral networking using MS2Deepscore and DReaMS, an internet connection is required
+for spectral networking using MS2Deepscore and DReaMS, an internet connection is required
 - A proxy may need to be set in the **Preferences** if your University/Company uses one (**Project -> Preferences**, CTRL+P)
-- Required URLS:
-
 <!-- markdown-link-check-disable -->
-
-  - https://auth.mzio.io/ must be accessible user login
-  - https://zenodo.org/ machine learning models
-  - https://djl.ai/ machine learning models
-  - https://zenodo.org/ spectral libraries
-  - https://external.gnps2.org/gnpslibrary spectral libraries
-
+- Required URLS (in case University/Company blocks unknown):
+    - https://auth.mzio.io/ must be accessible user login
+    - https://zenodo.org/ machine learning models
+    - https://djl.ai/ machine learning models
+    - https://zenodo.org/ spectral libraries
+    - https://external.gnps2.org/gnpslibrary spectral libraries
 <!-- markdown-link-check-enable -->
