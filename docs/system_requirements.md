@@ -24,6 +24,7 @@ permissions.
 - Display 2560 x 1440 pixel or higher
 - Internet connection for login and spectral library/machine learning model download
 - Keyboard and mouse
+- dedicated GPU (CUDA enabled) for accelerated machine learning models (not required)
 
 !!! Info
     Offline login is possible, see [Offline use](services/users.md#offline-use).
@@ -37,7 +38,7 @@ permissions.
 
 <!-- markdown-link-check-disable -->
 
-- Up-to-date operating system, e.g., Windows 10 or newer, recent Linux or Mac versions
+- Up-to-date operating system, e.g., Windows 10 or newer, recent Linux or MacOS (academic only) versions
 - mzmine does not require a dedicated Java installation, even though it is a Java software. All
 requirements are shipped with mzmine
 - Microsoft Visual Studio C++ Redist for Bruker raw data import [download page](https://learn.microsoft.com/de-de/cpp/windows/latest-supported-vc-redist?view=msvc-170)
