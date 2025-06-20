@@ -21,7 +21,7 @@ permissions.
 
 - 64 bit CPU, ≥ 16 Cores (≥3 GHz, Hyper threading), ≥ 64 GB RAM (scales with data files), secondary NVMe SSD
   drive (≥ 1 TB), integrated graphics
-- Display 2160 x 1440 pixel or higher
+- Display 2560 x 1440 pixel or higher
 - Internet connection for login and spectral library/machine learning model download
 - Keyboard and mouse
 
