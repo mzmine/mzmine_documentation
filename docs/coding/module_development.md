@@ -73,7 +73,7 @@ Before pushing your final changes to the remote branch, try to thoroughly test y
 
 ## **11. Create documentation**
 
-Prepare a description for your module that will go into the documentation. Creating a thorough documentation will help more people to used and understand your module. The documentation template can be found [here](../contribute_docu_template.md)
+Prepare a description for your module that will go into the documentation. Creating a thorough documentation will help more people to use and understand your module. The documentation template can be found [here](../contribute_docu_template.md)
 
 ## **12. Push to the remote branch and create a pull request**
 
