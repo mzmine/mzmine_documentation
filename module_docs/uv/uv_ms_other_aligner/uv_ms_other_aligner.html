@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/uv/uv_ms_other_aligner/uv_ms_other_aligner.html">
       
       
-        <link rel="prev" href="uv_ms_other_aligner.html">
+        <link rel="prev" href="../uv_resolve_traces/uv_local_min_resolver.html">
       
       
         <link rel="next" href="../../../visualization_modules/visualization_overview/visualization-overview.html">
@@ -3445,170 +3445,6 @@
 
               
             
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Correlate MS features with other detectors
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="uv_ms_other_aligner.html" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Correlate MS features with other detectors
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#feature-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Feature lists
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#trace-selection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Trace selection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rt-tolerance" class="md-nav__link">
-    <span class="md-ellipsis">
-      RT tolerance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minimum-correlation-score" class="md-nav__link">
-    <span class="md-ellipsis">
-      Minimum correlation score
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#results" class="md-nav__link">
-    <span class="md-ellipsis">
-      Results
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clear-correlated-traces" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clear correlated traces
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Clear correlated traces">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameters_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#feature-lists_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Feature lists
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -5140,6 +4976,12 @@
 
 
 <h1 id="correlate-ms-features-with-other-detectors">Correlate MS features with other detectors<a class="headerlink" href="#correlate-ms-features-with-other-detectors" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To process data from other detectors, the Other detector service of mzmine is required. This feature
+is included in the mzmine PRO subscription. Academic program and other users can reach out to
+inquire <a href="https://mzio.io/#contact">access options</a>.</p>
+</div>
 <p>This module correlates features of an MS workflow,
 e.g., <a href="../../../workflows/lcmsworkflow/lcms-workflow.html">LC-MS</a>, to features from other detector
 traces, allowing you to find which MS features are behind a certain peak in the UV, CAD, or
@@ -5159,11 +5001,11 @@ see <a href="../otherdetector_glossary.html#trace-selection-parameter">trace sel
 <p>Allowed RT difference of the peak maxima in the MS and other detector features.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-</div>
 <p>This allowed RT tolerance does not cause an alignment of the other detector feature and the MS
 feature. If the traces are affected by an retention time shift, use
 the <a href="../uv_shift_traces/uv_shift_traces.html">Shift traces</a> module to correct for that shift. Not
 correcting an existing retention time shift will cause poor correlation between the two detectors.</p>
+</div>
 <h4 id="minimum-correlation-score">Minimum correlation score<a class="headerlink" href="#minimum-correlation-score" title="Permanent link">&para;</a></h4>
 <p>Set a minimum (Pearson) correlation factor between the chromatographic shape of the two features.</p>
 <h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
@@ -5199,7 +5041,7 @@ allows a deeper investigation and also manually assigning or removing the correl
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="July 28, 2025 13:11:43 UTC">July 28, 2025 13:11:43</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="July 28, 2025 13:48:29 UTC">July 28, 2025 13:48:29</span>
   </span>
 
     
