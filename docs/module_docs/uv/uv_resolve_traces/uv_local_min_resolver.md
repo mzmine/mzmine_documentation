@@ -8,6 +8,14 @@ the [preprocessed trace](../otherdetector_glossary.md#preprocessed-trace).
 
 ## Parameters
 
+#### Trace selection
+
+Select the specific traces you want to resolve. Typically, it is not necessary to resolve all existing
+traces, but only the ones you want to correlate with the MS, e.g., the UV (=Absorption) traces
+
+For a detailed description of all sub-parameters
+see [trace selection parameter](../otherdetector_glossary.md#trace-selection-parameter).
+
 #### Chromatographic threshold
 
 This filter assumes that most of the data points contain no signals to remove unnecessary noise.
@@ -17,7 +25,7 @@ represents an important filter for noisy chromatogram and significantly reduces 
 The algorithm finds the intensity value (threshold) that leaves the specified percentage of data
 points in the trace below the given value. All such data points are removed.
 
-The typical values for data from other detectors may be significantly different than from MS data.
+The typical values for data from other detectors may be significantly different from from MS data.
 E.g., MS data may require 85%, whereas other data may require lower values such as 50%.
 
 ![img.png](img.png)
