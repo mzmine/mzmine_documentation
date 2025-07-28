@@ -54,5 +54,5 @@ character)
 specific description (=name) to be affected by this filter. Use `*` as a wildcard (match any
 character)
 
-**Trace type** Specify the [trace type](../otherdetector_glossary.md#trace-type) to be used as input
+**Trace type** Specify the [trace type](#trace-type) to be used as input
 for this module.
