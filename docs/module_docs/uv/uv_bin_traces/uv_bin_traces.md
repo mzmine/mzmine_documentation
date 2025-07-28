@@ -1,5 +1,12 @@
 # Bin traces (Other detectors)
 
+
+!!! info
+    To process data from other detectors, the Other detector service of mzmine is required. This feature
+    is included in the mzmine PRO subscription. Academic program and other users can reach out to
+    inquire [access options](https://mzio.io/#contact).
+
+
 As other detectors typically have a higher acquisition rate than mass spectrometers, it may be
 useful to bin the detected intensities/absorptions together to achieve a similar acquisition rate
 for better [cross-correlation](../uv_ms_other_aligner/uv_ms_other_aligner.md) and processing

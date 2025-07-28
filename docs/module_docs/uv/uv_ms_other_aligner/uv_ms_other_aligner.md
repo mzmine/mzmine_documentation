@@ -1,5 +1,12 @@
 # Correlate MS features with other detectors
 
+
+!!! info
+    To process data from other detectors, the Other detector service of mzmine is required. This feature
+    is included in the mzmine PRO subscription. Academic program and other users can reach out to
+    inquire [access options](https://mzio.io/#contact).
+
+
 This module correlates features of an MS workflow,
 e.g., [LC-MS](../../../workflows/lcmsworkflow/lcms-workflow.md), to features from other detector
 traces, allowing you to find which MS features are behind a certain peak in the UV, CAD, or
@@ -28,10 +35,10 @@ see [trace selection parameter](../otherdetector_glossary.md#trace-selection-par
 Allowed RT difference of the peak maxima in the MS and other detector features.
 
 !!! warning
-This allowed RT tolerance does not cause an alignment of the other detector feature and the MS
-feature. If the traces are affected by an retention time shift, use
-the [Shift traces](../uv_shift_traces/uv_shift_traces.md) module to correct for that shift. Not
-correcting an existing retention time shift will cause poor correlation between the two detectors.
+    This allowed RT tolerance does not cause an alignment of the other detector feature and the MS
+    feature. If the traces are affected by an retention time shift, use
+    the [Shift traces](../uv_shift_traces/uv_shift_traces.md) module to correct for that shift. Not
+    correcting an existing retention time shift will cause poor correlation between the two detectors.
 
 #### Minimum correlation score
 

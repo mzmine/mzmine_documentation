@@ -1,5 +1,11 @@
 # Correlation dashboard
 
+!!! info
+   To process data from other detectors, the Other detector service of mzmine is required. This feature
+   is included in the mzmine PRO subscription. Academic program and other users can reach out to
+   inquire [access options](https://mzio.io/#contact).
+
+
 The Correlation dashboard allows investigation of the results created by
 the [Correlate Ms features with other detectors](../uv_ms_other_aligner/uv_ms_other_aligner.md).
 
