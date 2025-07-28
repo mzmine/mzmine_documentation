@@ -1,5 +1,10 @@
 # Trim traces (Other detectors)
 
+!!! info
+    To process data from other detectors, the Other detector service of mzmine is required. This feature
+    is included in the mzmine PRO subscription. Academic program and other users can reach out to
+    inquire [access options](https://mzio.io/#contact).
+
 Sudden changes in background intensity, e.g., by changes in solvent composition, may lead to subpar
 performance of the baseline correction. In such cases, it may be useful to trim the traces of other
 detectors.
