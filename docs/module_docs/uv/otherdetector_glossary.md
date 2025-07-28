@@ -26,4 +26,33 @@ there is no preprocessed trace, mzmine will fall back to the raw trace.
 
 ### Features
 
-A feature is a specific peak in a trace/chromatogram. 
+A feature is a specific peak in a trace/chromatogram.
+
+## Trace selection parameter
+
+This parameter is used throughout the workflow for processing data from other detectors to select
+the traces that are being processed.
+
+![trace_selection_param.png](trace_selection_param.png)
+
+!!! Info 
+    Typically, it is not necessary to select all existing traces here, but only the ones you want to 
+    correlate with the MS, e.g., the UV (=Absorption) traces.
+
+**Chromatogram type** Specify the type of chromatogram you want to process. Usually, specifying this
+is enough.
+
+**Range unit filter** (Uncommon) filter the traces of the selected chromatogram type to only have a
+specific unit on the range axis to be affected by this filter. Use `*` as a wildcard (match any
+character)
+
+**Range label filter** (Uncommon) filter the traces of the selected chromatogram type to only have a
+specific label on the range axis to be affected by this filter. Use `*` as a wildcard (match any
+character)
+
+**Description filter** (Uncommon) filter the traces of the selected chromatogram type to only have a
+specific description (=name) to be affected by this filter. Use `*` as a wildcard (match any
+character)
+
+**Trace type** Specify the [trace type](../otherdetector_glossary.md#trace-type) to be used as input
+for this module.

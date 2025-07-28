@@ -16,23 +16,8 @@ Select the MS data files to shift the selected traces of.
 Select the specific traces you want to shift. Typically, it is not necessary to shift all existing
 traces, but only the ones you want to correlate with the MS, e.g., the UV (=Absorption) traces
 
-**Chromatogram type** Specify the type of chromatogram you want to process. Usually, specifying this
-is enough.
-
-**Range unit filter** (Uncommon) filter the traces of the selected chromatogram type to only have a
-specific unit on the range axis to be affected by this filter. Use `*` as a wildcard (match any
-character)
-
-**Range label filter** (Uncommon) filter the traces of the selected chromatogram type to only have a
-specific label on the range axis to be affected by this filter. Use `*` as a wildcard (match any
-character)
-
-**Description filter** (Uncommon) filter the traces of the selected chromatogram type to only have a
-specific description (=name) to be affected by this filter. Use `*` as a wildcard (match any
-character)
-
-**Trace type** Specify the [trace type](../otherdetector_glossary.md#trace-type) to be used as input
-for this module.
+For a detailed description of all sub-parameters
+see [trace selection parameter](../otherdetector_glossary.md#trace-selection-parameter).
 
 #### RT shift
 
