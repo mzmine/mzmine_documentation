@@ -37,7 +37,7 @@ Allowed RT difference of the peak maxima in the MS and other detector features.
 !!! warning
     This allowed RT tolerance does not cause an alignment of the other detector feature and the MS
     feature. If the traces are affected by an retention time shift, use
-    the [Shift traces](../uv_shift_traces/uv_shift_traces.md) module to correct for that shift. Not
+    the [Shift traces](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md) module to correct for that shift. Not
     correcting an existing retention time shift will cause poor correlation between the two detectors.
 
 #### Minimum correlation score
