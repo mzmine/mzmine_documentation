@@ -125,9 +125,7 @@ nav:
           - Spectra similarity: module_docs/align_join_aligner/spectra_similarity.md
       - Other detectors (UV):
           - Chromatogram builder (Other spectral data): module_docs/uv/uv_spectra_chromatogram_builder/spectrachrombuilder.md
-          - Trim traces (Other detectors): module_docs/uv/uv_trim_traces/uv_trim_traces.md
-          - Shift traces (Other detectors): module_docs/uv/uv_shift_traces/uv_shift_traces.md
-          - Bin traces (Other detectors): module_docs/uv/uv_bin_traces/uv_bin_traces.md
+          - Shift, trim, and bin traces (Other detectors): module_docs/uv/uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md
           - Baseline correction (Other detectors): module_docs/uv/uv_baseline_correction/uv_baseline_correction.md
           - Local minimum resolver (Other detectors): module_docs/uv/uv_resolve_traces/uv_local_min_resolver.md
           - Correlate MS features with other detectors: module_docs/uv/uv_ms_other_aligner/uv_ms_other_aligner.md

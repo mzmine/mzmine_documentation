@@ -40,7 +40,7 @@ The additional controls are described below:
    found or the correlation was not executed yet.
 6. Set an additional RT shift to the other detector trace. This is useful during method optimisation
    to determine the shift between the other detector and the MS. This shift can then be set in the
-   wizard or the [Shift traces](../uv_shift_traces/uv_shift_traces.md) module.
+   wizard or the [Shift traces](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md) module.
 7. **Filter MS features** sets the RT filter (**8**) of the feature table to the RT range of the
    currently selected other detector feature. This allows you to investigate all MS features that
    have their peak maximum in the RT range of the other detector feature.
