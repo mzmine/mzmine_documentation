@@ -46,7 +46,7 @@ nav:
           - FTMS shoulder peak finder: module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.md
           - Mass calibration: module_docs/featdet_mass_detection/mass-calibration.md
       - LC-MS feature detection:
-          - ADAP Chromatogram builder: module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
+          - Chromatogram builder: module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
           - GridMass: module_docs/lc-ms_featdet/featdet_gridmass/gridmass.md
           - Targeted feature detection: module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.md
           - Feature detection results: module_docs/lc-ms_featdet/featdet_results/featdet_results.md

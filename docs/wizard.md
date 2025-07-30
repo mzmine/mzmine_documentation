@@ -169,7 +169,7 @@ for [ion mobility scans](terminology/ion-mobility-terminology.md#accumulations-m
 The minimum height of chromatograms and features.
 
 Influences batch steps:
-[ADAP Chromatogram builder](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md),
+[Chromatogram builder](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md),
 [Local minimum feature resolver (RT dimension)](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md),
 [Local minimum feature resolver (IMS dimension)](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md),
 DIA MS2 grouping (todo documentation),
@@ -185,7 +185,7 @@ accuracy between scans in the same raw data file.
 
 Influences batch steps:
 [Mobility scan merging](module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md),
-[ADAP Chromatogram builder](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md),
+[Chromatogram builder](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md),
 [Gap filling](module_docs/gapfill_peak_finder/gap-filling.md),
 [Lipid annotation (MS2)](module_docs/id_lipid_annotation/lipid-annotation.md),
 [Spectral library search](module_docs/id_spectral_library_search/spectral_library_search.md),

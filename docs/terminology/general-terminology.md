@@ -141,7 +141,7 @@ Every mass spectrum contained in the raw file is processed individually. The sig
 
 In mzmine, **feature lists** are the output of the **feature detection** process (see [Masses and features](#masses-and-features)). 
 
-The set of detected features in each LC-MS run is stored as a list, hence the name "feature list" (see, for example, [ADAP chromatogram builder](../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local mimimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) for more details). Multiple feature lists can undergo further processing (_e.g._ feature alingment) which results in a table (often referred to as **feature table**) where samples are arranged in columns, features in rows and each entry contains the signal intensity detected for the corresponding feature in the corresponding sample.
+The set of detected features in each LC-MS run is stored as a list, hence the name "feature list" (see, for example, [Chromatogram builder](../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local mimimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) for more details). Multiple feature lists can undergo further processing (_e.g._ feature alingment) which results in a table (often referred to as **feature table**) where samples are arranged in columns, features in rows and each entry contains the signal intensity detected for the corresponding feature in the corresponding sample.
 
 ### **_m/z_ tolerances**
 
@@ -151,7 +151,7 @@ The set of detected features in each LC-MS run is stored as a list, hence the na
 
 The _m/z_ tolerance is defined as maximum allowed difference between _m/z_ values in order to be considered
 the same or belonging to each other (isotopes or different adducts). The **scan-to-scan _m/z_ tolerance**
-is used for values between different scans (in, _e.g._, [ADAP Chromatogram Builder](../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)). 
+is used for values between different scans (in, _e.g._, [Chromatogram Builder](../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)). 
 The **m/z tolerance (intra-sample)** is used for features in the same scan that belong together (used, _e.g._, in [<sup>13</sup>C isotope filter](../module_docs/filter_isotope_filter/isotope_filter.md)).
 The **m/z tolerance (sample-sample)** takes the fluctuation of the same feature in different samples into account.
 This tolerance is used in the [Join aligner](../module_docs/align_join_aligner/join_aligner.md)). 
