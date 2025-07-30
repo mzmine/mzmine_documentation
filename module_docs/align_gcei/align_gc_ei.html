@@ -1198,7 +1198,7 @@
   
   
   <span class="md-ellipsis">
-    ADAP Chromatogram builder
+    Chromatogram builder
     
   </span>
   
@@ -2531,25 +2531,25 @@
           <li class="md-nav__item">
   <a href="#feature-lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Feature Lists
+      Feature lists
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mz-tolerance" class="md-nav__link">
+  <a href="#mz-tolerance-scan-to-scan" class="md-nav__link">
     <span class="md-ellipsis">
-      m/z Tolerance
+      m/z Tolerance (scan-to-scan)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#retention-time-tolerance-min" class="md-nav__link">
+  <a href="#retention-time-tolerance" class="md-nav__link">
     <span class="md-ellipsis">
-      Retention Time Tolerance (min)
+      Retention time tolerance
     </span>
   </a>
   
@@ -2565,9 +2565,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#similarity-function" class="md-nav__link">
+  <a href="#similarity" class="md-nav__link">
     <span class="md-ellipsis">
-      Similarity Function
+      Similarity
     </span>
   </a>
   
@@ -2576,16 +2576,16 @@
           <li class="md-nav__item">
   <a href="#feature-list-name" class="md-nav__link">
     <span class="md-ellipsis">
-      Feature List Name
+      Feature list name
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#handle-original-feature-list" class="md-nav__link">
+  <a href="#original-feature-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Handle Original Feature List
+      Original feature list
     </span>
   </a>
   
@@ -4821,25 +4821,25 @@
           <li class="md-nav__item">
   <a href="#feature-lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Feature Lists
+      Feature lists
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mz-tolerance" class="md-nav__link">
+  <a href="#mz-tolerance-scan-to-scan" class="md-nav__link">
     <span class="md-ellipsis">
-      m/z Tolerance
+      m/z Tolerance (scan-to-scan)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#retention-time-tolerance-min" class="md-nav__link">
+  <a href="#retention-time-tolerance" class="md-nav__link">
     <span class="md-ellipsis">
-      Retention Time Tolerance (min)
+      Retention time tolerance
     </span>
   </a>
   
@@ -4855,9 +4855,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#similarity-function" class="md-nav__link">
+  <a href="#similarity" class="md-nav__link">
     <span class="md-ellipsis">
-      Similarity Function
+      Similarity
     </span>
   </a>
   
@@ -4866,16 +4866,16 @@
           <li class="md-nav__item">
   <a href="#feature-list-name" class="md-nav__link">
     <span class="md-ellipsis">
-      Feature List Name
+      Feature list name
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#handle-original-feature-list" class="md-nav__link">
+  <a href="#original-feature-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Handle Original Feature List
+      Original feature list
     </span>
   </a>
   
@@ -4908,31 +4908,35 @@
 <h1 id="gc-ei-feature-alignment">GC-EI Feature Alignment<a class="headerlink" href="#gc-ei-feature-alignment" title="Permanent link">&para;</a></h1>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> Feature list methods → Alignment → GC aligner</p>
-<p>This module aligns GC/EI-MS feature lists by grouping deconvoluted features based on their retention times and spectral similarities to ensure accurate alignment of features across different samples.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Before using this module run GC-EI spectral deconvolution </p>
+<p>This module aligns GC/EI-MS feature lists by grouping deconvoluted features based on their retention 
+times and spectral similarities to ensure accurate alignment of features across different samples.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>GC aligner requires mass spectra to be constructed prior to the alignment (using GC-EI spectral deconvolution).</p>
+<p>A typical workflow can be constructed with the <a href="../../wizard.html">mzwizard</a> by selecting GC-EI-MS.
+See <a href="../../workflows/gcmsworkflow/gcms-workflow.html">this page</a>for a more detailed description of the workflow.</p>
 </div>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h3 id="feature-lists">Feature Lists<a class="headerlink" href="#feature-lists" title="Permanent link">&para;</a></h3>
+<h3 id="feature-lists">Feature lists<a class="headerlink" href="#feature-lists" title="Permanent link">&para;</a></h3>
 <p>Select the feature lists to be aligned.</p>
-<h3 id="mz-tolerance">m/z Tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h3>
+<h3 id="mz-tolerance-scan-to-scan">m/z Tolerance (scan-to-scan)<a class="headerlink" href="#mz-tolerance-scan-to-scan" title="Permanent link">&para;</a></h3>
 <p>Tolerance for m/z values used for spectral similarity matching. </p>
-<h3 id="retention-time-tolerance-min">Retention Time Tolerance (min)<a class="headerlink" href="#retention-time-tolerance-min" title="Permanent link">&para;</a></h3>
+<h3 id="retention-time-tolerance">Retention time tolerance<a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h3>
 <p>Maximum allowed difference between two retention time values for them to be considered for alignment.</p>
 <h3 id="weight-for-rt">Weight for RT<a class="headerlink" href="#weight-for-rt" title="Permanent link">&para;</a></h3>
 <p>Score for perfectly matching RT values. The RT delta is divided by the RT tolerance and scaled 0-1. The weight then multiplies this score so that higher RT delta gives a penalty. The RT weight shifts the focus on RT or spectral similarity.</p>
-<h3 id="similarity-function">Similarity Function<a class="headerlink" href="#similarity-function" title="Permanent link">&para;</a></h3>
-<p>Algorithm to calculate spectral similarity between samples. Pseudo spectra from GC-EI spectral deconvolution will be compared. </p>
-<h3 id="feature-list-name">Feature List Name<a class="headerlink" href="#feature-list-name" title="Permanent link">&para;</a></h3>
+<h3 id="similarity">Similarity<a class="headerlink" href="#similarity" title="Permanent link">&para;</a></h3>
+<p>Algorithm to calculate spectral similarity between samples. Pseudo spectra from GC-EI spectral deconvolution will be compared.
+  Usually uses the <strong>Composite cosine identity</strong> which is similar to the algorithm in NIST search for GC-EI data.</p>
+<h3 id="feature-list-name">Feature list name<a class="headerlink" href="#feature-list-name" title="Permanent link">&para;</a></h3>
 <p>Name for the aligned feature list.</p>
-<h3 id="handle-original-feature-list">Handle Original Feature List<a class="headerlink" href="#handle-original-feature-list" title="Permanent link">&para;</a></h3>
-<p>If checked, the original feature list will be removed.</p>
+<h3 id="original-feature-list">Original feature list<a class="headerlink" href="#original-feature-list" title="Permanent link">&para;</a></h3>
+<p>Either keep or remove the original feature lists.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The alignment is performed independtly of the representative feature. Only spectral similarity and retention time are taken into account. The final representative feature will be determined as during the alignment. </p>
 </div>
-<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a></span></p>
 
 
 
@@ -4953,7 +4957,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="June 26, 2024 14:09:17 UTC">June 26, 2024 14:09:17</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="July 30, 2025 10:41:01 UTC">July 30, 2025 10:41:01</span>
   </span>
 
     
@@ -4964,12 +4968,13 @@
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
       
     </span>
     <nav>
       
-        <a href="mailto:ansgar.korf@mzio.io">Ansgar Korf</a>
+        <a href="mailto:ansgar.korf@mzio.io">Ansgar Korf</a>, 
+        <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>
     </nav>
   </span>
 

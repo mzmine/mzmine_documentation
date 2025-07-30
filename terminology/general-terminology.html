@@ -1196,7 +1196,7 @@
   
   
   <span class="md-ellipsis">
-    ADAP Chromatogram builder
+    Chromatogram builder
     
   </span>
   
@@ -5164,7 +5164,7 @@ A gap (match-to-nothing) is defined as a missing value in an alignment. Peaks th
 <p>Every mass spectrum contained in the raw file is processed individually. The signals exceeding the set noise threshold are included in the mass list. See <a href="../module_docs/featdet_mass_detection/mass-detection.html">Mass detection</a> module.</p>
 <h3 id="feature-list"><strong>Feature list</strong><a class="headerlink" href="#feature-list" title="Permanent link">&para;</a></h3>
 <p>In mzmine, <strong>feature lists</strong> are the output of the <strong>feature detection</strong> process (see <a href="#masses-and-features">Masses and features</a>). </p>
-<p>The set of detected features in each LC-MS run is stored as a list, hence the name "feature list" (see, for example, <a href="../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP chromatogram builder</a> and <a href="../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local mimimum resolver</a> for more details). Multiple feature lists can undergo further processing (<em>e.g.</em> feature alingment) which results in a table (often referred to as <strong>feature table</strong>) where samples are arranged in columns, features in rows and each entry contains the signal intensity detected for the corresponding feature in the corresponding sample.</p>
+<p>The set of detected features in each LC-MS run is stored as a list, hence the name "feature list" (see, for example, <a href="../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">Chromatogram builder</a> and <a href="../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local mimimum resolver</a> for more details). Multiple feature lists can undergo further processing (<em>e.g.</em> feature alingment) which results in a table (often referred to as <strong>feature table</strong>) where samples are arranged in columns, features in rows and each entry contains the signal intensity detected for the corresponding feature in the corresponding sample.</p>
 <h3 id="mz-tolerances"><strong><em>m/z</em> tolerances</strong><a class="headerlink" href="#mz-tolerances" title="Permanent link">&para;</a></h3>
 <ul>
 <li>scan-to-scan</li>
@@ -5173,7 +5173,7 @@ A gap (match-to-nothing) is defined as a missing value in an alignment. Peaks th
 </ul>
 <p>The <em>m/z</em> tolerance is defined as maximum allowed difference between <em>m/z</em> values in order to be considered
 the same or belonging to each other (isotopes or different adducts). The <strong>scan-to-scan <em>m/z</em> tolerance</strong>
-is used for values between different scans (in, <em>e.g.</em>, <a href="../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP Chromatogram Builder</a>). 
+is used for values between different scans (in, <em>e.g.</em>, <a href="../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">Chromatogram Builder</a>). 
 The <strong>m/z tolerance (intra-sample)</strong> is used for features in the same scan that belong together (used, <em>e.g.</em>, in <a href="../module_docs/filter_isotope_filter/isotope_filter.html"><sup>13</sup>C isotope filter</a>).
 The <strong>m/z tolerance (sample-sample)</strong> takes the fluctuation of the same feature in different samples into account.
 This tolerance is used in the <a href="../module_docs/align_join_aligner/join_aligner.html">Join aligner</a>). </p>
@@ -5187,7 +5187,7 @@ This tolerance is used in the <a href="../module_docs/align_join_aligner/join_al
 <li>IUPAC. Compendium of Chemical Terminology, 2nd ed. (the "Gold Book"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997). Online version (2019-) created by S. J. Chalk. ISBN 0-9678550-9-8. <a>10.1351/goldbook</a></li>
 <li>Guo, J., Huan T. Evaluation of significant features discovered from different data acquisition modes in mass spectrometry-based untargeted metabolomics. <em>Analytica Chimica Acta</em> (2020). DOI: <a>10.1016/j.aca.2020.08.065</a></li>
 </ul>
-<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
 
 
 
@@ -5208,7 +5208,7 @@ This tolerance is used in the <a href="../module_docs/align_join_aligner/join_al
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 31, 2024 12:58:55 UTC">October 31, 2024 12:58:55</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="July 30, 2025 10:13:34 UTC">July 30, 2025 10:13:34</span>
   </span>
 
     
@@ -5225,6 +5225,7 @@ This tolerance is used in the <a href="../module_docs/align_join_aligner/join_al
     <nav>
       
         <a href="mailto:ansgar.korf@mzio.io">Ansgar Korf</a>, 
+        <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
         <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
         <a href="mailto:corinna.brungs@wwu.de">corinnabrungs</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>, 

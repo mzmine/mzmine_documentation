@@ -1198,7 +1198,7 @@
   
   
   <span class="md-ellipsis">
-    ADAP Chromatogram builder
+    Chromatogram builder
     
   </span>
   
@@ -5028,7 +5028,7 @@
 <h1 id="local-minimum-resolver"><strong>Local Minimum Resolver</strong><a class="headerlink" href="#local-minimum-resolver" title="Permanent link">&para;</a></h1>
 <h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature detection → Chromatogram resolving → Local minimum resolver</strong></p>
-<p>During the EICs building, overlapping and partially co-eluting features are retained as single features in the feature list (see, for example, <a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP chromatogram builder</a>). As a local minimum in the EIC trace might correspond to the valley between two adjacent, partially-resolved peaks, the <strong>Local minimum resolver (LMR)</strong> utilizes such minima to split "shoulder" LC peaks into individual features (<em>i.e.</em> <a href="../../terminology/general-terminology.html#chromatographic-resolving">chromatographic resolving</a>).</p>
+<p>During the EICs building, overlapping and partially co-eluting features are retained as single features in the feature list (see, for example, <a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">Chromatogram builder</a>). As a local minimum in the EIC trace might correspond to the valley between two adjacent, partially-resolved peaks, the <strong>Local minimum resolver (LMR)</strong> utilizes such minima to split "shoulder" LC peaks into individual features (<em>i.e.</em> <a href="../../terminology/general-terminology.html#chromatographic-resolving">chromatographic resolving</a>).</p>
 <p>The algorithm examines all the data points in the EIC trace starting from the earliest RT. A scan window is set (see <strong>Minimum search range RT/Mobility</strong> parameter) and centered around the examined data point. </p>
 <p>A data point is considered a <strong>local minimum</strong> if it is the lowest intense point within the scan window. When a local minumum is found, a set of user-defined intensity and feature duration requirements is checked. If they are fulfilled, the original overlapping peaks are split into new, distinct features. </p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> The <strong>LMR</strong> is particularly suitable for LC-MS data with little noise and nice peak shapes.</p>
@@ -5081,7 +5081,7 @@ The algorithm finds the intensity value (threshold) that leaves the specified pe
 <p>Many users prefer to rely only on the <em>Minimum absolute height</em> as it is more straightforward to set. To do so, set the <em>Minimum relative height = 0</em> and the parameter will be ignored.</p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> Modern mass spectrometers provide linear dynamic ranges up to 5 orders of magnitude. If we take an Orbitrap device with a detector saturation around 1.0E10 intensity, a <em>Minimum relative height</em> = 0.001 would correspond to a 1.0E5 minimum intensity.</p>
 <h4 id="minimum-absolute-height"><strong>Minimum absolute height</strong><a class="headerlink" href="#minimum-absolute-height" title="Permanent link">&para;</a></h4>
-<p>Minimum absolute intensity a peak needs to reach to be retained as a feature. This parameter is very similar to the <a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#parameters">Min highest intensity</a> settings in the ADAP chromatogram builder module and the same concepts apply.</p>
+<p>Minimum absolute intensity a peak needs to reach to be retained as a feature. This parameter is very similar to the <a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#parameters">Min highest intensity</a> settings in the Chromatogram builder module and the same concepts apply.</p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> When resolving the RT dimension, the same value used as <a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#parameters">Min highest intensity</a> in the EICs building can normally be used here.</p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> While <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">frame scans</a> are examined over the RT dimension, <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">mobility scans</a> are examined over the IM dimension. Therefore, this parameter might need to be adjested accordingly when <a href="#resolving-the-ion-mobility-dimension">resolving the ion mobility dimension</a>.</p>
 <h4 id="min-ratio-of-peak-topedge"><strong>Min ratio of peak top/edge</strong><a class="headerlink" href="#min-ratio-of-peak-topedge" title="Permanent link">&para;</a></h4>
@@ -5092,11 +5092,11 @@ The algorithm finds the intensity value (threshold) that leaves the specified pe
 <p>Range of acceptable peak length expressed in minutes (RT dimension) or absolute units (mobility dimension). This parameter can be used to filter out noisy features based on their overly short (or long) duration.</p>
 <h4 id="min-of-data-points"><strong>Min # of data points</strong><a class="headerlink" href="#min-of-data-points" title="Permanent link">&para;</a></h4>
 <p>Minimum number of data points a resolved peak needs to have to be considered valid and retained as a feature. This parameter can be used along with the <strong>Peak duration range</strong> setting as  peak duration constraint to filter out noisy features.</p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> This parameter is very similar to the <a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#parameters">Min group size in # of scans</a> settings in the ADAP chromatogram builder module and the same value can normally be used here (usually, no less than 4-5).</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> This parameter is very similar to the <a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#parameters">Min group size in # of scans</a> settings in the Chromatogram builder module and the same value can normally be used here (usually, no less than 4-5).</p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> A feature in the IM dimension is normally made up of more data points than regular LC peaks. Therefore, a higher <em>Min # of data points</em> can be set when <a href="#resolving-the-ion-mobility-dimension">resolving the ion mobility dimension</a> to filter out noisy features.</p>
 <h4 id="show-preview"><strong>Show preview</strong><a class="headerlink" href="#show-preview" title="Permanent link">&para;</a></h4>
 <p>By checking this box, an interactive visualization panel will open to help the user to adjust the algorithm parameters. Two EIC traces can be displayed simultaneously in two sub-panels to assess the impact of chosen settings on both "good" and "noisy" EIC traces. The feature list and EIC traces to display can be selected from the corresponding drop-down menus. A noisy EIC can generally be found by sorting the feature table by decreasing area, or by looking at the height/area ratio provided for each feature in the top sub-panel (noisy EIC tend to have low height/area ratios). We recommend optimising the parameters on good EICs and checking the results of these parameters with a noisy EIC.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:44283913+adafede@users.noreply.github.com'>Adriano Rutz</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:44283913+adafede@users.noreply.github.com'>Adriano Rutz</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
 
 
 
@@ -5117,7 +5117,7 @@ The algorithm finds the intensity value (threshold) that leaves the specified pe
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="January 19, 2024 13:07:07 UTC">January 19, 2024 13:07:07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="July 30, 2025 10:13:34 UTC">July 30, 2025 10:13:34</span>
   </span>
 
     
@@ -5134,6 +5134,7 @@ The algorithm finds the intensity value (threshold) that leaves the specified pe
     <nav>
       
         <a href="mailto:44283913+adafede@users.noreply.github.com">Adriano Rutz</a>, 
+        <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
         <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
         <a href="mailto:corinna.brungs@wwu.de">corinnabrungs</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>, 
