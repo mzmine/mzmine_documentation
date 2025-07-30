@@ -6,7 +6,7 @@
 
 The IMS expander searches for data points in mobility scans for existing features. 
 
-:warning: This requires prior chromatogram building (see [ADAP Chromatogram builder](../../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and resolving in retention time dimension (see [Resolving](../../featdet_resolver_local_minimum/local-minimum-resolver.md)).
+:warning: This requires prior chromatogram building (see [Chromatogram builder](../../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and resolving in retention time dimension (see [Resolving](../../featdet_resolver_local_minimum/local-minimum-resolver.md)).
 
 ### Parameters
 
