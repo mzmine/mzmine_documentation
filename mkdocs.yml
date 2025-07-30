@@ -47,6 +47,7 @@ nav:
           - Mass calibration: module_docs/featdet_mass_detection/mass-calibration.md
       - LC-MS feature detection:
           - Chromatogram builder: module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
+          - MSn tree builder: module_docs/lc-ms_featdet/featuredet_msn_tree/msn_tree_builder.md
           - GridMass: module_docs/lc-ms_featdet/featdet_gridmass/gridmass.md
           - Targeted feature detection: module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.md
           - Feature detection results: module_docs/lc-ms_featdet/featdet_results/featdet_results.md
