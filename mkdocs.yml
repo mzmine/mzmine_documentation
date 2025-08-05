@@ -47,7 +47,7 @@ nav:
           - Mass calibration: module_docs/featdet_mass_detection/mass-calibration.md
       - LC-MS feature detection:
           - Chromatogram builder: module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
-          - MSn tree builder: module_docs/lc-ms_featdet/featuredet_msn_tree/msn_tree_builder.md
+          - MSn tree builder: module_docs/featuredet_msn_tree/msn_tree_builder.md
           - GridMass: module_docs/lc-ms_featdet/featdet_gridmass/gridmass.md
           - Targeted feature detection: module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.md
           - Feature detection results: module_docs/lc-ms_featdet/featdet_results/featdet_results.md
@@ -85,6 +85,7 @@ nav:
           - Correlation grouping: module_docs/id_ion_networking/metacorr/metacorr.md
           - Ion Identity Networking: module_docs/id_ion_networking/iin/iin.md
           - Spectral / Molecular Networking: module_docs/group_spectral_net/molecular_networking.md
+          - Online reactivity: module_docs/id_online_reactivity/online_reactivity.md
       - Feature list filtering:
           - Duplicate feature filter: module_docs/filter_duplicate_features/duplicate_feature_filter.md
           - Feature list rows filter: module_docs/feature_list_row_filter/feature_list_rows_filter.md
