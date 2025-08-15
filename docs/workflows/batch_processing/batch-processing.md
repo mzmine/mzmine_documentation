@@ -1,4 +1,4 @@
-# **Batch processing**
+# **Batch mode processing**
 
 Besides the interactive [GUI](../../main-window-overview.md), mzmine allows the user to run processing workflows in an 
 automated manner using the "batch mode". Entire processing pipelines (including data import/export) 
