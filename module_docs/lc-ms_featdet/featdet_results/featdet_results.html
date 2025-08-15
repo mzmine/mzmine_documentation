@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
     
     
       
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#results-of-the-feature-detection" class="md-skip">
+        <a href="#feature-table" class="md-skip">
           Skip to content
         </a>
       
@@ -1218,6 +1218,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../featuredet_msn_tree/msn_tree_builder.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MSn tree builder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../featdet_gridmass/gridmass.html" class="md-nav__link">
         
   
@@ -1314,11 +1337,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#feature-table" class="md-nav__link">
+  <a href="#configuration-options" class="md-nav__link">
     <span class="md-ellipsis">
-      Feature table
+      Configuration options
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#right-click-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Right-click menu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-list-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature list filters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature list filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flexible-feature-list-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flexible feature list filter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flexible feature list filter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matching-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matching modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lipid-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lipid filter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4731,11 +4820,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#feature-table" class="md-nav__link">
+  <a href="#configuration-options" class="md-nav__link">
     <span class="md-ellipsis">
-      Feature table
+      Configuration options
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#right-click-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Right-click menu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-list-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature list filters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature list filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flexible-feature-list-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flexible feature list filter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flexible feature list filter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matching-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matching modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lipid-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lipid filter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4767,25 +4922,124 @@
   
 
 
-<h1 id="results-of-the-feature-detection"><strong>Results of the feature detection</strong><a class="headerlink" href="#results-of-the-feature-detection" title="Permanent link">&para;</a></h1>
-<h2 id="feature-table"><strong>Feature table</strong><a class="headerlink" href="#feature-table" title="Permanent link">&para;</a></h2>
-<p><img alt="Feature table" src="mzmine_feature_list.png" /></p>
-<p>Columns in the table can be displayed or hidden on demand, using <strong>"+"</strong> button or <strong>parameter menu</strong> button in the right table corner.</p>
-<p>Feature table includes several groups of columns:
-- Manual annotation columns, 
-- Parameters of specific feature,
-- And parameters of chosen feature in a specific data file (filename is shown on top of the columns).</p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> State column describes the feature status in a chosen file using several color-coded options:</p>
+<h1 id="feature-table"><strong>Feature table</strong><a class="headerlink" href="#feature-table" title="Permanent link">&para;</a></h1>
+<p><img alt="Feature table" src="new_feature_table_light.png" /></p>
+<p>Columns in the table can be displayed or hidden on demand, using the quick column menu on the <strong>"+"
+** button on the top right or
+the ... button in the lower right menu. More configuration options are available from the *
+*parameter menu</strong> button in the right lower corner.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The shapes column shows the retention time feature shapes. This column and other graphic columns 
+may be hidden when opening larger tables with many samples. Activate any column from the quick 
+column menu or the configuration.   </p>
+</div>
+<p>The <strong>Feature tables</strong> include several groups of columns:</p>
+<ul>
+<li><strong>Feature summary columns</strong>: All columns from left until the sample-specific columns. They define
+  summary statistics for each feature list row like the unique ID, average m/z, maximum height,
+  total number of fragment scans, spectral library matches, lipid matches, etc.</li>
+<li><strong>Sample-specific columns</strong>: Have a sample icon and name on top and they might be hidden by
+  default for large datasets. They can be accessed through the quick column selection (all columns
+  with the Feature: prefix) or via configuration.</li>
+<li>Box plots are available based on height and area and add a dropdown selection to choose the
+  metadata column for sample grouping. Double-click to reach the statistics dashboard.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Double-click on different cells like an annotation structure, the box plots, or the shapes to 
+open other visualizers and tools.</p>
+</div>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> State column describes the feature status in a chosen file using several
+color-coded options:</p>
 <ul>
 <li>Blue - a feature was found in a primary feature detection,</li>
-<li>Gray - a feature was found in a secondary feature detection (<em>e.g.</em>, using Gap filling, after alignment),</li>
-<li>Orange - a feature was not found in this particular data file,</li>
+<li>Gray - a feature was found in a secondary feature detection (<em>e.g.</em>, using Gap filling, after
+  alignment),</li>
 <li>Black - a feature was defined manually.</li>
 </ul>
+<h2 id="configuration-options">Configuration options<a class="headerlink" href="#configuration-options" title="Permanent link">&para;</a></h2>
+<p>Quick column selection offers quick toggle buttons to show / hide groups of columns. Also the
+<strong>Compact table</strong> button helps to get a standard smaller table.</p>
+<p>The configuration dialog provides parameters to control the <strong>Feature summary columns</strong> and the
+<strong>Sample-specific columns</strong>. Also, there are options for the default feature intensity and
+chart-specific options.</p>
+<h2 id="right-click-menu">Right-click menu<a class="headerlink" href="#right-click-menu" title="Permanent link">&para;</a></h2>
+<p>Open a context menu by right-clicking on any cell in the table. The column cell may change the
+available options depending if the column is a <strong>Feature summary column</strong> or
+<strong>Sample-specific column</strong>. There are various visualizers and other tools available from this menu.</p>
+<p>Check out the <strong>Show/Feature overview IIMN networks</strong> for a composition of annotations, networks,
+and more. </p>
+<h2 id="feature-list-filters">Feature list filters<a class="headerlink" href="#feature-list-filters" title="Permanent link">&para;</a></h2>
+<p><img alt="feature_list_filter.png" src="feature_list_filter.png" /></p>
+<p>In the bottom panel, there are multiple filters to focus on specific properties of your feature list
+rows like annotations or retention time and m/z.</p>
+<ul>
+<li><strong>ID</strong>: Filters rows by their ID column either by single ID, ranges (e.g., 1-10), lists (e.g.,
+  1,2,3), or a mix 1,5-9.</li>
+<li><strong>m/z</strong>: Filter the row m/z column. A single value is interpreted as a range with this
+  significance like 200.1 will range from 200.1 - 200.2 and 200.15 will range 200.15-200.16. Or
+  enter ranges directly like 200 - 500.</li>
+<li><strong>RT</strong>: Filter the row retention time (RT) column. A single value is interpreted as a range with
+  this significance like 1 will range from 1 - 2 and 2.5 will range 2.5-2.6. Or enter ranges
+  directly like 1 - 10.</li>
+</ul>
+<h3 id="flexible-feature-list-filter">Flexible feature list filter<a class="headerlink" href="#flexible-feature-list-filter" title="Permanent link">&para;</a></h3>
+<p>This filter is defined by a search type, matching mode, and textual query. In general, annotation
+search types will match against any annotation like spectral library match, lipid match, or other
+feature annotations from other modules. All annotations are considered, this means that sometimes a
+row will match the filter but the reason is not the primary annotation visible but a secondary one
+that may be hidden in the list of, e.g., library matches.</p>
+<h4 id="matching-modes">Matching modes<a class="headerlink" href="#matching-modes" title="Permanent link">&para;</a></h4>
+<p>Matching modes define either direct equality or unequality or define minima / maxima. A special case
+is <strong>⊂</strong> (contain) which is used for substructure matching and substring matches. This is usually
+used for substring name matching.</p>
+<h4 id="search-types">Search types<a class="headerlink" href="#search-types" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Ion identity ID</strong>: Find all rows of the same ion identity ID</li>
+<li><strong>Ion type</strong>: The adduct, in source fragment, or other ion type detected.</li>
+<li><strong>Compound name</strong>: Any annotation's compound name matches, best to use a substring match</li>
+<li><strong>IUPAC name</strong>: Any annotation's compound name matches, best to use a substring match</li>
+<li><strong>Formula</strong>: Molecular formula, options to define a minimum formula</li>
+<li><strong>Formula range</strong>: Molecular formula range by defining a minimum and maximum formula and the
+  number of atoms need to be within these bounds. e.g., C6Br - OBr3 matches every formula that has
+  at least 6C 1Br and at max 1O 3Br.</li>
+<li><strong>SMILES / InChI</strong>: Matches exact structures or substructures defined by SMILES or InChI. For
+  example, SMILES CNC=O matches amides</li>
+<li><strong>SMARTS</strong>: Matches substructures and is more flexible than SMILES or
+  InChI. <a href="https://www.daylight.com/dayhtml/doc/theory/theory.smarts.html">Theory</a> <a href="https://www.daylight.com/dayhtml_tutorials/languages/smarts/smarts_examples.html">Examples</a></li>
+<li><strong>Lipid</strong>: Lipid filter is designed for mzmine's rule-based lipid matching module but also works
+  for other annotations like library matches, if the compound name uses the standard lipid short
+  nomenclature. See examples below.</li>
+<li><strong>Fragment scans</strong>: Filter for a minimum number of fragment scans in the fragment scans column,
+  which all fragment scans across all samples.</li>
+</ul>
+<h4 id="lipid-filter">Lipid filter<a class="headerlink" href="#lipid-filter" title="Permanent link">&para;</a></h4>
+<p>Enter the following query to match specific lipid matches:</p>
+<ul>
+<li>C for any lipid class</li>
+<li>PC only define class</li>
+<li>C20:2 for 20 C and 2 double bonds</li>
+<li>PC20:2 also specifying the lipid class as PC</li>
+<li>C&gt;20:2 for more than 20 C and exactly 2 double bonds</li>
+<li>C&gt;20:&gt;2 also more than 2 double bonds</li>
+<li>PC18:2_18:0 defining chains</li>
+<li>PC&gt;18:&gt;2_&gt;18:0 defining ranges as well</li>
+<li>PC20:2 - PC40:6 defines ranges with min and max lipid</li>
+</ul>
 <h2 id="manual-feature-integration"><strong>Manual feature integration</strong><a class="headerlink" href="#manual-feature-integration" title="Permanent link">&para;</a></h2>
-<p>Sometimes it might be useful to perform manual integration of some selected peaks. To use this option a user can apply a right mouse click on a chosen feature table row and choose "Define manually"</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Manual integration was moved to the Integration dashboard that can be opened from the 
+quick module access (CTRL + F or hit double shift). The integration dashboard can also 
+be opened by right click on a feature list and then <strong>Integration dashboard</strong>.</p>
+</div>
+<p>The manual feature integration directly from the feature table is outdated and we advice to use the
+<strong>Integration dashboard</strong>. The old dialog still works though. The old dialog can be found by opening
+a feature table, right clicking on a cell that is within a specific sample (right side of the table)
+and then <strong>Define manually</strong>.</p>
 <p><img alt="Manual integration" src="manual-feat-integration.png" /></p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -4806,7 +5060,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 24, 2022 21:13:07 UTC">November 24, 2022 21:13:07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="August 15, 2025 19:03:12 UTC">August 15, 2025 19:03:12</span>
   </span>
 
     
@@ -4817,11 +5071,12 @@
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
       
     </span>
     <nav>
       
+        <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
     </nav>
   </span>
@@ -4874,10 +5129,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
