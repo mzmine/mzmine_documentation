@@ -13,10 +13,10 @@ setup.
 
 !!! tip
 
-    This workflow produces [**Feature lists**](../../module_docs/lc-ms_featdet/featdet_results/featdet_results.md) 
+    This workflow produces [**Feature lists**](module_docs/lc-ms_featdet/featdet_results/featdet_results.md) 
     as their result. Feature lists are a central part in visualizing the results in the 
-    [**Statistics dashboard**](../../visualization_modules/statistics_dashboard/statistics_dashboard.md) 
-    and in the [**Interactive network visualizer**](../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md). 
+    [**Statistics dashboard**](visualization_modules/statistics_dashboard/statistics_dashboard.md) 
+    and in the [**Interactive network visualizer**](visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md). 
 
 !!! tip
     The mzwizard is split into sections, most importantly, the MS part and the sample introduction.
