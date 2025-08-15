@@ -8,7 +8,15 @@ introduction, IMS, MS instrument, and workflow. Ideas for a workflow? We are ope
 ideas and contributions. Feel free to reach out if your workflow might be a candidate for a wizard
 setup.
 
+
 :material-menu-open: **Processing wizard**
+
+!!! tip
+
+    This workflow produces [**Feature lists**](../../module_docs/lc-ms_featdet/featdet_results/featdet_results.md) 
+    as their result. Feature lists are a central part in visualizing the results in the 
+    [**Statistics dashboard**](../../visualization_modules/statistics_dashboard/statistics_dashboard.md) 
+    and in the [**Interactive network visualizer**](../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md). 
 
 !!! tip
     The mzwizard is split into sections, most importantly, the MS part and the sample introduction.

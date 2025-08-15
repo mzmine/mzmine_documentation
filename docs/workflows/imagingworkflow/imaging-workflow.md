@@ -4,6 +4,13 @@ This page describes the mzmine workflow for non targeted feature detection in im
 workflow is designed for MS imaging data and tested with matrix-assisted laser
 desorption/ionisation (MALDI)-MS data.
 
+!!! tip
+
+    This workflow produces [**Feature lists**](../../module_docs/lc-ms_featdet/featdet_results/featdet_results.md) 
+    as their result. Feature lists are a central part in visualizing the results in the 
+    [**Statistics dashboard**](../../visualization_modules/statistics_dashboard/statistics_dashboard.md) 
+    and in the [**Interactive network visualizer**](../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md). 
+
 ## Supported data formats
 
 This workflow requires the spatial coordinates to be provided in the raw data file, which is the
