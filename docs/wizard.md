@@ -30,7 +30,7 @@ setup.
 
 ## mzwizard parameter tabs
 
-![Processing wizard](img/wizard.png)
+![mzwizard](img/wizard.png)
 
 ## [1] Data import
 
