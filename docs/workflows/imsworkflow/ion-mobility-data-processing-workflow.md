@@ -5,6 +5,14 @@ Since some terms might not be straightforward for new users, a basic explanation
 principles and the terminology used within this documentation is
 provided [here](../../terminology/ion-mobility-terminology.md).
 
+
+!!! tip
+
+    This workflow produces [**Feature lists**](../../module_docs/lc-ms_featdet/featdet_results/featdet_results.md) 
+    as their result. Feature lists are a central part in visualizing the results in the 
+    [**Statistics dashboard**](../../visualization_modules/statistics_dashboard/statistics_dashboard.md) 
+    and in the [**Interactive network visualizer**](../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md). 
+
 ## Supported formats
 
 * Vendor formats:
