@@ -4,6 +4,13 @@ The main goal is essentially to turn the highly-complex GC-MS raw data into a li
 Such feature lists can then be annotated and/or exported for further downstream analysis (e.g., identification, search against spectral libraries, statistical analysis, etc.).
 A schematic representation of the workflow is shown below:
 
+!!! tip
+
+    This workflow produces [**Feature lists**](../../module_docs/lc-ms_featdet/featdet_results/featdet_results.md) 
+    as their result. Feature lists are a central part in visualizing the results in the 
+    [**Statistics dashboard**](../../visualization_modules/statistics_dashboard/statistics_dashboard.md) 
+    and in the [**Interactive network visualizer**](../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md). 
+
 ![workflow-image](mzmine_workflows_2_gc.png)
 
 ## Raw data processing

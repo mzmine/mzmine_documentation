@@ -1,5 +1,11 @@
 # Baseline correction (Other detectors)
 
+!!! info
+    To process data from other detectors, the Other detector service of mzmine is required. This feature
+    is included in the mzmine PRO subscription. Academic program and other users can reach out to
+    inquire [access options](https://mzio.io/#contact).
+
+
 Baseline correction is a useful tool to correct for large drifts in baseline during chromatographic
 separation. However, it can be tricky to optimize the baseline correction.
 
@@ -43,8 +49,8 @@ calculation.
 Specify how many of the data points of the chromatogram shall be included in the baseline
 calculation.
 This values depends on the acquisition rate of the detector and if
-previous [binning](../uv_bin_traces/uv_bin_traces.md) has been applied. The higher the acquisition
-rate, the lower the **percentage of samples**.
+previous [binning](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md#bin-width-manualauto) 
+has been applied. The higher the acquisition rate, the lower the **percentage of samples**.
 
 ##### Loess
 
@@ -88,13 +94,15 @@ The **show preview** option is recommended to optimize the baseline correction.
 The percentage of samples specifies how many data points of the baseline will be included in the
 baseline correction. This parameter depends vastly on the acquisition rate. The influence of this
 parameter is shown here:
+
 ![percentage_of_samples.png](percentage_of_samples.png)
 
 #### Iterations (LOESS)
 
 Increasing the number of iterations may reduce the occurrence of ghost peaks due to baseline
 correction.
-In case this does not help, [trimming traces](../uv_trim_traces/uv_trim_traces.md) may be the better
+In case this does not help, [trimming traces](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md#trim-rt-range) may be the better
 option.
+
 ![iterations.png](iterations.png)
 

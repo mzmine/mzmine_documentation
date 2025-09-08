@@ -18,7 +18,7 @@ to .imzML, except for the timsTOF fleX MS imaging data.
 
 !!! info
 
-    mzmine can use MSConvert automatically. Make sure to setup the MSConvert installation path in the mzmine preferences.
+    mzmine can use MSConvert automatically. Make sure to setup the MSConvert installation path in the mzmine preferences. (only supported on Windows)
 
 ![MSConvert_settings](MSConvert_settings.png)
 
@@ -66,9 +66,14 @@ It is used to convert ThermoFisher .raw files into .mgf, .mzML, .parquet. This c
 important if an
 internal calibrant was used (e.g., EASY-IC). This mass is excluded in the FreeStyle view, whereas
 MSConvert
-remains all signals in the mzML, including this. If those masses together with some flagged signals
+remains all signals in the mzML, including the calibrant. If those masses together with some flagged signals
 by Thermo, should be
 removed use this converter with the option --excludeExceptionData.
+
+!!! Note
+
+    mzmine can use the ThermoRawFileParser automatically to import your data without conversion. In the preferences (CTRL+P) 
+    set the "Thermo data import" to "Thermo raw file parser" instead of MSConvert. The raw file parser is supported on Mac, Linux, and Windows.
 
 Example for command line interface with the exclusion of exception data:
 
@@ -78,6 +83,9 @@ pause 1
 ```
 
 More details can be found on [GitHub](https://github.com/compomics/ThermoRawFileParser).
+
+Alternatively, you can use the ThermoRawFileParserGUI to convert Thermo files to mzml without having
+to use the CLI: https://github.com/compomics/ThermoRawFileParserGUI
 
 ### Bruker: Recalibrated files to the data conversion guide
 

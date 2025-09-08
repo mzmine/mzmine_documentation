@@ -8,7 +8,15 @@ introduction, IMS, MS instrument, and workflow. Ideas for a workflow? We are ope
 ideas and contributions. Feel free to reach out if your workflow might be a candidate for a wizard
 setup.
 
+
 :material-menu-open: **Processing wizard**
+
+!!! tip
+
+    This workflow produces [**Feature lists**](module_docs/lc-ms_featdet/featdet_results/featdet_results.md) 
+    as their result. Feature lists are a central part in visualizing the results in the 
+    [**Statistics dashboard**](visualization_modules/statistics_dashboard/statistics_dashboard.md) 
+    and in the [**Interactive network visualizer**](visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md). 
 
 !!! tip
     The mzwizard is split into sections, most importantly, the MS part and the sample introduction.
@@ -22,7 +30,7 @@ setup.
 
 ## mzwizard parameter tabs
 
-![Processing wizard](img/wizard.png)
+![mzwizard](img/wizard.png)
 
 ## [1] Data import
 
@@ -169,7 +177,7 @@ for [ion mobility scans](terminology/ion-mobility-terminology.md#accumulations-m
 The minimum height of chromatograms and features.
 
 Influences batch steps:
-[ADAP Chromatogram builder](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md),
+[Chromatogram builder](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md),
 [Local minimum feature resolver (RT dimension)](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md),
 [Local minimum feature resolver (IMS dimension)](module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md),
 DIA MS2 grouping (todo documentation),
@@ -185,7 +193,7 @@ accuracy between scans in the same raw data file.
 
 Influences batch steps:
 [Mobility scan merging](module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md),
-[ADAP Chromatogram builder](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md),
+[Chromatogram builder](module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md),
 [Gap filling](module_docs/gapfill_peak_finder/gap-filling.md),
 [Lipid annotation (MS2)](module_docs/id_lipid_annotation/lipid-annotation.md),
 [Spectral library search](module_docs/id_spectral_library_search/spectral_library_search.md),

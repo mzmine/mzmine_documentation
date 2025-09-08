@@ -1,6 +1,6 @@
 # Chromatogram builder (Other spectral data)
 
-!!! warning
+!!! info
     To process data from other detectors, the Other detector service of mzmine is required. This feature
     is included in the mzmine PRO subscription. Academic program and other users can reach out to
     inquire [access options](https://mzio.io/#contact).

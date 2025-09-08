@@ -46,7 +46,8 @@ nav:
           - FTMS shoulder peak finder: module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.md
           - Mass calibration: module_docs/featdet_mass_detection/mass-calibration.md
       - LC-MS feature detection:
-          - ADAP Chromatogram builder: module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
+          - Chromatogram builder: module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md
+          - MSn tree builder: module_docs/featuredet_msn_tree/msn_tree_builder.md
           - GridMass: module_docs/lc-ms_featdet/featdet_gridmass/gridmass.md
           - Targeted feature detection: module_docs/lc-ms_featdet/targeted_featdet/targeted-featdet.md
           - Feature detection results: module_docs/lc-ms_featdet/featdet_results/featdet_results.md
@@ -125,13 +126,10 @@ nav:
           - Spectra similarity: module_docs/align_join_aligner/spectra_similarity.md
       - Other detectors (UV):
           - Chromatogram builder (Other spectral data): module_docs/uv/uv_spectra_chromatogram_builder/spectrachrombuilder.md
-          - Trim traces (Other detectors): module_docs/uv/uv_trim_traces/uv_trim_traces.md
-          - Shift traces (Other detectors): module_docs/uv/uv_shift_traces/uv_shift_traces.md
-          - Bin traces (Other detectors): module_docs/uv/uv_bin_traces/uv_bin_traces.md
+          - Shift, trim, and bin traces (Other detectors): module_docs/uv/uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md
           - Baseline correction (Other detectors): module_docs/uv/uv_baseline_correction/uv_baseline_correction.md
           - Local minimum resolver (Other detectors): module_docs/uv/uv_resolve_traces/uv_local_min_resolver.md
           - Correlate MS features with other detectors: module_docs/uv/uv_ms_other_aligner/uv_ms_other_aligner.md
-          - Clear correlated traces (Other detectors): module_docs/uv/uv_ms_other_aligner/uv_ms_other_aligner.md # same page, bottom
 
   - Visualization modules:
       - Visualization overview: visualization_modules/visualization_overview/visualization-overview.md

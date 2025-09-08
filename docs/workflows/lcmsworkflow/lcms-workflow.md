@@ -1,6 +1,14 @@
 # Untargeted LC-MS Workflow
 The workflow proposed herein is intended as a general pipeline for untargeted LC-MS (or LC−MS/MS) data preprocessing. The main goal is essentially to turn the highly-complex LC-MS raw data into a list of features, and corresponding signal intensity, detected across the analysed samples. Such feature lists can then be exported for further downstream analysis (e.g., identification, search against spectral libraries, statistical analysis, etc.). A schematic representation of the workflow is shown below:
 
+
+!!! tip
+
+    This workflow produces [**Feature lists**](../../module_docs/lc-ms_featdet/featdet_results/featdet_results.md) 
+    as their result. Feature lists are a central part in visualizing the results in the 
+    [**Statistics dashboard**](../../visualization_modules/statistics_dashboard/statistics_dashboard.md) 
+    and in the [**Interactive network visualizer**](../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md). 
+
 ![workflow-image](mzmine_workflows_1_lc.png)
 The magenta steps only refer to ion mobility data processing and are omitted here.
 

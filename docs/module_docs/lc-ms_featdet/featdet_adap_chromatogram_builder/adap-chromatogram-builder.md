@@ -1,15 +1,19 @@
-# **ADAP chromatogram builder**
+# **Chromatogram builder**
 
 ## **Description**
 
-:material-menu-open: **Feature detection → LC-MS → ADAP chromatogram builder**
+:material-menu-open: **Feature detection → LC-MS → Chromatogram builder**
 
-![ADAP Chromatogram Builder](adap_chromatogram_builder.png)
+![Chromatogram builder](chromatogram_builder.png)
 
-The _ADAP chromatogram builder_ module is one of the LC-MS feature detection algorithms provided by MZmine 3. The module essentially builds an [EIC](../../../terminology/general-terminology.md#extracted-ion-chromatogram) for each _m/z_ value that was detected over a minimum number of consecutive scans in the LC-MS run.
-Each data file is processed individually. The [mass list](../../../terminology/general-terminology.md#mass-list) associated to each MS1 scan in a data file (see [Mass detection](../../featdet_mass_detection/mass-detection.md) module) are taken as input and a [feature list](../../../terminology/general-terminology.md#feature-list) is returned as output. Since a mass list must be available, the _Mass detection_ module must be run first.
+The _Chromatogram builder_ module is one of the LC-MS feature detection algorithms provided by mzmine. 
+The module essentially builds an [EIC](../../../terminology/general-terminology.md#extracted-ion-chromatogram) for each _m/z_ value that was detected over a minimum 
+number of consecutive scans in the LC-MS run. Each data file is processed individually. 
+The [mass list](../../../terminology/general-terminology.md#mass-list) associated to each MS1 scan in a data file (see [Mass detection](../../featdet_mass_detection/mass-detection.md) module) 
+are taken as input and a [feature list](../../../terminology/general-terminology.md#feature-list) is returned as output. Since a mass list must be 
+available, the _Mass detection_ module must be run first.
 
-The _ADAP chromatogram builder_ algorithm operates as follows:
+The _Chromatogram builder_ algorithm operates as follows:
 
 + Only MS1 scans are processed. 
 + All the data points are extracted from all the MS1 scans in a data file and sorted in order of decreasing intensity. 
@@ -19,34 +23,41 @@ The _ADAP chromatogram builder_ algorithm operates as follows:
 + The process repeats iteratively until all the data points have been processed and a set of EICs has been created. 
 + Finally, the EICs are checked according to the user-defined parameters (_i.e._ minimum number of data points and intensity). The EICs matching the requirements are retained in the _feature list_, whereas the rest are discarded. 
 
-The so-built EICs can then be resolved into individual features by one of the deconvolution algorithms provided by MZmine 3 (_e.g._ [Local minimum resolver](../../featdet_resolver_local_minimum/local-minimum-resolver.md) module).
+The so-built EICs can then be resolved into individual features by one of the deconvolution algorithms provided by mzmine (_e.g._ [Local minimum resolver](../../featdet_resolver_local_minimum/local-minimum-resolver.md) module).
 
 ## Parameters
 
 #### **Raw data files**
 Select the input raw data files for chromatogram building. Mass lists associated with the data files will be automatically selected. See option descriptions in [Mass detection](../../featdet_mass_detection/mass-detection.md#parameters) module.
 
-#### **Scans**
-Select (or filter out) the MS scans to be processed. Although setting the _MS level = 1_ is usually sufficient for this module, several filters are available (see option descriptions in [Mass detection](../../featdet_mass_detection/mass-detection.md#parameters) module). For example, specific RT ranges (_e.g._ dead volume, equilibration time, calibration segments, _etc._) can be excluded from the processing by setting the corresponding filter.
+#### **Scan filters**
+Select (or filter out) the MS scans to be processed. Although setting the _MS level = 1_ is usually 
+enough for this module, several filters are available (see option descriptions in [Mass detection](../../featdet_mass_detection/mass-detection.md#parameters) module). 
+For example, specific RT ranges (_e.g._ dead volume, equilibration time, calibration segments, _etc._) 
+can be excluded from the processing by setting the corresponding filter. 
 
-#### **Min group size in number of scans**
-Minimum number of consecutive MS1 scans where a _m/z_ must be detected with a non-zero intensity in order for the corresponding EICs to be considered valid and retained in the feature list.
+!!! tip
+
+    For polarity switching data, choose one polarity to produce chromatograms in either ion mode.
+
+#### **Minimum consecutive scans**
+Minimum number of consecutive MS1 scans where an _m/z_ must be detected with a non-zero intensity in order for the corresponding EICs to be considered valid and retained in the feature list.
 
 :material-lightbulb: This parameter largely depends on the chromatographic system setup (_e.g._ HPLC vs UHPLC) and the acquisition rate (_a.k.a._ MS scan speed) of the mass spectrometer. The best way to optimize this setting is by manually inspecting the raw data and determining the typical minimum number of data points of the LC peaks. Usually, no less than 4-5 should be used.
 
-#### **Group intensity threshold**
+#### **Minimum intensity for consecutive scans**
 
-Minimum signal intensity that the group scans (see previous parameter) must exceed in order for the corresponding EICs to be considered valid and retained in the feature list.
+The minimum signal intensity that the group scans (see previous parameter) must exceed in order for the corresponding EICs to be considered valid and retained in the feature list.
 
 :material-lightbulb: A good starting point for this parameter is 3 times the noise level used in the [Mass detection](../../featdet_mass_detection/mass-detection.md), if the instrumental noise is used as cutoff. See also [How do I determine the noise level in my data?](../../featdet_mass_detection/mass-detection.md#how-do-i-determine-the-noise-level-in-my-data) for more details.
 
-#### **Min highest intensity**
+#### **Minimum absolute height**
 
 Minimum intensity that the highest point in the EIC must exceed in order for the corresponding trace to be considered valid and retained in the feature list. This parameter mainly depends on the mass spectrometer characteristics (_e.g._ Orbitrap instruments normally provides higher signal intensities than TOF devices) as well as the overall goal of the processing. Overly low intensity thresholds normally leads to a larger number of background signals being retained as features, extending the overall processing time. On the other hand, overly high thresholds may lead to low-intensity features being erroneously discarded.
 
 :material-lightbulb: A good starting point for this parameter is 7-10 times the noise level used in the [Mass detection](../../featdet_mass_detection/mass-detection.md), **if** the instrumental noise is used as cutoff. See also [How do I determine the noise level in my data?](../../featdet_mass_detection/mass-detection.md#how-do-i-determine-the-noise-level-in-my-data) for more details.
 
-#### **Scan to scan accuracy (m/z)**
+#### **m/z tolerance (scan-to-scan)**
 
 Maximum allowed difference between an EIC-associated _m/z_ and a new data point to be added to the existing EIC trace. It is essentially the maximum allowed mass accuracy deviation between consecutive data points in the EICs. The tolerance can be specified as absolute tolerance (in _m/z_), relative tolerance (in ppm), or both. When both are specified, the tolerance range is calculated using the maximum between the absolute and relative tolerances.
 
