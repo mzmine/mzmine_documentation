@@ -1,16 +1,15 @@
 # Data handling (supported formats)
 
-mzmine supports both **open** (e.g., .mzML, .mzXML, .imzML, .netCDF, and .aird) and **proprietary**
-formats from
-Thermo Scientific .raw, and Bruker Daltonics .d and .tdf/tsf. All other raw data files from other
-vendors must be converted into an open format prior to the import. Therefore, a vendor-provided or
-third-party software can be used.
+mzmine supports both **open** (e.g., .mzML, .mzXML, .imzML, .netCDF) and **proprietary**
+formats from Bruker Daltonics (.d and .tdf/tsf). Raw data files from 
+vendors must be converted into an open format prior to the import. **This conversion can be applied automatically
+during the import, if the user has MSConvert installed.** 
+If you want to convert the files yourself, see the sections below.
 
 The **recommendations** for the data handling are the conversion of the raw data to centroided .mzML
 data files,
-except for timsTOF data (native .tdf and .tsf inside the Bruker .d folder), and the conversion of MS
-imaging data
-to .imzML, except for the timsTOF fleX MS imaging data.
+**except** for timsTOF data (native .tdf and .tsf inside the Bruker .d folder), and the conversion of MS
+imaging data to .imzML, except for the timsTOF fleX MS imaging data.
 
 ## Data conversion to open formats (.mzML / .imzML)
 
@@ -87,9 +86,13 @@ More details can be found on [GitHub](https://github.com/compomics/ThermoRawFile
 Alternatively, you can use the ThermoRawFileParserGUI to convert Thermo files to mzml without having
 to use the CLI: https://github.com/compomics/ThermoRawFileParserGUI
 
-### Bruker: Recalibrated files to the data conversion guide
+### Bruker
 
-For Bruker recalibrated data, it is recommended to perform **export analysis to mzXML** using the
+Bruker data is supported in .tdf, .tsf, and .baf format without out prior conversion. Calibrations for .tdf and .tsf are directly imported if they are present.
+
+#### Recalibrated baf files
+
+For Bruker recalibrated data in .baf format, it is recommended to perform **export analysis to mzXML** using the
 Bruker's Data Analysis software (for automation, apply Bruker’s processing script during data
 acquisition) prior to importing to mzmine. Compared to the mzML and mzData formats, the mzXML format
 best retains the full scan definition and sample recalibration properties. In mzML the MS1 scans
