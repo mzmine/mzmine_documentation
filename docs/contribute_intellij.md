@@ -37,8 +37,7 @@
 8. Click on Add a Configuration. Select “Application” from the template list). via the + button (
    don’t just edit the template):
     - Main class: `io.github.mzmine.main.MZmineCore`
-    - Environment
-      var: `-Djava.util.logging.config.class=io.github.mzmine.main.MZmineLoggingConfiguration -Xmx12G`
+    - VM options (add via "Modify options"): `-Djava.util.logging.config.class=io.github.mzmine.main.MZmineLoggingConfiguration --add-opens java.logging/java.util.logging=ALL-UNNAMED -ea`
 
 9. Run or debug with this configuration
 
