@@ -34,7 +34,7 @@ setup.
 
 ## [1] Data import
 
-Specify all data files that need to be processed
+Specify all data files that need to be processed. You can drag & drop the data files into the text field.
 
 ## [2] Sample introduction system
 
@@ -166,6 +166,10 @@ Depending on the selected mass detector, separate absolute noise levels or facto
 threshold spectra of MS level 1 and 2 (or above). So the MS2 noise level is used for MSn data with
 level > 1. These parameters can be optimized by looking at the spectral raw data in the raw data
 overview.
+
+!!! info
+    We recommend the **Factor of lowest signal** setting for Orbitrap instruments and the 
+    **Absolute intensity** setting for TOF instruments. 
 
 Influences batch steps:
 [Mass detection (MS1, MSn)](module_docs/featdet_mass_detection/mass-detection.md) 1/5th of the value
@@ -340,6 +344,18 @@ Select the minimum number of signals in a deconvoluted spectrum
 Select on the "Create batch" button to open a batch queue. Each step in the batch queue can be modified via double click. Find more information how to modify a [batch queue](workflows/batch_processing/batch-processing.md).
 Click on "OK" to start the processing.
 ![Processing wizard](img/wizard_batch.png)
+
+## Optimizing the wizard workflow
+
+While the presets of the processing wizard will produce good results out of the box for many 
+instrument types and combinations, it may be worth optimizing specific workflow steps to achieve 
+even better results. There are two ways to optimize the wizard workflow.
+
+1. By optimizing the parameters in the wizard steps.
+2. By optimizing individual steps in the [created batch](#8-create-batch).
+
+A step-by-step approach is detailed in the 
+[workflow optimization guide](workflows/optimization/workflow_optimization.md).
 
 {{ git_page_authors }}
 

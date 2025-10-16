@@ -162,6 +162,7 @@ nav:
       - Library generation: workflows/librarygeneration/library_generation.md
       - SIMSEF: workflows/simsef/simsef_workflow.md
       - MRM workflow: workflows/mrmworkflow/mrm-workflow.md
+      - Workflow optimization: workflows/optimization/workflow_optimization.md
 
   - Tools:
       - SIMSEF scheduler: module_docs/tools_simsef/simsef.md
