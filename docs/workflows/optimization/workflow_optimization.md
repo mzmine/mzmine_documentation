@@ -96,4 +96,4 @@ the quality of the peak detection may be reduced severely.
 - In the wizard: Lower the [Minimum consecutive scans](../../wizard.md#minimum-consecutive-scans)
 - In the batch: As the wizard parameter influences multiple steps, all these need to be updated:
   - [Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#minimum-consecutive-scans)
-  - [Local minimum feature resolver (RT and IMS dimension)](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#min--of-data-points)
+  - [Local minimum feature resolver (RT and IMS dimension)](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#minimum-scans-data-points)

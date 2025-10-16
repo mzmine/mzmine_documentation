@@ -112,7 +112,7 @@ The purpose of this parameter is to reduce the detection of false local minima w
 
 Range of acceptable peak length expressed in minutes (RT dimension) or absolute units (mobility dimension). This parameter can be used to filter out noisy features based on their overly short (or long) duration.
 
-#### **Min # of data points**
+#### **Minimum scans (data points)**
 
 Minimum number of data points a resolved peak needs to have to be considered valid and retained as a feature. This parameter can be used along with the **Peak duration range** setting as  peak duration constraint to filter out noisy features.
 
