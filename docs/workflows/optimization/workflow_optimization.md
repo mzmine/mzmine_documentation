@@ -97,13 +97,13 @@ the quality of the peak detection may be reduced severely.
 - In the wizard: Lower the [Minimum feature height](../../wizard.md#minimum-feature-height) in the mass spectrometer tab.
 
 - In the batch: As the wizard parameter influences multiple steps, all these need to be updated:
-    - [Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#minimum-absolute-height)
-    - [Local minimum feature resolver (RT and IMS dimension)](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#minimum-absolute-height)
+    - Minimum absolute height in the [Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#minimum-absolute-height)
+    - Minimum absolute height in the [Local minimum feature resolver (RT and IMS dimension)](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#minimum-absolute-height)
 
 **Solution 2**: Reducing the minimum number of data points per feature, if the feature is detected in few consectutive scans.
 
 - In the wizard: Lower the [Minimum consecutive scans](../../wizard.md#minimum-consecutive-scans)
 
 - In the batch: As the wizard parameter influences multiple steps, all these need to be updated:
-    - [Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#minimum-consecutive-scans)
-    - [Local minimum feature resolver (RT and IMS dimension)](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#minimum-scans-data-points)
+    - Minimum consecutive scans in the [Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#minimum-consecutive-scans)
+    - Minimum scans (data points) in the [Local minimum feature resolver (RT and IMS dimension)](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#minimum-scans-data-points)
