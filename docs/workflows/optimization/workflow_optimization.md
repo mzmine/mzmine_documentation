@@ -8,8 +8,8 @@ you were expecting, you have to pinpoint which step omits the expected feature(s
 
 !!! info
 
-   We recommend to apply the optimization to a representative subset of your dataset. A good starting
-   point are usually pooled QC or other representative samples.
+    We recommend to apply the optimization to a representative subset of your dataset. A good starting
+    point are usually pooled QC or other representative samples.
 
 ### Making your workflow "optimization ready"
 
@@ -59,11 +59,11 @@ the optimization of individual steps in the batch mode does offer previews.
 
 !!! danger
 
-   Optimizing the created batch only affects the specific batch you are currently working on. If you
-   close the batch dialog and create a new batch using "Create batch" in the wizard, previous 
-   batch optimizations are overridden. We recommend saving the optimized batch file, or saving 
-   presets (since mzmine 4.7.29) for the optimized modules, so you can apply the module preset to 
-   new batches.
+    Optimizing the created batch only affects the specific batch you are currently working on. If you
+    close the batch dialog and create a new batch using "Create batch" in the wizard, previous 
+    batch optimizations are overridden. We recommend saving the optimized batch file, or saving 
+    presets (since mzmine 4.7.29) for the optimized modules, so you can apply the module preset to 
+    new batches.
 
 ## Common optimizations
 
