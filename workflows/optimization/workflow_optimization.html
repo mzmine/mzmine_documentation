@@ -5001,26 +5001,54 @@ the optimization of individual steps in the batch mode does offer previews.</p>
 <img alt="img.png" src="coelution.png" /></p>
 <p><strong>Note</strong>: This may have different causes. Either the expected peak width was too high, or the 
 wizard's default resolution setting is too high.</p>
-<p><strong>Solution 1</strong>: Reducing the expected peak width.
-- In the wizard: Reduce the "<a href="../../wizard.html#approximate-feature-fwhm">Approximate feature FWHM</a>" in the HPLC/UHPLC/HILIC tab.
-- In the batch: Reduce the <a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#minimum-search-range-rtmobility-absolute">Minimum search range</a> in the <a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local minimum resolver</a></p>
-<p><strong>Solution 2</strong>: Reducing the expected peak resolution. (if Solution 1 does not achieve the expected result)
-- In the wizard: Not possible
-- In the batch: Reduce the <a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#min-ratio-of-peak-topedge">Min ratio of peak top/edge</a> in the <a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local minimum resolver</a></p>
+<p><strong>Solution 1</strong>: Reducing the expected peak width.</p>
+<ul>
+<li>
+<p>In the wizard: Reduce the "<a href="../../wizard.html#approximate-feature-fwhm">Approximate feature FWHM</a>" in the HPLC/UHPLC/HILIC tab.</p>
+</li>
+<li>
+<p>In the batch: Reduce the <a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#minimum-search-range-rtmobility-absolute">Minimum search range</a> in the <a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local minimum resolver</a></p>
+</li>
+</ul>
+<p><strong>Solution 2</strong>: Reducing the expected peak resolution. (if Solution 1 does not achieve the expected result)</p>
+<ul>
+<li>
+<p>In the wizard: Not possible</p>
+</li>
+<li>
+<p>In the batch: Reduce the <a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#min-ratio-of-peak-topedge">Min ratio of peak top/edge</a> in the <a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local minimum resolver</a></p>
+</li>
+</ul>
 <p><strong>Note</strong>: Optimization of peak resolution is a crucial step. If parameters are chosen too loosely, 
 the quality of the peak detection may be reduced severely.</p>
 <h3 id="feature-not-detected">Feature not detected<a class="headerlink" href="#feature-not-detected" title="Permanent link">&para;</a></h3>
 <p><strong>Problem</strong>: A specific feature is not detected in any feature list, even in the most basic one.</p>
-<p><strong>Solution 1</strong>: Reducing the minimum intensity requirements, if the feature is of low intensity.
-- In the wizard: Lower the <a href="../../wizard.html#minimum-feature-height">Minimum feature height</a> in the mass spectrometer tab.
-- In the batch: As the wizard parameter influences multiple steps, all these need to be updated:
-  - <a href="../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#minimum-absolute-height">Chromatogram builder</a>
-  - <a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#minimum-absolute-height">Local minimum feature resolver (RT and IMS dimension)</a></p>
-<p><strong>Solution 2</strong>: Reducing the minimum number of data points per feature, if the feature is detected in few consectutive scans.
-- In the wizard: Lower the <a href="../../wizard.html#minimum-consecutive-scans">Minimum consecutive scans</a>
-- In the batch: As the wizard parameter influences multiple steps, all these need to be updated:
-  - <a href="../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#minimum-consecutive-scans">Chromatogram builder</a>
-  - <a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#minimum-scans-data-points">Local minimum feature resolver (RT and IMS dimension)</a></p>
+<p><strong>Solution 1</strong>: Reducing the minimum intensity requirements, if the feature is of low intensity.</p>
+<ul>
+<li>
+<p>In the wizard: Lower the <a href="../../wizard.html#minimum-feature-height">Minimum feature height</a> in the mass spectrometer tab.</p>
+</li>
+<li>
+<p>In the batch: As the wizard parameter influences multiple steps, all these need to be updated:</p>
+<ul>
+<li><a href="../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#minimum-absolute-height">Chromatogram builder</a></li>
+<li><a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#minimum-absolute-height">Local minimum feature resolver (RT and IMS dimension)</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>Solution 2</strong>: Reducing the minimum number of data points per feature, if the feature is detected in few consectutive scans.</p>
+<ul>
+<li>
+<p>In the wizard: Lower the <a href="../../wizard.html#minimum-consecutive-scans">Minimum consecutive scans</a></p>
+</li>
+<li>
+<p>In the batch: As the wizard parameter influences multiple steps, all these need to be updated:</p>
+<ul>
+<li><a href="../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#minimum-consecutive-scans">Chromatogram builder</a></li>
+<li><a href="../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html#minimum-scans-data-points">Local minimum feature resolver (RT and IMS dimension)</a></li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -5041,7 +5069,7 @@ the quality of the peak detection may be reduced severely.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 16, 2025 12:14:55 UTC">October 16, 2025 12:14:55</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 16, 2025 12:26:17 UTC">October 16, 2025 12:26:17</span>
   </span>
 
     
