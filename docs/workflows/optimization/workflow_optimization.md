@@ -7,6 +7,7 @@ applies to the results of the previous step. If your results do not contain e.g.
 you were expecting, you have to pinpoint which step omits the expected feature(s).
 
 !!! info
+
    We recommend to apply the optimization to a representative subset of your dataset. A good starting
    point are usually pooled QC or other representative samples.
 
@@ -57,6 +58,7 @@ While the wizard does not offer insight into the effect of adapted parameters wi
 the optimization of individual steps in the batch mode does offer previews.
 
 !!! danger
+
    Optimizing the created batch only affects the specific batch you are currently working on. If you
    close the batch dialog and create a new batch using "Create batch" in the wizard, previous 
    batch optimizations are overridden. We recommend saving the optimized batch file, or saving 
@@ -73,11 +75,15 @@ the optimization of individual steps in the batch mode does offer previews.
 wizard's default resolution setting is too high.
 
 **Solution 1**: Reducing the expected peak width.
+
 - In the wizard: Reduce the "[Approximate feature FWHM](../../wizard.md#approximate-feature-fwhm)" in the HPLC/UHPLC/HILIC tab.
+
 - In the batch: Reduce the [Minimum search range](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#minimum-search-range-rtmobility-absolute) in the [Local minimum resolver](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md)
 
 **Solution 2**: Reducing the expected peak resolution. (if Solution 1 does not achieve the expected result)
+
 - In the wizard: Not possible
+
 - In the batch: Reduce the [Min ratio of peak top/edge](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#min-ratio-of-peak-topedge) in the [Local minimum resolver](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md)
 
 **Note**: Optimization of peak resolution is a crucial step. If parameters are chosen too loosely, 
@@ -87,13 +93,17 @@ the quality of the peak detection may be reduced severely.
 **Problem**: A specific feature is not detected in any feature list, even in the most basic one.
 
 **Solution 1**: Reducing the minimum intensity requirements, if the feature is of low intensity.
+
 - In the wizard: Lower the [Minimum feature height](../../wizard.md#minimum-feature-height) in the mass spectrometer tab.
+
 - In the batch: As the wizard parameter influences multiple steps, all these need to be updated:
-  - [Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#minimum-absolute-height)
-  - [Local minimum feature resolver (RT and IMS dimension)](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#minimum-absolute-height)
+    - [Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#minimum-absolute-height)
+    - [Local minimum feature resolver (RT and IMS dimension)](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#minimum-absolute-height)
 
 **Solution 2**: Reducing the minimum number of data points per feature, if the feature is detected in few consectutive scans.
+
 - In the wizard: Lower the [Minimum consecutive scans](../../wizard.md#minimum-consecutive-scans)
+
 - In the batch: As the wizard parameter influences multiple steps, all these need to be updated:
-  - [Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#minimum-consecutive-scans)
-  - [Local minimum feature resolver (RT and IMS dimension)](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#minimum-scans-data-points)
+    - [Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#minimum-consecutive-scans)
+    - [Local minimum feature resolver (RT and IMS dimension)](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md#minimum-scans-data-points)
