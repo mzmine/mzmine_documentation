@@ -2732,6 +2732,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../module_docs/norm_rt_calibration_scans/scan-based-rt-corr.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Retention time calibration (scans)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../module_docs/norm_linear/norm_linear.html" class="md-nav__link">
         
   
@@ -5200,7 +5223,9 @@ In MS data can be acquired using three main modes:</p>
 <p>The extracted ion chromatogram (EIC) displays the signal intensity of a specific m/z value, within a defined tolerance (e.g. ± 5 ppm), at any one retention time point in the LC-MS run. The following figure shows the EIC of <em>m/z</em> 455.2945 ± 5 ppm (same sample as above).
 <img alt="EIC" src="EIC.png" /></p>
 <h3 id="chromatographic-resolving">Chromatographic resolving<a class="headerlink" href="#chromatographic-resolving" title="Permanent link">&para;</a></h3>
-<p>Peak overlapping, or co-elution, is a common problem in any chromatographic separation technique. In the case of LC-MS (especially untargeted <em>omics</em> analysis), it is virtually impossible to obtain a full baseline separation for the hundreds (or thousands) of analytes eluted through the column. The split of partially-overlapping and shoulder peaks into individual features is generally referred to as <em>chromatographic resolving</em> and is one of the most crucial steps of data processing. TO FINISH.</p>
+<p>Peak overlapping, or co-elution, is a common problem in any chromatographic separation technique. In the case of LC-MS (especially untargeted <em>omics</em> analysis), it is virtually impossible to obtain a full baseline separation for the hundreds (or thousands) of analytes eluted through the column. The split of partially-overlapping and shoulder peaks into individual features is generally referred to as <em>chromatographic resolving</em> and is one of the most crucial steps of data processing. (see <a href="../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.html">Local minimum resolver</a>)</p>
+<p>Resolved features (= EIC split into features):
+<img alt="img.png" src="resolved.png" /></p>
 <h3 id="missing-values">Missing values<a class="headerlink" href="#missing-values" title="Permanent link">&para;</a></h3>
 <!-- markdown-link-check-disable -->
 <p>MISSING VALUE DEFINITION (see https://www.nature.com/articles/s41598-017-19120-0). </p>
@@ -5256,7 +5281,7 @@ This tolerance is used in the <a href="../module_docs/align_join_aligner/join_al
 <li>IUPAC. Compendium of Chemical Terminology, 2nd ed. (the "Gold Book"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997). Online version (2019-) created by S. J. Chalk. ISBN 0-9678550-9-8. <a>10.1351/goldbook</a></li>
 <li>Guo, J., Huan T. Evaluation of significant features discovered from different data acquisition modes in mass spectrometry-based untargeted metabolomics. <em>Analytica Chimica Acta</em> (2020). DOI: <a>10.1016/j.aca.2020.08.065</a></li>
 </ul>
-<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
 
 
 
@@ -5277,7 +5302,7 @@ This tolerance is used in the <a href="../module_docs/align_join_aligner/join_al
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="July 30, 2025 10:13:34 UTC">July 30, 2025 10:13:34</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 20, 2025 10:14:12 UTC">October 20, 2025 10:14:12</span>
   </span>
 
     
@@ -5296,6 +5321,7 @@ This tolerance is used in the <a href="../module_docs/align_join_aligner/join_al
         <a href="mailto:ansgar.korf@mzio.io">Ansgar Korf</a>, 
         <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
         <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
+        <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>, 
         <a href="mailto:corinna.brungs@wwu.de">corinnabrungs</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>, 
         <a href="mailto:tito.damiani93@gmail.com">tdamiani</a>
