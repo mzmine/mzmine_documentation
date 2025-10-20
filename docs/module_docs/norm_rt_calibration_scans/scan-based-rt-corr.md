@@ -1,4 +1,4 @@
-# Retention time correction o scans
+# Retention time correction of scans
 
 !!! note
 
