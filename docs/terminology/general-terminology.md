@@ -88,7 +88,10 @@ The extracted ion chromatogram (EIC) displays the signal intensity of a specific
 ![EIC](EIC.png)
 
 ### Chromatographic resolving
-Peak overlapping, or co-elution, is a common problem in any chromatographic separation technique. In the case of LC-MS (especially untargeted _omics_ analysis), it is virtually impossible to obtain a full baseline separation for the hundreds (or thousands) of analytes eluted through the column. The split of partially-overlapping and shoulder peaks into individual features is generally referred to as _chromatographic resolving_ and is one of the most crucial steps of data processing. TO FINISH.
+Peak overlapping, or co-elution, is a common problem in any chromatographic separation technique. In the case of LC-MS (especially untargeted _omics_ analysis), it is virtually impossible to obtain a full baseline separation for the hundreds (or thousands) of analytes eluted through the column. The split of partially-overlapping and shoulder peaks into individual features is generally referred to as _chromatographic resolving_ and is one of the most crucial steps of data processing. (see [Local minimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md))
+
+Resolved features (= EIC split into features):
+![img.png](resolved.png)
 
 ### Missing values
 <!-- markdown-link-check-disable -->
