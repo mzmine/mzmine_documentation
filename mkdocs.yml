@@ -93,6 +93,7 @@ nav:
           - Neutral loss filter: module_docs/filter_neutral_loss/filter_neutral_loss.md
           - m/z mobility region extraction: module_docs/filter_mobilitymzregionextraction/filter_mobilitymzregionextraction.md
           - Feature list blank subtraction: module_docs/filter_blanksubtraction/filter_blanksubtraction.md
+          - Split aligned feature list: module_docs/filter_splitaligned/split_aligned_feature_list.md
       - Alignment:
           - Join aligner: module_docs/align_join_aligner/join_aligner.md
           - Merge lists: module_docs/align_merge_lists/align_merge_lists.md
