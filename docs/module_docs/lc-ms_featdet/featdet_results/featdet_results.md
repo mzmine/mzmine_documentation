@@ -79,6 +79,10 @@ feature annotations from other modules. All annotations are considered, this mea
 row will match the filter but the reason is not the primary annotation visible but a secondary one
 that may be hidden in the list of, e.g., library matches.
 
+This filter is also available in the
+**[Feature list rows filter](../../feature_list_row_filter/feature_list_rows_filter.md)** module to
+apply the filter to a feature list and retain its results.
+
 #### Matching modes
 
 Matching modes define either direct equality or unequality or define minima / maxima. A special case
