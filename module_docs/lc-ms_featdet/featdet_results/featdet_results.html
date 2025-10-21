@@ -1393,6 +1393,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#tag-based-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag-based filtering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lipid-filter" class="md-nav__link">
     <span class="md-ellipsis">
       Lipid filter
@@ -4945,6 +4954,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#tag-based-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag-based filtering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lipid-filter" class="md-nav__link">
     <span class="md-ellipsis">
       Lipid filter
@@ -5038,7 +5056,7 @@ chart-specific options.</p>
 available options depending if the column is a <strong>Feature summary column</strong> or
 <strong>Sample-specific column</strong>. There are various visualizers and other tools available from this menu.</p>
 <p>Check out the <strong>Show/Feature overview IIMN networks</strong> for a composition of annotations, networks,
-and more. </p>
+and more.</p>
 <h2 id="feature-list-filters">Feature list filters<a class="headerlink" href="#feature-list-filters" title="Permanent link">&para;</a></h2>
 <p><img alt="feature_list_filter.png" src="feature_list_filter.png" /></p>
 <p>In the bottom panel, there are multiple filters to focus on specific properties of your feature list
@@ -5059,12 +5077,33 @@ search types will match against any annotation like spectral library match, lipi
 feature annotations from other modules. All annotations are considered, this means that sometimes a
 row will match the filter but the reason is not the primary annotation visible but a secondary one
 that may be hidden in the list of, e.g., library matches.</p>
+<p>This filter is also available in the
+<strong><a href="../../feature_list_row_filter/feature_list_rows_filter.html">Feature list rows filter</a></strong> module to
+apply the filter to a feature list and retain its results.</p>
 <h4 id="matching-modes">Matching modes<a class="headerlink" href="#matching-modes" title="Permanent link">&para;</a></h4>
 <p>Matching modes define either direct equality or unequality or define minima / maxima. A special case
-is <strong>⊂</strong> (contain) which is used for substructure matching and substring matches. This is usually
-used for substring name matching.</p>
+is <strong>⊂</strong> ("contains") which is used for substructure matching and substring matches. This is usually
+used for substring name matching where the whole substring needs to be contained, but there are also
+other
+substring matching modes in <strong>all</strong> and <strong>any</strong> that match each word in a query separated by space,
+semicolon (;), or comma (,)
+symbols.</p>
+<p><strong>Substring ("contains") matching types:</strong></p>
+<ul>
+<li><strong>⊂</strong>: The target contains the whole query string</li>
+<li><strong>all</strong>: The target contains <strong>all</strong> <strong>words</strong> of the query, separated by space, semicolon, or
+  comma symbols</li>
+<li><strong>any</strong>: The target contains <strong>any</strong> <strong>word</strong> of the query, separated by space, semicolon, or
+  comma symbols</li>
+</ul>
 <h4 id="search-types">Search types<a class="headerlink" href="#search-types" title="Permanent link">&para;</a></h4>
 <ul>
+<li><strong>Comment (row)</strong>: Searches in the Comment column for each row. This column represents comments on
+  the feature list row level. Useful for tag-based filtering in combination with substring search *
+  <em>any</em><em> or </em><em>all</em>* (see below).</li>
+<li><strong>Comment (row)</strong>: Searches in the Comment column and additional <strong>JSON</strong> for each compound
+  annotation. The comment and json columns can contain additional information like user-specific
+  fields. This filter combines well with substring search <strong>any</strong> or <strong>all</strong>.</li>
 <li><strong>Ion identity ID</strong>: Find all rows of the same ion identity ID</li>
 <li><strong>Ion type</strong>: The adduct, in source fragment, or other ion type detected.</li>
 <li><strong>Compound name</strong>: Any annotation's compound name matches, best to use a substring match</li>
@@ -5083,6 +5122,22 @@ used for substring name matching.</p>
 <li><strong>Fragment scans</strong>: Filter for a minimum number of fragment scans in the fragment scans column,
   which all fragment scans across all samples.</li>
 </ul>
+<h4 id="tag-based-filtering">Tag-based filtering<a class="headerlink" href="#tag-based-filtering" title="Permanent link">&para;</a></h4>
+<p>In the feature table, the <strong>Comment</strong> column provides the option to add comments or tags to each
+row, describing the whole row instead of just a single compound annotation. This field can be used
+to tag rows and the flexible feature filter below and in the feature table or in
+the <a href="https://mzmine.github.io/mzmine_documentation/module_docs/feature_list_row_filter/feature_list_rows_filter.html">Feature list rows filter</a>
+can search for multiple tags in search modes <strong>any</strong> or <strong>all</strong>.</p>
+<p>In the <strong>any</strong> or <strong>all</strong> search modes, the query is split into words (tags) by all space,
+semicolon, and comma symbols.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Enter tags into the <strong>Comment</strong> column to describe each feature table row. Use the Comment (row) 
+filter with mode <strong>any</strong> or <strong>all</strong> to match tags entered into the query field. Separate tags in 
+the query by spaces, commas, or semicolons.
+<strong>Example:</strong> Enter comment <em>media, impurity</em> in a row column and then search for tags by entering 
+query: <em>impurity</em> or <em>impurity, media</em> (order of tags does not matter in modes any/all).</p>
+</div>
 <h4 id="lipid-filter">Lipid filter<a class="headerlink" href="#lipid-filter" title="Permanent link">&para;</a></h4>
 <p>Enter the following query to match specific lipid matches:</p>
 <ul>
@@ -5129,7 +5184,7 @@ and then <strong>Define manually</strong>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="August 15, 2025 19:03:12 UTC">August 15, 2025 19:03:12</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 21, 2025 15:45:16 UTC">October 21, 2025 15:45:16</span>
   </span>
 
     
