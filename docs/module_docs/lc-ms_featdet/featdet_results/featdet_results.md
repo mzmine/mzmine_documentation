@@ -71,7 +71,7 @@ rows like annotations or retention time and m/z.
   this significance like 1 will range from 1 - 2 and 2.5 will range 2.5-2.6. Or enter ranges
   directly like 1 - 10.
 
-### Flexible feature list filter
+### Flexible feature list filter {#flexible-feature-list-filter}
 
 This filter is defined by a search type, matching mode, and textual query. In general, annotation
 search types will match against any annotation like spectral library match, lipid match, or other

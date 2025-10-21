@@ -39,11 +39,11 @@ that match criteria.
 
 #### Original feature list
 
-It can be either processed in place, kept or removed.
+It can be either processed in place, kept, or removed.
 
 ### Sample-based filters
 
-#### Minimum aligned samples (previously Minimum features in a row)
+#### Minimum aligned samples (previously Minimum features in a row) {#min-aligned-samples}
 
 Minimum number of samples a feature needs to be detected in a row across all samples to match.
 The value can be set both as an absolute number and a percentage of samples that both need to match.
@@ -137,7 +137,7 @@ the values accepted are 0.314-0.5 or 0.90-0.15.
 Filter features in a Kendrick mass defect (KMD) range. For more details
 see [Kendrick mass defect](../../visualization_modules/kendrickmass/kendrick_mass_plot.md).
 
-If KMD is used, following parameters can be changed in the setup.
+If KMD is used, the following parameters can be changed in the setup.
 
 - **Kendrick mass defect**
   Permissible range of a Kendrick mass defect per row
@@ -146,7 +146,7 @@ If KMD is used, following parameters can be changed in the setup.
 - **Shift**
   Enter a shift for shift dependent KMD filtering
 - **Charge**
-  Enter a charge for charge dependent KMD filtering
+  Enter a charge for charge-dependent KMD filtering
 - **Divisor**
   Enter a divisor for fractional base unit dependent KMD filtering
 - **Use Remainder of Kendrick mass**
@@ -171,7 +171,7 @@ If checked, keep all rows with annotation and skip further filtering for them.
 This filter is defined by a search type, matching mode, and textual query. In general, annotation
 search types will match against any annotation like spectral library match, lipid match, or other
 feature annotations from other modules. All annotations are considered, this means that sometimes a
-row will match the filter but the reason is not the primary annotation visible but a secondary one
+row will match the filter, but the reason is not the primary annotation visible but a secondary one
 that may be hidden in the list of, e.g., library matches. The **comment (row)** search with modes *
 *any** and **all** are useful options for row tagging and searching. Just insert comments in the
 feature table comment column and use this filter.
