@@ -62,7 +62,8 @@ Provide here a brief description for Parameter #3. Optional parameters should be
 
 ---
 
-## Algorithm
+[//]: # (Use {#tag} for stable links that can be used in any link)
+## Algorithm {#algorithm}
 Optional: A more detailed description of the algorithm(s) employed by the module can be provided in this section.
 
 

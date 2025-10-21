@@ -53,7 +53,7 @@ available options depending if the column is a **Feature summary column** or
 **Sample-specific column**. There are various visualizers and other tools available from this menu.
 
 Check out the **Show/Feature overview IIMN networks** for a composition of annotations, networks,
-and more. 
+and more.
 
 ## Feature list filters
 
@@ -71,7 +71,7 @@ rows like annotations or retention time and m/z.
   this significance like 1 will range from 1 - 2 and 2.5 will range 2.5-2.6. Or enter ranges
   directly like 1 - 10.
 
-### Flexible feature list filter
+### Flexible feature list filter {#flexible-feature-list-filter}
 
 This filter is defined by a search type, matching mode, and textual query. In general, annotation
 search types will match against any annotation like spectral library match, lipid match, or other
@@ -79,14 +79,36 @@ feature annotations from other modules. All annotations are considered, this mea
 row will match the filter but the reason is not the primary annotation visible but a secondary one
 that may be hidden in the list of, e.g., library matches.
 
+This filter is also available in the
+**[Feature list rows filter](../../feature_list_row_filter/feature_list_rows_filter.md)** module to
+apply the filter to a feature list and retain its results.
+
 #### Matching modes
 
 Matching modes define either direct equality or unequality or define minima / maxima. A special case
-is **⊂** (contain) which is used for substructure matching and substring matches. This is usually
-used for substring name matching.
+is **⊂** ("contains") which is used for substructure matching and substring matches. This is usually
+used for substring name matching where the whole substring needs to be contained, but there are also
+other
+substring matching modes in **all** and **any** that match each word in a query separated by space,
+semicolon (;), or comma (,)
+symbols.
+
+**Substring ("contains") matching types:**
+
+- **⊂**: The target contains the whole query string
+- **all**: The target contains **all** **words** of the query, separated by space, semicolon, or
+  comma symbols
+- **any**: The target contains **any** **word** of the query, separated by space, semicolon, or
+  comma symbols
 
 #### Search types
 
+- **Comment (row)**: Searches in the Comment column for each row. This column represents comments on
+  the feature list row level. Useful for tag-based filtering in combination with substring search *
+  *any** or **all** (see below).
+- **Comment (row)**: Searches in the Comment column and additional **JSON** for each compound
+  annotation. The comment and json columns can contain additional information like user-specific
+  fields. This filter combines well with substring search **any** or **all**.
 - **Ion identity ID**: Find all rows of the same ion identity ID
 - **Ion type**: The adduct, in source fragment, or other ion type detected.
 - **Compound name**: Any annotation's compound name matches, best to use a substring match
@@ -104,6 +126,25 @@ used for substring name matching.
   nomenclature. See examples below.
 - **Fragment scans**: Filter for a minimum number of fragment scans in the fragment scans column,
   which all fragment scans across all samples.
+
+#### Tag-based filtering
+
+In the feature table, the **Comment** column provides the option to add comments or tags to each
+row, describing the whole row instead of just a single compound annotation. This field can be used
+to tag rows and the flexible feature filter below and in the feature table or in
+the [Feature list rows filter](https://mzmine.github.io/mzmine_documentation/module_docs/feature_list_row_filter/feature_list_rows_filter.html)
+can search for multiple tags in search modes **any** or **all**.
+
+In the **any** or **all** search modes, the query is split into words (tags) by all space,
+semicolon, and comma symbols.
+
+!!! tip
+
+    Enter tags into the **Comment** column to describe each feature table row. Use the Comment (row) 
+    filter with mode **any** or **all** to match tags entered into the query field. Separate tags in 
+    the query by spaces, commas, or semicolons.
+    **Example:** Enter comment _media, impurity_ in a row column and then search for tags by entering 
+    query: _impurity_ or _impurity, media_ (order of tags does not matter in modes any/all).
 
 #### Lipid filter
 
