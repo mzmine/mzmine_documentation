@@ -251,7 +251,7 @@ scale with the sampleset size and if samples are relatively similar from their c
 maximum of an absolute and relative value.
 
 Influences batch steps:
-[Feature list rows filter](module_docs/feature_list_row_filter/feature_list_rows_filter.md#minimum-features-in-a-row-abs-or-percent)
+[Feature list rows filter](module_docs/feature_list_row_filter/feature_list_rows_filter.md#min-aligned-samples)
 
 #### Only keep features with 13C
 
