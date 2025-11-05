@@ -12,12 +12,10 @@ Bruker representative to ask for the prmMALDI prototype and refer to SIMSEF.
 ## Requirements
 
 - access to timsTOF fleX instrument
-- access to either of:
-  - the prototypic timsControl 4.1/5.0with the prm-MALDI option (contact your Bruker
-  representative)
-  - timsControl 5.1 with prmMALDI enabled (contact your Bruker representative)
-  - timsControl 6.1 (prmMALDI released)
+- timsControl 6.1
 - [Download](https://github.com/SteffenHeu/simsef_py/releases) SIMSEF acquisition tool for the respective timsControl version
+- Note: while SIMSEF versions for timsControl 4.1, 5.0, and 5.1 exist, we recommend using timsControl 6.1 as earlier versions require access to prototypic timsControl software, which is not supported anymore
+
 
 ## Procedure
 
