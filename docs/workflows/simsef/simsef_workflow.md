@@ -32,7 +32,7 @@ Bruker representative to ask for the prmMALDI prototype and refer to SIMSEF.
 1. Prepare the sample following your default procedure.
 2. Setup the imaging run in flexImaging. Set the raster size bigger than the laser spot size in your
    imaging method (e.g. laser spot size = 20 µm, raster size = 50 µm).
-3. Save the imaging run via "Save imaging run as...". This will store the geometry files for later
+3. Save the imaging run via "Save run file as..." ("Save imaging run as..." prior to tC 6.1). This will store the geometry files for later
    use.
 4. Restart timsControl (prm-MALDI prototype) to make the instrument recognize the geometry files.
    Recalibrate the instrument (recommended).
@@ -57,7 +57,8 @@ Bruker representative to ask for the prmMALDI prototype and refer to SIMSEF.
     - Set MS mode to MS/MS in the MALDI settings. (prmPASEF in timsControl 6.1 and higher)
     - Increase the laser size to the raster size
 11. Set instrument to operate and recalibrate if needed (recommended).
-12. Select the correct geometry file on the instrument computer (saved in step 3)
+12. Select the correct geometry file on the instrument computer (saved in step 3) 
+    - If the geometry selection is disabled by the target geometry (due to barcode reading), disable this feature at: Preferences – System Settings – MALDI Settings
 12. Run "simsef_pewpew.exe" on the instrument computer, select the acquisition.txt and click "Run
     acquisition."
 13. After the acquisition, copy the folder to the analysis computer.
