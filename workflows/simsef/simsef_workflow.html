@@ -4910,7 +4910,7 @@ in your MS1 run for SIMSEF experiments</p>
 </li>
 <li>Setup the imaging run in flexImaging. Set the raster size bigger than the laser spot size in your
    imaging method (e.g. laser spot size = 20 µm, raster size = 50 µm).</li>
-<li>Save the imaging run via "Save imaging run as...". This will store the geometry files for later
+<li>Save the imaging run via "Save run file as..." ("Save imaging run as..." prior to tC 6.1). This will store the geometry files for later
    use.</li>
 <li>Restart timsControl (prm-MALDI prototype) to make the instrument recognize the geometry files.
    Recalibrate the instrument (recommended).</li>
@@ -4939,7 +4939,10 @@ in your MS1 run for SIMSEF experiments</p>
 </ul>
 </li>
 <li>Set instrument to operate and recalibrate if needed (recommended).</li>
-<li>Select the correct geometry file on the instrument computer (saved in step 3)</li>
+<li>Select the correct geometry file on the instrument computer (saved in step 3) <ul>
+<li>If the geometry selection is disabled by the target geometry (due to barcode reading), disable this feature at: Preferences – System Settings – MALDI Settings</li>
+</ul>
+</li>
 <li>Run "simsef_pewpew.exe" on the instrument computer, select the acquisition.txt and click "Run
     acquisition."</li>
 <li>After the acquisition, copy the folder to the analysis computer.</li>
@@ -4972,7 +4975,7 @@ in your MS1 run for SIMSEF experiments</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 5, 2025 08:02:24 UTC">November 5, 2025 08:02:24</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 6, 2025 14:31:20 UTC">November 6, 2025 14:31:20</span>
   </span>
 
     
