@@ -64,9 +64,10 @@ nav:
       - Smoothing: module_docs/featdet_smoothing/smoothing.md
       - Resolving:
           - Local minimum resolver: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
-          - ADAP resolver: module_docs/featdet_resolver_adap/adap-resolver.md
+          - Wavelet resolver: module_docs/featdet_resolver_wavelet/wavelet_resolver.md
+#          - ADAP resolver: module_docs/featdet_resolver_adap/adap-resolver.md
           - Baseline resolver: module_docs/featdet_resolver_baseline/baseline-resolver.md
-          - CentWave resolver: module_docs/featdet_resolver_centwave/centwave-resolver.md
+#          - CentWave resolver: module_docs/featdet_resolver_centwave/centwave-resolver.md
           - Noise amplitude resolver: module_docs/featdet_resolver_noise_ampl/noise-ampl-resolver.md
           - Savitzky-Golay resolver: module_docs/featdet_resolver_savitzky-golay/savitzky-golay-resolver.md
       #      TODO Add mobilogram binning
