@@ -6,7 +6,8 @@
 
 !!! Note
 
-    Wavelet resolver vs. [Local minimum](../featdet_resolver_local_minimum/local-minimum-resolver.md)
+    Wavelet resolver vs. [Local minimum resolver](../featdet_resolver_local_minimum/local-minimum-resolver.md):
+
     While the local minimum resolver is the quicker resolver, it may struggle with chromatograms with high baseline
     and peaks on top said baseline. The wavelet resolver takes longer to compute, but may outperform the local minimum.  
 
@@ -18,10 +19,12 @@ Minimum required signal-to-noise ratio of a peak. The noise is calculated by the
 deviation ($STD$)
 or median absolute deviation ($MAD$) (see [noise calculation](#noise-calculation)
 and [noise window factor](#noise-window-factor)). The signal
-height ($S$) is determined by the peak height minus average of the two edges.
+height ($S$) is determined by the peak height minus the average of the two edges.
 
 $$\text{Signal-to-noise} = S/N$$
+
 $$S = I_{peakTop} - \frac{I_{leftEdge}-I_{rightEdge}}{2}$$
+
 $$N = STD(Background) \text{ or } MAD(Background)$$
 
 #### Top to edge (SNR override)
