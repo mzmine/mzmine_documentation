@@ -181,10 +181,9 @@ nav:
 
   - Contribute:
       - Coding:
+          - General structure: coding/general_structure.md
           - mzmine development (in IntelliJ): contribute_intellij.md
           - Upgrade JDK version: coding/upgrade_jdk_version.md
-          - General structure: coding/general_structure.md
-          #            - macOS code signing: coding/macos_signing.md
           - Module development: coding/module_development.md
           - Modules list: coding/module_list.md
 
