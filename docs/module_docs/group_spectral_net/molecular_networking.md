@@ -11,7 +11,7 @@ This module integrates multiple popular molecular networking algorithms on MS1 a
 relationships like modified cosine, ion identity networking, and machine learning-based models 
 including DreaMS and MS2Deepscore2.
 
-![machine_learning_networking.png](../../../reference_media/networks/machine_learning_networking.png)
+![machine_learning_networking.png](machine_learning_networking.png)
 
 Feature-Based Molecular Networking (FBMN) and Ion Identity Molecular Networking (IIMN) group
 features
