@@ -93,6 +93,7 @@ nav:
           - Peak comparison rows filter: module_docs/filter_peakcomparison_row_filter/filter_peakcomparison_row_filter.md
           - Neutral loss filter: module_docs/filter_neutral_loss/filter_neutral_loss.md
           - m/z mobility region extraction: module_docs/filter_mobilitymzregionextraction/filter_mobilitymzregionextraction.md
+          - Chromatogram blank subtraction: module_docs/filter_blanksubtraction/filter_chrom_blanksubtraction.md
           - Feature list blank subtraction: module_docs/filter_blanksubtraction/filter_blanksubtraction.md
           - Split aligned feature list: module_docs/filter_splitaligned/split_aligned_feature_list.md
       - Alignment:
