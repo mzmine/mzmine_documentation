@@ -34,7 +34,7 @@ A recent mzmine introduction video:
 
 ## User-interface gallery
 
-[![example_featuretable_light.png](img/example_featuretable_light.png)](img/example_featuretable_light.png){target="_blank"}
+[![Feature Table](img/example_featuretable_light.png)](img/example_featuretable_light.png){target="_blank"}
 
 [![Youtube channel](Youtube_tutorials.png)](https://www.youtube.com/watch?v=UnqVtZngzl0&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=1){target="_blank"}
 
@@ -55,7 +55,7 @@ capable of handling large studies with complex multidimensional MS data. The mzi
 support packages while maintaining the open-source philosophy that provides a framework for 
 community members to develop their own ideas faster.
 
-[![mzmine_performance_both_crop.png](img/performance/mzmine_performance_both_crop.png)](img/performance/mzmine_performance_both.png){target="_blank"}
+[![Performance](img/performance/mzmine_performance_both_crop.png)](img/performance/mzmine_performance_both.png){target="_blank"}
 
 MZmine 3 was developed as a community effort, lead by Robin Schmid, Steffen Heuckeroth, Ansgar Korf, and Tomas Pluskal.
 It introduced a redesigned [GUI](main-window-overview.md), a completely new data structure which provided
