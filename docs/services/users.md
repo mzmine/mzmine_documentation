@@ -49,7 +49,7 @@ logged out. On the next sign in, the user will receive another verification emai
 address ownership.
 Revalidation of the email also triggers a revalidation of the **non-profit academic license**.
 
-![mzio-user-console.png](img%2Fmzio-user-console.png)
+![mzio-user-console.png](img/mzio-user-console.png)
 
 ### Changing password & adding Two-factor authentication
 
@@ -73,9 +73,9 @@ Open mzmine and navigate to **Users/Manage users**, alternatively click on the u
 mzmine landing page.
 If you have a user account sign in. Otherwise, click on **register**.
 
-![users_menu.png](img%2Fusers_menu.png)
+![users_menu.png](img/users_menu.png)
 
-![users_signin.png](img%2Fusers_signin.png)
+![users_signin.png](img/users_signin.png)
 
 Fill in the registration form and provide all details including:
 
@@ -86,13 +86,13 @@ Fill in the registration form and provide all details including:
   academic email address to gain a non-profit academic license
 - **Read and accept the [Terms and Conditions](https://mzio.io/general-terms-and-conditions/)**
 
-![users_register.png](img%2Fusers_register.png)
+![users_register.png](img/users_register.png)
 
 After clicking the register button, a verification email is sent to the provided address. This can
 take
 a few minutes.
 
-![users_email.png](img%2Fusers_email.png)
+![users_email.png](img/users_email.png)
 
 1. Please open the email
 2. Click the verification link that redirects to the user portal
@@ -102,7 +102,7 @@ a few minutes.
    non-profit academic license. Please reach out if your academic institution still needs our
    automatic validation.
 
-![users_users.png](img%2Fusers_users.png)
+![users_users.png](img/users_users.png)
 
 ## Command-line interface (CLI)
 
@@ -129,31 +129,31 @@ clicking on the **Sign in** button in the top right corner.
 Then follow the regular self-registration described above. Finally, users will need to sign in to
 the mzmine software. If the sign in website does not load in mzmine, click
 the ![btn_tool.png](img/btn_tool.png). Set a proxy and retry with the login screen but if this fails
-try the alternative sign in by username and password directly. The mzmine CLI also provides the *
-*-login-console** argument for alternative sign in.
+try the alternative sign in by username and password directly. The mzmine CLI also provides the 
+**-login-console** argument for alternative sign in.
 
 ## mzmine's educational non-profit program
 
-During your registration in mzmine, you may enter an email address of your educational institution. 
+During your registration in mzmine, you may enter an email address of your educational institution.
 This will grant automatic access to our academic non-profit program if your institution is already
-listed with us. If you receive a trial version, please reach out to us and provide any information 
-required to prove the educational non-profit status. 
+listed with us. If you receive a trial version, please reach out to us and provide any information
+required to prove the educational non-profit status.
 
-Each year, academic users will need to update their user profile, potentially changing to their 
-current institution and new email address, and to verify their email. This will renew your academic 
-license if your institution is still in our program. Otherwise, users are granted a trial version.   
+Each year, academic users will need to update their user profile, potentially changing to their
+current institution and new email address, and to verify their email. This will renew your academic
+license if your institution is still in our program. Otherwise, users are granted a trial version.
 
 
 ## Frequently asked questions (FAQ)
 
 1. Why is the link to verify my email address missing?
     - Your email provider may remove links as a security measure. Please reach out to your
-      postmaster or IT administrator with _info@mzio.io_ in Cc to resolve this issue. Please provide
+      postmaster or IT administrator with `info@mzio.io` in Cc to resolve this issue. Please provide
       the information that links are missing and that the domain mzio.io can be trusted.
 
 2. Why am I not receiving any verification email?
     - Your email provider may falsely block the mzio.io domain. Please reach out to your postmaster
-      or IT administrator with _info@mzio.io_ in Cc to resolve this issue. Please provide the
+      or IT administrator with `info@mzio.io` in Cc to resolve this issue. Please provide the
       information that the domain mzio.io can be trusted.
 
 3. The login page in mzmine is not loading, what can I do?
@@ -162,7 +162,7 @@ license if your institution is still in our program. Otherwise, users are grante
     - Check your computers proxy settings and apply them on this page and press update proxy to
       retry.
     - Otherwise, try the alternative sign in by username and password. This requires an existing
-      mzmine user that can also be registered on the website. 
+      mzmine user that can also be registered on the website.
 
 4. My academic account expires soon, how to renew my account?
     - Once the license is expired, on your next login you will need to update your user details and revalidate your academic email address. If successful this will grant another year in our academic non-profit program.
