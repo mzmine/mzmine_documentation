@@ -172,6 +172,10 @@ nav:
       - SIMSEF scheduler: module_docs/tools_simsef/simsef.md
 
   - Additional resources:
+      - Installation:
+          - Install on Windows: install_windows.md
+          - Install on Linux: install_linux.md
+          - Install on macOS: install_macOS.md
       - System requirements: system_requirements.md
       - General Terminology: terminology/general-terminology.md
       - IMS Terminology: terminology/ion-mobility-terminology.md

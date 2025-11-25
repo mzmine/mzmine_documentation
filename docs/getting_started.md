@@ -19,11 +19,9 @@ Alternatively, portable versions are distributed as zip archives, which need to 
 unzipped to reveal the executables (e.g., .exe on Windows). See platform-specific install 
 instructions:   
 
-[//]: # (- Installation on [Windows]&#40;install_windows.md&#41;)
-
-[//]: # (- Installation on [Linux]&#40;install_linux.md&#41;)
-
-[//]: # (- Installation on [macOS]&#40;install_macos.md&#41;)
+- Installation on [Windows](install_windows.md)
+- Installation on [Linux](install_linux.md)
+- Installation on [macOS](install_macos.md)
 
 As standalone modern Java software, mzmine has **NO** further requirements and ships with its own 
 specialized Java Runtime. This means the local Java installation has **no** impact on mzmine. 
