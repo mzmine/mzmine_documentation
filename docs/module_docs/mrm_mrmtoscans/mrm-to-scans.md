@@ -1,6 +1,7 @@
 # MRM to scans
 
 !!! warning
+
     To process multiple reaction monitoring (MRM) data, the MRM service of mzmine is required. This feature is
     included in the mzmine PRO subscription. Academic program and other users can reach out to inquire
     [access options](https://mzio.io/#contact).
@@ -24,6 +25,7 @@ If enabled, this module automatically generates feature lists with chromatograms
 If enabled, the lowest non-zero intensity of a transition will be subtracted along the retention time (recommended). 
 
 !!! tip
+
     Visualizing features of MRM data will not "fill" the whole area of the extracted XIC, which is accessible from the feature table context menu. This is caused by the summation of all transitions to compute the MS1 intensity (see [Pseudo MS1 generation](#pseudo-ms1-generation)) and the [static baseline subtraction](#static-baseline-subtraction), which is not applied to the spectra.
     ![mrm-xic-not-covered.png](mrm-xic-not-covered.png)
 

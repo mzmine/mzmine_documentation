@@ -65,6 +65,7 @@ Opens the export folder.
 :material-menu-open: **Feature list methods → Export feature list → Export to GNPS GC-MS (with ADAP)**
 
 !!! warning
+
      This module should be run on aligned feature list after applying one of the spectral deconvolution methods (see ADAP manual).
 
 The GNPS GC-MS module exports all files needed for the GC-MS workflow on the GNPS web platform. This includes the **feature quantification table (CSV file)** and the **spectral summary (.MGF file)** with representative clustered GC-EI-MS spectra for the row in an (aligned) feature list.
@@ -72,6 +73,7 @@ The GNPS GC-MS module exports all files needed for the GC-MS workflow on the GNP
 ### **References**
 
 !!! quote
+
      1. Smirnov et al.: J. Proteome Res 2017, DOI: 10.1021/acs.jproteome.7b00633 
      2. Wang et al.: Nature Biotechnology 34.8 (2016): 828-837.
      3. Pluskal et al.: BMC Bioinformatics, 11, 395 (2010)
@@ -111,6 +113,7 @@ The module allows the export of spectral features to Sirius from a selected feat
 Sirius uses both the deconvoluted isotopic pattern for each feature and the corresponding MS2 spectrum to rank molecular formula candidates. Spectral features exported consist of a pair of MS1 and MS2 spectrum for each row. Note that the MS1 spectrum can contain the deconvoluted isotopic peaks. 
 
 !!! warning
+
      A masslist with mass detection performs on MS level 2 has to be generated first and selected.
 
 This module can be used in combination with the Export for GNPS module and imported back into GNPS molecular networks. Please refer to the following documentation for a detailed tutorial:
@@ -118,6 +121,7 @@ This module can be used in combination with the Export for GNPS module and impor
 ### **References**
 
 !!! quote
+
      1. **MZmine2 paper**: Pluskal et al.: BMC Bioinformatics, 11, 395 (2010)
      2. K. Dührkop, et al. “Sirius 4: a rapid tool for turning tandem mass spectra into metabolite structure information”, Nat methods, 2019.
 

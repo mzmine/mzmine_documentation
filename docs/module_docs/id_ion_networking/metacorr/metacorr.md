@@ -10,6 +10,7 @@ This module groups features based on various properties:
 <!-- markdown-link-check-disable -->
 ## Recommended citations
 !!! info
+
     When using this modules, please consider citing the corresponding publications:<br>
     Schmid, R., Petras, D., Nothias, LF. et al. Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment. Nat Commun 12, 3832 (2021). https://doi.org/10.1038/s41467-021-23953-9
     
@@ -51,8 +52,8 @@ provided for
 Applies a feature shape correlation filter in retention time dimension. 
 
 !!! warning
-    Only use when having enough data points, i.e., 5 data points total and 2 on each side of the apex. Otherwise, 
-use feature height correlation and a more narrow RT tolerance
+
+    Only use when having enough data points, i.e., 5 data points total and 2 on each side of the apex. Otherwise, use feature height correlation and a more narrow RT tolerance
 
 **Parameters:**
 - _Min data points_: Minimum number of correlated data points
@@ -66,6 +67,7 @@ use feature height correlation and a more narrow RT tolerance
 Applies a correlation filter by taking all the feature heights across samples for feature pairs. 
 
 !!! warning
+
     Only applicable if the heights are comparable across samples: Similar matrix and ionization conditions
 
 **Parameters:**

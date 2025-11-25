@@ -17,7 +17,7 @@ Furthermore, mzmine allows generation of custom spectral libraries.
 ![index_tech_overview.png](img/index_tech_overview.png)
 
 !!! info
-    
+
     When using mzmine, please cite the corresponding paper:</br> Robin Schmid, Steffen Heuckeroth, Ansgar Korf et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3. Nature Biotechnology (2023), [doi:10.1038/s41587-023-01690-2](https://www.nature.com/articles/s41587-023-01690-2).
 
 ## Getting started with mzmine
@@ -28,9 +28,7 @@ check out our **[getting started](getting_started.md)** page or
 and [other videos](https://www.youtube.com/watch?v=jUHd3Sj7x0M&list=PL7kvpfzg8JkV7XKBUUX0xxOJimiK1VCOg){target="_blank"}.
 
 A recent mzmine introduction video:
-<iframe src="https://www.youtube.com/embed/tHC0brzQtG0?si=Lw5q6QMMXL3d2dWN&amp;start=239" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-[//]: # (<iframe width="560" height="315" src="https://www.youtube.com/embed/tHC0brzQtG0?si=Lw5q6QMMXL3d2dWN&amp;start=239" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tHC0brzQtG0?si=Lw5q6QMMXL3d2dWN&amp;start=239" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## User-interface gallery
 

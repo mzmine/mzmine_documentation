@@ -13,16 +13,18 @@ the [Molecular Networking](../../group_spectral_net/molecular_networking.md) mod
 fragmentation pattern similarities in mzmine and allows for interactive visualization.
 
 !!! warning
-Apply [metaCorrelate](../metacorr/metacorr.md) before running this module
+
+    Apply [metaCorrelate](../metacorr/metacorr.md) before running this module
 
 ## Recommended citations
 
 <!-- markdown-link-check-disable -->
 !!! info
-When using this modules, please consider citing the corresponding publication(s):<br>
-Schmid, R., Petras, D., Nothias, LF. et al. Ion identity molecular networking for mass
-spectrometry-based metabolomics in the GNPS environment. Nat Commun 12, 3832 (
-2021). https://doi.org/10.1038/s41467-021-23953-9
+
+    When using this modules, please consider citing the corresponding publication(s):<br>
+    Schmid, R., Petras, D., Nothias, LF. et al. Ion identity molecular networking for mass
+    spectrometry-based metabolomics in the GNPS environment. Nat Commun 12, 3832 (
+    2021). https://doi.org/10.1038/s41467-021-23953-9
 
     Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, In Review (2023)
 
@@ -61,8 +63,9 @@ combined to create
 the final ion library.
 
 !!! tip
-This step should only focus on the main ions that are typically detected in the MS method.
-Later the _Add more ion identities_ module can add strange ions to existing networks.
+
+    This step should only focus on the main ions that are typically detected in the MS method.
+    Later the _Add more ion identities_ module can add strange ions to existing networks.
 
 ![IIN library](ion_library.png)
 
