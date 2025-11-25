@@ -7,6 +7,12 @@
     This module runs molecular networking in mzmine. There is no data uploaded to GNPS in this process.
     For GNPS interoperability, refer to the dedicated export module [export module](../io/data-exchange-with-other-software.md#gnps-fbmniimn-export).
 
+This module integrates multiple popular molecular networking algorithms on MS1 and MS2 spectral 
+relationships like modified cosine, ion identity networking, and machine learning-based models 
+including DreaMS and MS2Deepscore2.
+
+![machine_learning_networking.png](machine_learning_networking.png)
+
 Feature-Based Molecular Networking (FBMN) and Ion Identity Molecular Networking (IIMN) group
 features
 based on their fragmentation pattern similarity. While similar to spectral library search, the
@@ -46,6 +52,7 @@ Example of the molecular networking results visualized in mzmine.
     de Jonge N, Joas D, Truong LJ, van der Hooft JJJ, Huber F bioRxiv [2024.03.25.586580](https://doi.org/10.1101/2024.03.25.586580)
 
 ---
+
 
 ## Parameters
 

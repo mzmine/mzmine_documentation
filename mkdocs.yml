@@ -93,6 +93,7 @@ nav:
           - Peak comparison rows filter: module_docs/filter_peakcomparison_row_filter/filter_peakcomparison_row_filter.md
           - Neutral loss filter: module_docs/filter_neutral_loss/filter_neutral_loss.md
           - m/z mobility region extraction: module_docs/filter_mobilitymzregionextraction/filter_mobilitymzregionextraction.md
+          - Chromatogram blank subtraction: module_docs/filter_blanksubtraction/filter_chrom_blanksubtraction.md
           - Feature list blank subtraction: module_docs/filter_blanksubtraction/filter_blanksubtraction.md
           - Split aligned feature list: module_docs/filter_splitaligned/split_aligned_feature_list.md
       - Alignment:
@@ -171,6 +172,10 @@ nav:
       - SIMSEF scheduler: module_docs/tools_simsef/simsef.md
 
   - Additional resources:
+      - Installation:
+          - Install on Windows: install_windows.md
+          - Install on Linux: install_linux.md
+          - Install on macOS: install_macos.md
       - System requirements: system_requirements.md
       - General Terminology: terminology/general-terminology.md
       - IMS Terminology: terminology/ion-mobility-terminology.md
@@ -178,13 +183,13 @@ nav:
       #      - Kendrick mass defect: module_docs/feature_list_row_filter/kendrick_mass_defect.md
       - Spectral similarity measures: module_docs/id_spectral_library_search/spectral-similarity-measures.md
       - Other detector terminology: module_docs/uv/otherdetector_glossary.md
+      - Additional resources: additional_resources.md
 
   - Contribute:
       - Coding:
+          - General structure: coding/general_structure.md
           - mzmine development (in IntelliJ): contribute_intellij.md
           - Upgrade JDK version: coding/upgrade_jdk_version.md
-          - General structure: coding/general_structure.md
-          #            - macOS code signing: coding/macos_signing.md
           - Module development: coding/module_development.md
           - Modules list: coding/module_list.md
 
