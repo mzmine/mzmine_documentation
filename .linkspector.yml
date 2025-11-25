@@ -1,0 +1,9 @@
+dirs:
+  - docs/
+useGitIgnore: true
+followRedirects: true
+aliveStatusCodes:
+  - 302
+  - 301
+excludedFiles:
+  - docs/workshops.md
