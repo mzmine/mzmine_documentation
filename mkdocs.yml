@@ -179,6 +179,7 @@ nav:
       #      - Kendrick mass defect: module_docs/feature_list_row_filter/kendrick_mass_defect.md
       - Spectral similarity measures: module_docs/id_spectral_library_search/spectral-similarity-measures.md
       - Other detector terminology: module_docs/uv/otherdetector_glossary.md
+      - Additional resources: additional_resources.md
 
   - Contribute:
       - Coding:
