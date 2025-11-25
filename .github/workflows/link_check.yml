@@ -16,5 +16,5 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: tcort/github-action-markdown-link-check@v1
-        with:
-          config-file: 'mlc_config.json'
+#        with:
+#          config-file: 'mlc_config.json'
