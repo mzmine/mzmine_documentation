@@ -63,6 +63,7 @@ As a quick start you can use the [mzwizard](wizard.md) in the main menu or direc
 
 ## Workflow overviews
 A quick insight to data processing workflows can be found here:
+
 - [LC-MS workflow](workflows/lcmsworkflow/lcms-workflow.md)
 - [LC-IMS-IMS workflow](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)
 - [Imaging workflows](workflows/imagingworkflow/imaging-workflow.md)

@@ -1,6 +1,7 @@
 # Set MRM quantifiers
 
 !!! warning
+
     To process multiple reaction monitoring (MRM) data, the MRM service of mzmine is required. This feature is
     included in the mzmine PRO subscription. Academic program and other users can reach out to inquire
     [access options](https://mzio.io/#contact).
@@ -10,6 +11,7 @@
 The [MRM to Scans module](../mrm_mrmtoscans/mrm-to-scans.md) automatically sets the most intense transition as the quantifier ion. However, some MRMs may be more challenging and shall be quantified by a different transition. Here, the Set MRM quantifiers module can help to select the specific ions needed for accurate quantification.
 
 !!! tip
+
     You can look at the current quantifier ion mass by enabling the "Feature:MRM transitions" in the feature table by selecting the small "+" in the upper right corner of the feature table.
     ![img.png](mrm_transition_table.png)
 
@@ -24,6 +26,7 @@ Select the feature lists in which the quantifier ion shall be re-set.
 Select a file that contains the necessary quantifier ion information in a tabular format (comma, tabulator, semicolon delimited). The file may contain additional columns that are not necessary here.
 
 !!! tip
+
     Since the [quantifier ion list](#quantifier-ion-list) only selects the necessary information from the file, you can use the same file for the [Local compound database search](../id_prec_local_cmpd_db/local-cmpd-db-search.md) or in the MRM wizard.
 
 #### Column headers

@@ -3,12 +3,14 @@
 ## Export in batch mode (head less, CLI)
 
 !!! warning
+
     To export the annotation graphics in head less mode, a display needs to be configured to render the
     graphics.
     If you are running on a desktop computer, this is usually the case. 
     If you are running on a server, e.g., ubuntu, you can use GTK and run it via Xvfb.
 
 !!! note
+
     This export only covers annotated features. Features without an annotation will not be exported.
 
 ## Parameters

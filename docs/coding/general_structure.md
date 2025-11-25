@@ -21,7 +21,8 @@ started with mzmine development and provide pointers to already existing resourc
 - How to contribute to the [mzmine code base](../contribute_intellij.md)?
 
 !!! tip
-The practical instructions for mzmine coding can be found [here](module_development.md).
+    
+    The practical instructions for mzmine coding can be found [here](module_development.md).
 
 ## GitHub issues as a pool of ideas and feedback:
 
@@ -104,8 +105,9 @@ Each module in mzmine is built from three classes:
 - [Name]Task.java
 
 !!! tip
-You can fnd examples for all these classes in the
-`java/io/github/mzmine/modules/example` [folder](https://github.com/mzmine/mzmine/tree/master/mzmine-community/src/main/java/io/github/mzmine/modules/example)
+
+    You can fnd examples for all these classes in the
+    `java/io/github/mzmine/modules/example` [folder](https://github.com/mzmine/mzmine/tree/master/mzmine-community/src/main/java/io/github/mzmine/modules/example)
 
 ### Module class
 

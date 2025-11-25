@@ -24,6 +24,7 @@ You can either do it from command line using git command `git checkout -b new-br
 Go to the folder that corresponds to the functionality of your module (e.g., dataprocessing for the module that will be process features in the feature list). Create a new package in this folder. 
 
 !!! tip
+
      Make sure that a package name starts with a meaningful prefix, such as "filter_" for a module that will filter rows in a feature table.
 
 ## **4. Create necessary classes**
@@ -31,7 +32,8 @@ Go to the folder that corresponds to the functionality of your module (e.g., dat
 Following the module structure described [here](general_structure.md), create Module, Parameters, and Task classes.
 
 !!! tip
-You can directly copy examples for all these classes from the `java/io/github/mzmine/modules/example` folder and **rename them** accordingly. These example files also contain some useful tips.
+
+    You can directly copy examples for all these classes from the `java/io/github/mzmine/modules/example` folder and **rename them** accordingly. These example files also contain some useful tips.
 
 ## **5. Define module name, description, and category**
 
@@ -45,7 +47,8 @@ After you have described all parameters, add parameters to the constructor of yo
 `super(new Parameter[]{parameters go here})`
 
 !!! warning 
- A parameter in the Parameters class should be public static final. 
+ 
+    A parameter in the Parameters class should be public static final. 
 
 ## **7. Define `runModule()` method [For the runnable modules]**
 
