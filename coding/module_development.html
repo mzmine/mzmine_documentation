@@ -6261,8 +6261,8 @@ For example, if you'd like to add a new filter for the feature list rows, the be
 <p>Following the module structure described <a href="general_structure.html">here</a>, create Module, Parameters, and Task classes.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-</div>
 <p>You can directly copy examples for all these classes from the <code>java/io/github/mzmine/modules/example</code> folder and <strong>rename them</strong> accordingly. These example files also contain some useful tips.</p>
+</div>
 <h2 id="5-define-module-name-description-and-category"><strong>5. Define module name, description, and category</strong><a class="headerlink" href="#5-define-module-name-description-and-category" title="Permanent link">&para;</a></h2>
 <p>Start by defining MODULE_NAME and MODULE_DESCRIPTION variables. Assign your module a category by modifying <code>getModuleCategory()</code> method. Available categories are listed in MZmineModuleCategory file.</p>
 <h2 id="6-work-on-your-parameters-class"><strong>6. Work on your Parameters class</strong><a class="headerlink" href="#6-work-on-your-parameters-class" title="Permanent link">&para;</a></h2>
@@ -6271,8 +6271,8 @@ After you have described all parameters, add parameters to the constructor of yo
 <p><code>super(new Parameter[]{parameters go here})</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-</div>
 <p>A parameter in the Parameters class should be public static final. </p>
+</div>
 <h2 id="7-define-runmodule-method-for-the-runnable-modules"><strong>7. Define <code>runModule()</code> method [For the runnable modules]</strong><a class="headerlink" href="#7-define-runmodule-method-for-the-runnable-modules" title="Permanent link">&para;</a></h2>
 <p>Here you are creating a task that will be launched after user has chosen parameters. You do not need to worry about task scheduling here, the task is only created and passed here.</p>
 <h2 id="8-work-on-your-task-class"><strong>8. Work on your Task class</strong><a class="headerlink" href="#8-work-on-your-task-class" title="Permanent link">&para;</a></h2>
@@ -6294,7 +6294,7 @@ You can modify the message by the logger, check for cancelled state, and update 
 <p>Prepare a description for your module that will go into the documentation. Creating a thorough documentation will help more people to use and understand your module. The documentation template can be found <a href="../contribute_docu_template.html">here</a></p>
 <h2 id="12-push-to-the-remote-branch-and-create-a-pull-request"><strong>12. Push to the remote branch and create a pull request</strong><a class="headerlink" href="#12-push-to-the-remote-branch-and-create-a-pull-request" title="Permanent link">&para;</a></h2>
 <p>After you coded and tested your module, you can push your changes to the remote branch and create a pull request. After your pull request will be reviewed by one of the main contributors. There might be some comments that you'll have to address. After that, your module will be merged into the master branch and become a part of MZmine!</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:42996200+jaycarraway@users.noreply.github.com'>Jonas L.</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:42996200+jaycarraway@users.noreply.github.com'>Jonas L.</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -6315,7 +6315,7 @@ You can modify the message by the logger, check for cancelled state, and update 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="July 15, 2025 14:26:24 UTC">July 15, 2025 14:26:24</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 25, 2025 10:29:24 UTC">November 25, 2025 10:29:24</span>
   </span>
 
     
@@ -6332,6 +6332,7 @@ You can modify the message by the logger, check for cancelled state, and update 
     <nav>
       
         <a href="mailto:42996200+jaycarraway@users.noreply.github.com">Jonas L.</a>, 
+        <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
         <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
     </nav>
