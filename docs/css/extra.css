@@ -10,11 +10,3 @@
 .md-header {
     background-color: #0072b2;
 }
-
-/* For PDF output (WeasyPrint uses @media print) */
-@media print {
-  a.pdf-drop-link {
-    pointer-events: none;   /* disables link */
-    text-decoration: none;  /* removes underline if any */
-  }
-}
