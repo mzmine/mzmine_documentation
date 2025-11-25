@@ -34,8 +34,8 @@ A recent mzmine introduction video:
 
 ## User-interface gallery
 
-<a href="img/example_featuretable_light.png" target="_blank">
-  <img src="img/example_featuretable_light.png" alt="Diagram preview">
+<a href="img/example_featuretable_light.png" target="_blank" class="pdf-drop-link">
+  <img src="img/example_featuretable_light.png" alt="Feature table">
 </a>
 
 [//]: # ([![Feature Table]&#40;img/example_featuretable_light.png&#41;]&#40;img/example_featuretable_light.png&#41;{target="_blank"})
@@ -59,8 +59,8 @@ capable of handling large studies with complex multidimensional MS data. The mzi
 support packages while maintaining the open-source philosophy that provides a framework for 
 community members to develop their own ideas faster.
 
-<a href="img/mzmine_performance_both.png" target="_blank">
-  <img src="img/mzmine_performance_both_crop.png" alt="Diagram preview">
+<a href="img/mzmine_performance_both.png" target="_blank" class="pdf-drop-link">
+  <img src="img/mzmine_performance_both_crop.png" alt="Performance">
 </a>
 
 [//]: # (does not work)
