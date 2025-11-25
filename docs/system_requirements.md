@@ -2,7 +2,7 @@
 
 ## Installation
 
-Installation of mzmine is described on the [getting started](getting_started.md#install) page.
+Installation of mzmine is described on the [getting started](getting_started.md#install-update) page.
 mzmine is available as an installable package or a portable version. The portable version does not
 require administator rights to be run, making it useful for university students without elevated
 permissions.

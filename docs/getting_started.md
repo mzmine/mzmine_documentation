@@ -10,7 +10,7 @@ versioning (major.minor.patch like 4.8.0). The latest version is always availabl
 
 **System requirements** are available [here](system_requirements.md)
 
-## Install or update mzmine {#install}
+## Install or update mzmine {#install-update}
 
 Download your system-specific installer (e.g., .msi installer on Windows) and double-click to 
 install mzmine. To update mzmine, download a new version installer and install it over the old 
