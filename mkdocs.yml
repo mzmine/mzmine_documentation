@@ -175,7 +175,7 @@ nav:
       - Installation:
           - Install on Windows: install_windows.md
           - Install on Linux: install_linux.md
-          - Install on macOS: install_macOS.md
+          - Install on macOS: install_macos.md
       - System requirements: system_requirements.md
       - General Terminology: terminology/general-terminology.md
       - IMS Terminology: terminology/ion-mobility-terminology.md
