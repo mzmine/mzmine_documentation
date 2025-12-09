@@ -13,7 +13,9 @@ nav:
   - Main window overview: main-window-overview.md
   - Processing wizard: wizard.md
   - Data conversion: data_conversion.md
-  - Performance options: performance.md
+  - Performance & Benchmarking:
+    - Performance options: performance.md
+    - Benchmarking: performance/benchmarking.md
   - Command line tool (batch mode): commandline_tool.md
   - Integration to other tools: tool_integration.md
   #  - Citations: citations.md
