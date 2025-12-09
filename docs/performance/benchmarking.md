@@ -39,7 +39,7 @@ accurate measurements during benchmarking.
 
 ### Manual garbage collection {#manual-gc}
 
-The user may run **manual garbage collection** by double-clicking the **RAM usage bar** in the
+The user may run **manual garbage collection** by clicking the **RAM usage bar** in the
 bottom right corner of the graphical user interface (GUI). After running manual GC, the memory bar
 will show the used memory and the logs will print a message like below:
 
