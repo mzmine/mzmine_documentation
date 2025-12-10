@@ -81,9 +81,18 @@ submit your log files together with any issues
 on **[GitHub](https://github.com/mzmine/mzmine3/issues)**.
 
 ## Maximum memory
-The maximum Java heap size (the main part of the RAM available to mzmine) is set to 80%. This is usually a good value, considering that mzmine and its Java Virtual Machine (JVM) will use memory extending over this 80% threshold for specific tasks. There is one way to change the maximum heap size before starting mzmine, however, it requires administrator access.
 
-Find the **mzmine/app/mzmine.cfg** file in the mzmine install directory or portable version. Under Windows, this file is write protected, which needs to be changed under **File/Properties/Security/** select Users and click Edit to grant write access. Now change the _MaxRAMPercentage_ to grant more RAM. 
+### Relative memory limits (default)
+The maximum Java heap size (the main part of the RAM available to mzmine) is set to 80%. This is 
+usually a good value, considering that mzmine and its Java Virtual Machine (JVM) will use memory 
+extending over this 80% threshold for specific tasks. There is one way to change the maximum heap 
+size before starting mzmine, however, it requires administrator access.
+
+Find the **mzmine/app/mzmine.cfg** file in the mzmine install directory or portable version. 
+The portable version allows this file to be edited.
+In the installed Windows version, this file is write protected, which needs to be changed under 
+**File/Properties/Security/** select Users and click Edit to grant write access. 
+Now change the _MaxRAMPercentage_ to grant more RAM. 
 
 **Note**: You'll need to modify the **mzmine_console.cfg** if you run mzmine_console (on Windows).
 
@@ -91,6 +100,29 @@ Find the **mzmine/app/mzmine.cfg** file in the mzmine install directory or porta
 java-options=-XX:InitialRAMPercentage=10
 java-options=-XX:MaxRAMPercentage=80
 ```
+
+### Absolute memory limits
+The relative RAM percentages are the recommended best practice when tuning the JVM. This way mzmine
+will run well on smaller and larger systems. Alternatively, absolute memory constraints can be 
+defined as start RAM (_-Xms_) and maximum RAM (_-Xmx_). For this, remove the two lines above from 
+the config file and add the two below by defining the RAM, e.g., 32g for 32 GB. 
+
+```
+java-options=-Xms32g
+java-options=-Xmx32g
+```
+
+### Container memory limits
+
+mzmine is built on modern Java technology and fully supports containerization. It automatically
+respects container memory limits, making it ideal for deployment in containerized environments (
+Docker, Kubernetes, etc.). When running mzmine in a container, the JVM will detect and honor the
+container's memory constraints.
+
+Containerization is particularly useful on systems with large amounts of RAM, as it provides a clean
+way to limit memory usage without modifying the application. This ensures mzmine only uses the
+allocated resources, preventing memory overflow issues on shared systems.
+
 
 ## Limit number of cores
 For HPC applications, limiting the number of threads may not be sufficient. In case the usage of the actual number of cores shall be limited, the java option
