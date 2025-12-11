@@ -6463,8 +6463,27 @@ depending on peak width.</p>
 <p>If disabled/default: Absolute minimum is used</p>
 <h4 id="allow-sign-changes-every-n-points">Allow sign changes every N points<a class="headerlink" href="#allow-sign-changes-every-n-points" title="Permanent link">&para;</a></h4>
 <p>Removes noisy signals with lots of up/down movement.</p>
+<p>Filters by the number of sign changes (<span class="arithmatex">\(S\)</span>) in the slope between two points in a potential feature.
+If the slope changes from positive to negative or vice versa, it is counted as a sign
+change. Since a peak is expected to have a high point, one sign change is expected per potential
+peak and subtracted from the number of counted sign changes. The number of
+additional sign changes (<span class="arithmatex">\(S-1\)</span>) is then divided by the total number of data points in a peak
+<span class="arithmatex">\(\frac{(S-1)}{N_{points}}\)</span>. This number is then multiplied by the value of this parameter <span class="arithmatex">\(p\)</span>. We
+call the result of this formula the relative jaggedness <span class="arithmatex">\(J_R\)</span>. If the relative jaggedness
+is <span class="arithmatex">\(\le 1\)</span>, the potential peak is discarded.</p>
+<p><span class="arithmatex">\(J_R = \frac{(S-1)}{N_{points}} \cdot p\)</span></p>
 <p>If disabled: 2 is used.
 To not use this filter enable and set to 1.</p>
+<p>The effect of the filter is visualized here:
+<img alt="sign_changes-01.png" src="sign_changes-01.png" /></p>
+<p>The yellow signal in panel <strong>A</strong> shows 9 sign changes for 12 data points, the blue signal shows 7
+sign changes for 10 data points.
+The jaggedness is thereby calculated as:</p>
+<p><span class="arithmatex">\(J_{R,yellow} = \frac{(9-1)}{12} \cdot p = \frac{8}{12} \cdot p = \frac{2}{3}p\)</span>
+<span class="arithmatex">\(J_{R,blue} = \frac{(7-1)}{10} \cdot p = \frac{7}{10} \cdot p = 0.7p\)</span></p>
+<p>For a parameter value <span class="arithmatex">\(p\)</span> of 1, both signals are retained, as <span class="arithmatex">\(J_R \le 1\)</span>. If a sign changes is only
+allowed every <span class="arithmatex">\(p = 2\)</span> points, it results in <span class="arithmatex">\(J_R &gt; 1\)</span> in both cases.</p>
+<p>(Note: S/N had to be set to 2 to allow these signals to be picked up at all.)</p>
 <h4 id="maximum-ratio-of-similar-height-signals-in-background">Maximum ratio of similar height signals in background<a class="headerlink" href="#maximum-ratio-of-similar-height-signals-in-background" title="Permanent link">&para;</a></h4>
 <p>Noisy baselines may pass the SNR filter due to low standard deviation if the baseline is relatively
 stable.
@@ -6472,7 +6491,9 @@ This filter checks if there are a lot of signals with a similar absolute height 
 peak.
 If that is the case, the peak is removed.</p>
 <p>If disabled: (0.10) will be used as default.
-Note: A value of 1 disables this filter.</p>
+Note: A value of 1 disables this filter.
+Note: It may make sense to disable this filter (set to 1) to detect signals that are placed on an
+increasing baseline.</p>
 <h4 id="saturation-filter">Saturation filter<a class="headerlink" href="#saturation-filter" title="Permanent link">&para;</a></h4>
 <p>Detects if a peak has a flat top signal due to saturation of the MS detector.</p>
 <p>Default: true</p>
@@ -6497,7 +6518,7 @@ Note: A value of 1 disables this filter.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 14, 2025 15:25:59 UTC">November 14, 2025 15:25:59</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="December 11, 2025 11:45:16 UTC">December 11, 2025 11:45:16</span>
   </span>
 
     
