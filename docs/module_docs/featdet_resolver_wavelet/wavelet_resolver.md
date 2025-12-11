@@ -107,8 +107,34 @@ If disabled/default: Absolute minimum is used
 
 Removes noisy signals with lots of up/down movement.
 
+Filters by the number of sign changes ($S$) in the slope between two points in a potential feature.
+If the slope changes from positive to negative or vice versa, it is counted as a sign
+change. Since a peak is expected to have a high point, one sign change is expected per potential
+peak and subtracted from the number of counted sign changes. The number of
+additional sign changes ($S-1$) is then divided by the total number of data points in a peak
+$\frac{(S-1)}{N_{points}}$. This number is then multiplied by the value of this parameter $p$. We
+call the result of this formula the relative jaggedness $J_R$. If the relative jaggedness
+is $\le 1$, the potential peak is discarded.
+
+$J_R = \frac{(S-1)}{N_{points}} \cdot p$
+
 If disabled: 2 is used.
 To not use this filter enable and set to 1.
+
+The effect of the filter is visualized here:
+![sign_changes-01.png](sign_changes-01.png)
+
+The yellow signal in panel **A** shows 9 sign changes for 12 data points, the blue signal shows 7
+sign changes for 10 data points.
+The jaggedness is thereby calculated as:
+
+$J_{R,yellow} = \frac{(9-1)}{12} \cdot p = \frac{8}{12} \cdot p = \frac{2}{3}p$
+$J_{R,blue} = \frac{(7-1)}{10} \cdot p = \frac{7}{10} \cdot p = 0.7p$
+
+For a parameter value $p$ of 1, both signals are retained, as $J_R \le 1$. If a sign changes is only
+allowed every $p = 2$ points, it results in $J_R > 1$ in both cases.
+
+(Note: S/N had to be set to 2 to allow these signals to be picked up at all.)
 
 #### Maximum ratio of similar height signals in background
 
@@ -120,6 +146,8 @@ If that is the case, the peak is removed.
 
 If disabled: (0.10) will be used as default.
 Note: A value of 1 disables this filter.
+Note: It may make sense to disable this filter (set to 1) to detect signals that are placed on an
+increasing baseline.
 
 #### Saturation filter
 
