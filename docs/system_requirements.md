@@ -4,7 +4,7 @@
 
 Installation of mzmine is described on the [getting started](getting_started.md#install-update) page.
 mzmine is available as an installable package or a portable version. The portable version does not
-require administator rights to be run, making it useful for university students without elevated
+require administrator rights to be run, making it useful for users without elevated
 permissions.
 
 ## Hardware requirements
@@ -38,16 +38,12 @@ permissions.
 
 <!-- markdown-link-check-disable -->
 
-- Up-to-date operating system, e.g., Windows 10 or newer, recent Linux or MacOS (academic only) versions
-- mzmine does not require a dedicated Java installation, even though it is a Java software. All
-requirements are shipped with mzmine
+- Up-to-date operating system, e.g., Windows 10 or newer, recent Linux or MacOS (academic only) versions. 
+- mzmine does not require a dedicated Java installation, as it is a self-contained Java software with its own Java Virtual Machine. All
+requirements are shipped with mzmine.
 - Microsoft Visual Studio C++ Redist for Bruker raw data import [download page](https://learn.microsoft.com/de-de/cpp/windows/latest-supported-vc-redist?view=msvc-170)
-- MSConvert (on Windows) for native Sciex, Waters, Shimadzu, MOBILion, Thermo data
-  support [download page](https://proteowizard.sourceforge.io/download.html)
-    - Thermo alternative: ThermoRawFileParser for native Thermo support on Windows, Mac, and
-      Linux [download page](https://github.com/pluskal-lab/ThermoRawFileParserMacLinux/releases)
-    - ThermoRawFileParser does not need to be installed but only downloaded and imported via the
-      mzmine preferences
+- MSConvert (on Windows) for native Agilent, Sciex, Waters, Shimadzu, and MOBILion data support [download page](https://proteowizard.sourceforge.io/download.html)
+
 <!-- markdown-link-check-enable -->
 
 ## Internet connection
@@ -65,3 +61,32 @@ for spectral networking using MS2Deepscore and DReaMS, an internet connection is
     - https://zenodo.org/ spectral libraries
     - https://external.gnps2.org/gnpslibrary spectral libraries
 <!-- markdown-link-check-enable -->
+
+## Operating system compatibility {#compatibility}
+
+### Windows
+
+Currently, all modules are compatible with Microsoft Windows 10 and higher.
+
+Some libraries for the raw data support for vendor-specific formats are only available for Windows.
+Read more about data support and [data conversion](data_conversion.md).
+
+### Linux
+
+Some libraries for the raw data support for vendor-specific formats are only available for Windows. 
+
+The Linux version **supports** raw data formats from:
+- **Thermo**, **Bruker**, **Waters**
+
+Data from other Vendors may need to be **converted** to the open .mzML format before, including:
+- **Agilent**, **Sciex**, **Shimadzu**, **MOBILion**
+
+### macOS
+
+Some libraries for the raw data support for vendor-specific formats are only available for Windows and Linux. 
+
+The macOS version **supports** raw data formats from:
+- Thermo
+
+Data from other Vendors may need to be **converted** to the open .mzML format before, including:
+- Agilent, Sciex, Shimadzu, MOBILion, Bruker, Waters

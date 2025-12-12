@@ -1,27 +1,66 @@
 # Data handling (supported formats)
 
-mzmine supports both **open** (e.g., .mzML, .mzXML, .imzML, .netCDF) and **proprietary**
-formats from Bruker Daltonics (.d and .tdf/tsf). Raw data files from 
-vendors must be converted into an open format prior to the import. **This conversion can be applied automatically
-during the import, if the user has MSConvert installed.** 
-If you want to convert the files yourself, see the sections below.
+mzmine supports both **open** (e.g., .mzML, .mzXML, .imzML, .netCDF) and many **proprietary** 
+vendor data formats. For many vendor formats it is recommended to use the original data files and 
+to only apply conversion where needed. Data files can be imported by drag-and-dropping files into 
+the mzmine graphical user interface or using the _import MS data_ module. 
 
-The **recommendations** for the data handling are the conversion of the raw data to centroided .mzML
-data files,
-**except** for timsTOF data (native .tdf and .tsf inside the Bruker .d folder), and the conversion of MS
-imaging data to .imzML, except for the timsTOF fleX MS imaging data.
+**Supported raw data formats include:**
+- Bruker Daltonics (.d and .tdf/tsf) 
+- Thermo Fisher (.raw)
+- Waters (.raw folders)
+- Agilent (.d)
+- Sciex (.wiff/.wiff2)
+- Shimadzu (.lcd)
+- MOBILion (.mbi)
+- mzML or mzXML/mzData/netCDF (prefer mzML if possible due to better metadata coverage)
+- imzML (MS imaging)
+
+!!! warning
+    
+    Some vendor data formats are only supported on specific operating systems due to the limited 
+    support by their respective data access libraries. All data formats are supported on Windows 
+    and many on Linux (see full [compatibility list here](system_requirements.md#compatibility)).
+    Many data formats are unsupported on macOS, requiring data conversion to open formats, usually
+    on a Windows or Linux computer.
+
+## External dependencies
+
+Many data formats are supported without external dependencies, directly through the mzmine version.
+Other formats may require another third-party software to be downloaded and installed.
+
+**MSConvert:** This tool is provided by ProteoWizard and the default data converter for MS data. 
+While our team is expanding the native data support for all major vendor formats, we recommend to
+install MSConvert for some formats. This will grant direct access to these files and mzmine will
+use MSConvert with some internal optimizations to load data files in the background. Formats that 
+currently require MSConvert for direct support include:
+- Agilent (.d)
+- Sciex (.wiff/.wiff2)
+- Shimadzu (.lcd)
+- MOBILion (.mbi)
 
 ## Data conversion to open formats (.mzML / .imzML)
+
+When converting data, prefer the latest standard formats mzML (or imzML for MS imaging data).
+Other older open formats like mzData or mzXML may cover less metadata.
+It is **recommended** to convert raw data to centroided .mzML files.
+**Exceptions:** timsTOF native data as .tdf and .tsf inside the Bruker .d folder are best imported 
+in their original format. This is also true for timsTOF fleX MS imaging data.
+
+**This conversion can be applied automatically during the import if the user has MSConvert installed.**
+If you want to convert the files yourself, see the sections below.
+
 
 ### MSConvert (ProteoWizard) to mzML
 
 !!! info
 
-    mzmine can use MSConvert automatically. Make sure to setup the MSConvert installation path in the mzmine preferences. (only supported on Windows)
+    mzmine can use MSConvert automatically. Make sure to setup the MSConvert installation path in 
+    the mzmine preferences. (only supported on Windows)
 
 ![MSConvert_settings](MSConvert_settings.png)
 
-MSConvert supports the conversion of AB SCIEX, Agilent, Bruker, Shimadzu, Thermo Scientific,
+MSConvert supports the conversion of AB SCIEX, Agilent, Bruker, Shimadzu, Thermo Scientific, MOBILion,
 and [Waters](data_conversion.md#waters) raw data. More information about the formats can be found in
 the [ProteoWizard Documentation for Users](https://proteowizard.sourceforge.io/doc_users.html).
 Furthermore, profile data can be centroided to reduce the file size and memory consumption,
@@ -62,17 +101,19 @@ the [ProteoWizard documentation](https://proteowizard.sourceforge.io/tools/mscon
 ### ThermoRawFileParser
 
 It is used to convert ThermoFisher .raw files into .mgf, .mzML, .parquet. This converter is
-important if an
-internal calibrant was used (e.g., EASY-IC). This mass is excluded in the FreeStyle view, whereas
-MSConvert
-remains all signals in the mzML, including the calibrant. If those masses together with some flagged signals
-by Thermo, should be
-removed use this converter with the option --excludeExceptionData.
+important if an internal calibrant was used (e.g., EASY-IC). This mass is excluded in the FreeStyle
+view, whereas MSConvert remains all signals in the mzML, including the calibrant. If those masses 
+together with some flagged signals by Thermo, should be removed use this converter with the option 
+**--excludeExceptionData**.
 
 !!! Note
 
-    mzmine can use the ThermoRawFileParser automatically to import your data without conversion. In the preferences (CTRL+P) 
-    set the "Thermo data import" to "Thermo raw file parser" instead of MSConvert. The raw file parser is supported on Mac, Linux, and Windows.
+    **mzmine 4.8** and higher supports Thermo Raw data directly, there is no need to install external 
+    dependencies.
+
+    **Earlier mzmine versions** can use the ThermoRawFileParser automatically to import your data 
+    without conversion. In the preferences (CTRL+P) set the "Thermo data import" to "Thermo raw 
+    file parser" instead of MSConvert. The raw file parser is supported on Mac, Linux, and Windows.
 
 Example for command line interface with the exclusion of exception data:
 
@@ -104,6 +145,8 @@ corrector by applying a script on .mzML or .mzXML files after conversion. The sc
 how to use it can be found [here](https://github.com/elnurgar/mzxml-precursor-corrector).
 
 ### Waters
+
+Direct Waters data support is currently in beta phase. 
 
 Waters recently released a tool called **Waters data connect**, which allows conversion of DDA, DIA,
 and HD-DDA data to mzML. Lock mass correction is applied during the conversion. We also recommend to
