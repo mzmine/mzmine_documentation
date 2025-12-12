@@ -6502,7 +6502,7 @@
 <p>m/z window around the expected isotope features to scan for isotope peaks.</p>
 <h4 id="check-rt"><strong>Check RT</strong><a class="headerlink" href="#check-rt" title="Permanent link">&para;</a></h4>
 <p>If chosen, compares RT of feature to that of a parent. Based on the following parameter of <strong>Retention time tolerance</strong> feature is either filtered out or preserved.</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Invoking this parameter might not make sense for imaging or direct infusion, but is critical for chromatographic data.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Invoking this parameter might not make sense for imaging or direct infusion, but is critical for chromatographic data.</p>
 <h4 id="retention-time-tolerance"><strong>Retention time tolerance</strong><a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h4>
 <p>Maximum allowed difference between two retention time values</p>
 <h4 id="chemical-formula"><strong>Chemical formula</strong><a class="headerlink" href="#chemical-formula" title="Permanent link">&para;</a></h4>
@@ -6510,22 +6510,22 @@
 <h4 id="auto-carbon"><strong>Auto carbon</strong><a class="headerlink" href="#auto-carbon" title="Permanent link">&para;</a></h4>
 <p>If activated, Isotope peak scanner will calculate isotope patterns with variable numbers of carbon specified in Setup. The pattern with the best fitting number of carbon atoms will be chosen for every detected pattern.</p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> This will greatly increase computation time but helps with unknown-compound-identification.</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Please note that 13C isotope peaks might overlap with hetero atom isotope peaks depending on the resolution of your MS. This influences intensity ratios and will yield <strong>wrong results</strong>, since this prediction is based on intensity ratios of isotope peaks.</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> This option yeilds no exact results, but might give a good hint about data.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Please note that 13C isotope peaks might overlap with hetero atom isotope peaks depending on the resolution of your MS. This influences intensity ratios and will yield <strong>wrong results</strong>, since this prediction is based on intensity ratios of isotope peaks.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> This option yeilds no exact results, but might give a good hint about data.</p>
 <h4 id="charge"><strong>Charge</strong><a class="headerlink" href="#charge" title="Permanent link">&para;</a></h4>
 <p>Amount and polarity(e.g.: [M]+=+1 / [M]-=-1).</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> This is important for multiply charged molecules because the m/z offset between isotope peaks will halve for molecules with a charge of two.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> This is important for multiply charged molecules because the m/z offset between isotope peaks will halve for molecules with a charge of two.</p>
 <h4 id="min-pattern-intensity"><strong>Min. pattern intensity</strong><a class="headerlink" href="#min-pattern-intensity" title="Permanent link">&para;</a></h4>
 <p>The minimum normalized intensity of a peak in the final calculated isotope pattern. Depends on the sensitivity of your MS. This differs from minimum abundance. Min = 0.0, Max = 0.99999.</p>
 <h4 id="merge-widthmz"><strong>Merge width(m/z)</strong><a class="headerlink" href="#merge-widthmz" title="Permanent link">&para;</a></h4>
 <p>This will be used to merge peaks in the calculated isotope pattern if they overlap in the spectrum. Specify in m/z, this depends on the resolution of your mass spectrometer.</p>
 <h4 id="minimum-height"><strong>Minimum height</strong><a class="headerlink" href="#minimum-height" title="Permanent link">&para;</a></h4>
 <p>Minimum peak height to be considered as an isotope peak.</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Setting this parameter is crucial if you use the <strong>Calculate accurate average</strong> parameter. (see below)</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Setting this parameter is crucial if you use the <strong>Calculate accurate average</strong> parameter. (see below)</p>
 <h4 id="check-intensity-ratios"><strong>Check intensity ratios</strong><a class="headerlink" href="#check-intensity-ratios" title="Permanent link">&para;</a></h4>
 <p>Compare intensity of peaks to the calculated abundance of the isotope pattern.</p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> It's recommended to check this parameter for more accurate results.</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> However, when processing fragment data, and it's unknown how much of an isotope pattern remains charged it might be reasonable to uncheck this. (e.g.: Fragmenting a Cl8-isotope-pattern-molecule -&gt; If "Element pattern" = Cl4 this module will recognize everything with Cl4 or more Cl. However, this will lead to a messy result feature list)</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> However, when processing fragment data, and it's unknown how much of an isotope pattern remains charged it might be reasonable to uncheck this. (e.g.: Fragmenting a Cl8-isotope-pattern-molecule -&gt; If "Element pattern" = Cl4 this module will recognize everything with Cl4 or more Cl. However, this will lead to a messy result feature list)</p>
 <h4 id="minimum-rating"><strong>Minimum rating</strong><a class="headerlink" href="#minimum-rating" title="Permanent link">&para;</a></h4>
 <p>Minimum rating to be considered as an isotope peak. min = 0.0, max = 1.0</p>
 <h4 id="rating-type"><strong>Rating type</strong><a class="headerlink" href="#rating-type" title="Permanent link">&para;</a></h4>
@@ -6538,7 +6538,7 @@
 <p>This method will use averaged intensities over all mass lists in which ALL relevant masses were detected in. This will only be done for features that match the defined rating-calculation with the given rating.</p>
 <p>This will scan all mass lists for the peak closest to the identified isotope peak in the feature list and average the intensity.</p>
 <p>If there are no scans that match all criteria avg rating will be -1.0.</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Make sure the mass list is contained in the feature list.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Make sure the mass list is contained in the feature list.</p>
 <h4 id="name-suffix"><strong>Name suffix</strong><a class="headerlink" href="#name-suffix" title="Permanent link">&para;</a></h4>
 <p>Suffix to be added to feature list name. If "auto" then the module will itself create a suffix.</p>
 <h2 id="results"><strong>Results</strong><a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>

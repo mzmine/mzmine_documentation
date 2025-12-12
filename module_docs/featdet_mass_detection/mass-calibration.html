@@ -6337,7 +6337,7 @@
 
 <h1 id="mass-calibration"><strong>Mass calibration</strong><a class="headerlink" href="#mass-calibration" title="Permanent link">&para;</a></h1>
 <h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> This module should be used after mass detection step is performed.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> This module should be used after mass detection step is performed.</p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Raw data methods → Mass detection → Mass calibration</strong></p>
 <p>Mass calibration module estimates the measurement error of each detected mass and calibrates them using reference libraries of ions through three main processes:</p>
 <ol>
@@ -6463,7 +6463,7 @@ With the estimation model we can shift/calibrate the mass peaks at different par
 </ul>
 </li>
 </ul>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Overfitting problems at large m/z values (&gt;800) can occur when modeling the errors with regression as those regions commonly have less matches against the reference libraries of ions. If regression is modelled mainly by matches with small m/z ions (&lt;400), it is recommended to use the arithmetic mean for mass calibration. This also applies to blank samples were the number of matched ions is commonly low and regression can produce overfitting problems.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Overfitting problems at large m/z values (&gt;800) can occur when modeling the errors with regression as those regions commonly have less matches against the reference libraries of ions. If regression is modelled mainly by matches with small m/z ions (&lt;400), it is recommended to use the arithmetic mean for mass calibration. This also applies to blank samples were the number of matched ions is commonly low and regression can produce overfitting problems.</p>
 <h2 id="examples"><strong>Examples</strong><a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p><img alt="Mass calibration example" src="mass-calibration-example.png" /></p>
 <p><code>This module was intially created during a GSoC 2020 project with MZmine by Łukasz Fiszer and MZmine team.</code></p>

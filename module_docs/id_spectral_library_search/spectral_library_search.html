@@ -6530,7 +6530,7 @@ preset based spectral merging, input scans without merging, or an advanced setup
 <h4 id="ms-level-filter"><strong>MS level filter</strong><a class="headerlink" href="#ms-level-filter" title="Permanent link">&para;</a></h4>
 <p>Select MS2 for fragment spectra with precursor m/z.</p>
 <p>Select MS1 for GC-EI-MS spectra. </p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> In case of issues with the scan selection, check how the actual scan numbers are reported in the data files and in mzmine's raw data overview.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> In case of issues with the scan selection, check how the actual scan numbers are reported in the data files and in mzmine's raw data overview.</p>
 <h4 id="precursor-mz-tolerance"><strong>Precursor m/z tolerance</strong><a class="headerlink" href="#precursor-mz-tolerance" title="Permanent link">&para;</a></h4>
 <p>This option is only used for MS level &gt; 1. Here, the library entries are filtered by their precursor m/z reducing the number of spectral-pairs to match. </p>
 <p>The absolute (in m/z) and relative (in ppm) m/z tolerance can be set. The <strong>maximum tolerance</strong> for each precursor is applied. </p>
@@ -6542,15 +6542,15 @@ can be set in absolute (in m/z) and relative (in ppm) m/z tolerance, whereas
 the maximum tolerance for each m/z value is applied. It must be kept in mind, which mass resolutions are achieved 
 within the experimental spectra and within the spectral library.</p>
 <h4 id="remove-precursor"><strong>Remove precursor</strong><a class="headerlink" href="#remove-precursor" title="Permanent link">&para;</a></h4>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Can be selected only for MS level &gt; 1. </p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Can be selected only for MS level &gt; 1. </p>
 <p>Depending on the fragmentation method, e.g., collision induced dissociation (CID) or higher-energy collisional dissociation (HCD), the precursor can be detected with different intensities resulting in varying cosine similarities during the library matching. </p>
 <p>Therefore, this option enables the removal of the precursor signal (± 4 Da) prior to the matching. </p>
 <h4 id="min-matched-signals"><strong>Min matched signals</strong><a class="headerlink" href="#min-matched-signals" title="Permanent link">&para;</a></h4>
 <p>The query mass list and spectral library entry must contain at least this number of matched (paired) m/z values (+- m/z tolerance). </p>
 <p>Common parameters include 4 signals for smaller molecules and 6 for more confident matches.</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> This parameter must be set carefully to not exclude compounds that show less
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> This parameter must be set carefully to not exclude compounds that show less
 fragmentation, when using a higher number of matched signals. </p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Choosing a lower number of matched
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Choosing a lower number of matched
 signals can result in spurious library hits.</p>
 <h4 id="similarity"><strong>Similarity</strong><a class="headerlink" href="#similarity" title="Permanent link">&para;</a></h4>
 <p>Several algorithms can be applied to calculate the similarity of the query and library scans and to filter the resulting library matches. The available algorithms are:</p>
@@ -6565,12 +6565,12 @@ neighboring signals and is, therefore, applied to MS<sup>1</sup> spectra from GC
 <h4 id="retention-time-tolerance"><strong>Retention time tolerance</strong><a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h4>
 <p>These option can be used to include these values as further spectral matching identifiers. The maximum allowed retention time difference when comparing the query and library scan. It can be set in absolute (min or sec) or relative (%) values.</p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> This option is intended for in-house libraries or standardized libraries that follow the same acquisition protocol with the same set-up, e.g., column, instrument, and method).</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> However, this method will boost false matches and needs strict manual interpretation.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> However, this method will boost false matches and needs strict manual interpretation.</p>
 <h4 id="ccs-tolerance"><strong>CCS tolerance</strong><a class="headerlink" href="#ccs-tolerance" title="Permanent link">&para;</a></h4>
 <p>The <a href="../../terminology/ion-mobility-terminology.html#collisional-cross-section">collision cross-section (CCS)</a> tolerance can be used in a similar way as the retention time tolerance.</p>
 <p>Accordingly, the CCS value of a query will be compared with the library entries and the maximum tolerance
 can be set in %.</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> If the query or library entry was analyzed without ion mobility (no CCS values), no spectrum will be matched.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> If the query or library entry was analyzed without ion mobility (no CCS values), no spectrum will be matched.</p>
 <h4 id="retention-index-tolerance"><strong>Retention index tolerance</strong><a class="headerlink" href="#retention-index-tolerance" title="Permanent link">&para;</a></h4>
 <p>This option can be used to exclude library entries that are not sufficiently close in retention index.</p>
 <h4 id="skip-library-entries-without-ris"><strong>Skip library entries without RIs</strong><a class="headerlink" href="#skip-library-entries-without-ris" title="Permanent link">&para;</a></h4>
@@ -6595,7 +6595,7 @@ Following parameters can be set:</p>
 library entries contain isotope patterns (e.g., in MS<sup>1</sup> or with wider precursor isolation 
 windows). </p>
 <p>The minimum number of matched signals of <sup>13</sup>C isotopes. </p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> It cannot be applied when <sup>13</sup>C deisotoping is enabled.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> It cannot be applied when <sup>13</sup>C deisotoping is enabled.</p>
 <h4 id="crop-spectra-to-mz-overlap"><strong>Crop spectra to m/z overlap</strong><a class="headerlink" href="#crop-spectra-to-mz-overlap" title="Permanent link">&para;</a></h4>
 <p>This option can be used to consider only the mass range where both the experimental and library spectra exhibit m/z
 signals. All other signals are ignored during the matching. For example, if query and library scans were acquired with different

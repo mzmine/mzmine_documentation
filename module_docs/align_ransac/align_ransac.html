@@ -6300,7 +6300,7 @@
 <p>Threshold value (minutes) for determining when a data point fits a model (t).</p>
 <p><strong>Linear model</strong></p>
 <p>This option should be selected only if the model has to be linear.</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Please, remember that when the shift in the retention time between the peaks in the samples is not constant the model shape is nonlinear, and this parameter should not be selected. </p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Please, remember that when the shift in the retention time between the peaks in the samples is not constant the model shape is nonlinear, and this parameter should not be selected. </p>
 <h2 id="recommendations-for-setting-optimal-parameters"><strong>Recommendations for setting optimal parameters</strong><a class="headerlink" href="#recommendations-for-setting-optimal-parameters" title="Permanent link">&para;</a></h2>
 <p>The three first parameters (m/z tolerance, RT tolerance after the correction and RT tolerance) define <strong>2 bi-dimensional windows</strong> with the same "altitude" (m/z tolerance) and different "longitude" (RT tolerances). </p>
 <p><strong>The first window</strong> (m/z tolerance - RT tolerance after the correction) sets the space where the matching peak should be present, and <strong>the second window</strong> (m/z tolerance - RT tolerance) sets the total space where RANSAC algorithm will be applied. </p>
@@ -6311,7 +6311,7 @@
 <ul>
 <li>
 <p>RANSAC is a non-deterministic algorithm, and the probability to find a good result increases with the <strong>number of iterations</strong>. If the user sets "0 iterations" into the parameter "RANSAC iterations" the algorithm will automatically set the optimum number of iterations depending on the number of data points. </p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> In the case that there is a big number of data points it is better to limit this parameter even though the result could be non-optimal. The preview module can help in setting this parameter.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> In the case that there is a big number of data points it is better to limit this parameter even though the result could be non-optimal. The preview module can help in setting this parameter.</p>
 </li>
 <li>
 <p>The parameter <strong>"Minimum number of points"</strong> should be an estimation of the proportion of the data points inside the model. It is important not to get models composed by few data points which do not correspond to the real model. All the models which contain less proportion of data points won't be taken into account by RANSAC algorithm.</p>

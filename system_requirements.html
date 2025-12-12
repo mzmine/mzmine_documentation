@@ -5436,6 +5436,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating system compatibility
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operating system compatibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6103,6 +6153,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating system compatibility
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operating system compatibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6127,7 +6227,7 @@
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>Installation of mzmine is described on the <a href="getting_started.html#install-update">getting started</a> page.
 mzmine is available as an installable package or a portable version. The portable version does not
-require administator rights to be run, making it useful for university students without elevated
+require administrator rights to be run, making it useful for users without elevated
 permissions.</p>
 <h2 id="hardware-requirements">Hardware requirements<a class="headerlink" href="#hardware-requirements" title="Permanent link">&para;</a></h2>
 <p><strong>Minimum</strong> (small datasets &lt; 30 LC-MS files):</p>
@@ -6161,18 +6261,11 @@ preferences (CTRL+P, <strong>Project -&gt; Preferences</strong>). (see <a href="
 <!-- markdown-link-check-disable -->
 
 <ul>
-<li>Up-to-date operating system, e.g., Windows 10 or newer, recent Linux or MacOS (academic only) versions</li>
-<li>mzmine does not require a dedicated Java installation, even though it is a Java software. All
-requirements are shipped with mzmine</li>
+<li>Up-to-date operating system, e.g., Windows 10 or newer, recent Linux or MacOS (academic only) versions. </li>
+<li>mzmine does not require a dedicated Java installation, as it is a self-contained Java software with its own Java Virtual Machine. All
+requirements are shipped with mzmine.</li>
 <li>Microsoft Visual Studio C++ Redist for Bruker raw data import <a href="https://learn.microsoft.com/de-de/cpp/windows/latest-supported-vc-redist?view=msvc-170">download page</a></li>
-<li>MSConvert (on Windows) for native Sciex, Waters, Shimadzu, MOBILion, Thermo data
-  support <a href="https://proteowizard.sourceforge.io/download.html">download page</a><ul>
-<li>Thermo alternative: ThermoRawFileParser for native Thermo support on Windows, Mac, and
-  Linux <a href="https://github.com/pluskal-lab/ThermoRawFileParserMacLinux/releases">download page</a></li>
-<li>ThermoRawFileParser does not need to be installed but only downloaded and imported via the
-  mzmine preferences</li>
-</ul>
-</li>
+<li>MSConvert (on Windows) for native Agilent, Sciex, Waters, Shimadzu, and MOBILion data support <a href="https://proteowizard.sourceforge.io/download.html">download page</a></li>
 </ul>
 <!-- markdown-link-check-enable -->
 
@@ -6197,6 +6290,24 @@ for spectral networking using MS2Deepscore and DReaMS, an internet connection is
 </ul>
 <!-- markdown-link-check-enable -->
 
+<h2 id="compatibility">Operating system compatibility<a class="headerlink" href="#compatibility" title="Permanent link">&para;</a></h2>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<p>Currently, all modules are compatible with Microsoft Windows 10 and higher.</p>
+<p>Some libraries for the raw data support for vendor-specific formats are only available for Windows.
+Read more about data support and <a href="data_conversion.html">data conversion</a>.</p>
+<h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
+<p>Some libraries for the raw data support for vendor-specific formats are only available for Windows. </p>
+<p>The Linux version <strong>supports</strong> raw data formats from:
+- <strong>Thermo</strong>, <strong>Bruker</strong>, <strong>Waters</strong></p>
+<p>Data from other Vendors may need to be <strong>converted</strong> to the open .mzML format before, including:
+- <strong>Agilent</strong>, <strong>Sciex</strong>, <strong>Shimadzu</strong>, <strong>MOBILion</strong></p>
+<h3 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<p>Some libraries for the raw data support for vendor-specific formats are only available for Windows and Linux. </p>
+<p>The macOS version <strong>supports</strong> raw data formats from:
+- Thermo</p>
+<p>Data from other Vendors may need to be <strong>converted</strong> to the open .mzML format before, including:
+- Agilent, Sciex, Shimadzu, MOBILion, Bruker, Waters</p>
+
 
 
 
@@ -6216,7 +6327,7 @@ for spectral networking using MS2Deepscore and DReaMS, an internet connection is
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 25, 2025 07:48:04 UTC">November 25, 2025 07:48:04</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="December 12, 2025 13:52:25 UTC">December 12, 2025 13:52:25</span>
   </span>
 
     
