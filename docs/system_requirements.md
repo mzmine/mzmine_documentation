@@ -32,7 +32,7 @@ permissions.
 !!! Info
     Processing speed scales with CPU cores/threads and speed of the SSD for temporary files. We 
     recommend setting the temporary files directory to a fast, secondary SSD in the mzmine 
-    preferences (CTRL+P, **Project -> Preferences**). (see [](getting_started.md#set-user-preferences))
+    preferences (CTRL+P, **Project → Preferences**). (see [](getting_started.md#set-user-preferences))
 
 ## Software requirements
 
@@ -76,9 +76,11 @@ Read more about data support and [data conversion](data_conversion.md).
 Some libraries for the raw data support for vendor-specific formats are only available for Windows. 
 
 The Linux version **supports** raw data formats from:
+
 - **Thermo**, **Bruker**, **Waters**
 
 Data from other Vendors may need to be **converted** to the open .mzML format before, including:
+
 - **Agilent**, **Sciex**, **Shimadzu**, **MOBILion**
 
 ### macOS
@@ -86,7 +88,9 @@ Data from other Vendors may need to be **converted** to the open .mzML format be
 Some libraries for the raw data support for vendor-specific formats are only available for Windows and Linux. 
 
 The macOS version **supports** raw data formats from:
+
 - Thermo
 
 Data from other Vendors may need to be **converted** to the open .mzML format before, including:
+
 - Agilent, Sciex, Shimadzu, MOBILion, Bruker, Waters
