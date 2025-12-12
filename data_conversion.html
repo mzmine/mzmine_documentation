@@ -6304,19 +6304,21 @@
 vendor data formats. For many vendor formats it is recommended to use the original data files and 
 to only apply conversion where needed. Data files can be imported by drag-and-dropping files into 
 the mzmine graphical user interface or using the <em>import MS data</em> module. </p>
-<p><strong>Supported raw data formats include:</strong>
-- Bruker Daltonics (.d and .tdf/tsf) 
-- Thermo Fisher (.raw)
-- Waters (.raw folders)
-- Agilent (.d)
-- Sciex (.wiff/.wiff2)
-- Shimadzu (.lcd)
-- MOBILion (.mbi)
-- mzML or mzXML/mzData/netCDF (prefer mzML if possible due to better metadata coverage)
-- imzML (MS imaging)</p>
+<p><strong>Supported raw data formats include:</strong></p>
+<ul>
+<li>Bruker Daltonics (.d and .tdf/tsf) </li>
+<li>Thermo Fisher (.raw)</li>
+<li>Waters (.raw folders)</li>
+<li>Agilent (.d)</li>
+<li>Sciex (.wiff/.wiff2)</li>
+<li>Shimadzu (.lcd)</li>
+<li>MOBILion (.mbi)</li>
+<li>mzML or mzXML/mzData/netCDF (prefer mzML if possible due to better metadata coverage)</li>
+<li>imzML (MS imaging)</li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Some vendor data formats are only supported on specific operating systems due to the limited 
+<p>Some vendor data formats are <strong>only supported</strong> on specific <strong>operating systems</strong> due to the limited 
 support by their respective data access libraries. All data formats are supported on Windows 
 and many on Linux (see full <a href="system_requirements.html#compatibility">compatibility list here</a>).
 Many data formats are unsupported on macOS, requiring data conversion to open formats, usually
@@ -6329,11 +6331,13 @@ Other formats may require another third-party software to be downloaded and inst
 While our team is expanding the native data support for all major vendor formats, we recommend to
 install MSConvert for some formats. This will grant direct access to these files and mzmine will
 use MSConvert with some internal optimizations to load data files in the background. Formats that 
-currently require MSConvert for direct support include:
-- Agilent (.d)
-- Sciex (.wiff/.wiff2)
-- Shimadzu (.lcd)
-- MOBILion (.mbi)</p>
+currently require MSConvert for direct support include:</p>
+<ul>
+<li>Agilent (.d)</li>
+<li>Sciex (.wiff/.wiff2)</li>
+<li>Shimadzu (.lcd)</li>
+<li>MOBILion (.mbi)</li>
+</ul>
 <h2 id="data-conversion-to-open-formats-mzml-imzml">Data conversion to open formats (.mzML / .imzML)<a class="headerlink" href="#data-conversion-to-open-formats-mzml-imzml" title="Permanent link">&para;</a></h2>
 <p>When converting data, prefer the latest standard formats mzML (or imzML for MS imaging data).
 Other older open formats like mzData or mzXML may cover less metadata.
@@ -6509,7 +6513,7 @@ information.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="December 12, 2025 13:52:25 UTC">December 12, 2025 13:52:25</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="December 12, 2025 14:03:11 UTC">December 12, 2025 14:03:11</span>
   </span>
 
     
