@@ -6,6 +6,7 @@ to only apply conversion where needed. Data files can be imported by drag-and-dr
 the mzmine graphical user interface or using the _import MS data_ module. 
 
 **Supported raw data formats include:**
+
 - Bruker Daltonics (.d and .tdf/tsf) 
 - Thermo Fisher (.raw)
 - Waters (.raw folders)
@@ -18,7 +19,7 @@ the mzmine graphical user interface or using the _import MS data_ module.
 
 !!! warning
     
-    Some vendor data formats are only supported on specific operating systems due to the limited 
+    Some vendor data formats are **only supported** on specific **operating systems** due to the limited 
     support by their respective data access libraries. All data formats are supported on Windows 
     and many on Linux (see full [compatibility list here](system_requirements.md#compatibility)).
     Many data formats are unsupported on macOS, requiring data conversion to open formats, usually
@@ -34,6 +35,7 @@ While our team is expanding the native data support for all major vendor formats
 install MSConvert for some formats. This will grant direct access to these files and mzmine will
 use MSConvert with some internal optimizations to load data files in the background. Formats that 
 currently require MSConvert for direct support include:
+
 - Agilent (.d)
 - Sciex (.wiff/.wiff2)
 - Shimadzu (.lcd)
