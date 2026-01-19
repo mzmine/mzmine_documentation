@@ -6303,26 +6303,80 @@
 <p>mzmine supports both <strong>open</strong> (e.g., .mzML, .mzXML, .imzML, .netCDF) and many <strong>proprietary</strong> 
 vendor data formats. For many vendor formats it is recommended to use the original data files and 
 to only apply conversion where needed. Data files can be imported by drag-and-dropping files into 
-the mzmine graphical user interface or using the <em>import MS data</em> module. </p>
+the mzmine graphical user interface or using the <em>Import MS data</em> module. </p>
 <p><strong>Supported raw data formats include:</strong></p>
-<ul>
-<li>Bruker Daltonics (.d and .tdf/tsf) </li>
-<li>Thermo Fisher (.raw)</li>
-<li>Waters (.raw folders)</li>
-<li>Agilent (.d)</li>
-<li>Sciex (.wiff/.wiff2)</li>
-<li>Shimadzu (.lcd)</li>
-<li>MOBILion (.mbi)</li>
-<li>mzML or mzXML/mzData/netCDF (prefer mzML if possible due to better metadata coverage)</li>
-<li>imzML (MS imaging)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Data format</th>
+<th>Windows</th>
+<th>Linux</th>
+<th>Mac</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mzML, mzXML, netCDF, imzML, mzData</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Thermo (.raw)</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Bruker (.d/.tdf, .d/.tsf, .d/.baf)</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr>
+<td>Waters (.raw)</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr>
+<td>Agilent (.d)</td>
+<td>✓ (*)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SCIEX (.wiff/.wiff2)</td>
+<td>✓ (*)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MOBILion (.mbi)</td>
+<td>✓ (*)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Shimadzu (.lcd)</td>
+<td>✓ (*)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* via <a href="https://proteowizard.sourceforge.io/download.html">MSConvert</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Some vendor data formats are <strong>only supported</strong> on specific <strong>operating systems</strong> due to the limited 
 support by their respective data access libraries. All data formats are supported on Windows 
-and many on Linux (see full <a href="system_requirements.html#compatibility">compatibility list here</a>).
-Many data formats are unsupported on macOS, requiring data conversion to open formats, usually
-on a Windows or Linux computer.</p>
+and many on Linux. To process unsupported formats on Linux or MacOS use 
+<a href="#msconvert-proteowizard-to-mzml">MSConvert</a> on a Windows computer.</p>
 </div>
 <h2 id="external-dependencies">External dependencies<a class="headerlink" href="#external-dependencies" title="Permanent link">&para;</a></h2>
 <p>Many data formats are supported without external dependencies, directly through the mzmine version.
@@ -6338,6 +6392,7 @@ currently require MSConvert for direct support include:</p>
 <li>Shimadzu (.lcd)</li>
 <li>MOBILion (.mbi)</li>
 </ul>
+<p>Download: https://proteowizard.sourceforge.io/download.html</p>
 <h2 id="data-conversion-to-open-formats-mzml-imzml">Data conversion to open formats (.mzML / .imzML)<a class="headerlink" href="#data-conversion-to-open-formats-mzml-imzml" title="Permanent link">&para;</a></h2>
 <p>When converting data, prefer the latest standard formats mzML (or imzML for MS imaging data).
 Other older open formats like mzData or mzXML may cover less metadata.
@@ -6347,6 +6402,7 @@ in their original format. This is also true for timsTOF fleX MS imaging data.</p
 <p><strong>This conversion can be applied automatically during the import if the user has MSConvert installed.</strong>
 If you want to convert the files yourself, see the sections below.</p>
 <h3 id="msconvert-proteowizard-to-mzml">MSConvert (ProteoWizard) to mzML<a class="headerlink" href="#msconvert-proteowizard-to-mzml" title="Permanent link">&para;</a></h3>
+<p>Download: https://proteowizard.sourceforge.io/download.html</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>mzmine can use MSConvert automatically. Make sure to setup the MSConvert installation path in 
@@ -6492,7 +6548,7 @@ converted format. Additionally, a
 metadata file should be added, containing information about the input files and their experimental
 information.</p>
 <h2 id="page-contributors">Page Contributors<a class="headerlink" href="#page-contributors" title="Permanent link">&para;</a></h2>
-<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:67260554+elnurgar@users.noreply.github.com'>elnurgar</a>, <a href='mailto:96451969+li-chin@users.noreply.github.com'>li-chin</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:67260554+elnurgar@users.noreply.github.com'>elnurgar</a>, <a href='mailto:96451969+li-chin@users.noreply.github.com'>li-chin</a></span></p>
 
 
 
@@ -6513,7 +6569,7 @@ information.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="December 12, 2025 14:03:11 UTC">December 12, 2025 14:03:11</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="January 19, 2026 11:40:40 UTC">January 19, 2026 11:40:40</span>
   </span>
 
     
@@ -6532,6 +6588,7 @@ information.</p>
         <a href="mailto:ansgar.korf@mzio.io">Ansgar Korf</a>, 
         <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
         <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
+        <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>, 
         <a href="mailto:corinna.brungs@wwu.de">corinnabrungs</a>, 
         <a href="mailto:67260554+elnurgar@users.noreply.github.com">elnurgar</a>, 
         <a href="mailto:96451969+li-chin@users.noreply.github.com">li-chin</a>
