@@ -106,7 +106,7 @@ Missing values are generally undesired as they might introduce bias and signific
 
 To tackle this issue, a value for the peak needs to be imputed. The [peak finder](../module_docs/gapfill_peak_finder/gap-filling.md) gap-filling module.
 [//]: # (CLARIFY - LINK can be sees as a missing value approach.)
-A simple gap-filling approach is to integrate the area where the peak is expected but not detected. These areas usually correspond to spectral noise. By doing so, no bias is introduced. Therefore, we recommend to always run the gap filling module before the missing value imputataion. 
+A simple gap-filling approach is to integrate the area where the peak is expected but not detected. These areas usually correspond to spectral noise. By doing so, no bias is introduced. Therefore, we recommend to always run the gap filling module before the missing value imputation. 
 
 The other alternative for gap filling is the [Same RT and m/z range gap filler](../module_docs/gapfill_same_mz_and_RT_range/same_mz_and_RT_range_gap_filler.md), which limits the gap fill to features within the original detected peak window. This leads to much cleaner results. 
 :warning: However, this module causes MISSING VALUE IMPUTATION. For purposes of further data processing, noise should be always preferred to zero values.
