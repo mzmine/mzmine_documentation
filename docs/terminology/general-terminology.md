@@ -98,11 +98,11 @@ Resolved features (= EIC split into features):
 MISSING VALUE DEFINITION (see https://www.nature.com/articles/s41598-017-19120-0). 
 <!-- markdown-link-check-enable -->
 
-Missing values_ can be caused by biological and/or technical reasons.
+Missing values can be caused by biological and/or technical reasons.
 A gap (match-to-nothing) is defined as a missing value in an alignment. Peaks that cannot be aligned (corresponding to a gap) are designated with a value of “NA” (missing value).
 
 ### Missing value imputation
-Missing valueS are generally undesired as they might introduce bias and significantly affect downstream data analysis, especially when statistics is involved. Therefore, it is important to REDUCE THEM. 
+Missing values are generally undesired as they might introduce bias and significantly affect downstream data analysis, especially when statistics is involved. Therefore, it is important to REDUCE THEM. 
 
 To tackle this issue, a value for the peak needs to be imputed. The [peak finder](../module_docs/gapfill_peak_finder/gap-filling.md) gap-filling module.
 [//]: # (CLARIFY - LINK can be sees as a missing value approach.)
@@ -144,7 +144,7 @@ Every mass spectrum contained in the raw file is processed individually. The sig
 
 In mzmine, **feature lists** are the output of the **feature detection** process (see [Masses and features](#masses-and-features)). 
 
-The set of detected features in each LC-MS run is stored as a list, hence the name "feature list" (see, for example, [Chromatogram builder](../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local mimimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) for more details). Multiple feature lists can undergo further processing (_e.g._ feature alingment) which results in a table (often referred to as **feature table**) where samples are arranged in columns, features in rows and each entry contains the signal intensity detected for the corresponding feature in the corresponding sample.
+The set of detected features in each LC-MS run is stored as a list, hence the name "feature list" (see, for example, [Chromatogram builder](../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) and [Local minimum resolver](../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md) for more details). Multiple feature lists can undergo further processing (_e.g._ feature alignment) which results in a table (often referred to as **feature table**) where samples are arranged in columns, features in rows and each entry contains the signal intensity detected for the corresponding feature in the corresponding sample.
 
 ### **_m/z_ tolerances**
 
