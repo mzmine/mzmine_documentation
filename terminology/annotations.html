@@ -5672,10 +5672,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#annotation-quality-score" class="md-nav__link">
+  <a href="#annotation-quality-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Annotation quality score
+        Annotation quality summary
       
     </span>
   </a>
@@ -6389,10 +6389,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#annotation-quality-score" class="md-nav__link">
+  <a href="#annotation-quality-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Annotation quality score
+        Annotation quality summary
       
     </span>
   </a>
@@ -6458,7 +6458,7 @@ and default <a href="#default-annotation-ranking-in-mzmine">mzmine</a> sorting.<
 
 <h3 id="preferred-annotation-ranking-module">Preferred annotation ranking (module)<a class="headerlink" href="#preferred-annotation-ranking-module" title="Permanent link">&para;</a></h3>
 <p>The preferred annotation ranking module allows you to modify the scoring tolerances and scoring
-weights of the <a href="#annotation-quality-score">annotation quality score (AQS)</a> and the confidence
+weights of the <a href="#annotation-quality-summary">annotation quality summary (AQS)</a> and the confidence
 sorting for the preferred annotations.
 <img alt="img.png" src="ranking_param.png" /></p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
@@ -6466,7 +6466,7 @@ sorting for the preferred annotations.
 <p>The m/z, RT, CCS, and RI tolerances describe the maximum permissible tolerance to achieve a match
 and thus a non-zero
 score. Larger deviations will be indicated by an orange label in
-the <a href="#annotation-quality-score">AQS</a>.</p>
+the <a href="#annotation-quality-summary">AQS</a>.</p>
 <h5 id="combined-score-weights">Combined score weights<a class="headerlink" href="#combined-score-weights" title="Permanent link">&para;</a></h5>
 <p>The weights define how <em>important</em> an individual score is to the combined score.</p>
 <h5 id="confidence-sorting">Confidence sorting<a class="headerlink" href="#confidence-sorting" title="Permanent link">&para;</a></h5>
@@ -6509,11 +6509,11 @@ isotope matching), MS1 only lipid annotation.</p>
 species level lipid annotation.</p>
 <p><strong>Level 1 - Confirmed structure</strong>: Spectral library match to a reference library including
 RT or RI matching.</p>
-<h2 id="annotation-quality-score">Annotation quality score<a class="headerlink" href="#annotation-quality-score" title="Permanent link">&para;</a></h2>
-<p>The annotation quality score (AQS) is a universal quality score available for spectral and compound
+<h2 id="annotation-quality-summary">Annotation quality summary<a class="headerlink" href="#annotation-quality-summary" title="Permanent link">&para;</a></h2>
+<p>The annotation quality summary (AQS) is a universal quality summary available for spectral and compound
 database matches and lipid annotations (since mzmine 4.9).</p>
 <p>The AQS relies on spectral match scores (MS2), isotope pattern fit (IP) and deviation of m/z, RT,
-retention index (RI), and CCS library entries. These scores may be disabled by default, e.g. no IP
+retention index (RI), and CCS library entries. These summaries may be disabled by default, e.g. no IP
 score will be displayed for GC-EI workflows, as will RI for LC-MS.</p>
 <p>An example is shown below:
 <img alt="aqs_explanation.png" src="aqs_explanation.png" /></p>
@@ -6549,7 +6549,7 @@ score will be displayed for GC-EI workflows, as will RI for LC-MS.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="February 10, 2026 11:29:42 UTC">February 10, 2026 11:29:42</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="February 10, 2026 15:06:09 UTC">February 10, 2026 15:06:09</span>
   </span>
 
     
