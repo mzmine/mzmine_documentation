@@ -1,10 +1,10 @@
 # Correlation dashboard
 
 !!! info
-   To process data from other detectors, the Other detector service of mzmine is required. This feature
-   is included in the mzmine PRO subscription. Academic program and other users can reach out to
-   inquire [access options](https://mzio.io/#contact).
 
+    To process data from other detectors, the Other detector service of mzmine is required. This feature
+    is included in the mzmine PRO subscription. Academic program and other users can reach out to
+    inquire [access options](https://mzio.io/#contact).
 
 The Correlation dashboard allows investigation of the results created by
 the [Correlate Ms features with other detectors](../uv_ms_other_aligner/uv_ms_other_aligner.md).
@@ -36,18 +36,18 @@ The additional controls are described below:
 
 ![correlation_dashboard_controls.png](correlation_dashboard_controls.png)
 
-5. The trace selection allows selecting a specific other detector trace in case no correlation was
+1. The trace selection allows selecting a specific other detector trace in case no correlation was
    found or the correlation was not executed yet.
-6. Set an additional RT shift to the other detector trace. This is useful during method optimisation
+2. Set an additional RT shift to the other detector trace. This is useful during method optimisation
    to determine the shift between the other detector and the MS. This shift can then be set in the
-   wizard or the [Shift traces](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md) module.
-7. **Filter MS features** sets the RT filter (**8**) of the feature table to the RT range of the
+   wizard or the [Shift traces](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md) module. *
+   *Note**: this shift is applied onto already existing shifts, e.g. the default wizard shift. When
+   reprocessing add this shift to the existing one.
+3. **Filter MS features** sets the RT filter (**4**) of the feature table to the RT range of the
    currently selected other detector feature. This allows you to investigate all MS features that
-   have their peak maximum in the RT range of the other detector feature.
-
+   have their peak maximum in the RT range of the other detector feature.<br>
    **Define as correlated** allows you to manually specify which feature should be marked as
-   correlated.
-
+   correlated.<br>
    **Clear selected correlation** removes the currently selected correlated feature from the
    selected MS feature. Note that there may be more than one correlated feature. This button only
    removes a single one.
