@@ -2,7 +2,7 @@
 
 !!! info
 
-    This feature resolver is currently in beta phase (11.2025). (Added after mzmine 4.8.5)
+    This feature resolver is currently in beta phase (03.2026). (Added after mzmine 4.10)
 
 !!! Note
 
