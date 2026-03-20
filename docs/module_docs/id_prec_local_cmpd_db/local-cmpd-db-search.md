@@ -148,7 +148,15 @@ feature, charge filtering is skipped.
 
 Matches the predicted isotope pattern of the candidate compound against the detected isotope
 pattern of the feature. The [Isotope finder](../filter_isotope_finder/isotope_finder.md) must be
-run before using this option. Matches with low isotope pattern similarity are removed.
+run before using this option. Matches with low isotope pattern similarity are removed. The
+sub-parameters are:
+
+- **Isotope m/z tolerance**: maximum m/z difference between a predicted and a measured isotope
+  peak to be considered a match. Default: 0.005 Da / 10 ppm.
+- **Minimum isotope intensity (%)**: predicted isotope peaks below this relative intensity are
+  excluded from the predicted pattern. Default: 5 %.
+- **Minimum isotope score**: annotations whose isotope pattern score falls below this threshold are
+  removed after scoring. Default: 0.0 (all passing matches are kept).
 
 #### **Use adducts** _(Optional)_
 
@@ -256,6 +264,88 @@ score. When only m/z is enabled, the score equals the m/z center score alone.
     optional tolerances (disabling them) rather than using wildcard values when a dimension is
     truly unknown.
 
+### Isotope pattern score {#isotope-score}
+
+The isotope matcher runs as a post-processing step **after** the main compound annotation score is
+assigned. It removes and re-ranks annotations based on how well the theoretical isotope pattern of
+the candidate matches the measured one.
+
+**Prerequisites:**
+
+- The annotation must contain both a molecular **formula** and an **adduct type**. Annotations
+  without these are scored 0 and removed if a minimum score > 0 is set.
+- A **detected isotope pattern** (from the Isotope finder module) must be available for the
+  feature. If no isotope pattern was stored but an MS1 scan exists, the full MS1 mass list is used
+  as a fallback.
+
+**Prediction:**
+
+The theoretical isotope pattern is predicted for the ionized formula (formula + adduct) at
+multiple instrument resolution levels (from coarse to high resolution). Predicted isotope peaks
+with a relative intensity below the **Minimum isotope intensity (%)** parameter are excluded.
+The prediction is cached per formula to avoid redundant computation across annotations.
+
+**Scoring per resolution level:**
+
+Two composite cosine similarity scores are calculated between the predicted (library) pattern and
+the measured (query) pattern for each resolution:
+
+| Score | Unmatched signal treatment | Purpose |
+|---|---|---|
+| `similarity` | Both unmatched predicted and unmatched measured peaks penalised | Penalises both directions |
+| `similarityLibrary` | Only unmatched predicted peaks penalised | Focus on predicted peaks being present |
+
+The combined score for a given resolution level is:
+
+$$
+\text{score}_\text{res} = \frac{\text{similarity} + 2 \times \text{similarityLibrary}}{3}
+$$
+
+The factor of 2 gives more weight to `similarityLibrary`, so missing predicted isotope peaks are
+penalised more strongly than having extra peaks in the measured spectrum. The final isotope score
+is the **maximum** across all resolution levels:
+
+$$
+\text{isotope score} = \max_{\text{res}}\left(\text{score}_\text{res}\right)
+$$
+
+**Composite cosine algorithm:**
+
+Each of the two similarity scores is computed using the composite cosine (similar to NIST search):
+
+$$
+\text{composite} = \frac{N_\text{query} \times \cos_\text{weighted} + N_\text{overlap} \times r}{N_\text{query} + N_\text{overlap}}
+$$
+
+where:
+
+- $N_\text{query}$ = total number of signals in the measured spectrum
+- $N_\text{overlap}$ = number of matched signal pairs (within isotope m/z tolerance)
+- $\cos_\text{weighted}$ = cosine similarity of the matched pairs with **square-root intensity
+  weighting** (each intensity is raised to the power 0.5; m/z weighting = 0)
+- $r$ = relative neighbour factor: average of min/max intensity-ratio agreements between
+  adjacent matched peaks, ranges 0–1. A value of 1 means all adjacent peaks have perfectly
+  matching intensity ratios in both spectra.
+
+The composite score ranges from **0** (no match) to **1** (perfect identity).
+
+**Filtering and re-ranking:**
+
+After scoring, annotations with an isotope score below the **Minimum isotope score** threshold are
+removed from the feature. The remaining annotations are re-sorted in descending isotope score
+order. The score is stored in the **Isotope pattern score** column of the feature table.
+
+!!! tip
+
+    Set **Minimum isotope score** > 0 (e.g. 0.6–0.8) to discard poor isotope matches. Leave it
+    at 0 to keep all annotations and just use the score for ranking.
+
+!!! warning
+
+    The isotope matcher requires both a **formula** and an **adduct** in the library entry.
+    Annotations without this information score 0. Make sure the `formula` column is selected and
+    the **Use adducts** parameter is enabled (or the `adduct` column is imported).
+
 ### Output columns added per match
 
 | Column                      | Description                                               |
@@ -268,6 +358,7 @@ score. When only m/z is enabled, the score equals the m/z center score alone.
 | Mobility absolute difference| Absolute mobility difference (if mobility > 0)            |
 | CCS relative error (%)      | Relative CCS error in percent (if CCS was available > 0)  |
 | RI difference               | RI difference (if RI tolerance is enabled and RI present) |
+| Isotope pattern score       | Composite cosine score 0–1 (if isotope matcher is enabled) |
 
 ---
 
