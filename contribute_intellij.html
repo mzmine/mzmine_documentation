@@ -3566,6 +3566,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="module_docs/id_addmanualcomp/manual-annotation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual compound annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -6450,12 +6478,12 @@ target context
 CTRL+SPACE. The variable
 <code>$CLASS_NAME$</code> was set to represent the current className() under <strong>Edit variable</strong>.</p>
 <p>The template:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">logging</span><span class="p">.</span><span class="na">Logger</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">logging</span><span class="p">.</span><span class="na">Logger</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span>
-<span class="w">    </span><span class="n">$CLASSNAME$</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
-</code></pre></div>
+<p><code>java
+private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(
+    $CLASSNAME$.class.getName());</code></p>
 <p>Generates the output in class Scan:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Logger</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="n">Scan</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
-</code></pre></div>
+<p><code>java
+private static final Logger logger = Logger.getLogger(Scan.class.getName());</code></p>
 <p><img alt="" src="img/contribute/intellij_template.png" /></p>
 <p>Another example to create Javadoc links for <code>@l</code> . The variable (here <code>$target$</code>) places the cursor.</p>
 <p><img alt="" src="img/contribute/intellij_template2.png" /></p>
@@ -6470,16 +6498,15 @@ following expression text:</p>
 <li><strong>expression</strong>: <code>Objects.requireNonNullElse($EXPR$, $END$)</code></li>
 </ul>
 <p>This will enable the following:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// input as variable.nne ...</span>
-<span class="n">spectrum</span><span class="p">.</span><span class="na">nne</span>
-<span class="c1">// ... auto complete will produce with _ being the cursor position</span>
-<span class="n">Objects</span><span class="p">.</span>
-
-<span class="nf">requireNonNullElse</span><span class="p">(</span><span class="n">spectrum</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">)</span>
-
-<span class="c1">// ... or this when &quot;use static import&quot; is activated </span>
-<span class="n">requireNonNullElse</span><span class="p">(</span><span class="n">spectrum</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">)</span>
-</code></pre></div>
+<p>```java
+// input as variable.nne ...
+spectrum.nne
+// ... auto complete will produce with _ being the cursor position
+Objects.</p>
+<p>requireNonNullElse(spectrum, _)</p>
+<p>// ... or this when "use static import" is activated 
+requireNonNullElse(spectrum, _)
+```</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <h3 id="correct-jdk-selection">Correct JDK selection<a class="headerlink" href="#correct-jdk-selection" title="Permanent link">&para;</a></h3>
 <p>Make sure the correct JDK is set in these places:</p>

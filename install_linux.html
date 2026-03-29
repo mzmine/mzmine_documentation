@@ -3566,6 +3566,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="module_docs/id_addmanualcomp/manual-annotation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual compound annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -6022,27 +6050,24 @@
 
 <h1 id="installation-on-linux">Installation on Linux<a class="headerlink" href="#installation-on-linux" title="Permanent link">&para;</a></h1>
 <p>Download the latest version, install mzmine, login, and run mzmine. See mzmine <a href="commandline_tool.html">command-line interface</a> as a reference.
-<div class="highlight"><pre><span></span><code><span class="c1"># with gh (github) installed, download of latest .deb installer is quite easy</span>
-<span class="c1"># gh auth login</span>
-<span class="c1"># sudo apt install gh</span>
-<span class="c1"># gh release download --repo mzmine/mzmine --pattern &quot;mzmine*.deb&quot;</span>
-
-<span class="c1"># or find installer at https://github.com/mzmine/mzmine/releases/latest </span>
-wget<span class="w"> </span>https://github.com/mzmine/mzmine/releases/download/text-action-release/mzmine_4.3.1_amd64.deb
-
-<span class="c1"># create required dir and install mzmine</span>
-sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/usr/share/desktop-directories/
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>mzmine*.deb
-
-<span class="c1"># potential dependencies that may be required </span>
-<span class="c1"># sudo apt-get install xdg-utils</span>
-<span class="c1"># sudo apt-get install libgl1</span>
-<span class="c1"># sudo apt-get install libgtk-3-0</span>
-<span class="c1"># sudo apt-get install libxtst6</span>
-
-<span class="c1"># run mzmine and print help. also check -login-console -batch</span>
-/opt/mzmine/bin/mzmine<span class="w"> </span>-help
-</code></pre></div></p>
+```bash</p>
+<h1 id="with-gh-github-installed-download-of-latest-deb-installer-is-quite-easy">with gh (github) installed, download of latest .deb installer is quite easy<a class="headerlink" href="#with-gh-github-installed-download-of-latest-deb-installer-is-quite-easy" title="Permanent link">&para;</a></h1>
+<h1 id="gh-auth-login">gh auth login<a class="headerlink" href="#gh-auth-login" title="Permanent link">&para;</a></h1>
+<h1 id="sudo-apt-install-gh">sudo apt install gh<a class="headerlink" href="#sudo-apt-install-gh" title="Permanent link">&para;</a></h1>
+<h1 id="gh-release-download-repo-mzminemzmine-pattern-mzminedeb">gh release download --repo mzmine/mzmine --pattern "mzmine*.deb"<a class="headerlink" href="#gh-release-download-repo-mzminemzmine-pattern-mzminedeb" title="Permanent link">&para;</a></h1>
+<h1 id="or-find-installer-at-httpsgithubcommzminemzminereleaseslatest">or find installer at https://github.com/mzmine/mzmine/releases/latest<a class="headerlink" href="#or-find-installer-at-httpsgithubcommzminemzminereleaseslatest" title="Permanent link">&para;</a></h1>
+<p>wget https://github.com/mzmine/mzmine/releases/download/text-action-release/mzmine_4.3.1_amd64.deb</p>
+<h1 id="create-required-dir-and-install-mzmine">create required dir and install mzmine<a class="headerlink" href="#create-required-dir-and-install-mzmine" title="Permanent link">&para;</a></h1>
+<p>sudo mkdir -p /usr/share/desktop-directories/
+sudo apt install mzmine*.deb</p>
+<h1 id="potential-dependencies-that-may-be-required">potential dependencies that may be required<a class="headerlink" href="#potential-dependencies-that-may-be-required" title="Permanent link">&para;</a></h1>
+<h1 id="sudo-apt-get-install-xdg-utils">sudo apt-get install xdg-utils<a class="headerlink" href="#sudo-apt-get-install-xdg-utils" title="Permanent link">&para;</a></h1>
+<h1 id="sudo-apt-get-install-libgl1">sudo apt-get install libgl1<a class="headerlink" href="#sudo-apt-get-install-libgl1" title="Permanent link">&para;</a></h1>
+<h1 id="sudo-apt-get-install-libgtk-3-0">sudo apt-get install libgtk-3-0<a class="headerlink" href="#sudo-apt-get-install-libgtk-3-0" title="Permanent link">&para;</a></h1>
+<h1 id="sudo-apt-get-install-libxtst6">sudo apt-get install libxtst6<a class="headerlink" href="#sudo-apt-get-install-libxtst6" title="Permanent link">&para;</a></h1>
+<h1 id="run-mzmine-and-print-help-also-check-login-console-batch">run mzmine and print help. also check -login-console -batch<a class="headerlink" href="#run-mzmine-and-print-help-also-check-login-console-batch" title="Permanent link">&para;</a></h1>
+<p>/opt/mzmine/bin/mzmine -help
+```</p>
 
 
 

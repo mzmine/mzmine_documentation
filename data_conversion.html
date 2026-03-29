@@ -3746,6 +3746,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="module_docs/id_addmanualcomp/manual-annotation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual compound annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -6461,9 +6489,9 @@ By default, the <em>m/z</em> is encoded in <strong>64 bit</strong>, whereas the 
 NumpressPic compresses the intensity, whereas the numpressLinear compresses the <em>m/z</em> and RT and
 a [toler] can be set. The peakPicking
 can be set to specific MS levels (here MS1- for multistage fragmentation)</p>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;C:\Users\**USERNAME**\AppData\Local\Apps\ProteoWizard 3.0.22166.28b1b7b 64-bit\msconvert.exe&quot;</span><span class="w"> </span>*.raw<span class="w"> </span>--filter<span class="w"> </span><span class="s2">&quot;peakPicking true 1-&quot;</span><span class="w"> </span>--zlib<span class="w"> </span>--numpressPic<span class="w"> </span>--numpressLinear<span class="w"> </span>-v<span class="w"> </span>-o<span class="w"> </span>mzml
-pause<span class="w"> </span><span class="m">1</span>
-</code></pre></div>
+<p><code>bash
+"C:\Users\**USERNAME**\AppData\Local\Apps\ProteoWizard 3.0.22166.28b1b7b 64-bit\msconvert.exe" *.raw --filter "peakPicking true 1-" --zlib --numpressPic --numpressLinear -v -o mzml
+pause 1</code></p>
 <p>More details can be found in
 the <a href="https://proteowizard.sourceforge.io/tools/msconvert.html">ProteoWizard documentation</a>.</p>
 <h3 id="thermorawfileparser">ThermoRawFileParser<a class="headerlink" href="#thermorawfileparser" title="Permanent link">&para;</a></h3>
@@ -6481,9 +6509,9 @@ without conversion. In the preferences (CTRL+P) set the "Thermo data import" to 
 file parser" instead of MSConvert. The raw file parser is supported on Mac, Linux, and Windows.</p>
 </div>
 <p>Example for command line interface with the exclusion of exception data:</p>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;C:\Users\**USERNAME**\AppData\Local\Apps\ThermoRawFileParser\ThermoRawFileParser.exe&quot;</span><span class="w"> </span>*.raw<span class="w"> </span>-d<span class="o">=</span>INPUT_DIRECTORY<span class="w"> </span>-o<span class="o">=</span><span class="s2">&quot;./mzml_ThermoRawFileParser_excl_data/&quot;</span><span class="w"> </span>--excludeExceptionData<span class="w"> </span>
-pause<span class="w"> </span><span class="m">1</span>
-</code></pre></div>
+<p><code>bash
+"C:\Users\**USERNAME**\AppData\Local\Apps\ThermoRawFileParser\ThermoRawFileParser.exe" *.raw -d=INPUT_DIRECTORY -o="./mzml_ThermoRawFileParser_excl_data/" --excludeExceptionData 
+pause 1</code></p>
 <p>More details can be found on <a href="https://github.com/compomics/ThermoRawFileParser">GitHub</a>.</p>
 <p>Alternatively, you can use the ThermoRawFileParserGUI to convert Thermo files to mzml without having
 to use the CLI: https://github.com/compomics/ThermoRawFileParserGUI</p>

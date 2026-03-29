@@ -3765,6 +3765,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="module_docs/id_addmanualcomp/manual-annotation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual compound annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -6442,17 +6470,15 @@ In the installed Windows version, this file is write protected, which needs to b
 <strong>File/Properties/Security/</strong> select Users and click Edit to grant write access. 
 Now change the <em>MaxRAMPercentage</em> to grant more RAM. </p>
 <p><strong>Note</strong>: You'll need to modify the <strong>mzmine_console.cfg</strong> if you run mzmine_console (on Windows).</p>
-<div class="highlight"><pre><span></span><code>java-options=-XX:InitialRAMPercentage=10
-java-options=-XX:MaxRAMPercentage=80
-</code></pre></div>
+<p><code>java-options=-XX:InitialRAMPercentage=10
+java-options=-XX:MaxRAMPercentage=80</code></p>
 <h3 id="absolute-memory-limits">Absolute memory limits<a class="headerlink" href="#absolute-memory-limits" title="Permanent link">&para;</a></h3>
 <p>The relative RAM percentages are the recommended best practice when tuning the JVM. This way mzmine
 will run well on smaller and larger systems. Alternatively, absolute memory constraints can be 
 defined as start RAM (<em>-Xms</em>) and maximum RAM (<em>-Xmx</em>). For this, remove the two lines above from 
 the config file and add the two below by defining the RAM, e.g., 32g for 32 GB. </p>
-<div class="highlight"><pre><span></span><code>java-options=-Xms32g
-java-options=-Xmx32g
-</code></pre></div>
+<p><code>java-options=-Xms32g
+java-options=-Xmx32g</code></p>
 <h3 id="container-memory-limits">Container memory limits<a class="headerlink" href="#container-memory-limits" title="Permanent link">&para;</a></h3>
 <p>mzmine is built on modern Java technology and fully supports containerization. It automatically
 respects container memory limits, making it ideal for deployment in containerized environments (
@@ -6463,8 +6489,7 @@ way to limit memory usage without modifying the application. This ensures mzmine
 allocated resources, preventing memory overflow issues on shared systems.</p>
 <h2 id="limit-number-of-cores">Limit number of cores<a class="headerlink" href="#limit-number-of-cores" title="Permanent link">&para;</a></h2>
 <p>For HPC applications, limiting the number of threads may not be sufficient. In case the usage of the actual number of cores shall be limited, the java option
-<div class="highlight"><pre><span></span><code>java-options=-XX:ActiveProcessorCount=10
-</code></pre></div>
+<code>java-options=-XX:ActiveProcessorCount=10</code>
 in the <strong>mzmine/app/MZmine.cfg</strong> in the mzmine install directory or portable version. (see <a href="#maximum-memory">Maximum memory</a>)</p>
 <p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 

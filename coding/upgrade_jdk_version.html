@@ -3566,6 +3566,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_docs/id_addmanualcomp/manual-annotation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual compound annotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -6228,30 +6256,27 @@
 <p>Try upgrading the gradle wrapper:
 <a href="https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:upgrading_wrapper"></a></p>
 <p>Or change the gradle version manually in the <strong>/gradle/wrapper/gradle-wrapper.properties</strong> file:
-<div class="highlight"><pre><span></span><code>distributionUrl=https\://services.gradle.org/distributions/gradle-8.1.1-bin.zip
-</code></pre></div></p>
+<code>distributionUrl=https\://services.gradle.org/distributions/gradle-8.1.1-bin.zip</code></p>
 <h2 id="3-change-target-jdk-in-buildgradle">3. Change target JDK in <strong>build.gradle</strong><a class="headerlink" href="#3-change-target-jdk-in-buildgradle" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>java {
+<p><code>java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(20)
         vendor = JvmVendorSpec.ADOPTIUM  // force use ADOPTIUM TEMURIN JDK
     }
     // not needed with toolchain command
-//    sourceCompatibility = &quot;20&quot;
-//    targetCompatibility = &quot;20&quot;
-}
-</code></pre></div>
+//    sourceCompatibility = "20"
+//    targetCompatibility = "20"
+}</code></p>
 <h2 id="4-update-gradle-project">4. Update gradle project<a class="headerlink" href="#4-update-gradle-project" title="Permanent link">&para;</a></h2>
 <p>Run update all gradle projects to update all dependencies.</p>
 <h2 id="5-update-jdk-in-github-actions">5. Update JDK in GitHub actions<a class="headerlink" href="#5-update-jdk-in-github-actions" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>    steps:
+<p><code>steps:
         - uses: actions/checkout@v3
         - uses: actions/setup-java@v3
         with:
-            distribution: &#39;temurin&#39;
-            java-version: &#39;20.0.1&#39;
-            cache: &#39;gradle&#39;
-</code></pre></div>
+            distribution: 'temurin'
+            java-version: '20.0.1'
+            cache: 'gradle'</code></p>
 <h2 id="pr-might-look-like">PR might look like:<a class="headerlink" href="#pr-might-look-like" title="Permanent link">&para;</a></h2>
 <p><img alt="Install JDK" src="../img/contribute/jdk_update_pull.png" /></p>
 <h2 id="intellij-specifics">IntelliJ specifics<a class="headerlink" href="#intellij-specifics" title="Permanent link">&para;</a></h2>
