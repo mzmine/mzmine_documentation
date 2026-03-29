@@ -121,6 +121,7 @@ nav:
       - Precursor mass search:
           - Local database search: module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md
           - Precursor search in local spectral MS/MS library: module_docs/id_prec_local_spectra_lib/local-spectra-lib-search.md
+          - Manual compound annotation: module_docs/id_addmanualcomp/manual-annotation.md
       - Spectra search:
           - Spectral library search: module_docs/id_spectral_library_search/spectral_library_search.md
           - NIST MS search: module_docs/id_spectra_NIST/NIST-ms-search.md
