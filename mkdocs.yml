@@ -61,6 +61,7 @@ nav:
           - Recursive IMS builder: module_docs/lc-ims-ms_featdet/recursive_ims_builder/recursive-ims-builder.md
       - MS imaging feature detection:
           - Image builder: module_docs/imaging_featdet/featdet_image_builder/image-builder.md
+          - MALDI spot feature detection: module_docs/featdet_maldispotfeaturedetection/maldi_spot_feature_detection.md
       - MRM feature detection:
           - MRM to Scans: module_docs/mrm_mrmtoscans/mrm-to-scans.md
           - Set MRM quantifiers: module_docs/mrm_setquant/mrm-set-quant-mass.md
@@ -175,6 +176,7 @@ nav:
 
   - Tools:
       - SIMSEF scheduler: module_docs/tools_simsef/simsef.md
+      - Spectral library to feature list: module_docs/tools_spectral_library_to_feature_list/spectral_library_to_feature_list.md
 
   - Additional resources:
       - Installation:
