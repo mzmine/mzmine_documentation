@@ -27,7 +27,8 @@ nav:
           - Feature list import: module_docs/io/feat-list-import.md
           - Feature list export: module_docs/io/feat-list-export.md
           - Export to other software: module_docs/io/data-exchange-with-other-software.md
-          - Spectral library export: module_docs/io_spectral_library_export/spectral_library_generation.md
+          - Spectral library generation: module_docs/io_spectral_library_export/spectral_library_generation.md
+          - Merge spectral libraries: module_docs/io_spectral_library_export/merge_libraries.md
           - Export scans (feature list): module_docs/io_scans_feature/export-scans-feature.md
           - Export MRM to TSV: module_docs/io_mrmtotsv/mrm-to-tsv.md
           - Export feature data: module_docs/io_export_feature_data/export-feature-data.md
@@ -80,6 +81,7 @@ nav:
       - CCS calibration: module_docs/id_ccs_calibration/ccs_calibration.md
       - MS2 scan pairing: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
       - MALDI MS2 scan pairing (SIMSEF): module_docs/featdet_ms2_scan_pairing/ms2_maldi_scan_pairing.md
+      - DIA pseudo MS2 builder: module_docs/filter_diams2/dia_pseudo_ms2_builder.md
       - Isotope filtering:
           - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md
           - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md
