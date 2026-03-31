@@ -44,7 +44,54 @@ This method is suitable for high-resolution MS data, such as provided by FTMS in
 
 ## **Local maxima**
 
-This very simple mass detector detects all local maxima within the spectrum, except the signals below the given noise level. The practical usability of this method on real MS data is limited, but it is useful to demonstrate and understand the functionality of mass detection using the preview plot.
+:material-lightbulb: This mass detector is suitable for profile (continuous) MS data.
+
+The local maximum mass detector segments the spectrum into continuous m/z regions, resolves
+overlapping peaks using a valley/rise criterion, and returns a centroided m/z and intensity for
+each resolved peak. It is an alternative to the **Exact mass** detector for profile data and is
+well suited to low-resolution or moderately noisy spectra.
+
+#### Parameters
+
+**Noise level**
+
+Absolute intensity threshold. Data points below this value are not considered. The effective
+detection threshold is `max(noiseLevel, 2 × lowestNonZeroIntensity)` — this automatically
+rejects peaks sitting at the spectral noise floor even when the noise level is set to zero.
+
+**Minimum non-zero points**
+
+A candidate peak must contain at least this many data points with intensity > 0. Increasing this
+value avoids detecting very narrow spikes or single-point artefacts. Default: 3.
+
+**Intensity calculation**
+
+How the reported intensity for each detected peak is calculated:
+
+- **Height** _(default)_ — the maximum intensity within the peak region (valley to valley).
+- **Area** — the sum of all intensities within the peak region (valley to valley).
+
+#### Algorithm
+
+1. **Region segmentation** — The spectrum is split into continuous m/z regions by detecting
+   gaps larger than the maximum observed m/z spacing between adjacent non-zero data points.
+   Regions with fewer than **Minimum non-zero points** data points or no point above the noise
+   level are discarded.
+
+2. **Local maxima detection** — Within each region, all local maxima are identified as peak
+   candidates.
+
+3. **Valley/rise peak resolution** — Consecutive candidates are compared pairwise. Two candidates
+   are treated as separate peaks if the valley between them drops below 70 % of the active peak's
+   intensity AND the next candidate rises above ~143 % of the valley intensity. Otherwise the
+   candidates are merged and the taller one is kept as the active peak.
+
+4. **Centroid m/z** — The m/z of each resolved peak is computed as a linearly intensity-weighted
+   average of all data points above 40 % of the peak maximum, restricted to a symmetric window
+   around the apex.
+
+5. **Output intensity** — Reported as peak height or valley-to-valley area depending on the
+   **Intensity calculation** setting.
 
 ## **Recursive threshold**
 
