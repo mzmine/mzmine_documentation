@@ -161,6 +161,10 @@
          <lastmod>2026-03-31</lastmod>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_maldispotfeaturedetection/maldi_spot_feature_detection.html</loc>
+         <lastmod>2026-03-31</lastmod>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.html</loc>
          <lastmod>2026-03-31</lastmod>
     </url>
@@ -490,6 +494,10 @@
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/tools_simsef/simsef.html</loc>
+         <lastmod>2026-03-31</lastmod>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/tools_spectral_library_to_feature_list/spectral_library_to_feature_list.html</loc>
          <lastmod>2026-03-31</lastmod>
     </url>
     <url>

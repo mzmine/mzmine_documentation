@@ -1870,6 +1870,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../featdet_maldispotfeaturedetection/maldi_spot_feature_detection.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MALDI spot feature detection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3866,21 +3894,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#charge" class="md-nav__link">
+  <a href="#fallback-adduct" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Charge
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ionization-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ionization type
+        Fallback adduct
       
     </span>
   </a>
@@ -4040,6 +4057,17 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclude-features-above-mz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exclude features above m/z
+      
+    </span>
+  </a>
   
 </li>
         
@@ -5483,6 +5511,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools_spectral_library_to_feature_list/spectral_library_to_feature_list.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spectral library to feature list
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -6381,21 +6437,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#charge" class="md-nav__link">
+  <a href="#fallback-adduct" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Charge
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ionization-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ionization type
+        Fallback adduct
       
     </span>
   </a>
@@ -6558,6 +6603,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#exclude-features-above-mz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exclude features above m/z
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6586,8 +6642,14 @@
 <h1 id="chemical-formula-prediction"><strong>Chemical formula prediction</strong><a class="headerlink" href="#chemical-formula-prediction" title="Permanent link">&para;</a></h1>
 <h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Annotation → Search spectra → Chemical formula prediction</strong></p>
-<p>This module attempts to calculate all possible molecular formulas for every peak in the peak list, using given elemental and heuristic constraints. </p>
-<p>For a detailed description of the functionality and the embedded algorithms, please see the publication [<a href="#references">1</a>].</p>
+<p>This module attempts to calculate all possible molecular formulas for every feature in the
+feature list, using given elemental and heuristic constraints. It runs in parallel across all
+features and stores up to <strong>Max best formulas per feature</strong> ranked candidates per feature.</p>
+<p>If Ion Identity Networking (IIN) has already annotated a feature with an adduct type, that
+adduct is used for neutral mass calculation. The <strong>Fallback adduct</strong> is only applied to features
+without an existing adduct annotation.</p>
+<p>For a detailed description of the functionality and the embedded algorithms, please see the
+publication [<a href="#references">1</a>].</p>
 <h2 id="references"><strong>References</strong><a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <div class="admonition quote">
 <p class="admonition-title"> </p>
@@ -6601,10 +6663,15 @@
 </ol>
 </div>
 <h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h4 id="charge"><strong>Charge</strong><a class="headerlink" href="#charge" title="Permanent link">&para;</a></h4>
-<p>The neutral mass is calculated from the peak m/z value, its charge and type of ionization adduct.</p>
-<h4 id="ionization-type"><strong>Ionization type</strong><a class="headerlink" href="#ionization-type" title="Permanent link">&para;</a></h4>
-<p>The neutral mass is calculated from the peak m/z value, its charge and type of ionization adduct.</p>
+<h4 id="fallback-adduct"><strong>Fallback adduct</strong><a class="headerlink" href="#fallback-adduct" title="Permanent link">&para;</a></h4>
+<p>Ionization adduct used to calculate the neutral mass from a feature's m/z value. Applied only to
+features that have no adduct annotation from Ion Identity Networking (IIN) or other annotation
+modules. Default: <code>[M+H]+</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Run Ion Identity Networking before formula prediction so that IIN adduct annotations take
+precedence over this fallback, giving more accurate neutral masses for annotated features.</p>
+</div>
 <h4 id="sorting"><strong>Sorting</strong><a class="headerlink" href="#sorting" title="Permanent link">&para;</a></h4>
 <p><em>Optional parameter</em></p>
 <p>If this option is chosen, the user-defined sorting is applied to all selected feature lists.</p>
@@ -6731,7 +6798,11 @@ Ratio of sulphur to carbon atoms S/C ratio &lt;= 3</p>
 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> This option speeds up the search.</p>
 </li>
 </ul>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<h4 id="exclude-features-above-mz"><strong>Exclude features above m/z</strong><a class="headerlink" href="#exclude-features-above-mz" title="Permanent link">&para;</a></h4>
+<p>Features with an m/z value above this threshold are skipped entirely. Formula prediction
+computation time grows rapidly with molecular mass (the search space expands combinatorially),
+so excluding very high m/z features avoids excessive run times. Default: 800 m/z.</p>
+<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -6752,7 +6823,7 @@ Ratio of sulphur to carbon atoms S/C ratio &lt;= 3</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 24, 2022 21:13:07 UTC">November 24, 2022 21:13:07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 31, 2026 16:57:28 UTC">March 31, 2026 16:57:28</span>
   </span>
 
     
@@ -6763,11 +6834,12 @@ Ratio of sulphur to carbon atoms S/C ratio &lt;= 3</p>
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
       
     </span>
     <nav>
       
+        <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
     </nav>
   </span>
