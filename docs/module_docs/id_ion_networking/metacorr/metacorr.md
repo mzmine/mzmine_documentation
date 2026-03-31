@@ -1,11 +1,16 @@
 # metaCorrelate feature grouping
 
-:material-menu-open: **Feature list methods → Feature grouping → Correlation grouping (metaCorrelate)** 
+:material-menu-open: **Feature list methods → Feature grouping → Correlation grouping (metaCorrelate)**
 
-This module groups features based on various properties:
-- Retention time
-- Feature shape Pearson correlation (optional: Only apply if at least 5 data points)
-- Feature height correlation
+This module groups features that likely originate from the same compound across a feature list.
+Grouping is based on co-elution in retention time combined with optional correlation filters:
+
+- Retention time co-elution
+- Feature shape Pearson correlation across scans within a sample _(optional)_
+- Feature height (intensity) correlation across samples _(optional)_
+
+Grouped features are linked in the feature list and can subsequently be used by
+[Ion Identity Networking](../iin/iin.md) and molecular networking workflows.
 
 <!-- markdown-link-check-disable -->
 ## Recommended citations
@@ -25,58 +30,96 @@ This module groups features based on various properties:
 
 
 #### RT tolerance
-First filter that only checks features that fall within the same retention time window. Should be strict (~FWHM / 3) 
-when correlation grouping is disabled. With correlation grouping as a strict filter, the RT tolerance can be wider.
 
-#### Min height
-Minimum height of features to consider. Leave at 0 to use all features that passed the feature detection workflow 
-criteria.
+First filter: only feature pairs within this retention time window are considered for grouping.
+Use a narrow tolerance (~FWHM / 3) when feature shape correlation is disabled. With shape
+correlation enabled as a strict secondary filter, the RT tolerance can be wider.
 
-#### Intensity correlation threshold
-Minimum intensity of data points in a feature to compare during feature shape Pearson correlation. All data points 
-below this value are disregarded. Leave at 0 to use the noise levels set in the mass detection steps. 
+#### Minimum feature height
 
-#### Sample set _(optional)_ 
-Grouping of samples, only when using _Min samples filter_. Needs project metadata to be set. 
+Minimum peak height for a feature to be included in the grouping. Leave at 0 to include all
+features that passed the detection workflow. Useful to exclude weak gap-filled features from
+driving grouping decisions.
+
+#### Intensity threshold for correlation
+
+Data points below this absolute intensity are excluded before computing feature shape Pearson
+correlation. Leave at 0 to use the noise level from the mass detection step.
 
 #### Min samples filter
-Only group features if they were detected in a minimum number of samples (absolute and relative minimum). Values are 
-provided for 
-- _Min samples in all_ (all samples) and 
-- _Min samples in group_ (for groups from _Sample set_ parameter)
-- _Min %-intensity overlap_ defines the percentage of intensity (sum of data point intensity) of the lower abundant 
-  feature needs to fall within the RT range of the larger feature
-- _Exclude estimated features (gap-filled)_ excludes gap-filled features from the comparison
 
-#### Correlation grouping _(optional)_
-Applies a feature shape correlation filter in retention time dimension. 
+Only group a feature pair if both features are detected in a sufficient number of samples.
+Sub-parameters:
 
-!!! warning
+- **Min samples in all** — minimum detections across all samples.
+- **Min samples in group** — minimum detections within any one sample group (requires project
+  metadata).
+- **Min % intensity overlap** — the lower-intensity feature must have at least this fraction of
+  its total signal intensity fall within the RT range of the higher-intensity feature. Skipped
+  automatically for datasets with ≥ the threshold set in **Advanced parameters**.
+- **Exclude estimated features (gap-filled)** — gap-filled features do not count towards the
+  minimum sample requirement.
 
-    Only use when having enough data points, i.e., 5 data points total and 2 on each side of the apex. Otherwise, use feature height correlation and a more narrow RT tolerance
+#### Feature shape correlation _(Optional, enabled by default)_
 
-**Parameters:**
-- _Min data points_: Minimum number of correlated data points
-- _Min data points on edge_: Minimum number of points on each sides of the apex
-- _Measure_: Similarity measure (default: Pearson)
-- _Min feature shape correlation_: Minimum similarity of two features (within the same sample) to be grouped. Pearson 
-  _r_=85% is default.
-- _Min total correlation (optional)_: Minimum similarity when taking all the data points from all samples into account
-
-#### Feature height correlation
-Applies a correlation filter by taking all the feature heights across samples for feature pairs. 
+Applies a within-sample Pearson correlation filter on the chromatographic peak shapes.
 
 !!! warning
 
-    Only applicable if the heights are comparable across samples: Similar matrix and ionization conditions
+    Requires sufficient data points: at least 5 total with ≥ 2 on each side of the apex.
+    For sparse chromatograms, disable this and rely on RT tolerance and feature height correlation.
 
-**Parameters:**
-- _Min data points_: Minimum number of correlated data points (samples)
-- _Measure_: Similarity measure (default: Pearson)
-- _Min correlation_: Minimum similarity
+Sub-parameters:
 
-#### Suffix (or auto) _(optional)_
-Add a suffix to the feature list or just use an automatically generated suffix based on the parameters.
+- **Min data points** — minimum number of scan-level data points used for the correlation.
+- **Min data points on edge** — minimum points required on each side of the apex.
+- **Measure** — similarity measure (default: Pearson).
+- **Min feature shape correlation** — minimum Pearson _r_ to accept a grouping within a sample.
+  Default: 0.85.
+- **Min total correlation** _(optional)_ — minimum Pearson _r_ computed over all data points
+  from all samples combined.
 
+#### Feature height correlation _(Optional, enabled by default)_
+
+Applies a cross-sample correlation filter using peak heights. Each feature pair is evaluated by
+correlating their heights (one value per sample) across the sample set.
+
+!!! warning
+
+    Only meaningful when signal intensities are comparable across samples (similar matrix and
+    ionization conditions). Not suitable for studies with large systematic intensity differences
+    between samples.
+
+Sub-parameters:
+
+- **Min data points** — minimum number of samples with detections in both features.
+- **Measure** — similarity measure (default: Pearson).
+- **Min correlation** — minimum Pearson _r_ to accept a grouping.
+
+#### Suffix (or auto) _(Optional)_
+
+Custom suffix appended to the output feature list name. Deselect to generate an automatic suffix
+based on the active parameters.
+
+#### Original feature list
+
+Determines what happens to the input feature list:
+
+- **Keep** _(default)_ — the original list is retained and a new grouped copy is created.
+- **Remove** — the original list is removed after processing.
+- **Process in place** — the original list is modified directly.
+
+#### Advanced parameters _(Optional, expanded by default)_
+
+##### Keep extended stats
+
+When enabled, additional per-correlation statistics are stored with every grouping result.
+Required by some visualization modules that display correlation details. Disabled by default to
+conserve memory.
+
+##### Simplify for ≥ samples
+
+For datasets with at least this many samples, the **Min % intensity overlap** check is skipped
+to improve performance. Default: 250 samples.
 
 {{ git_page_authors }}
