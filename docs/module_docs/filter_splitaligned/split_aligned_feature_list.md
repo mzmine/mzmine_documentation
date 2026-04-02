@@ -8,6 +8,11 @@ module useful for processing data where e.g. report generation or spectral libra
 required on a per-sample basis, without having to rely on post-alignment outside of mzmine, since 
 all previously aligned features have the same ID.
 
+!!! Information
+    
+    This module will remove all annotations from the feature list, because current annotations
+    are based on evidence merged across multiple files.
+
 ## Parameters
 
 #### Feature lists
