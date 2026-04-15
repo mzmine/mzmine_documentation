@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/norm_linear/norm_linear.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/project_metadata/project_metadata.html">
       
       
-        <link rel="prev" href="../norm_rt_calibration_scans/scan-based-rt-corr.html">
+        <link rel="prev" href="../../data_conversion.html">
       
       
-        <link rel="next" href="../norm_stand_cmpd/norm_stand_cmpd.html">
+        <link rel="next" href="../../performance.html">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Linear normalizer - mzmine documentation</title>
+        <title>Sample metadata - mzmine documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linear-normalizer" class="md-skip">
+        <a href="#sample-metadata" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linear normalizer
+              Sample metadata
             
           </span>
         </div>
@@ -416,10 +416,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../project_metadata/project_metadata.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample metadata
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="project_metadata.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -435,6 +462,159 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-sample-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing sample metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatically-populated-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatically populated fields
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automatically populated fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-type-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample type detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-metadata-from-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing metadata from a file
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Importing metadata from a file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required file structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-header-rows-for-explicit-type-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional header rows for explicit type definitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-and-time-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Date and time format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnps-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GNPS compatibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-metadata-columns-manually" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding custom metadata columns manually
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -607,20 +787,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
@@ -641,7 +819,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3385,20 +3563,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_21" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_21" >
         
           
           <label class="md-nav__link" for="__nav_12_21" id="__nav_12_21_label" tabindex="0">
@@ -3419,7 +3595,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_21_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_21_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12_21">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3490,37 +3666,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Linear normalizer
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="norm_linear.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../norm_linear/norm_linear.html" class="md-nav__link">
         
   
   
@@ -3536,115 +3685,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Description
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Description">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#normalization-factors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Normalization factors
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parameters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#name-suffix" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Name suffix
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#normalization-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Normalization type
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#feature-measurement-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Feature measurement type
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#original-feature-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Original feature list
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6302,22 +6342,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
+  <a href="#accessing-sample-metadata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description
+        Accessing sample metadata
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Description">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatically-populated-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatically populated fields
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automatically populated fields">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#normalization-factors" class="md-nav__link">
+  <a href="#sample-type-detection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Normalization factors
+        Sample type detection
       
     </span>
   </a>
@@ -6330,22 +6381,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
+  <a href="#importing-metadata-from-a-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parameters
+        Importing metadata from a file
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Parameters">
+    <nav class="md-nav" aria-label="Importing metadata from a file">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#name-suffix" class="md-nav__link">
+  <a href="#required-file-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Name suffix
+        Required file structure
       
     </span>
   </a>
@@ -6353,10 +6404,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#normalization-type" class="md-nav__link">
+  <a href="#optional-header-rows-for-explicit-type-definitions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Normalization type
+        Optional header rows for explicit type definitions
       
     </span>
   </a>
@@ -6364,10 +6415,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#feature-measurement-type" class="md-nav__link">
+  <a href="#date-and-time-format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Feature measurement type
+        Date and time format
       
     </span>
   </a>
@@ -6375,10 +6426,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#original-feature-list" class="md-nav__link">
+  <a href="#gnps-compatibility" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Original feature list
+        GNPS compatibility
       
     </span>
   </a>
@@ -6387,6 +6438,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-metadata-columns-manually" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding custom metadata columns manually
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export formats
+      
+    </span>
+  </a>
   
 </li>
       
@@ -6410,47 +6494,225 @@
   
 
 
-<h1 id="linear-normalizer"><strong>Linear normalizer</strong><a class="headerlink" href="#linear-normalizer" title="Permanent link">&para;</a></h1>
-<h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Normalization → Linear normalizer</strong></p>
-<p>Linear normalizer divides the height (or area) of each feature in the feature list by a normalization factor, chosen according to the "Normalization type" parameter. </p>
-<p>Each column of the feature list is normalized separately. In other words, normalization factor is determined independently for each raw data file.</p>
-<h3 id="normalization-factors"><strong>Normalization factors</strong><a class="headerlink" href="#normalization-factors" title="Permanent link">&para;</a></h3>
-<p>Different normalization factors can be applied:</p>
-<ol>
-<li>
-<p><strong>Average intensity</strong></p>
-<p>Average height (or area) of all peaks in the column is calculated and used as the normalization factor</p>
-</li>
-<li>
-<p><strong>Average squared intensity</strong></p>
-<p>Same as Average intensity, but values are squared before calculating the average</p>
-</li>
-<li>
-<p><strong>Maximum peak intensity</strong></p>
-<p>Maximum height (or area) in the peak list column is used as the normalization factor</p>
-</li>
-<li>
-<p><strong>Total raw signal</strong></p>
-<p>Sum of the height (or area) of all peaks in the peak list column is used as the normalization factor</p>
-</li>
-</ol>
-<h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h4 id="name-suffix"><strong>Name suffix</strong><a class="headerlink" href="#name-suffix" title="Permanent link">&para;</a></h4>
-<p>Suffix to be added to a processed feature list name</p>
-<h4 id="normalization-type"><strong>Normalization type</strong><a class="headerlink" href="#normalization-type" title="Permanent link">&para;</a></h4>
-<p>Selection of the normalization factor. Available options:</p>
+<h1 id="sample-metadata">Sample metadata<a class="headerlink" href="#sample-metadata" title="Permanent link">&para;</a></h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Project → Sample metadata</strong></p>
+<p>Sample metadata lets you attach study design information to each raw data file loaded in your
+project, for example, sample group, treatment condition, replicate number, or batch. mzmine uses
+this metadata throughout the software: For color-coding samples in visualizations, grouping them in
+the statistics dashboard, and driving downstream analyses such as blank subtraction or
+normalization.</p>
+<hr />
+<h2 id="accessing-sample-metadata">Accessing sample metadata<a class="headerlink" href="#accessing-sample-metadata" title="Permanent link">&para;</a></h2>
+<p>Open the sample metadata table from the main menu:</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Project → Sample metadata</strong> (shortcut <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-m">M</kbd></span> / <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-m">M</kbd></span>)</p>
+<p>This opens the <strong>Sample metadata</strong> tab as a panel in the main window. Each row corresponds to one
+raw data file loaded in the project, and each column is a metadata parameter. You can add, edit, or
+remove metadata columns directly in this table, or import them from a file.</p>
+<hr />
+<h2 id="automatically-populated-fields">Automatically populated fields<a class="headerlink" href="#automatically-populated-fields" title="Permanent link">&para;</a></h2>
+<p>When you import raw data files, mzmine automatically creates three reserved metadata columns and
+fills them for every sample. These values may be overwritten manually or by metadata import.</p>
+<table>
+<thead>
+<tr>
+<th>Column header</th>
+<th>Type</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>filename</code></td>
+<td>Text</td>
+<td>The name of the raw data file (read-only reference)</td>
+</tr>
+<tr>
+<td><code>run_date</code></td>
+<td>Date/Time</td>
+<td>Acquisition time stamp embedded in the raw file (e.g., 2026-12-31T20:10:05)</td>
+</tr>
+<tr>
+<td><code>mzmine_sample_type</code></td>
+<td>Text</td>
+<td>Inferred from the filename using pattern matching</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-type-detection">Sample type detection<a class="headerlink" href="#sample-type-detection" title="Permanent link">&para;</a></h3>
+<p>The <code>mzmine_sample_type</code> column is filled automatically by scanning the file name for common naming
+conventions used in untargeted metabolomics runs. The matching is case-insensitive and looks for
+specific keywords that are not part of a longer word:</p>
+<table>
+<thead>
+<tr>
+<th>Detected value</th>
+<th>Filename keywords matched</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>qc</code></td>
+<td><code>qc</code></td>
+</tr>
+<tr>
+<td><code>blank</code></td>
+<td><code>blank</code>, <code>media</code>, <code>blk</code></td>
+</tr>
+<tr>
+<td><code>calibration</code></td>
+<td><code>cal</code>, <code>quant</code></td>
+</tr>
+<tr>
+<td><code>sample</code></td>
+<td>anything else (default)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
 <ul>
-<li>Average intensity</li>
-<li>Average squared intensity</li>
-<li>Maximum peak intensity</li>
-<li>Total raw signal</li>
+<li><code>QC_01.mzML</code> → <code>qc</code></li>
+<li><code>Blank_run3.mzML</code> → <code>blank</code></li>
+<li><code>Study_S001_liver.mzML</code> → <code>sample</code> (default)</li>
 </ul>
-<h4 id="feature-measurement-type"><strong>Feature measurement type</strong><a class="headerlink" href="#feature-measurement-type" title="Permanent link">&para;</a></h4>
-<p>Selection of either feature height or feature area, which will be used to calculate the normalization factors</p>
-<h4 id="original-feature-list"><strong>Original feature list</strong><a class="headerlink" href="#original-feature-list" title="Permanent link">&para;</a></h4>
-<p>If REMOVE option is selected, the original feature list is  removed, allowing to save memory.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Consistent file naming pays off: if your QC injections all contain "QC" in the filename, 
+mzmine will classify them automatically. You can always correct individual entries in the 
+metadata table by typing directly into a cell or importing a metadata table.</p>
+</div>
+<hr />
+<h2 id="importing-metadata-from-a-file">Importing metadata from a file<a class="headerlink" href="#importing-metadata-from-a-file" title="Permanent link">&para;</a></h2>
+<p>For larger studies it is more practical to prepare your metadata in a spreadsheet and import it.
+mzmine accepts <strong>CSV</strong> and <strong>TSV</strong> files. The separator (comma or tab) is detected automatically
+from the file extension, but the file extension itself is not important: You can use any extension
+or even omit it entirely.</p>
+<div class="admonition tip">
+<p class="admonition-title">Start from a template</p>
+<p>The easiest way to prepare a metadata file is to first load your raw data files into mzmine, 
+then <strong>export</strong> the current metadata table. This gives you a file that already contains all 
+the sample file names in the correct format. Open it in your spreadsheet software, add your 
+custom columns, and re-import.</p>
+<p>Export via: <strong>Project → Sample metadata → Export</strong> (choose <strong>Default</strong> or <strong>mzmine internal</strong> format).</p>
+</div>
+<h3 id="required-file-structure">Required file structure<a class="headerlink" href="#required-file-structure" title="Permanent link">&para;</a></h3>
+<p>The file must be a plain table in a wide format (one row per sample). The <strong>first column</strong> must be
+named <code>filename</code> or <code>filenames</code> (case-insensitive). Each subsequent column is one
+metadata parameter.</p>
+<p><strong>Minimal example</strong> (TSV, no type hints means that mzmine will automatically try to use the date and
+time or number format for a column if all values match - otherwise the column is recognized as
+text):</p>
+<div class="highlight"><pre><span></span><code>filename    Group   Batch   Condition
+study_S001.mzML Control 1   Vehicle
+study_S002.mzML Treatment   1   Drug_A
+QC_01.mzML  QC  1   QC
+Blank_01.mzML   Blank   1   Blank
+</code></pre></div>
+<p>If no type information is provided, mzmine will auto-detect the most appropriate data type for each
+column:</p>
+<ul>
+<li>All values parseable as numbers → <strong>NUMBER</strong> (stored as decimal)</li>
+<li>All values parseable as date/time → <strong>DATETIME</strong> (e.g., 2026-12-31T20:10:05)</li>
+<li>Otherwise → <strong>TEXT</strong></li>
+</ul>
+<h3 id="optional-header-rows-for-explicit-type-definitions">Optional header rows for explicit type definitions<a class="headerlink" href="#optional-header-rows-for-explicit-type-definitions" title="Permanent link">&para;</a></h3>
+<p>You can add up to two optional rows <strong>before</strong> the <code>filename</code> title row to declare column
+descriptions and data types explicitly. mzmine reads them in this order:</p>
+<ol>
+<li><strong>Description row</strong>: human-readable descriptions for each column (optional)</li>
+<li><strong>Type row</strong>: data type for each column: <code>TEXT</code>, <code>NUMBER</code>, or <code>DATETIME</code> (optional)</li>
+<li><strong>Title row</strong>: column headers; the first cell must be <code>filename</code> (required)</li>
+<li><strong>Data rows</strong>: one row per sample</li>
+</ol>
+<p><strong>Example with full header (TSV):</strong></p>
+<div class="highlight"><pre><span></span><code>Sample grouping Number of replicates    Acquisition date    Biological condition
+TEXT    NUMBER  DATETIME    TEXT
+filename    Replicate   run_date    Group
+study_S001.mzML 3   2024-03-15T09:00:00 Control
+study_S002.mzML 3   2024-03-15T09:45:00 Treatment
+QC_01.mzML  1   2024-03-15T10:30:00 QC
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Filename matching</p>
+<p>File names in your metadata file are matched against the raw data files loaded in the project. 
+The match is done by file name (without file extension or folder path). Files listed in the 
+metadata that are not present in the project are silently skipped; files in the project that 
+are absent from the metadata simply retain their current values.</p>
+<p>Raw data files must be loaded into the project <strong>before</strong> importing metadata.</p>
+</div>
+<h3 id="date-and-time-format">Date and time format<a class="headerlink" href="#date-and-time-format" title="Permanent link">&para;</a></h3>
+<p>Date/time columns (<code>DATETIME</code>) accept a wide range of formats. ISO 8601 format is recommended for
+unambiguous parsing, e.g., <code>2024-03-15T09:00:00</code>.</p>
+<h3 id="gnps-compatibility">GNPS compatibility<a class="headerlink" href="#gnps-compatibility" title="Permanent link">&para;</a></h3>
+<p>Metadata exported from GNPS uses an <code>ATTRIBUTE_</code> prefix for column names (e.g., <code>ATTRIBUTE_Group</code>).
+mzmine can strip this prefix automatically during import. Enable the <strong>Remove ATTRIBUTE_ prefix</strong>
+option in the import dialog to clean up the column names.</p>
+<hr />
+<h2 id="data-types">Data types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h2>
+<p>User-defined metadata columns can hold three types of values:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Example values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TEXT</strong></td>
+<td>Free-form text labels</td>
+<td><code>Control</code>, <code>Treatment</code>, <code>Batch_1</code></td>
+</tr>
+<tr>
+<td><strong>NUMBER</strong></td>
+<td>Decimal numbers</td>
+<td><code>1</code>, <code>0.5</code>, <code>42.7</code></td>
+</tr>
+<tr>
+<td><strong>DATETIME</strong></td>
+<td>Date and time</td>
+<td><code>2024-03-15T09:00:00</code></td>
+</tr>
+</tbody>
+</table>
+<p>The data type determines how mzmine handles the column in downstream analyses (e.g., the statistics
+dashboard treats <code>NUMBER</code> columns as continuous variables).</p>
+<hr />
+<h2 id="adding-custom-metadata-columns-manually">Adding custom metadata columns manually<a class="headerlink" href="#adding-custom-metadata-columns-manually" title="Permanent link">&para;</a></h2>
+<p>To add a new column directly in the metadata table without importing a file:</p>
+<ol>
+<li>Open <strong>Project → Sample metadata</strong></li>
+<li>Click <strong>Add parameter</strong> in the table toolbar</li>
+<li>Choose a column name, data type, and optional description</li>
+<li>Fill in values for each sample in the table</li>
+</ol>
+<hr />
+<h2 id="export-formats">Export formats<a class="headerlink" href="#export-formats" title="Permanent link">&para;</a></h2>
+<p>When exporting metadata you can choose between three formats:</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Default</strong></td>
+<td>Plain TSV with filename column and data: easy to open in Excel or other tools</td>
+</tr>
+<tr>
+<td><strong>mzmine internal</strong></td>
+<td>Includes description and type rows in the header: preserves type information on re-import</td>
+</tr>
+<tr>
+<td><strong>GNPS</strong></td>
+<td>Adds <code>ATTRIBUTE_</code> prefix to all columns as required for GNPS metadata uploads</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a></span></p>
 
 
 
@@ -6471,7 +6733,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 24, 2022 21:13:07 UTC">November 24, 2022 21:13:07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="April 15, 2026 12:26:37 UTC">April 15, 2026 12:26:37</span>
   </span>
 
     
@@ -6487,7 +6749,7 @@
     </span>
     <nav>
       
-        <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
+        <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>
     </nav>
   </span>
 
