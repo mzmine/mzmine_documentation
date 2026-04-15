@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/norm_linear/norm_linear.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/norm_intensity/norm_intensity.html">
       
       
         <link rel="prev" href="../norm_rt_calibration_scans/scan-based-rt-corr.html">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Linear normalizer - mzmine documentation</title>
+        <title>Intensity normalizer - mzmine documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linear-normalizer" class="md-skip">
+        <a href="#intensity-normalizer" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linear normalizer
+              Intensity normalizer
             
           </span>
         </div>
@@ -3509,7 +3509,7 @@
   <span class="md-ellipsis">
     
   
-    Linear normalizer
+    Intensity normalizer
   
 
     
@@ -3520,14 +3520,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="norm_linear.html" class="md-nav__link md-nav__link--active">
+      <a href="norm_intensity.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Linear normalizer
+    Intensity normalizer
   
 
     
@@ -3553,30 +3553,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
+  <a href="#recommended-citations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description
+        Recommended citations
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Description">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#normalization-factors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Normalization factors
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3593,6 +3576,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#feature-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#name-suffix" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3604,10 +3598,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#normalization-type" class="md-nav__link">
+  <a href="#original-feature-list" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Normalization type
+        Original feature list
       
     </span>
   </a>
@@ -3626,10 +3620,188 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#original-feature-list" class="md-nav__link">
+  <a href="#batch-correction-metadata-column-optional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Original feature list
+        Batch correction metadata column (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-normalization-column-step-1-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata normalization column: Step 1 (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intra-sample-correction-step-2-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intra-sample correction: Step 2 (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inter-sample-correction-step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inter-sample correction: Step 3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inter-sample correction: Step 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#by-feature-abundances-sub-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By feature abundances sub-parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="By feature abundances sub-parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalize-by-feature-abundances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normalize by feature abundances
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-tic-sub-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spectral TIC sub-parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spectral TIC sub-parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference-samples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normalization-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normalization pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalization-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normalization factors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpolation-to-non-reference-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpolation to non-reference samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-aware-inter-batch-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch-aware inter-batch normalization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistence-and-re-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persistence and re-application
       
     </span>
   </a>
@@ -6302,30 +6474,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
+  <a href="#recommended-citations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description
+        Recommended citations
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Description">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#normalization-factors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Normalization factors
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -6342,6 +6497,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#feature-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#name-suffix" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6353,10 +6519,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#normalization-type" class="md-nav__link">
+  <a href="#original-feature-list" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Normalization type
+        Original feature list
       
     </span>
   </a>
@@ -6375,10 +6541,188 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#original-feature-list" class="md-nav__link">
+  <a href="#batch-correction-metadata-column-optional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Original feature list
+        Batch correction metadata column (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-normalization-column-step-1-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metadata normalization column: Step 1 (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intra-sample-correction-step-2-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intra-sample correction: Step 2 (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inter-sample-correction-step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inter-sample correction: Step 3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inter-sample correction: Step 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#by-feature-abundances-sub-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By feature abundances sub-parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="By feature abundances sub-parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalize-by-feature-abundances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normalize by feature abundances
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spectral-tic-sub-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spectral TIC sub-parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spectral TIC sub-parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference-samples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normalization-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normalization pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalization-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normalization factors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpolation-to-non-reference-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpolation to non-reference samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-aware-inter-batch-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch-aware inter-batch normalization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistence-and-re-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Persistence and re-application
       
     </span>
   </a>
@@ -6410,47 +6754,233 @@
   
 
 
-<h1 id="linear-normalizer"><strong>Linear normalizer</strong><a class="headerlink" href="#linear-normalizer" title="Permanent link">&para;</a></h1>
-<h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Normalization → Linear normalizer</strong></p>
-<p>Linear normalizer divides the height (or area) of each feature in the feature list by a normalization factor, chosen according to the "Normalization type" parameter. </p>
-<p>Each column of the feature list is normalized separately. In other words, normalization factor is determined independently for each raw data file.</p>
-<h3 id="normalization-factors"><strong>Normalization factors</strong><a class="headerlink" href="#normalization-factors" title="Permanent link">&para;</a></h3>
-<p>Different normalization factors can be applied:</p>
+<h1 id="intensity-normalizer">Intensity normalizer<a class="headerlink" href="#intensity-normalizer" title="Permanent link">&para;</a></h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Normalization → Intensity normalizer</strong></p>
+<p>The Intensity Normalizer corrects feature abundances (height or area) through a configurable
+multi-step normalization pipeline. Up to three correction steps are applied in sequence, each
+optional:</p>
 <ol>
-<li>
-<p><strong>Average intensity</strong></p>
-<p>Average height (or area) of all peaks in the column is calculated and used as the normalization factor</p>
-</li>
-<li>
-<p><strong>Average squared intensity</strong></p>
-<p>Same as Average intensity, but values are squared before calculating the average</p>
-</li>
-<li>
-<p><strong>Maximum peak intensity</strong></p>
-<p>Maximum height (or area) in the peak list column is used as the normalization factor</p>
-</li>
-<li>
-<p><strong>Total raw signal</strong></p>
-<p>Sum of the height (or area) of all peaks in the peak list column is used as the normalization factor</p>
-</li>
+<li><strong>Metadata-based pre-normalization</strong>: divides or multiplies each sample's intensities by a
+   numeric metadata value such as sample weight, dilution factor, or injection volume.</li>
+<li><strong>Internal standard correction</strong>: corrects each feature individually by the nearest or
+   distance-weighted internal standard compound, accounting for extraction efficiency and matrix
+   effects.</li>
+<li><strong>QC drift correction</strong>: removes signal drift within an analytical batch using reference
+   samples (e.g., pooled QCs) and, when multiple batches are present, aligns batch medians to a
+   global reference median.</li>
 </ol>
-<h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h4 id="name-suffix"><strong>Name suffix</strong><a class="headerlink" href="#name-suffix" title="Permanent link">&para;</a></h4>
-<p>Suffix to be added to a processed feature list name</p>
-<h4 id="normalization-type"><strong>Normalization type</strong><a class="headerlink" href="#normalization-type" title="Permanent link">&para;</a></h4>
-<p>Selection of the normalization factor. Available options:</p>
+<p>Normalized values are written to dedicated <strong>Normalized Height</strong> and <strong>Normalized Area</strong> columns
+and the normalization functions are stored with the feature list so that they can be automatically
+re-applied to features added later (gap filling, manual integration).</p>
+<h2 id="recommended-citations">Recommended citations<a class="headerlink" href="#recommended-citations" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When using mzmine for your work, please consider citing:<br>
+Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry
+data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.</p>
+</div>
+<hr />
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h4 id="feature-lists">Feature lists<a class="headerlink" href="#feature-lists" title="Permanent link">&para;</a></h4>
+<p>Feature lists to normalize.</p>
+<h4 id="name-suffix">Name suffix<a class="headerlink" href="#name-suffix" title="Permanent link">&para;</a></h4>
+<p>String appended to the output feature list name (default: <code>norm</code>).</p>
+<h4 id="original-feature-list">Original feature list<a class="headerlink" href="#original-feature-list" title="Permanent link">&para;</a></h4>
+<p>Controls whether the original feature list is kept, removed, or modified in-place after
+normalization.</p>
+<h4 id="feature-measurement-type">Feature measurement type<a class="headerlink" href="#feature-measurement-type" title="Permanent link">&para;</a></h4>
+<p>Whether feature height or feature area is used as the abundance measure throughout all
+normalization calculations.</p>
+<hr />
+<h4 id="batch-correction-metadata-column-optional">Batch correction metadata column <em>(Optional)</em><a class="headerlink" href="#batch-correction-metadata-column-optional" title="Permanent link">&para;</a></h4>
+<p>Metadata column whose values identify the analytical batch a sample belongs to (e.g.,
+<code>Batch</code>). When enabled, the normalization pipeline is run independently per batch:</p>
 <ul>
-<li>Average intensity</li>
-<li>Average squared intensity</li>
-<li>Maximum peak intensity</li>
-<li>Total raw signal</li>
+<li>Steps 2 and 3 are applied within each batch using only that batch's reference samples.</li>
+<li>After intra-batch correction, a final <strong>inter-batch normalization</strong> aligns the median
+  reference-sample signal of every batch to the global median, correcting for between-run
+  differences.</li>
 </ul>
-<h4 id="feature-measurement-type"><strong>Feature measurement type</strong><a class="headerlink" href="#feature-measurement-type" title="Permanent link">&para;</a></h4>
-<p>Selection of either feature height or feature area, which will be used to calculate the normalization factors</p>
-<h4 id="original-feature-list"><strong>Original feature list</strong><a class="headerlink" href="#original-feature-list" title="Permanent link">&para;</a></h4>
-<p>If REMOVE option is selected, the original feature list is  removed, allowing to save memory.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p>Without a batch ID column, all samples are treated as one continuous sequence.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use this parameter whenever samples were acquired in multiple separate analytical runs with
+their own QC injections to avoid over-correcting within a run while still aligning runs to each
+other.</p>
+</div>
+<hr />
+<h4 id="metadata-normalization-column-step-1-optional">Metadata normalization column: Step 1 <em>(Optional)</em><a class="headerlink" href="#metadata-normalization-column-step-1-optional" title="Permanent link">&para;</a></h4>
+<p>Selects a numeric sample metadata column whose value is used to pre-normalize each sample before any
+other correction. Only a single column, a single value per sample can be used. Typical uses:</p>
+<table>
+<thead>
+<tr>
+<th>Example column</th>
+<th>Operation</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sample weight (mg)</td>
+<td>Divide</td>
+<td>Normalizes to per-mg intensity</td>
+</tr>
+<tr>
+<td>Injection volume (µL)</td>
+<td>Divide</td>
+<td>Normalizes to per-µL intensity</td>
+</tr>
+<tr>
+<td>Dilution factor</td>
+<td>Multiply</td>
+<td>Corrects for sample dilution</td>
+</tr>
+</tbody>
+</table>
+<p>Set a sample's metadata value to <code>0</code> to skip normalization for that sample.</p>
+<p>Choose <strong>divide</strong> or <strong>multiply</strong> depending on whether the metadata column represents a quantity
+to scale down by (e.g., weight) or scale up by (e.g., dilution factor).</p>
+<hr />
+<h4 id="intra-sample-correction-step-2-optional">Intra-sample correction: Step 2 <em>(Optional)</em><a class="headerlink" href="#intra-sample-correction-step-2-optional" title="Permanent link">&para;</a></h4>
+<p>Applies an internal standard compound correction to each feature individually, accounting for
+extraction efficiency and matrix effects within a sample. This step runs after step 1 (metadata
+normalization).</p>
+<p>Available options:</p>
+<ul>
+<li><strong>No normalization</strong>: step 2 is skipped.</li>
+<li><strong>Internal standard compounds</strong>: Normalization by internal standards is described in more detail <a href="../norm_stand_cmpd/norm_stand_cmpd.html">
+  <strong>here</strong></a>.</li>
+</ul>
+<h4 id="inter-sample-correction-step-3">Inter-sample correction: Step 3<a class="headerlink" href="#inter-sample-correction-step-3" title="Permanent link">&para;</a></h4>
+<p>Corrects signal drift across samples using a set of reference injections (typically pooled QCs) or
+all samples.
+This step runs after metadata normalization (step 1) and internal standard correction (step 2).
+Intra-batch correction is applied first; if multiple batches are defined, inter-batch alignment
+is performed afterward by centering the median batch reference abundance against a global median.</p>
+<p>Available options:</p>
+<ul>
+<li><strong>No normalization</strong>: step 3 is skipped.</li>
+<li><strong>By feature abundances</strong>: see sub-parameters below.</li>
+<li><strong>Spectral TIC</strong>: see sub-parameters below.</li>
+</ul>
+<h5 id="by-feature-abundances-sub-parameters">By feature abundances sub-parameters<a class="headerlink" href="#by-feature-abundances-sub-parameters" title="Permanent link">&para;</a></h5>
+<h6 id="reference-samples">Reference samples<a class="headerlink" href="#reference-samples" title="Permanent link">&para;</a></h6>
+<p>Sample types, as defined in the sample metadata in column <em>mzmine_sample_type</em>, used as the
+normalization reference (default: QC). Non-reference samples are
+normalized by interpolating correction factors between the nearest reference samples in
+acquisition order.</p>
+<h6 id="normalize-by-feature-abundances">Normalize by feature abundances<a class="headerlink" href="#normalize-by-feature-abundances" title="Permanent link">&para;</a></h6>
+<p>Statistic used to summarize the feature intensity distribution of each sample:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Median (default)</td>
+<td>Median of all feature abundances: robust to outliers</td>
+</tr>
+<tr>
+<td>Sum (TIC)</td>
+<td>Sum of all feature abundances</td>
+</tr>
+<tr>
+<td>Average</td>
+<td>Mean of all feature abundances</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>Maximum feature abundance</td>
+</tr>
+</tbody>
+</table>
+<p>The correction factor for each sample is:
+<code>median across all references / specific reference metric</code>.</p>
+<h5 id="spectral-tic-sub-parameters">Spectral TIC sub-parameters<a class="headerlink" href="#spectral-tic-sub-parameters" title="Permanent link">&para;</a></h5>
+<h6 id="reference-samples_1">Reference samples<a class="headerlink" href="#reference-samples_1" title="Permanent link">&para;</a></h6>
+<p>Sample types, as defined in the sample metadata in column <em>mzmine_sample_type</em>, used as the
+normalization reference (default: QC). Non-reference samples are
+normalized by interpolating correction factors between the nearest reference samples in
+acquisition order. The distance is defined by the run date in the sample metadata or as read from
+raw data file metadata.</p>
+<p>The correction factor is: <code>median TIC across all references / specific sample TIC</code>, where TIC is computed from
+mass lists (noise-filtered spectra).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Spectral TIC is sensitive to noise and baseline signal. Prefer <strong>By feature abundances</strong> when
+the feature list has already been filtered, as it is more robust.</p>
+</div>
+<hr />
+<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
+<h3 id="normalization-pipeline">Normalization pipeline<a class="headerlink" href="#normalization-pipeline" title="Permanent link">&para;</a></h3>
+<p>The three correction steps are always applied in the following order. Each step is independent
+and optional; any combination can be enabled:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Parameter</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Metadata normalization column</td>
+<td>Per sample (constant factor)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Intra-sample correction</td>
+<td>Per feature, per sample</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Inter-sample correction</td>
+<td>Per sample (interpolated)</td>
+</tr>
+</tbody>
+</table>
+<p>When a <strong>batch ID column</strong> is provided, steps 2 and 3 are executed independently within each
+batch, followed by an inter-batch alignment step to center the reference abundances across all batches.</p>
+<h3 id="normalization-factors">Normalization factors<a class="headerlink" href="#normalization-factors" title="Permanent link">&para;</a></h3>
+<p>Each normalization step contributes a factor per (sample, feature) pair. The factors from all
+enabled steps are <strong>multiplied together</strong> into a single composite function per sample. The final
+normalized abundance is:</p>
+<div class="arithmatex">\[
+\text{NormalizedAbundance} = \text{OriginalAbundance} \times \prod_{i} f_i(m/z,\, RT)
+\]</div>
+<p>where each <span class="arithmatex">\(f_i\)</span> is the factor from normalization step <span class="arithmatex">\(i\)</span>.</p>
+<h3 id="interpolation-to-non-reference-samples">Interpolation to non-reference samples<a class="headerlink" href="#interpolation-to-non-reference-samples" title="Permanent link">&para;</a></h3>
+<p>For steps 2 and 3, correction factors may be computed from <strong>reference samples</strong> (typically
+pooled QCs). Non-reference samples receive a factor <strong>linearly interpolated</strong> between
+the two nearest reference samples in acquisition order (based on acquisition timestamp from
+metadata):</p>
+<div class="arithmatex">\[
+f_{\text{sample}} = f_{\text{prev}} \cdot w_{\text{prev}} + f_{\text{next}} \cdot w_{\text{next}}
+\quad \text{where } w_{\text{prev}} + w_{\text{next}} = 1
+\]</div>
+<p>Samples before the first or after the last reference injection receive the factor of the nearest
+reference (no extrapolation).</p>
+<h3 id="batch-aware-inter-batch-normalization">Batch-aware inter-batch normalization<a class="headerlink" href="#batch-aware-inter-batch-normalization" title="Permanent link">&para;</a></h3>
+<p>When a batch ID column is enabled and multiple batches are present:</p>
+<ol>
+<li>Steps 2 and 3 are run independently within each batch.</li>
+<li>The median reference-sample metric is recorded for each batch.</li>
+<li>A global median is calculated across all batches.</li>
+<li>Each batch receives an additional scaling factor: <code>globalMedian / batchMedian</code>.</li>
+</ol>
+<p>This aligns the overall signal level of all batches without disturbing the intra-batch corrections.</p>
+<h3 id="persistence-and-re-application">Persistence and re-application<a class="headerlink" href="#persistence-and-re-application" title="Permanent link">&para;</a></h3>
+<p>The normalization functions are serialized as part of the feature list's applied-methods record.
+When features are added later (e.g., by gap filling or manual integration), mzmine can retrieve the
+stored functions and applies the same normalization to the new features.</p>
+<hr />
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a></span></p>
 
 
 
@@ -6471,7 +7001,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 24, 2022 21:13:07 UTC">November 24, 2022 21:13:07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="April 15, 2026 11:13:50 UTC">April 15, 2026 11:13:50</span>
   </span>
 
     
@@ -6487,7 +7017,7 @@
     </span>
     <nav>
       
-        <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
+        <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>
     </nav>
   </span>
 
