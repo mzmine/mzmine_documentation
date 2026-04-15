@@ -8,15 +8,28 @@ use_directory_urls: false
 nav:
   - Home page: index.md
   - Getting started: getting_started.md
-  - User account: services/users.md
   - Learners corner: learners_corner.md
+  - Workshops & Events: workshops.md
   - Main window overview: main-window-overview.md
   - Processing wizard: wizard.md
   - Data conversion: data_conversion.md
   - Sample metadata: module_docs/project_metadata/project_metadata.md
+
   - Performance & Benchmarking:
     - Performance options: performance.md
     - Benchmarking: performance/benchmarking.md
+
+  - Workflows:
+      - Untargeted LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
+      - Untargeted LC-IMS-MS workflow: workflows/imsworkflow/ion-mobility-data-processing-workflow.md
+      - Untargeted GC-MS workflow: workflows/gcmsworkflow/gcms-workflow.md
+      - Untargeted MS imaging workflow: workflows/imagingworkflow/imaging-workflow.md
+      - MRM workflow: workflows/mrmworkflow/mrm-workflow.md
+      - Library generation: workflows/librarygeneration/library_generation.md
+      - SIMSEF: workflows/simsef/simsef_workflow.md
+      - Batch processing: workflows/batch_processing/batch-processing.md
+      - Workflow optimization: workflows/optimization/workflow_optimization.md
+
   - Command line tool (batch mode): commandline_tool.md
   - Integration to other tools: tool_integration.md
   #  - Citations: citations.md
@@ -164,17 +177,6 @@ nav:
       - Multi detector visualizer: module_docs/uv/uv_multi_detector_visualizer/uv_multi_detector_visualizer.md
       - Correlation dashboard: module_docs/uv/uv_correlation_dashboard/uv_correlation_dashboard.md
 
-  - Workflows:
-      - Untargeted LC-MS workflow: workflows/lcmsworkflow/lcms-workflow.md
-      - Untargeted LC-IMS-MS workflow: workflows/imsworkflow/ion-mobility-data-processing-workflow.md
-      - Untargeted GC-MS workflow: workflows/gcmsworkflow/gcms-workflow.md
-      - Untargeted MS imaging workflow: workflows/imagingworkflow/imaging-workflow.md
-      - Batch processing: workflows/batch_processing/batch-processing.md
-      - Library generation: workflows/librarygeneration/library_generation.md
-      - SIMSEF: workflows/simsef/simsef_workflow.md
-      - MRM workflow: workflows/mrmworkflow/mrm-workflow.md
-      - Workflow optimization: workflows/optimization/workflow_optimization.md
-
   - Tools:
       - SIMSEF scheduler: module_docs/tools_simsef/simsef.md
       - Spectral library to feature list: module_docs/tools_spectral_library_to_feature_list/spectral_library_to_feature_list.md
@@ -185,14 +187,19 @@ nav:
           - Install on Linux: install_linux.md
           - Install on macOS: install_macos.md
       - System requirements: system_requirements.md
+      - User account: services/users.md
       - General Terminology: terminology/general-terminology.md
       - IMS Terminology: terminology/ion-mobility-terminology.md
+      - Other detector terminology: module_docs/uv/otherdetector_glossary.md
       - LC-MS and LC-IMS-MS data comparison: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
       #      - Kendrick mass defect: module_docs/feature_list_row_filter/kendrick_mass_defect.md
       - Annotations: terminology/annotations.md
       - Spectral similarity measures: module_docs/id_spectral_library_search/spectral-similarity-measures.md
-      - Other detector terminology: module_docs/uv/otherdetector_glossary.md
       - Additional resources: additional_resources.md
+
+  - Troubleshooting: troubleshooting.md
+  - Changelog: changelog.md
+  - Acknowledgements: wikiacknowledgements.md
 
   - Contribute:
       - Coding:
@@ -208,11 +215,6 @@ nav:
       #            - Example module - Spectral entropy: coding/example_module.md
       - Contribute to documentation: contribute.md
       - Documentation template: contribute_docu_template.md
-
-  - Acknowledgements: wikiacknowledgements.md
-  - Troubleshooting: troubleshooting.md
-  - Changelog: changelog.md
-  - Workshops: workshops.md
 
 
 copyright: This documentation is licensed under the MIT License (MIT).
