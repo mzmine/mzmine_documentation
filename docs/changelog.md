@@ -5,4 +5,5 @@ Find a detailed **[changelog](https://github.com/mzmine/mzmine/releases)** on ou
 
 Check out latest **[mzmine news](https://mzio.io/mzmine-news/)**.
 
-![mzmine news](mzmine_news.png)
+[//]: # (video easily becomes old so better to link to more up to date resources)
+[//]: # (![mzmine news]&#40;mzmine_news.png&#41;)
