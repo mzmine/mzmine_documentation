@@ -1,72 +1,120 @@
 # Getting Started
 
-## Download
+mzmine is an open-source, cross-platform software for mass spectrometry (MS) data processing and
+visualization. It supports LC-MS, LC-IMS-MS, GC-MS, MS imaging, MRM, and many more workflows - from raw data
+import through feature detection, alignment, annotation, statistics, and export. This page walks you through
+installation, initial setup, and your first steps toward data analysis.
 
-Download mzmine portable versions or installers from [GitHub](https://github.com/mzmine/mzmine/releases/latest). The software follows semantic 
-versioning (major.minor.patch like 4.8.0). The latest version is always available under:
+If you prefer watching a quick mzmine introduction video, check out the [Learners corner](learners_corner.md) or one of the following videos: 
+
+- [General introduction to mzmine with LC-MS Data & mzwizard: From Basics to Advanced Features](https://www.youtube.com/watch?v=tHC0brzQtG0&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=1)
+- [GC-EI-MS, Multimodal-MS Data Processing, MALDI-MS imaging, Lipidomics](https://www.youtube.com/watch?v=cGA5WIKcMpM&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=2)
+- [Ion Mobility-MS Data Processing, PFAS, Contaminants](https://www.youtube.com/watch?v=Xp-G1HSozgM&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=3)
+- [Streamlining MS Library Generation in mzmine](https://www.youtube.com/watch?v=SmEpFYV4_bY&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=4) matching the [library building workflow](workflows/librarygeneration/library_generation.md)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tHC0brzQtG0?si=kbtfh1IbumKeaDCu&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+## Download & Installation / Updates {#install-update}
+
+Download platform-specific installers or portable versions from
+[GitHub Releases](https://github.com/mzmine/mzmine/releases/latest) (see [system requirements](system_requirements.md)).
+mzmine uses semantic versioning (major.minor.patch, e.g., 4.9.0). The latest release is always at:
+
 [https://github.com/mzmine/mzmine/releases/latest](https://github.com/mzmine/mzmine/releases/latest)
 
-## System requirements
+Install using the system-specific installer (e.g., `.msi` on Windows) by double-clicking it.
+To update, install the newer version on top of the existing installation — no uninstall is required.
+Portable versions are distributed as ZIP archives; extract them and run the executable directly.
 
-**System requirements** are available [here](system_requirements.md)
+Platform-specific installation guides:
 
-## Install or update mzmine {#install-update}
+- [Install on Windows](install_windows.md)
+- [Install on Linux](install_linux.md)
+- [Install on macOS](install_macos.md)
 
-Download your system-specific installer (e.g., .msi installer on Windows) and double-click to 
-install mzmine. To update mzmine, download a new version installer and install it over the old 
-installation. There is no need to remove the old version. 
-Alternatively, portable versions are distributed as zip archives, which need to be 
-unzipped to reveal the executables (e.g., .exe on Windows). See platform-specific install 
-instructions:   
+!!! info "No Java installation required"
 
-- Installation on [Windows](install_windows.md)
-- Installation on [Linux](install_linux.md)
-- Installation on [macOS](install_macos.md)
+    mzmine ships with its own specialized Java runtime. Your local Java installation has **no**
+    impact on mzmine and does not need to be updated or installed.
 
-As standalone modern Java software, mzmine has **NO** further requirements and ships with its own 
-specialized Java Runtime. This means the local Java installation has **no** impact on mzmine. 
-Windows and macOS users might be warned that mzmine is not signed or from a trusted source and have
-to click run anyway. 
+!!! note "Security warnings on first launch"
+
+    Windows and macOS users may see an "untrusted source" warning the first time they run mzmine.
+    This is expected — click **Run anyway** (Windows) or **Open** (macOS) to continue.
 
 ## Running mzmine
 
-mzmine provides a user-friendly graphical user interface (GUI) that facilitates data exploration, 
-batch optimization, and results validation. If the batch processing is optimized and the goal is to 
-solely produce the output files without the need for a GUI, we recommend running mzmine as a 
-[command-line tool (CLI)](commandline_tool.md).
+mzmine provides a graphical user interface (GUI) designed for interactive data exploration, workflow
+optimization, and results validation. Once a workflow is optimized and no interactive review is
+needed, mzmine can be run headlessly as a
+[command-line tool (CLI)](commandline_tool.md) for automated or server-side batch processing.
 
-## Sign in / Sign up 
+Familiarize yourself with the [main window overview](main-window-overview.md) to understand how
+to navigate raw data files, processed feature lists, and visualization panels.
 
-Open the **Users/User management** to sign in to an existing user or sign up for a free user account ([more details](services/users.md)).
+## Sign In / Sign Up
+
+On first launch, open **Users → User Management** to sign in to an existing account or register a
+free user account. [See support options](https://mzio.io/mzmine-news/#enterprise-packages).
+
 ![Sign-in](getting_started_sign-in.png)
 
-## Set user preferences {#set-user-preferences}
+[Learn more about user accounts](services/users.md)
 
-Before creating your first project, we recommend setting up some things.
+## Configure Preferences {#set-user-preferences}
 
-1. Set a temporary file directory. Go to _Project_ → _Set preferences_ → _Temporary file directory_.
-   This requires a restart to take effect.
-   1. We recommend setting the directory to an SSD other than your system drive with enough space for fast processing and visualizations.
-       ![settings](getting_started_set_parameters.png)
+Before starting your first project, configure a few key settings:
 
-2. mzmine 2 and mzmine 3 projects cannot be imported due to changes in the data structure.
-3. mzmine 2 and mzmine 3 batch files cannot be imported due to parameter optimizations.
+1. Set a **temporary file directory**: go to _Project_ → _Set preferences_ → _Temporary file
+   directory_ and restart mzmine to apply the change.
+    - Use a fast SSD (not your system drive) with sufficient free space for best processing
+      performance and visualizations.
 
-You can get familiar with the new GUI here: [Main window overview](main-window-overview.md)
+   ![Settings](getting_started_set_parameters.png)
 
-## Quick workflows in the mzwizard
+!!! warning "Project compatibility"
+    mzmine 2 and mzmine 3 project files and batch files **cannot** be imported due to fundamental
+    changes in data structure and parameter formats. Start a new project in mzmine 4.
 
-As a quick start you can use the [mzwizard](wizard.md) in the main menu or directly on the landing page. A good starting point is watching this [mzmine video tutorial on YouTube](https://www.youtube.com/watch?v=UnqVtZngzl0&list=PL0JAF-4UFc8NgyAOQhTKI9GZvSBcxe1AD).
+## Data Conversion
 
-## Introduction video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UnqVtZngzl0?si=fLnLGapFBpyVXDtX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Many vendor-specific raw data formats are directly read into mzmine while other may require 
+conversion to open formats. Supported open formats include **mzML**, **mzXML** (prefer mzML), and **imzML** (MS imaging).
 
-## Workflow overviews
-A quick insight to data processing workflows can be found here:
+See the [data conversion guide](data_conversion.md) for tools and step-by-step instructions. An 
+option is to install msconvert and to let mzmine automatically decide to either load data natively
+from vendor formats or to convert in the background. 
 
-- [LC-MS workflow](workflows/lcmsworkflow/lcms-workflow.md)
-- [LC-IMS-IMS workflow](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)
-- [Imaging workflows](workflows/imagingworkflow/imaging-workflow.md)
+## Quick Start with the Processing Wizard (mzwizard)
 
+The fastest way to get started is the **[processing wizard (mzwizard)](wizard.md)**, accessible
+from the main menu or the mzmine landing page. The wizard guides you through instrument-type
+selection, parameter configuration, and full workflow execution with minimal effort — ideal for
+standard LC-MS, LC-IMS-MS, GC-MS, and MS imaging datasets.
+
+## Workflows
+
+Ready to process? Choose a workflow matching your instrument setup and analytical goals:
+
+| Workflow                                                                    | Description |
+|-----------------------------------------------------------------------------|---|
+| [LC-MS](workflows/lcmsworkflow/lcms-workflow.md)                            | Untargeted liquid chromatography–MS |
+| [LC-IMS-MS](workflows/imsworkflow/ion-mobility-data-processing-workflow.md) | Liquid chromatography–ion mobility–MS |
+| [GC-EI-MS](workflows/gcmsworkflow/gcms-workflow.md)                         | Gas chromatography–MS (EI-based) |
+| [MS Imaging](workflows/imagingworkflow/imaging-workflow.md)                 | MALDI and other MS imaging workflows |
+| [MRM](workflows/mrmworkflow/mrm-workflow.md)                                | Multiple reaction monitoring (targeted quantitation) |
+| [Library Generation](workflows/librarygeneration/library_generation.md)     | Build custom spectral libraries |
+
+For automating and reproducing complete pipelines, see
+**[batch processing](workflows/batch_processing/batch-processing.md)**.
+
+## Learning Resources
+
+New to mzmine or mass spectrometry data processing? These resources will help you get up to speed:
+
+- [Learners corner](learners_corner.md) — curated video tutorials, webinars, and metabolomics courses
+- [mzio YouTube channel](https://www.youtube.com/@mzioGmbH/playlists)
+- [Workshops](workshops.md) — recorded and upcoming training events
 
 {{ git_page_authors }}
