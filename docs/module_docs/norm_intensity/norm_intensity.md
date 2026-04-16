@@ -19,14 +19,6 @@ Normalized values are written to dedicated **Normalized Height** and **Normalize
 and the normalization functions are stored with the feature list so that they can be automatically
 re-applied to features added later (gap filling, manual integration).
 
-## Recommended citations
-
-!!! info
-
-    When using mzmine for your work, please consider citing:<br>
-    Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry
-    data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.
-
 ---
 
 ## Parameters
