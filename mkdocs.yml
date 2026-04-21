@@ -158,6 +158,7 @@ nav:
           - Van Krevelen plot: visualization_modules/vankrevelen/van_krevelen_plot.md
           - ECN (Equivalent Carbon Number) models: visualization_modules/ecn_plots/ecn_plots.md
           - Lipid annotation summary: visualization_modules/lipid_annotation_summary/lipid_annotation_summary.md
+          - Lipid annotation quality control dashboard: visualization_modules/lipid_annotation_qc_dashboard/lipid_annotation_qc_dashboard.md
           - Additional tools: visualization_modules/processed_additional/processed_additional.md
       - Massvoltammogram: visualization_modules/massvoltammogram/massvoltammogram.md
       - Statistics dashboard: visualization_modules/statistics_dashboard/statistics_dashboard.md
