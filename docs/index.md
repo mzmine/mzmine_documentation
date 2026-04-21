@@ -1,7 +1,7 @@
 # Welcome to the mzmine documentation!
 
 mzmine is an open-source and platform-independent software for mass spectrometry (MS) data
-processing and visualization. The workflow is optimised to allow processing of large-scale mass
+processing and visualization. The workflow is optimized to allow processing of large-scale mass
 spectrometry studies.
 mzmine supports multiple raw data formats, including open formats such as mzML and several
 vendor-specific file types.
@@ -14,46 +14,72 @@ compound annotation approaches by spectral library
 matching, exact mass searches, rule based lipid annotation, and formula prediction.
 Furthermore, mzmine allows generation of custom spectral libraries.
 
-!!! info 
- When using mzmine, please cite the corresponding paper:</br> Robin Schmid, Steffen Heuckeroth, Ansgar Korf et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3. Nature Biotechnology (2023), [doi:10.1038/s41587-023-01690-2](https://www.nature.com/articles/s41587-023-01690-2).
+![index_tech_overview.png](img/index_tech_overview.png)
 
-## Want to get started with mzmine?
+!!! info
 
-Check out our **[getting started](getting_started.md)** page or **[mzmine video tutorials on YouTube](https://www.youtube.com/watch?v=jUHd3Sj7x0M&list=PL7kvpfzg8JkV7XKBUUX0xxOJimiK1VCOg)**
+    When using mzmine, please cite the corresponding paper:</br> Robin Schmid, Steffen Heuckeroth, Ansgar Korf et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3. Nature Biotechnology (2023), [doi:10.1038/s41587-023-01690-2](https://www.nature.com/articles/s41587-023-01690-2).
 
-![Youtube channel](Youtube_tutorials.png)
- 
+## Getting started with mzmine
+
+For information on how to install and get started with mzmine, 
+check out our **[getting started](getting_started.md)** page or 
+**[mzmine video tutorials on YouTube](https://www.youtube.com/watch?v=UnqVtZngzl0&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=1){target="_blank"}** 
+and [other videos](https://www.youtube.com/watch?v=jUHd3Sj7x0M&list=PL7kvpfzg8JkV7XKBUUX0xxOJimiK1VCOg){target="_blank"}.
+
+A recent mzmine introduction video:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tHC0brzQtG0?si=Lw5q6QMMXL3d2dWN&amp;start=239" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## User-interface gallery
+
+![Feature table](img/example_featuretable_light.png)
+
+[![Youtube channel](Youtube_tutorials.png)](https://www.youtube.com/watch?v=UnqVtZngzl0&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=1){target="_blank"}
+
+[![Interactive networking](visualization_modules/interactive_ion_id_netw/network_dashboard.png)](visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md)
+
 ---
 
 ## mzmine news
 
-Check out latest **[mzmine news](https://mzio.io/mzmine-news/)**.
-
-![mzmine news](mzmine_news.png)
+Check out the latest **[mzmine news](https://mzio.io/mzmine-news/)** where we announce and showcase new functions.
 
 ---
 
 ## History of mzmine
 
-MZmine 3 was developed as a community effort, lead by Robin Schmid, Steffen Heuckeroth, Ansgar Korf and Tomas Pluskal.
-It introduced a redesigned [GUI](main-window-overview.md), a completely new data structure which provided 
+Now, mzmine is at major version 4, representing the latest evolution of the platform, delivering 
+unprecedented performance improvements with >10x lower memory footprint and faster processing speeds 
+compared to previous versions. This milestone transforms mzmine into an enterprise-ready solution, 
+capable of handling large studies with complex multidimensional MS data. The mzio team offers 
+support packages while maintaining the open-source philosophy that provides a framework for 
+community members to develop their own ideas faster.
+
+[![mzmine_performance_both_crop.png](img/performance/mzmine_performance_both_crop.png)](additional_resources.md#performance)
+
+MZmine 3 was developed as a community effort, lead by Robin Schmid, Steffen Heuckeroth, Ansgar Korf, and Tomas Pluskal.
+It introduced a redesigned [GUI](main-window-overview.md), a completely new data structure which provided
 the flexibility to process any type of mass spectrometry data. This included LC-MS, GC-MS and MS-imaging and introduced ion mobility support
 (see [LC-IM-MS data visualization](visualization_modules/ims_raw_data_overview/IM-data-visualisation.md)
- and [feature detection](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)).
+and [feature detection](workflows/imsworkflow/ion-mobility-data-processing-workflow.md)).
 Finally, significant effort was devoted to trace memory issues and bottlenecks, resulting in an
-unprecendent processing performance and scalability.
+unprecedented processing performance and scalability.
+
+<!-- markdown-link-check-disable -->
 
 Since the introduction of MZmine 2 in 2010, the project has matured into a community-driven, highly
 collaborative platform and its functions continue to expand based on the users' needs and feedbacks.
 This has also enabled the tight integration of the mzmine ecosystem with popular third-party
 software for MS data analysis, such as
-the [SIRIUS](https://bio.informatik.uni-jena.de/software/sirius/) suite for _in silico_ metabolite
+the [SIRIUS](https://bio.informatik.uni-jena.de/software/sirius/) suite for _in-silico_ metabolite
 annotation, the [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp?redirect=auth)
 platform with Ion Identity Molecular Networking, the [MetaboAnalyst](https://www.metaboanalyst.ca/)
-web app for univariate and multivariate statistical anlysis, _etc._
+web app for univariate and multivariate statistical analysis, _etc._
 
-Such a great progress was made possible by the invaluable contribution of
-many [developers](https://github.com/mzmine/mzmine3/graphs/contributors) from research labs
+<!-- markdown-link-check-enable -->
+
+Such great progress was made possible by the invaluable contribution of
+many [developers](https://github.com/mzmine/mzmine/graphs/contributors) from research labs
 distributed all over the world!
 
 ---

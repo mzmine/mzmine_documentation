@@ -34,8 +34,13 @@ Using this module, the user can export the feature list needed for the manual su
 #### **Filename**
 Name to be given to the output files (.MGF and .CSV). In this field, the user can either write the path where they want to save the file, or click "select", navigate into the desired output folder, write the output name in the "file name" field and click save. Once that is done, the path should be visible in the Filename field in the GNPS export module.
 
-#### **Merge MS/MS (experimental)**
-If checked, high quality MS/MS spectra that correspond to one feature are merged, instead of exporting only the most intense MS/MS spectrum. See [MS/MS merger](merge_ms2_kai.md) for additional information.
+#### **Merge & select fragment scans**
+
+This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis
+(see [detailed description](../filter_scan_merge_select/scan_merge_select.md)). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options.
+
+For GNPS export, mzmine recommends using the preset **Single scan: Merged across energies** as GNPS requires one MS2 per feature.
 
 #### **Filter rows**
 In the final output files, the user can select to export all the rows without any filters applied, rows only with MS/MS spectra, rows with MS/MS and Ion Identity (it gives MS/MS and the adduct information) and rows with MS/MS or Ion Identity. Normally, for FBMN you want to retain features with MS/MS spectra.
@@ -60,6 +65,7 @@ Opens the export folder.
 :material-menu-open: **Feature list methods → Export feature list → Export to GNPS GC-MS (with ADAP)**
 
 !!! warning
+
      This module should be run on aligned feature list after applying one of the spectral deconvolution methods (see ADAP manual).
 
 The GNPS GC-MS module exports all files needed for the GC-MS workflow on the GNPS web platform. This includes the **feature quantification table (CSV file)** and the **spectral summary (.MGF file)** with representative clustered GC-EI-MS spectra for the row in an (aligned) feature list.
@@ -67,6 +73,7 @@ The GNPS GC-MS module exports all files needed for the GC-MS workflow on the GNP
 ### **References**
 
 !!! quote
+
      1. Smirnov et al.: J. Proteome Res 2017, DOI: 10.1021/acs.jproteome.7b00633 
      2. Wang et al.: Nature Biotechnology 34.8 (2016): 828-837.
      3. Pluskal et al.: BMC Bioinformatics, 11, 395 (2010)
@@ -106,6 +113,7 @@ The module allows the export of spectral features to Sirius from a selected feat
 Sirius uses both the deconvoluted isotopic pattern for each feature and the corresponding MS2 spectrum to rank molecular formula candidates. Spectral features exported consist of a pair of MS1 and MS2 spectrum for each row. Note that the MS1 spectrum can contain the deconvoluted isotopic peaks. 
 
 !!! warning
+
      A masslist with mass detection performs on MS level 2 has to be generated first and selected.
 
 This module can be used in combination with the Export for GNPS module and imported back into GNPS molecular networks. Please refer to the following documentation for a detailed tutorial:
@@ -113,6 +121,7 @@ This module can be used in combination with the Export for GNPS module and impor
 ### **References**
 
 !!! quote
+
      1. **MZmine2 paper**: Pluskal et al.: BMC Bioinformatics, 11, 395 (2010)
      2. K. Dührkop, et al. “Sirius 4: a rapid tool for turning tandem mass spectra into metabolite structure information”, Nat methods, 2019.
 
@@ -138,9 +147,13 @@ Name of the feature list(s) to be exported.
 #### **Filename**
 Base name for the output files
 
-#### **Merge MS/MS**
+#### Merge & select fragment scans
 
-Merge high qualitative MS/MS into one spectrum instead of exporting all MS/MS separately.
+This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis
+(see [detailed description](../filter_scan_merge_select/scan_merge_select.md)). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options.
+
+For SIRIUS handles merging internally, mzmine recommends exporting either **All input scans** or using a simple preset for merging in mzmine.
 
 #### **m/z tolerance**
 
@@ -179,11 +192,12 @@ Do not export rows that were annotated as multimers (2M) (run MS annotate or met
 
 :material-menu-open: **Feature list methods → Export feature list → MetaboAnalyst export**
 
-This module exports the contents of the peak list into a csv file formatted. This csv file can be easily uploaded into the **Statistical Analysis** module of the **MetaboAnalyst** service. 
+This module exports the contents of the feature list into a csv file formatted. This csv file can be 
+easily uploaded into the **Statistical Analysis** tools of the **MetaboAnalyst** service ([metaboanalyst.ca](https://metaboanalyst.ca/)). 
 
 !!! warning
 
-     Prior to export, samples must be separated into groups by a user-defined parameter (see :material-menu-open: Project →  Set sample parameters menu). Each group must contain at least 3 samples (raw data files).
+     Prior to export, samples must be grouped by a sample metadata column that can be defined manually or better loaded from a metadata csv/tsv table file. (see :material-menu-open: Project →  Sample metadata). Each group must contain at least 3 samples (raw data files).
 
 #### **Format of exported CSV file**
 
@@ -202,19 +216,20 @@ The exported file is formatted as shown below. Each feature is represented by it
 
 Name of exported CSV file for MetaboAnalyst. If the file already exists, it will be overwritten.
 
-#### **Grouping parameter**
+#### **Metadata grouping**
 
-Project parameter that will be used to obtain group information to each sample (e.g. control vs disease). Please set parameters in the Project/Set sample parameters menu.
+Sample metadata column that will be used to obtain group information for each sample (e.g. control vs disease). 
+Please import sample metadata from csv/tsv files or define them manually.
 
 ### **Uploading to MetaboAnalyst**
 
 In MetaboAnalyst, please select the Statistical Analysis module.
 
-After selecting the Statistical Analysis module, please set the parameters as shown below. In the "Data File" field, please select the CSV file generated by this MZmine module.
+After selecting the Statistical Analysis module, please set the parameters as shown below. In the "Data File" field, please select the CSV file generated by this mzmine module.
 
 ![Metaboanalyst settings](metaboanalyst_settings.png)
 
-For details about MetaboAnalyst functions and capabilities, please refer to its documentation.
+For details about MetaboAnalyst functions and capabilities, please refer to their documentation.
 
 ## **Tidymass**
 

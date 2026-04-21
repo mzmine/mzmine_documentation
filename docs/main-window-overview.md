@@ -1,30 +1,34 @@
 # Main window overview
 
-The MZmine 3 man window is made up of mainly four important building blocks.
+The mzmine main window is made up of mainly four important building blocks.
 
-![MZmine main window overview](https://user-images.githubusercontent.com/37407705/136389356-d612dffd-89bd-4eca-87ae-a581eaaa01ab.png)
+![mzmine main window overview](Main_window_overview.png)
 
 ## MS data files and feature lists tab
 
-[1]: The (raw) ms data and feature list tabs. Here you can find your imported data files and
-processed feature lists. _Hint: you can also import files by dragging & dropping them to the ms data
-tab._
+[1]: The (raw) ms data, Feature list, and Libraries tabs. Here you can find your imported raw data files, 
+processed feature lists, and imported spectral libraries.
+!!! tip
+
+    You can also import files by dragging & dropping them to the ms data tab.
 
 ## Main content pane
 
-[2]: The main content pane. Visualisations such as a raw data overview or a feature list can be
+[2]: Landing page and main content pane. Visualisations such as a raw data overview or a feature list can be
 viewed here. This pane can also contain multiple tabs. Every tab can also be opened in a new
 separate window by right-clicking on the header.
+!!! tip
+
+    The landing page has many short cuts to helpful tools e.g. the mzwizard.
 
 ## Main menu
 
 [3]: The main menu. Here you can find methods to import and process your data files and feature
-lists and visualise the results. Furthermore, projects can be saved and preferences can be set.
+lists and visualise the results. Projects can be saved and preferences can be set. Furthermore, the user management as well as the documentation can be accessed.
 
 ## Task overview
 
-[4]: The task overview. Current tasks are displayed and their status and progress are indicated.
-Tasks can also be canceled by right clicking on a task.
+[4]: The progress of the current tasks and batch are displayed and the latest logged activity is displayed. A detailed task overview can be found in the task tab in the main content pane.
 
 ## Page Contributors
 

@@ -12,7 +12,9 @@ This module allows identification of peaks or whole peak lists using an on-line 
 
 [//]: # (TODO Add comment about DBs and Sirius)
 
-:material-lightbulb: If a user is interested in more comprehensive online compound database search, they can export their data to [Sirius](https://bio.informatik.uni-jena.de/software/sirius/) software. 
+<!-- markdown-link-check-disable -->
+:material-lightbulb: If a user is interested in more comprehensive online compound database search, they can export their data to [Sirius](https://bio.informatik.uni-jena.de/software/sirius/) software.
+<!-- markdown-link-check-enable -->
 
 ## **Parameters**
 

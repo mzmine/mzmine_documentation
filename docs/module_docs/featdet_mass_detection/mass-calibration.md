@@ -38,7 +38,12 @@ Selects the library used for ion matching and determination of mass errors. SCL 
 
     *Standard Calibrant Library file*
 
-    File with a list of ion formulas and retention times (xls, xlsx and csv files are supported). This list should contain ions that are expected to be detected in the samples. Files need to contain a first column with the retention time in minutes and a second column with the ion formula strings. Additional columns are optional. Sample standards list file:
+    File with a list of ion formulas and retention times (xls, xlsx and csv (tab, comma or semicolon delimited files are supported). This list should contain ions that are expected to be detected in the samples. Files need to contain a first column with the retention time in minutes and a second column with the ionic formula strings. Optionally, column 3 is used as a name of the standard and column 4 is used the m/z. If only a mz but no name shall be provided, column 3 must exist, but be empty. All rows in the file must have the same length. Sample standards list file:
+  ```
+  1.4,C3H7COO-,butyric acid,1337.1337
+  1.4,C3H7COO-,,1337.1337
+  1.4,C3H7COO-,,
+  ```
 
     *Retention time tolerance (only for SCL)*
 

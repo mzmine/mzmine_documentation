@@ -5,6 +5,14 @@ Since some terms might not be straightforward for new users, a basic explanation
 principles and the terminology used within this documentation is
 provided [here](../../terminology/ion-mobility-terminology.md).
 
+
+!!! tip
+
+    This workflow produces [**Feature lists**](../../module_docs/lc-ms_featdet/featdet_results/featdet_results.md) 
+    as their result. Feature lists are a central part in visualizing the results in the 
+    [**Statistics dashboard**](../../visualization_modules/statistics_dashboard/statistics_dashboard.md) 
+    and in the [**Interactive network visualizer**](../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md). 
+
 ## Supported formats
 
 * Vendor formats:
@@ -20,10 +28,10 @@ provided [here](../../terminology/ion-mobility-terminology.md).
 
 ## Feature detection workflows
 
-Ion mobility data can be processed in MZmine 3 in two ways. The first few steps are different for
+Ion mobility data can be processed in mzmine in two ways. The first few steps are different for
 the two workflows (see below).
 
-1. [LC-IMS-MS workflow via **ADAP Chromatogram builder and IMS expander** **(
+1. [LC-IMS-MS workflow via **Chromatogram builder and IMS expander** **(
    recommended)**](#lc-ms-workflow-recommended)
 2. [LC-IMS-MS workflow via **Ion mobility trace builder / Recursive IMS
    builder**](#lc-ims-ms-workflow)
@@ -56,12 +64,12 @@ module
 is a mandatory step, if the data was imported from an .mzML file (automatically generated via native
 Bruker import).
 
-- [Data import](../../module_docs/io/data-import.md#lc-ims-ms-data)
+- [Data import](../../module_docs/io/data-import.md#ms-data)
 - [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
 - [Mobility scan merging](../../module_docs/featdet_mobility_scan_merging/mobility-scan-merging.md) (
   mzML
   data only)
-- [ADAP Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)
+- [Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md)
 - [Smoothing in retention time dimension (optional)](../../module_docs/featdet_smoothing/smoothing.md)
 - [Resolving in retention time dimension](../../module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md)
 - [Expanding EICs in mobility dimension](../../module_docs/lc-ims-ms_featdet/featdet_ims_expander/ims-expander.md)
@@ -101,7 +109,7 @@ feature intensities from the LC-IMS-MS workflow might not exactly match the fram
 to summing being executed prior to thresholding (for native Bruker data). Furthermore, multiple
 isomers might hide behind a single chromatographic peak.
 
-- [Data import](../../module_docs/io/data-import.md#lc-ims-ms-data)
+- [Data import](../../module_docs/io/data-import.md#ms-data)
 - [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
 - [Ion mobility trace builder](../../module_docs/lc-ims-ms_featdet/featdet_ion_mobility_trace_builder/ion-mobility-trace-builder.md)
 - [Smoothing in retention time dimension (optional)](../../module_docs/featdet_smoothing/smoothing.md)

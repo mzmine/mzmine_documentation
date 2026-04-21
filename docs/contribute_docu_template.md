@@ -34,7 +34,8 @@ Provide here a concise description of the module functioning principles and usag
 
 ## Recommended citations
 !!! info
-    When using MZmine 3 for your work, please consider citing:<br>
+
+    When using mzmine for your work, please consider citing:<br>
     Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.
 
     When using this modules, please consider citing the corresponding publication(s):<br>
@@ -61,7 +62,8 @@ Provide here a brief description for Parameter #3. Optional parameters should be
 
 ---
 
-## Algorithm
+[//]: # (Use {#tag} for stable links that can be used in any link)
+## Algorithm {#algorithm}
 Optional: A more detailed description of the algorithm(s) employed by the module can be provided in this section.
 
 

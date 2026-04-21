@@ -92,11 +92,6 @@ The user can choose from peak's height, area or retention time value to display 
 The user can select the peaks to use in this plot.
 
 
-## Kendrick mass plot
-moved to [4D features plot](../kendrickmass/kendrick_mass_plot.md)
-
-## Van Krevelen diagram
-moved to [Van Krevelen diagram](../vankrevelen/van_krevelen_plot.md)
 
 {{ git_page_authors }}
 

@@ -5,10 +5,10 @@
 The graphical user interface freezes sometimes on remote desktops if the user logs out and logs in
 again. This is a known issue and might be fixed in future JavaFX versions.
 
-## MZmine does not start
+## mzmine does not start
 
 Maybe the MZmine configuration got corrupted (broke). Delete it and reinstall MZmine. The *
-*.mzmine3.conf** file can be found in the user folder and might be hidden. On Windows, activate "
+*.mzmine.conf** file can be found in the user folder and might be hidden. On Windows, activate "
 Show hidden items" in the Explorer/View menu.
 
 ## mzML files not importing
@@ -34,19 +34,22 @@ using the [Waters data connect tool](data_conversion.md#waters).
 
 ## Scans were recognised as empty
 
-This is displayed as a warning and means that some scans did not contain any data. This is not
+This is displayed as a warning and means that some scans did not contain any data. This is **not**
 considered as an error. The warning **may** indicate that a threshold was too high, if conversion
 was applied. You may consider lowering said threshold. If no thresholding was applied, consider
-this a false positive.
+this a false positive. When importing a vendor data format into mzmine, this warming is very likely
+to be a false positive.
 
 ## Zero intensity values in scans
 
 0 intensities in scans.
 
-This error occurs when converting files using an old MSConvert version and the "Peak picking" filter
+This warning may occur when converting files using an old MSConvert version and the "Peak picking"
+filter
 being used after the "title maker". This caused the wrong peak picking algorithm to be used and not
-just adds zero values but also causes falsely recognised m/z values. We highly recommend to
-re-convert the files with the most recent MSConvert version.
+just adds zero values but also causes falsely centroided m/z values. In case you converted the data
+manually without mzmine, we recommend re-converting. In case the issue still appears, keep in mind
+that this is just a warning.
 
 ## Reporting issues
 

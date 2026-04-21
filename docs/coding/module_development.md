@@ -1,4 +1,4 @@
-# **Key steps to MZmine module development**
+# **Key steps to mzmine module development**
 
 ## Coding tutorials
 
@@ -10,7 +10,7 @@ Detailed coding tutorials by Robin Schmid:
 
 ## **1. Define the role and functionality of your module**
 
-Each module in MZmine belongs to some module category (see [MZmine architecture](general_structure.md)). Before starting, try to define category, to which your module will belong - raw data processing, feature detection, visualization, etc.
+Each module in mzmine belongs to some module category (see [MZmine architecture](general_structure.md)). Before starting, try to define category, to which your module will belong - raw data processing, feature detection, visualization, etc.
 
 A good idea is to browse already existing modules. Currently, MZmine contains more than 100 modules, so there are high chances that one of the existing modules may carry similar functionality to the one you want to code. This can help you to create your own module. Assess the scale of the added functionality and how the new module can be integrated with the existing ones.
 For example, if you'd like to add a new filter for the feature list rows, the best option might be not to create a new module but to add the new option as a parameter to the already existing Feature list rows filter.
@@ -24,6 +24,7 @@ You can either do it from command line using git command `git checkout -b new-br
 Go to the folder that corresponds to the functionality of your module (e.g., dataprocessing for the module that will be process features in the feature list). Create a new package in this folder. 
 
 !!! tip
+
      Make sure that a package name starts with a meaningful prefix, such as "filter_" for a module that will filter rows in a feature table.
 
 ## **4. Create necessary classes**
@@ -31,7 +32,8 @@ Go to the folder that corresponds to the functionality of your module (e.g., dat
 Following the module structure described [here](general_structure.md), create Module, Parameters, and Task classes.
 
 !!! tip
-You can directly copy examples for all these classes from the `java/io/github/mzmine/modules/example` folder and **rename them** accordingly. These example files also contain some useful tips.
+
+    You can directly copy examples for all these classes from the `java/io/github/mzmine/modules/example` folder and **rename them** accordingly. These example files also contain some useful tips.
 
 ## **5. Define module name, description, and category**
 
@@ -45,7 +47,8 @@ After you have described all parameters, add parameters to the constructor of yo
 `super(new Parameter[]{parameters go here})`
 
 !!! warning 
- A parameter in the Parameters class should be public static final. 
+ 
+    A parameter in the Parameters class should be public static final. 
 
 ## **7. Define `runModule()` method [For the runnable modules]**
 
@@ -53,7 +56,7 @@ Here you are creating a task that will be launched after user has chosen paramet
 
 ## **8. Work on your Task class**
 
-As you extend the AbstractTask class, some functionality will already be defined. To get the values of the parameters from ParameterSet, use the following approach `parameters.getValue(YourClassParameters.paramererName.getValue()`. 
+As you extend the AbstractTask class, some functionality will already be defined. To get the values of the parameters from ParameterSet, use the following approach `parameters.getValue(YourClassParameters.parameterName)`. 
 You can modify the message by the logger, check for cancelled state, and update progress. Before progress update, implement the logic of your calculations. 
 
 !!! warning 
@@ -63,9 +66,9 @@ You can modify the message by the logger, check for cancelled state, and update 
     If you have to implement some method to process scans, check ScanUtils first, it might already have been implemented.
 
 
-## **9. Integrate a newly created module into MZmine GUI**
+## **9. Integrate a newly created module into mzmine GUI**
 
-As the last step, for your module to be accessible, add it to MainMenu.fxml file. If you wish your module to be accessible in the batch mode, add it in the BatchModeModulesList
+As the last step, for your module to be accessible, add it to the `AbstractWorkspace.java` or the `AcademicWorkspace.java` file. If you wish your module to be accessible in the batch mode, add it in the `BatchModeModulesList.java`
 
 ## **10. Test and debug**
 
@@ -73,7 +76,7 @@ Before pushing your final changes to the remote branch, try to thoroughly test y
 
 ## **11. Create documentation**
 
-Prepare a description for your module that will go into the documentation. Creating a thorough documentation will help more people to used and understand your module. The documentation template can be found [here](../contribute_docu_template.md)
+Prepare a description for your module that will go into the documentation. Creating a thorough documentation will help more people to use and understand your module. The documentation template can be found [here](../contribute_docu_template.md)
 
 ## **12. Push to the remote branch and create a pull request**
 

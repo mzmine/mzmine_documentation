@@ -1,25 +1,33 @@
 # Untargeted LC-MS Workflow
 The workflow proposed herein is intended as a general pipeline for untargeted LC-MS (or LC−MS/MS) data preprocessing. The main goal is essentially to turn the highly-complex LC-MS raw data into a list of features, and corresponding signal intensity, detected across the analysed samples. Such feature lists can then be exported for further downstream analysis (e.g., identification, search against spectral libraries, statistical analysis, etc.). A schematic representation of the workflow is shown below:
 
+
+!!! tip
+
+    This workflow produces [**Feature lists**](../../module_docs/lc-ms_featdet/featdet_results/featdet_results.md) 
+    as their result. Feature lists are a central part in visualizing the results in the 
+    [**Statistics dashboard**](../../visualization_modules/statistics_dashboard/statistics_dashboard.md) 
+    and in the [**Interactive network visualizer**](../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md). 
+
 ![workflow-image](mzmine_workflows_1_lc.png)
 The magenta steps only refer to ion mobility data processing and are omitted here.
 
 
 ## Raw data processing
-The raw data processing consists of essentially two steps: [Data import](../../module_docs/io/data-import.md#lc-ms-data) and [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
+The raw data processing consists of essentially two steps: [Data import](../../module_docs/io/data-import.md#ms-data) and [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md)
   
 ### Raw data import
-Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in MZmine 3. All the supported formats are listed here (LINK to Doc). For more details see the [Data import](../../module_docs/io/data-import.md#lc-ms-data) module.
+Either open (e.g. mzML) and native vendor (e.g. Thermo, Bruker) data formats can be imported in mzmine. All the supported formats can be found [here](../../module_docs/io/data-import.md#ms-data).
 
 ### Mass detection
-This step produces a list (referred to as "mass list") of the m/z values found in each MS scan across the LC run that exceed a user-defined threeshold (i.e. noise level). For more details see the [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md) module.
+This step produces a list (referred to as "mass list") of the m/z values found in each MS scan across the LC run that exceed a user-defined threshold (i.e. noise level). For more details see the [Mass detection](../../module_docs/featdet_mass_detection/mass-detection.md) module.
 
 ## Feature processing
 The goal of the "Feature processing" is to obtain a list of all the detected features (characterized by a RT and m/z value) from the raw LC-MS data.
 
 ### Chromatogram building
 The first step in the "Feature processing" is to build the so-called extracted ion chromatograms (EICs) for each detected mass (see "Mass detection").
-There are two modules in MZmine 3 that can fulfil this task: [ADAP chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) (widely used) and **Grid mass** (create docs).
+For this, use the [Chromatogram builder](../../module_docs/lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md) module.
 
 The "detected" features in each ﬁle are listed in the so-called "feature lists", which are then further processed and aligned to connect corresponding features across all samples.
 
@@ -57,7 +65,7 @@ Gap-filling can be performed on the aligned feature lists to cope with missing f
 ## Export
 Depending on the downstream analyses, there are several export options which are accessible through **Feature list methods** → **Export feature list**.
 
-For GNPS-Feature based molecular networking, see [GNPS-FBMN](../../module_docs/io/data-exchange-with-other-software.md#gnps-fbmniimn-export) or apply molecular networking directly in mzmine [molecular_networking.md](../../module_docs/group_spectral_net/molecular_networking.md)
+For GNPS-Feature based molecular networking, see [GNPS-FBMN](../../module_docs/io/data-exchange-with-other-software.md#gnps-fbmniimn-export) or apply Interactive Molecular Networking directly in mzmine [molecular_networking.md](../../module_docs/group_spectral_net/molecular_networking.md)
 
 ## References
 

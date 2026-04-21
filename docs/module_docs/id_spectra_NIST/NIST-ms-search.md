@@ -49,8 +49,6 @@ _Optional parameter._
 
 Merge multiple high-quality MS/MS spectra into consensus feature instead of using the most intense one. 
 
-More details are available [here](../io/merge_ms2_kai.md).
-
 #### **Integer m/z**
 
 _Optional parameter_. 

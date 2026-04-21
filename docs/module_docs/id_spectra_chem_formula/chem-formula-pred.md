@@ -4,11 +4,16 @@
 
 :material-menu-open: **Feature list methods → Annotation → Search spectra → Chemical formula prediction**
 
-[//]: # (TODO are there two modules for formula prediction - one available from the menu and other from the feature table??)
+This module attempts to calculate all possible molecular formulas for every feature in the
+feature list, using given elemental and heuristic constraints. It runs in parallel across all
+features and stores up to **Max best formulas per feature** ranked candidates per feature.
 
-This module attempts to calculate all possible molecular formulas for every peak in the peak list, using given elemental and heuristic constraints. 
+If Ion Identity Networking (IIN) has already annotated a feature with an adduct type, that
+adduct is used for neutral mass calculation. The **Fallback adduct** is only applied to features
+without an existing adduct annotation.
 
-For a detailed description of the functionality and the embedded algorithms, please see the publication [[1](#references)].
+For a detailed description of the functionality and the embedded algorithms, please see the
+publication [[1](#references)].
 
 ## **References**
 
@@ -20,13 +25,16 @@ For a detailed description of the functionality and the embedded algorithms, ple
 
 ## **Parameters**
 
-#### **Charge**
+#### **Fallback adduct**
 
-The neutral mass is calculated from the peak m/z value, its charge and type of ionization adduct.
+Ionization adduct used to calculate the neutral mass from a feature's m/z value. Applied only to
+features that have no adduct annotation from Ion Identity Networking (IIN) or other annotation
+modules. Default: `[M+H]+`.
 
-#### **Ionization type**
+!!! tip
 
-The neutral mass is calculated from the peak m/z value, its charge and type of ionization adduct.
+    Run Ion Identity Networking before formula prediction so that IIN adduct annotations take
+    precedence over this fallback, giving more accurate neutral masses for annotated features.
 
 #### **Sorting**
 
@@ -193,5 +201,11 @@ where $n_{found}$ is the number of ions for which the neutral loss could be inte
 
     Use only N most abundant signals for scoring.
     :material-lightbulb: This option speeds up the search.
+
+#### **Exclude features above m/z**
+
+Features with an m/z value above this threshold are skipped entirely. Formula prediction
+computation time grows rapidly with molecular mass (the search space expands combinatorially),
+so excluding very high m/z features avoids excessive run times. Default: 800 m/z.
 
 {{ git_page_authors }}

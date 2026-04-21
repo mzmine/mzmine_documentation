@@ -26,7 +26,7 @@ Depending on the **MS level** (MS1 or MS2), all corresponding query scans (e.g.,
 ### Downloads for open spectral libraries
 
 - MassBank of North America: [download](https://mona.fiehnlab.ucdavis.edu/downloads) (download .json)
-- MassBankEU: [download](https://github.com/MassBank/MassBank-data/releases/latest) (download .msp)
+- MassBankEU: [download](https://github.com/MassBank/MassBank-data/releases/latest) (download *_NIST.msp)
 - GNPS (ALL_GNPS_NO_PROPOGATED): [download](https://external.gnps2.org/gnpslibrary) (download .json)
 - MSnLib: [download](https://zenodo.org/records/11163381) (download .mgf)
 - GC/EI-HRMS for lipids: [download](https://github.com/gc-hrms-spectra/Database-of-archeological-relevant-compounds) (download .json)
@@ -36,8 +36,7 @@ Depending on the **MS level** (MS1 or MS2), all corresponding query scans (e.g.,
 - *.json: MassBank of North America (MoNA)
 - *.json: The Global Natural Product Social Molecular Networking (GNPS) (format from the spectral DB submission module)
 - *.mgf: GNPS
-- *.msp: MoNA
-- *.msp: National Institute of Standards and Technology (NIST)
+- *.msp: MoNA, MassBankEU (NIST compatible), National Institute of Standards and Technology (NIST)
 - *.jdx: JCAMP-DX
 
 ## **Parameters**
@@ -49,14 +48,21 @@ Depending on the **MS level** (MS1 or MS2), all corresponding query scans (e.g.,
 The spectral libraries of interest need to be imported before applying spectral library search. 
 Either uses all imported spectral libraries or only the selected libraries.
 
-#### **Scans for matching**
+#### **Merge & select fragment scans**
 
-Choose the MS level of the scans that should be compared with the library and how to handle multiple spectra for one feature. 
-The option 'MS2 (merged)' merges all spectra of a feature into one scan,
-which reduces the amount of spectra for the matching. For matching all spectra individually, use the 'MS2 (all scans)' option.
-If multistep fragmentation was used, choose the MS level ≥ 2 and for GC-EI-MS 'MS1'. 
+This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis 
+(see [detailed description](../filter_scan_merge_select/scan_merge_select.md)). Briefly, either choose
+preset based spectral merging, input scans without merging, or an advanced setup for more options. 
 
-:warning: In case of issues with the scan selection, check how the actual scan numbers are reported in the data files and in MZmine's raw data overview.
+For spectral library matching mzmine recommends using the representative scans = one for each fragmentation energy and one merged across all.
+
+#### **MS level filter**
+
+Select MS2 for fragment spectra with precursor m/z.
+
+Select MS1 for GC-EI-MS spectra. 
+
+:warning: In case of issues with the scan selection, check how the actual scan numbers are reported in the data files and in mzmine's raw data overview.
 
 #### **Precursor m/z tolerance**
 
@@ -120,6 +126,7 @@ These option can be used to include these values as further spectral matching id
 
 :warning: However, this method will boost false matches and needs strict manual interpretation.
 
+
 #### **CCS tolerance**
 
 The [collision cross-section (CCS)](../../terminology/ion-mobility-terminology.md#collisional-cross-section) tolerance can be used in a similar way as the retention time tolerance.
@@ -128,6 +135,14 @@ Accordingly, the CCS value of a query will be compared with the library entries 
 can be set in %.
 
 :warning: If the query or library entry was analyzed without ion mobility (no CCS values), no spectrum will be matched.
+
+#### **Retention index tolerance**
+
+This option can be used to exclude library entries that are not sufficiently close in retention index.
+
+#### **Skip library entries without RIs**
+
+This option can be used to exclude library entries that do not have a defined retention index for the selected column type. Otherwise, those library entries can be used to match any row.
 
 
 #### **^13^C deisotoping**

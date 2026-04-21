@@ -10,6 +10,7 @@ This rule-based annotation approach follows Lipidomics Standards Initiative guid
 !!! tip
     
     Lipid annotations are directly added to the feature list. Matched fragments can be quickly evaluated. To validate the annotation quality right click on the annotated feature list row and select Matched lipid signals.
+
 :material-menu-open: Show → Matched lipid signals
 ![contextmenu](contextmenu-matched-signals.png)
 ![matched-signals](matched-lipid-signals.png)
@@ -17,6 +18,7 @@ This rule-based annotation approach follows Lipidomics Standards Initiative guid
 ## Recommended citations
 
 !!! info
+
     When using the Lipid annotation module consider reading and citing the original publication and the MZmine 3 publication.
 
     1. Korf, A., Jeck, V., Schmid, R., Helmer, P. O., & Hayen, H. (2019). Lipid Species Annotation at Double Bond Position Level with Custom Databases by Extension of the MZmine Open-Source Software Package. Analytical chemistry, 91(8), 5098-5105. doi:10.1021/acs.analchem.8b05493
@@ -38,6 +40,7 @@ Set the allowed min and max for chain length (number of carbons) and double bond
 !!! warning
 
     Lipid chain variation highly depends on the analyzed sample.
+
 !!! tip
 
     Odd chain lipid chains can be skipped by "Only search for even chain length to avoid false positive annotations.

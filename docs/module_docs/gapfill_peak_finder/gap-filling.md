@@ -1,65 +1,126 @@
-# **Peak finder** 
+# Peak finder (multithreaded)
 
-## **Description**
+## Description
 
-:material-lightbulb: It is a recommended gap-filling algorithm.
+:material-lightbulb: This is the recommended gap-filling algorithm.
 
-:material-menu-open: **Feature list methods → Gap filling → Peak finder**.
+:material-menu-open: **Feature list methods → Gap filling → Peak finder**
 
-[//] # (TODO ADD FIGURE ALIGNED TABLE)
+When a feature cannot be detected in a particular sample during LC-MS processing, the alignment
+step assigns a zero-intensity (missing) value for that sample, producing a **gap** in the aligned
+feature table (see [missing values](../../terminology/general-terminology.md#missing-values)).
 
-When a feature cannot be identified/quantified in certain sample will be assigned a zero-intensity value during the feature alingment (see [here](../align_join_aligner/join_aligner.md) for more details).This produces **gaps** in the aligned feature table, commonly referred to as [missing values](../../terminology/general-terminology.md#missing-values).
+Gaps arise from several common causes:
 
-There is a number of occasions where, due to suboptimal feature detection, a _missing value_ is assigned even tough the peak is actually present. Some chromatographic features in an aligned feature list may not be detected in every sample for several reasons, such as:
+1. Peak intensity falls below the minimum threshold of the feature detection step, even though
+   signal is present in the raw data.
+2. The peak was removed by a subsequent filter (e.g., feature shape or intensity filter).
+3. RT or m/z shifts between samples cause misalignment, so the peak is not recognised as the
+   same feature across files.
+4. Co-eluting compounds are resolved in one sample but merged in another, causing the minor
+   component to go undetected.
+5. Feature shape constraints in the resolver discard the peak.
 
-1. Peak intensity below the minimum abundance threshold. The peak will be not detected even though there is a peak, and it can be gap-filled for the alignment process if the peak having the same RT and m/z is detected in other samples.
-[//] # (TODO Explain minimum abundance threshold)
-2. Peak discarded in a previous processing step. Peaks filtered out due to low peak intensity
-3. Misalignment due to shifts in m/z, retention time, or ion mobility within feature lists from different samples (or batches). Might originate from inaccurate mass calibration, etc.
-4. Inaccurate peak detection and deconvolution of co-eluting compounds. Co-eluting features that are not baseline separated might be resolved in one sample but kept unsplit in another 
-5. Feature shape constraints in the resolver or later feature filters
+The Peak finder module addresses this by returning to the original raw data and re-integrating
+the signal in the m/z and RT region expected for each gap. This approach is sometimes called
+back-filling. The algorithm searches the centroided mass spectra (mass lists) and attempts to
+reconstruct a chromatographic peak at the gap location.
 
-All of these reasons can result in undesirable gaps (missing values) in the aligned feature table. Those gaps are not limited to smaller signals but can also affect abundant features. 
+!!! warning 
 
-To account for this problem, the user can use the Peak finder module as a secondary, informed feature finding step. The gap-filling module (_i.e._ _'Peak finder' algorithm_) aims at reducing false missing values and 'fill the gaps' by going back to the original raw data and re-integrating the peak area where the peak is expected. This approch is sometimes reffered to as 'back-filling'.
+    Mass detection must be run on all raw data files before gap filling, because the algorithm
+    reads from the processed mass lists, not raw intensity values.
 
-The algorithm searches for signals within the original centroided mass spectra. It fills the gaps in the feature list according to the user parameters, with the most crucial being **m/z tolerance** and **RT tolerance**. These two tolerances define the window where the algorithm should find the new feature. 
+Gap-filled features are marked with a **grey** background in the feature table
+(feature state: ESTIMATED). Rows where no evidence was found remain empty.
 
-Each feature in the aligned table is examined individually within the RT window associated to the examined features. Algorithm searches for appropriate features in that window. If the user-defined requirements are met, the peak is integrated, and the retrieved peak area is used to reconstruct omitted features and fill the gap.
+![Gap-filling result in the feature table](gap-filling.png)
 
+The module runs the gap-filling algorithm in parallel: raw data files are distributed evenly
+across all available CPU threads, giving significantly faster processing for large studies.
 
-[//] # (TODO ORIGINAL of TEXT above: If requirements are met (e.g. REQUIREMENTS) the peak integrated and the retrieved peak area used to XXX, this filling the gap. and reconstructs omitted chromatographic peaks in “empty” samples by scanning the m/z and retention time region of LC–MS spectra corresponding to the detected peaks in other samples.)
+!!! tip
 
-In the feature table, gap-filled features are marked with a grey color as the feature state (see [feature table description](../lc-ms_featdet/featdet_results/featdet_results.md)). There may still be some gaps in which no evidence for the peak was found, marked by orange.
+    For large datasets (many rows × many samples), use **Process in place** or **Remove** for the
+    original feature list to reduce peak memory usage. Consider pre-filtering with the
+    **Feature list rows filter** to remove features present in fewer than X% of samples before
+    gap filling, as this directly reduces the number of gaps to search.
 
-![Gap-filling](gap-filling.png)
+## Parameters
 
-:warning: DANGER OF DUPLICATED FEATURES. Some features in the dataset can show duplicates, which appear during feature recognition and alignment of samples. The duplicates falsify the exploratory analysis of data and are removed in MZmine.
+![img.png](gap_filling_param.png)
 
-The gap-filled feature table can be further used in downstream data analysis
+#### Name suffix
 
-## **Parameters**
+Suffix appended to the new feature list name. Default: `gap-filled`.
 
-#### **Name suffix**
-Suffix to be added to the peak list name. 
+#### Intensity tolerance
 
-#### **Intensity tolerance**
-Maximum allowed deviation from the expected peak shape in chromatographic direction.
+Maximum fractional deviation allowed between consecutive data points when evaluating the shape
+of a candidate peak in the chromatographic (RT) direction. The algorithm walks outward from the
+apex:
 
-#### **m/z tolerance**
-m/z range which will be applied when searching for the possible feature in the raw data.
+- **Before the apex** (ascending side): a new point is accepted if its intensity is not more
+  than `intTolerance × prevIntensity` below the previous point (i.e., small dips are tolerated).
+- **After the apex** (descending side): a new point is accepted if its intensity has not risen
+  by more than `intTolerance × prevIntensity` above the previous point (i.e., re-ascending
+  signal breaks the peak).
 
-The tolerance can be specified as absolute tolerance (in _m/z_), relative tolerance (in ppm), or both. When both are specified, the tolerance range is calculated using the maximum between the absolute and relative tolerances.
+Default: 20 % (0.2). Lower values enforce a stricter peak shape; higher values allow noisier
+chromatographic profiles to be gap-filled.
 
-#### **Retention time tolerance**
-Retention time range when searching for the possible feature in the raw data.
+#### m/z tolerance
 
-#### **Minimum data points**
-Feature will be used for gap filling only if it satisfies the set minimum number of data points.
+m/z window used to search the raw data for the gap. The tolerance is applied to the average m/z
+of the feature list row (i.e., sample-to-sample tolerance). Both absolute (Da) and relative (ppm)
+values can be specified; the wider of the two is used.
 
-:material-lightbulb: Usually a lower number of data points is used compared to the primary feature finding workflow with the resolvers.
+#### Retention time tolerance
 
-#### **Original feature list**
-User can either keep, remove, or process in place of the original feature list. The latter two increase memory efficiency and throughput while users might want to keep the original feature list as a reference. 
+RT window around the row's average retention time to search for the gap. The window is applied
+symmetrically (±tolerance).
+
+#### Minimum scans (data points)
+
+A candidate peak is only accepted if it contains at least this many data points (scans). Use a
+lower number here than in the primary feature detection step, since gap-filled peaks tend to be
+weaker and narrower. Default: 1.
+
+#### Original feature list
+
+Determines what happens to the input feature list after processing:
+
+- **Keep** — the original list is kept and a new gap-filled copy is added to the project.
+- **Remove** — the original list is removed after gap filling to save memory.
+- **Process in place** — the original list is modified directly; no copy is created.
+
+---
+
+## Algorithm {#algorithm}
+
+1. **Gap identification** — For each row in the feature list, any sample that has no is treated as a
+   gap. The search window is defined as the m/z tolerance range around the row's average m/z
+   combined with the RT tolerance range around the row's average RT.
+
+2. **Parallel file processing** — Raw data files are split into equal-sized groups and assigned
+   to sub-tasks, one per available CPU thread. Each sub-task processes its group of files
+   independently.
+
+3. **Scan-by-scan search** — For each gap, the sub-task iterates over all scans of the
+   corresponding raw data file. In each scan that falls within the RT window, the most intense
+   signal within the m/z range is recorded.
+
+4. **Peak shape validation** — Consecutive data points are grouped into candidate peak segments
+   using the intensity tolerance to detect where the signal starts re-ascending (a new peak
+   begins). Within each segment, the algorithm requires a local maximum inside the RT range to
+   accept the segment as a valid peak candidate.
+
+5. **Best candidate selection** — Among all candidate segments, the one with the highest apex
+   intensity inside the RT range is selected to fill the gap.
+
+6. **Minimum data points filter** — A gap is only filled if the best candidate segment contains
+   at least the configured minimum number of data points.
+
+---
 
 {{ git_page_authors }}

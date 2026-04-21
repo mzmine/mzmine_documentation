@@ -34,11 +34,11 @@ A typical workflow can be as following:
 
 [//]: # ([//]: # &#40;- Old version)
 
-[//]: # (Raw datamethods / Peak detection / ADAP Chromatogram builder builds extracted-ion chromatograms)
+[//]: # (Raw datamethods / Peak detection / Chromatogram builder builds extracted-ion chromatograms)
 
 [//]: # (Peak list methods / Peak deteciton / Chromatogram deconvoltion detects peaks &#40;features&#41; in each chromatogram&#41;)
 
-- "Feature detection → ADAP Chromatogram builder" to build extracted-ion chromatograms
+- "Feature detection → Chromatogram builder" to build extracted-ion chromatograms
 - "Feature detection → Chromatogram resolving → ADAP Resolver" to detect peaks (features) in each chromatogram
 - "Feature list methods → Spectral deconvolution (GC) → Multivariate Curve Resolution" to combine the detected peaks (features) into analytes and builds pure fragmentation mass spectra for each analyte
 - "Feature list methods → Alignment → ADAP Aligner (GC)" to align the analytes produced by the previous step
