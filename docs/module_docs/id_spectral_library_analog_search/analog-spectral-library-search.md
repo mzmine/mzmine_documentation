@@ -44,11 +44,16 @@ and compound identifiers separate from regular spectral-library annotations.
     similarity measure to compare tandem mass spectra, J Cheminform 13, 84 (2021),
     doi:10.1186/s13321-021-00558-4.
 
+    When using DreaMS, please also consider citing:<br>
+    Bushuiev R., Bushuiev A., Samusevich R., Brungs C., Sivic J., Pluskal T. Self-supervised
+    learning of molecular representations from millions of tandem mass spectra using DreaMS,
+    Nature Biotechnology 44, 630-640 (2026), doi:10.1038/s41587-025-02663-3.
+
 ---
 
 ## **Parameters**
 
-![img.png](img.png)
+![Parameter dialog](parameters.png)
 
 #### **Feature lists**
 
@@ -62,7 +67,8 @@ formats are described in the [spectral library search documentation](../id_spect
 #### **Algorithm**
 
 Selects the similarity algorithm and shows the corresponding nested parameters. The available
-choices are **Modified cosine**, **Cosine (no precursor)**, and **MS2Deepscore**.
+choices are **Modified cosine**, **Cosine (no precursor)**, and **MS2Deepscore**. The
+**DreaMS** option is currently disabled and documented below for the upcoming enablement.
 
 ---
 
@@ -198,6 +204,46 @@ default is 0.9.
 
 ---
 
+### Algorithm: DreaMS
+
+DreaMS embeds MS/MS spectra with a transformer model trained to learn molecular representations from
+large collections of tandem mass spectra. In analog spectral library search it will follow the same
+ML matching path as MS2Deepscore: query and library embeddings are compared by dot product, direct
+precursor matches are skipped with a fixed tolerance of 15 ppm or 0.005 m/z, and a modified-cosine
+fallback score is attached for spectrum visualization.
+
+DreaMS is applicable to (IMS)-MS data with soft ionisation.
+
+#### **DreaMS model**
+
+Path to the PyTorch script model file. The matching settings file must be in the same folder and
+named either like the model with `_settings.json` appended or simply `settings.json`. The expected
+model file name is `DreaMS_embedding_model_torchscript.pt`, and the model can be downloaded from
+the parameter dialog.
+
+#### **Merge & select fragment scans**
+
+Controls scan selection before embedding. The prepared analog-search implementation uses the first
+selected fragment scan per row that has a precursor m/z and a mass list.
+
+#### **Min similarity**
+
+Minimum DreaMS similarity required to store a match. The score is scaled from 0 to 1; the default is
+0.75.
+
+#### **k-nearest neighbors** _(Currently not used by analog search)_
+
+The shared DreaMS networking parameter set contains k-nearest-neighbor controls. These are used by
+DreaMS molecular networking to constrain graph density, but the prepared analog spectral library
+search path does not use them for library matching.
+
+#### **Batch size**
+
+Number of spectra processed in one forward pass through the DreaMS model when computing embeddings.
+The default is 32. Lower values reduce memory use but can slow the search.
+
+---
+
 ## Results and network view
 
 Analog hits are written to the **Analog spectral match** row type. This column can be expanded like
@@ -214,9 +260,9 @@ do not create analog nodes by themselves.
 
 ![Analog library search network overview](analog_network.png)
 
-Analog network edges are labeled by the score type that created them, for example analog cosine or
-analog MS2Deepscore. Selecting analog nodes in the network view can also show the backing library
-entries together with selected feature rows in spectrum views.
+Analog network edges are labeled by the score type that created them, for example analog cosine,
+analog MS2Deepscore, or analog DreaMS. Selecting analog nodes in the network view can also show
+the backing library entries together with selected feature rows in spectrum views.
 
 ---
 
@@ -228,7 +274,7 @@ entries together with selected feature rows in spectrum views.
 4. The selected similarity algorithm scores each query-library pair.
 5. Matches that pass the algorithm thresholds are appended to the row's **Analog spectral match**
    list.
-6. Cosine results are sorted by cosine score. MS2Deepscore results are sorted by the ML score and
-   also carry a modified-cosine fallback score for visualization.
+6. Cosine results are sorted by cosine score. MS2Deepscore and DreaMS results are sorted by
+   the ML score and also carry a modified-cosine fallback score for visualization.
 
 {{ git_page_authors }}
