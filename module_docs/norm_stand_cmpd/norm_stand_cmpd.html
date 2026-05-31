@@ -3604,10 +3604,65 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#standard-compounds-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard compounds file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-separator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field separator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#standard-compounds" class="md-nav__link">
     <span class="md-ellipsis">
       
         Standard compounds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mz-tolerance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        m/z tolerance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rt-tolerance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RT tolerance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobility-tolerance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobility tolerance
       
     </span>
   </a>
@@ -3660,6 +3715,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
   
 </li>
       
@@ -6319,10 +6385,65 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#standard-compounds-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard compounds file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-separator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field separator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#standard-compounds" class="md-nav__link">
     <span class="md-ellipsis">
       
         Standard compounds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mz-tolerance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        m/z tolerance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rt-tolerance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RT tolerance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobility-tolerance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobility tolerance
       
     </span>
   </a>
@@ -6378,6 +6499,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6399,48 +6531,91 @@
 
 
 <h1 id="standard-compound-normalizer"><strong>Standard compound normalizer</strong><a class="headerlink" href="#standard-compound-normalizer" title="Permanent link">&para;</a></h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods -&gt; Normalization -&gt; Intensity normalizer -&gt; Intra-sample correction -&gt; Internal standard compounds</strong></p>
 <h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The internal standard normalizer is now part of the <a href="../norm_intensity/norm_intensity.html"><strong>Intensity normalizer</strong></a> to apply all normalization steps in a sequence. </p>
+<p>The internal standard normalizer is configured as step 2 in the <a href="../norm_intensity/norm_intensity.html"><strong>Intensity normalizer</strong></a>, so it can be combined with metadata normalization and QC drift correction in one sequence.</p>
 </div>
-<p>Applies an internal standard compound correction to each feature individually, accounting for
-extraction efficiency and matrix effects within a sample. Internal standard features must be present
-in the detected samples. User can select one or multiple
-internal standard features, which must be present in all raw data files. Then feature height (and
-area) of
-each feature is normalized by either the <strong>nearest standard</strong> or a <strong>weighted contribution</strong> of all
+<p>The standard compound normalizer applies an internal standard correction to each feature
+individually. Internal standards are loaded from a CSV or TSV file, matched to rows in the feature
+list, and used as reference points at their measured m/z and RT positions. Each feature abundance is
+then corrected by either the nearest internal standard or by a weighted contribution of all matched
 standards.</p>
-<p>In case a weighted contribution is used, the contributions of all standards are weighted by
-distance. The distance of the standard feature to the feature being normalized is calculated as</p>
-<div class="arithmatex">\[distance = MZvsRT_{Balance} * MZ_{difference} + RT_{difference}\]</div>
-<p>where <span class="arithmatex">\(MZvsRT_{Balance}\)</span> is a multiplier of m/z difference set by <strong>m/z vs RT balance</strong> parameter</p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Feature lists must be aligned prior to normalization.</p>
+<p>This correction is useful for compensating sample-specific extraction efficiency and matrix effects.
+The selected internal standards must be detected in the feature list and, depending on the
+<strong>Require all standards</strong> setting, in every reference raw file used for the correction.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Feature lists must be aligned before normalization.</p>
+<hr />
 <h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<p><img alt="img.png" src="parameters.png" /></p>
+<h4 id="standard-compounds-file">Standard compounds file<a class="headerlink" href="#standard-compounds-file" title="Permanent link">&para;</a></h4>
+<p>CSV or TSV file containing one row per expected internal standard compound. The file must contain a
+header row. By default, mzmine expects columns named <code>mz</code>, <code>rt</code>, and <code>name</code>; the column names can be
+changed in <strong>Standard compounds</strong>.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>name,mz,rt,mobility
+Caffeine-d9,203.1234,5.42,1.23
+Reserpine-d9,618.4430,8.91,1.56
+</code></pre></div>
+<p>The m/z and RT columns are required for matching. The RT values should use the same minute-based RT
+scale as the feature list. Mobility is optional and is only used when the mobility column is
+selected.</p>
+<h4 id="field-separator">Field separator<a class="headerlink" href="#field-separator" title="Permanent link">&para;</a></h4>
+<p>Character used to split the standard compounds file. The default is <code>,</code> for CSV files. Use <code>\t</code> for
+tab-separated TSV files.</p>
 <h4 id="standard-compounds">Standard compounds<a class="headerlink" href="#standard-compounds" title="Permanent link">&para;</a></h4>
-<p>List of features to use as internal standards. Each selected feature provides a reference point
-at its (m/z, RT) position for correction.</p>
+<p>Column mapping for the standards file. Select the columns to import and enter their corresponding
+header names from the file. m/z and RT must be selected. The name column is selected by default for
+readable annotations, and the mobility column can be selected when ion mobility should be part of the
+matching step.</p>
+<h4 id="mz-tolerance">m/z tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
+<p>Maximum allowed m/z difference when an imported standard is matched to feature-list rows. The default
+is <code>0.005 m/z</code> or <code>5 ppm</code>.</p>
+<h4 id="rt-tolerance">RT tolerance<a class="headerlink" href="#rt-tolerance" title="Permanent link">&para;</a></h4>
+<p>Maximum allowed retention-time difference when an imported standard is matched to feature-list rows.
+The default is <code>0.03 min</code>.</p>
+<h4 id="mobility-tolerance">Mobility tolerance<a class="headerlink" href="#mobility-tolerance" title="Permanent link">&para;</a></h4>
+<p>Maximum allowed mobility difference when matching imported standards. This tolerance is only applied
+when the mobility column is selected in <strong>Standard compounds</strong>.</p>
 <h4 id="normalization-type">Normalization type<a class="headerlink" href="#normalization-type" title="Permanent link">&para;</a></h4>
-<p>How the correction factor is derived from the available internal standards:</p>
+<p>How the correction factor is derived from the available matched standards:</p>
 <ul>
-<li><strong>Nearest</strong>: uses the single IS compound with the shortest distance (in m/z–RT space) to the
-  feature being normalized.</li>
-<li><strong>Weighted</strong>: uses a distance-weighted average over all IS compounds; features that are
-  very close to a standard (distance = 0) are averaged directly.</li>
+<li><strong>Nearest standard</strong>: uses the internal standard with the shortest distance to the feature being normalized.</li>
+<li><strong>Weighted contribution of all standards</strong>: uses an inverse-distance weighted average of all standards. If a feature has the same m/z and RT as one or more standards, those direct matches are averaged directly.</li>
 </ul>
 <h4 id="mz-vs-rt-balance">m/z vs RT balance<a class="headerlink" href="#mz-vs-rt-balance" title="Permanent link">&para;</a></h4>
 <p>Multiplier applied to the m/z difference when computing the distance between a feature and an
-internal standard. Increase this value to weight m/z similarity more heavily relative to RT
+internal standard. Increase this value to weight m/z similarity more strongly relative to RT
 similarity.</p>
 <h4 id="reference-samples">Reference samples<a class="headerlink" href="#reference-samples" title="Permanent link">&para;</a></h4>
-<p>Sample types whose IS signal is used to build the correction model. Non-reference samples are
-corrected by interpolating between the nearest reference samples in acquisition order. It is best to
-add the same internal standards to all samples, but this option allows using internal standards
-from standard injections like QCs to interpolate changes to other samples.</p>
+<p>Sample types whose internal-standard signal is used to build the correction model. Other samples are
+corrected by interpolation in acquisition order through the Intensity normalizer. This allows using
+internal standards from QC or standard injections to estimate the correction for nearby samples.</p>
 <h4 id="require-all-standards">Require all standards<a class="headerlink" href="#require-all-standards" title="Permanent link">&para;</a></h4>
-<p>When enabled, normalization fails if any selected IS compound is missing from a raw file.
-Disable to proceed with available standards when some may be absent in certain samples.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p>When enabled, normalization fails if any matched standard is missing from a raw file or has an invalid
+or zero abundance. Disable this option to continue with the standards that are available in each file.
+Even when disabled, each file still needs at least one usable standard.</p>
+<hr />
+<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
+<ol>
+<li>The standards file is read with the selected field separator and column mapping.</li>
+<li>Each imported standard is matched to the best feature-list row within the m/z and RT tolerances.
+   If mobility is selected, the mobility tolerance is also applied.</li>
+<li>The matched standard rows are added as compound annotations and used as reference points with
+   their average m/z, average RT, and selected abundance measure.</li>
+<li>For each feature, the normalizer calculates the distance to each matched standard:</li>
+</ol>
+<div class="arithmatex">\[distance = MZvsRT_{Balance} * MZ_{difference} + RT_{difference}\]</div>
+<ol>
+<li>The selected <strong>Normalization type</strong> determines the standard abundance used for that feature.</li>
+<li>The normalization factor is the inverse of the selected standard abundance:</li>
+</ol>
+<div class="arithmatex">\[factor = 1 / standardAbundance\]</div>
+<p>The Intensity normalizer multiplies this factor with any other enabled normalization steps and stores
+the resulting normalization functions with the feature list.</p>
+<hr />
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -6461,7 +6636,7 @@ Disable to proceed with available standards when some may be absent in certain s
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="April 15, 2026 11:13:50 UTC">April 15, 2026 11:13:50</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="May 31, 2026 17:23:43 UTC">May 31, 2026 17:23:43</span>
   </span>
 
     
@@ -6478,6 +6653,7 @@ Disable to proceed with available standards when some may be absent in certain s
     <nav>
       
         <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
+        <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
     </nav>
   </span>
