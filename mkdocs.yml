@@ -128,6 +128,7 @@ nav:
           - Manual compound annotation: module_docs/id_addmanualcomp/manual-annotation.md
       - Spectra search:
           - Spectral library search: module_docs/id_spectral_library_search/spectral_library_search.md
+          - Analog spectral library search: module_docs/id_spectral_library_analog_search/analog-spectral-library-search.md
           - NIST MS search: module_docs/id_spectra_NIST/NIST-ms-search.md
           - Chemical formula prediction: module_docs/id_spectra_chem_formula/chem-formula-pred.md
           - Lipid annotation: module_docs/id_lipid_annotation/lipid-annotation.md
