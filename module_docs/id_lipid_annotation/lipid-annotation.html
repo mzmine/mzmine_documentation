@@ -3977,6 +3977,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#lipid-analysis-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lipid analysis type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lipid-classes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4003,6 +4014,28 @@
     <span class="md-ellipsis">
       
         m/z tolerance MS1 level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-overall-quality-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum overall quality score [%]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-quality-score-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Override quality score weights
       
     </span>
   </a>
@@ -4066,6 +4099,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results-and-downstream-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results and downstream review
+      
+    </span>
+  </a>
   
 </li>
       
@@ -4138,17 +4182,6 @@
         
           <li class="md-nav__item">
   <a href="#add-lipid-chains" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Add lipid chains
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-lipid-chains_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Add lipid chains
@@ -5071,6 +5104,34 @@
     
   
     Lipid annotation summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_modules/lipid_annotation_qc_dashboard/lipid_annotation_qc_dashboard.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lipid annotation quality control dashboard
   
 
     
@@ -6546,6 +6607,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#lipid-analysis-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lipid analysis type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lipid-classes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6572,6 +6644,28 @@
     <span class="md-ellipsis">
       
         m/z tolerance MS1 level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-overall-quality-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum overall quality score [%]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-quality-score-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Override quality score weights
       
     </span>
   </a>
@@ -6635,6 +6729,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results-and-downstream-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results and downstream review
+      
+    </span>
+  </a>
   
 </li>
       
@@ -6707,17 +6812,6 @@
         
           <li class="md-nav__item">
   <a href="#add-lipid-chains" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Add lipid chains
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-lipid-chains_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Add lipid chains
@@ -6805,12 +6899,12 @@
 <h1 id="lipid-annotation">Lipid Annotation<a class="headerlink" href="#lipid-annotation" title="Permanent link">&para;</a></h1>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> Feature list methods → Annotation → Search spectra → Lipid annotation</p>
-<p>This module uses lipid class and ion notation specific fragmentation rules to annotate lipids in the feature lists. Lipids will be annotated based on accurate m/z on MS1 level and matched lipid fragments in MS2 spectra. 
-This rule-based annotation approach follows Lipidomics Standards Initiative guidelines and uses the latest shorthand notation for lipid structure from mass spectrometry to avoid over-annotation. Annotations on species and molecular species level are currently supported. 
-<img alt="featurelist" src="featurelist-example.png" /></p>
+<p>This module uses lipid-class-specific and ion-specific fragmentation rules to annotate lipids in feature lists. Candidate lipids are rank lipid annotations by an overall quality score. This score combines MS1 mass accuracy, optional MS/MS explained intensity, adduct agreement, isotope pattern similarity, interference by competing annotations, and analysis-type-specific retention-time behavior.</p>
+<p>This rule-based workflow follows Lipidomics Standards Initiative guidelines and uses current shorthand notation to avoid over-annotation. Species-level and molecular-species-level annotations are currently supported.</p>
+<p><img alt="featurelist" src="featurelist-example.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Lipid annotations are directly added to the feature list. Matched fragments can be quickly evaluated. To validate the annotation quality right click on the annotated feature list row and select Matched lipid signals.</p>
+<p>Lipid annotations are added directly to the feature list and sorted by their overall quality score. Matched fragments can be inspected quickly. To validate the annotation quality, right click on the annotated feature list row and select Matched lipid signals.</p>
 </div>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> Show → Matched lipid signals
 <img alt="contextmenu" src="contextmenu-matched-signals.png" />
@@ -6818,76 +6912,120 @@ This rule-based annotation approach follows Lipidomics Standards Initiative guid
 <h2 id="recommended-citations">Recommended citations<a class="headerlink" href="#recommended-citations" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>When using the Lipid annotation module consider reading and citing the original publication and the MZmine 3 publication.</p>
+<p>When using the Lipid annotation module, consider citing the original lipid annotation publication, the custom lipid class publication if applicable, and the MZmine 3 publication.</p>
 <ol>
 <li>Korf, A., Jeck, V., Schmid, R., Helmer, P. O., &amp; Hayen, H. (2019). Lipid Species Annotation at Double Bond Position Level with Custom Databases by Extension of the MZmine Open-Source Software Package. Analytical chemistry, 91(8), 5098-5105. doi:10.1021/acs.analchem.8b05493</li>
-<li>Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.</li>
+<li>Rudt, E., Froning, M., Heuckeroth, S., et al. (2025). Custom lipid classes in MZmine. Analytical Chemistry, 97(14), 7781-7788. doi:10.1021/acs.analchem.4c05989</li>
+<li>Schmid, R., Heuckeroth, S., Korf, A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.</li>
 </ol>
 </div>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <p><img alt="matched-signals" src="lipid-annotation-parameters.png" /></p>
+<h4 id="lipid-analysis-type">Lipid analysis type<a class="headerlink" href="#lipid-analysis-type" title="Permanent link">&para;</a></h4>
+<p>Select the acquisition or analysis type used for the experiment:</p>
+<ul>
+<li><code>LC-MS (reversed phase)</code> enables reversed-phase retention-time trend scoring.</li>
+<li><code>LC-MS (HILIC)</code> enables HILIC class-window scoring.</li>
+<li><code>Direct infusion</code> and <code>Imaging</code> disable retention-time-based scoring.</li>
+</ul>
 <h4 id="lipid-classes">Lipid classes<a class="headerlink" href="#lipid-classes" title="Permanent link">&para;</a></h4>
-<p>This parameter lists all pre-configured lipid classes in MZmine. Each selected lipid class will be added to the search scope.  </p>
+<p>This parameter lists all pre-configured lipid classes in mzmine. Each selected lipid class is added to the search scope.</p>
 <h4 id="side-chain-parameters">Side chain parameters<a class="headerlink" href="#side-chain-parameters" title="Permanent link">&para;</a></h4>
 <p><img alt="side-chains" src="side-chain-parameters.png" /></p>
-<p>Set the allowed min and max for chain length (number of carbons) and double bond equivalents (DBE) in a lipid chain. The number of chains is defined in the lipid class.
-12 to 26 carbons and 0 to 6 DBEs is recommended as a starting point.</p>
+<p>Set the allowed minimum and maximum chain length (number of carbons) and double bond equivalents (DBE) for lipid chains. The number of chains is defined by the selected lipid class.</p>
+<p><code>12</code> to <code>26</code> carbons and <code>0</code> to <code>6</code> DBEs is a good starting point.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Lipid chain variation highly depends on the analyzed sample.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Odd chain lipid chains can be skipped by "Only search for even chain length to avoid false positive annotations.</p>
+<p>Enable <code>Only search for even chain length</code> to skip odd-chain candidates when they are unlikely in your samples.</p>
 </div>
 <h4 id="mz-tolerance-ms1-level">m/z tolerance MS1 level<a class="headerlink" href="#mz-tolerance-ms1-level" title="Permanent link">&para;</a></h4>
-<p>Enter m/z tolerance for exact mass matching on MS1 level. Lipids outside the m/z tolerance will not be matched.</p>
+<p>Enter the m/z tolerance for precursor exact-mass matching on the MS1 level. Lipids outside this tolerance are not matched.</p>
+<h4 id="minimum-overall-quality-score">Minimum overall quality score [%]<a class="headerlink" href="#minimum-overall-quality-score" title="Permanent link">&para;</a></h4>
+<p>Set the minimum QC-based lipid annotation score required to keep an annotation. The overall score combines:</p>
+<ul>
+<li>MS1 mass accuracy</li>
+<li>optional MS/MS explained intensity</li>
+<li>adduct agreement between the lipid annotation and the row ion identity</li>
+<li>isotope pattern similarity</li>
+<li>interference by competing annotations in the same row</li>
+<li>optional elution-order scoring for LC-based experiments</li>
+</ul>
+<h4 id="override-quality-score-weights">Override quality score weights<a class="headerlink" href="#override-quality-score-weights" title="Permanent link">&para;</a></h4>
+<p>Optionally, override the default component weights of the overall quality score. This is useful if you want to emphasize or down-weight specific evidence types such as MS/MS, isotope pattern, adduct agreement, or elution order.</p>
+<p>For <code>Direct infusion</code> and <code>Imaging</code>, retention-time-related weights are not used.</p>
 <h4 id="search-for-lipid-class-specific-fragments-in-msms-spectra">Search for lipid class-specific fragments in MS/MS spectra<a class="headerlink" href="#search-for-lipid-class-specific-fragments-in-msms-spectra" title="Permanent link">&para;</a></h4>
 <p><img alt="msms-parameters" src="MSMS-Parameters.png" /></p>
-<p>Activate this parameter to highly increase lipid annotation confidence.</p>
+<p>Activate this parameter to increase annotation confidence by searching for class-specific fragments in MS/MS spectra.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Mass detection on MS2 level needs to be performed first.</p>
 </div>
-<p>Set a mz tolerance for matching signals in MS2 spectra.
-Set a Minimum Explained intensity to accept a lipid annotation. Matches below the set value will be removed, except the optional parameter Keep unconfirmed annotations is selected.
-Unconfirmed annotations will be marked with a comment in the feature list.</p>
-<h4 id="search-for-custom-lipid-class">Search for custom lipid class<a class="headerlink" href="#search-for-custom-lipid-class" title="Permanent link">&para;</a></h4>
-<p><img alt="custom-lipid-class-parameter" src="custom-lipid-class-parameter.png" />
-If selected, the user can add their own custom lipid class that will be added to the search scope. Click the Add... button or double-click on an already defined custom lipid class to start with the configuration. Configured custom classes can be exported and re-imported for further analysis.</p>
+<p>This submodule currently provides:</p>
+<ul>
+<li>fragment scan selection and merging settings</li>
+<li>an MS2 m/z tolerance for fragment matching</li>
+<li><code>Keep unconfirmed annotations</code></li>
+</ul>
+<p>If <code>Keep unconfirmed annotations</code> is enabled, MS1-only matches without sufficient MS/MS evidence are retained and marked with a warning comment in the feature list. Otherwise, only MS/MS-confirmed matches are kept.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In the current implementation, MS/MS explained intensity is no longer configured as a separate hard cutoff. It contributes to the overall quality score instead.</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You want your lipid class preset in MZmine? Contribute to the code or contact the developers.</p>
+<p>MS/MS confirmation currently requires at least one major fragment or two minor fragments.</p>
+</div>
+<h4 id="search-for-custom-lipid-class">Search for custom lipid class<a class="headerlink" href="#search-for-custom-lipid-class" title="Permanent link">&para;</a></h4>
+<p><img alt="custom-lipid-class-parameter" src="custom-lipid-class-parameter.png" /></p>
+<p>If selected, user-defined custom lipid classes are added to the search scope. Click <code>Add...</code> or double-click an existing custom class to open the configuration dialog. Configured custom classes can be exported and re-imported for later analyses.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want a lipid class to become part of the default presets, consider contributing it to the code base or contacting the developers.</p>
 </div>
 <p><img alt="custom-lipid-class-dialog" src="custom-lipid-class-dialog.png" /></p>
 <h4 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h4>
-<p>Optional parameters</p>
 <h4 id="ions-to-ignore">Ions to ignore<a class="headerlink" href="#ions-to-ignore" title="Permanent link">&para;</a></h4>
-<p>Selected ion notations can be ignored for annotations. This is very important in negative mode when using acetate or formate buffer solutions as LC eluent. Lipids that form adducts with formate in negative mode usually also form adducts with acetate. Therefore, most preset lipid classes have implemented fragmentation rules for both ion notations.
-Since MZmine does not know the experimental LC setup, it is highly recommended to manually rule out ions that are unlikely to be formed.</p>
+<p>Selected ion notations can be excluded from annotation. This is especially important in negative mode when acetate or formate buffers are used as LC eluents. Many preset lipid classes contain fragmentation rules for both ion types, so excluding chemically implausible adducts can strongly reduce false positives.</p>
+<p>Since mzmine does not know the exact LC setup, it is recommended to rule out ion types that are unlikely to form in the experiment.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>The delta between formate and acetate is CH2, exactly the difference of a lipid chain length. Including both ions when analyzing negative mode data will result false positive annotations.</p>
+<p>The mass difference between formate and acetate is <code>CH2</code>, exactly the same difference as one lipid-chain carbon increment. Including both ions in negative-mode data can therefore create false positive annotations.</p>
 </div>
 <h4 id="show-database">Show database<a class="headerlink" href="#show-database" title="Permanent link">&para;</a></h4>
 <p><img alt="lipid-database" src="lipid-database.png" /></p>
-<p>By clicking the button "Show database" at the bottom of the window, a tab holding information on the selected lipid classes is opened.
-All lipids are displayed in a table and in two Kendrick mass plots &#40;KMD CH2 left, KMD H right&#41;. Lipids that interfere in the selected m/z window are marked grey, isobaric lipids are marked red. The others are displayed in green.</p>
+<p>Click <code>Show database</code> at the bottom of the setup window to open a tab containing all lipids generated for the current class and chain settings.</p>
+<p>The generated lipids are displayed in a table and in two Kendrick mass plots &#40;KMD CH2 on the left, KMD H on the right&#41;. Lipids interfering in the selected m/z window are shown in grey, isobaric lipids in red, and the remaining entries in green.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>As a starting point select a preset lipid class from the combo box at the bottem left corner.</p>
+<p>A good starting point is to select one preset lipid class in the combo box at the bottom left corner and inspect the generated search space.</p>
 </div>
+<h2 id="results-and-downstream-review">Results and downstream review<a class="headerlink" href="#results-and-downstream-review" title="Permanent link">&para;</a></h2>
+<p>After annotation, matched lipids are stored directly on the feature list rows together with their annotation status and overall quality score.</p>
+<ul>
+<li>Use <code>Show lipid annotation QC dashboard</code> to get a full overview of the annotation quality.</li>
+<li>Use <code>Show → Matched lipid signals</code> to inspect the fragment evidence of a selected annotation.</li>
+<li>Use <a href="../../visualization_modules/lipid_annotation_summary/lipid_annotation_summary.html">Lipid annotation summary</a> for a quick class-level overview of the annotated feature list.</li>
+<li>Use <a href="../../visualization_modules/ecn_plots/ecn_plots.html">ECN plots</a> for retention-time trend inspection of annotated lipids.</li>
+<li>Use <a href="../../visualization_modules/lipid_annotation_qc_dashboard/lipid_annotation_qc_dashboard.html">Lipid annotation quality control dashboard</a> to inspect lipid annotation summary, Kendrick mass plots, annotation quality, retention-time analysis, matched signals, and isotope patterns in one place.</li>
+<li>Use <code>Lipid annotation multi-row cleanup</code> to remove duplicate lipid annotations across rows. Cleanup can be applied globally or only within an RT tolerance window, and can prioritize preferred ionization types for selected lipid classes.</li>
+</ul>
 <h2 id="custom-lipid-classes-and-fragmentation-rules">Custom lipid classes and fragmentation rules<a class="headerlink" href="#custom-lipid-classes-and-fragmentation-rules" title="Permanent link">&para;</a></h2>
-<p>As described in the parameters section, custom lipid classes can be defined, stored and reused. 
-The following parameters need be set up:</p>
+<p>As described above, custom lipid classes can be defined, stored, exported, and reused.</p>
+<p>The following parameters need to be configured:</p>
 <h4 id="lipid-category">Lipid Category<a class="headerlink" href="#lipid-category" title="Permanent link">&para;</a></h4>
-<p>Select a lipid category. The selected lipid category influences the lipid annotation algorithm since different rules are applied for species and molecular species level annotation construction. E.g. when using a sphingolipid chain type and a sphingolipid related fragmentation rule, make sure to set the lipid category to Sphingolipids.
-Currently featured lipid categories:
-- Fatty Acyls
-- Gylcerolipids
-- Glycerophospholipids
-- Sphingolipids
-- Sterol Lipids</p>
+<p>Select the lipid category. The selected category influences the annotation algorithm because different rules are applied for species-level and molecular-species-level construction. For example, sphingolipid chain types and sphingolipid fragmentation rules should be used with the <code>Sphingolipids</code> category.</p>
+<p>Currently available lipid categories:</p>
+<ul>
+<li>Fatty Acyls</li>
+<li>Glycerolipids</li>
+<li>Glycerophospholipids</li>
+<li>Sphingolipids</li>
+<li>Sterol Lipids</li>
+</ul>
 <h4 id="lipid-main-class">Lipid Main Class<a class="headerlink" href="#lipid-main-class" title="Permanent link">&para;</a></h4>
 <p>Select a lipid main class. The selection is for reference only and has no impact on the annotation process.</p>
 <h4 id="custom-lipid-class-name">Custom lipid class name<a class="headerlink" href="#custom-lipid-class-name" title="Permanent link">&para;</a></h4>
@@ -6899,26 +7037,27 @@ Currently featured lipid categories:
 <h4 id="custom-lipid-class-abbreviation">Custom lipid class abbreviation<a class="headerlink" href="#custom-lipid-class-abbreviation" title="Permanent link">&para;</a></h4>
 <p>Define an abbreviation of the lipid class. The abbreviation will be used for the shorthand annotation.</p>
 <h4 id="lipid-backbone-molecular-formula">Lipid backbone molecular formula<a class="headerlink" href="#lipid-backbone-molecular-formula" title="Permanent link">&para;</a></h4>
-<p>Define the molecular formula of a lipid class without lipid chains. E.g. for Diacylglycerophosphocholines (PC) use the formula of glycerol-choline C8H20O6PN.</p>
+<p>Define the molecular formula of a lipid class without lipid chains. For example, for diacylglycerophosphocholines (<code>PC</code>) use the glycerol-choline backbone formula <code>C8H20O6PN</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Compared to other lipid categories, sphingolipids share atoms in the backbone chain and the polar headgroup. Therefore, the determination of the backbone formula is more complicated.
-E.g. for Sphingosine use C3H9N as the lipid backbone formula. Missing oxygens will be added by the selected Sphingolipid backbone chain.</p>
+<p>Compared to other lipid categories, sphingolipids share atoms in the backbone chain and the polar headgroup. Therefore, the determination of the backbone formula is more complicated.</p>
+<p>For example, for sphingosine use <code>C3H9N</code> as the lipid backbone formula. Missing oxygens are added by the selected sphingolipid backbone chain.</p>
 </div>
 <h4 id="add-lipid-chains">Add lipid chains<a class="headerlink" href="#add-lipid-chains" title="Permanent link">&para;</a></h4>
-<p>Add lipid side chains by selecting the Add... button. The following lipid chains are currently supported:
-- Acyl chain
-- Acyl mono hydroxy chain
-- Alkyl chain
-- Amid chain
-- Amid mono hydroxy chain
-- Shpingolipid mono hydroxy backbone chain
-- Shpingolipid di hydroxy backbone chain
-- Shpingolipid tri hydroxy backbone chain</p>
-<h4 id="add-lipid-chains_1">Add lipid chains<a class="headerlink" href="#add-lipid-chains_1" title="Permanent link">&para;</a></h4>
+<p>Add lipid side chains by selecting <code>Add...</code>. The following chain types are currently supported:</p>
+<ul>
+<li>Acyl chain</li>
+<li>Acyl mono hydroxy chain</li>
+<li>Alkyl chain</li>
+<li>Amid chain</li>
+<li>Amid mono hydroxy chain</li>
+<li>Sphingolipid mono hydroxy backbone chain</li>
+<li>Sphingolipid di hydroxy backbone chain</li>
+<li>Sphingolipid tri hydroxy backbone chain</li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>When using Spingolipid backbone chains make sure to use Sphingolipids as Lipid category.</p>
+<p>When using sphingolipid backbone chains, make sure to use <code>Sphingolipids</code> as the lipid category.</p>
 </div>
 <h3 id="add-fragmentation-rules">Add fragmentation rules<a class="headerlink" href="#add-fragmentation-rules" title="Permanent link">&para;</a></h3>
 <p><img alt="fragmntation_rules_parameters" src="lipid_fragementation_rule_parameters.png" /></p>
@@ -6929,68 +7068,25 @@ E.g. for Sphingosine use C3H9N as the lipid backbone formula. Missing oxygens wi
 <h4 id="lipid-fragmentation-rule-type">Lipid fragmentation rule type<a class="headerlink" href="#lipid-fragmentation-rule-type" title="Permanent link">&para;</a></h4>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Use the pseudo spectra on the right containing in-silico fragments based on defined rules, to validate your custom fragmentation rules </p>
+<p>Use the pseudo spectrum on the right, which contains in-silico fragments based on the defined rules, to validate custom fragmentation rules.</p>
 </div>
-<p>Following lipid fragmentation rule types are currently supporter:
-- Headgroup fragment
-  - Fix ion formula: C5H15NO4P+ for choline head group fragment
-- Headgroup fragment nl
-  - Fix neutral loss: C2H8NO4P for PE head group loss 
-- Acylchain fragment
-  - [M-H]- form of any acyl chain
-- Acylchain fragment nl
-  - Neutral loss of an acyl chain
-- Acylchain plus formula fragment
-  - An acyl chain fragment plus a defined formula 
-- Acylchain plus formula fragment nl
-  - A neutral loss of an acyl chain plus a defined formula
-- Acylchain minus formula fragment
-  - An acyl chain fragment minus a defined formula
-- Acylchain minus formula fragment nl
-  - A neutral loss of an acyl chain minus a defined formula
-- Two acylchains plus formula fragment
-  - Two acyl chains combined plus a defined formula. Select CL lipid class to see an example
-- Alkylchain plus formula fragment
-  - An alkyl chain fragment plus a defined formula</p>
+<p>The following fragmentation rule groups are currently supported:</p>
+<ul>
+<li>Headgroup rules: <code>Headgroup fragment</code>, <code>Headgroup fragment nl</code></li>
+<li>Acyl-chain rules: <code>Acylchain fragment</code>, <code>Acylchain fragment nl</code>, <code>Acylchain plus formula fragment</code>, <code>Acylchain plus formula fragment nl</code>, <code>Acylchain minus formula fragment</code>, <code>Acylchain minus formula fragment nl</code>, <code>Two acylchains plus formula fragment</code></li>
+<li>Alkyl-chain rules: <code>Alkylchain fragment</code>, <code>Alkylchain fragment nl</code>, <code>Alkylchain plus formula fragment</code>, <code>Alkylchain plus formula fragment nl</code>, <code>Alkylchain minus formula fragment</code>, <code>Alkylchain minus formula fragment nl</code></li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Use the following Sphingolipid related rule types only when selecting Sphingolipids as Lipid Category.</p>
+<p>Use sphingolipid-related rules only when <code>Sphingolipids</code> is selected as the lipid category.</p>
 </div>
 <ul>
-<li>Sphingolipid mono hydroxy backbone chain fragment</li>
-<li>Fragment of the sphingolipid backbone chain</li>
-<li>Sphingolipid di hydroxy backbone chain fragment</li>
-<li>Fragment of the sphingolipid backbone chain</li>
-<li>Sphingolipid tri hydroxy backbone chain fragment</li>
-<li>Fragment of the sphingolipid backbone chain</li>
-<li>Sphingolipid mono hydroxy backbone chain minus formula fragment</li>
-<li>Fragment of the sphingolipid backbone chain minus a defined formula</li>
-<li>Sphingolipid di hydroxy backbone chain minus formula fragment</li>
-<li>Fragment of the sphingolipid backbone chain minus a defined formula</li>
-<li>Sphingolipid tri hydroxy backbone chain minus formula fragment</li>
-<li>Fragment of the sphingolipid backbone chain minus a defined formula</li>
-<li>Amid chain fragment</li>
-<li>Fragment of an amid chain</li>
-<li>Amid chain fragment nl</li>
-<li>Neutral loss of an amid chain</li>
-<li>Amid chain plus formula fragment</li>
-<li>Amid chain plus formula fragment</li>
-<li>Amid chain plus formula fragment nl</li>
-<li>A neutral loss of an amid chain plus a defined formula</li>
-<li>Amid chain minus formula fragment</li>
-<li>Amid chain minus formula fragment</li>
-<li>Amid chain minus formula fragment nl</li>
-<li>A neutral loss of an amid chain minus a defined formula</li>
-<li>Amid mono hydroxy chain fragment </li>
-<li>Fragment of an oxidized amid chain</li>
-<li>Amid mono hydroxy chain plus formula fragment</li>
-<li>Oxidized amid chain plus formula fragment</li>
-<li>Amid mono hydroxy chain minus formula fragment</li>
-<li>Oxidized amid chain minus formula fragment</li>
-<li>Precursor</li>
-<li>Special case fore fatty acids, which checks if ONLY the precursor is present. </li>
+<li>Sphingolipid backbone rules: mono-, di-, and tri-hydroxy backbone fragments; plus-formula fragments; plus-formula neutral losses; minus-formula fragments; and minus-formula neutral losses</li>
+<li>Amid-chain rules: <code>Amid chain fragment</code>, <code>Amid chain fragment nl</code>, <code>Amid chain plus formula fragment</code>, <code>Amid chain plus formula fragment nl</code>, <code>Amid chain minus formula fragment</code>, <code>Amid chain minus formula fragment nl</code></li>
+<li>Oxidized amid-chain rules: <code>Amid mono hydroxy chain fragment</code>, <code>Amid mono hydroxy chain plus formula fragment</code>, <code>Amid mono hydroxy chain minus formula fragment</code></li>
+<li><code>Precursor</code>: special case for fatty acids that checks if only the precursor is present</li>
 </ul>
-<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:kyrasolaris01@gmail.com'>kyrasolaris01</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:ansgar.korf@mzio.io'>Ansgar Korf</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:kyrasolaris01@gmail.com'>kyrasolaris01</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -7011,7 +7107,7 @@ E.g. for Sphingosine use C3H9N as the lipid backbone formula. Missing oxygens wi
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 25, 2025 10:29:24 UTC">November 25, 2025 10:29:24</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="April 21, 2026 09:33:20 UTC">April 21, 2026 09:33:20</span>
   </span>
 
     
@@ -7027,6 +7123,7 @@ E.g. for Sphingosine use C3H9N as the lipid backbone formula. Missing oxygens wi
     </span>
     <nav>
       
+        <a href="mailto:ansgar.korf@mzio.io">Ansgar Korf</a>, 
         <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
         <a href="mailto:kyrasolaris01@gmail.com">kyrasolaris01</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
