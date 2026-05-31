@@ -3,6 +3,9 @@
 :material-menu-open: **Feature list methods -> Annotation -> Search spectra -> Analog spectral
 library search**
 
+!!! info
+   Analog search was added in mzmine 4.10
+
 ## **Description**
 
 The analog spectral library search compares feature list rows against imported spectral libraries
