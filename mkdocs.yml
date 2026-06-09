@@ -235,12 +235,12 @@ plugins:
       show_contribution: false
   - git-revision-date-localized:
       type: datetime
-  - with-pdf:
-      output_path: documentation.pdf
-      author: The mzmine Community
-      cover_title: mzmine
-      cover_subtitle: Documentation
-      cover_logo: docs/img/mzmine_logo_CMYK.png
+#  - with-pdf:
+#      output_path: documentation.pdf
+#      author: The mzmine Community
+#      cover_title: mzmine
+#      cover_subtitle: Documentation
+#      cover_logo: docs/img/mzmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:
