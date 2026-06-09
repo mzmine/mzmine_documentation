@@ -49,7 +49,7 @@ calculation.
 Specify how many of the data points of the chromatogram shall be included in the baseline
 calculation.
 This values depends on the acquisition rate of the detector and if
-previous [binning](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md#bin-width-manualauto) 
+previous [binning](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md#bin-width-manualauto-_optional_) 
 has been applied. The higher the acquisition rate, the lower the **percentage of samples**.
 
 ##### Loess
@@ -101,7 +101,7 @@ parameter is shown here:
 
 Increasing the number of iterations may reduce the occurrence of ghost peaks due to baseline
 correction.
-In case this does not help, [trimming traces](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md#trim-rt-range) may be the better
+In case this does not help, [trimming traces](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md#trim-rt-range-_optional_) may be the better
 option.
 
 ![iterations.png](iterations.png)
