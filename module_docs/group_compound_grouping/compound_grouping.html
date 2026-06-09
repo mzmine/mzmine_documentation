@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/mrm_setquant/mrm-set-quant-mass.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/group_compound_grouping/compound_grouping.html">
       
       
-        <link rel="prev" href="../mrm_mrmtoscans/mrm-to-scans.html">
+        <link rel="prev" href="../id_ion_networking/iin/iin.html">
       
       
-        <link rel="next" href="../featdet_smoothing/smoothing.html">
+        <link rel="next" href="config_compound_representations.html">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Set MRM quantifiers - mzmine documentation</title>
+        <title>Compound grouping (beta) - mzmine documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#set-mrm-quantifiers" class="md-skip">
+        <a href="#compound-grouping-beta" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Set MRM quantifiers
+              Compound grouping (beta)
             
           </span>
         </div>
@@ -1937,20 +1937,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_8" >
         
           
           <label class="md-nav__link" for="__nav_12_8" id="__nav_12_8_label" tabindex="0">
@@ -1971,7 +1969,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2014,37 +2012,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Set MRM quantifiers
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="mrm-set-quant-mass.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../mrm_setquant/mrm-set-quant-mass.html" class="md-nav__link">
         
   
   
@@ -2060,98 +2031,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parameters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#feature-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Feature lists
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quantifier-ion-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quantifier ion list
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#column-headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Column headers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rt-tolerance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        RT tolerance
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mz-tolerance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        m/z tolerance
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2726,18 +2605,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_17" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_17" checked>
         
           
           <label class="md-nav__link" for="__nav_12_17" id="__nav_12_17_label" tabindex="0">
@@ -2758,7 +2639,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_17_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_17_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12_17">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2829,10 +2710,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../group_compound_grouping/compound_grouping.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compound grouping (beta)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="compound_grouping.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2848,6 +2756,254 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended citations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representative-row" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Representative row
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-correlation-iin-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple correlation &amp; IIN (default)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple correlation &amp; IIN (default)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mz-tolerance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        m/z tolerance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retention-time-tolerance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retention time tolerance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-density" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum density
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outputs and side effects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual editing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual editing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-representative-row" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set representative row
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-compound-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Merge compound rows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-compound-row" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Split compound row
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-intensity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring compound-row intensity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-correlation-iin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple correlation &amp; IIN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2860,7 +3016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../group_compound_grouping/config_compound_representations.html" class="md-nav__link">
+      <a href="config_compound_representations.html" class="md-nav__link">
         
   
   
@@ -6397,6 +6553,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#recommended-citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended citations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6420,10 +6587,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#quantifier-ion-list" class="md-nav__link">
+  <a href="#strategy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quantifier ion list
+        Strategy
       
     </span>
   </a>
@@ -6431,32 +6598,177 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#column-headers" class="md-nav__link">
+  <a href="#representative-row" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Column headers
+        Representative row
       
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#rt-tolerance" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategies" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RT tolerance
+        Strategies
       
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-correlation-iin-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple correlation &amp; IIN (default)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple correlation &amp; IIN (default)">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#mz-tolerance" class="md-nav__link">
     <span class="md-ellipsis">
       
         m/z tolerance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retention-time-tolerance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retention time tolerance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-density" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum density
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outputs and side effects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual editing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual editing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-representative-row" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set representative row
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-compound-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Merge compound rows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split-compound-row" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Split compound row
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-intensity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring compound-row intensity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-correlation-iin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple correlation &amp; IIN
       
     </span>
   </a>
@@ -6488,37 +6800,165 @@
   
 
 
-<h1 id="set-mrm-quantifiers">Set MRM quantifiers<a class="headerlink" href="#set-mrm-quantifiers" title="Permanent link">&para;</a></h1>
+<h1 id="compound-grouping-beta">Compound grouping (beta)<a class="headerlink" href="#compound-grouping-beta" title="Permanent link">&para;</a></h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Feature grouping → Compound grouping (beta)</strong></p>
+<p>Groups feature list rows that represent the same chemical compound — adducts, isotopologues,
+in-source fragments, and correlation members — into <strong>compound rows</strong>. A compound row links its
+member rows under a single representative row and is the unit consumed by the Compound dashboard
+and by downstream per-compound exports.</p>
+<p>The module consumes the output of upstream feature grouping and requires at least one of:</p>
+<ul>
+<li><strong>Ion Identity Networks</strong> (from the <a href="../id_ion_networking/iin/iin.html">Ion Identity Networking</a>
+  module)</li>
+<li><strong>MS1 correlation map</strong> (from
+  the <a href="../id_ion_networking/metacorr/metacorr.html">Correlation grouping</a>
+  module).</li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>To process multiple reaction monitoring (MRM) data, the MRM service of mzmine is required. This feature is
-included in the mzmine PRO subscription. Academic program and other users can reach out to inquire
-<a href="https://mzio.io/#contact">access options</a>.</p>
+<p>Run <a href="../id_ion_networking/metacorr/metacorr.html">Correlation grouping</a> and/or
+<a href="../id_ion_networking/iin/iin.html">Ion Identity Networking</a> first — without one of those, the
+module aborts with a validation message.</p>
 </div>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>MRM → Set MRM quantifiers</strong></p>
-<p>The <a href="../mrm_mrmtoscans/mrm-to-scans.html">MRM to Scans module</a> automatically sets the most intense transition as the quantifier ion. However, some MRMs may be more challenging and shall be quantified by a different transition. Here, the Set MRM quantifiers module can help to select the specific ions needed for accurate quantification.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>You can look at the current quantifier ion mass by enabling the "Feature:MRM transitions" in the feature table by selecting the small "+" in the upper right corner of the feature table.
-<img alt="img.png" src="mrm_transition_table.png" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Beta</p>
+<p>The module is marked beta in the menu. It is safe to use but might be subject to change to improve and strengthen the algorithm in the future.</p>
 </div>
+<h2 id="recommended-citations">Recommended citations<a class="headerlink" href="#recommended-citations" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When using mzmine for your work, please consider citing:<br>
+Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry
+data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.</p>
+<p>When using this module on data that relies on Ion Identity Networking, please also cite:<br>
+Schmid, R., Petras, D., Nothias, LF. et al. Ion identity molecular networking for mass
+spectrometry-based metabolomics in the GNPS environment. Nat Commun 12, 3832 (2021).
+https://doi.org/10.1038/s41467-021-23953-9</p>
+</div>
+<hr />
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <h4 id="feature-lists">Feature lists<a class="headerlink" href="#feature-lists" title="Permanent link">&para;</a></h4>
-<p>Select the feature lists in which the quantifier ion shall be re-set.</p>
-<h4 id="quantifier-ion-list">Quantifier ion list<a class="headerlink" href="#quantifier-ion-list" title="Permanent link">&para;</a></h4>
-<p>Select a file that contains the necessary quantifier ion information in a tabular format (comma, tabulator, semicolon delimited). The file may contain additional columns that are not necessary here.</p>
+<p>The feature list(s) to group. Each list is processed independently and gets its own compound list
+attached.</p>
+<h4 id="strategy">Strategy<a class="headerlink" href="#strategy" title="Permanent link">&para;</a></h4>
+<p>Selects the algorithm that decides which feature rows belong to the same compound. Each strategy
+exposes its own sub-parameters via the combo box. Two strategies are available:</p>
+<ul>
+<li><strong>Simple correlation &amp; IIN</strong> <em>(default)</em></li>
+</ul>
+<p>See the <a href="#strategies">Strategies</a> section below for details.</p>
+<h4 id="representative-row">Representative row<a class="headerlink" href="#representative-row" title="Permanent link">&para;</a></h4>
+<p>Selects how the representative row of each compound is picked from its members. The representative
+is the row exposed by <code>Feature list → row.getBestFeatureListRow()</code> semantics: it is what other
+modules read when they need a single per-compound feature row (intensity export, annotation
+display, etc.). Two options are available:</p>
+<ul>
+<li>
+<p><strong>Prefer annotated highest row (default)</strong> — tiered preference:</p>
+<ol>
+<li>Highest-intensity row that is identified (compound DB / spectral library / lipid / manual /
+   formula annotation).</li>
+<li>Otherwise, highest-intensity row carrying any Ion Identity.</li>
+<li>Otherwise, highest-intensity row overall.</li>
+</ol>
+</li>
+<li>
+<p><strong>Ion type ranking</strong> — primary score is the row's ion type position in the tier list:
+  <code>M+H → M-H → M+ → M- → Na+ → Cl- → K+ → NH4+ → Formate-H</code>. Ties broken by intensity.
+  Rows must carry a <em>clean</em> single-adduct ion (one molecule, no neutral losses, no clusters) to
+  qualify; otherwise the ultimate fallback is the highest-intensity row.</p>
+</li>
+</ul>
+<p>Neither selector exposes user-tunable parameters.</p>
+<hr />
+<h2 id="strategies">Strategies<a class="headerlink" href="#strategies" title="Permanent link">&para;</a></h2>
+<h3 id="simple-correlation-iin-default">Simple correlation &amp; IIN <em>(default)</em><a class="headerlink" href="#simple-correlation-iin-default" title="Permanent link">&para;</a></h3>
+<p>Seeds compounds from clean Ion Identity Networks, attaches loose correlated rows to the best seed,
+then peels dense communities out of the residual correlation graph. Conservative — keeps compound
+sizes small unless evidence is strong.</p>
+<h4 id="mz-tolerance"><em>m/z</em> tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
+<p>Intra-sample <em>m/z</em> tolerance used when matching isotopologue spacings during role assignment.
+Default: <strong>5 ppm or 1 mDa</strong> (whichever is broader).</p>
+<h4 id="retention-time-tolerance">Retention time tolerance<a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h4>
+<p>Maximum allowed RT difference between a member and the representative when checking isotopologue
+and coherence relations. Default: <strong>0.03 min</strong>.</p>
+<h4 id="minimum-density">Minimum density<a class="headerlink" href="#minimum-density" title="Permanent link">&para;</a></h4>
+<p>Minimum edge density <code>[0..1]</code> required to accept a residual correlation cluster (rows without an
+Ion Identity Network) as a compound. <code>1.0</code> requires a clique; lower values accept looser
+communities. Default: <strong>0.4</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Since the <a href="#quantifier-ion-list">quantifier ion list</a> only selects the necessary information from the file, you can use the same file for the <a href="../id_prec_local_cmpd_db/local-cmpd-db-search.html">Local compound database search</a> or in the MRM wizard.</p>
+<p>Lower the density threshold if your data has weak but consistent co-elution patterns (e.g.
+high-resolution LC-IMS-MS); raise it if you see too many unrelated rows being clumped
+together.</p>
 </div>
-<h4 id="column-headers">Column headers<a class="headerlink" href="#column-headers" title="Permanent link">&para;</a></h4>
-<p>Set the column headers in the <a href="#quantifier-ion-list">quantifier ion list</a> file. mzmine will search for the respective headers in the file and read the data from it. The file may contain additional columns that are not necessary here. All columns (Q1 <em>m</em>/<em>z</em>, Quantifier m/z, RT) are necessary.</p>
-<h4 id="rt-tolerance">RT tolerance<a class="headerlink" href="#rt-tolerance" title="Permanent link">&para;</a></h4>
-<p>Set an RT tolerance between the entry in the <a href="#quantifier-ion-list">quantifier ion list</a> and the detected RT in the feature list. This is the option to set different quantifiers to different features of the same precursor m/z.</p>
-<h4 id="mz-tolerance">m/z tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
-<p>Set an <em>m</em>/<em>z</em> tolerance between the entry in the <a href="#quantifier-ion-list">quantifier ion list</a> and the <em>m</em>/<em>z</em> in the feature list. Usually, the <em>m</em>/<em>z</em> is the set <em>m</em>/<em>z</em> in the acquisition software and does not fluctuate as it would in HRMS, where the actual <em>m</em>/<em>z</em> value is part of the detection.</p>
 <hr />
-<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
+<h2 id="outputs">Outputs and side effects<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h2>
+<p>When the task completes, the selected feature lists each carry a populated <strong>compound list</strong>:</p>
+<ul>
+<li>One <strong>compound row</strong> per group, with a designated <strong>representative member</strong>.</li>
+<li>Other members are tagged with a <strong>role</strong> based on their relation to the representative:<ul>
+<li><strong>ADDUCT</strong> — same Ion Identity Network, different adduct ion type (confidence 0.90).</li>
+<li><strong>ISOTOPOLOGUE</strong> — <em>m/z</em> delta matches a known isotope spacing (default tolerance 0.005 Da,
+  up to 4× multiples) and RT within tolerance (confidence 0.85).</li>
+<li><strong>IN_SOURCE_FRAGMENT</strong> — ion type carries a neutral loss or cluster part (confidence 0.70).</li>
+<li><strong>CORRELATED</strong> — joined only via the correlation edge, no IIN evidence (confidence 0.50).</li>
+<li><strong>REPRESENTATIVE</strong> — the selected representative row (confidence 1.0).</li>
+</ul>
+</li>
+<li>Each compound row carries a confidence score combining size, IIN fraction, and RT coherence.</li>
+</ul>
+<p>An applied-method record is appended to the feature list so the operation is reproducible from
+the project XML.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the feature list is structurally mutated (rows added/removed) while the task is running,
+the result is discarded — re-run the module after any such change.</p>
+</div>
+<hr />
+<h2 id="manual-editing">Manual editing<a class="headerlink" href="#manual-editing" title="Permanent link">&para;</a></h2>
+<p>After the automated grouping, three context-menu actions on the Compound dashboard let you adjust
+compound rows manually. Each is recorded as an applied method so the project can be replayed.</p>
+<h4 id="set-representative-row">Set representative row<a class="headerlink" href="#set-representative-row" title="Permanent link">&para;</a></h4>
+<p>Promotes a member row of a compound to be the new representative; the previous representative is
+demoted to <strong>CORRELATED</strong>.</p>
+<p><strong>Parameters:</strong> target compound ID, new representative row ID.</p>
+<h4 id="merge-compound-rows">Merge compound rows<a class="headerlink" href="#merge-compound-rows" title="Permanent link">&para;</a></h4>
+<p>Merges one or more compound rows (and/or extra individual feature rows) into a target compound.
+The target's representative is preserved; representatives from merged compounds are demoted to
+<strong>CORRELATED</strong>. Fully consumed source compounds are removed from the compound list.</p>
+<p><strong>Parameters:</strong> target compound ID, other compound IDs (comma-separated, may be empty), extra
+feature row IDs to pull in (comma-separated, may be empty).</p>
+<h4 id="split-compound-row">Split compound row<a class="headerlink" href="#split-compound-row" title="Permanent link">&para;</a></h4>
+<p>Moves selected member rows out of a compound into a new compound row. The new compound inherits
+the source's confidence and neutral mass. The source compound is dropped if it ends up empty.</p>
+<p><strong>Parameters:</strong> source compound ID, member row IDs to move (comma-separated).</p>
+<hr />
+<h2 id="config-intensity">Configuring compound-row intensity<a class="headerlink" href="#config-intensity" title="Permanent link">&para;</a></h2>
+<p>A separate module —
+<a href="config_compound_representations.html"><strong>Configure compound representations</strong></a> —
+controls how each compound row exposes its per-raw-file intensity (area, height, normalized
+variants). Run it after Compound grouping to switch between using the representative member's
+feature, summing across all members, or summing only members that carry an Ion Identity.</p>
+<hr />
+<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
+<h3 id="simple-correlation-iin">Simple correlation &amp; IIN<a class="headerlink" href="#simple-correlation-iin" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Build correlation adjacency lists</strong> from the MS1 correlation map.</li>
+<li><strong>Seed from clean IINs only</strong> — networks where every member's best Ion Identity points to that
+   same network. Members of these networks form initial compound groups via Union-Find.</li>
+<li><strong>Attach loose rows to a single best seed</strong> — for each non-IIN row, count edges to each seeded
+   group; assign to the group with the highest edge count, tie-broken by summed correlation
+   score. Multi-membership only on a genuine tie.</li>
+<li><strong>Peel dense residual communities</strong> — in the subgraph of rows that are neither seeded nor
+   attached, greedily pick the highest-degree node, take its closed neighborhood, peel
+   low-degree members until edge density meets the <strong>Minimum density</strong> threshold, commit the
+   remaining set as a compound. Leftover isolated rows become singleton compounds.</li>
+<li><strong>Assign roles</strong> via <code>RoleAssigner</code> (see <a href="#outputs">Outputs</a>) and compute a per-compound
+   confidence as <code>0.3 × size + 0.5 × IIN-fraction + 0.2 × RT-coherence</code>.</li>
+</ol>
+<hr />
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a></span></p>
 
 
 
@@ -6539,7 +6979,7 @@ included in the mzmine PRO subscription. Academic program and other users can re
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 25, 2025 10:29:24 UTC">November 25, 2025 10:29:24</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="June 2, 2026 16:55:04 UTC">June 2, 2026 16:55:04</span>
   </span>
 
     
@@ -6550,13 +6990,12 @@ included in the mzmine PRO subscription. Academic program and other users can re
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
       
     </span>
     <nav>
       
-        <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
-        <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>
+        <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>
     </nav>
   </span>
 
