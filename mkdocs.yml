@@ -66,6 +66,7 @@ nav:
           - MRM to Scans: module_docs/mrm_mrmtoscans/mrm-to-scans.md
           - Set MRM quantifiers: module_docs/mrm_setquant/mrm-set-quant-mass.md
       - Smoothing: module_docs/featdet_smoothing/smoothing.md
+      - Baseline correction: module_docs/uv/uv_baseline_correction/uv_baseline_correction.md
       - Resolving:
           - Local minimum resolver: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
           - Wavelet resolver: module_docs/featdet_resolver_wavelet/wavelet_resolver.md
