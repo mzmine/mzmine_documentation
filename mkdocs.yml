@@ -126,6 +126,7 @@ nav:
       #  - Spectral library creation: module_docs/id_spectral_library_creation/spectral_library_creation.md
       - Precursor mass search:
           - Local database search: module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md
+          - BioTransformer: module_docs/id_biotransformer/biotransformer.md
           - Precursor search in local spectral MS/MS library: module_docs/id_prec_local_spectra_lib/local-spectra-lib-search.md
           - Manual compound annotation: module_docs/id_addmanualcomp/manual-annotation.md
       - Spectra search:
