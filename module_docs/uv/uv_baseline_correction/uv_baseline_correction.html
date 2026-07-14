@@ -25,7 +25,7 @@
     
     
       
-        <title>Baseline correction (Other detectors) - mzmine documentation</title>
+        <title>Baseline correction - mzmine documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#baseline-correction-other-detectors" class="md-skip">
+        <a href="#baseline-correction" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Baseline correction (Other detectors)
+              Baseline correction
             
           </span>
         </div>
@@ -1236,34 +1236,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../filter_raw_data/baseline-corrections.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Baseline corrections
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../filter_raw_data/align-scans.html" class="md-nav__link">
         
   
@@ -2076,6 +2048,376 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Baseline correction
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="uv_baseline_correction.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Baseline correction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended citations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raw-data-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Raw data files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trace selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suffix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suffix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baseline-corrector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baseline corrector
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shared parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exclude-peaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exclude peaks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#percentage-of-baseline-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Percentage of baseline samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correctors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correctors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correctors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arpls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        arPLS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="arPLS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smoothness-lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smoothness (lambda)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-iterations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Max iterations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LOESS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LOESS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bandwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bandwidth
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polynomial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Polynomial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Polynomial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#degree-of-polynomial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Degree of polynomial
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#percentage-of-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Percentage of samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smoothness-arpls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smoothness (arPLS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     
@@ -2087,10 +2429,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_11" >
         
           
-          <label class="md-nav__link" for="__nav_12_10" id="__nav_12_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_11" id="__nav_12_11_label" tabindex="0">
             
   
   
@@ -2108,8 +2450,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_11">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2282,10 +2624,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_12" >
         
           
-          <label class="md-nav__link" for="__nav_12_11" id="__nav_12_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_12" id="__nav_12_12_label" tabindex="0">
             
   
   
@@ -2303,8 +2645,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_12">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2477,10 +2819,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_16" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_17" >
         
           
-          <label class="md-nav__link" for="__nav_12_16" id="__nav_12_16_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_17" id="__nav_12_17_label" tabindex="0">
             
   
   
@@ -2498,8 +2840,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_16_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_16">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_17">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2616,10 +2958,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_17" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_18" >
         
           
-          <label class="md-nav__link" for="__nav_12_17" id="__nav_12_17_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_18" id="__nav_12_18_label" tabindex="0">
             
   
   
@@ -2637,8 +2979,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_17_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_17">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_18">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2811,10 +3153,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_18" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_19" >
         
           
-          <label class="md-nav__link" for="__nav_12_18" id="__nav_12_18_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_19" id="__nav_12_19_label" tabindex="0">
             
   
   
@@ -2832,8 +3174,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_18_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_18">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_19">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3118,10 +3460,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_19" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_20" >
         
           
-          <label class="md-nav__link" for="__nav_12_19" id="__nav_12_19_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_20" id="__nav_12_20_label" tabindex="0">
             
   
   
@@ -3139,8 +3481,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_19">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_20">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3341,10 +3683,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_20" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_21" >
         
           
-          <label class="md-nav__link" for="__nav_12_20" id="__nav_12_20_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_21" id="__nav_12_21_label" tabindex="0">
             
   
   
@@ -3362,8 +3704,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_20">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_21">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3452,10 +3794,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_21" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_22" >
         
           
-          <label class="md-nav__link" for="__nav_12_21" id="__nav_12_21_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_22" id="__nav_12_22_label" tabindex="0">
             
   
   
@@ -3473,8 +3815,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_21_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_21">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_22">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3647,10 +3989,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_22" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_23" >
         
           
-          <label class="md-nav__link" for="__nav_12_22" id="__nav_12_22_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_23" id="__nav_12_23_label" tabindex="0">
             
   
   
@@ -3668,8 +4010,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_22_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_22">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_23">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3814,10 +4156,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_23" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_24" >
         
           
-          <label class="md-nav__link" for="__nav_12_23" id="__nav_12_23_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_24" id="__nav_12_24_label" tabindex="0">
             
   
   
@@ -3835,8 +4177,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_23_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_23">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_24">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4037,10 +4379,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_24" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_25" >
         
           
-          <label class="md-nav__link" for="__nav_12_24" id="__nav_12_24_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_25" id="__nav_12_25_label" tabindex="0">
             
   
   
@@ -4058,8 +4400,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_24_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_24">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_25">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4150,10 +4492,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_25" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_26" checked>
         
           
-          <label class="md-nav__link" for="__nav_12_25" id="__nav_12_25_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_26" id="__nav_12_26_label" tabindex="0">
             
   
   
@@ -4171,8 +4513,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_25_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_12_25">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_26_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12_26">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4261,7 +4603,7 @@
   <span class="md-ellipsis">
     
   
-    Baseline correction (Other detectors)
+    Baseline correction
   
 
     
@@ -4279,7 +4621,7 @@
   <span class="md-ellipsis">
     
   
-    Baseline correction (Other detectors)
+    Baseline correction
   
 
     
@@ -4303,6 +4645,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended citations
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
@@ -4350,34 +4703,100 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#baseline-correctors" class="md-nav__link">
+  <a href="#baseline-corrector" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Baseline correctors
+        Baseline corrector
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Baseline correctors">
-      <ul class="md-nav__list">
+</li>
         
-          <li class="md-nav__item">
-  <a href="#exclude-peaks-all-correctors" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exclude peaks (all correctors)
+        Shared parameters
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Exclude peaks (all correctors)">
+    <nav class="md-nav" aria-label="Shared parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#percentage-of-samples" class="md-nav__link">
+  <a href="#exclude-peaks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Percentage of samples
+        Exclude peaks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#percentage-of-baseline-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Percentage of baseline samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correctors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correctors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correctors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arpls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        arPLS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="arPLS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smoothness-lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smoothness (lambda)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-iterations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Max iterations
       
     </span>
   </a>
@@ -4393,12 +4812,12 @@
   <a href="#loess" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Loess
+        LOESS
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Loess">
+    <nav class="md-nav" aria-label="LOESS">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4444,7 +4863,7 @@
   <a href="#degree-of-polynomial" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Degree of Polynomial
+        Degree of polynomial
       
     </span>
   </a>
@@ -4471,11 +4890,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#optimization" class="md-nav__link">
@@ -4490,7 +4904,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#percentage-of-samples_1" class="md-nav__link">
+  <a href="#percentage-of-samples" class="md-nav__link">
     <span class="md-ellipsis">
       
         Percentage of samples
@@ -4501,10 +4915,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#iterations-loess" class="md-nav__link">
+  <a href="#smoothness-arpls" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Iterations (LOESS)
+        Smoothness (arPLS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
       
     </span>
   </a>
@@ -6565,6 +6990,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#recommended-citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended citations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6610,34 +7046,100 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#baseline-correctors" class="md-nav__link">
+  <a href="#baseline-corrector" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Baseline correctors
+        Baseline corrector
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Baseline correctors">
-      <ul class="md-nav__list">
+</li>
         
-          <li class="md-nav__item">
-  <a href="#exclude-peaks-all-correctors" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exclude peaks (all correctors)
+        Shared parameters
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Exclude peaks (all correctors)">
+    <nav class="md-nav" aria-label="Shared parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#percentage-of-samples" class="md-nav__link">
+  <a href="#exclude-peaks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Percentage of samples
+        Exclude peaks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#percentage-of-baseline-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Percentage of baseline samples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correctors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correctors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correctors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arpls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        arPLS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="arPLS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smoothness-lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Smoothness (lambda)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-iterations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Max iterations
       
     </span>
   </a>
@@ -6653,12 +7155,12 @@
   <a href="#loess" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Loess
+        LOESS
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Loess">
+    <nav class="md-nav" aria-label="LOESS">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -6704,7 +7206,7 @@
   <a href="#degree-of-polynomial" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Degree of Polynomial
+        Degree of polynomial
       
     </span>
   </a>
@@ -6731,11 +7233,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#optimization" class="md-nav__link">
@@ -6750,7 +7247,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#percentage-of-samples_1" class="md-nav__link">
+  <a href="#percentage-of-samples" class="md-nav__link">
     <span class="md-ellipsis">
       
         Percentage of samples
@@ -6761,10 +7258,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#iterations-loess" class="md-nav__link">
+  <a href="#smoothness-arpls" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Iterations (LOESS)
+        Smoothness (arPLS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
       
     </span>
   </a>
@@ -6796,7 +7304,12 @@
   
 
 
-<h1 id="baseline-correction-other-detectors">Baseline correction (Other detectors)<a class="headerlink" href="#baseline-correction-other-detectors" title="Permanent link">&para;</a></h1>
+<h1 id="baseline-correction">Baseline correction<a class="headerlink" href="#baseline-correction" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This documentation covers the MS and Other detector workflow. The difference is either selecting a
+feature lists or other raw files + traces.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>To process data from other detectors, the Other detector service of mzmine is required. This feature
@@ -6805,10 +7318,21 @@ inquire <a href="https://mzio.io/#contact">access options</a>.</p>
 </div>
 <p>Baseline correction is a useful tool to correct for large drifts in baseline during chromatographic
 separation. However, it can be tricky to optimize the baseline correction.</p>
+<p>The module fits an estimated baseline to each selected trace and subtracts it. Corrected
+intensities are clipped at zero, so the baseline itself may drop below zero (e.g. for detector
+drifts) without producing negative signals. Four baseline correctors are available in the user
+interface: <a href="#arpls">arPLS</a> (default), <a href="#loess">LOESS</a>, <a href="#polynomial">Polynomial</a> and
+<a href="#spline">Spline</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>While baseline correction can correct some drifts in the baseline, the better approach is usually to
 acquire a reference wavelength and reference the acquired data on that during the data acquisition.</p>
+</div>
+<h2 id="recommended-citations">Recommended citations<a class="headerlink" href="#recommended-citations" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When using the <a href="#arpls">arPLS</a> baseline corrector, please also cite:<br>
+Baek, S.-J., Park, A., Ahn, Y.-J., Choo, J. Baseline correction using asymmetrically reweighted penalized least squares smoothing. Analyst 140, 250-257 (2015). https://doi.org/10.1039/c4an01061b</p>
 </div>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <p><img alt="img.png" src="parameters.png" /></p>
@@ -6822,53 +7346,90 @@ correct all existing traces, but only the ones you want to correlate with the MS
 see <a href="../otherdetector_glossary.html#trace-selection-parameter">trace selection parameter</a>.</p>
 <h4 id="suffix">Suffix<a class="headerlink" href="#suffix" title="Permanent link">&para;</a></h4>
 <p>A suffix that will be appended to the name of the individual trace.</p>
-<h4 id="baseline-correctors">Baseline correctors<a class="headerlink" href="#baseline-correctors" title="Permanent link">&para;</a></h4>
-<h5 id="exclude-peaks-all-correctors">Exclude peaks (all correctors)<a class="headerlink" href="#exclude-peaks-all-correctors" title="Permanent link">&para;</a></h5>
-<p>If selected, two iterations per baseline correction will be performed internally. Initially the
-baseline is corrected for the full chromatogram. Then, the baseline is subtracted and a peak
-detection is performed to exclude peaks from the baseline calculation. In a second iteration, the
-baseline correction is reapplied to the chromatogram, without including the peaks in the baseline
-calculation.</p>
-<h6 id="percentage-of-samples">Percentage of samples<a class="headerlink" href="#percentage-of-samples" title="Permanent link">&para;</a></h6>
-<p>Specify how many of the data points of the chromatogram shall be included in the baseline
-calculation.
-This values depends on the acquisition rate of the detector and if
-previous <a href="../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.html#bin-width-manualauto-_optional_">binning</a> 
-has been applied. The higher the acquisition rate, the lower the <strong>percentage of samples</strong>.</p>
-<h5 id="loess">Loess<a class="headerlink" href="#loess" title="Permanent link">&para;</a></h5>
-<p>The LOESS (locally estimated scatterplot smoothing) baseline corrector fits the data using the LOESS
-algorithm. It is the recommended baseline corrector in most scenarios, due to it's robustness. The
-LOESS baseline corrector smoothes the baseline data.</p>
-<h6 id="bandwidth">Bandwidth<a class="headerlink" href="#bandwidth" title="Permanent link">&para;</a></h6>
-<p>Specify how wide the window for the baseline calculation should be at any point of the chromatogram.
-E.g., 10% means that 10% of the total data points are used at any specific retention time. For a
-chromatographic run of 10 min, a total window of 1 min around each point will be taken into account.</p>
-<h6 id="iterations">Iterations<a class="headerlink" href="#iterations" title="Permanent link">&para;</a></h6>
-<p>Specify how many iteratiosn the LOESS algorithm shall perform. This is independent of the iterations
-specified in the <a href="#exclude-peaks-all-correctors">exclude peaks</a> parameter. This parameter may
-increase robustness against sudden changes in the baseline.</p>
-<h5 id="polynomial">Polynomial<a class="headerlink" href="#polynomial" title="Permanent link">&para;</a></h5>
-<p>The polynomial baseline corrector fits the data using an n<sup>th</sup> degree polynomial.</p>
-<h6 id="degree-of-polynomial">Degree of Polynomial<a class="headerlink" href="#degree-of-polynomial" title="Permanent link">&para;</a></h6>
-<p>Specify the degree of the polynomial. The higher the degree, the more the baseline will resemble the
-original data (which may be a disadvantage).</p>
-<h5 id="spline">Spline<a class="headerlink" href="#spline" title="Permanent link">&para;</a></h5>
-<p>The Spline baseline corrector uses a 3<sup>rd</sup> degree polynomial to fit 3 points of the raw
-data. This means, that every input point will appear 1:1 in the corrected data, without any
-smoothing or fitting (see <a href="#loess">LOESS</a>, <a href="#polynomial">Polynomial</a>).</p>
+<h4 id="baseline-corrector">Baseline corrector<a class="headerlink" href="#baseline-corrector" title="Permanent link">&para;</a></h4>
+<p>Select the baseline correction algorithm. The available options are <a href="#arpls">arPLS</a> (default),
+<a href="#loess">LOESS</a>, <a href="#polynomial">Polynomial</a> and <a href="#spline">Spline</a>. Each corrector exposes its own
+sub-parameters below the selection.</p>
+<h2 id="shared-parameters">Shared parameters<a class="headerlink" href="#shared-parameters" title="Permanent link">&para;</a></h2>
+<h4 id="exclude-peaks">Exclude peaks<a class="headerlink" href="#exclude-peaks" title="Permanent link">&para;</a></h4>
+<p>If selected, the baseline is estimated in two internal passes. First, the baseline is corrected for
+the full chromatogram. Then that intermediate baseline is subtracted and a peak detection is run to
+locate chromatographic peaks. In the second pass the baseline is fitted again, this time excluding
+the detected peak regions so that peaks do not pull the baseline upwards.</p>
+<p>This option is available for all four correctors. It is most useful for the interpolation-based
+correctors (<a href="#loess">LOESS</a>, <a href="#polynomial">Polynomial</a>, <a href="#spline">Spline</a>); <a href="#arpls">arPLS</a> already
+suppresses peaks on its own and usually works best with <strong>Exclude peaks</strong> disabled.</p>
+<h4 id="percentage-of-baseline-samples">Percentage of baseline samples<a class="headerlink" href="#percentage-of-baseline-samples" title="Permanent link">&para;</a></h4>
+<p>Specify how many of the data points of the chromatogram are sampled to fit the baseline (default
+5%). This value depends on the acquisition rate of the detector and whether
+previous <a href="../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.html#bin-width-manualauto-_optional_">binning</a>
+has been applied. The higher the acquisition rate, the lower the <strong>percentage of samples</strong> can be.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This parameter is used by the <a href="#loess">LOESS</a>, <a href="#polynomial">Polynomial</a> and <a href="#spline">Spline</a>
+correctors. <a href="#arpls">arPLS</a> fits the full trace and does not use it.</p>
+</div>
+<h2 id="correctors">Correctors<a class="headerlink" href="#correctors" title="Permanent link">&para;</a></h2>
+<h3 id="arpls">arPLS<a class="headerlink" href="#arpls" title="Permanent link">&para;</a></h3>
+<p>The arPLS (asymmetrically reweighted penalized least squares) baseline corrector is the default and
+recommended corrector. It fits a smooth baseline to the whole trace and iteratively down-weights
+data points that lie above the current baseline, so peaks are pushed out of the fit while the
+baseline settles onto the lower envelope of the signal. It does not require an explicit peak
+detection and therefore works well with <strong>Exclude peaks</strong> turned off.</p>
+<h4 id="smoothness-lambda">Smoothness (lambda)<a class="headerlink" href="#smoothness-lambda" title="Permanent link">&para;</a></h4>
+<p>Controls how stiff the baseline is. Larger values yield a stiffer, smoother baseline that ignores
+narrow signals; smaller values let the baseline follow the data more closely, but may start to
+follow peaks. Typical range 1e3 - 1e7, default 1e5.</p>
+<h4 id="max-iterations">Max iterations<a class="headerlink" href="#max-iterations" title="Permanent link">&para;</a></h4>
+<p>The maximum number of reweighting iterations (default 50). The fit usually converges well before
+this limit, so this value rarely needs to be changed.</p>
+<h3 id="loess">LOESS<a class="headerlink" href="#loess" title="Permanent link">&para;</a></h3>
+<p>The LOESS (locally estimated scatterplot smoothing) baseline corrector fits the sampled baseline
+points using the LOESS algorithm, which smooths the baseline locally. It is a robust choice when
+arPLS is not suitable.</p>
+<h4 id="bandwidth">Bandwidth<a class="headerlink" href="#bandwidth" title="Permanent link">&para;</a></h4>
+<p>Specify how wide the smoothing window is at any point of the chromatogram. E.g., 10% means that 10%
+of the sampled data points are used at any specific retention time. For a chromatographic run of
+10 min, a window of about 1 min around each point is taken into account. Larger values create a
+smoother baseline but react more slowly to sharp shifts.</p>
+<h4 id="iterations">Iterations<a class="headerlink" href="#iterations" title="Permanent link">&para;</a></h4>
+<p>Specify how many robustness iterations the LOESS algorithm performs (default 2). This is independent
+of the iterations performed by the <a href="#exclude-peaks">Exclude peaks</a> option and can increase
+robustness against sudden changes in the baseline.</p>
+<h3 id="polynomial">Polynomial<a class="headerlink" href="#polynomial" title="Permanent link">&para;</a></h3>
+<p>The polynomial baseline corrector fits the sampled baseline points with an n<sup>th</sup> degree
+polynomial.</p>
+<h4 id="degree-of-polynomial">Degree of polynomial<a class="headerlink" href="#degree-of-polynomial" title="Permanent link">&para;</a></h4>
+<p>Specify the degree of the polynomial (default 4). The higher the degree, the more the baseline will
+resemble the original data, which may be a disadvantage.</p>
+<h3 id="spline">Spline<a class="headerlink" href="#spline" title="Permanent link">&para;</a></h3>
+<p>The Spline baseline corrector fits a cubic (3<sup>rd</sup> degree) spline through the sampled
+baseline points. The spline passes exactly through the sampled points and interpolates between them,
+so — unlike <a href="#loess">LOESS</a> — the sampled points are not additionally smoothed.</p>
 <h2 id="optimization">Optimization<a class="headerlink" href="#optimization" title="Permanent link">&para;</a></h2>
 <p>The <strong>show preview</strong> option is recommended to optimize the baseline correction.</p>
-<h4 id="percentage-of-samples_1">Percentage of samples<a class="headerlink" href="#percentage-of-samples_1" title="Permanent link">&para;</a></h4>
-<p>The percentage of samples specifies how many data points of the baseline will be included in the
+<p><img alt="img.png" src="img.png" /></p>
+<h4 id="percentage-of-samples">Percentage of samples<a class="headerlink" href="#percentage-of-samples" title="Permanent link">&para;</a></h4>
+<p>The percentage of samples specifies how many data points of the baseline are included in the
 baseline correction. This parameter depends vastly on the acquisition rate. The influence of this
 parameter is shown here:</p>
 <p><img alt="percentage_of_samples.png" src="percentage_of_samples.png" /></p>
-<h4 id="iterations-loess">Iterations (LOESS)<a class="headerlink" href="#iterations-loess" title="Permanent link">&para;</a></h4>
-<p>Increasing the number of iterations may reduce the occurrence of ghost peaks due to baseline
-correction.
-In case this does not help, <a href="../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.html#trim-rt-range-_optional_">trimming traces</a> may be the better
-option.</p>
-<p><img alt="iterations.png" src="iterations.png" /></p>
+<h4 id="smoothness-arpls">Smoothness (arPLS)<a class="headerlink" href="#smoothness-arpls" title="Permanent link">&para;</a></h4>
+<p>If the arPLS baseline follows the peaks too closely, increase <strong>Smoothness (lambda)</strong>; if it is too
+stiff and floats above a curved baseline, decrease it.</p>
+<h3 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h3>
+<p>Q: Ghost peaks appear at the start/end of my chromatogram when I apply baseline correction.</p>
+<p>A: The ghost peaks are most often triggered by rapid shifts in the baseline, e.g. at the start of a
+chromatogram during the dead volume or at the end when the column is reequilibrated. The best
+solution is to restrict the retention time range to the relevant parts of the chromatogram
+by trimming.</p>
+<p>In
+UV: <a href="../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.html#trim-rt-range-_optional_">trimming traces</a></p>
+<p>In
+MS: <a href="../../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#scan-filters">Chromatogram builder</a></p>
+<p>Both options are controlled by
+the <a href="../../../wizard.html#2-sample-introduction-system">Wizard Crop retention time</a></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
 
 
 
@@ -6889,7 +7450,7 @@ option.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="June 9, 2026 06:30:54 UTC">June 9, 2026 06:30:54</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="July 13, 2026 08:47:39 UTC">July 13, 2026 08:47:39</span>
   </span>
 
     
@@ -6905,8 +7466,8 @@ option.</p>
     </span>
     <nav>
       
-        <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
-        <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>
+        <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>, 
+        <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>
     </nav>
   </span>
 
