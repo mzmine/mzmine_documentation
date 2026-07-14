@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/filter_isotope_filter/isotope_filter.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/id_biotransformer/biotransformer.html">
       
       
-        <link rel="prev" href="../filter_diams2/dia_pseudo_ms2_builder.html">
+        <link rel="prev" href="../id_prec_local_cmpd_db/local-cmpd-db-search.html">
       
       
-        <link rel="next" href="../filter_isotope_finder/isotope_finder.html">
+        <link rel="next" href="../id_prec_local_spectra_lib/local-spectra-lib-search.html">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>13C isotope filter (isotope grouper) - mzmine documentation</title>
+        <title>BioTransformer - mzmine documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#13c-isotope-filter" class="md-skip">
+        <a href="#biotransformer-30" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              13C isotope filter (isotope grouper)
+              BioTransformer
             
           </span>
         </div>
@@ -2466,20 +2466,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_16" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_16" >
         
           
           <label class="md-nav__link" for="__nav_12_16" id="__nav_12_16_label" tabindex="0">
@@ -2500,7 +2498,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_16_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_16_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12_16">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2515,37 +2513,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    13C isotope filter (isotope grouper)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="isotope_filter.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../filter_isotope_filter/isotope_filter.html" class="md-nav__link">
         
   
   
@@ -2561,142 +2532,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Description
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parameters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#name-suffix" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Name suffix
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mz-tolerance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        m/z tolerance
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#retention-time-tolerance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Retention time tolerance
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mobility-tolerance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mobility tolerance
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monotonic-shape" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Monotonic shape
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#maximum-charge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Maximum charge
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#never-remove-feature-with-ms2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Never remove feature with MS2
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#original-feature-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Original feature lists
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3801,18 +3636,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_22" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_22" checked>
         
           
           <label class="md-nav__link" for="__nav_12_22" id="__nav_12_22_label" tabindex="0">
@@ -3833,7 +3670,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_22_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_22_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12_22">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3876,10 +3713,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../id_biotransformer/biotransformer.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BioTransformer
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="biotransformer.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3895,6 +3759,225 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended citations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biotransformer-jar-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BioTransformer .jar path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformation-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transformation type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mz-tolerance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        m/z tolerance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ion-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ion library
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-parameters-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filter parameters (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smiles-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMILES source
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selecting-educts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selecting educts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-biotransformer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running BioTransformer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matching-products-to-the-feature-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matching products to the feature list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6480,6 +6563,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#recommended-citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended citations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6492,10 +6586,43 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#name-suffix" class="md-nav__link">
+  <a href="#feature-lists" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Name suffix
+        Feature lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biotransformer-jar-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BioTransformer .jar path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformation-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transformation type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iterations
       
     </span>
   </a>
@@ -6514,10 +6641,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#retention-time-tolerance" class="md-nav__link">
+  <a href="#ion-library" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Retention time tolerance
+        Ion library
       
     </span>
   </a>
@@ -6525,10 +6652,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mobility-tolerance" class="md-nav__link">
+  <a href="#filter-parameters-optional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mobility tolerance
+        Filter parameters (Optional)
       
     </span>
   </a>
@@ -6536,10 +6663,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#monotonic-shape" class="md-nav__link">
+  <a href="#smiles-source" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Monotonic shape
+        SMILES source
       
     </span>
   </a>
@@ -6547,10 +6674,38 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#maximum-charge" class="md-nav__link">
+  <a href="#advanced-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Maximum charge
+        Advanced parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selecting-educts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selecting educts
       
     </span>
   </a>
@@ -6558,10 +6713,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#never-remove-feature-with-ms2" class="md-nav__link">
+  <a href="#running-biotransformer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Never remove feature with MS2
+        Running BioTransformer
       
     </span>
   </a>
@@ -6569,10 +6724,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#original-feature-lists" class="md-nav__link">
+  <a href="#matching-products-to-the-feature-list" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Original feature lists
+        Matching products to the feature list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output columns
       
     </span>
   </a>
@@ -6604,33 +6770,223 @@
   
 
 
-<h1 id="13c-isotope-filter"><strong><sup>13</sup>C isotope filter</strong><a class="headerlink" href="#13c-isotope-filter" title="Permanent link">&para;</a></h1>
+<h1 id="biotransformer-30"><strong>BioTransformer 3.0</strong><a class="headerlink" href="#biotransformer-30" title="Permanent link">&para;</a></h1>
 <h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Isotopes → 13C isotope filter (formerly: isotope grouper)</strong></p>
-<p>MZmine carries out the feature detection steps of <a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html"><em>chromatogram building</em></a> and subsequent <a href="../featdet_resolver_local_minimum/local-minimum-resolver.html"><em>resolving</em></a> considering <strong>all</strong> the signals stored in the <a href="../../terminology/general-terminology.html#mass-list"><em>mass lists</em></a>. As a consequence, signals generated by isotopologues of the same chemical entity (see <a href="../../terminology/general-terminology.html#isotopic-pattern"><em>isotopic pattern</em></a>) are detected as distinct features and included in the <a href="../../terminology/general-terminology.html#feature-list"><em>feature lists</em></a>, representing redundant information for the downstream data analysis. This issue ordinarily occurs for C-containing molecules, where the <sup>13</sup>C isotope signals can be easily detected (<sup>13</sup>C/<sup>12</sup>C ≈ 1.1%).</p>
-<p>The <em>13C isotope filter</em> module (formerly called <em>Isotope grouper</em>) aims at filtering out the features corresponding to the <sup>13</sup>C isotopes of the same analyte. The algorithm consider each feature individually and checks for the presence of potential <sup>13</sup>C-related peak(s) in the <em>feature lists</em>. When an isotope pattern meeting the user-defined tolerances (<em>e.g.</em> <em>m/z</em>, RT) and requirements (<em>e.g.</em> <em>monotonic shape</em>) is found, the information is saved, and only the feature corresponding to the <em>e.g.</em> most intense isotope is retained in the <em>feature list</em>. It must be noted that <sup>13</sup>C peaks are searched within the <em>feature list</em>, and not in the raw data.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods -&gt; Annotation -&gt; Search precursor mass -&gt; BioTransformer 3.0</strong></p>
+<p>or, for one annotated feature row:</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> right-click a row in the feature table and choose <strong>Identification -&gt; Compute transformation products (BioTransformer 3)</strong></p>
+<p>The BioTransformer 3.0 module predicts possible transformation products for compounds that are
+already annotated with a structure. MZmine sends the educt SMILES string to an external
+BioTransformer 3 <code>.jar</code>, imports the generated CSV file, calculates product ions from the selected
+ion library, and adds matching products as compound annotations to feature list rows.</p>
+<p>Use this module after a spectral library search or compound database search has produced
+annotations with SMILES structures. BioTransformer 3.0 does not identify unknown educts by itself:
+it starts from an existing annotation, predicts transformation products, and searches for those
+products in the same feature list.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>BioTransformer 3.0 is not bundled with MZmine. Download the BioTransformer <code>.jar</code> from the
+<a href="https://bitbucket.org/wishartlab/biotransformer3.0jar/downloads/">BioTransformer 3.0 jar downloads</a>
+or the <a href="https://biotransformer.ca/download">BioTransformer download page</a>, and keep the
+extracted BioTransformer files together in one folder. MZmine runs the selected jar via
+<code>java -jar</code>, so the <code>java</code> command must be available to MZmine.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Start with a restrictive m/z tolerance and, when retention time behavior is expected, enable
+the advanced RT tolerance filter. This keeps predicted products from being assigned to unrelated
+features with similar m/z values.</p>
+</div>
+<h2 id="recommended-citations"><strong>Recommended citations</strong><a class="headerlink" href="#recommended-citations" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When using MZmine for your work, please consider citing:<br>
+Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry
+data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.</p>
+<p>When using this module, please also cite the BioTransformer publication(s):<br>
+Djoumbou Feunang Y., Fiamoncini J., de la Fuente A.G., Manach C., Greiner R., Wishart D.S.
+BioTransformer: a comprehensive computational tool for small molecule metabolism prediction and
+metabolite identification. Journal of Cheminformatics 11, 2 (2019).
+doi:10.1186/s13321-018-0324-5.</p>
+<p>Wishart D.S., Tian S., Allen D., Oler E., Peters H., Lui V.W., Gautam V.,
+Djoumbou Feunang Y., Greiner R., Metz T.O. BioTransformer 3.0 - A Web Server for Accurately
+Predicting Metabolic Transformation Products.</p>
+</div>
+<hr />
 <h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<p><img alt="13C isotope filter" src="isotope-filter.png" /></p>
-<h4 id="name-suffix"><strong>Name suffix</strong><a class="headerlink" href="#name-suffix" title="Permanent link">&para;</a></h4>
-<p>String added as suffix when creating the new feature list(s).</p>
-<h4 id="mz-tolerance"><strong><em>m/z</em> tolerance</strong><a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum allowed difference between the measured and the predicted <em>m/z</em> of the (potential) <sup>13</sup>C isotope to be grouped as isotopologues. The tolerance can be specified as absolute tolerance (in <em>m/z</em>), relative tolerance (in ppm), or both. When both are specified, the tolerance range is calculated using the maximum between the absolute and relative tolerances.</p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> We recommend to set a failry strict <em>m/z</em> tolerance to reduce the risk of discarding false <sup>13</sup>C isotopes.</p>
-<h4 id="retention-time-tolerance"><strong>Retention time tolerance</strong><a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum allowed RT difference between the feature and its (potential) <sup>13</sup>C isotope to be grouped as isotopologues.</p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> Isotopologues should exhibit identical chromatographic behaviour and thus produce overlapping LC peak shapes. Therefore, a strict RT tolerance can be used to reduce the risk of discarding false <sup>13</sup>C isotopes.</p>
-<h4 id="mobility-tolerance"><strong>Mobility tolerance</strong><a class="headerlink" href="#mobility-tolerance" title="Permanent link">&para;</a></h4>
-<p>If enabled and the mobility dimension was recorded, potential <sup>13</sup>C isotopes will be grouped as isotopologues only if their mobility difference is within the defined tolerance.</p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> The same principle seen for the RT tolerance apply to the IM dimension. Isotopologues should exhibit identical IM separation; therefore, a strict mobility tolerance can be used to reduce the risk of discarding false <sup>13</sup>C isotopes.</p>
-<h4 id="monotonic-shape"><strong>Monotonic shape</strong><a class="headerlink" href="#monotonic-shape" title="Permanent link">&para;</a></h4>
-<p>If true, a monotonically decreasing trend of the isotope pattern (typical of the <sup>13</sup>C isotope pattern of small molecules) is required for the filtering.</p>
-<h4 id="maximum-charge"><strong>Maximum charge</strong><a class="headerlink" href="#maximum-charge" title="Permanent link">&para;</a></h4>
-<p>Maximum charge state considered to predict the <sup>13</sup>C isotopes' <em>m/z</em>. If a value &gt; 1 is set, all the cahrge states are evaluated and the one providing the most isotope features detected is used for the filtering.</p>
-<h4 id="never-remove-feature-with-ms2"><strong>Never remove feature with MS2</strong><a class="headerlink" href="#never-remove-feature-with-ms2" title="Permanent link">&para;</a></h4>
-<p>If checked, potential <sup>13</sup>C-related features will not be discarded if <a href="../featdet_ms2_scan_pairing/ms2_scan_pairing.html">associated to a MS2 spectrum</a>.</p>
-<h4 id="original-feature-lists"><strong>Original feature lists</strong><a class="headerlink" href="#original-feature-lists" title="Permanent link">&para;</a></h4>
-<p>Keep or remove the input feature list(s). The <em>PROCESS IN PLACE</em> option directly filter the input feature list and performs better in terms of memory usage; therefore, it is recommended over <em>REMOVE</em>, when available.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:98109751+lalalana5@users.noreply.github.com'>lalalana5</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
+<h4 id="feature-lists"><strong>Feature lists</strong><a class="headerlink" href="#feature-lists" title="Permanent link">&para;</a></h4>
+<p>Feature list(s) to process. Each selected feature list is processed independently.</p>
+<h4 id="biotransformer-jar-path"><strong>BioTransformer .jar path</strong><a class="headerlink" href="#biotransformer-jar-path" title="Permanent link">&para;</a></h4>
+<p>Path to the BioTransformer 3 <code>.jar</code> file. Select the jar inside the folder that contains the
+unpacked BioTransformer download.</p>
+<h4 id="transformation-type"><strong>Transformation type</strong><a class="headerlink" href="#transformation-type" title="Permanent link">&para;</a></h4>
+<p>BioTransformer prediction mode. The available modes are:</p>
+<ul>
+<li><strong>EC-based (Enzyme Commission)</strong></li>
+<li><strong>CYP450</strong></li>
+<li><strong>Phase II</strong></li>
+<li><strong>Gut microbial</strong></li>
+<li><strong>All human</strong></li>
+<li><strong>Super bio</strong></li>
+<li><strong>Environmental microbial</strong> (default)</li>
+</ul>
+<h4 id="iterations"><strong>Iterations</strong><a class="headerlink" href="#iterations" title="Permanent link">&para;</a></h4>
+<p>Number of BioTransformer prediction iterations. One iteration predicts direct products of the
+input compound. Higher values also predict products of previous products. Default: <code>1</code>.
+Allowed range: <code>1</code> to <code>10</code>.</p>
+<h4 id="mz-tolerance"><strong>m/z tolerance</strong><a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
+<p>Maximum m/z difference for matching predicted product ions to feature list rows. Default:
+<code>0.003 m/z</code> or <code>5 ppm</code>.</p>
+<h4 id="ion-library"><strong>Ion library</strong><a class="headerlink" href="#ion-library" title="Permanent link">&para;</a></h4>
+<p>Ion types used to calculate product m/z values from the predicted neutral products. The default is
+the MZmine main ion library for both positive and negative polarity.</p>
+<h4 id="filter-parameters-optional"><strong>Filter parameters</strong> <em>(Optional)</em><a class="headerlink" href="#filter-parameters-optional" title="Permanent link">&para;</a></h4>
+<p>Additional filters for choosing educt rows and product rows. Disabled by default.</p>
+<ul>
+<li><strong>Educt must have MS/MS</strong>: only predicts transformations for rows with an MS/MS spectrum.</li>
+<li><strong>Minimum Educt intensity</strong>: only predicts transformations for rows whose best feature height is
+  at least the selected intensity. The embedded default value is <code>1E4</code>, but the filter is disabled
+  until selected.</li>
+<li><strong>Product must have MS/MS</strong>: only assigns predicted products to rows with an MS/MS spectrum.</li>
+<li><strong>Minimum Product intensity</strong>: only assigns predicted products to rows whose best feature height
+  is at least the selected intensity. The embedded default value is <code>1E4</code>, but the filter is
+  disabled until selected.</li>
+</ul>
+<h4 id="smiles-source"><strong>SMILES source</strong><a class="headerlink" href="#smiles-source" title="Permanent link">&para;</a></h4>
+<p>Annotation source used to obtain the educt SMILES in the full feature-list workflow.</p>
+<ul>
+<li><strong>Spectral library</strong>: use the first spectral library match with structure information.</li>
+<li><strong>Compound DB</strong>: use the first compound database annotation with structure information.</li>
+<li><strong>All</strong> (default): prefer the first spectral library match; if none is available, use the first
+  compound database annotation.</li>
+</ul>
+<p>This parameter is not shown in the single-row context-menu workflow. The context action uses the
+first spectral library match with structure information, or the first compound database annotation
+with structure information if no spectral library match is available.</p>
+<h4 id="advanced-parameters"><strong>Advanced parameters</strong><a class="headerlink" href="#advanced-parameters" title="Permanent link">&para;</a></h4>
+<p>Extra matching and annotation-ranking options.</p>
+<ul>
+<li><strong>RT tolerance filter</strong> <em>(Optional)</em>: only assigns predicted products within the selected
+  retention-time tolerance around the educt row. Default embedded value: <code>0.15 min</code>.</li>
+<li><strong>Filter by row correlation</strong>: only assigns predicted products to rows that are correlated with
+  the educt row. The feature list must have been grouped by correlation, for example with the
+  correlation grouping module.</li>
+<li><strong>Re-rank annotations</strong>: controls whether compound annotations are re-ranked by highest score
+  after BioTransformer matches are added. Enabled by default when advanced parameters are enabled.</li>
+</ul>
+<hr />
+<h2 id="algorithm"><strong>Algorithm</strong><a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
+<h3 id="selecting-educts">Selecting educts<a class="headerlink" href="#selecting-educts" title="Permanent link">&para;</a></h3>
+<p>In the full feature-list workflow, MZmine scans the selected feature list and looks for rows that
+pass the optional educt filters and contain a usable SMILES structure. The selected annotation is:</p>
+<ol>
+<li>the first spectral library match, if the SMILES source allows spectral library annotations and
+   the match has structure information,</li>
+<li>otherwise the first compound database annotation, if the SMILES source allows compound database
+   annotations and the annotation has structure information.</li>
+</ol>
+<p>Rows without a usable structure are skipped. Identical canonical SMILES strings are predicted only
+once per feature list.</p>
+<p>In the single-row workflow, MZmine uses the selected row's first spectral library match with a
+structure, or the first compound database annotation with a structure if no spectral library match
+is available.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>BioTransformer is not run for educt structures whose calculated monoisotopic mass is above
+<code>1000 Da</code>, because the BioTransformer command-line tool cannot process those compounds.</p>
+</div>
+<h3 id="running-biotransformer">Running BioTransformer<a class="headerlink" href="#running-biotransformer" title="Permanent link">&para;</a></h3>
+<p>For each selected educt SMILES, MZmine creates a temporary CSV file and runs BioTransformer in
+prediction mode:</p>
+<div class="highlight"><pre><span></span><code>java -jar BioTransformer3.0.jar -k pred -b &lt;transformation type&gt; -s &lt;iterations&gt; -ismi &lt;SMILES&gt; -ocsv &lt;temporary CSV&gt;
+</code></pre></div>
+<p>The BioTransformer result CSV is imported as compound database annotations. MZmine reads the
+product formula, SMILES, InChI, InChIKey, reaction, enzyme information, ALogP, and metabolite ID
+columns when present. Product names are prefixed with the educt compound name.</p>
+<h3 id="matching-products-to-the-feature-list">Matching products to the feature list<a class="headerlink" href="#matching-products-to-the-feature-list" title="Permanent link">&para;</a></h3>
+<p>Imported products are ionized with the selected ion library. Each generated product ion is compared
+against rows in the same feature list:</p>
+<ol>
+<li>m/z must match within the configured m/z tolerance.</li>
+<li>If the RT tolerance filter is enabled, the product must also match within the RT window around
+   the educt row.</li>
+<li>If the row correlation filter is enabled, the product row must be correlated with the educt row.</li>
+<li>If product filters are enabled, the product row must pass the selected MS/MS and intensity
+   filters.</li>
+</ol>
+<p>Matching product ions are added as compound annotations. The match score and deviation columns are
+calculated by the compound database annotation matcher.</p>
+<h3 id="output-columns">Output columns<a class="headerlink" href="#output-columns" title="Permanent link">&para;</a></h3>
+<p>BioTransformer matches are stored as compound annotations in the feature list. Depending on the
+available product data and enabled filters, annotations can include:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compound name</td>
+<td>BioTransformer metabolite ID prefixed by the educt name</td>
+</tr>
+<tr>
+<td>Molecular formula</td>
+<td>Product molecular formula</td>
+</tr>
+<tr>
+<td>SMILES</td>
+<td>Product SMILES</td>
+</tr>
+<tr>
+<td>InChI / InChIKey</td>
+<td>Product structure identifiers</td>
+</tr>
+<tr>
+<td>Reaction</td>
+<td>BioTransformer reaction rule</td>
+</tr>
+<tr>
+<td>Enzyme(s)</td>
+<td>Enzyme or biosystem information reported by BioTransformer</td>
+</tr>
+<tr>
+<td>ALogP</td>
+<td>Predicted ALogP value reported by BioTransformer</td>
+</tr>
+<tr>
+<td>Ion type</td>
+<td>Product ion type from the selected ion library</td>
+</tr>
+<tr>
+<td>Precursor m/z</td>
+<td>Calculated product ion m/z</td>
+</tr>
+<tr>
+<td>Compound annotation score</td>
+<td>Score from matching the predicted product ion to the row</td>
+</tr>
+<tr>
+<td>m/z ppm difference</td>
+<td>Mass error in ppm</td>
+</tr>
+<tr>
+<td>m/z absolute difference</td>
+<td>Absolute mass difference</td>
+</tr>
+<tr>
+<td>RT absolute difference</td>
+<td>RT difference, if RT filtering was enabled</td>
+</tr>
+<tr>
+<td>RT relative error (%)</td>
+<td>Relative RT error, if RT filtering was enabled</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a></span></p>
 
 
 
@@ -6651,7 +7007,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 24, 2022 21:13:07 UTC">November 24, 2022 21:13:07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="July 13, 2026 08:23:25 UTC">July 13, 2026 08:23:25</span>
   </span>
 
     
@@ -6662,14 +7018,12 @@
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
       
     </span>
     <nav>
       
-        <a href="mailto:98109751+lalalana5@users.noreply.github.com">lalalana5</a>, 
-        <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>, 
-        <a href="mailto:tito.damiani93@gmail.com">tdamiani</a>
+        <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>
     </nav>
   </span>
 
