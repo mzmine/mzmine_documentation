@@ -4230,6 +4230,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../scan_selection/scan_selection.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scan selection filters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../filter_scan_merge_select/scan_merge_select.html" class="md-nav__link">
         
   
@@ -6593,6 +6621,8 @@
 <p>Select the input raw data files for the mass detection. All the imported data files can be processed in bulk (<em>i.e.</em> <em>All raw data files</em>), or a subset can be selected directly from the <em>MS data files</em> panel (<em>i.e.</em> <em>As selected in the main window</em>) or based on the filename (<em>i.e.</em> <em>File name pattern</em>) As an alternative, the files' directory can be also specified (<em>i.e.</em> <em>Specific raw data files</em>). Finally, if the <em>Those created by previous batch step</em> option is selected, MZmine takes the output of the last processing step as input. This option is only available for <a href="../../workflows/batch_processing/batch-processing.html">batch processing</a>.</p>
 <h4 id="scans"><strong>Scans</strong><a class="headerlink" href="#scans" title="Permanent link">&para;</a></h4>
 <p>Select (or filter out) the MS scans to be processed. Several filters are available (<em>Select filters</em> button). A scan number, RT and mobility range can be set (<em>i.e</em> <em>Scan number</em>, <em>Retention time</em> and <em>Mobility</em> options); only the scans belonging to the defined range(s) will be processed. The <em>Base Filtering Integer</em> option allows to prcesses one every-<em>N</em> scans. The <em>Scan definition</em> field can be used to filter scans based on the scan's description normally included in the raw file's metadata (<em>e.g.</em> FTMS). Scans can also be filtered by <em>MS level</em> (<em>i.e.</em> 1, 2, ..., <em>N</em>), polarity and spectrum type (<em>i.e.</em> Centroided, Profile and Thresholded).</p>
+<p>See <a href="../scan_selection/scan_selection.html">Scan selection filters</a> for all available criteria and
+combination rules.</p>
 <h4 id="scan-types-ims"><strong>Scan types (IMS)</strong><a class="headerlink" href="#scan-types-ims" title="Permanent link">&para;</a></h4>
 <p>This parameter applies only to IM data and determines if <em>mobility scans</em>, <em>frame scans</em> or both (<em>i.e.</em> <em>All scan types</em>) are processed. For more details about <em>mobility</em> and <em>frame scans</em>, see <a href="../../terminology/ion-mobility-terminology.html#accumulations-mobility-scans-and-frames">here</a>.<br>
 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a9 9 0 0 0-.542-.68q-.126-.149-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259q-.142.172-.268.319c-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848q.113-.133.213-.253c.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75M5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5M6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75"/></svg></span> <strong>Tip</strong>. Since <em>frame scans</em> are obtained by merging multiple <em>mobility scans</em>, the noise thresholds will likely be different. However, only one noise level can be set per processing step. Therefore, if one wants to run the mass detection for <em>mobility</em> and <em>frame scans</em> using different noise cutoffs, two module calls are required. As an alternative, mass detection can be performed only on the <em>mobility scans</em> by selecteing the appropriate noise level. <em>Mobility scans</em> can then be merged into <em>frame scans</em> with a <a href="../featdet_mobility_scan_merging/mobility-scan-merging.html">dedicated module</a>. </p>
@@ -6615,7 +6645,7 @@ scans acquired with different injection times. </p>
 <p>Another way, more relevant for the feature detection, to determine the noise level consists of picking a mid-intensity LC peak and extract the EICs of its 13C isotopes. When the chromatographic peak shape starts to deteriorate, it means we are approaching the instrument detection limit (see Figure).</p>
 <p><img alt="determine noise level" src="determine_noise_level-2.png" /></p>
 <p>Such approach can also be useful to determine other parameters in the feature detection such as the <strong>Group intensity threshold</strong> and <strong>Min highest intensity</strong> parameters in the <a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html#parameters">Chromatogram builder</a> module.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
 
 
 
@@ -6636,7 +6666,7 @@ scans acquired with different injection times. </p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="July 30, 2025 10:13:34 UTC">July 30, 2025 10:13:34</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="August 21, 2026 10:39:45 UTC">August 21, 2026 10:39:45</span>
   </span>
 
     
@@ -6654,6 +6684,7 @@ scans acquired with different injection times. </p>
       
         <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
         <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
+        <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>, 
         <a href="mailto:corinna.brungs@wwu.de">corinnabrungs</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>, 
         <a href="mailto:tito.damiani93@gmail.com">tdamiani</a>
