@@ -51,6 +51,9 @@ The raw data file of the EC/MS-experiment the mass voltammogram will be generate
 The scan selection filter used to define the scan types to be used for the generation of the mass voltammogram.
 For example is it possible to select the MS level or the ion polarity.
 
+See [Scan selection filters](../../module_docs/scan_selection/scan_selection.md) for all available
+criteria and combination rules.
+
 ### From feature list
 
 :material-menu-open: **Visualization → Massvoltammogram → From Feature List**

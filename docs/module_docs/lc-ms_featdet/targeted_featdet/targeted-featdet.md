@@ -17,6 +17,11 @@ The *.csv file should have three columns:
 
 ## **Parameters**
 
+#### **Scan filters**
+
+See [Scan selection filters](../../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 #### **Name suffix**
 
 Suffix to be added to the peak list name.

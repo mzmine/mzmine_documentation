@@ -36,6 +36,9 @@ enough for this module, several filters are available (see option descriptions i
 For example, specific RT ranges (_e.g._ dead volume, equilibration time, calibration segments, _etc._) 
 can be excluded from the processing by setting the corresponding filter. 
 
+See [Scan selection filters](../../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 !!! tip
 
     For polarity switching data, choose one polarity to produce chromatograms in either ion mode.

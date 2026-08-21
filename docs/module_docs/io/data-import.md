@@ -29,6 +29,9 @@ The enabled option **in sub folders** searches all files in the whole subdirecto
 #### **Scan filter**
 You can set up the scan filter to reduce the overall data. Options include e.g. polarity, or retention time range.
 
+See [Scan selection filters](../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 #### **Crop MS1 m/z**
 You can filter for a specified m/z range.
 

@@ -19,6 +19,9 @@ The selected data files to process.
 #### EIC scans
 A filter to select scans (usually MS1) for building extracted ion chromatograms. 
 
+See [Scan selection filters](../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 #### m/z tolerance (scan-to-scan)
 Defines the fluctuation of an individual m/z peak in between scans. For TOF instruments, 0.005 m/z
 or 20 ppm is a good starting point, while Orbitraps or FT-ICRs can achieve narrower signals
