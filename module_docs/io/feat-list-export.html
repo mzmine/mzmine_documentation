@@ -8531,8 +8531,9 @@
 
 
 <h1 id="feature-list-export-modules"><strong>Feature list export modules</strong><a class="headerlink" href="#feature-list-export-modules" title="Permanent link">&para;</a></h1>
-<p>This section describes general format export modules. For the description of export modules for the specific software, please, refer to <a href="data-exchange-with-other-software.html">Data export to other software</a>.</p>
-<p><a href="#" title="     Always equals 1+">//</a> # TODO</p>
+<p>This section describes general format export modules. For the description of export modules for the
+specific software, please, refer
+to <a href="data-exchange-with-other-software.html">Data export to other software</a>.</p>
 <h2 id="csv"><strong>CSV</strong><a class="headerlink" href="#csv" title="Permanent link">&para;</a></h2>
 <h3 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → CSV</strong></p>
@@ -8546,50 +8547,62 @@
 <p><em>Optional parameter</em></p>
 <p>Removes empty columns during data export.</p>
 <h4 id="filter-rows"><strong>Filter rows</strong><a class="headerlink" href="#filter-rows" title="Permanent link">&para;</a></h4>
-<p>Allows user to export only those rows that have associated MS/MS data or are annotated. </p>
+<p>Allows user to export only those rows that have associated MS/MS data or are annotated.</p>
 <h2 id="csv-legacy-mzmine-2"><strong>CSV (legacy MZmine 2)</strong><a class="headerlink" href="#csv-legacy-mzmine-2" title="Permanent link">&para;</a></h2>
 <h3 id="description_1"><strong>Description</strong><a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → CSV (legacy MZmine 2)</strong></p>
-<p>This module is a legacy module from MZmine2 and, similarly to the previously described module, exports the contents of the feature list(s) into a csv file, which can later be processed by MS Excel or other tools. The produced CSV files cannot be imported back to MZmine. Missing values such as heights and areas of undetected features are exported as 0.</p>
+<p>This module is a legacy module from MZmine2 and, similarly to the previously described module,
+exports the contents of the feature list(s) into a csv file, which can later be processed by MS
+Excel or other tools. The produced CSV files cannot be imported back to MZmine. Missing values such
+as heights and areas of undetected features are exported as 0.</p>
 <h3 id="parameters_1"><strong>Parameters</strong><a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
 <h4 id="filename"><strong>Filename</strong><a class="headerlink" href="#filename" title="Permanent link">&para;</a></h4>
 <p>Name of file where the exported data is saved</p>
 <h4 id="field-separator_1"><strong>Field separator</strong><a class="headerlink" href="#field-separator_1" title="Permanent link">&para;</a></h4>
 <p>Columns in the new CSV file will be separated by this character (coma by default)</p>
 <h4 id="export-common-elements"><strong>Export common elements</strong><a class="headerlink" href="#export-common-elements" title="Permanent link">&para;</a></h4>
-<p>Which row elements (such as row ID, row retention time, or best ion annotation) from the feature list will be exported </p>
+<p>Which row elements (such as row ID, row retention time, or best ion annotation) from the feature
+list will be exported</p>
 <h4 id="export-data-file-elements"><strong>Export data file elements</strong><a class="headerlink" href="#export-data-file-elements" title="Permanent link">&para;</a></h4>
 <p>Which feature elements (such as feature status, name, or tailing factor) will be exported.</p>
 <h4 id="export-quantitation-results-and-other-information"><strong>Export quantitation results and other information</strong><a class="headerlink" href="#export-quantitation-results-and-other-information" title="Permanent link">&para;</a></h4>
 <p><em>Optional parameter</em></p>
 <p>If checked, all feature-associated data will be exported.</p>
 <h4 id="identification-separator_1"><strong>Identification separator</strong><a class="headerlink" href="#identification-separator_1" title="Permanent link">&para;</a></h4>
-<p>Character to separate multiple identification results (if they are available) for a feature. </p>
+<p>Character to separate multiple identification results (if they are available) for a feature.</p>
 <h4 id="filter-rows_1"><strong>Filter rows</strong><a class="headerlink" href="#filter-rows_1" title="Permanent link">&para;</a></h4>
-<p>Allows user to export only those rows that have associated MS/MS data or are annotated. </p>
+<p>Allows user to export only those rows that have associated MS/MS data or are annotated.</p>
 <h2 id="export-all-annotations-to-csv"><strong>Export all annotations to CSV</strong><a class="headerlink" href="#export-all-annotations-to-csv" title="Permanent link">&para;</a></h2>
 <h3 id="description_2"><strong>Description</strong><a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h3>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → Export compound annotations to csv</strong></p>
-<p>Export all annotations from spectral library matching, local compound DB CSV matching, and others.  </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → Export compound annotations to
+csv</strong></p>
+<p>Export all annotations from spectral library matching, local compound DB CSV matching, and others.</p>
 <h3 id="parameters_2"><strong>Parameters</strong><a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h3>
 <h4 id="filename_1"><strong>Filename</strong><a class="headerlink" href="#filename_1" title="Permanent link">&para;</a></h4>
-<p>Base file name of all annotation file (Use {} to fill in the feature list name when exporting multiple feature lists at once).</p>
+<p>Base file name of all annotation file (Use {} to fill in the feature list name when exporting
+multiple feature lists at once).</p>
 <h4 id="top-n-per-method">Top N per method<a class="headerlink" href="#top-n-per-method" title="Permanent link">&para;</a></h4>
 <p>Export the top N annotations per annoation method.</p>
 <h2 id="venn-diagram-export"><strong>Venn diagram export</strong><a class="headerlink" href="#venn-diagram-export" title="Permanent link">&para;</a></h2>
 <h2 id="description_3"><strong>Description</strong><a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → Venn diagram export</strong></p>
-<p>Exports a feature list to a csv that can be plotted as a venn diagram by other software such as <a href="https://pubmed.ncbi.nlm.nih.gov/25545689/">VennDis</a>.</p>
+<!-- markdown-link-check-disable -->
+<p>Exports a feature list to a csv that can be plotted as a venn diagram by other software such
+as <a href="https://pubmed.ncbi.nlm.nih.gov/25545689/">VennDis</a>.</p>
+<!-- markdown-link-check-enable -->
+
 <h2 id="parameters_3"><strong>Parameters</strong><a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h2>
 <h4 id="directory"><strong>Directory</strong><a class="headerlink" href="#directory" title="Permanent link">&para;</a></h4>
 <p>Choose a directory to export the feature list to.</p>
 <h4 id="export-gap-filled-as-detected"><strong>Export gap filled as detected</strong><a class="headerlink" href="#export-gap-filled-as-detected" title="Permanent link">&para;</a></h4>
 <p><em>Optional parameter</em></p>
-<p>If checked, gap filled features will be exported as detected, otherwise they will be marked as undetected.</p>
+<p>If checked, gap filled features will be exported as detected, otherwise they will be marked as
+undetected.</p>
 <h2 id="mztab-export"><strong>mzTab export</strong><a class="headerlink" href="#mztab-export" title="Permanent link">&para;</a></h2>
 <h3 id="description_4"><strong>Description</strong><a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → mzTab</strong></p>
-<p>This module exports the contents of the feature list into a mzTab file, which can later be processed by other tools.</p>
+<p>This module exports the contents of the feature list into a mzTab file, which can later be processed
+by other tools.</p>
 <h3 id="parameters_4"><strong>Parameters</strong><a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h3>
 <h4 id="feature-lists"><strong>Feature lists</strong><a class="headerlink" href="#feature-lists" title="Permanent link">&para;</a></h4>
 <p>Name of the feature list(s) to be exported.</p>
@@ -8601,7 +8614,8 @@
 <h2 id="mztab-m-export"><strong>mzTab-m export</strong><a class="headerlink" href="#mztab-m-export" title="Permanent link">&para;</a></h2>
 <h3 id="description_5"><strong>Description</strong><a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → mzTab-m</strong></p>
-<p>This module exports the contents of the feature list into a mzTab-m file, which can later be processed by other tools.</p>
+<p>This module exports the contents of the feature list into a mzTab-m file, which can later be
+processed by other tools.</p>
 <h3 id="parameters_5"><strong>Parameters</strong><a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h3>
 <h4 id="feature-lists_1"><strong>Feature lists</strong><a class="headerlink" href="#feature-lists_1" title="Permanent link">&para;</a></h4>
 <p>Name of the feature list(s) to be exported</p>
@@ -8613,7 +8627,9 @@
 <h2 id="sql-export"><strong>SQL export</strong><a class="headerlink" href="#sql-export" title="Permanent link">&para;</a></h2>
 <h3 id="description_6"><strong>Description</strong><a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → SQL database</strong></p>
-<p>This module allows direct export of the feature lists into MySQL or PostgreSQL database servers. If you would like to use another database then please add its JDBC driver (jar file) to the MZmine lib/ folder.</p>
+<p>This module allows direct export of the feature lists into MySQL or PostgreSQL database servers. If
+you would like to use another database then please add its JDBC driver (jar file) to the MZmine lib/
+folder.</p>
 <h3 id="parameters_6"><strong>Parameters</strong><a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h3>
 <h4 id="feature-lists_2"><strong>Feature lists</strong><a class="headerlink" href="#feature-lists_2" title="Permanent link">&para;</a></h4>
 <p>Name of the feature list(s) to be exported</p>
@@ -8624,26 +8640,30 @@
 <h4 id="database-table"><strong>Database table</strong><a class="headerlink" href="#database-table" title="Permanent link">&para;</a></h4>
 <p>Name of the table, into which data will be exported.</p>
 <h4 id="export-columns"><strong>Export columns</strong><a class="headerlink" href="#export-columns" title="Permanent link">&para;</a></h4>
-<p>The mapping between the database table columns (“Table column”) and MZmine data types (“Export data type”). For some data types an additional value (“Export value”) must be specified, such as for the “Constant value” type.</p>
+<p>The mapping between the database table columns (“Table column”) and MZmine data types (“Export data
+type”). For some data types an additional value (“Export value”) must be specified, such as for the
+“Constant value” type.</p>
 <h4 id="export-empty-feature-list"><strong>Export empty feature list</strong><a class="headerlink" href="#export-empty-feature-list" title="Permanent link">&para;</a></h4>
 <p><em>Optional parameter</em></p>
-<p>If selected, an empty feature list will be exported. All columns, other than raw data file and constants, will be assigned null values.</p>
+<p>If selected, an empty feature list will be exported. All columns, other than raw data file and
+constants, will be assigned null values.</p>
 <h2 id="msp-export"><strong>MSP Export</strong><a class="headerlink" href="#msp-export" title="Permanent link">&para;</a></h2>
 <h3 id="description_7"><strong>Description</strong><a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → MSP file (ADAP)</strong></p>
-<p>This module exports fragmentation spectra of peaks in the feature list into <strong>MSP</strong> format file. In addition to the spectra, the following feature characteristics are saved into the file:</p>
+<p>This module exports fragmentation spectra of peaks in the feature list into <strong>MSP</strong> format file. In
+addition to the spectra, the following feature characteristics are saved into the file:</p>
 <ul>
 <li>Name
-     Name of the peak as displayed in the peak list</li>
+  Name of the peak as displayed in the peak list</li>
 <li>DB#
-     Row number in the peak list</li>
-<li>RT 
-     <em>Optional</em>
-     Retention time of a feature</li>
+  Row number in the peak list</li>
+<li>RT
+  <em>Optional</em>
+  Retention time of a feature</li>
 <li>ANOVA_P_VALUE (optional)
-     P-value calculated by the module Data analysis -&gt; One-way ANOVA Test</li>
+  P-value calculated by the module Data analysis -&gt; One-way ANOVA Test</li>
 <li>Num Peaks
-     Number of peaks in the spectrum </li>
+  Number of peaks in the spectrum</li>
 </ul>
 <h3 id="parameters_7"><strong>Parameters</strong><a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h3>
 <h4 id="feature-lists_3"><strong>Feature lists</strong><a class="headerlink" href="#feature-lists_3" title="Permanent link">&para;</a></h4>
@@ -8655,7 +8675,8 @@
 <h4 id="add-anova-p-value-if-calculated"><strong>Add ANOVA p-value (if calculated)</strong><a class="headerlink" href="#add-anova-p-value-if-calculated" title="Permanent link">&para;</a></h4>
 <p>If selected, each MSP record will contain the One-way ANOVA p-value if such p-value is present</p>
 <h4 id="integer-mz"><strong>Integer m/z</strong><a class="headerlink" href="#integer-mz" title="Permanent link">&para;</a></h4>
-<p>If selected, fractional m/z values will be rounded to the closest integer, and a new intensity will be calculated based on the merging mode:</p>
+<p>If selected, fractional m/z values will be rounded to the closest integer, and a new intensity will
+be calculated based on the merging mode:</p>
 <ul>
 <li>Maximum: new intensity is the maximum of merged intensities,</li>
 <li>Sum: new intensity is the sum of merged intensities.</li>
@@ -8663,46 +8684,58 @@
 <h2 id="mgf-export"><strong>MGF Export</strong><a class="headerlink" href="#mgf-export" title="Permanent link">&para;</a></h2>
 <h3 id="description_8"><strong>Description</strong><a class="headerlink" href="#description_8" title="Permanent link">&para;</a></h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → MGF file (ADAP)</strong></p>
-<p>This module exports fragmentation spectra of features in the feature list into <strong>MGF (Mascot Generic Format)</strong> format file. </p>
+<p>This module exports fragmentation spectra of features in the feature list into <strong>MGF (Mascot Generic
+Format)</strong> format file.</p>
 <h3 id="parameters_8"><strong>Parameters</strong><a class="headerlink" href="#parameters_8" title="Permanent link">&para;</a></h3>
 <h4 id="feature-lists_4"><strong>Feature lists</strong><a class="headerlink" href="#feature-lists_4" title="Permanent link">&para;</a></h4>
 <p>Name of the feature list(s) to be exported</p>
 <h4 id="filename_5"><strong>Filename</strong><a class="headerlink" href="#filename_5" title="Permanent link">&para;</a></h4>
 <p>Name of file where the exported data is saved</p>
 <h4 id="representative-mz"><strong>Representative m/z</strong><a class="headerlink" href="#representative-mz" title="Permanent link">&para;</a></h4>
-<p>Choose the reprezentative m/z values of a cluster. The available options are:
-- As in feature table,
-- Highest m/z,
-- Or maximum intensity.</p>
+<p>Choose the reprezentative m/z values of a cluster. The available options are:</p>
+<ul>
+<li>As in feature table,</li>
+<li>Highest m/z,</li>
+<li>Or maximum intensity.</li>
+</ul>
 <h4 id="fractional-mz-values"><strong>Fractional m/z values</strong><a class="headerlink" href="#fractional-mz-values" title="Permanent link">&para;</a></h4>
 <p><em>Optional parameter</em></p>
-<p>If selected, fractional m/z values will be saved. If not, all fractional m/z values will be rounded to the closest integer.</p>
+<p>If selected, fractional m/z values will be saved. If not, all fractional m/z values will be rounded
+to the closest integer.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>In case of rounding to integer, the corresponding features will be merged.</p>
 </div>
+<p>In case of rounding to integer, the corresponding features will be merged.</p>
 <h4 id="integer-mz_1"><strong>Integer m/z</strong><a class="headerlink" href="#integer-mz_1" title="Permanent link">&para;</a></h4>
-<p>When features are merged, the resulting elution profile is calculated by one of the following rules:
-- Maximum. In the resulting elution profile, the intensity at retention time <em>t</em> is the maximum of the intensities at <em>t</em> across the merging elution profiles.
-- Sum. In the resulting elution profile, the intensity at retention time <em>t</em> is the sum of the intensities at <em>t</em> for all merging elution profiles.</p>
+<p>When features are merged, the resulting elution profile is calculated by one of the following rules:</p>
+<ul>
+<li>Maximum. In the resulting elution profile, the intensity at retention time <em>t</em> is the maximum of
+  the intensities at <em>t</em> across the merging elution profiles.</li>
+<li>Sum. In the resulting elution profile, the intensity at retention time <em>t</em> is the sum of the
+  intensities at <em>t</em> for all merging elution profiles.</li>
+</ul>
 <h2 id="export-feature-network-to-csv"><strong>Export feature network to csv</strong><a class="headerlink" href="#export-feature-network-to-csv" title="Permanent link">&para;</a></h2>
 <h3 id="description_9"><strong>Description</strong><a class="headerlink" href="#description_9" title="Permanent link">&para;</a></h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → Export feature network to csv</strong></p>
 <p>Export results from correlation/MS annotation as networks to csv.</p>
 <h3 id="parameters_9"><strong>Parameters</strong><a class="headerlink" href="#parameters_9" title="Permanent link">&para;</a></h3>
 <h4 id="filename_6"><strong>Filename</strong><a class="headerlink" href="#filename_6" title="Permanent link">&para;</a></h4>
-<p>Base file name of all edge files (Use {} to fill in the feature list name when exporting multiple feature lists at once).</p>
+<p>Base file name of all edge files (Use {} to fill in the feature list name when exporting multiple
+feature lists at once).</p>
 <h4 id="export-row-relationships"><strong>Export row relationships</strong><a class="headerlink" href="#export-row-relationships" title="Permanent link">&para;</a></h4>
 <p><em>Optional parameter</em></p>
-<p>Export all relationships of different rows to files. The relationships that can be exported include:
-- MS1 feature correlation
-- Ion identity network
-- MS2 cosine similarity
-- MS2 neutral loss cosine similarity
-- MS2 modified cosine similarity (GNPS)</p>
+<p>Export all relationships of different rows to files. The relationships that can be exported include:</p>
+<ul>
+<li>MS1 feature correlation</li>
+<li>Ion identity network</li>
+<li>MS2 cosine similarity</li>
+<li>MS2 neutral loss cosine similarity</li>
+<li>MS2 modified cosine similarity (GNPS)</li>
+</ul>
 <h4 id="combine-to-one-file"><strong>Combine to one file</strong><a class="headerlink" href="#combine-to-one-file" title="Permanent link">&para;</a></h4>
 <p><em>Optional parameter</em></p>
-<p>If chosen, all output is combined into one file. Otherwise, a separate file is exported per each relationship type.</p>
+<p>If chosen, all output is combined into one file. Otherwise, a separate file is exported per each
+relationship type.</p>
 <h4 id="export-iin-edges"><strong>Export IIN edges</strong><a class="headerlink" href="#export-iin-edges" title="Permanent link">&para;</a></h4>
 <p><em>Optional parameter</em></p>
 <p>Export all edges of Ion Identity Networks (IIN).</p>
@@ -8710,10 +8743,11 @@
 <p><em>Optional parameter</em></p>
 <p>Export relationships between Ion Identity Networks (IIN).</p>
 <h4 id="filter-rows_2"><strong>Filter rows</strong><a class="headerlink" href="#filter-rows_2" title="Permanent link">&para;</a></h4>
-<p>Limit the exported rows to those with MS/MS data and/or annotated rows. </p>
+<p>Limit the exported rows to those with MS/MS data and/or annotated rows.</p>
 <h2 id="spectral-library-batch-generation"><strong>Spectral library batch generation</strong><a class="headerlink" href="#spectral-library-batch-generation" title="Permanent link">&para;</a></h2>
 <h3 id="description_10"><strong>Description</strong><a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h3>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → Spectral library batch generation</strong></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → Spectral library batch
+generation</strong></p>
 <p>This module allows to generate spectral library using metadata sheet.</p>
 <h3 id="parameters_10"><strong>Parameters</strong><a class="headerlink" href="#parameters_10" title="Permanent link">&para;</a></h3>
 <h4 id="feature-lists_5"><strong>Feature lists</strong><a class="headerlink" href="#feature-lists_5" title="Permanent link">&para;</a></h4>
@@ -8721,29 +8755,37 @@
 <h4 id="export-file"><strong>Export file</strong><a class="headerlink" href="#export-file" title="Permanent link">&para;</a></h4>
 <p>Name of a local library file where the exported data is saved.</p>
 <h4 id="export-format"><strong>Export format</strong><a class="headerlink" href="#export-format" title="Permanent link">&para;</a></h4>
-<p>File format for the export. Available options:
-- MZmine json (<strong>recommended</strong>),
-- And NIST msp.</p>
+<p>File format for the export. Available options:</p>
+<ul>
+<li>MZmine json (<strong>recommended</strong>),</li>
+<li>And NIST msp.</li>
+</ul>
 <h4 id="metadata"><strong>Metadata</strong><a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h4>
 <p>Metadata for all entries.</p>
 <h5 id="metadata-setup"><strong>Metadata setup</strong><a class="headerlink" href="#metadata-setup" title="Permanent link">&para;</a></h5>
-<p>In this dialog user can setup all dataset-related data, including the decription, ID (either from MassIVE, MetaboLights, or Metabolomic Workbench), specifications of the instrument, information on researchers involved in the dataset creation, and ion mode.</p>
+<p>In this dialog user can setup all dataset-related data, including the decription, ID (either from
+MassIVE, MetaboLights, or Metabolomic Workbench), specifications of the instrument, information on
+researchers involved in the dataset creation, and ion mode.</p>
 <p><img alt="Metadata setup" src="metadata_setup.png" /></p>
 <h4 id="mz-tolerance-merging"><strong>m/z tolerance (merging)</strong><a class="headerlink" href="#mz-tolerance-merging" title="Permanent link">&para;</a></h4>
 <p><em>Optional parameter</em></p>
-<p>The tolerance used to group signals during merging of spectra. If selected, spectra from different collision energies will be merged. </p>
+<p>The tolerance used to group signals during merging of spectra. If selected, spectra from different
+collision energies will be merged.</p>
 <h4 id="handle-chimeric-spectra"><strong>Handle chimeric spectra</strong><a class="headerlink" href="#handle-chimeric-spectra" title="Permanent link">&para;</a></h4>
-<p><em>Optional parameter</em> </p>
-<p>Options to identify and handle chimeric spectra with multiple MS1 signals in the precursor ion selection.</p>
+<p><em>Optional parameter</em></p>
+<p>Options to identify and handle chimeric spectra with multiple MS1 signals in the precursor ion
+selection.</p>
 <h5 id="handle-chimeric-spectra-setup"><strong>Handle chimeric spectra setup</strong><a class="headerlink" href="#handle-chimeric-spectra-setup" title="Permanent link">&para;</a></h5>
-<p>This dialog allows to set parameters for handling chimeric spectra. The spectrum detected as chimeric will be flagged if this option is chosen.</p>
+<p>This dialog allows to set parameters for handling chimeric spectra. The spectrum detected as
+chimeric will be flagged if this option is chosen.</p>
 <p><img alt="Chimeric spectra setup" src="chimeric-spectra.png" /></p>
 <h4 id="quality-parameters"><strong>Quality parameters</strong><a class="headerlink" href="#quality-parameters" title="Permanent link">&para;</a></h4>
 <p>Quality parameters for MS/MS spectra to be exported to the library.</p>
 <h5 id="quality-parameters-spectra-setup"><strong>Quality parameters spectra setup</strong><a class="headerlink" href="#quality-parameters-spectra-setup" title="Permanent link">&para;</a></h5>
-<p>The following dialog allows to set the criteria for the MS/MS export to the library, such as minimum number of signals, percentage of explained signals or intensity, etc.</p>
+<p>The following dialog allows to set the criteria for the MS/MS export to the library, such as minimum
+number of signals, percentage of explained signals or intensity, etc.</p>
 <p><img alt="Quality parameters" src="quality-parameters.png" /></p>
-<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -8764,7 +8806,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="April 6, 2023 09:55:53 UTC">April 6, 2023 09:55:53</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="August 21, 2026 09:00:13 UTC">August 21, 2026 09:00:13</span>
   </span>
 
     
@@ -8781,6 +8823,7 @@
     <nav>
       
         <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
+        <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
     </nav>
   </span>
