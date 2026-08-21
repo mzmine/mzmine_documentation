@@ -1,6 +1,24 @@
-[![Auto Deploy](https://github.com/mzmine/mzmine_documentation/actions/workflows/autodeploy.yml/badge.svg)](https://github.com/mzmine/mzmine_documentation/actions/workflows/autodeploy.yml)  [![Links Check](https://github.com/mzmine/mzmine_documentation/actions/workflows/link_check.yml/badge.svg)](https://github.com/mzmine/mzmine_documentation/actions/workflows/link_check.yml)  [![CI](https://github.com/mzmine/mzmine_documentation/actions/workflows/main.yml/badge.svg)](https://github.com/mzmine/mzmine_documentation/actions/workflows/main.yml)
+[![Auto Deploy](https://github.com/mzmine/mzmine_documentation/actions/workflows/autodeploy.yml/badge.svg)](https://github.com/mzmine/mzmine_documentation/actions/workflows/autodeploy.yml)  [![CI](https://github.com/mzmine/mzmine_documentation/actions/workflows/main.yml/badge.svg)](https://github.com/mzmine/mzmine_documentation/actions/workflows/main.yml)
 
 # How to contribute
+
+## Local build on Windows
+
+Create a repository-local Python environment and install the same dependencies as CI:
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python -m pip install --upgrade pip
+.\.venv\Scripts\python -m pip install -r requirements.txt
+```
+
+Run the strict documentation build, including internal file and anchor validation:
+
+```powershell
+.\.venv\Scripts\python -m mkdocs build --strict
+```
+
+The generated site is written to `site/`. Both `site/` and `.venv/` are ignored by Git.
 
 ## Contribute to the MZmine documentation
 

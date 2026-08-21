@@ -5,6 +5,11 @@ repo_name: mzmine/mzmine_documentation
 repo_url: https://github.com/mzmine/mzmine_documentation
 use_directory_urls: false
 
+validation:
+  links:
+    not_found: warn
+    anchors: warn
+
 nav:
   - Home page: index.md
   - Getting started: getting_started.md
