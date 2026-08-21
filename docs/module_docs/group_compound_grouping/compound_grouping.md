@@ -198,7 +198,7 @@ the source's confidence and neutral mass. The source compound is dropped if it e
 ## Configuring compound-row intensity {#config-intensity}
 
 A separate module —
-[**Configure compound representations**](config_compound representations.md) —
+[**Configure compound representations**](config_compound_representations.md) —
 controls how each compound row exposes its per-raw-file intensity (area, height, normalized
 variants). Run it after Compound grouping to switch between using the representative member's
 feature, summing across all members, or summing only members that carry an Ion Identity.
