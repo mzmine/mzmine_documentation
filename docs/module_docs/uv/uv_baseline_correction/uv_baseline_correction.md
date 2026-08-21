@@ -76,7 +76,7 @@ suppresses peaks on its own and usually works best with **Exclude peaks** disabl
 
 Specify how many of the data points of the chromatogram are sampled to fit the baseline (default
 5%). This value depends on the acquisition rate of the detector and whether
-previous [binning](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md#bin-width-manualauto-_optional_)
+previous [binning](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md#bin-width-manualauto-optional)
 has been applied. The higher the acquisition rate, the lower the **percentage of samples** can be.
 
 !!! info
@@ -169,7 +169,7 @@ solution is to restrict the retention time range to the relevant parts of the ch
 by trimming.
 
 In
-UV: [trimming traces](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md#trim-rt-range-_optional_)
+UV: [trimming traces](../uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md#trim-rt-range-optional)
 
 In
 MS: [Chromatogram builder](../../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.md#scan-filters)
