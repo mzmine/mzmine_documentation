@@ -1,1 +1,1 @@
-mkdocs build
+mkdocs build --strict
