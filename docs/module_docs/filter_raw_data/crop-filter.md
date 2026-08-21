@@ -21,6 +21,9 @@ Define scan filtering parameters, which include:
 - Polarity,
 - and Spectrum type.
 
+See [Scan selection filters](../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 #### **m/z**
 
 m/z boundary of the cropped region

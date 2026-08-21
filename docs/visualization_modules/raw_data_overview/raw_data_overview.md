@@ -25,6 +25,9 @@ To display an extracted ion chromatogram (XIC), the user can tick the "Show XIC"
 
 "Setup" button allows to choose the appropriate plot type. **Base peak intensity** plot only shows the signal of the most intense mass peak in each MS spectrum, while the **Total ion current** plot shows the summed signal intensity of all masses at any one retention time point.
 
+The chromatogram setup also uses the shared
+[Scan selection filters](../../module_docs/scan_selection/scan_selection.md).
+
 ![Raw data chromatogram setup](raw-data-chromatogram-setup.PNG)
 
 ## **Spectrum parameters**

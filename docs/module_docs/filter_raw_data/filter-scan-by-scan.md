@@ -6,6 +6,9 @@
 
 This module can be used to preprocess data in each scan using various filters.
 
+The scans processed by the module can be restricted with the shared
+[Scan selection filters](../scan_selection/scan_selection.md).
+
 The preview shows the superposed spectra of the scan before and after the Savitzky-Golay filter is applied.
 
 ![Preview example](scan-by-scan-preview.png)

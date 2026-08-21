@@ -45,6 +45,9 @@ Chosen function is used to weigh m/z values by their intensities. The available 
 
 Selects the scans that should be included.
 
+See [Scan selection filters](../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 #### **m/z tolerance**
 
 Maximum allowed difference between two m/z values in order for them to be considered the same.

@@ -85,6 +85,8 @@ spectrum panel](#summed-frame-spectrum-panel-1).
 the selected m/z value.
 
 **Scan selection**: Use this to switch between the selected scans, e.g., MS1 and MS2.
+See [Scan selection filters](../../module_docs/scan_selection/scan_selection.md) for all available
+criteria and combination rules.
 
 **Retention time width**:
 Boundary around the currently selected retention time to build ion traces for the selected m/z.

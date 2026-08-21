@@ -27,6 +27,9 @@ Selects which scans in the raw data file are treated as MS2 scans. The default s
 scans at MS level 2. All permissible MS2 scans must have been processed
 by [mass detection](../featdet_mass_detection/mass-detection.md).
 
+See [Scan selection filters](../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 #### Algorithm
 
 Selects how pseudo MS2 spectra are paired to features. Two options are available:
