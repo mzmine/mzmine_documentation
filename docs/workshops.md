@@ -4,6 +4,7 @@
 
 | Venue                         | Description                                                                     | Dates            | Speakers/Instructors                                                                                             | Material | Estimated Attendance |
 |-------------------------------|---------------------------------------------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------| -----|----------------------|
+| BIOCEV, Czechia | Untargeted Metabolomics with mzmine Workshop | 2026-08-17 to 18 | Joshua D. Smith, Federico Brigante, Kateřina Kučerová, Erik Bouchal |  | 60+ |
 | Webinar, hosted by [VMOL](https://vmol.org/) | mzmine Series: Automatic library generation: LC-MS2, MSn trees | 2024-12-17 | Corinna Brungs | [Video](https://www.youtube.com/watch?v=UnqVtZngzl0&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=1) |  |
 | Webinar, hosted by [GA](https://ga-online.org/natural-products-research-in-the-digital-era-december-6-2024/) | Natural products research in the digital era: mzmine | 2024-12-06 | Corinna Brungs, Robin Schmid, Jean-Luc Wolfender | | 280 |
 | Webinar, hosted by [VMOL](https://vmol.org/) | mzmine Series: LC-MS and LC-IMS-MS: PFAS, contaminants, and pesticides | 2024-12-03 | Steffen Heuckeroth | [Video](https://www.youtube.com/watch?v=Xp-G1HSozgM&list=PL7kvpfzg8JkVGjhiGty5p-IDXgP9APx3b&index=3) | 250+ |
