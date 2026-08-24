@@ -13,8 +13,8 @@ the mzmine graphical user interface or using the _Import MS data_ module.
 | Thermo (.raw)                      | ✓       | ✓     | ✓   |
 | Bruker (.d/.tdf, .d/.tsf, .d/.baf) | ✓       | ✓     |     |
 | Waters (.raw)                      | ✓       | ✓     |     |
+| SCIEX (.wiff/.wiff2)               | ✓       | ✓     |     |
 | Agilent (.d)                       | ✓ (\*)  |       |     |
-| SCIEX (.wiff/.wiff2)               | ✓ (\*)  |       |     |
 | MOBILion (.mbi)                    | ✓ (\*)  |       |     |
 | Shimadzu (.lcd)                    | ✓ (\*)  |       |     |
 \* via [MSConvert](https://proteowizard.sourceforge.io/download.html)

@@ -28,6 +28,8 @@ This option is great for large datasets and for profile mode data.
 3. Define the MS1 and MS2 detectors as described in the Mass detection step
 4. Remove all other Mass detection steps from the batch configuration, usually applied after data import
 
+See also: [Advanced import](module_docs/io/data-import.md#advanced-mass-detection)
+
 ![Advanced import](img/advanced_import.png)
 
 ### Handling original feature lists
