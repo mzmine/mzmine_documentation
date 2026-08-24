@@ -16,7 +16,7 @@ you can use the **Import MS data** module.
 ### **Description**
 
 Raw data can be imported via :material-menu-open: **Raw data methods → Import MS data**.
-The module combines the import of many MS data formats (see [formats](../data_conversion.md)) and adds advanced, format- and vendor-specific import options.
+The module combines the import of many MS data formats (see [formats](../../data_conversion.md)) and adds advanced, format- and vendor-specific import options.
 
 ![ms_data_advanced](ms_data_advanced_import.png)
 
