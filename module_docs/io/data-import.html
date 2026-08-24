@@ -802,6 +802,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vendor-data-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vendor data options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vendor data options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vendor-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preferences as defaults vs. explicit settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#advanced-import" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -836,13 +864,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ms1-detector-and-ms2-detector" class="md-nav__link">
+  <a href="#advanced-mass-detection" class="md-nav__link">
     <span class="md-ellipsis">
       
         MS1 detector and MS2 detector
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="MS1 detector and MS2 detector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ims-mass-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ion mobility (IMS) data: mobility scans and frames
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -867,6 +912,17 @@
     <span class="md-ellipsis">
       
         Metadata file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-sample-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extract sample metadata
       
     </span>
   </a>
@@ -6548,6 +6604,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vendor-data-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vendor data options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vendor data options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vendor-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preferences as defaults vs. explicit settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#advanced-import" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6582,13 +6666,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ms1-detector-and-ms2-detector" class="md-nav__link">
+  <a href="#advanced-mass-detection" class="md-nav__link">
     <span class="md-ellipsis">
       
         MS1 detector and MS2 detector
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="MS1 detector and MS2 detector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ims-mass-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ion mobility (IMS) data: mobility scans and frames
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -6613,6 +6714,17 @@
     <span class="md-ellipsis">
       
         Metadata file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract-sample-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extract sample metadata
       
     </span>
   </a>
@@ -6677,11 +6789,50 @@ you can use the <strong>Import MS data</strong> module.</p>
 <p><img alt="MSConvert_settings" src="../../MSConvert_settings.png" /></p>
 <h2 id="ms-data"><strong>MS data</strong><a class="headerlink" href="#ms-data" title="Permanent link">&para;</a></h2>
 <h3 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
-<p>Raw data can be imported via <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Raw data methods → Import MS data</strong>.</p>
+<p>Raw data can be imported via <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Raw data methods → Import MS data</strong>.
+The module combines the import of many MS data formats (see <a href="../../data_conversion.html">formats</a>) and adds advanced, format- and vendor-specific import options.</p>
 <p><img alt="ms_data_advanced" src="ms_data_advanced_import.png" /></p>
 <h3 id="file-names"><strong>File names</strong><a class="headerlink" href="#file-names" title="Permanent link">&para;</a></h3>
 <p>Click <strong>Select files</strong> or choose the preferred data format (All<em>.) and browse the desired directory. All data files stored therein will be imported.
 The enabled option </em><em>in sub folders</em>* searches all files in the whole subdirectory tree.</p>
+<h3 id="vendor-data-options"><strong>Vendor data options</strong><a class="headerlink" href="#vendor-data-options" title="Permanent link">&para;</a></h3>
+<p>These options control how vendor-specific raw data is handled during import:</p>
+<ul>
+<li><strong>Try vendor centroiding</strong> – applies the vendor peak picking during import/conversion where it is
+  supported. Using the vendor algorithm usually gives better results than a generic one.</li>
+<li><strong>Remove calibrant signals (Thermo)</strong> – removes internal calibration signals from MS1 and MS2
+  spectra of Thermo Orbitrap data on import. For MS level ≥ 3, use the <em>Scan signal removal</em> module.</li>
+<li><strong>Apply lockmass on import (Waters)</strong> – applies lockmass correction for native Waters raw data
+  imported via MSConvert.</li>
+<li><strong>Waters MassLynx data import</strong> – selects whether Waters MassLynx files are imported via MSConvert
+  or via the native Waters library. MSConvert can retain the converted mzML files (faster on
+  re-import) but cannot centroid IMS data; the native import supports centroiding (by mzmine or
+  Waters, the latter being slow for IMS).</li>
+<li><strong>Pressure compensation (Bruker IMS)</strong> – optionally compensates timsTOF mobility values for
+  pressure changes on import. This can only be applied during import, not afterwards. Usually not required
+  for LC-IMS-MS files. In most cases a calibration in DataAnalysis is recommended, either manually
+  or with a post-acquisition script.</li>
+</ul>
+<h4 id="vendor-defaults">Preferences as defaults vs. explicit settings<a class="headerlink" href="#vendor-defaults" title="Permanent link">&para;</a></h4>
+<p>The same vendor options also exist in the mzmine preferences under
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Preferences → MS data import</strong>. The preference values act as the <strong>defaults</strong>
+for the import paths that do <strong>not</strong> open the import dialog:</p>
+<ul>
+<li><strong>Drag &amp; drop</strong> of raw files into the MS data files tab of the main window.</li>
+<li>Batch queues generated by the <strong>mzwizard</strong>.</li>
+</ul>
+<p>In both cases mzmine takes a snapshot of the current preference values and uses them for the import.</p>
+<p>When you instead run the <strong>Import MS data</strong> module directly (or edit an import step inside a batch),
+the <strong>Vendor data options</strong> are shown in the dialog and can be <strong>set explicitly for that import</strong>,
+overriding the preference defaults for that run only. Each option has a
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"/></svg></span> gear button that jumps directly to the corresponding preference.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The import dialog and the preferences are independent copies. Setting a value in the import
+dialog does not change the preferences, and changing the preferences does not change a value that
+is already set in an open import dialog or in a saved batch step. A saved/loaded batch therefore
+always carries its own explicit vendor options rather than re-reading the preferences.</p>
+</div>
 <h3 id="advanced-import"><strong>Advanced import</strong><a class="headerlink" href="#advanced-import" title="Permanent link">&para;</a></h3>
 <h4 id="scan-filter"><strong>Scan filter</strong><a class="headerlink" href="#scan-filter" title="Permanent link">&para;</a></h4>
 <p>You can set up the scan filter to reduce the overall data. Options include e.g. polarity, or retention time range.</p>
@@ -6689,13 +6840,27 @@ The enabled option </em><em>in sub folders</em>* searches all files in the whole
 combination rules.</p>
 <h4 id="crop-ms1-mz"><strong>Crop MS1 m/z</strong><a class="headerlink" href="#crop-ms1-mz" title="Permanent link">&para;</a></h4>
 <p>You can filter for a specified m/z range.</p>
-<h4 id="ms1-detector-and-ms2-detector"><strong>MS1 detector and MS2 detector</strong><a class="headerlink" href="#ms1-detector-and-ms2-detector" title="Permanent link">&para;</a></h4>
+<h4 id="advanced-mass-detection"><strong>MS1 detector and MS2 detector</strong><a class="headerlink" href="#advanced-mass-detection" title="Permanent link">&para;</a></h4>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>When processing very large datasets (hundreds to thousands of data files), the mass detection
 can be run during the import. All signals below the specified noise level are not imported (altering the raw data on the import), thus saving memory and processing time.</p>
 </div>
-<p>Set the mass detection parameters as described in the Mass detection section. </p>
+<p>Set the mass detection parameters as described in the Mass detection section. The <strong>MS1 detector</strong> is
+applied to all scans with MS level ≤ 1, and the <strong>MS2 detector</strong> to all scans with MS level &gt; 1. Each
+detector can be enabled independently. During import the selected detector replaces every scan's
+signals with the detected (centroided/thresholded) masses, and the result is stored directly as the
+scan's mass list (via a pointer to the already-processed data), which is where the memory savings
+come from.</p>
+<h5 id="ims-mass-detection">Ion mobility (IMS) data: mobility scans and frames<a class="headerlink" href="#ims-mass-detection" title="Permanent link">&para;</a></h5>
+<p>For ion mobility files (e.g. Bruker timsTOF <code>.d</code>/<code>.tdf</code>, and IMS data of other vendors), the <strong>same</strong> mass
+detection during import is applied at <strong>two levels</strong>:</p>
+<ul>
+<li>On each <strong>frame</strong></li>
+<li>On every individual <strong>mobility scan</strong> contained in that frame.</li>
+</ul>
+<p>When mass detection is active for a frame's MS level, both the frame's summed spectrum and its
+mobility scans keep their centroided data as their mass list (no separate copy is stored).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>While it is slightly more efficient to do this during data import, only the processed data is stored
@@ -6714,6 +6879,9 @@ This option is encouraged before spectral merging to reduce the intensity differ
 <h3 id="metadata-file"><strong>Metadata file</strong><a class="headerlink" href="#metadata-file" title="Permanent link">&para;</a></h3>
 <p>Select this option,if you have a .csv of .tsv file with your metadata. If you need a template it is recommended to import all your raw data files into mzmine and then navigate to
 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Project → Sample metadata</strong>. Select the export button in the bottom toolbar. The <strong>Format</strong> <em>mzmine internal</em> is recommended.</p>
+<h3 id="extract-sample-metadata"><strong>Extract sample metadata</strong><a class="headerlink" href="#extract-sample-metadata" title="Permanent link">&para;</a></h3>
+<p>Optionally extract sample metadata columns from the file name or path of the imported raw data files
+using regular expressions. This step runs after the metadata file import.</p>
 <h3 id="sort-and-color"><strong>Sort and color</strong><a class="headerlink" href="#sort-and-color" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -6743,7 +6911,7 @@ This option is encouraged before spectral merging to reduce the intensity differ
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="August 21, 2026 10:39:45 UTC">August 21, 2026 10:39:45</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="August 24, 2026 08:52:30 UTC">August 24, 2026 08:52:30</span>
   </span>
 
     
