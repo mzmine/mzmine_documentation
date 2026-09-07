@@ -19,6 +19,7 @@ nav:
   - Processing wizard: wizard.md
   - Data conversion: data_conversion.md
   - Sample metadata: module_docs/project_metadata/project_metadata.md
+  - Preferences: preferences.md
   - Performance & Benchmarking:
     - Performance options: performance.md
     - Benchmarking: performance/benchmarking.md

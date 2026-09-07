@@ -73,6 +73,8 @@ Before starting your first project, configure a few key settings:
 
    ![Settings](getting_started_set_parameters.png)
 
+See [mzmine preferences](preferences.md) for the full list of global settings.
+
 !!! warning "Project compatibility"
     mzmine 2 and mzmine 3 project files and batch files **cannot** be imported due to fundamental
     changes in data structure and parameter formats. Start a new project in mzmine 4.
