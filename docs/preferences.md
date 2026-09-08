@@ -159,6 +159,7 @@ be
 kept for faster re-import, but it does not centroid IMS data during conversion. **Native (Waters
 vendor centroiding)** uses Waters centroiding, which can be slow for IMS data.
 
+<!--
 ### Agilent .d data import
 
 Controls whether Agilent `.d` data files are imported through the native AgilentReader or through
@@ -187,6 +188,8 @@ centroids. Yellow shows centroids recomputed from
 the profile (**prefer recentroided**), and blue shows the **stored** vendor centroids. Stored
 centroids and recentroided peaks can
 differ in m/z position and intensity, so choose one strategy and keep it consistent across a study.
+
+-->
 
 ### Apply lockmass on import (Waters)
 
