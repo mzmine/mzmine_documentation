@@ -33,6 +33,7 @@ nav:
           - Raw data export: module_docs/io/data-export.md
           - Feature list import: module_docs/io/feat-list-import.md
           - Feature list export: module_docs/io/feat-list-export.md
+          - Projects: module_docs/project_io/project_io.md
           - Export to other software: module_docs/io/data-exchange-with-other-software.md
           - Spectral library generation: module_docs/io_spectral_library_export/spectral_library_generation.md
           - Merge spectral libraries: module_docs/io_spectral_library_export/merge_libraries.md
@@ -40,6 +41,10 @@ nav:
           - Export MRM to TSV: module_docs/io_mrmtotsv/mrm-to-tsv.md
           - Export feature data: module_docs/io_export_feature_data/export-feature-data.md
           - Annotation graphics export: module_docs/io_annotationgraphics/export_annotation_graphics.md
+          - Export MSn trees: module_docs/io_export_msn_tree/msn_tree_export.md
+          - CCSBase export: module_docs/io_export_ccsbase/ccsbase_export.md
+          - Library analysis csv export: module_docs/io_export_library_analysis/library_analysis_csv_export.md
+          - MS2 quality export: module_docs/io_export_msmsquality/msms_quality_export.md
       #         TODO Add feature list import/export
       - File merging:
           - Raw data files merging: module_docs/featdet_file_merging/raw-files-merging.md
@@ -90,6 +95,8 @@ nav:
       - MS2 scan pairing: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
       - MALDI MS2 scan pairing (SIMSEF): module_docs/featdet_ms2_scan_pairing/ms2_maldi_scan_pairing.md
       - DIA pseudo MS2 builder: module_docs/filter_diams2/dia_pseudo_ms2_builder.md
+      - Refine IMS-MS2 spectra: module_docs/filter_ims_msms_refinement/ims_ms2_refinement.md
+      - Score intra-row purity by MS2 similarity: module_docs/feat_ms2_similarity_intra/intra_row_ms2_similarity.md
       - Isotope filtering:
           - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md
           - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md
@@ -110,6 +117,7 @@ nav:
           - Chromatogram blank subtraction: module_docs/filter_blanksubtraction/filter_chrom_blanksubtraction.md
           - Feature list blank subtraction: module_docs/filter_blanksubtraction/filter_blanksubtraction.md
           - Split aligned feature list: module_docs/filter_splitaligned/split_aligned_feature_list.md
+          - Clear feature list annotations: module_docs/filter_clearannotations/clear_feature_annotations.md
       - Alignment:
           - Join aligner: module_docs/align_join_aligner/join_aligner.md
           - Merge lists: module_docs/align_merge_lists/align_merge_lists.md
@@ -190,6 +198,7 @@ nav:
   - Tools:
       - SIMSEF scheduler: module_docs/tools_simsef/simsef.md
       - Spectral library to feature list: module_docs/tools_spectral_library_to_feature_list/spectral_library_to_feature_list.md
+      - Save current batch: module_docs/batch_autosave/autosave_batch.md
 
   - Additional resources:
       - Installation:

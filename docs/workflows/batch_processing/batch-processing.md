@@ -41,6 +41,31 @@ on the peak lists produced by the preceding Chromatogram builder step.
     in place, to run a final batch with maximum performance.
 
 
+---
+## **Recreating a batch from processed results**
+
+Every feature list stores the list of methods that were applied to it, together with the exact
+parameters that were used. mzmine can turn this history back into a batch queue, so a workflow can
+be saved as a batch file *after* the processing was done - for example when a project was processed
+interactively, or when a batch was modified during optimization.
+
+**Feature lists tab :material-arrow-right-thin: right-click a feature list
+:material-arrow-right-thin: Show feature list summary :material-arrow-right-thin: Open in batch
+queue**
+
+The summary pane lists all applied methods of the selected feature list. *Open in batch queue*
+converts them into a batch queue and opens the batch mode dialog, where the queue can be inspected,
+adjusted, and written to an `.mzbatch` file with the **Save** button.
+
+All feature list and raw data file selections of the recreated steps are set to
+_Those created by previous batch step_, so the batch can be applied to new data directly.
+
+!!! info
+
+    Steps that cannot run in batch mode are skipped and reported in a warning dialog before the
+    queue is created. This also applies to modules that no longer exist in the current mzmine
+    version, for example because they were replaced.
+
 # mzwizard
 The [**mzwizard**](../../wizard.md) facilitates quick set up of general workflows for various sample introduction systems, (ion mobility) mass spectrometers, and workflows.
 This is the recommended way to configure workflows and create batch files. Batch files can then be modified further to improve results or to add more export steps. 

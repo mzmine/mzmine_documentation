@@ -138,17 +138,6 @@ The generated lipids are displayed in a table and in two Kendrick mass plots &#4
 
     A good starting point is to select one preset lipid class in the combo box at the bottom left corner and inspect the generated search space.
 
-## Results and downstream review
-
-After annotation, matched lipids are stored directly on the feature list rows together with their annotation status and overall quality score.
-
-- Use `Show lipid annotation QC dashboard` to get a full overview of the annotation quality.
-- Use `Show → Matched lipid signals` to inspect the fragment evidence of a selected annotation.
-- Use [Lipid annotation summary](../../visualization_modules/lipid_annotation_summary/lipid_annotation_summary.md) for a quick class-level overview of the annotated feature list.
-- Use [ECN plots](../../visualization_modules/ecn_plots/ecn_plots.md) for retention-time trend inspection of annotated lipids.
-- Use [Lipid annotation quality control dashboard](../../visualization_modules/lipid_annotation_qc_dashboard/lipid_annotation_qc_dashboard.md) to inspect lipid annotation summary, Kendrick mass plots, annotation quality, retention-time analysis, matched signals, and isotope patterns in one place.
-- Use `Lipid annotation multi-row cleanup` to remove duplicate lipid annotations across rows. Cleanup can be applied globally or only within an RT tolerance window, and can prioritize preferred ionization types for selected lipid classes.
-
 ## Custom lipid classes and fragmentation rules
 
 As described above, custom lipid classes can be defined, stored, exported, and reused.
@@ -242,5 +231,120 @@ The following fragmentation rule groups are currently supported:
 - Oxidized amid-chain rules: `Amid mono hydroxy chain fragment`, `Amid mono hydroxy chain plus formula fragment`, `Amid mono hydroxy chain minus formula fragment`
 - `Precursor`: special case for fatty acids that checks if only the precursor is present
 
+
+## Results and downstream review
+
+After annotation, matched lipids are stored directly on the feature list rows together with their annotation status and overall quality score.
+
+- Use `Show lipid annotation QC dashboard` to get a full overview of the annotation quality.
+- Use `Show → Matched lipid signals` to inspect the fragment evidence of a selected annotation.
+- Use [Lipid annotation summary](../../visualization_modules/lipid_annotation_summary/lipid_annotation_summary.md) for a quick class-level overview of the annotated feature list.
+- Use [ECN plots](../../visualization_modules/ecn_plots/ecn_plots.md) for retention-time trend inspection of annotated lipids.
+- Use [Lipid annotation quality control dashboard](../../visualization_modules/lipid_annotation_qc_dashboard/lipid_annotation_qc_dashboard.md) to inspect lipid annotation summary, Kendrick mass plots, annotation quality, retention-time analysis, matched signals, and isotope patterns in one place.
+- Use [Lipid annotation multi-row cleanup](#lipid-annotation-cleanup) to remove duplicate lipid annotations across rows. Cleanup can be applied globally or only within an RT tolerance window, and can prioritize preferred ionization types for selected lipid classes.
+- Use [Set preferred lipid annotation level](#set-lipid-annotation-level) to switch the displayed annotation level between species and molecular species level.
+
+## Lipid annotation multi-row cleanup {#lipid-annotation-cleanup}
+
+:material-menu-open: **Feature list methods → Lipid annotation multi-row cleanup**
+
+The same lipid is frequently annotated on several feature list rows, because it was detected as
+different ion species. If for example PC 36:2 is annotated as `[M+H]+` on one row and as `[M+Na]+`
+on another, both rows report the same lipid. This module keeps the best row per lipid annotation and
+removes the annotation from all other rows.
+
+Winner selection works as follows:
+
+- If an ionization preference rule matches the lipid class of the annotation, the row with the
+  preferred ionization wins.
+- If no rule matches - which is the default for all classes - the row with the higher overall
+  quality score wins.
+
+After the cleanup, the overall quality scores of the feature list are recalculated.
+
+!!! warning
+
+    Removing an annotation is permanent for that feature list. Run the cleanup on a copy, or keep
+    the original feature list, if you want to compare before and after.
+
+### Parameters
+
+#### Feature lists
+
+The feature lists to clean up.
+
+#### Ion preferences
+
+A list of rules that define the preferred ionization per lipid class. Each rule is scoped by the
+lipid hierarchy - lipid category, main class, or individual lipid class - and names the ionization
+that should win for that scope. The list is empty by default, which means every class falls back to
+highest-score selection.
+
+!!! tip
+
+    Use this for classes with a well known ionization behaviour, for example when you want to keep
+    the sodiated species of a class that ionizes poorly as protonated species.
+
+#### Row handling mode
+
+Defines what happens to the *remaining* annotations of a row when one of its lipid annotations was
+removed:
+
+- `Discard all annotations with lower score than removed annotation` (default) - keeps only
+  annotations that scored better than the removed one.
+- `Discard all annotations if any annotation of the row is removed` - clears the row completely.
+- `Select remaining annotation with highest score, regardless of what was removed` - keeps the best
+  remaining annotation.
+
+#### Analysis type
+
+The instrumental setup of the analysis: `LC-MS (reversed phase)` (default), `LC-MS (HILIC)`,
+`Direct infusion`, or `Imaging`. The setting determines whether a retention time elution pattern is
+expected for quality scoring.
+
+#### Annotation duplicate scope
+
+Defines which rows compete as duplicates:
+
+- `Clear same annotation across all RTs` (default) - all rows carrying the same annotation compete,
+  regardless of retention time.
+- `Clear within RT tolerance` - only rows whose retention times are within the given tolerance
+  compete, so genuinely separated isomers each keep their annotation. The embedded RT tolerance
+  defaults to 0.03 min.
+
+!!! tip
+
+    Use `Clear within RT tolerance` for reversed-phase LC-MS data where the same lipid species can
+    legitimately appear at several retention times, and `Clear same annotation across all RTs` for
+    direct infusion or imaging data.
+
+---
+
+## Set preferred lipid annotation level {#set-lipid-annotation-level}
+
+:material-menu-open: **Feature list methods → Set preferred lipid annotation level**
+
+Sets which annotation level is displayed by default for all lipid matches of a feature list. Lipid
+annotations can be reported on species level, for example `PC 36:2`, or on molecular species level,
+for example `PC 18:1_18:1`, depending on the available fragment evidence.
+
+This module only changes the preferred display level; it does not create, remove, or re-score any
+annotation.
+
+!!! warning
+
+    Switching to molecular species level only affects annotations that actually carry enough
+    evidence for a molecular species level assignment. All other annotations keep their species
+    level representation.
+
+### Parameters
+
+#### Feature lists
+
+The feature lists to process.
+
+#### Annotation level
+
+`Molecular species level` (default) or `Species level`.
 
 {{ git_page_authors }}
