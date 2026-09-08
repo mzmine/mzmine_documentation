@@ -100,6 +100,7 @@ nav:
           - Compound grouping (beta): module_docs/group_compound_grouping/compound_grouping.md
           - Configure compound representations: module_docs/group_compound_grouping/config_compound_representations.md
           - Spectral / Molecular Networking: module_docs/group_spectral_net/molecular_networking.md
+          - Online reactivity: module_docs/id_online_reactivity/online_reactivity.md
       - Feature list filtering:
           - Duplicate feature filter: module_docs/filter_duplicate_features/duplicate_feature_filter.md
           - Feature list rows filter: module_docs/feature_list_row_filter/feature_list_rows_filter.md
