@@ -750,17 +750,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#agilent-d-data-import" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Agilent .d data import
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#apply-lockmass-on-import-waters" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6963,17 +6952,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#agilent-d-data-import" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Agilent .d data import
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#apply-lockmass-on-import-waters" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7255,59 +7233,38 @@ centroiding, recommended)</strong>. <strong>MSConvert</strong> can convert to mz
 be
 kept for faster re-import, but it does not centroid IMS data during conversion. <strong>Native (Waters
 vendor centroiding)</strong> uses Waters centroiding, which can be slow for IMS data.</p>
-<h3 id="agilent-d-data-import">Agilent .d data import<a class="headerlink" href="#agilent-d-data-import" title="Permanent link">&para;</a></h3>
-<p>Controls whether Agilent <code>.d</code> data files are imported through the native AgilentReader or through
-MSConvert. The default is <strong>Native (AgilentReader, auto-centroid IMS)</strong> with <strong>Prefer stored
-centroids</strong> as the centroid source.</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Use when</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Native (AgilentReader)</td>
-<td>Native Agilent import on Windows, mobility scans are imported as profile.</td>
-</tr>
-<tr>
-<td>Native (AgilentReader, auto-centroid IMS)</td>
-<td>Same as Native Agilent, but uses mzmine algorithms to automatically centroid mobility scans. (if requested)</td>
-</tr>
-<tr>
-<td>MSConvert</td>
-<td>You want Agilent <code>.d</code> files converted to mzML first. This path is Windows-only.</td>
-</tr>
-</tbody>
-</table>
-<p>When <a href="#apply-vendor-centroiding-recommended">Apply vendor centroiding</a> is enabled, the embedded
+<!--
+### Agilent .d data import
+
+Controls whether Agilent `.d` data files are imported through the native AgilentReader or through
+MSConvert. The default is **Native (AgilentReader, auto-centroid IMS)** with **Prefer stored
+centroids** as the centroid source.
+
+| Option                                    | Use when                                                                                                    |
+|-------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| Native (AgilentReader)                    | Native Agilent import on Windows, mobility scans are imported as profile.                                   |
+| Native (AgilentReader, auto-centroid IMS) | Same as Native Agilent, but uses mzmine algorithms to automatically centroid mobility scans. (if requested) |
+| MSConvert                                 | You want Agilent `.d` files converted to mzML first. This path is Windows-only.                             |
+
+When [Apply vendor centroiding](#apply-vendor-centroiding-recommended) is enabled, the embedded
 centroid source decides how the native
-AgilentReader obtains centroid spectra:</p>
-<table>
-<thead>
-<tr>
-<th>Centroid source</th>
-<th>Effect</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Prefer stored centroids</td>
-<td>Uses vendor-stored centroids when present; recentroids the profile only when stored centroids are unavailable.</td>
-</tr>
-<tr>
-<td>Prefer recentroided</td>
-<td>Reads the profile data and recomputes centroids; falls back to stored centroids when no profile representation is available.</td>
-</tr>
-</tbody>
-</table>
-<p><img alt="Agilent profile, recentroided, and stored centroid comparison" src="img/preferences/agilent-centroiding-options.jpg" /></p>
-<p>In the comparison above, black shows the profile spectrum with dots indicating the mzmine-computed
+AgilentReader obtains centroid spectra:
+
+| Centroid source         | Effect                                                                                                                       |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| Prefer stored centroids | Uses vendor-stored centroids when present; recentroids the profile only when stored centroids are unavailable.               |
+| Prefer recentroided     | Reads the profile data and recomputes centroids; falls back to stored centroids when no profile representation is available. |
+
+![Agilent profile, recentroided, and stored centroid comparison](img/preferences/agilent-centroiding-options.jpg)
+
+In the comparison above, black shows the profile spectrum with dots indicating the mzmine-computed
 centroids. Yellow shows centroids recomputed from
-the profile (<strong>prefer recentroided</strong>), and blue shows the <strong>stored</strong> vendor centroids. Stored
+the profile (**prefer recentroided**), and blue shows the **stored** vendor centroids. Stored
 centroids and recentroided peaks can
-differ in m/z position and intensity, so choose one strategy and keep it consistent across a study.</p>
+differ in m/z position and intensity, so choose one strategy and keep it consistent across a study.
+
+-->
+
 <h3 id="apply-lockmass-on-import-waters">Apply lockmass on import (Waters)<a class="headerlink" href="#apply-lockmass-on-import-waters" title="Permanent link">&para;</a></h3>
 <p>Enabled by default for native Waters import. The default lock masses are 556.276575 for positive
 mode and 554.262022 for negative mode.</p>
@@ -7323,7 +7280,7 @@ and Mono may be required.</p>
 <h3 id="remove-calibrant-signals-thermo">Remove calibrant signals (Thermo)<a class="headerlink" href="#remove-calibrant-signals-thermo" title="Permanent link">&para;</a></h3>
 <p>Enabled by default. Removes internal Thermo Orbitrap calibration signals from MS1 and MS2 spectra
 during import. For MS3 and higher, use the <strong>Scan signal removal</strong> module.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:robin.schmid@mzio.io'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
 
 
 
@@ -7344,7 +7301,7 @@ during import. For MS3 and higher, use the <strong>Scan signal removal</strong> 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="June 26, 2026 11:35:55 UTC">June 26, 2026 11:35:55</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="September 8, 2026 07:50:32 UTC">September 8, 2026 07:50:32</span>
   </span>
 
     
@@ -7355,11 +7312,12 @@ during import. For MS3 and higher, use the <strong>Scan signal removal</strong> 
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
       
     </span>
     <nav>
       
+        <a href="mailto:robin.schmid@mzio.io">Robin Schmid</a>, 
         <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>
     </nav>
   </span>
