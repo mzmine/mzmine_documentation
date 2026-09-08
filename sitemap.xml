@@ -157,6 +157,14 @@
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/batch_autosave/autosave_batch.html</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/feat_ms2_similarity_intra/intra_row_ms2_similarity.html</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/featdet_file_merging/raw-files-merging.html</loc>
          <lastmod>2026-09-08</lastmod>
     </url>
@@ -261,11 +269,19 @@
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_clearannotations/clear_feature_annotations.html</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_diams2/dia_pseudo_ms2_builder.html</loc>
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_duplicate_features/duplicate_feature_filter.html</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/filter_ims_msms_refinement/ims_ms2_refinement.html</loc>
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
@@ -429,7 +445,23 @@
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/io_export_ccsbase/ccsbase_export.html</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/io_export_feature_data/export-feature-data.html</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/io_export_library_analysis/library_analysis_csv_export.html</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/io_export_msmsquality/msms_quality_export.html</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/io_export_msn_tree/msn_tree_export.html</loc>
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
@@ -502,6 +534,10 @@
     </url>
     <url>
          <loc>https://mzmine.github.io/mzmine_documentation/module_docs/norm_stand_cmpd/norm_stand_cmpd.html</loc>
+         <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+         <loc>https://mzmine.github.io/mzmine_documentation/module_docs/project_io/project_io.html</loc>
          <lastmod>2026-09-08</lastmod>
     </url>
     <url>
