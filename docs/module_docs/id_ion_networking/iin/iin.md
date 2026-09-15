@@ -2,19 +2,23 @@
 
 :material-menu-open: **Feature list methods → Feature grouping → Ion identity networking**
 
-Annotates grouped features (same retention time + optionally, feature shape and height correlation)
-as ion adducts, in
-source fragments, and multimers. Also used as input to
-the [Ion Identity Molecular Networking workflow]
-(https://ccms-ucsd.github.io/GNPSDocumentation/fbmn-iin/) on GNPS. Searches all feature pairs
-against an ion library
-for each possible combination. Great in combination with
-the [Molecular Networking](../../group_spectral_net/molecular_networking.md) module that calculates
-fragmentation pattern similarities in mzmine and allows for interactive visualization.
+Annotates grouped features (same retention time and, optionally, feature shape and height
+correlation) as ion adducts, in-source fragments, and multimers. All feature pairs within a
+correlation group are searched against an [ion library](../../../ions/ions.md): whenever two rows
+resolve to the same neutral mass under two ion types of the library, an ion identity is assigned and
+both rows join the same ion identity network.
+
+Ion identities are the basis of the **Ion Identity Molecular Networking (IIMN)** workflow in mzmine:
+run this module and then
+[Spectral / Molecular Networking](../../group_spectral_net/molecular_networking.md), which combines
+the ion identity networks with MS2 fragmentation similarity into one network. The resulting
+networks can be explored in mzmine's
+[interactive network visualizer](../../../visualization_modules/interactive_ion_id_netw/interactive_ion_id_netw.md)
+and exported to `.graphml`.
 
 !!! warning
 
-    Apply [metaCorrelate](../metacorr/metacorr.md) before running this module
+    Apply [Correlation grouping (metaCorrelate)](../metacorr/metacorr.md) before running this module.
 
 ## Recommended citations
 
@@ -38,9 +42,8 @@ fragmentation pattern similarities in mzmine and allows for interactive visualiz
 #### _m/z_ tolerance
 
 Intra sample _m/z_ tolerance describes the difference between two ions of the same molecule at the
-same retention
-time. This tolerance is usually very small and depends on the mass resolution. Orbitrap instruments
-for example 3 ppm.
+same retention time. This tolerance is usually very small and depends on the mass resolution.
+Orbitrap instruments for example 3 ppm.
 
 #### Check
 
@@ -51,47 +54,49 @@ for example 3 ppm.
 #### Min height
 
 Minimum height of features to consider. Leave at 0 to use all features that passed the feature
-detection workflow
-criteria.
+detection workflow criteria.
 
-#### Ion identity library
+#### Ion library
 
-Defines the ions to search. When two features, applied with two ions, result in the same neutral
-mass - an
-annotation is made. New ions can be defined. Adducts (left) and neutral modifications (right) are
-combined to create
-the final ion library.
+The full list of ions to search: adducts, in-source fragments, multimers, and clusters. When two
+features, annotated with two of these ion types, result in the same neutral mass, an ion identity is
+assigned.
+
+The default is _mzmine default comprehensive (+/-)_. Select a different library, or create your own,
+as described in [Ion types & libraries](../../../ions/ions.md). Only ion types matching the polarity
+and charge state of a row are used for that row, so a dual-polarity library is safe to use for data
+of a single polarity.
 
 !!! tip
 
     This step should only focus on the main ions that are typically detected in the MS method.
-    Later the _Add more ion identities_ module can add strange ions to existing networks.
-
-![IIN library](ion_library.png)
+    Later, the _Add ion identities to networks_ module can add rarer ions to existing networks.
 
 #### Annotation refinement _(optional)_
 
 Annotation refinement is optional but should be applied to finalize ion identities, after all
-subsequent optional
-steps of _Add more ion identities_ steps.
+subsequent optional steps of _Add ion identities to networks_.
 
 **Parameters:**
 
 - _Minimum size (optional)_: Only retain ion networks with at least n ions (often 3). The more ions
-  the higher the
-  confidence in the annotation.
-- _Delete small networks without major ion (optional)_: Major ions are defined as M+H, M+Na, M+NH4,
-  M-H2O+H
+  the higher the confidence in the annotation.
+- _Ion library (optional)_: The library of main ions, i.e., ions that are well expected in this
+  analysis. Each final ion identity network must contain at least one of them. While unchecked, the
+  internal _mzmine default main ions (+/-)_ library is used.
 - _Delete smaller networks: Link threshold (optional)_: Important parameter to only keep the best
-  annotation, when
-  this annotation is supported by n-1 ions (network size n).
-- _Delete networks without monomer (optional)_: Only keep a network if at least one is M+... and not
-  a multimer like
-  2M, 3M...
-- _Delete rows without ion id_: Remove all rows from the feature list that have no ion identity
-  annotation
+  annotation, when this annotation is supported by n-1 ions (network size n).
+- _Delete networks without monomer_: Only keep a network if at least one ion is M+... and not only
+  multimers like 2M, 3M...
+- _Only keep rows with ion ID_: Remove all rows from the feature list that have no ion identity
+  annotation.
 
-![IIN refinement](ion_refinement.png)
+#### Compound grouping _(optional)_
+
+Directly creates a compounds list from this feature list, where the correlated rows and their ion
+identities are grouped into compound rows. The same step is also available as the separate
+[Compound grouping](../../group_compound_grouping/compound_grouping.md) module. And is usually 
+applied after all steps including any annotation steps for better results. 
 
 ---
 
