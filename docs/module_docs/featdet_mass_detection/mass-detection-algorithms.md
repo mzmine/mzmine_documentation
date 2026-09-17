@@ -71,6 +71,22 @@ How the reported intensity for each detected peak is calculated:
 - **Height** _(default)_ — the maximum intensity within the peak region (valley to valley).
 - **Area** — the sum of all intensities within the peak region (valley to valley).
 
+**Smoothing**
+
+Optional smoothing applied to the equidistant points of each consecutive m/z region before maximum
+and edge detection. The intensity calculation above always uses the original, unsmoothed
+intensities.
+
+- **Gaussian** _(default)_ — a Gaussian-weighted moving average. Its weights are non-negative, so it
+  does not ring (over-/undershoot) next to sharp, intense peaks and therefore does not create
+  artificial local maxima on their flanks. Recommended when profile peaks are not separated into
+  disconnected m/z ranges. Width (points): full width of the filter, sigma = width / 6; even values
+  are rounded up to the next odd number, minimum 3. Default: 5.
+- **Savitzky-Golay** — a polynomial smoothing filter. Can create artificial maxima on the flanks of
+  intense peaks when profile peaks are not separated into disconnected ranges. Width (points): full
+  width of the filter, same rules as above. Default: 5.
+- **None** — no smoothing is applied.
+
 #### Algorithm
 
 1. **Region segmentation** — The spectrum is split into continuous m/z regions by detecting

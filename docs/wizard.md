@@ -60,6 +60,17 @@ efficiencies are comparable across the whole study.
 Influences batch steps:
 [Correlation grouping](module_docs/id_ion_networking/metacorr/metacorr.md)
 
+#### Apply Retention time correction
+
+Applies scan-based retention time correction (see
+[Retention time correction of scans](module_docs/norm_rt_calibration_scans/scan-based-rt-corr.md))
+to reduce RT deviations between samples before chromatogram building. Common features are
+identified across samples and used to correct the scan retention times. Only takes effect when
+more than one data file is imported and QC/reference sample files are available. Off by default.
+
+Influences batch steps:
+[Retention time correction of scans](module_docs/norm_rt_calibration_scans/scan-based-rt-corr.md)
+
 #### Crop retention time
 
 Crops the chromatograms at these retention time values. Useful to cut off the start and the end of

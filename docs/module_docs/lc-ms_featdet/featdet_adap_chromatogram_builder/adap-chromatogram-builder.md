@@ -70,4 +70,10 @@ Maximum allowed difference between an EIC-associated _m/z_ and a new data point 
 
 String added to the filename as suffix when creating the corresponding feature list.
 
+#### **Clear previous RT corrections**
+
+If a data file is processed multiple times, clearing any retention time correction that was
+previously applied to its scans ensures the result is reproducible across runs. If no correction
+was applied previously, this parameter has no effect. Default: enabled.
+
 {{ git_page_authors }}

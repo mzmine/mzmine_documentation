@@ -6,59 +6,102 @@
 
 or, for an individual row in a feature table
 
-:material-menu-open: highlight the row, right-click on the selection and choose ** Search → NIST MS Search** from the pop-up menu.
+:material-menu-open: highlight the row, right-click on the selection and choose **Search → NIST MS Search** from the pop-up menu.
 
-This module allows searching spectra against spectral libraries using the **NIST MS Search program**, which accepts spectra as input to its searches. 
+!!! info
 
-The MS level may be specified to limit a search to MS/MS fragment spectra, clustered spectra produced from any Spectral Deconvolution module, or MS1 precursors ions. The spectra will be searched using the default library search parameters in the NIST MS Search program. 
+    As of mzmine ≥4.10.6, this module no longer drives the interactive NIST MS Search GUI. It now runs
+    NIST's command line program **MSPepSearch** directly.
 
-To adjust these parameters: open the NIST MS Search software and adjust the library search parameters: **Options or Icon → Library Search Options → Search: enable automation → Libraries: choose the preferred libraries**.
-More information about the libraries and their abbreviations: https://www.nist.gov/srd/nist-standard-reference-database-1a
+This module searches feature spectra against the libraries of a licensed NIST installation, using
+NIST's command line program **MSPepSearch**. It supports two kinds of workflows:
 
-Save the configuration to a ***.ini** file. 
+- **GC-EI**: unit mass electron ionization spectra (or pseudo spectra produced by a
+  [Spectral deconvolution](../featdet_spectraldeconvolutiongc/spectraldeconvolutiongc.md) module)
+  searched against the NIST EI libraries (`mainlib`, `replib`).
+- **MS/MS**: accurate mass tandem spectra searched against the NIST tandem libraries
+  (`hr_msms_nist`, `lr_msms_nist`, `apci_msms_nist`).
 
+Every library of the required content found in the installation is searched, so libraries do not
+have to be picked by hand.
 
-:material-lightbulb: Automation must be enabled in the library search options to enable automatic searching. Be sure all appropriate libraries are included before starting a search.
+!!! warning
 
-
-Repeated MS/MS spectra may be merged between multiple data files using the Merge MS/MS (experimental) module. The input Mass list filters the fragment ions by intensity, and repeatable signals are assessed via cosine dot product.
+    Requires a licensed NIST installation of NIST 17 or newer. NIST returns no library spectra or
+    structures to mzmine, so the mirror plot only shows the input (query) spectrum. Contact
+    [mzio.io/nist](https://mzio.io/nist/) to obtain the latest NIST library.
 
 ### **Requirements**
 
-This module relies on the installed NIST MS Search software, which is currently **only available for Microsoft Windows**.
+This module relies on an installed NIST MS Search / MSPepSearch installation, which is currently
+**only available for Microsoft Windows**.
 
 ## **Parameters**
 
-#### **NIST MS Search directory**
+The setup dialog groups parameters into **General** (always shown), **MS/MS-specific**, and
+**GC-EI-MS-specific**, since only one of the two tolerance/merging groups applies depending on the
+selected search type. A **Presets** button offers the two recommended workflow configurations
+("GC-EI (low resolution)" and "MS/MS (high resolution)") as a starting point; applying a preset
+keeps the installation directory but resets the feature list selection.
 
-Full path to the directory containing the NIST MS Search executable (**nistms$.exe**).
+#### **Feature lists**
 
-#### **MS level**
+The feature lists to search.
 
-MS spectra level for searching. 
+#### **NIST installation directory**
 
-Use MS level = 1 to search for MS1 spectra or ADAP-GC clustered spectra produced from Spectral Deconvolution modules.
+The NIST installation directory, for example `C:\NIST26`. It must contain the `MSPepSearch`
+subdirectory with `MSPepSearch64.exe` and the library subdirectories, such as `mainlib` or
+`hr_msms_nist`. Use the search button next to the field to detect an installation automatically
+(drive roots and common program folders are scanned).
+
+#### **Search type**
+
+The NIST search preset to use. It also picks the libraries and decides which of the parameters
+below apply:
+
+- **Automatic** _(default)_ — GC-EI identity if the feature list was built by a spectral
+  deconvolution module, MS/MS otherwise.
+- **GC-EI identity** — unit mass EI spectra against the EI libraries, to find the compound itself.
+- **GC-EI similarity** — the same, but also finds related compounds that are not in the library
+  themselves.
+- **MS/MS** — accurate mass spectra against the tandem libraries.
+
+#### **Merge & select fragment scans**
+
+Controls how fragment spectra are filtered, merged, and selected before searching (see
+[detailed description](../filter_scan_merge_select/scan_merge_select.md)). Repeated MS/MS
+spectra may be merged across multiple data files this way instead of using only the most intense
+one.
 
 #### **Min cosine similarity**
 
-The minimum cosine similarity score (dot product) for identification.
+The minimum similarity score of a reported hit, on mzmine's 0 to 1 scale (this is the NIST match
+factor divided by 1000). 0.7 and above is usually considered a good match, 0.9 and above an
+excellent one. Default: 0.7 (GC-EI preset: 0.75).
 
-#### **Merge MS/MS (experimental)**
+#### **Precursor m/z tolerance** _(MS/MS-specific)_
 
-_Optional parameter._ 
+MS/MS searches only, ignored by the GC-EI searches. How far the precursor m/z of a library entry
+may differ from the searched spectrum. It only decides which library entries are compared and does
+not enter the match factor itself. MSPepSearch takes a single value, so this is either an absolute
+or a relative (ppm) tolerance, never the maximum of both. Default: 20 ppm.
 
-Merge multiple high-quality MS/MS spectra into consensus feature instead of using the most intense one. 
+#### **Fragment m/z tolerance** _(MS/MS-specific)_
 
-#### **Integer m/z**
+MS/MS searches only. The product ion m/z uncertainty; unlike the precursor tolerance this one
+decides which signals count as matched and therefore the match factor itself. NIST recommends 20
+ppm or less. Single value for the same reason as the precursor tolerance. Default: 20 ppm.
 
-_Optional parameter_. 
+#### **Integer m/z** _(GC-EI-MS-specific)_
 
-Merging mode for fractional m/z to unit mass. Converts accurate mass m/z measurements to low-resolution integer values.
+GC-EI searches only, ignored by the MS/MS search. How signals of the same nominal mass are combined
+before searching, because the NIST EI libraries are unit mass:
 
-Available options are Sum or Maximum.
+- **Sum** _(default)_ — adds their intensities, matching how a unit mass library spectrum reports a
+  nominal mass; needed for accurate mass GC data (GC-QTOF, GC-Orbitrap).
+- **Maximum** — keeps only the most intense signal of the nominal mass.
 
-#### **Spectrum Import**
-
-Options for import, can be by either **Overwrite** (overwriting previous spectra) or **Append** (appending new ones).
+Unit mass quadrupole data has one signal per nominal mass, so both options are equivalent there.
 
 {{ git_page_authors }}
