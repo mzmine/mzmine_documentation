@@ -4,14 +4,9 @@
 
 :material-menu-open: **Feature list methods → Isotopes → Isotopic peaks finder.**
 
-!!! danger
+!!! info
 
-    The detection algorithm was completely reworked in mzmine ≥4.10. It now searches all plausible
-    isotope signals around the feature m/z, selects the most probable charge state, and bounds the
-    pattern with modelled relative intensities instead of the simple delta-mass backtracking
-    described below for older versions. Results therefore differ from earlier versions and are
-    generally more complete and more reliable. The description below documents the current
-    algorithm.
+    The detection algorithm was completely reworked in mzmine >4.10.6.
 
 The module searches isotope patterns for each feature in selected feature lists by going back to
 the mass spectra. Starting from the feature m/z, the algorithm predicts a carbon-based envelope

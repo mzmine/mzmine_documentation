@@ -8,13 +8,10 @@ or, for an individual row in a feature table
 
 :material-menu-open: highlight the row, right-click on the selection and choose **Search → NIST MS Search** from the pop-up menu.
 
-!!! danger
+!!! info
 
-    As of mzmine ≥4.10, this module no longer drives the interactive NIST MS Search GUI. It now runs
-    NIST's command line program **MSPepSearch** directly, so the workflow described below replaced
-    the previous **.ini**-file / GUI-automation based one. Batch steps saved with an older mzmine
-    version are migrated automatically: the search type is set to Automatic and the module message
-    on first opening the dialog explains what changed.
+    As of mzmine ≥4.10.6, this module no longer drives the interactive NIST MS Search GUI. It now runs
+    NIST's command line program **MSPepSearch** directly.
 
 This module searches feature spectra against the libraries of a licensed NIST installation, using
 NIST's command line program **MSPepSearch**. It supports two kinds of workflows:
@@ -26,8 +23,7 @@ NIST's command line program **MSPepSearch**. It supports two kinds of workflows:
   (`hr_msms_nist`, `lr_msms_nist`, `apci_msms_nist`).
 
 Every library of the required content found in the installation is searched, so libraries do not
-have to be picked by hand. The search type actually used is written to the log and shown in the
-task description.
+have to be picked by hand.
 
 !!! warning
 
