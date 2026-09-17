@@ -3997,6 +3997,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../norm_remove_scanrtcal/remove_scan_rt_correction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear retention time correction (scans)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../norm_intensity/norm_intensity.html" class="md-nav__link">
         
   
@@ -7055,6 +7083,21 @@ value avoids detecting very narrow spikes or single-point artefacts. Default: 3.
 <li><strong>Height</strong> <em>(default)</em> — the maximum intensity within the peak region (valley to valley).</li>
 <li><strong>Area</strong> — the sum of all intensities within the peak region (valley to valley).</li>
 </ul>
+<p><strong>Smoothing</strong></p>
+<p>Optional smoothing applied to the equidistant points of each consecutive m/z region before maximum
+and edge detection. The intensity calculation above always uses the original, unsmoothed
+intensities.</p>
+<ul>
+<li><strong>Gaussian</strong> <em>(default)</em> — a Gaussian-weighted moving average. Its weights are non-negative, so it
+  does not ring (over-/undershoot) next to sharp, intense peaks and therefore does not create
+  artificial local maxima on their flanks. Recommended when profile peaks are not separated into
+  disconnected m/z ranges. Width (points): full width of the filter, sigma = width / 6; even values
+  are rounded up to the next odd number, minimum 3. Default: 5.</li>
+<li><strong>Savitzky-Golay</strong> — a polynomial smoothing filter. Can create artificial maxima on the flanks of
+  intense peaks when profile peaks are not separated into disconnected ranges. Width (points): full
+  width of the filter, same rules as above. Default: 5.</li>
+<li><strong>None</strong> — no smoothing is applied.</li>
+</ul>
 <h4 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
@@ -7141,7 +7184,7 @@ The size of the window used to calculated the wavelet signal. When the size of t
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 31, 2026 14:26:16 UTC">March 31, 2026 14:26:16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="September 17, 2026 07:17:22 UTC">September 17, 2026 07:17:22</span>
   </span>
 
     

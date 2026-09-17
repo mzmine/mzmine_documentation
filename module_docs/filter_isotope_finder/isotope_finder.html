@@ -2853,17 +2853,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#chemical-elements" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Chemical elements
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#mz-tolerance" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2875,10 +2864,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#maximum-charge-of-isotope-mz" class="md-nav__link">
+  <a href="#require-13c-isotope-peak" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Maximum charge of isotope m/z
+        Require 13C isotope peak
       
     </span>
   </a>
@@ -2886,10 +2875,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#search-in-scans" class="md-nav__link">
+  <a href="#maximum-charge-of-isotope-mz" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Search in scans
+        Maximum charge of isotope m/z
       
     </span>
   </a>
@@ -3905,6 +3894,34 @@
     
   
     Retention time calibration (scans)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../norm_remove_scanrtcal/remove_scan_rt_correction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear retention time correction (scans)
   
 
     
@@ -6790,17 +6807,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#chemical-elements" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Chemical elements
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#mz-tolerance" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6812,10 +6818,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#maximum-charge-of-isotope-mz" class="md-nav__link">
+  <a href="#require-13c-isotope-peak" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Maximum charge of isotope m/z
+        Require 13C isotope peak
       
     </span>
   </a>
@@ -6823,10 +6829,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#search-in-scans" class="md-nav__link">
+  <a href="#maximum-charge-of-isotope-mz" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Search in scans
+        Maximum charge of isotope m/z
       
     </span>
   </a>
@@ -6865,25 +6871,44 @@
 
 <h1 id="isotope-pattern-finder"><strong>Isotope pattern finder</strong><a class="headerlink" href="#isotope-pattern-finder" title="Permanent link">&para;</a></h1>
 <h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Isotopes → Isotope pattern finder.</strong></p>
-<p>The module searches isotope patterns for each feature in selected feature lists by going back to the mass spectra. 
-Starting from the feature m/z the algorithm will first backtrack any possible preceding isotope signals using a list
-of delta masses created from elements, their stable isotopes, and an m/z tolerance. For example, a -2 signal might 
-be detected when searching for Br isotopes. In a second step, all picked potential isotope m/z values are used to 
-search next isotope (with higher m/z). This is done for each charge state.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Isotopes → Isotopic peaks finder.</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The detection algorithm was completely reworked in mzmine &gt;4.10.6.</p>
+</div>
+<p>The module searches isotope patterns for each feature in selected feature lists by going back to
+the mass spectra. Starting from the feature m/z, the algorithm predicts a carbon-based envelope
+model (the expected relative isotope intensities for a plausible carbon count at that mass), then
+searches around every offset of that envelope for matching signals in the most intense scan of the
+feature. Every charge state up to the maximum is evaluated this way; the charge whose signals best
+match the modelled envelope is reported as the most probable one, and other highly probable charge
+states are flagged (for example overlapping [M+H]+ and [2M+2H]2+ patterns). The resulting pattern is
+intentionally inclusive so that downstream formula prediction can refine it further.</p>
 <p><img alt="" src="Isotope_pattern_finder.png" /></p>
 <h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
-<h4 id="chemical-elements">Chemical elements<a class="headerlink" href="#chemical-elements" title="Permanent link">&para;</a></h4>
-<p>All stable isotopes of the chosen elements are used to create a list of mass differences to search. Signals with this mass difference (m/z difference with different charge states) are then considered as potential isotope signals.</p>
+<p>Only the "Automatic" algorithm is currently offered in the parameter dialog. It exposes the three
+parameters below and defaults everything else (which elements are modelled, element
+auto-detection, whether only explainable signals are kept, refinement across the feature's FWHM
+scans) to sensible values that are not yet user-configurable.</p>
 <h4 id="mz-tolerance">m/z tolerance<a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum allowed difference between two features' m/z values in order for them to be considered the same. The value is specified both as absolute tolerance (in m/z) and relative tolerance (in ppm). The tolerance range is calculated using maximum of the absolute and relative tolerances.</p>
+<p>Maximum allowed difference between a feature's m/z and a candidate isotope signal in the same scan,
+in order for them to be considered part of the same pattern. The value is specified both as
+absolute tolerance (in m/z) and relative tolerance (in ppm); mzmine uses whichever of the two is
+larger. Default: 15 ppm or 5 mDa, whichever is larger.</p>
+<h4 id="require-13c-isotope-peak">Require 13C isotope peak<a class="headerlink" href="#require-13c-isotope-peak" title="Permanent link">&para;</a></h4>
+<p>If enabled, a charge is only accepted when the signals form a gap-free ladder on the
+charge-adjusted 13C grid through the detected pattern. Features without such a ladder are skipped,
+which is useful to suppress noise and heavy-isotope-only artefacts. Enabling this also truncates
+the reported pattern at the first missing 13C position, even if further signals exist beyond the
+gap (molecules whose pattern is dominated by an intense +2 comb, such as Cl, Br, or Cu, are allowed
+to use every second 13C position instead). When the base peak is the monoisotopic signal, its
+M+1/M relative intensity must also be roughly plausible for the carbon count the mass implies;
+mid-envelope patterns without a visible monoisotopic signal (e.g. proteins) are exempt from this
+ratio check. Off by default.</p>
 <h4 id="maximum-charge-of-isotope-mz">Maximum charge of isotope m/z<a class="headerlink" href="#maximum-charge-of-isotope-mz" title="Permanent link">&para;</a></h4>
-<p>Maximum possible charge of isotope m/z distributions. 
-All present m/z values obtained by dividing isotope masses with 1,2 ...,maxCharge values will be considered.
-The default value is 1, but insert an integer greater than 1 if you want to consider ions of higher charge states.</p>
-<h4 id="search-in-scans">Search in scans<a class="headerlink" href="#search-in-scans" title="Permanent link">&para;</a></h4>
-<p>Currently, the supported option is "Single most intense", which means the search for isotopes will happen in the single most intense MS scan of each feature.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:110992295+notreallycontributing@users.noreply.github.com'>NotReallyContributing</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:lana.mutabdzija@gmail.com'>lalalana5</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p>Maximum possible charge of the isotope distribution. Charges 1 to this value are evaluated and the
+most probable charge is selected; other highly probable charges are flagged. Default: 3.</p>
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:lana.mutabdzija@gmail.com'>lalalana5</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -6904,7 +6929,7 @@ The default value is 1, but insert an integer greater than 1 if you want to cons
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 24, 2022 21:13:07 UTC">November 24, 2022 21:13:07</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="September 17, 2026 10:07:50 UTC">September 17, 2026 10:07:50</span>
   </span>
 
     
@@ -6920,8 +6945,8 @@ The default value is 1, but insert an integer greater than 1 if you want to cons
     </span>
     <nav>
       
-        <a href="mailto:110992295+notreallycontributing@users.noreply.github.com">NotReallyContributing</a>, 
         <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
+        <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>, 
         <a href="mailto:lana.mutabdzija@gmail.com">lalalana5</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
     </nav>

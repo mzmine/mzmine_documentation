@@ -493,6 +493,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#apply-retention-time-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apply Retention time correction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#crop-retention-time" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4370,6 +4381,34 @@
   
   
     <li class="md-nav__item">
+      <a href="module_docs/norm_remove_scanrtcal/remove_scan_rt_correction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear retention time correction (scans)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="module_docs/norm_intensity/norm_intensity.html" class="md-nav__link">
         
   
@@ -7279,6 +7318,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#apply-retention-time-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apply Retention time correction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#crop-retention-time" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7807,6 +7857,14 @@ matrix (e.g., salt content, same culture medium, only fresh OR sea water samples
 efficiencies are comparable across the whole study.</p>
 <p>Influences batch steps:
 <a href="module_docs/id_ion_networking/metacorr/metacorr.html">Correlation grouping</a></p>
+<h4 id="apply-retention-time-correction">Apply Retention time correction<a class="headerlink" href="#apply-retention-time-correction" title="Permanent link">&para;</a></h4>
+<p>Applies scan-based retention time correction (see
+<a href="module_docs/norm_rt_calibration_scans/scan-based-rt-corr.html">Retention time correction of scans</a>)
+to reduce RT deviations between samples before chromatogram building. Common features are
+identified across samples and used to correct the scan retention times. Only takes effect when
+more than one data file is imported and QC/reference sample files are available. Off by default.</p>
+<p>Influences batch steps:
+<a href="module_docs/norm_rt_calibration_scans/scan-based-rt-corr.html">Retention time correction of scans</a></p>
 <h4 id="crop-retention-time">Crop retention time<a class="headerlink" href="#crop-retention-time" title="Permanent link">&para;</a></h4>
 <p>Crops the chromatograms at these retention time values. Useful to cut off the start and the end of
 the chromatograms. The start is often diverted into the waist and the end often contains the cleanup
@@ -8051,7 +8109,7 @@ even better results. There are two ways to optimize the wizard workflow.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 21, 2025 15:45:16 UTC">October 21, 2025 15:45:16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="September 17, 2026 07:17:22 UTC">September 17, 2026 07:17:22</span>
   </span>
 
     

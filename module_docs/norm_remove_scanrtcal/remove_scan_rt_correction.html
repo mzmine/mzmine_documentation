@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/io_spectral_library_export/spectral_library_generation.html">
+        <link rel="canonical" href="https://mzmine.github.io/mzmine_documentation/module_docs/norm_remove_scanrtcal/remove_scan_rt_correction.html">
       
       
-        <link rel="prev" href="../io/data-exchange-with-other-software.html">
+        <link rel="prev" href="../norm_rt_calibration_scans/scan-based-rt-corr.html">
       
       
-        <link rel="next" href="merge_libraries.html">
+        <link rel="next" href="../norm_intensity/norm_intensity.html">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Spectral library generation - mzmine documentation</title>
+        <title>Clear retention time correction (scans) - mzmine documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#batch-spectral-library-generation" class="md-skip">
+        <a href="#clear-retention-time-correction-on-scans" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Spectral library generation
+              Clear retention time correction (scans)
             
           </span>
         </div>
@@ -683,20 +683,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_1" >
         
           
           <label class="md-nav__link" for="__nav_13_1" id="__nav_13_1_label" tabindex="0">
@@ -717,7 +715,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_13_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -900,37 +898,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Spectral library generation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="spectral_library_generation.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../io_spectral_library_export/spectral_library_generation.html" class="md-nav__link">
         
   
   
@@ -946,220 +917,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parameters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#export-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Export file
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#export-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Export format
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ms-level-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MS level filter
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Metadata
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#merge-select-fragment-scans" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Merge &amp; select fragment scans
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#handle-chimeric-spectra" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Handle chimeric spectra
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Handle chimeric spectra">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#target-ion-mz-tolerance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Target ion m/z tolerance
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#precursor-mz-isolation-tolerance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Precursor m/z isolation tolerance
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minimum-precursor-purity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Minimum precursor purity
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chimeric-spectra" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Chimeric spectra
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quality-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quality Parameters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quality Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#minimum-number-of-signals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Minimum number of signals
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minimum-explained-signals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Minimum explained signals (%)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minimum-explained-intensity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Minimum explained intensity (%)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#formula-mz-tolerance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Formula m/z tolerance
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1172,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="merge_libraries.html" class="md-nav__link">
+      <a href="../io_spectral_library_export/merge_libraries.html" class="md-nav__link">
         
   
   
@@ -3935,18 +3692,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_24" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_24" checked>
         
           
           <label class="md-nav__link" for="__nav_13_24" id="__nav_13_24_label" tabindex="0">
@@ -3967,7 +3726,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_24_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_24_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_13_24">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4038,10 +3797,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../norm_remove_scanrtcal/remove_scan_rt_correction.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clear retention time correction (scans)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="remove_scan_rt_correction.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -4057,6 +3843,54 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raw-data-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Raw data files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6922,179 +6756,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#export-file" class="md-nav__link">
+  <a href="#raw-data-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Export file
+        Raw data files
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#export-format" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Export format
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ms-level-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MS level filter
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Metadata
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#merge-select-fragment-scans" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Merge &amp; select fragment scans
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#handle-chimeric-spectra" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Handle chimeric spectra
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Handle chimeric spectra">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#target-ion-mz-tolerance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Target ion m/z tolerance
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#precursor-mz-isolation-tolerance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Precursor m/z isolation tolerance
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minimum-precursor-purity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Minimum precursor purity
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chimeric-spectra" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Chimeric spectra
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quality-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quality Parameters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quality Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#minimum-number-of-signals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Minimum number of signals
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minimum-explained-signals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Minimum explained signals (%)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minimum-explained-intensity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Minimum explained intensity (%)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#formula-mz-tolerance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Formula m/z tolerance
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -7123,71 +6791,33 @@
   
 
 
-<h1 id="batch-spectral-library-generation">Batch spectral library generation<a class="headerlink" href="#batch-spectral-library-generation" title="Permanent link">&para;</a></h1>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Export feature list → Spectral library batch generation</strong> </p>
-<p>After matching with a compound database table, only annotated spectra are exported with this module.
-This enables the automatic generation of mass spectral libraries with different data format provided.
-Different quality parameters and how to handle chimeric spectra can be set to increase the 
-spectral quality in the new spectral library and to flag chimeric spectra. Furthermore, different
-information about the acquired data can be added, for example, instrument, who acquired the data,... 
-Single best spectra but also merged spectra are exported (same energy, multiple collision energies,
-or multistep fragmentation)</p>
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<h4 id="export-file">Export file<a class="headerlink" href="#export-file" title="Permanent link">&para;</a></h4>
-<p>The path and name of the exported library spectra.</p>
-<h4 id="export-format">Export format<a class="headerlink" href="#export-format" title="Permanent link">&para;</a></h4>
-<p>Here, you can set the export format. It mostly depends on your next steps and where to import the 
-library. Every format works, but we recommend the .json format.</p>
-<h4 id="ms-level-filter">MS level filter<a class="headerlink" href="#ms-level-filter" title="Permanent link">&para;</a></h4>
-<p>If data were acquired with multistep fragmentation, the MS2 or all MSn data can be exported individually.
-If you only acquired MS2 data or want to export MSn, the setting can remain MSn</p>
-<h4 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h4>
-<p>Various information about the acquired data can be stored her. For example, who acquired the data, 
-which instrument was used, ect. On the description information about the compounds or library can be
-given. The Ion mode is only need, when the polarity is not safed in the data files. </p>
-<h4 id="merge-select-fragment-scans">Merge &amp; select fragment scans<a class="headerlink" href="#merge-select-fragment-scans" title="Permanent link">&para;</a></h4>
-<p>This parameter controls how fragment spectra are filtered, merged, and selected for downstream analysis
-(see <a href="../filter_scan_merge_select/scan_merge_select.html">detailed description</a>). Briefly, either choose
-preset based spectral merging, input scans without merging, or an advanced setup for more options.</p>
-<p>For library generation, mzmine recommends the simple preset <strong>Representative scans or MSn tree</strong>.</p>
-<h4 id="handle-chimeric-spectra">Handle chimeric spectra<a class="headerlink" href="#handle-chimeric-spectra" title="Permanent link">&para;</a></h4>
-<p>This option checks the MS1 scans for chimeric precursor selection. A minimum for this purity can be
-set and how to handle chimeric spectra.
-<img alt="workflow_library_building_chimeric.png" src="workflow_library_building_chimeric.png" /></p>
-<h5 id="target-ion-mz-tolerance">Target ion m/z tolerance<a class="headerlink" href="#target-ion-mz-tolerance" title="Permanent link">&para;</a></h5>
-<p>This is the mass tolerance for the precursor signal. The tolerance is usually smaller than the
-precursor isolation window and depends on the accuracy and resolution of the instrument.</p>
-<h5 id="precursor-mz-isolation-tolerance">Precursor m/z isolation tolerance<a class="headerlink" href="#precursor-mz-isolation-tolerance" title="Permanent link">&para;</a></h5>
-<p>This should be the set precursor isolation window, to check for co-isolated signals in this mass 
-window. Be aware, that some QTOF instruments have a wider isolation window than a unit, resulting
-in co-isolation of isotope signals.</p>
-<h5 id="minimum-precursor-purity">Minimum precursor purity<a class="headerlink" href="#minimum-precursor-purity" title="Permanent link">&para;</a></h5>
-<p>MS1 spectra with a precursor signal explaining less then X% of the total signal intensity within 
-the set precursor isolation window will be flagged as chimeric.</p>
-<h4 id="chimeric-spectra">Chimeric spectra<a class="headerlink" href="#chimeric-spectra" title="Permanent link">&para;</a></h4>
-<p>Here, spectra that are flagged as chimeric can be skipped or flagged. We suggest that flagging is a
-better option, as the flagging state will be exported and can be removed afterwards as it contains
-still information about the precursor ion. But matches need to be inspected carefully.</p>
-<h3 id="quality-parameters">Quality Parameters<a class="headerlink" href="#quality-parameters" title="Permanent link">&para;</a></h3>
-<p>Quality parameter can be set before exporting the spectra. Only spectra that fullfil those criteria
-will be exported.</p>
-<h4 id="minimum-number-of-signals">Minimum number of signals<a class="headerlink" href="#minimum-number-of-signals" title="Permanent link">&para;</a></h4>
-<p>Number of signals an MSn scan must contain to be exported. Depends also on the fragmentation pattern
-of the compounds (very rich pattern, more signals, less informative spectra less signals). At least
-3 signals might be a good compromise if the compounds show a very different fragmentation behavior.</p>
-<h4 id="minimum-explained-signals">Minimum explained signals (%)<a class="headerlink" href="#minimum-explained-signals" title="Permanent link">&para;</a></h4>
-<p>The number of explained signals within the MSn scan based on a subformula level, without taking the
-chemical structure into account.</p>
-<h4 id="minimum-explained-intensity">Minimum explained intensity (%)<a class="headerlink" href="#minimum-explained-intensity" title="Permanent link">&para;</a></h4>
-<p>The minimum number of the explained spectra intensity. This increases the value of more abundant signals
-that should be explained in a fragmentation spectrum based on the subformula level for an 
-annotated compound. Low abundant signals can correspond to unfiltered noise, ect. and shouldn't be
-taken into account in the same way as high abundant signals. Therefore, we recommend this setting before
-the explained signal one.</p>
-<h4 id="formula-mz-tolerance">Formula m/z tolerance<a class="headerlink" href="#formula-mz-tolerance" title="Permanent link">&para;</a></h4>
-<p>This is the m/z tolerance to assign MSn signals to a subformula.</p>
+<h1 id="clear-retention-time-correction-on-scans">Clear retention time correction on scans<a class="headerlink" href="#clear-retention-time-correction-on-scans" title="Permanent link">&para;</a></h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature list methods → Normalization → Clear Retention time correction on scans</strong></p>
+<p>Removes any retention time correction previously applied to the scans of the selected raw data
+files by the
+<a href="../norm_rt_calibration_scans/scan-based-rt-corr.html">Retention time correction of scans</a> module,
+restoring their original, uncorrected scan retention times.</p>
+<p>This module is mostly used internally: the
+<a href="../lc-ms_featdet/featdet_adap_chromatogram_builder/adap-chromatogram-builder.html">ADAP chromatogram builder</a>
+and the
+<a href="../norm_rt_calibration_scans/scan-based-rt-corr.html">Retention time correction of scans</a> module
+itself can clear a previous correction automatically through their own <strong>Clear previous RT
+corrections</strong> parameter. Use this module directly when you want to reset the scan retention times
+of a set of raw data files without immediately re-running one of those steps.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Applying this module to data files after feature lists have already been generated from them
+will lead to mismatches between the (now uncorrected) scan retention times and the retention
+times stored in those feature lists. Existing feature lists are not updated. To avoid this,
+remove the affected feature lists after clearing the correction and reprocess the raw data
+files from scratch.</p>
+</div>
 <hr />
-<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a></span></p>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h4 id="raw-data-files">Raw data files<a class="headerlink" href="#raw-data-files" title="Permanent link">&para;</a></h4>
+<p>The raw data files whose scan retention times shall be reset to their original, uncorrected values.</p>
+<hr />
+<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a></span></p>
 
 
 
@@ -7208,7 +6838,7 @@ the explained signal one.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="January 6, 2025 06:05:58 UTC">January 6, 2025 06:05:58</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="September 17, 2026 07:17:22 UTC">September 17, 2026 07:17:22</span>
   </span>
 
     
@@ -7219,13 +6849,12 @@ the explained signal one.</p>
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
       
     </span>
     <nav>
       
-        <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
-        <a href="mailto:corinna.brungs@wwu.de">corinnabrungs</a>
+        <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>
     </nav>
   </span>
 
