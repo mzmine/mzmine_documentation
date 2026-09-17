@@ -33,6 +33,13 @@ on the peak lists produced by the preceding Chromatogram builder step.
 
 :octicons-alert-16: **Tip** mzmine "remembers" the last settings used.
 
+!!! tip
+
+    mzmine checks the order of the steps in the queue against recommendations from the individual
+    modules (for example "requires ion identity networking" or "should run after gap filling"). A
+    step that is out of the recommended order is marked with an info icon in the step list; hover
+    over it to read why. This is only a hint, not an error: the batch still runs as configured.
+
 
 !!! tip
 

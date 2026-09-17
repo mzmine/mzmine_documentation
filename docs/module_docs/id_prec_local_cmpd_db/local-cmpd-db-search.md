@@ -75,6 +75,7 @@ The available fields in a library file include:
 | `iupac_name`                  | IUPAC name                                        |
 | `cas`                         | CAS number                                        |
 | `internal_id`                 | Internal compound identifier                      |
+| `synonyms`                    | Compound synonyms (semicolon-separated, or a JSON array) |
 
 ---
 
