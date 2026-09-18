@@ -1,9 +1,23 @@
 name: Auto Deploy
 
+# Publishes the current state of master as the "latest" version of the docs,
+# which is what the site root serves:
+#   https://mzmine.github.io/mzmine_documentation/latest/
+# Frozen versions for mzmine releases are published by release-docs.yml.
+
 on:
   push:
     branches:
       - master
+  workflow_dispatch:
+
+# never let two jobs write to gh-pages at the same time
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -16,7 +30,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          # full history for the git-revision-date/git-authors plugins and for gh-pages
           fetch-depth: 0
+          token: ${{ secrets.PERSONAL_TOKEN || github.token }}
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
@@ -28,9 +44,22 @@ jobs:
       - name: Test Build
         run: |
           mkdocs build -s
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: site
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Deploy latest version
+        run: |
+          mike deploy --push latest
+      - name: Make sure the site root points at latest
+        run: |
+          # the marker is a line from the redirect page mike writes as the root
+          # index.html; when it is missing we (re)point the root at latest
+          if git show origin/gh-pages:index.html 2>/dev/null \
+               | grep -qF '"latest/" + window.location.search'; then
+            echo "site root already points at latest"
+          else
+            mike set-default --push latest
+          fi
+      - name: Publish static gh-pages root files
+        run: bash .github/scripts/publish-pages-root.sh
