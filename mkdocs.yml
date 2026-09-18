@@ -245,13 +245,37 @@ extra_css:
 
 theme:
   name: material
+  custom_dir: overrides
   logo: img/mzmine_logo_white.png
   palette:
     scheme: default
     primary: custom
 
+extra:
+  # set by mike while it builds a version, empty for a plain "mkdocs build"
+  mike_version: !ENV [MIKE_DOCS_VERSION, '']
+  # documentation versions are managed with mike (see README.md)
+  version:
+    provider: mike
+    # version the site root points to: "latest" is built from master
+    default: latest
+    # show aliases next to the version number in the selector
+    alias: true
+
+hooks:
+  # lets the version selector keep the reader on the same page, see the file
+  - hooks/sitemap_root_url.py
+
 plugins:
   - search
+  - mike:
+      # GitHub Pages does not serve git symlinks, so aliases must be real copies
+      alias_type: copy
+      # NOTE: do not set canonical_version here. It rewrites site_url for every
+      # version, so each version would publish a sitemap.xml full of /latest/
+      # URLs, and the version selector needs a correct sitemap to keep the
+      # reader on the same page when they switch versions. Release versions are
+      # kept out of search results with "noindex" in overrides/main.html instead.
   - git-authors:
       show_contribution: false
   - git-revision-date-localized:

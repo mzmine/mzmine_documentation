@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+  Files in .github/pages-root/ are published to the ROOT of the gh-pages branch
+  (next to the version directories that mike creates), see
+  .github/scripts/publish-pages-root.sh
+
+  GitHub Pages serves this page for every unknown path below the site root.
+  Before versioning was introduced the docs lived directly at the site root, so
+  a lot of links out in the wild (and in mzmine itself) look like
+
+      https://mzmine.github.io/mzmine_documentation/getting_started.html
+
+  Those paths no longer exist; the same page now lives under /latest/.
+  This shim forwards such links to the default version instead of dead-ending.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>Redirecting - mzmine documentation</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+           margin: 4rem auto; max-width: 40rem; padding: 0 1rem; line-height: 1.6; }
+    code { background: #f0f0f0; padding: .1rem .3rem; border-radius: .2rem; }
+  </style>
+</head>
+<body>
+<h1>Page not found</h1>
+<p id="message">Looking for this page in the current documentation&nbsp;&hellip;</p>
+<p><a id="home" href="/mzmine_documentation/">Go to the mzmine documentation</a></p>
+
+<script>
+  (function () {
+    var SITE_BASE = "/mzmine_documentation/";
+    var DEFAULT_VERSION = "latest";
+    // a release version directory, i.e. a path that is already versioned
+    var VERSION_LIKE = /^v?\d+(\.\d+)*([-.][A-Za-z0-9]+)*$/;
+
+    var path = window.location.pathname;
+    var base = path.indexOf(SITE_BASE) === 0 ? SITE_BASE : "/";
+    var rest = path.slice(base.length);
+    var first = rest.split("/")[0];
+
+    document.getElementById("home").setAttribute("href", base + DEFAULT_VERSION + "/");
+
+    function giveUp() {
+      document.getElementById("message").textContent =
+        "This page does not exist in this version of the documentation.";
+    }
+
+    if (!rest || first === DEFAULT_VERSION || VERSION_LIKE.test(first)) {
+      giveUp();
+      return;
+    }
+    window.location.replace(
+      base + DEFAULT_VERSION + "/" + rest + window.location.search + window.location.hash
+    );
+  })();
+</script>
+</body>
+</html>
