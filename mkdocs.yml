@@ -118,6 +118,7 @@ nav:
           - Feature list blank subtraction: module_docs/filter_blanksubtraction/filter_blanksubtraction.md
           - Split aligned feature list: module_docs/filter_splitaligned/split_aligned_feature_list.md
           - Clear feature list annotations: module_docs/filter_clearannotations/clear_feature_annotations.md
+          - Feature list preferences: module_docs/filter_featurelistpreferences/feature_list_preferences.md
       - Alignment:
           - Join aligner: module_docs/align_join_aligner/join_aligner.md
           - Merge lists: module_docs/align_merge_lists/align_merge_lists.md
