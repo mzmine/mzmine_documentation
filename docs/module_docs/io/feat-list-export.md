@@ -342,12 +342,6 @@ _Optional parameter_
 
 Export all edges of Ion Identity Networks (IIN).
 
-#### **Export IIN relationship edges**
-
-_Optional parameter_
-
-Export relationships between Ion Identity Networks (IIN).
-
 #### **Filter rows**
 
 Limit the exported rows to those with MS/MS data and/or annotated rows.

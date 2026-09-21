@@ -71,12 +71,15 @@ display, etc.). Two options are available:
     2. Otherwise, highest-intensity row carrying any Ion Identity.
     3. Otherwise, highest-intensity row overall.
 
-- **Ion type ranking** — primary score is the row's ion type position in the tier list:
-  `M+H → M-H → M+ → M- → Na+ → Cl- → K+ → NH4+ → Formate-H`. Ties broken by intensity.
-  Rows must carry a *clean* single-adduct ion (one molecule, no neutral losses, no clusters) to
-  qualify; otherwise the ultimate fallback is the highest-intensity row.
+- **Ion type ranking** — primary score is the row's ion type score in the
+  [ion type ranking](../filter_featurelistpreferences/feature_list_preferences.md#ion-type-ranking)
+  stored in the feature list preferences (mzmine default, unless redefined by the user). Ties
+  broken by intensity. Rows must carry a *clean* single-adduct ion (one molecule, no neutral
+  losses, no clusters) to qualify; otherwise the ultimate fallback is the highest-intensity row.
 
-Neither selector exposes user-tunable parameters.
+The **Representative row** selector itself exposes no parameters, but **Ion type ranking** reads
+the [feature list preferences](../filter_featurelistpreferences/feature_list_preferences.md),
+which the user can redefine per feature list.
 
 ---
 

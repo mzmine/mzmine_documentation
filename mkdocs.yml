@@ -108,6 +108,7 @@ nav:
           - Configure compound representations: module_docs/group_compound_grouping/config_compound_representations.md
           - Spectral / Molecular Networking: module_docs/group_spectral_net/molecular_networking.md
       - Feature list filtering:
+          - Feature list preferences: module_docs/filter_featurelistpreferences/feature_list_preferences.md
           - Duplicate feature filter: module_docs/filter_duplicate_features/duplicate_feature_filter.md
           - Feature list rows filter: module_docs/feature_list_row_filter/feature_list_rows_filter.md
           - Feature filter: module_docs/feature_filter/feature_filter.md
