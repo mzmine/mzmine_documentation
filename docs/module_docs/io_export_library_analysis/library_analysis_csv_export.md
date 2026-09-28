@@ -51,7 +51,9 @@ Name of the output CSV file. An existing file is overwritten.
 
 #### Field separator
 
-Character used to separate fields. Default is `,`.
+Character used to separate the columns of the exported file. Options are **Comma  ,** (default),
+**Semicolon  ;**, **Tab**, **Space**, and **Custom**, which accepts any other character. Values
+from older batch files, e.g. `,` or `\t`, are mapped to the matching option.
 
 #### Weights
 

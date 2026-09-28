@@ -53,8 +53,10 @@ raw data file name. An existing file is overwritten.
 
 #### Separator
 
-Character used to separate fields. Default is a tab, matching the default `.tsv` extension. Note
-that the signal lists in `MZS` and `INTENSITIES` always use a comma internally.
+Character used to separate the columns of the exported file. Options are **Comma  ,**,
+**Semicolon  ;**, **Tab** (default, matching the default `.tsv` extension), **Space**, and
+**Custom**, which accepts any other character. Values from older batch files, e.g. `\t`, are mapped
+to the matching option. Note that the signal lists in `MZS` and `INTENSITIES` always use a comma internally.
 
 #### m/z tolerance
 

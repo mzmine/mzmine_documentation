@@ -16,7 +16,9 @@ This module allows to export obtained feature lists to csv (comma-separated valu
 
 #### **Field separator**
 
-Character(s) used to separate fields in the exported file. "," by default.
+Character used to separate the columns of the exported file. Options are **Comma  ,** (default),
+**Semicolon  ;**, **Tab**, **Space**, and **Custom**, which accepts any other character. Values
+from older batch files, e.g. `,` or `\t`, are mapped to the matching option.
 
 #### **Identification separator**
 
@@ -51,7 +53,9 @@ Name of file where the exported data is saved
 
 #### **Field separator**
 
-Columns in the new CSV file will be separated by this character (coma by default)
+Character used to separate the columns of the exported file. Options are **Comma  ,** (default),
+**Semicolon  ;**, **Tab**, **Space**, and **Custom**, which accepts any other character. Values
+from older batch files, e.g. `,` or `\t`, are mapped to the matching option.
 
 #### **Export common elements**
 

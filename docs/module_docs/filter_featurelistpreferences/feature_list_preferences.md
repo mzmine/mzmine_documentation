@@ -22,16 +22,31 @@ Two preferences are currently available:
 - **Ion type ranking** — the frequency ranking used to judge how likely an ion type (adduct,
   in-source fragment, cluster, neutral loss/gain) is the correct explanation for a feature.
 
-Every preference can either follow the current mzmine **Default**, or be pinned to a **Custom**
-value that is stored with the feature list. Using **Default** lets a preference automatically pick
-up future mzmine default changes instead of freezing the value that was in effect when the project
-was created.
+Every preference offers three options:
+
+- **Keep as is** — the preference of the feature list is not changed.
+- **Default** — the preference follows the current mzmine default. This lets a preference
+  automatically pick up future mzmine default changes instead of freezing the value that was in
+  effect when the project was created.
+- **Custom** — the preference is pinned to the entered value, which is stored with the feature
+  list.
+
+If all preferences are on **Keep as is**, or the resulting preferences equal the ones already in
+effect, running the module leaves the feature list untouched.
 
 !!! tip
 
     Selecting multiple feature lists before opening the dialog applies the same preferences to all
-    of them. The dialog starts pre-filled with the preferences currently in effect for the first
-    selected feature list.
+    of them. The dialog always starts with every preference on **Keep as is**, so running it only
+    changes the preferences you actively switch to **Default** or **Custom**. The **Custom** inputs
+    are pre-filled with the preferences currently in effect for the first selected feature list.
+    <!-- VERIFY: pre-fill with current preferences confirmed for the feature list context menu path (FeatureListPreferencesModule.keepAllAsIs); from the main menu/quick search the custom inputs may show the last used or default values instead. -->
+    The **Keep all as is** button resets every preference to **Keep as is**.
+
+!!! info
+
+    In a batch, the step keeps the options you selected. When the dialog is opened while adding the
+    step to a batch, it also starts on **Keep as is**.
 
 ---
 

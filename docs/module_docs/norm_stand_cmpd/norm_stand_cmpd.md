@@ -46,8 +46,19 @@ selected.
 
 #### Field separator
 
-Character used to split the standard compounds file. The default is `,` for CSV files. Use `\t` for
-tab-separated TSV files.
+Column separator of the standard compounds file. Options are **Auto detect** (default),
+**Comma  ,**, **Semicolon  ;**, **Tab**, **Space**, and **Custom**, which accepts any other
+character (`\t` is also accepted for a tab).
+
+**Auto detect** uses the separator declared in a `sep=` first line (as written by Excel), if
+present. Otherwise, it tests tab, comma, semicolon, and pipe (`|`) on the first 40 non-empty lines
+of the file and picks the best-scoring separator. If no separator can be determined, tab is used for
+`.tsv`, `.tab`, and `.txt` files and comma for all other files.
+
+!!! tip
+
+    Batch files and presets from older mzmine versions keep their separator: a previously entered
+    `,`, `;`, or `\t` is mapped to the matching option, any other text to **Custom**.
 
 #### Standard compounds
 

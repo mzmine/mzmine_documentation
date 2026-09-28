@@ -41,7 +41,14 @@ gap (molecules whose pattern is dominated by an intense +2 comb, such as Cl, Br,
 to use every second 13C position instead). When the base peak is the monoisotopic signal, its
 M+1/M relative intensity must also be roughly plausible for the carbon count the mass implies;
 mid-envelope patterns without a visible monoisotopic signal (e.g. proteins) are exempt from this
-ratio check. Off by default.
+ratio check. On by default.
+
+!!! warning
+
+    This option is enabled by default since mzmine 4.10.88 (it was off before). Batch files from
+    older mzmine versions that still use the legacy isotope finder parameters are converted to the
+    automatic algorithm with this option enabled, so results may contain fewer isotope patterns than
+    before. Disable the option to keep features without a gap-free 13C ladder.
 
 #### Maximum charge of isotope m/z
 Maximum possible charge of the isotope distribution. Charges 1 to this value are evaluated and the

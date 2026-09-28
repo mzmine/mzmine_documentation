@@ -67,6 +67,13 @@ as described in [Ion types & libraries](../../../ions/ions.md). Only ion types m
 and charge state of a row are used for that row, so a dual-polarity library is safe to use for data
 of a single polarity.
 
+!!! warning
+
+    Batch files from older mzmine versions defined the ion types directly in this module. When such
+    a batch is loaded, mzmine shows a message and converts the old ion selection to a library. It is
+    recommended to update the step and select one of the ion libraries defined in the
+    **Ion libraries** tab.
+
 !!! tip
 
     This step should only focus on the main ions that are typically detected in the MS method.
