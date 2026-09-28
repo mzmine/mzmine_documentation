@@ -1890,10 +1890,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#peak-list-file" class="md-nav__link">
+  <a href="#database-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Peak list file
+        Database file
       
     </span>
   </a>
@@ -1912,10 +1912,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ignore-first-line" class="md-nav__link">
+  <a href="#columns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ignore first line
+        Columns
       
     </span>
   </a>
@@ -1934,21 +1934,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#noise-level" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Noise level
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#mz-tolerance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        m/z Tolerance
+        m/z tolerance
       
     </span>
   </a>
@@ -1956,10 +1945,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#retention-time-tolerance" class="md-nav__link">
+  <a href="#retention-time-tolerance-optional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Retention time tolerance
+        Retention time tolerance (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobility-tolerance-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobility tolerance (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-adduct-masses-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculate adduct masses (Optional)
       
     </span>
   </a>
@@ -6934,10 +6945,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#peak-list-file" class="md-nav__link">
+  <a href="#database-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Peak list file
+        Database file
       
     </span>
   </a>
@@ -6956,10 +6967,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ignore-first-line" class="md-nav__link">
+  <a href="#columns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ignore first line
+        Columns
       
     </span>
   </a>
@@ -6978,21 +6989,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#noise-level" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Noise level
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#mz-tolerance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        m/z Tolerance
+        m/z tolerance
       
     </span>
   </a>
@@ -7000,10 +7000,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#retention-time-tolerance" class="md-nav__link">
+  <a href="#retention-time-tolerance-optional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Retention time tolerance
+        Retention time tolerance (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobility-tolerance-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobility tolerance (Optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-adduct-masses-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calculate adduct masses (Optional)
       
     </span>
   </a>
@@ -7038,35 +7060,48 @@
 <h1 id="targeted-feature-detection"><strong>Targeted feature detection</strong><a class="headerlink" href="#targeted-feature-detection" title="Permanent link">&para;</a></h1>
 <h2 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> <strong>Feature detection → LC-MS → Targeted feature detection</strong></p>
-<p>This algorithm opens a <em>.csv file with a list of peaks and searches for each peak in the selected raw data file. 
-The most crucial parameters are </em><em>m/z tolerance</em><em> and </em><em>Retention time tolerance</em>*, which define the window where the algorithm should find the new peak. It is centered in the m/z average and retention time average of the source peak list. Once the best candidate is found inside the window, its shape in RT direction is also checked.</p>
-<p>The *.csv file should have three columns:</p>
-<ul>
-<li>The first column should contain the expected M/Z,</li>
-<li>the second column the expected RT,</li>
-<li>and the third the peak name. </li>
-</ul>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Each peak should be in a different row.</p>
+<p>This algorithm opens a <em>.csv or </em>.tsv file with a list of target compounds and searches for each
+target in the selected raw data files. The most crucial parameters are <strong>m/z tolerance</strong> and
+<strong>Retention time tolerance</strong>, which define the window where the algorithm should find the new
+peak. It is centered on the m/z and retention time of the target. Once the best candidate is found
+inside the window, its shape in RT direction is also checked.</p>
+<p>The file needs a header line. Its column names must match the names configured in the <strong>Columns</strong>
+parameter, one target per row. The file format and the available columns are the same as for the
+<a href="../../id_prec_local_cmpd_db/local-cmpd-db-search.html#database-file">Local compound database search</a>.
+Each target needs an m/z, which is either given directly (<code>mz</code>) or calculated from a neutral mass,
+formula, or SMILES together with the <strong>Calculate adduct masses</strong> parameter.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Targets that overlap within the tolerances are merged into a single feature list row that
+carries all their annotations.</p>
 <h2 id="parameters"><strong>Parameters</strong><a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <h4 id="scan-filters"><strong>Scan filters</strong><a class="headerlink" href="#scan-filters" title="Permanent link">&para;</a></h4>
 <p>See <a href="../../scan_selection/scan_selection.html">Scan selection filters</a> for all available criteria and
 combination rules.</p>
 <h4 id="name-suffix"><strong>Name suffix</strong><a class="headerlink" href="#name-suffix" title="Permanent link">&para;</a></h4>
-<p>Suffix to be added to the peak list name.</p>
-<h4 id="peak-list-file"><strong>Peak list file</strong><a class="headerlink" href="#peak-list-file" title="Permanent link">&para;</a></h4>
-<p>Path of the csv file containing the list of peaks to be detected.</p>
+<p>Suffix to be added to the feature list name. Default is <code>detectedPeak</code>.</p>
+<h4 id="database-file"><strong>Database file</strong><a class="headerlink" href="#database-file" title="Permanent link">&para;</a></h4>
+<p>Path of the csv file containing the list of targets to be detected.</p>
 <h4 id="field-separator"><strong>Field separator</strong><a class="headerlink" href="#field-separator" title="Permanent link">&para;</a></h4>
-<p>Character(s) used to separate fields in the peak list file.</p>
-<h4 id="ignore-first-line"><strong>Ignore first line</strong><a class="headerlink" href="#ignore-first-line" title="Permanent link">&para;</a></h4>
-<p>Check to ignore the first line of peak list file.</p>
+<p>Column separator of the database file. Options are <strong>Auto detect</strong> (default), <strong>Comma  ,</strong>,
+<strong>Semicolon  ;</strong>, <strong>Tab</strong>, <strong>Space</strong>, and <strong>Custom</strong>, which accepts any other character (<code>\t</code> is
+also accepted for a tab).</p>
+<h4 id="columns"><strong>Columns</strong><a class="headerlink" href="#columns" title="Permanent link">&para;</a></h4>
+<p>Columns to import from the database file. Enabled by default are <code>neutral mass</code>, <code>mz</code>, <code>rt</code>,
+<code>formula</code>, <code>smiles</code>, and <code>comment</code>; <code>adduct</code>, <code>inchi</code>, <code>inchi key</code>, <code>name</code>, <code>CCS</code>, and <code>mobility</code>
+can be enabled in addition. Double-click a column name to rename it to match the header of your
+file.</p>
 <h4 id="intensity-tolerance"><strong>Intensity tolerance</strong><a class="headerlink" href="#intensity-tolerance" title="Permanent link">&para;</a></h4>
-<p>This value sets the maximum allowed deviation from expected shape of a peak in chromatographic direction.</p>
-<h4 id="noise-level"><strong>Noise level</strong><a class="headerlink" href="#noise-level" title="Permanent link">&para;</a></h4>
-<p>The minimum intensity level for a data point to be considered part of a chromatogram. All data points below this intensity level are ignored.</p>
-<h4 id="mz-tolerance"><strong>m/z Tolerance</strong><a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum allowed m/z difference to find the peak</p>
-<h4 id="retention-time-tolerance"><strong>Retention time tolerance</strong><a class="headerlink" href="#retention-time-tolerance" title="Permanent link">&para;</a></h4>
-<p>Maximum allowed retention time difference to find the peak</p>
+<p>This value sets the maximum allowed deviation from the expected / shape of a peak in
+chromatographic direction.</p>
+<h4 id="mz-tolerance"><strong>m/z tolerance</strong><a class="headerlink" href="#mz-tolerance" title="Permanent link">&para;</a></h4>
+<p>Maximum allowed m/z difference to find the peak.</p>
+<h4 id="retention-time-tolerance-optional"><strong>Retention time tolerance</strong> <em>(Optional)</em><a class="headerlink" href="#retention-time-tolerance-optional" title="Permanent link">&para;</a></h4>
+<p>Maximum allowed retention time difference to find the peak.</p>
+<h4 id="mobility-tolerance-optional"><strong>Mobility tolerance</strong> <em>(Optional)</em><a class="headerlink" href="#mobility-tolerance-optional" title="Permanent link">&para;</a></h4>
+<p>Maximum allowed mobility difference to find the peak in ion mobility data.</p>
+<h4 id="calculate-adduct-masses-optional"><strong>Calculate adduct masses</strong> <em>(Optional)</em><a class="headerlink" href="#calculate-adduct-masses-optional" title="Permanent link">&para;</a></h4>
+<p>Ion types to calculate the m/z of each target from its neutral mass, formula, or SMILES. Only ion
+types that match the polarity of the selected scans are used. Either the neutral mass, formula, or
+SMILES must be imported for every compound.</p>
 <p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
@@ -7088,7 +7123,7 @@ combination rules.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="August 21, 2026 10:39:45 UTC">August 21, 2026 10:39:45</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="September 28, 2026 07:09:18 UTC">September 28, 2026 07:09:18</span>
   </span>
 
     
