@@ -46,8 +46,8 @@ selected.
 
 #### Field separator
 
-Character used to split the standard compounds file. The default is `,` for CSV files. Use `\t` for
-tab-separated TSV files.
+Column separator of the standard compounds file.
+
 
 #### Standard compounds
 

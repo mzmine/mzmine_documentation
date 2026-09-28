@@ -12,7 +12,7 @@ or, from an open feature list:
 Feature list preferences are settings that are stored on the feature list itself (and persisted
 with the project) rather than being parameters of a single processing step. They influence how
 other parts of mzmine interpret an already-processed feature list. Running this module only
-updates the stored preferences of the selected feature list(s); it does not create a new feature
+updates the stored preferences of the selected feature list (s); it does not create a new feature
 list or change any feature data.
 
 Two preferences are currently available:
@@ -22,16 +22,29 @@ Two preferences are currently available:
 - **Ion type ranking** — the frequency ranking used to judge how likely an ion type (adduct,
   in-source fragment, cluster, neutral loss/gain) is the correct explanation for a feature.
 
-Every preference can either follow the current mzmine **Default**, or be pinned to a **Custom**
-value that is stored with the feature list. Using **Default** lets a preference automatically pick
-up future mzmine default changes instead of freezing the value that was in effect when the project
-was created.
+Every preference offers three options:
+
+- **Keep as is** — the preference of the feature list is not changed.
+- **Default** — the preference follows the current mzmine default. This lets a preference
+  automatically pick up future mzmine default changes instead of freezing the value that was in
+  effect when the project was created.
+- **Custom** — the preference is pinned to the entered value, which is stored with the feature
+  list.
+
+If all preferences are on **Keep as is**, or the resulting preferences equal the ones already in
+effect, running the module leaves the feature list untouched.
 
 !!! tip
 
     Selecting multiple feature lists before opening the dialog applies the same preferences to all
-    of them. The dialog starts pre-filled with the preferences currently in effect for the first
-    selected feature list.
+    of them. The dialog always starts with every preference on **Keep as is**, so running it only
+    changes the preferences you actively switch to **Default** or **Custom**. The **Custom** inputs
+    are pre-filled with the preferences currently in effect for the first selected feature list.
+
+!!! info
+
+    In a batch, the step keeps the options you selected. When the dialog is opened while adding the
+    step to a batch, it also starts on **Keep as is**.
 
 ---
 
@@ -39,11 +52,11 @@ was created.
 
 #### Feature lists
 
-The feature list(s) whose preferences shall be redefined.
+The feature list (s) whose preferences shall be redefined.
 
 #### Samples for RSD columns
 
-Select the sample type(s) (from the metadata sample type column, ++ctrl+m++ / ++cmd+m++) that are
+Select the sample type (s) (from the metadata sample type column, ++ctrl+m++ / ++cmd+m++) that are
 used to calculate the RSD columns of the feature table, e.g. the area RSD. Default: QC samples.
 
 #### Ion type ranking

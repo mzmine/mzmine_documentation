@@ -87,10 +87,9 @@ Path and name of the file that contains information for peak identification.
 
 #### **Field separator**
 
-Character(s) used to separate fields in the database file.
-
-- `.csv` = `,`
-- `.tsv` = `\t`
+Column separator of the database file. Options are **Auto detect** (default), **Comma  ,**,
+**Semicolon  ;**, **Tab**, **Space**, and **Custom**, which accepts any other character (`\t` is
+also accepted for a tab).
 
 #### **Columns**
 
