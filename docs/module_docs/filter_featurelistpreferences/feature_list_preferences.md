@@ -12,7 +12,7 @@ or, from an open feature list:
 Feature list preferences are settings that are stored on the feature list itself (and persisted
 with the project) rather than being parameters of a single processing step. They influence how
 other parts of mzmine interpret an already-processed feature list. Running this module only
-updates the stored preferences of the selected feature list(s); it does not create a new feature
+updates the stored preferences of the selected feature list (s); it does not create a new feature
 list or change any feature data.
 
 Two preferences are currently available:
@@ -40,8 +40,6 @@ effect, running the module leaves the feature list untouched.
     of them. The dialog always starts with every preference on **Keep as is**, so running it only
     changes the preferences you actively switch to **Default** or **Custom**. The **Custom** inputs
     are pre-filled with the preferences currently in effect for the first selected feature list.
-    <!-- VERIFY: pre-fill with current preferences confirmed for the feature list context menu path (FeatureListPreferencesModule.keepAllAsIs); from the main menu/quick search the custom inputs may show the last used or default values instead. -->
-    The **Keep all as is** button resets every preference to **Keep as is**.
 
 !!! info
 
@@ -54,11 +52,11 @@ effect, running the module leaves the feature list untouched.
 
 #### Feature lists
 
-The feature list(s) whose preferences shall be redefined.
+The feature list (s) whose preferences shall be redefined.
 
 #### Samples for RSD columns
 
-Select the sample type(s) (from the metadata sample type column, ++ctrl+m++ / ++cmd+m++) that are
+Select the sample type (s) (from the metadata sample type column, ++ctrl+m++ / ++cmd+m++) that are
 used to calculate the RSD columns of the feature table, e.g. the area RSD. Default: QC samples.
 
 #### Ion type ranking
