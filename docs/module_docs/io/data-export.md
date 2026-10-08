@@ -17,6 +17,11 @@ This module exports scans or mass lists. MZmine allows several types of data exp
 
 One or more raw data files that contain the scans/mass lists
 
+#### **Scan filters**
+
+See [Scan selection filters](../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 #### **Optional mass list**
 
 If checked, mass lists are exported instead of raw scans

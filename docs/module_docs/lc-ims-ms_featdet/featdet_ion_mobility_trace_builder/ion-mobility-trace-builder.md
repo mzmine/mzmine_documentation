@@ -16,6 +16,9 @@ The scan selection parameter specifies the scans that shall be processed for fea
 Usually, setting the ms level to 1 is sufficient. If a calibration segment is present, it can be cut
 out via the retention time filter in the scan selection.
 
+See [Scan selection filters](../../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 ##### m/z tolerance
 
 The **m/z tolerance** specifies the scan-to-scan tolerance for ion mobility traces. This tolerance

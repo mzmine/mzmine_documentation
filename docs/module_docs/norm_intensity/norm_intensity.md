@@ -90,8 +90,10 @@ normalization).
 Available options:
 
 - **No normalization**: step 2 is skipped.
-- **Internal standard compounds**: Normalization by internal standards is described in more detail [
-  **here**](../norm_stand_cmpd/norm_stand_cmpd.md).
+- **Internal standard compounds**: loads internal standards from a CSV/TSV file, matches them to
+  feature-list rows by m/z, RT, and optional mobility, then normalizes each feature by the nearest
+  or weighted standard. This workflow is described in more detail
+  [**here**](../norm_stand_cmpd/norm_stand_cmpd.md).
 
 #### Inter-sample correction: Step 3
 
@@ -159,9 +161,9 @@ and optional; any combination can be enabled:
 
 | Step | Parameter                     | Scope                        |
 |------|-------------------------------|------------------------------|
-| 1    | Metadata normalization column | Per sample (constant factor) | 
-| 2    | Intra-sample correction       | Per feature, per sample      | 
-| 3    | Inter-sample correction       | Per sample (interpolated)    | 
+| 1    | Metadata normalization column | Per sample (constant factor) |
+| 2    | Intra-sample correction       | Per feature, per sample      |
+| 3    | Inter-sample correction       | Per sample (interpolated)    |
 
 When a **batch ID column** is provided, steps 2 and 3 are executed independently within each
 batch, followed by an inter-batch alignment step to center the reference abundances across all batches.

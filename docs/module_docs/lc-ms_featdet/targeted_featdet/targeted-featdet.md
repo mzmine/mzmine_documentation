@@ -4,48 +4,70 @@
 
 :material-menu-open: **Feature detection → LC-MS → Targeted feature detection**
 
-This algorithm opens a *.csv file with a list of peaks and searches for each peak in the selected raw data file. 
-The most crucial parameters are **m/z tolerance** and **Retention time tolerance**, which define the window where the algorithm should find the new peak. It is centered in the m/z average and retention time average of the source peak list. Once the best candidate is found inside the window, its shape in RT direction is also checked.
+This algorithm opens a *.csv or *.tsv file with a list of target compounds and searches for each
+target in the selected raw data files. The most crucial parameters are **m/z tolerance** and
+**Retention time tolerance**, which define the window where the algorithm should find the new
+peak. It is centered on the m/z and retention time of the target. Once the best candidate is found
+inside the window, its shape in RT direction is also checked.
 
-The *.csv file should have three columns:
+The file needs a header line. Its column names must match the names configured in the **Columns**
+parameter, one target per row. The file format and the available columns are the same as for the
+[Local compound database search](../../id_prec_local_cmpd_db/local-cmpd-db-search.md#database-file).
+Each target needs an m/z, which is either given directly (`mz`) or calculated from a neutral mass,
+formula, or SMILES together with the **Calculate adduct masses** parameter.
 
-- The first column should contain the expected M/Z,
-- the second column the expected RT,
-- and the third the peak name. 
-
-:warning: Each peak should be in a different row.
+:warning: Targets that overlap within the tolerances are merged into a single feature list row that
+carries all their annotations.
 
 ## **Parameters**
 
+#### **Scan filters**
+
+See [Scan selection filters](../../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 #### **Name suffix**
 
-Suffix to be added to the peak list name.
+Suffix to be added to the feature list name. Default is `detectedPeak`.
 
-#### **Peak list file**
+#### **Database file**
 
-Path of the csv file containing the list of peaks to be detected.
+Path of the csv file containing the list of targets to be detected.
 
 #### **Field separator**
 
-Character(s) used to separate fields in the peak list file.
+Column separator of the database file. Options are **Auto detect** (default), **Comma  ,**,
+**Semicolon  ;**, **Tab**, **Space**, and **Custom**, which accepts any other character (`\t` is
+also accepted for a tab).
 
-#### **Ignore first line**
+#### **Columns**
 
-Check to ignore the first line of peak list file.
+Columns to import from the database file. Enabled by default are `neutral mass`, `mz`, `rt`,
+`formula`, `smiles`, and `comment`; `adduct`, `inchi`, `inchi key`, `name`, `CCS`, and `mobility`
+can be enabled in addition. Double-click a column name to rename it to match the header of your
+file.
 
 #### **Intensity tolerance**
 
-This value sets the maximum allowed deviation from expected shape of a peak in chromatographic direction.
+This value sets the maximum allowed deviation from the expected /\ shape of a peak in
+chromatographic direction.
 
-#### **Noise level**
+#### **m/z tolerance**
 
-The minimum intensity level for a data point to be considered part of a chromatogram. All data points below this intensity level are ignored.
+Maximum allowed m/z difference to find the peak.
 
-#### **m/z Tolerance**
+#### **Retention time tolerance** _(Optional)_
 
-Maximum allowed m/z difference to find the peak
+Maximum allowed retention time difference to find the peak.
 
-#### **Retention time tolerance**
-Maximum allowed retention time difference to find the peak
+#### **Mobility tolerance** _(Optional)_
+
+Maximum allowed mobility difference to find the peak in ion mobility data.
+
+#### **Calculate adduct masses** _(Optional)_
+
+Ion types to calculate the m/z of each target from its neutral mass, formula, or SMILES. Only ion
+types that match the polarity of the selected scans are used. Either the neutral mass, formula, or
+SMILES must be imported for every compound.
 
 {{ git_page_authors }}

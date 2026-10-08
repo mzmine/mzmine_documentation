@@ -5,6 +5,11 @@ repo_name: mzmine/mzmine_documentation
 repo_url: https://github.com/mzmine/mzmine_documentation
 use_directory_urls: false
 
+validation:
+  links:
+    not_found: warn
+    anchors: warn
+
 nav:
   - Home page: index.md
   - Getting started: getting_started.md
@@ -14,6 +19,7 @@ nav:
   - Processing wizard: wizard.md
   - Data conversion: data_conversion.md
   - Sample metadata: module_docs/project_metadata/project_metadata.md
+  - Preferences: preferences.md
   - Performance & Benchmarking:
     - Performance options: performance.md
     - Benchmarking: performance/benchmarking.md
@@ -27,6 +33,7 @@ nav:
           - Raw data export: module_docs/io/data-export.md
           - Feature list import: module_docs/io/feat-list-import.md
           - Feature list export: module_docs/io/feat-list-export.md
+          - Projects: module_docs/project_io/project_io.md
           - Export to other software: module_docs/io/data-exchange-with-other-software.md
           - Spectral library generation: module_docs/io_spectral_library_export/spectral_library_generation.md
           - Merge spectral libraries: module_docs/io_spectral_library_export/merge_libraries.md
@@ -34,6 +41,10 @@ nav:
           - Export MRM to TSV: module_docs/io_mrmtotsv/mrm-to-tsv.md
           - Export feature data: module_docs/io_export_feature_data/export-feature-data.md
           - Annotation graphics export: module_docs/io_annotationgraphics/export_annotation_graphics.md
+          - Export MSn trees: module_docs/io_export_msn_tree/msn_tree_export.md
+          - CCSBase export: module_docs/io_export_ccsbase/ccsbase_export.md
+          - Library analysis csv export: module_docs/io_export_library_analysis/library_analysis_csv_export.md
+          - MS2 quality export: module_docs/io_export_msmsquality/msms_quality_export.md
       #         TODO Add feature list import/export
       - File merging:
           - Raw data files merging: module_docs/featdet_file_merging/raw-files-merging.md
@@ -41,7 +52,6 @@ nav:
       - Raw data filtering:
           - Scan by scan filtering: module_docs/filter_raw_data/filter-scan-by-scan.md
           - Crop filter: module_docs/filter_raw_data/crop-filter.md
-          - Baseline corrections: module_docs/filter_raw_data/baseline-corrections.md
           - Align scans: module_docs/filter_raw_data/align-scans.md
           - Scan smoothing: module_docs/filter_raw_data/scan_smoothing.md
       - Mass detection:
@@ -67,6 +77,7 @@ nav:
           - MRM to Scans: module_docs/mrm_mrmtoscans/mrm-to-scans.md
           - Set MRM quantifiers: module_docs/mrm_setquant/mrm-set-quant-mass.md
       - Smoothing: module_docs/featdet_smoothing/smoothing.md
+      - Baseline correction: module_docs/uv/uv_baseline_correction/uv_baseline_correction.md
       - Resolving:
           - Local minimum resolver: module_docs/featdet_resolver_local_minimum/local-minimum-resolver.md
           - Wavelet resolver: module_docs/featdet_resolver_wavelet/wavelet_resolver.md
@@ -84,6 +95,8 @@ nav:
       - MS2 scan pairing: module_docs/featdet_ms2_scan_pairing/ms2_scan_pairing.md
       - MALDI MS2 scan pairing (SIMSEF): module_docs/featdet_ms2_scan_pairing/ms2_maldi_scan_pairing.md
       - DIA pseudo MS2 builder: module_docs/filter_diams2/dia_pseudo_ms2_builder.md
+      - Refine IMS-MS2 spectra: module_docs/filter_ims_msms_refinement/ims_ms2_refinement.md
+      - Score intra-row purity by MS2 similarity: module_docs/feat_ms2_similarity_intra/intra_row_ms2_similarity.md
       - Isotope filtering:
           - 13C isotope filter (isotope grouper): module_docs/filter_isotope_filter/isotope_filter.md
           - Isotope pattern finder: module_docs/filter_isotope_finder/isotope_finder.md
@@ -91,6 +104,8 @@ nav:
       - Feature grouping:
           - Correlation grouping: module_docs/id_ion_networking/metacorr/metacorr.md
           - Ion Identity Networking: module_docs/id_ion_networking/iin/iin.md
+          - Compound grouping (beta): module_docs/group_compound_grouping/compound_grouping.md
+          - Configure compound representations: module_docs/group_compound_grouping/config_compound_representations.md
           - Spectral / Molecular Networking: module_docs/group_spectral_net/molecular_networking.md
       - Feature list filtering:
           - Duplicate feature filter: module_docs/filter_duplicate_features/duplicate_feature_filter.md
@@ -102,6 +117,8 @@ nav:
           - Chromatogram blank subtraction: module_docs/filter_blanksubtraction/filter_chrom_blanksubtraction.md
           - Feature list blank subtraction: module_docs/filter_blanksubtraction/filter_blanksubtraction.md
           - Split aligned feature list: module_docs/filter_splitaligned/split_aligned_feature_list.md
+          - Clear feature list annotations: module_docs/filter_clearannotations/clear_feature_annotations.md
+          - Feature list preferences: module_docs/filter_featurelistpreferences/feature_list_preferences.md
       - Alignment:
           - Join aligner: module_docs/align_join_aligner/join_aligner.md
           - Merge lists: module_docs/align_merge_lists/align_merge_lists.md
@@ -117,6 +134,7 @@ nav:
       - Normalization:
           - Retention time calibration: module_docs/norm_rt_calibration/norm_rt_calibration.md
           - Retention time calibration (scans): module_docs/norm_rt_calibration_scans/scan-based-rt-corr.md
+          - Clear retention time correction (scans): module_docs/norm_remove_scanrtcal/remove_scan_rt_correction.md
           - Intensity normalizer: module_docs/norm_intensity/norm_intensity.md
           - Standard compound normalizer: module_docs/norm_stand_cmpd/norm_stand_cmpd.md
           - Retention index calculation: module_docs/norm_ri/norm_ri.md
@@ -124,15 +142,18 @@ nav:
       #  - Spectral library creation: module_docs/id_spectral_library_creation/spectral_library_creation.md
       - Precursor mass search:
           - Local database search: module_docs/id_prec_local_cmpd_db/local-cmpd-db-search.md
+          - BioTransformer: module_docs/id_biotransformer/biotransformer.md
           - Precursor search in local spectral MS/MS library: module_docs/id_prec_local_spectra_lib/local-spectra-lib-search.md
           - Manual compound annotation: module_docs/id_addmanualcomp/manual-annotation.md
       - Spectra search:
           - Spectral library search: module_docs/id_spectral_library_search/spectral_library_search.md
+          - Analog spectral library search: module_docs/id_spectral_library_analog_search/analog-spectral-library-search.md
           - NIST MS search: module_docs/id_spectra_NIST/NIST-ms-search.md
           - Chemical formula prediction: module_docs/id_spectra_chem_formula/chem-formula-pred.md
           - Lipid annotation: module_docs/id_lipid_annotation/lipid-annotation.md
           - MS2 similarity search: module_docs/id_ms2_similarity/ms2-similarity-search.md
       - Other parameters:
+          - Scan selection filters: module_docs/scan_selection/scan_selection.md
           - Merge & select fragment scans: module_docs/filter_scan_merge_select/scan_merge_select.md
           - Spectra similarity: module_docs/align_join_aligner/spectra_similarity.md
       - Other detectors (UV):
@@ -158,6 +179,7 @@ nav:
           - Van Krevelen plot: visualization_modules/vankrevelen/van_krevelen_plot.md
           - ECN (Equivalent Carbon Number) models: visualization_modules/ecn_plots/ecn_plots.md
           - Lipid annotation summary: visualization_modules/lipid_annotation_summary/lipid_annotation_summary.md
+          - Lipid annotation quality control dashboard: visualization_modules/lipid_annotation_qc_dashboard/lipid_annotation_qc_dashboard.md
           - Additional tools: visualization_modules/processed_additional/processed_additional.md
       - Massvoltammogram: visualization_modules/massvoltammogram/massvoltammogram.md
       - Statistics dashboard: visualization_modules/statistics_dashboard/statistics_dashboard.md
@@ -178,6 +200,7 @@ nav:
   - Tools:
       - SIMSEF scheduler: module_docs/tools_simsef/simsef.md
       - Spectral library to feature list: module_docs/tools_spectral_library_to_feature_list/spectral_library_to_feature_list.md
+      - Save current batch: module_docs/batch_autosave/autosave_batch.md
 
   - Additional resources:
       - Installation:
@@ -190,6 +213,7 @@ nav:
       - LC-MS and LC-IMS-MS data comparison: workflows/imsworkflow/lc-ms-and-lc-ims-ms-data-comparison.md
       #      - Kendrick mass defect: module_docs/feature_list_row_filter/kendrick_mass_defect.md
       - Annotations: terminology/annotations.md
+      - Ion types & libraries: ions/ions.md
       - Spectral similarity measures: module_docs/id_spectral_library_search/spectral-similarity-measures.md
       - Other detector terminology: module_docs/uv/otherdetector_glossary.md
       - Additional resources: additional_resources.md
@@ -222,23 +246,47 @@ extra_css:
 
 theme:
   name: material
+  custom_dir: overrides
   logo: img/mzmine_logo_white.png
   palette:
     scheme: default
     primary: custom
 
+extra:
+  # set by mike while it builds a version, empty for a plain "mkdocs build"
+  mike_version: !ENV [MIKE_DOCS_VERSION, '']
+  # documentation versions are managed with mike (see README.md)
+  version:
+    provider: mike
+    # version the site root points to: "latest" is built from master
+    default: latest
+    # show aliases next to the version number in the selector
+    alias: true
+
+hooks:
+  # lets the version selector keep the reader on the same page, see the file
+  - hooks/sitemap_root_url.py
+
 plugins:
   - search
+  - mike:
+      # GitHub Pages does not serve git symlinks, so aliases must be real copies
+      alias_type: copy
+      # NOTE: do not set canonical_version here. It rewrites site_url for every
+      # version, so each version would publish a sitemap.xml full of /latest/
+      # URLs, and the version selector needs a correct sitemap to keep the
+      # reader on the same page when they switch versions. Release versions are
+      # kept out of search results with "noindex" in overrides/main.html instead.
   - git-authors:
       show_contribution: false
   - git-revision-date-localized:
       type: datetime
-  - with-pdf:
-      output_path: documentation.pdf
-      author: The mzmine Community
-      cover_title: mzmine
-      cover_subtitle: Documentation
-      cover_logo: docs/img/mzmine_logo_CMYK.png
+#  - with-pdf:
+#      output_path: documentation.pdf
+#      author: The mzmine Community
+#      cover_title: mzmine
+#      cover_subtitle: Documentation
+#      cover_logo: docs/img/mzmine_logo_CMYK.png
 
 markdown_extensions:
   - toc:
@@ -267,5 +315,4 @@ markdown_extensions:
 
 extra_javascript:
   - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

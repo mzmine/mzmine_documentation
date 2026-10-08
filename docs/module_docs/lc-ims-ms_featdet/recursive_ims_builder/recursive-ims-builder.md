@@ -8,6 +8,11 @@ Builds m/z traces for ion mobility spectrometry data.
 
 ## **Parameters**
 
+#### **Scan filters**
+
+See [Scan selection filters](../../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 #### **m/z tolerance**
 
 The m/z tolerance to build ion traces. The tolerance is specified as a +- tolerance. 

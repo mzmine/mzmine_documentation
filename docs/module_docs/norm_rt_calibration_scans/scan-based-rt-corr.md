@@ -97,6 +97,14 @@ The minimum required intensity of a feature to be considered a standard for RT c
 Select if the corrected standard value to which the samples shall be calibrated to shall be chosen
 as average or median. 
 
+#### Clear previous RT corrections
+
+If enabled, any retention time correction already applied to the scans of a data file is cleared
+before this correction is calculated. This ensures the result is reproducible when the module is
+run multiple times on the same files; if no correction was applied previously, the parameter has no
+effect. Disable it only if you intentionally want to stack multiple corrections on top of each
+other. Default: enabled.
+
 #### Correction method
 
 Select the method which shall be used for correction.

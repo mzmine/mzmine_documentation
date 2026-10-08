@@ -27,6 +27,9 @@ Select raw data files
 ### Scan selection ###
 Select which scans should be shown in the image. Typical filter for imaging experiments is MS level filter, level = 1. 
 
+See [Scan selection filters](../../module_docs/scan_selection/scan_selection.md) for all available
+criteria and combination rules.
+
 ### m/z range ###
 Define m/z extraction window.
 

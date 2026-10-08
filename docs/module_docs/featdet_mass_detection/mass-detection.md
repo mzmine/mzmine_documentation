@@ -18,6 +18,9 @@ Select the input raw data files for the mass detection. All the imported data fi
 #### **Scans**
 Select (or filter out) the MS scans to be processed. Several filters are available (_Select filters_ button). A scan number, RT and mobility range can be set (_i.e_ _Scan number_, _Retention time_ and _Mobility_ options); only the scans belonging to the defined range(s) will be processed. The _Base Filtering Integer_ option allows to prcesses one every-_N_ scans. The _Scan definition_ field can be used to filter scans based on the scan's description normally included in the raw file's metadata (_e.g._ FTMS). Scans can also be filtered by _MS level_ (_i.e._ 1, 2, ..., _N_), polarity and spectrum type (_i.e._ Centroided, Profile and Thresholded).
 
+See [Scan selection filters](../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 #### **Scan types (IMS)**
 This parameter applies only to IM data and determines if _mobility scans_, _frame scans_ or both (_i.e._ _All scan types_) are processed. For more details about _mobility_ and _frame scans_, see [here](../../terminology/ion-mobility-terminology.md#accumulations-mobility-scans-and-frames).<br>
 :octicons-light-bulb-16: **Tip**. Since _frame scans_ are obtained by merging multiple _mobility scans_, the noise thresholds will likely be different. However, only one noise level can be set per processing step. Therefore, if one wants to run the mass detection for _mobility_ and _frame scans_ using different noise cutoffs, two module calls are required. As an alternative, mass detection can be performed only on the _mobility scans_ by selecteing the appropriate noise level. _Mobility scans_ can then be merged into _frame scans_ with a [dedicated module](../featdet_mobility_scan_merging/mobility-scan-merging.md). 

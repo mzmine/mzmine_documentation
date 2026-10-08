@@ -132,7 +132,7 @@ symbols.
 In the feature table, the **Comment** column provides the option to add comments or tags to each
 row, describing the whole row instead of just a single compound annotation. This field can be used
 to tag rows and the flexible feature filter below and in the feature table or in
-the [Feature list rows filter](https://mzmine.github.io/mzmine_documentation/module_docs/feature_list_row_filter/feature_list_rows_filter.html)
+the [Feature list rows filter](../../feature_list_row_filter/feature_list_rows_filter.md)
 can search for multiple tags in search modes **any** or **all**.
 
 In the **any** or **all** search modes, the query is split into words (tags) by all space,

@@ -36,6 +36,9 @@ enough for this module, several filters are available (see option descriptions i
 For example, specific RT ranges (_e.g._ dead volume, equilibration time, calibration segments, _etc._) 
 can be excluded from the processing by setting the corresponding filter. 
 
+See [Scan selection filters](../../scan_selection/scan_selection.md) for all available criteria and
+combination rules.
+
 !!! tip
 
     For polarity switching data, choose one polarity to produce chromatograms in either ion mode.
@@ -66,5 +69,11 @@ Maximum allowed difference between an EIC-associated _m/z_ and a new data point 
 #### **Suffix**
 
 String added to the filename as suffix when creating the corresponding feature list.
+
+#### **Clear previous RT corrections**
+
+If a data file is processed multiple times, clearing any retention time correction that was
+previously applied to its scans ensures the result is reproducible across runs. If no correction
+was applied previously, this parameter has no effect. Default: enabled.
 
 {{ git_page_authors }}

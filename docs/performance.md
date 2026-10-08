@@ -28,6 +28,8 @@ This option is great for large datasets and for profile mode data.
 3. Define the MS1 and MS2 detectors as described in the Mass detection step
 4. Remove all other Mass detection steps from the batch configuration, usually applied after data import
 
+See also: [Advanced import](module_docs/io/data-import.md#advanced-mass-detection)
+
 ![Advanced import](img/advanced_import.png)
 
 ### Handling original feature lists
@@ -41,9 +43,9 @@ Most processing steps in mzmine create new feature lists and have options to han
 
 ## Preferences
 
-The preferences can be changed in mzmine's graphical user interface by accessing _File/Set
-preferences_ from the menu. The choices will be stored in a (hidden) _.mzmine3.conf_ file in the
-user's home directory (Windows: _C:\Users\USERNAME_) once mzmine is closed.
+The preferences can be changed in mzmine's graphical user interface by accessing _Project/Set
+preferences_ from the menu. The choices are stored in the user's mzmine configuration file
+(`.mzmine/.mzconfig`) once mzmine is closed. See [mzmine preferences](preferences.md) for the full list.
 
 ![Preferences](img/menu_pref.png){: style="width:200px"}
 
