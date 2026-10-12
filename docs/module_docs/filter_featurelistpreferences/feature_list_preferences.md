@@ -15,12 +15,14 @@ other parts of mzmine interpret an already-processed feature list. Running this 
 updates the stored preferences of the selected feature list (s); it does not create a new feature
 list or change any feature data.
 
-Two preferences are currently available:
+Three preferences are currently available:
 
 - **Samples for RSD columns** — which sample types are used to calculate the relative standard
   deviation (RSD) columns shown in the feature table (e.g. the area RSD).
 - **Ion type ranking** — the frequency ranking used to judge how likely an ion type (adduct,
   in-source fragment, cluster, neutral loss/gain) is the correct explanation for a feature.
+- **Tag labels** — the names and number of the tag checkboxes in the **Tag** column of the feature
+  table.
 
 Every preference offers three options:
 
@@ -82,6 +84,26 @@ building blocks).
 Default ranking (highest frequency first, abbreviated): `+H` / `-H` (tied) > `+Na` > `+NH4` >
 `+FA-H` (formate) > `+Cl` / `[M]+` / `[M]-` (tied) > `+CH3COO-H` (acetate) > `+K` > ... For the
 full list of building blocks and their default frequencies, open the ranking editor.
+
+#### Tag labels
+
+An ordered list of labels for the tag checkboxes in the **Tag** column of the feature table. Each
+label creates one checkbox, so the number of labels sets the number of checkboxes per row. The
+labels are shown as tooltips of the checkboxes and in the tag filter of the feature table.
+Default: `Tag 1`, `Tag 2`, `Tag 3`, `Tag 4`.
+
+Enter one label per field. A new empty field appears after you type into the last one. A field
+that is cleared is removed after a few seconds. Leading and trailing spaces are trimmed and empty
+labels are ignored. At least one label is required.
+
+Tags are stored by their position, not by their label. Renaming a label therefore keeps the
+checked tags, and reordering labels changes which label a checked tag is shown under.
+
+!!! warning
+
+    Reducing the number of labels removes the checked tags of the removed positions from every row
+    of the feature list. For example, going from four to two labels clears all checked tags 3 and 4.
+    Adding the labels back later does not restore them.
 
 ---
 
