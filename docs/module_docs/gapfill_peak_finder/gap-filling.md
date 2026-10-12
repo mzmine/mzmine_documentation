@@ -26,6 +26,12 @@ the signal in the m/z and RT region expected for each gap. This approach is some
 back-filling. The algorithm searches the centroided mass spectra (mass lists) and attempts to
 reconstruct a chromatographic peak at the gap location.
 
+!!! tip
+
+    For GC-EI data after spectral deconvolution, use the
+    [GC-EI gap filling](../gapfill_gc_ei/gc-ei-gap-filling.md) module. It confirms each compound
+    with several fragment ions of its deconvoluted spectrum.
+
 !!! warning 
 
     Mass detection must be run on all raw data files before gap filling, because the algorithm
