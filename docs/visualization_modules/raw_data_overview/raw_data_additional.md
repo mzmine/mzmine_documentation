@@ -53,61 +53,17 @@ Choose the scan to visualize
 
 ## **2D visualizer**
 
-:material-menu-open: **Visualization → 2D plot**
+:material-menu-open: **Visualization → Raw data → 2D visualizer**
 
-This tool displays a plot of two dimensions, where X axis corresponds to retention time and Y axis is the m/z value. This visualization of spots in the plot corresponds with the intensity of the data in that region.
-
-![2D plot](2D-plot.png)
-
-:material-lightbulb: User can define features from the feature list to be displayed on the plot.
-
-### **Parameters**
-
-#### **Type of data**
-
-This plot can use either resampled data as input (faster), or raw data (slower).
-
-#### **Scans**
-
-Here user can set up the level (MS1,MS2,... ,MSn), polarity, retention time, and the other parameters of the scans to be used.
-
-#### **m/z** 
-
-Defines range of m/z values. 
-
-[//]: # (TODO Look into the code for this - If this range does not include the whole scan m/z range, the resulting visualizer is XIC type.)
+Shows raw data as a flat, color-coded intensity map, e.g. retention time and m/z. See
+[2D and 3D visualizer](../intensity_map/intensity_map_visualizer.md).
 
 ## **3D visualizer**
 
-### **Description**
+:material-menu-open: **Visualization → Raw data → 3D visualizer**
 
-:material-menu-open: **Visualization → 3D plot**
-
-This tool presents a three dimensional plot where X axis represents the retention time, Y axis the m/z value and Z axis the intensity of the signal. This plot is the collection of all the information from the raw data in a graphical representation.
-
-![3D plot example](Fx3D_all_peaks.png)
-
-### **Parameters**
-
-#### **Scans**
-
-Here user can set up the level (MS1,MS2,... ,MSn), polarity, retention time, and the other parameters of the scans to be used.
-
-#### **m/z range**
-
-Range of m/z values.
-
-#### **Features**
-
-Features that will be taken as an input.
-
-#### **Retention time resolution**
-
-Number of data points on retention time axis.
-
-#### **m/z resolution**
-
-Number of data points on m/z axis.
+Shows raw data as a three-dimensional relief with the intensity as height. See
+[2D and 3D visualizer](../intensity_map/intensity_map_visualizer.md).
 
 ## **Scan histogram**
 

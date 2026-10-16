@@ -1,5 +1,10 @@
 # Image viewer
 
+!!! info
+
+    Images now open in the [2D and 3D visualizer](../intensity_map/intensity_map_visualizer.md#imaging-data),
+    e.g. by double-clicking an imaging file. This page describes the former image viewer.
+
 ## Description
 
 :material-menu-open: Visualization  → Image viewer
