@@ -10,7 +10,7 @@ including:
 - **Username**: Fixed identifier that cannot be changed
 - **Define your use case**: The intended use of this user profile, either **commercial use** or *
   *non-profit academic use**
-- **Email**: Either an academic or company email address. It is important to use an
+- **Email**: Either an academic or company email address. It is required to use an
   academic email address to gain a non-profit academic license.
 - **Read and accept the [Terms and Conditions](https://mzio.io/general-terms-and-conditions/)**
 
@@ -27,26 +27,26 @@ take a few minutes.
 
 ![users_users.png](img/users_users.png)
 
-## License Pooling
+## Licenses
 
-MZmine uses a floating license pool for distributing licenses. A license can only be used by one mzmine Instance at a time.
-While mzmine is running, the license is locked to the mzmine instance, after mzmine is closed the license is released again.
-This requires an active internet connection, the license status is checked regularly.
+MZmine uses a _floating license pool_ for distributing licenses. This requires an active internet connection as the license status is checked and synchronized regularly.
 
-### Licenses for Organizations
+The floating model allows for maximum flexibility - a user can freely transfer the license between different computers (i.e. between personal and lab computers). While mzmine is running, the license is locked to the running mzmine instance, after mzmine is closed the license is released again and can be used on a different computer.
 
-mzmine supports pooling of licenses across users in an organization, allowing for reuse of licenses . Please contact us directly for details.
+### For Organizations / Commercial Customers
 
-## Offline use / Airplane Mode
+mzmine supports pooling of licenses across users of an organization, allowing for sharing of licenses between different employees. We plan to support central management of licenses as well as integration with established corporate identity providers, please contact us directly for details.
 
-If no internet access is available, a license can be removed from the license pool and converted for offline use for a specified time.
-During this time, the license cannot be used by any other mzmine instance, so use this feature carefully.
+### Offline use
+
+If no internet access is available, or a license should be permanently reserved for a single computer (i.e. in an automated pipeline), a license can be removed from the license pool and converted for offline use for a specified time.
+During this time, the license cannot be used by any other mzmine instance, so please use this feature carefully.
 A license can be converted to an offline License using two methods:
 
-- Inside the **Users/User management** on the computer it will be used on (internet connection required)
-- Be claimed from the [mzio user account console](https://auth.mzio.io/realms/mzio/account/)
+- Converting an existing license in the  the **Users/User management** section inside mzmine, by choosing _airplane mode_ in the advanced options for the license (internet connection required).
+- Claiming from the [mzio user account console](https://auth.mzio.io/realms/mzio/account/)
 
-
+Both methods will create an `.mzuser4` file containing the license information, that needs to be transferred to the computer running mzmine. Converting back to an online license is not supported, please make sure to set an appropriate timespan and securely store the license file. If you have any issues contact us directly.
 
 ## User account console - changing user details
 
