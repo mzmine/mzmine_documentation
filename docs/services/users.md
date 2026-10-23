@@ -3,17 +3,15 @@
 ## Sign up / Registration
 
 Users can sign in into an existing account or sign up (register) a new free account within seconds.
-The sign up is available
-directly in the mzmine **Users** menu (Manage users). If you experience any issues with the built-in
-webview, click the
-external browser button and sign up online. Briefly, the user needs to provide few details
+The sign up is available directly in the mzmine **Users** menu (Manage users). If you experience any issues with the built-in
+webview, click the external browser button and sign up online. Briefly, the user needs to provide few details
 including:
 
 - **Username**: Fixed identifier that cannot be changed
 - **Define your use case**: The intended use of this user profile, either **commercial use** or *
   *non-profit academic use**
 - **Email**: Either an academic or company email address. It is important to use an
-  academic email address to gain a non-profit academic license
+  academic email address to gain a non-profit academic license.
 - **Read and accept the [Terms and Conditions](https://mzio.io/general-terms-and-conditions/)**
 
 After clicking the register button, a verification email is sent to the provided address. This can
@@ -29,23 +27,32 @@ take a few minutes.
 
 ![users_users.png](img/users_users.png)
 
-## Offline use
+## License Pooling
 
-Sign in to your user in mzmine on a computer that is connected to the internet. Click on the menu
-**User/Open users directory** to open the file explorer at your systems user/.mzmine/.users
-directory.
-Copy the corresponding users (.mzuser files) to the new system into the same directory.
-Alternatively copy the files
-to the other system and drag-and-drop them into mzmine. The users will be installed.
-Finally, open the **Users/User management** and select the active user.
+MZmine uses a floating license pool for distributing licenses. A license can only be used by one mzmine Instance at a time.
+While mzmine is running, the license is locked to the mzmine instance, after mzmine is closed the license is released again.
+This requires an active internet connection, the license status is checked regularly.
+
+### Licenses for Organizations
+
+mzmine supports pooling of licenses across users in an organization, allowing for reuse of licenses . Please contact us directly for details.
+
+## Offline use / Airplane Mode
+
+If no internet access is available, a license can be removed from the license pool and converted for offline use for a specified time.
+During this time, the license cannot be used by any other mzmine instance, so use this feature carefully.
+A license can be converted to an offline License using two methods:
+
+- Inside the **Users/User management** on the computer it will be used on (internet connection required)
+- Be claimed from the [mzio user account console](https://auth.mzio.io/realms/mzio/account/)
+
+
 
 ## User account console - changing user details
 
 Open the [mzio user account console](https://auth.mzio.io/realms/mzio/account/) and sign in with
-your user
-credentials. Go to personal information to update any details. When changing the **email** the user
-is automatically
-logged out. On the next sign in, the user will receive another verification email to validate email
+your user credentials. Go to personal information to update any details. When changing the **email** the user
+is automatically logged out. On the next sign in, the user will receive another verification email to validate email
 address ownership.
 Revalidation of the email also triggers a revalidation of the **non-profit academic license**.
 
@@ -106,19 +113,13 @@ a few minutes.
 
 ## Command-line interface (CLI)
 
-Users can be logged in via command-line arguments to run mzmine in batch mode.
+Using the command-line Users can be logged in via command-line arguments to run mzmine in batch mode.
 See [CLI tools](../commandline_tool.md) for more information.
 
 The most important commands on Windows are:
 ```
 # login in browser
 "C:\Program Files\mzmine\mzmine_console.exe" -login
-
-# login in the terminal console
-"C:\Program Files\mzmine\mzmine_console.exe" -login-console
- 
-# list all users
-"C:\Program Files\mzmine\mzmine_console.exe" -list-users 
 ```
 
 ## Alternative Sign in / Sign up
@@ -128,9 +129,7 @@ website [https://auth.mzio.io/realms/mzio/account](https://auth.mzio.io/realms/m
 clicking on the **Sign in** button in the top right corner.
 Then follow the regular self-registration described above. Finally, users will need to sign in to
 the mzmine software. If the sign in website does not load in mzmine, click
-the ![btn_tool.png](img/btn_tool.png). Set a proxy and retry with the login screen but if this fails
-try the alternative sign in by username and password directly. The mzmine CLI also provides the 
-**-login-console** argument for alternative sign in.
+the ![btn_tool.png](img/btn_tool.png).
 
 ## mzmine's educational non-profit program
 
