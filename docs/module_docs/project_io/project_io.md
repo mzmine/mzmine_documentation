@@ -92,20 +92,6 @@ of all modules including the batch queue. If enabled, this stored configuration 
 current module parameters when the project is opened. If disabled (default), the current
 configuration is kept and only the project data is loaded.
 
-!!! tip
-
-    Enable this option to continue with exactly the settings that were used to create a project,
-    e.g., to inspect or repeat the processing of a colleague. Keep it disabled to look at the
-    results without overwriting your own parameter settings.
-
-!!! warning
-
-    Batch files created before this parameter existed do not contain it. When such a batch is
-    loaded, the option is enabled to reproduce the previous behaviour, in which the configuration
-    was always loaded from the project. The quick *Open project* menu entry never loads the
-    configuration, and the dialog opened from the list of recent projects starts with the option
-    disabled.
-
 ---
 
 ## Save project {#save-project}
