@@ -53,7 +53,8 @@ but self-contained and can be shared without any additional requirements.
 :material-menu-open: **Project → Open project...**
 
 Loads an existing `.mzmine` project. By default the currently loaded project is discarded and
-replaced.
+replaced, while the current module parameters are kept (see
+[Load configuration from project](#load-configuration-from-project)).
 
 The **Project** menu additionally offers a quick *Open project* entry that only shows a file chooser
 and skips the parameter dialog, as well as a list of recently used projects.
@@ -83,6 +84,27 @@ the opened project. If disabled, they are removed.
 
     The quick *Open project* menu entry always keeps the current spectral libraries, because most
     users work with the same library across projects.
+
+#### Load configuration from project
+
+Every project also stores the mzmine configuration at the time it was saved, i.e., the parameters
+of all modules including the batch queue. If enabled, this stored configuration replaces the
+current module parameters when the project is opened. If disabled (default), the current
+configuration is kept and only the project data is loaded.
+
+!!! tip
+
+    Enable this option to continue with exactly the settings that were used to create a project,
+    e.g., to inspect or repeat the processing of a colleague. Keep it disabled to look at the
+    results without overwriting your own parameter settings.
+
+!!! warning
+
+    Batch files created before this parameter existed do not contain it. When such a batch is
+    loaded, the option is enabled to reproduce the previous behaviour, in which the configuration
+    was always loaded from the project. The quick *Open project* menu entry never loads the
+    configuration, and the dialog opened from the list of recent projects starts with the option
+    disabled.
 
 ---
 
