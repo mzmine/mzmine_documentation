@@ -2,6 +2,11 @@
 
 This reference documents `activity_association` in the reviewed knowledge-pack snapshot of the mzmine 4.10.107 development series. See the [scientific-analysis overview](../scientific-analysis.md).
 
+!!! info "MCP-only workflow entry point"
+
+    In the reviewed build, this workflow is initiated through the MCP local connector. Calculation
+    runs locally in mzmine, and results can be opened in mzmine's native result view.
+
 ## Inputs and prerequisites
 
 Provide non-empty `samples` mapping `sample_id`, `condition`, and `independent_unit`, plus non-empty `assay_rows`. Each assay row supplies a mapped sample, one shared `endpoint`, `dose`, `context`, `direction`, and finite `activity`. `direction` is `higher_is_more_active` or `lower_is_more_active`. `row_ids` defaults to every snapshot row. A compatible quantification source result may supply measurements.

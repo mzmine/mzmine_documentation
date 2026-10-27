@@ -86,10 +86,6 @@ distributed all over the world!
 
 ## About this documentation
 
-For the additional MRM and other-detector workflows, experimental wavelet resolving, and local
-agent assistance, see the [mzmine Pro reference](pro/index.md). It covers GUI and batch use as well
-as capabilities available through the local connector.
-
 Here you can find documentation for both processing and visualization modules in mzmine. Moreover,
 data processing pipelines for untargeted [LC-MS](workflows/lcmsworkflow/lcms-workflow.md)
 and [LC-IMS-MS](workflows/imsworkflow/ion-mobility-data-processing-workflow.md) feature detection as well as [MS-Imaging](workflows/imagingworkflow/imaging-workflow.md) are described and general recommendations are given.

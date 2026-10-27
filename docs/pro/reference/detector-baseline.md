@@ -16,11 +16,11 @@ For each selected trace, the chosen corrector produces a corrected time series a
 
 ## Outputs and side effects
 
-Raw trace data remains intact. The output is not a new raw-data file or feature list: it is the current preprocessed trace set for each matched collection. Subsequent feature resolution therefore sees the corrected, replacement preprocessed data.
+Corrected results intentionally replace the preprocessed traces, whether the selected input was raw or preprocessed. Raw traces remain unchanged. The output is not a new raw-data file or feature list: it is the current preprocessed trace set for each matched collection. Subsequent feature resolution therefore sees the corrected, replacement preprocessed data.
 
 ## Edge cases and errors
 
-Selecting raw traces still writes correction results into the preprocessed slot. Selecting no matching collections performs no correction. The `Suffix` does not create a parallel named trace collection in this implementation, so it should not be treated as a preservation mechanism.
+Selecting no matching collections performs no correction. The `Suffix` does not create a parallel named trace collection in this implementation, so it should not be treated as a preservation mechanism.
 
 ## Worked examples
 

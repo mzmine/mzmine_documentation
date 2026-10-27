@@ -2,6 +2,11 @@
 
 This reference documents `batch_diagnostics` in the reviewed knowledge-pack snapshot of the mzmine 4.10.107 development series. See the [scientific-analysis overview](../scientific-analysis.md).
 
+!!! info "MCP-only workflow entry point"
+
+    In the reviewed build, this workflow is initiated through the MCP local connector. Calculation
+    runs locally in mzmine, and results can be opened in mzmine's native result view.
+
 ## Inputs and prerequisites
 
 Diagnostics use an approved snapshot whose result scope permits run-order sharing. `injection_order` is required, non-empty, unique `sN` IDs from that snapshot; `single_batch_confirmed` must be `true`. The default `abundance` is `area`; height and normalized fields are alternatives when available. Optional role mapping uses `qc`, `blank`, `sample`, or `standard`.

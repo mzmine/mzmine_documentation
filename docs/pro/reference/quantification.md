@@ -2,6 +2,11 @@
 
 This reference documents the `quantification` operation in the reviewed knowledge-pack snapshot of the mzmine 4.10.107 development series. See the [scientific-analysis overview](../scientific-analysis.md) for scope and workflow.
 
+!!! info "MCP-only workflow entry point"
+
+    In the reviewed build, this workflow is initiated through the MCP local connector. Calculation
+    runs locally in mzmine, and results can be opened in mzmine's native result view.
+
 ## Inputs and prerequisites
 
 The operation reads only the approved, immutable feature-table snapshot. Required fields are `mode`, `signal`, `concentration_unit`, and a non-empty `analytes` list. `signal` is `area`, `height`, `normalized_area`, or `normalized_height`; unavailable chosen data makes the specification invalid. Each analyte has `row_id` and at least two calibration entries (`sample_id`, non-negative `concentration`). Calibrator IDs must be unique and present in the calibration row. QC IDs must likewise be unique and cannot overlap calibrators. A row outside the snapshot is returned as `invalid_row`; duplicate analyte row IDs reject the request.

@@ -2,6 +2,11 @@
 
 This reference documents `study_comparison` in the reviewed knowledge-pack snapshot of the mzmine 4.10.107 development series. See the [scientific-analysis overview](../scientific-analysis.md).
 
+!!! info "MCP-only workflow entry point"
+
+    In the reviewed build, this workflow is initiated through the MCP local connector. Calculation
+    runs locally in mzmine, and results can be opened in mzmine's native result view.
+
 ## Inputs and prerequisites
 
 Map each selected `sN` sample exactly once with `condition` and `independent_unit`; optional `time` and `pair_id` describe the design. `row_ids` defaults to all approved rows. `measurement.field` defaults to `area`; `height`, normalized fields, or `source_result` are available. A source result is required for `source_result`, and a normalized field cannot be combined with one.

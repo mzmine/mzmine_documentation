@@ -2,6 +2,11 @@
 
 This reference documents the `exposure` operation in the reviewed knowledge-pack snapshot of the mzmine 4.10.107 development series. See the [scientific-analysis overview](../scientific-analysis.md).
 
+!!! info "MCP-only workflow entry point"
+
+    In the reviewed build, this workflow is initiated through the MCP local connector. Calculation
+    runs locally in mzmine, and results can be opened in mzmine's native result view.
+
 ## Inputs and prerequisites
 
 Exposure requires a completed native `quantification` result from the same scope; supplied measurements are not accepted. Required fields are non-empty unique `sample_ids`, `scenario`, and `reference`. Selected IDs must exist in that quantification result and can select only samples whose quantification role is `unassigned`, never calibrators or QC samples.

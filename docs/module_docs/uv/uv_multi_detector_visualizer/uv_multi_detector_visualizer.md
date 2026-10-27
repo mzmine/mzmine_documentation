@@ -21,7 +21,8 @@ The visualizer is shown below:
    used.
 3. Select the specific trace you want to visualize. In case there
    are [preprocessed traces](../otherdetector_glossary.md#preprocessed-trace), these will be used
-   for visualization and [manual integration](#manual-integration).
+   for visualization and [manual integration](#manual-integration). If the selected collection has
+   no preprocessed traces, the raw traces are used instead.
 4. The chromatogram chart shows the selected trace.
 5. In case you want to visualize multiple files/traces, you can add another chart by the **+**
    button.
@@ -45,3 +46,7 @@ Manual integration is performed by first selecting the trace you want to integra
    you want to delete a feature from a trace, start the editing mode and then press "Abort feature".
 6. To save the manual edits, press the "Save" button. Unless "Save" is pressed, the edits will not
    be saved.
+
+Saving replaces the selected trace's resolved features with the edited integration results,
+including additions and removals. The features remain associated with the original raw trace;
+the raw and preprocessed trace signals themselves are unchanged.

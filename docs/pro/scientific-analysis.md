@@ -4,6 +4,11 @@ The local connector can perform five bounded analyses on a reviewed, immutable s
 
 This guide describes the mzmine 4.10.107 development build. The running application returns the accepted input schema and result contract; use those for exact field names and options.
 
+!!! info "MCP-only workflow entry point"
+
+    In the reviewed build, these five workflows are initiated through the MCP local connector. Calculation
+    runs locally in mzmine, and results can be opened in mzmine's native result view.
+
 !!! warning
 
     These analyses organize and calculate evidence from the selected feature table. They do not confirm compound identity, validate an experimental design, establish causality, or replace method-specific acceptance criteria.

@@ -49,14 +49,6 @@ The workflow is designed around the MRM transition information, so prefer the
 sequence, input expectations, and manual alternatives: [MRM workflow]
 (../workflows/mrmworkflow/mrm-workflow.md).
 
-## Experimental Wavelet resolver {#experimental-wavelet-resolver}
-
-The **Wavelet resolver** is available as an experimental feature resolver for ordinary feature
-lists. It resolves chromatographic peaks by a wavelet transform and supports resolving in retention
-time or ion-mobility dimensions. Start from a validated workflow setting and compare output to an
-established resolver before adopting it for a new assay. See the
-[Wavelet resolver](../module_docs/featdet_resolver_wavelet/wavelet_resolver.md).
-
 ---
 
 {{ git_page_authors }}

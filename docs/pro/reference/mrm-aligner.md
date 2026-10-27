@@ -18,7 +18,7 @@ After common alignment, mzmine takes the MRM-bearing feature with greatest heigh
 
 ## Outputs and side effects
 
-The output is a newly aligned feature list populated with cloned features and calculated alignment scores. Depending on original-list handling, source lists are retained or acted on after successful construction. Each aligned row is normalised to the tallest feature's quantifier where a matching transition exists.
+The output is a newly aligned feature list populated with cloned features and calculated alignment scores. Depending on original-list handling, source lists are retained or acted on after successful construction. Features in each aligned row are assigned the same quantifier transition, using the tallest feature as the reference. This does not apply intensity normalization. Reported feature height and area can change because they are recalculated from the selected quantifier transition.
 
 ## Edge cases and errors
 
@@ -28,7 +28,7 @@ With same-MRM filtering active, a candidate already in the aligned/base rows cau
 
 ### Strict compatible transitions
 
-Two rows at Q1 500.000 and 500.006, RTs within the selected RT tolerance, each containing sorted Q3 values 120 and 150, are eligible at the default 0.01 m/z tolerance. If the tallest feature uses 150 as quantifier, each compatible feature is switched to its 150 transition.
+Two rows both at Q1 500.000, with RTs within the selected RT tolerance and identical sorted Q3 values 120 and 150, pass the strict transition check. If the tallest feature uses 150 as quantifier, each compatible feature is switched to its 150 transition. A row at Q1 500.006 is rejected by **Only allow matches to same MRM**, even though the difference is within the default 0.01 m/z candidate tolerance: strict matching requires exactly equal Q1 values.
 
 ### Loose matching can fail later
 

@@ -14,19 +14,27 @@ Launching the command has no user-facing module parameters. Opening returns succ
 
 The launch operation creates/adds the multi-detector visualizer tab and schedules no processing task. It therefore does not build chromatograms, apply a shift, baseline-correct, resolve peaks, or write correlation results.
 
+Within the tab, visualization and manual integration use the selected collection's preprocessed traces when available. If the collection has no preprocessed traces, they fall back to its raw traces. Existing resolved features for the selected trace are loaded into the integration plot and can be edited.
+
 ## Outputs and side effects
 
-The side effect is a GUI tab. Project data is unchanged by merely opening it. Use the processing modules from the same menu when a persistent derived trace or feature result is required.
+Opening the tab alone leaves project data unchanged. Manual integration followed by **Save** replaces the selected trace's resolved features with the edited integration results, including any additions or removals. These features are associated with the original raw trace; the raw and preprocessed trace signals themselves remain unchanged.
 
 ## Edge cases and errors
 
 Because the command has no parameter validation, it can open even when the project has no useful other-detector traces; in that state there is simply nothing meaningful to visualize. Opening the visualizer is not evidence that the other-detector service or any particular data-processing output is available.
+
+Manual edits are not written back until **Save** is pressed.
 
 ## Worked examples
 
 ### Inspect without mutation
 
 Opening **Multi detector visualizer** after importing data adds the viewing tab but leaves raw traces, preprocessed traces, and feature correlations unchanged.
+
+### Save a manually integrated peak
+
+Select a trace, set its peak boundaries, accept the integration with **Finish feature**, and press **Save**. The edited feature set replaces the resolved features for that trace. If the collection has no preprocessed traces, integration uses the raw signal.
 
 ### Prepare data first
 

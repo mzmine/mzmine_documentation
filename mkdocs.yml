@@ -14,11 +14,6 @@ nav:
   - Home page: index.md
   - Getting started: getting_started.md
   - User account: services/users.md
-  - Pro features:
-      - Overview and availability: pro/index.md
-      - Pro workflows: pro/workflows.md
-      - Agent-assisted mzmine: pro/agent-assisted-mzmine.md
-      - Scientific analysis: pro/scientific-analysis.md
   - Learners corner: learners_corner.md
   - Main window overview: main-window-overview.md
   - Processing wizard: wizard.md
@@ -203,6 +198,11 @@ nav:
       - SIMSEF: workflows/simsef/simsef_workflow.md
       - MRM workflow: workflows/mrmworkflow/mrm-workflow.md
       - Workflow optimization: workflows/optimization/workflow_optimization.md
+      - Pro workflows: pro/workflows.md
+
+  - Agentic workflows:
+      - Agent-assisted mzmine: pro/agent-assisted-mzmine.md
+      - Scientific analysis: pro/scientific-analysis.md
 
   - Tools:
       - SIMSEF scheduler: module_docs/tools_simsef/simsef.md
@@ -224,6 +224,8 @@ nav:
       - Spectral similarity measures: module_docs/id_spectral_library_search/spectral-similarity-measures.md
       - Other detector terminology: module_docs/uv/otherdetector_glossary.md
       - Additional resources: additional_resources.md
+
+  - mzmine Pro reference: pro/index.md
 
   - Contribute:
       - Coding:
