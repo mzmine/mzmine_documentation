@@ -83,14 +83,13 @@ signals must be found to calculate the noise by the selected [noise calculation]
 method. Otherwise, the resolver falls back to the ratio of the peak-top intensity to the average
 intensity at both peak edges; that fallback ratio must meet the selected SNR threshold.
 
-If disabled/default: 3 is used
+Default: 3. Off uses the minimum factor of 1.
 
 #### Required fitting scales
 
 Minimum number of fitting wavelet scales for a peak to be retained.
 
-If disabled/default: 2
-Note: Enable and set to 1 to disable this filter
+Default: 2. Off disables this filter by using 1; a custom value of 1 has the same effect.
 
 #### Apply robustness iteration
 
@@ -111,7 +110,7 @@ peak width) is lower than the previous absolute minimum.
 Slope: Continues the search until an increasing slope is reached. Uses varying window width
 depending on peak width.
 
-If disabled/default: Absolute minimum is used
+Default: Absolute minimum window jagged + FWHM.
 
 #### Allow sign changes every N points
 
@@ -121,15 +120,14 @@ Filters by the number of sign changes ($S$) in the slope between two points in a
 If the slope changes from positive to negative or vice versa, it is counted as a sign
 change. Since a peak is expected to have a high point, one sign change is expected per potential
 peak and subtracted from the number of counted sign changes. The number of
-additional sign changes ($S-1$) is then divided by the total number of data points in a peak
-$\frac{(S-1)}{N_{points}}$. This number is then multiplied by the value of this parameter $p$. We
+additional sign changes ($\max(0,S-1)$) is then divided by the total number of data points in a peak
+$\frac{\max(0,S-1)}{N_{points}}$. This number is then multiplied by the value of this parameter $p$. We
 call the result of this formula the relative jaggedness $J_R$. If the relative jaggedness
 is $> 1$, the potential peak is discarded.
 
-$J_R = \frac{(S-1)}{N_{points}} \cdot p$
+$J_R = \frac{\max(0,S-1)}{N_{points}} \cdot p$
 
-If disabled: 2 is used.
-To not use this filter enable and set to 1.
+Default: 2. Off uses 1, which disables this filter; a custom value of 1 has the same effect.
 
 The effect of the filter is visualized here:
 ![sign_changes-01.png](sign_changes-01.png)
@@ -139,7 +137,7 @@ sign changes for 10 data points.
 The jaggedness is thereby calculated as:
 
 $J_{R,yellow} = \frac{(9-1)}{12} \cdot p = \frac{8}{12} \cdot p = \frac{2}{3}p$
-$J_{R,blue} = \frac{(7-1)}{10} \cdot p = \frac{7}{10} \cdot p = 0.7p$
+$J_{R,blue} = \frac{(7-1)}{10} \cdot p = \frac{6}{10} \cdot p = 0.6p$
 
 For a parameter value $p$ of 1, both signals are retained, as $J_R \le 1$. If a sign changes is only
 allowed every $p = 2$ points, it results in $J_R > 1$ in both cases.
@@ -154,8 +152,7 @@ This filter checks if there are a lot of signals with a similar absolute height 
 peak.
 If that is the case, the peak is removed.
 
-If disabled: (0.10) will be used as default.
-Note: A value of 1 disables this filter.
+Default: 0.10. Off uses 1 and disables this filter; a custom value of 1 has the same effect.
 Note: It may make sense to disable this filter (set to 1) to detect signals that are placed on an
 increasing baseline.
 
@@ -166,3 +163,6 @@ Detects if a peak has a flat top signal due to saturation of the MS detector.
 Default: true
 
 ![sat_filter.png](sat_filter.png)
+
+For the reviewed defaults, filtering order, and crowded-peak fallbacks, see the
+[implementation reference](../../pro/reference/wavelet-resolver.md).

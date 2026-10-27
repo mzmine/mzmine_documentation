@@ -84,6 +84,14 @@ Online services reached through mzconnect have their own account and data-sharin
 Public documentation or inclusion of a tool in a menu does not establish entitlement to an online
 service or transfer experimental data to it.
 
+## Implementation details {#implementation-details}
+
+The [implementation reference](reference/index.md) supplements these guides with source-reviewed
+parameter defaults and validation, processing decisions and fallbacks, scientific calculations,
+output changes, and edge cases. Use it to answer questions such as why an MRM quantifier change
+partly failed, how a wavelet peak is handled with little background, or which observations enter a
+study comparison. Its rules are scoped to the reviewed development snapshot.
+
 ## Documentation and citations {#documentation-and-citations}
 
 The helper searches the documentation snapshot bundled with its knowledge pack. Answers should
