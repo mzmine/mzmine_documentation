@@ -24,7 +24,7 @@ Nothing is shared before approval. The native preview starts with no sample colu
 
 Approved acquisition sharing returns `acquisition_summary` with provenance `file_header_text`. It groups instrument-model, mass-analyzer, ion-source, and detector values across the project files. These are stored file-metadata strings, not validated instrument facts or standardized vocabulary terms. The summary contains up to **128 distinct values per field**, sorted by text, with each displayed value limited to **256 characters**. It reports per-value file counts, missing-file counts, omitted-value counts, and text-truncation flags. Duplicate values within one file count once. Unknown metadata does not establish absence.
 
-Project context exposes only acquisition-sharing status and, for a current approved grant, its review ID. The values themselves are returned through the approved metadata review. Header text can contain sensitive information; inspect the preview rather than treating the field names as a guarantee about the contents.
+Project context exposes only acquisition-sharing status and, for a current approved grant, its review ID. The values themselves are returned through the approved metadata review. The summary has no dedicated file-name or path field, but the header strings can themselves contain names, paths, or other sensitive information. That text is not removed; inspect the preview rather than treating the field names as a guarantee about the contents.
 
 ### Invalidating a review
 

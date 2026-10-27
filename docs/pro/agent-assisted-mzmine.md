@@ -50,8 +50,9 @@ request explicitly names that scope; open the native review to inspect or narrow
 
 The summary reports distinct values and counts across files, with limits on the number and length
 of values. Missing or truncated values do not establish that an instrument component is absent.
-The text is taken from file metadata without validating or standardizing its meaning and may
-contain sensitive information. Share it only when it is useful for the requested analysis.
+The text is taken from file metadata without validating or standardizing its meaning. Header values
+may themselves contain names, paths, or other sensitive text; acquisition sharing does not remove
+such text. Share it only when it is useful for the requested analysis.
 
 If the included acquisition fields change, a new sharing review is required, even after session
 approval. Revoking metadata sharing or disconnecting stops subsequent access under that approval.
