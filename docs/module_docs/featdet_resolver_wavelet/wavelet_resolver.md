@@ -14,7 +14,7 @@
 
 ## Parameters
 
-#### Signal-to-noise ratio (SNR) threshold
+#### Signal-to-noise ratio (SNR) threshold {#signal-to-noise-threshold}
 
 Minimum required signal-to-noise ratio (SNR) of a peak: the peak signal above its local baseline
 divided by the estimated local background noise. The noise is calculated by the standard deviation
