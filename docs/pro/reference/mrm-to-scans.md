@@ -1,6 +1,6 @@
 # MRM to scans: implementation reference
 
-This reference describes the reviewed knowledge-pack snapshot of the 4.10.107 development series; exposed inputs remain runtime-dependent. It expands the [MRM to scans guide](../../module_docs/mrm_mrmtoscans/mrm-to-scans.md).
+This reference describes the reviewed knowledge-pack snapshot of the 4.10.111 development series; exposed inputs remain runtime-dependent. It expands the [MRM to scans guide](../../module_docs/mrm_mrmtoscans/mrm-to-scans.md).
 
 ## Inputs and prerequisites
 

@@ -1,6 +1,6 @@
 # Other-detector baseline correction: implementation reference
 
-This reference covers the reviewed knowledge-pack snapshot of the 4.10.107 development series. It baseline-corrects selected other-detector traces; see the [user guide](../../module_docs/uv/uv_baseline_correction/uv_baseline_correction.md).
+This reference covers the reviewed knowledge-pack snapshot of the 4.10.111 development series. It baseline-corrects selected other-detector traces; see the [user guide](../../module_docs/uv/uv_baseline_correction/uv_baseline_correction.md).
 
 ## Inputs and prerequisites
 

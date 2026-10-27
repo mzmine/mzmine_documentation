@@ -1,6 +1,6 @@
 # Other-detector shift, trim, and bin: implementation reference
 
-This reference covers the reviewed knowledge-pack snapshot of the 4.10.107 development series. It prepares other-detector traces for comparison; see the [user guide](../../module_docs/uv/uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md).
+This reference covers the reviewed knowledge-pack snapshot of the 4.10.111 development series. It prepares other-detector traces for comparison; see the [user guide](../../module_docs/uv/uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md).
 
 ## Inputs and prerequisites
 

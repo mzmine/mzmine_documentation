@@ -7,7 +7,7 @@ this distribution.
 
 !!! info "Version and availability"
 
-    These pages were reviewed for the mzmine 4.10.107 development series on 27 October 2026.
+    These pages were reviewed for the mzmine 4.10.111 development series on 27 October 2026.
     Development builds sharing a version number can have different features. Use the documentation
     snapshot supplied with your build and check the installed application's menus, account services,
     and available connector capabilities. A missing search result does not establish that a feature

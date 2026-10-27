@@ -1,6 +1,6 @@
 # Application setup and access: implementation reference
 
-This page describes the reviewed 4.10.107 development-series application surfaces. See [Pro access and workspaces](../index.md) and [agent-assisted mzmine](../agent-assisted-mzmine.md).
+This page describes the reviewed 4.10.111 development-series application surfaces. See [Pro access and workspaces](../index.md) and [agent-assisted mzmine](../agent-assisted-mzmine.md).
 
 ## Inputs and prerequisites
 

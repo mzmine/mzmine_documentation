@@ -1,6 +1,6 @@
 # Registered Pro workflows: implementation reference
 
-This reference describes the reviewed knowledge-pack snapshot of the 4.10.107 development series. Actual availability and schemas are determined by the running application. For the task-oriented overview, see [workflows](../workflows.md).
+This reference describes the reviewed knowledge-pack snapshot of the 4.10.111 development series. Actual availability and schemas are determined by the running application. For the task-oriented overview, see [workflows](../workflows.md).
 
 ## Inputs and prerequisites
 

@@ -1,6 +1,6 @@
 # Native analysis tools: implementation reference
 
-This reference covers the reviewed 4.10.107 development-series connector behavior. For analysis choices, see [scientific analysis](../scientific-analysis.md).
+This reference covers the reviewed 4.10.111 development-series connector behavior. For analysis choices, see [scientific analysis](../scientific-analysis.md).
 
 ## Inputs and prerequisites
 

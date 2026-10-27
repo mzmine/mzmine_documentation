@@ -1,6 +1,6 @@
 # MRM quantifiers: implementation reference
 
-This is the reviewed 4.10.107 development-series snapshot. See [Set MRM quantifiers](../../module_docs/mrm_setquant/mrm-set-quant-mass.md) for the user guide.
+This is the reviewed 4.10.111 development-series snapshot. See [Set MRM quantifiers](../../module_docs/mrm_setquant/mrm-set-quant-mass.md) for the user guide.
 
 ## Inputs and prerequisites
 

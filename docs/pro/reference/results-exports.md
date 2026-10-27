@@ -1,6 +1,6 @@
 # Results, exports, and batch drift: implementation reference
 
-This is the reviewed 4.10.107 development-series behavior reference. See [agent-assisted mzmine](../agent-assisted-mzmine.md) for the general results workflow.
+This is the reviewed 4.10.111 development-series behavior reference. See [agent-assisted mzmine](../agent-assisted-mzmine.md) for the general results workflow.
 
 ## Inputs and prerequisites
 

@@ -1,6 +1,6 @@
 # Clear MS–other-detector correlations: implementation reference
 
-This reference covers the reviewed knowledge-pack snapshot of the 4.10.107 development series. It removes stored correlation results; see the [user guide](../../module_docs/uv/uv_clear_correlated_traces/uv_clear_correlated_traces.md).
+This reference covers the reviewed knowledge-pack snapshot of the 4.10.111 development series. It removes stored correlation results; see the [user guide](../../module_docs/uv/uv_clear_correlated_traces/uv_clear_correlated_traces.md).
 
 ## Inputs and prerequisites
 

@@ -7,7 +7,7 @@ Community multi detector visualizer used in the Pro workflow.
 
 !!! info "Reviewed snapshot"
 
-    This reference describes the 4.10.107 development snapshot reviewed for this knowledge pack.
+    This reference describes the 4.10.111 development snapshot reviewed for this knowledge pack.
     Builds with the same version number can differ. The pack's source revisions identify the reviewed
     snapshot; check the connected application's capabilities and parameter schema for current inputs.
     Documented defaults do not establish the settings used in a particular analysis.

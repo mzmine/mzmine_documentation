@@ -1,6 +1,6 @@
 # MRM alignment: implementation reference
 
-This reference covers the reviewed 4.10.107 development-series snapshot. See the [MRM aligner guide](../../module_docs/align_mrm/mrm-aligner.md).
+This reference covers the reviewed 4.10.111 development-series snapshot. See the [MRM aligner guide](../../module_docs/align_mrm/mrm-aligner.md).
 
 ## Inputs and prerequisites
 

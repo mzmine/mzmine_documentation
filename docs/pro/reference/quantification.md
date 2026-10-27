@@ -1,6 +1,6 @@
 # Quantification: implementation reference
 
-This reference documents the `quantification` operation in the reviewed knowledge-pack snapshot of the mzmine 4.10.107 development series. See the [scientific-analysis overview](../scientific-analysis.md) for scope and workflow.
+This reference documents the `quantification` operation in the reviewed knowledge-pack snapshot of the mzmine 4.10.111 development series. See the [scientific-analysis overview](../scientific-analysis.md) for scope and workflow.
 
 !!! info "MCP-only workflow entry point"
 

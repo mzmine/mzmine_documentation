@@ -7,7 +7,7 @@ scope. Depending on that request, this can include selected measurements, sample
 annotations, chromatographic or spectral signals, images, or injection order; it is not a general
 copy of the local project.
 
-This guide describes the connector included with the mzmine 4.10.107 development build. Availability
+This guide describes the connector included with the mzmine 4.10.111 development build. Availability
 depends on the installed mzmine version, its enabled local connection, and the capabilities reported
 by that running application. Use the application's current capabilities and parameter schemas as the
 authority for what can be run.
@@ -33,12 +33,32 @@ Sample metadata and acquisition metadata have different roles:
 
 - **Sample metadata** describes samples and can be reviewed and edited through the connector after
   you approve the requested fields.
-- **Acquisition metadata** is a separate editable matrix saved with the project. It is not a fallback
-  for sample metadata and is not changed by ordinary sample-metadata edits.
+- **Acquisition metadata** is shown in a separate read-only table of information from imported file
+  headers. It is not a fallback for sample metadata and is not changed by ordinary sample-metadata
+  edits.
 
-Keep project information local when the agent does not need it. A sharing review names the requested
-fields and can be declined or revoked. Raw-file paths, raw spectra, and unreviewed metadata are not
-required for the normal import and workflow route.
+### Optional acquisition-header sharing
+
+The agent can request an acquisition summary alongside sample metadata. This optional summary
+contains instrument-model, mass-analyzer, ion-source, and detector text from the files' acquisition
+metadata. These values are not shared merely by connecting to mzmine or reading project context.
+
+When the request includes acquisition metadata, the native sharing dialog offers **Share acquisition
+metadata (file-header text)**. This checkbox starts unchecked. Select it to inspect the exact local
+preview, then approve the selection. Chat approval can also include acquisition metadata when the
+request explicitly names that scope; open the native review to inspect or narrow the selection.
+
+The summary reports distinct values and counts across files, with limits on the number and length
+of values. Missing or truncated values do not establish that an instrument component is absent.
+The text is taken from file metadata without validating or standardizing its meaning and may
+contain sensitive information. Share it only when it is useful for the requested analysis.
+
+If the included acquisition fields change, a new sharing review is required, even after session
+approval. Revoking metadata sharing or disconnecting stops subsequent access under that approval.
+
+Keep project information local when the agent does not need it. A sharing review identifies the
+requested scope and can be declined or revoked. Raw-file paths, raw spectra, and unreviewed metadata
+are not required for the normal import and workflow route.
 
 ## Build, review, and run a workflow
 
