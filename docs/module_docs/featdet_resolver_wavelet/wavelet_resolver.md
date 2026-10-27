@@ -2,7 +2,8 @@
 
 !!! info
 
-    This feature resolver is currently in beta phase (03.2026). (Added after mzmine 4.10)
+    The Wavelet resolver is experimental. Validate its output for the acquisition method and sample
+    type before using it in a production workflow.
 
 !!! Note
 
@@ -19,18 +20,20 @@ Minimum required signal-to-noise ratio of a peak. The noise is calculated by the
 deviation ($STD$)
 or median absolute deviation ($MAD$) (see [noise calculation](#noise-calculation)
 and [noise window factor](#noise-window-factor)). The signal
-height ($S$) is determined by the peak height minus the average of the two edges.
+height ($S$) is the peak height minus the selected local baseline.
 
 $$\text{Signal-to-noise} = S/N$$
 
-$$S = I_{peakTop} - \frac{I_{leftEdge}-I_{rightEdge}}{2}$$
+$$S = I_{peakTop} - I_{baseline}$$
 
 $$N = STD(Background) \text{ or } MAD(Background)$$
 
-#### Top to edge (SNR override)
+#### Re-split unresolved double peaks _(Optional)_
 
-If a potential feature does not match the SNR threshold, check if the top/edge ratio is above this
-threshold.
+Split a partly separated double peak at an internal minimum when both surrounding maxima are at
+least the chosen factor higher than that minimum. This is disabled by default and is usually only
+needed when two peaks remain merged after resolving. The comparison uses a baseline interpolated
+between both peak edges.
 
 #### Minimum height
 
@@ -42,6 +45,11 @@ Choose a method to calculate the noise around a potential signal.
 Other closely eluting signals are not used for noise/background calculation.
 
 Default: Standard Deviation
+
+#### Baseline estimation
+
+Select the method used to estimate the local baseline around a potential peak: the average of the
+two peak edges (default), the median of the local background, or its average.
 
 #### Dip filter
 
