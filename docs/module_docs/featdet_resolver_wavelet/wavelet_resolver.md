@@ -163,6 +163,3 @@ Detects if a peak has a flat top signal due to saturation of the MS detector.
 Default: true
 
 ![sat_filter.png](sat_filter.png)
-
-For the reviewed defaults, filtering order, and crowded-peak fallbacks, see the
-[implementation reference](../../pro/reference/wavelet-resolver.md).

@@ -19,36 +19,6 @@ nav:
       - Pro workflows: pro/workflows.md
       - Agent-assisted mzmine: pro/agent-assisted-mzmine.md
       - Scientific analysis: pro/scientific-analysis.md
-      - Implementation reference:
-          - Overview: pro/reference/index.md
-          - MRM and resolving:
-              - MRM conversion: pro/reference/mrm-to-scans.md
-              - MRM quantifiers: pro/reference/mrm-quantifiers.md
-              - MRM alignment: pro/reference/mrm-aligner.md
-              - MRM export: pro/reference/mrm-export.md
-              - Wavelet resolver: pro/reference/wavelet-resolver.md
-          - Other detectors:
-              - Chromatogram extraction: pro/reference/detector-chromatograms.md
-              - Shift, trim, and bin: pro/reference/detector-shift.md
-              - Baseline correction: pro/reference/detector-baseline.md
-              - Trace resolving: pro/reference/detector-resolver.md
-              - Correlation: pro/reference/detector-correlations.md
-              - Clear correlations: pro/reference/detector-clear-correlations.md
-              - Correlation dashboard: pro/reference/detector-dashboard.md
-              - Multi detector visualizer: pro/reference/detector-visualizer.md
-          - Scientific analysis:
-              - Quantification: pro/reference/quantification.md
-              - Batch diagnostics: pro/reference/batch-diagnostics.md
-              - Study comparison: pro/reference/study-comparison.md
-              - Activity association: pro/reference/activity-association.md
-              - Exposure assessment: pro/reference/exposure-assessment.md
-          - Workflows and connection:
-              - Workflow availability: pro/reference/workflows-access.md
-              - Import and metadata sharing: pro/reference/import-metadata-sharing.md
-              - Workflow state and review: pro/reference/workflow-state.md
-              - Results and exports: pro/reference/results-exports.md
-              - Native analysis tools: pro/reference/native-analysis-tools.md
-              - Application setup and access: pro/reference/application-setup.md
   - Learners corner: learners_corner.md
   - Main window overview: main-window-overview.md
   - Processing wizard: wizard.md
@@ -303,6 +273,8 @@ extra:
 hooks:
   # lets the version selector keep the reader on the same page, see the file
   - hooks/sitemap_root_url.py
+  # Keep agent implementation references available by URL, outside website search.
+  - hooks/implementation_reference_visibility.py
 
 plugins:
   - search
