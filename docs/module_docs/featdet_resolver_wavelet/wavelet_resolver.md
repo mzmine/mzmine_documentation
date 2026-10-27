@@ -14,10 +14,11 @@
 
 ## Parameters
 
-#### Signal-to-noise threshold
+#### Signal-to-noise ratio (SNR) threshold
 
-Minimum required signal-to-noise ratio of a peak. The noise is calculated by the standard
-deviation ($STD$)
+Minimum required signal-to-noise ratio (SNR) of a peak: the peak signal above its local baseline
+divided by the estimated local background noise. The noise is calculated by the standard deviation
+($STD$)
 or median absolute deviation ($MAD$) (see [noise calculation](#noise-calculation)
 and [noise window factor](#noise-window-factor)). The signal
 height ($S$) is the peak height minus the selected local baseline.
@@ -79,7 +80,8 @@ The window around a potential signal to calculate the signal-to-noise ratio in.
 The window is defined by this factor multiplied by the peak width.
 Only signals that do not belong to a potential other peak are used for noise calculation. At least 6
 signals must be found to calculate the noise by the selected [noise calculation](#noise-calculation)
-method. Otherwise the top-to-edge ratio of the signal must match the selected SNR.
+method. Otherwise, the resolver falls back to the ratio of the peak-top intensity to the average
+intensity at both peak edges; that fallback ratio must meet the selected SNR threshold.
 
 If disabled/default: 3 is used
 
@@ -122,7 +124,7 @@ peak and subtracted from the number of counted sign changes. The number of
 additional sign changes ($S-1$) is then divided by the total number of data points in a peak
 $\frac{(S-1)}{N_{points}}$. This number is then multiplied by the value of this parameter $p$. We
 call the result of this formula the relative jaggedness $J_R$. If the relative jaggedness
-is $\le 1$, the potential peak is discarded.
+is $> 1$, the potential peak is discarded.
 
 $J_R = \frac{(S-1)}{N_{points}} \cdot p$
 
