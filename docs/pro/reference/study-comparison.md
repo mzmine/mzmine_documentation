@@ -1,6 +1,6 @@
 # Study comparison: implementation reference
 
-This reference documents `study_comparison` in the reviewed knowledge-pack snapshot of the mzmine 4.10.111 development series. See the [scientific-analysis overview](../scientific-analysis.md).
+This reference documents `study_comparison`. See the [scientific-analysis overview](../scientific-analysis.md).
 
 !!! info "MCP-only workflow entry point"
 

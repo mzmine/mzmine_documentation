@@ -1,6 +1,6 @@
 # MS–other-detector correlation: implementation reference
 
-This reference covers the reviewed knowledge-pack snapshot of the 4.10.111 development series. It associates MS features with resolved other-detector features; see the [user guide](../../module_docs/uv/uv_ms_other_aligner/uv_ms_other_aligner.md).
+This module associates MS features with resolved other-detector features; see the [user guide](../../module_docs/uv/uv_ms_other_aligner/uv_ms_other_aligner.md).
 
 ## Inputs and prerequisites
 

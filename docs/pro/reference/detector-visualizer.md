@@ -1,6 +1,6 @@
 # Multi-detector visualizer: implementation reference
 
-This reference covers the reviewed knowledge-pack snapshot of the 4.10.111 development series. It is the shared multi-detector plotting surface exposed in the Pro **Other detectors** menu; see the [user guide](../../module_docs/uv/uv_multi_detector_visualizer/uv_multi_detector_visualizer.md).
+The multi-detector visualizer is the shared multi-detector plotting surface exposed in the Pro **Other detectors** menu; see the [user guide](../../module_docs/uv/uv_multi_detector_visualizer/uv_multi_detector_visualizer.md).
 
 ## Inputs and prerequisites
 

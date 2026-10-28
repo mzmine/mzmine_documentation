@@ -7,11 +7,10 @@ this distribution.
 
 !!! info "Version and availability"
 
-    These pages were reviewed for the mzmine 4.10.111 development series on 27 October 2026.
-    Development builds sharing a version number can have different features. Use the documentation
-    snapshot supplied with your build and check the installed application's menus, account services,
-    and available connector capabilities. A missing search result does not establish that a feature
-    is unavailable.
+    Use the website's version selector to read documentation for your mzmine release. Availability
+    depends on the installed application's menus, account services, and available connector
+    capabilities. When using a bundled knowledge pack, use the documentation snapshot supplied with
+    your build. A missing search result does not establish that a feature is unavailable.
 
 ## Workspaces and access {#workspaces-and-access}
 

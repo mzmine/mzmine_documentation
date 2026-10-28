@@ -1,6 +1,6 @@
 # Wavelet resolver: implementation reference
 
-The Wavelet resolver is experimental. This is the reviewed knowledge-pack snapshot of the 4.10.111 development series; validate results on representative data and see the [Wavelet resolver guide](../../module_docs/featdet_resolver_wavelet/wavelet_resolver.md).
+The Wavelet resolver is experimental. Validate results on representative data and see the [Wavelet resolver guide](../../module_docs/featdet_resolver_wavelet/wavelet_resolver.md).
 
 ## Inputs and prerequisites
 

@@ -1,6 +1,6 @@
 # Import and metadata sharing: implementation reference
 
-This reference covers the reviewed 4.10.111 development-series snapshot. See [agent-assisted mzmine](../agent-assisted-mzmine.md) for the user guide.
+This reference describes import and reviewed metadata sharing. See [agent-assisted mzmine](../agent-assisted-mzmine.md) for the user guide.
 
 ## Inputs and prerequisites
 

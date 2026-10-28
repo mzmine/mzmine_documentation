@@ -1,6 +1,6 @@
 # Other-detector chromatogram builder: implementation reference
 
-This reference covers the reviewed knowledge-pack snapshot of the 4.10.111 development series. It extracts time series from spectral other-detector data; see the [user guide](../../module_docs/uv/uv_spectra_chromatogram_builder/spectrachrombuilder.md) for the workflow view. Runtime inputs determine what is available.
+This module extracts time series from spectral other-detector data; see the [user guide](../../module_docs/uv/uv_spectra_chromatogram_builder/spectrachrombuilder.md) for the workflow view. Runtime inputs determine what is available.
 
 ## Inputs and prerequisites
 

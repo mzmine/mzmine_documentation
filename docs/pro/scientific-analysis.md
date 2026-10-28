@@ -2,7 +2,7 @@
 
 The local connector can perform five bounded analyses on a reviewed, immutable snapshot of a selected feature table. This avoids changing measurements while an analysis is running and records the application version, snapshot revision, requested specification, and any upstream native result used as input.
 
-This guide describes the mzmine 4.10.111 development build. The running application returns the accepted input schema and result contract; use those for exact field names and options.
+The running application returns the accepted input schema and result contract; use those for exact field names and options.
 
 !!! info "MCP-only workflow entry point"
 

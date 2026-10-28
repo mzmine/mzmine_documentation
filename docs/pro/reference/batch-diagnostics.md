@@ -1,6 +1,6 @@
 # Batch diagnostics: implementation reference
 
-This reference documents `batch_diagnostics` in the reviewed knowledge-pack snapshot of the mzmine 4.10.111 development series. See the [scientific-analysis overview](../scientific-analysis.md).
+This reference documents `batch_diagnostics`. See the [scientific-analysis overview](../scientific-analysis.md).
 
 !!! info "MCP-only workflow entry point"
 

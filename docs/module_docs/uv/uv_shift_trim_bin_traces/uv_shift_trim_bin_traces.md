@@ -78,14 +78,16 @@ files using the already binned other detector traces:
 2. **Unambiguous peaks only.** Peaks whose boundaries touch a direct neighbouring peak are
    discarded, since their apex matching would be ambiguous.
 3. **Apex-based candidate shifts.** Each remaining other detector peak is paired with MS peaks
-   within an apex tolerance window to generate candidate shifts. Nearby shifts are clustered,
-   and the strongest supported clusters are tested.
+   within an apex tolerance window to generate candidate RT shifts: possible offsets to add to the
+   other detector retention times. Nearby candidate shifts are clustered, and the strongest
+   supported clusters are tested.
 4. **Shape correlation validation.** Each candidate shift is validated by Pearson correlation of
    the chromatographic shapes of the matched peaks. Matches require at least 5 correlated data
    points and a Pearson `r ≥ 0.8`.
-5. **Per-file shift.** The candidate with the most validated matches is selected. Ties favour
-   higher median shape correlation, then lower median residual apex error. Files with fewer than
-   3 validated matches cannot contribute an estimate.
+5. **Per-file shift.** Select the candidate RT shift with the most validated peak matches. Ties
+   favour higher median shape correlation, then lower median residual apex error. The file's shift
+   is the median apex-time difference of the accepted peak pairs for that candidate shift. At least
+   3 validated matches are required.
 6. **Global shift.** The median of the valid file-level shifts is applied to every selected file,
    including those that could not contribute an estimate. This shared offset is intentional and
    matches manual mode, where all selected files receive the same shift.

@@ -1,6 +1,6 @@
 # Other-detector shift, trim, and bin: implementation reference
 
-This reference covers the reviewed knowledge-pack snapshot of the 4.10.111 development series. It prepares other-detector traces for comparison; see the [user guide](../../module_docs/uv/uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md).
+This module prepares other-detector traces for comparison; see the [user guide](../../module_docs/uv/uv_shift_trim_bin_traces/uv_shift_trim_bin_traces.md).
 
 ## Inputs and prerequisites
 
@@ -19,9 +19,9 @@ Binning occurs before shift and trimming. Auto shift is resolved once from the b
 ### Automatic RT-shift estimation
 
 1. For each file, a wavelet peak picker detects peaks in the selected, already binned other-detector traces and in the MS base peak chromatogram (BPC). Peaks whose boundaries touch a neighbouring peak are excluded from matching.
-2. Differences between detector and BPC peak-apex times generate candidate shifts. Nearby candidates are clustered, and the strongest supported clusters are tested.
+2. Differences between detector and BPC peak-apex times generate candidate RT shifts: possible offsets to add to the detector retention times. Nearby candidate shifts are clustered, and the strongest supported clusters are tested.
 3. Each tested shift must produce apex matches with correlated peak shapes. Matches require at least 5 correlated data points and Pearson correlation of at least 0.8. Within each detector trace, a detector peak and a BPC peak can each be used only once for that candidate.
-4. The best candidate for a file has the most validated matches; ties favour higher median correlation, then lower median residual apex error. A file needs at least 3 validated matches to contribute a shift estimate.
+4. The best candidate RT shift for a file has the most validated peak matches; ties favour higher median correlation, then lower median residual apex error. The file's shift estimate is the median apex-time difference of the accepted peak pairs for that candidate shift. A file needs at least 3 validated matches to contribute an estimate.
 5. The median of the valid file-level shift estimates becomes the global offset. That same offset is intentionally applied to every selected trace in every selected file, including files that could not contribute an estimate. This is consistent with manual mode, where every selected file also receives one shared offset.
 
 ## Outputs and side effects

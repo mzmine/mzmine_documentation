@@ -1,6 +1,6 @@
 # Other-detector correlation dashboard: implementation reference
 
-This reference covers the reviewed knowledge-pack snapshot of the 4.10.111 development series. It is an interactive review and editing surface for MS–other-detector links; see the [user guide](../../module_docs/uv/uv_correlation_dashboard/uv_correlation_dashboard.md).
+The dashboard is an interactive review and editing surface for MS–other-detector links; see the [user guide](../../module_docs/uv/uv_correlation_dashboard/uv_correlation_dashboard.md).
 
 ## Inputs and prerequisites
 

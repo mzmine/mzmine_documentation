@@ -1,6 +1,6 @@
 # Workflow and job state: implementation reference
 
-This page documents the reviewed 4.10.111 development-series connector state contract. See [agent-assisted mzmine](../agent-assisted-mzmine.md) for operational guidance.
+This reference describes the connector state contract. See [agent-assisted mzmine](../agent-assisted-mzmine.md) for operational guidance.
 
 ## Inputs and prerequisites
 

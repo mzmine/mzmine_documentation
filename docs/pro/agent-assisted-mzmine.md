@@ -7,10 +7,9 @@ scope. Depending on that request, this can include selected measurements, sample
 annotations, chromatographic or spectral signals, images, or injection order; it is not a general
 copy of the local project.
 
-This guide describes the connector included with the mzmine 4.10.111 development build. Availability
-depends on the installed mzmine version, its enabled local connection, and the capabilities reported
-by that running application. Use the application's current capabilities and parameter schemas as the
-authority for what can be run.
+Connector availability depends on the installed mzmine version, its enabled local connection, and
+the capabilities reported by that running application. Use the application's current capabilities
+and parameter schemas as the authority for what can be run.
 
 !!! warning
 
@@ -37,7 +36,7 @@ Sample metadata and acquisition metadata have different roles:
   headers. It is not a fallback for sample metadata and is not changed by ordinary sample-metadata
   edits.
 
-### Optional acquisition-header sharing
+### Optional acquisition metadata sharing {#optional-acquisition-header-sharing}
 
 The agent can request an acquisition summary alongside sample metadata. This optional summary
 contains instrument-model, mass-analyzer, ion-source, and detector text from the files' acquisition

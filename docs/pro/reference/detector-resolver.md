@@ -1,6 +1,6 @@
 # Other-detector local-minimum resolver: implementation reference
 
-This reference covers the reviewed knowledge-pack snapshot of the 4.10.111 development series. It resolves preprocessed other-detector chromatograms into features; see the [user guide](../../module_docs/uv/uv_resolve_traces/uv_local_min_resolver.md).
+This module resolves preprocessed other-detector chromatograms into features; see the [user guide](../../module_docs/uv/uv_resolve_traces/uv_local_min_resolver.md).
 
 ## Inputs and prerequisites
 

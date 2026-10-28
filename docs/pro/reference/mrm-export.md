@@ -1,6 +1,6 @@
 # MRM export: implementation reference
 
-This reference documents the reviewed 4.10.111 development-series snapshot. See [Export MRMs to TSV](../../module_docs/io_mrmtotsv/mrm-to-tsv.md).
+This reference explains MRM transition export. See [Export MRMs to TSV](../../module_docs/io_mrmtotsv/mrm-to-tsv.md).
 
 ## Inputs and prerequisites
 
