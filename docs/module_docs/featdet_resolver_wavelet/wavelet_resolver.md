@@ -2,7 +2,8 @@
 
 !!! info
 
-    This feature resolver is currently in beta phase (03.2026). (Added after mzmine 4.10)
+    The Wavelet resolver is experimental. Validate its output for the acquisition method and sample
+    type before using it in a production workflow.
 
 !!! Note
 
@@ -13,24 +14,27 @@
 
 ## Parameters
 
-#### Signal-to-noise threshold
+#### Signal-to-noise ratio (SNR) threshold {#signal-to-noise-threshold}
 
-Minimum required signal-to-noise ratio of a peak. The noise is calculated by the standard
-deviation ($STD$)
+Minimum required signal-to-noise ratio (SNR) of a peak: the peak signal above its local baseline
+divided by the estimated local background noise. The noise is calculated by the standard deviation
+($STD$)
 or median absolute deviation ($MAD$) (see [noise calculation](#noise-calculation)
 and [noise window factor](#noise-window-factor)). The signal
-height ($S$) is determined by the peak height minus the average of the two edges.
+height ($S$) is the peak height minus the selected local baseline.
 
 $$\text{Signal-to-noise} = S/N$$
 
-$$S = I_{peakTop} - \frac{I_{leftEdge}-I_{rightEdge}}{2}$$
+$$S = I_{peakTop} - I_{baseline}$$
 
 $$N = STD(Background) \text{ or } MAD(Background)$$
 
-#### Top to edge (SNR override)
+#### Re-split unresolved double peaks _(Optional)_
 
-If a potential feature does not match the SNR threshold, check if the top/edge ratio is above this
-threshold.
+Split a partly separated double peak at an internal minimum when both surrounding maxima are at
+least the chosen factor higher than that minimum. This is disabled by default and is usually only
+needed when two peaks remain merged after resolving. The comparison uses a baseline interpolated
+between both peak edges.
 
 #### Minimum height
 
@@ -42,6 +46,11 @@ Choose a method to calculate the noise around a potential signal.
 Other closely eluting signals are not used for noise/background calculation.
 
 Default: Standard Deviation
+
+#### Baseline estimation
+
+Select the method used to estimate the local baseline around a potential peak: the average of the
+two peak edges (default), the median of the local background, or its average.
 
 #### Dip filter
 
@@ -71,16 +80,16 @@ The window around a potential signal to calculate the signal-to-noise ratio in.
 The window is defined by this factor multiplied by the peak width.
 Only signals that do not belong to a potential other peak are used for noise calculation. At least 6
 signals must be found to calculate the noise by the selected [noise calculation](#noise-calculation)
-method. Otherwise the top-to-edge ratio of the signal must match the selected SNR.
+method. Otherwise, the resolver falls back to the ratio of the peak-top intensity to the average
+intensity at both peak edges; that fallback ratio must meet the selected SNR threshold.
 
-If disabled/default: 3 is used
+Default: 3. Off uses the minimum factor of 1.
 
 #### Required fitting scales
 
 Minimum number of fitting wavelet scales for a peak to be retained.
 
-If disabled/default: 2
-Note: Enable and set to 1 to disable this filter
+Default: 2. Off disables this filter by using 1; a custom value of 1 has the same effect.
 
 #### Apply robustness iteration
 
@@ -101,7 +110,7 @@ peak width) is lower than the previous absolute minimum.
 Slope: Continues the search until an increasing slope is reached. Uses varying window width
 depending on peak width.
 
-If disabled/default: Absolute minimum is used
+Default: Absolute minimum window jagged + FWHM.
 
 #### Allow sign changes every N points
 
@@ -111,15 +120,14 @@ Filters by the number of sign changes ($S$) in the slope between two points in a
 If the slope changes from positive to negative or vice versa, it is counted as a sign
 change. Since a peak is expected to have a high point, one sign change is expected per potential
 peak and subtracted from the number of counted sign changes. The number of
-additional sign changes ($S-1$) is then divided by the total number of data points in a peak
-$\frac{(S-1)}{N_{points}}$. This number is then multiplied by the value of this parameter $p$. We
+additional sign changes ($\max(0,S-1)$) is then divided by the total number of data points in a peak
+$\frac{\max(0,S-1)}{N_{points}}$. This number is then multiplied by the value of this parameter $p$. We
 call the result of this formula the relative jaggedness $J_R$. If the relative jaggedness
-is $\le 1$, the potential peak is discarded.
+is $> 1$, the potential peak is discarded.
 
-$J_R = \frac{(S-1)}{N_{points}} \cdot p$
+$J_R = \frac{\max(0,S-1)}{N_{points}} \cdot p$
 
-If disabled: 2 is used.
-To not use this filter enable and set to 1.
+Default: 2. Off uses 1, which disables this filter; a custom value of 1 has the same effect.
 
 The effect of the filter is visualized here:
 ![sign_changes-01.png](sign_changes-01.png)
@@ -129,7 +137,7 @@ sign changes for 10 data points.
 The jaggedness is thereby calculated as:
 
 $J_{R,yellow} = \frac{(9-1)}{12} \cdot p = \frac{8}{12} \cdot p = \frac{2}{3}p$
-$J_{R,blue} = \frac{(7-1)}{10} \cdot p = \frac{7}{10} \cdot p = 0.7p$
+$J_{R,blue} = \frac{(7-1)}{10} \cdot p = \frac{6}{10} \cdot p = 0.6p$
 
 For a parameter value $p$ of 1, both signals are retained, as $J_R \le 1$. If a sign changes is only
 allowed every $p = 2$ points, it results in $J_R > 1$ in both cases.
@@ -144,8 +152,7 @@ This filter checks if there are a lot of signals with a similar absolute height 
 peak.
 If that is the case, the peak is removed.
 
-If disabled: (0.10) will be used as default.
-Note: A value of 1 disables this filter.
+Default: 0.10. Off uses 1 and disables this filter; a custom value of 1 has the same effect.
 Note: It may make sense to disable this filter (set to 1) to detect signals that are placed on an
 increasing baseline.
 

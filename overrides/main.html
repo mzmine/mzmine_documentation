@@ -4,9 +4,11 @@
   Keep the frozen docs of old mzmine releases out of search results, so readers
   always find the current documentation. "follow" still lets crawlers walk the
   links. mike sets MIKE_DOCS_VERSION while it builds a version.
+  Agent implementation references also stay out of external search results,
+  while their direct URLs remain available for citations.
 -#}
 {% block extrahead %}
-  {% if config.extra.mike_version and config.extra.mike_version != "latest" %}
+  {% if (page and page.file.src_uri.startswith("pro/reference/")) or (config.extra.mike_version and config.extra.mike_version != "latest") %}
     <meta name="robots" content="noindex, follow">
   {% endif %}
 {% endblock %}

@@ -61,7 +61,8 @@ Number of consecutive data points to bin together.
   times the MS acquisition rate (computed per file as `floor(other_rate / ms_rate) / 4`, with a
   minimum of `1`).
 
-Binning is applied **after** shifting and trimming.
+Binning is applied **before** shifting and trimming. Automatic RT-shift estimation uses these
+already binned traces.
 
 ---
 
@@ -74,17 +75,22 @@ files using the already binned other detector traces:
 
 1. **Per-file peak detection.** The binned other detector trace and the MS base peak chromatogram
    are independently resolved into peaks using a wavelet-based peak picker.
-2. **Unambiguous peaks only.** Peaks that have a direct neighbouring peak are discarded, since
-   their apex matching would be ambiguous.
+2. **Unambiguous peaks only.** Peaks whose boundaries touch a direct neighbouring peak are
+   discarded, since their apex matching would be ambiguous.
 3. **Apex-based candidate shifts.** Each remaining other detector peak is paired with MS peaks
-   within an apex tolerance window to generate candidate shifts.
+   within an apex tolerance window to generate candidate RT shifts: possible offsets to add to the
+   other detector retention times. Nearby candidate shifts are clustered, and the strongest
+   supported clusters are tested.
 4. **Shape correlation validation.** Each candidate shift is validated by Pearson correlation of
    the chromatographic shapes of the matched peaks. Matches require at least 5 correlated data
    points and a Pearson `r ≥ 0.8`.
-5. **Per-file shift.** Validated matches are clustered and the dominant shift for the file is
-   selected. Files with fewer than 3 validated matches are skipped.
-6. **Global shift.** Per-file shifts from all valid files are combined into a single global
-   offset that is applied to every selected file.
+5. **Per-file shift.** Select the candidate RT shift with the most validated peak matches. Ties
+   favour higher median shape correlation, then lower median residual apex error. The file's shift
+   is the median apex-time difference of the accepted peak pairs for that candidate shift. At least
+   3 validated matches are required.
+6. **Global shift.** The median of the valid file-level shifts is applied to every selected file,
+   including those that could not contribute an estimate. This shared offset is intentional and
+   matches manual mode, where all selected files receive the same shift.
 
 If no file yields a valid shift, the module fails with an error. Otherwise, the preview reports
 the determined shift together with the number of contributing files and highlights the validated

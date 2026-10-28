@@ -56,10 +56,9 @@ see.
 Additionally, the [Correlation dashboard](../uv_correlation_dashboard/uv_correlation_dashboard.md)
 allows a deeper investigation and also manually assigning or removing the correlated traces.
 
-## Clear correlated traces
+## Removing correlations
 
-This module removes all correlated other detector traces from the selected MS feature list.
-
-### Parameters 
-#### Feature lists
-The feature list to remove the correlated traces from.
+Use [Clear correlated traces](../uv_clear_correlated_traces/uv_clear_correlated_traces.md)
+to remove every stored other-detector correlation from selected feature lists. This does not delete
+raw traces, resolved other-detector features, or MS features; it only clears the links created by
+this module or assigned in the correlation dashboard.
