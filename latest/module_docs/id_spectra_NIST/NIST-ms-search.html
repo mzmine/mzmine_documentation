@@ -7276,7 +7276,12 @@
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>As of mzmine ≥4.10.6, this module no longer drives the interactive NIST MS Search GUI. It now runs
-NIST's command line program <strong>MSPepSearch</strong> directly.</p>
+NIST's command line program <strong>MSPepSearch</strong> directly. MSPepSearch is included in modern NIST libraries,
+but may need to be installed separately for older NIST versions right in the NIST/MSSEARCH folder 
+next to the libraries, like C:\NIST26\MSSEARCH\MSPepSearch. 
+<a href="https://chemdata.nist.gov/dokuwiki/doku.php?id=peptidew:mspepsearch">Download</a> and extract all
+files to the MSSEARCH folder. Depending on your installation path it might also be something like
+C:\NIST26\MSPepSearch.</p>
 </div>
 <p>This module searches feature spectra against the libraries of a licensed NIST installation, using
 NIST's command line program <strong>MSPepSearch</strong>. It supports two kinds of workflows:</p>
@@ -7349,7 +7354,7 @@ before searching, because the NIST EI libraries are unit mass:</p>
 <li><strong>Maximum</strong> — keeps only the most intense signal of the nominal mass.</li>
 </ul>
 <p>Unit mass quadrupole data has one signal per nominal mass, so both options are equivalent there.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -7370,7 +7375,7 @@ before searching, because the NIST EI libraries are unit mass:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="September 17, 2026 10:07:50 UTC">September 17, 2026 10:07:50</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 29, 2026 10:42:17 UTC">October 29, 2026 10:42:17</span>
   </span>
 
     
@@ -7386,6 +7391,7 @@ before searching, because the NIST EI libraries are unit mass:</p>
     </span>
     <nav>
       
+        <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
         <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>, 
         <a href="mailto:corinna.brungs@wwu.de">corinnabrungs</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
