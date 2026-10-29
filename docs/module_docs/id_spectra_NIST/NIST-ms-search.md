@@ -11,7 +11,12 @@ or, for an individual row in a feature table
 !!! info
 
     As of mzmine ≥4.10.6, this module no longer drives the interactive NIST MS Search GUI. It now runs
-    NIST's command line program **MSPepSearch** directly.
+    NIST's command line program **MSPepSearch** directly. MSPepSearch is included in modern NIST libraries,
+    but may need to be installed separately for older NIST versions right in the NIST/MSSEARCH folder 
+    next to the libraries, like C:\NIST26\MSSEARCH\MSPepSearch. 
+    [Download](https://chemdata.nist.gov/dokuwiki/doku.php?id=peptidew:mspepsearch) and extract all
+    files to the MSSEARCH folder. Depending on your installation path it might also be something like
+    C:\NIST26\MSPepSearch.
 
 This module searches feature spectra against the libraries of a licensed NIST installation, using
 NIST's command line program **MSPepSearch**. It supports two kinds of workflows:
