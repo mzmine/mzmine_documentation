@@ -49,6 +49,15 @@ Feature alignment enables alignment of corresponding features across multiple sa
 This module aligns detected features in different samples through a match score. The score is calculated based on the retention time and spectral similarity of each feature. 
 For more information, see the [GC aligner](../../module_docs/align_gcei/align_gc_ei.md) module. 
 
+## Gap filling
+Compounds that were not detected in some samples leave gaps (missing values) in the aligned feature list.
+The [GC-EI gap filling](../../module_docs/gapfill_gc_ei/gc-ei-gap-filling.md) module looks for these compounds in the raw data again.
+It detects the most intense signals of the deconvoluted spectrum with the original chromatogram builder and resolver settings and fills a gap only if all of these signals are found as co-eluting features at the retention time of the compound.
+
+## Duplicate filtering
+The alignment can split one compound into several rows, which are all filled after gap filling.
+The [GC-EI duplicate row filter](../../module_docs/filter_duplicate_features_gc_ei/gc-ei-duplicate-filter.md) finds these duplicates by retention time, quantifier m/z, and the similarity of their deconvoluted spectra, and keeps the best row.
+
 ## Annotation, Filtering, Statistics and Export
 Depending on the downstream analyses, there are several options which are accessible through the **Feature list methods** menu. Annotate compounds using [spectral library search](../../module_docs/id_spectral_library_search/spectral_library_search.md),
 apply various filtering criteria, explore the results using the statistics dashboard, or export the results.
