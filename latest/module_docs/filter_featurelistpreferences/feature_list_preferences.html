@@ -3488,6 +3488,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#tag-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tag labels
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7099,6 +7110,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#tag-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tag labels
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7135,12 +7157,14 @@ with the project) rather than being parameters of a single processing step. They
 other parts of mzmine interpret an already-processed feature list. Running this module only
 updates the stored preferences of the selected feature list (s); it does not create a new feature
 list or change any feature data.</p>
-<p>Two preferences are currently available:</p>
+<p>Three preferences are currently available:</p>
 <ul>
 <li><strong>Samples for RSD columns</strong> — which sample types are used to calculate the relative standard
   deviation (RSD) columns shown in the feature table (e.g. the area RSD).</li>
 <li><strong>Ion type ranking</strong> — the frequency ranking used to judge how likely an ion type (adduct,
   in-source fragment, cluster, neutral loss/gain) is the correct explanation for a feature.</li>
+<li><strong>Tag labels</strong> — the names and number of the tag checkboxes in the <strong>Tag</strong> column of the feature
+  table.</li>
 </ul>
 <p>Every preference offers three options:</p>
 <ul>
@@ -7193,6 +7217,22 @@ building blocks).</p>
 <p>Default ranking (highest frequency first, abbreviated): <code>+H</code> / <code>-H</code> (tied) &gt; <code>+Na</code> &gt; <code>+NH4</code> &gt;
 <code>+FA-H</code> (formate) &gt; <code>+Cl</code> / <code>[M]+</code> / <code>[M]-</code> (tied) &gt; <code>+CH3COO-H</code> (acetate) &gt; <code>+K</code> &gt; ... For the
 full list of building blocks and their default frequencies, open the ranking editor.</p>
+<h4 id="tag-labels">Tag labels<a class="headerlink" href="#tag-labels" title="Permanent link">&para;</a></h4>
+<p>An ordered list of labels for the tag checkboxes in the <strong>Tag</strong> column of the feature table. Each
+label creates one checkbox, so the number of labels sets the number of checkboxes per row. The
+labels are shown as tooltips of the checkboxes and in the tag filter of the feature table.
+Default: <code>Tag 1</code>, <code>Tag 2</code>, <code>Tag 3</code>, <code>Tag 4</code>.</p>
+<p>Enter one label per field. A new empty field appears after you type into the last one. A field
+that is cleared is removed after a few seconds. Leading and trailing spaces are trimmed and empty
+labels are ignored. At least one label is required.</p>
+<p>Tags are stored by their position, not by their label. Renaming a label therefore keeps the
+checked tags, and reordering labels changes which label a checked tag is shown under.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Reducing the number of labels removes the checked tags of the removed positions from every row
+of the feature list. For example, going from four to two labels clears all checked tags 3 and 4.
+Adding the labels back later does not restore them.</p>
+</div>
 <hr />
 <p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a></span></p>
 
@@ -7215,7 +7255,7 @@ full list of building blocks and their default frequencies, open the ranking edi
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="September 28, 2026 07:09:18 UTC">September 28, 2026 07:09:18</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 12, 2026 07:21:15 UTC">October 12, 2026 07:21:15</span>
   </span>
 
     
