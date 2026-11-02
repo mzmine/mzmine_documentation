@@ -1,7 +1,7 @@
 # Users management
 
-mzmine is used with an mzio user account. The account holds your license, which mzmine claims
-while you work and returns afterward after user inactivity or after closing mzmine.
+mzmine is used with an mzio user account. The account holds your license, which mzmine claims while
+you work and returns once you close mzmine or leave it unused for a longer time.
 
 ## Sign up / Registration
 
@@ -9,7 +9,8 @@ Users can sign in to an existing account or sign up (register) a new free accoun
 Open mzmine and navigate to **Users → Manage users**, alternatively click on the user icon on the
 mzmine landing page. If you have a user account, sign in. Otherwise, click on **register**.
 If you experience any issues with the built-in webview, click the external browser button and sign
-up online. Or go directly to the mzio [user management website](https://auth.mzio.io/realms/mzio/account/)
+up online. Or go directly to the mzio
+[user management website](https://auth.mzio.io/realms/mzio/account/).
 
 ![users_menu.png](img/users_menu.png)
 
@@ -40,7 +41,8 @@ take a few minutes.
    automatic validation.
 
 ![users_users.png](img/users_users.png)
-Each license will display the **Available Services** like MRM or other detectors. The menu on the 
+
+Each license will display the **Available Services** like MRM or other detectors. The menu on the
 right of the user links out to the online account console for user profile management and provides
 more options for offline access or CLI token access.
 
@@ -77,9 +79,11 @@ the license is released again and can be used on a different computer.
 - When you **close mzmine**, the license is returned to the pool immediately and is available to
   others right away.
 - If mzmine is **left open but unused for a longer time**, it stops extending the claim so that an
-  idle instance does not block a license. The license returns to the pool by itself. When you
-  continue working, mzmine claims a license again — if none is free at that moment, mzmine informs
-  you and you can sign in again later.
+  idle instance does not block a license. The license returns to the pool by itself and mzmine
+  notifies you with _"User was logged out due to inactivity. Please login again by clicking on your
+  user."_ and opens the **Users** tab. Click **Login** on your user to continue — if no license is
+  free at that moment, you can sign in again later.
+
 
 ### For organizations / commercial customers
 
@@ -99,10 +103,16 @@ Open **Users → Manage users**. The **Users** tab lists all user profiles avail
   the included services; hover over an icon for details
 - a status line shows until when the license is claimed, when the license expires, how many days
   remain, and the available services
-- the **Login** button signs in again when the profile can no longer renew itself. Usually the claim
-  on the license is extended if the user is actively working in mzmine.  
-- the menu button links out to the online account management and offers an offline license download 
-  in **Airplane Mode**
+- the **Login** button switches to this user and tries to reclaim its last license or a comparable
+  one. It opens the login page if the stored session has expired. Usually you do not need it, as the
+  claim on the license is extended automatically while you work in mzmine.
+- the menu button offers:
+    - **Airplane Mode**: download an [offline license](#offline-use) for this computer
+    - **Remove user**: remove this user profile from this computer
+    - **Manage user online**: open the mzio account console in your default browser to manage the
+      user profile, credentials, tokens and offline licenses
+    - **Create CLI token**: open the account console to create a token for
+      [headless runs](#cli-tokens)
 
 Selecting another profile switches the active user after a confirmation. The license held by the
 previous user is returned to the pool.
@@ -111,6 +121,10 @@ previous user is returned to the pool.
 
 User files are stored as `.mzuser4` files in your system user directory under `/.mzmine/users/`.
 Use **Users → Open users directory** to open that folder.
+
+!!! note
+    Legacy `.mzuser` files from older mzmine versions use a different format and can no longer be
+    read. Simply sign in again to create a new user file.
 
 !!! warning
     For online users the sign-in credentials are kept in the **credential store of your operating
@@ -170,8 +184,8 @@ Or copy the license text and paste it into the settings pane in the dialog that 
 - They are bound to one computer (Machine ID) and to the chosen expiry date.
 - They are **not** renewed automatically and cannot be refreshed or extended from mzmine.
 - They are not returned to the pool when mzmine is closed.
-- **Remove user** is not available for offline profiles — delete the `.mzuser4` file in the users
-  directory manually.
+- **Remove user** is not available for offline profiles. mzmine offers to open the users directory
+  so that you can delete the `.mzuser4` file manually.
 
 ## User account console - changing user details
 
@@ -326,7 +340,8 @@ your email address again.
 
 6. I left mzmine open overnight and had to sign in again. Why?
     - An mzmine instance that is not used for a longer time stops holding its license so that others
-      can use it. Simply sign in again to continue.
+      can use it. mzmine then shows _"User was logged out due to inactivity"_ and opens the
+      **Users** tab. Click **Login** on your user to continue.
 
 7. Can I use one license on two computers at the same time?
     - No. One license is claimed by one computer at a time. Several mzmine windows on the *same*
@@ -337,7 +352,12 @@ your email address again.
       not in the `.mzuser4` file. Sign in on the other computer instead, or use an
       [offline license](#offline-use) or a [CLI token](#cli-tokens).
 
-9. I claimed a license for offline use by mistake. Can it be released?
+9. mzmine does not accept my old `.mzuser` file.
+    - Legacy `.mzuser` files from older mzmine versions use a different format and cannot be read.
+      Sign in again via the graphical user interface, `-login`, or `-cli-token` to create a new
+      user file.
+
+10. I claimed a license for offline use by mistake. Can it be released?
     - Not in mzmine, the claim is permanent until the chosen date. Please contact us at
       `info@mzio.io` and provide enough details so we can look into it.
 
