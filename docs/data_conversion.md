@@ -15,7 +15,7 @@ the mzmine graphical user interface or using the _Import MS data_ module.
 | Waters (.raw)                      | ✓       | ✓     |     |
 | SCIEX (.wiff/.wiff2)               | ✓       | ✓     |     |
 | Agilent (.d)                       | ✓ (\*)  |       |     |
-| MOBILion (.mbi)                    | ✓ (\*)  |       |     |
+| MOBILion (.mbi)                    | ✓ (\*)  |       |     |  
 | Shimadzu (.lcd)                    | ✓ (\*)  |       |     |
 \* via [MSConvert](https://proteowizard.sourceforge.io/download.html)
 

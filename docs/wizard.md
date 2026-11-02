@@ -350,6 +350,45 @@ Select if you want to co-localize images.
 
 Select the minimum number of signals in a deconvoluted spectrum
 
+## Advanced mode: parameter customization {#advanced-mode}
+
+The wizard only exposes the most important parameters. All other module parameters are derived
+from them or use fixed defaults. **Advanced mode** lets you set any parameter of a module in the
+created batch directly from the wizard, so you don't have to edit the batch every time.
+
+Switch on **Advanced mode** in the wizard's tab header to show the **Parameter Customization** tab.
+The checkbox in the tab header turns the customization on or off. The overrides are only applied to
+the created batch when **Advanced mode** is on and the checkbox is checked.
+
+Switching off **Advanced mode** also unchecks the checkbox. Your overrides are kept, but they are no
+longer applied. To use them again, switch on **Advanced mode** and check the checkbox.
+
+To add an override:
+
+1. Select a module in **Select Module**. Use ++ctrl+f++ to search the module list.
+2. Select a parameter in **Parameters**.
+3. Set its value in the **Parameter Editor**.
+4. Choose in **Apply to module occurrence** whether the value is applied to the **First**, **Last**
+   or **All** batch steps that use this module. Some modules appear several times in a workflow,
+   e.g., the local minimum resolver for the retention time and the mobility dimension.
+5. Click **Add**.
+
+The **Parameter Overrides** table lists all overrides. Select one to change it with **Override**,
+or delete it with **Remove**. **Clear All** removes all overrides.
+
+When the batch is created, each override replaces the value that the wizard would otherwise
+set. Overrides for a module that is not part of the created batch are ignored.
+
+!!! warning
+
+    [Estimate](module_docs/wizard_optimizer/wizard_estimate.md) and
+    [Optimize](module_docs/wizard_optimizer/wizard_optimize.md) reset the Customization step and
+    remove all overrides, including the ones you added. Afterwards, the step only contains their
+    own overrides, if any, and **Advanced mode** is switched on only if there are overrides.
+
+The overrides are saved with the wizard presets when the *Customization* part is selected for
+export.
+
 ## [8] Create Batch
 
 Select on the "Create batch" button to open a batch queue. Each step in the batch queue can be modified via double click. Find more information how to modify a [batch queue](workflows/batch_processing/batch-processing.md).
