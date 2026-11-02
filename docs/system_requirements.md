@@ -27,7 +27,11 @@ permissions.
 - dedicated GPU (CUDA enabled) for accelerated machine learning models (not required)
 
 !!! Info
-    Offline login is possible, see [Offline use](services/users.md#offline-use).
+    Internet connections open to https://auth.mzio.io for user login is recommended to automatically
+    claim and release licenses, but mzmine can be used without an internet connection with an 
+    offline (airplane mode) license, see
+    [Offline use](services/users.md#offline-use). An offline license has to be claimed once from a
+    computer with internet access and is then bound to one computer until the chosen date.
 
 !!! Info
     Processing speed scales with CPU cores/threads and speed of the SSD for temporary files. We 
@@ -48,8 +52,11 @@ requirements are shipped with mzmine.
 
 ## Internet connection
 
-- An internet connection is recommended, but not strictly required for core processing
-- Offline user login is possible, see [Offline use](services/users.md#offline-use).
+- An internet connection is required for the regular user login, as mzmine claims its license from
+  a shared license pool and keeps the claim up to date while you work
+- Offline user login is possible with an offline (airplane mode) license, see
+  [Offline use](services/users.md#offline-use)
+- Apart from the login, core processing does not require an internet connection
 - To allow mzmine to download spectral libraries and the recent versions of machine learing models
 for spectral networking using MS2Deepscore and DReaMS, an internet connection is required
 - A proxy may need to be set in the **Preferences** if your University/Company uses one (**Project -> Preferences**, CTRL+P)

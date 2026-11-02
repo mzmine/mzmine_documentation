@@ -60,7 +60,12 @@ free user account. [See support options](https://mzio.io/mzmine-news/#enterprise
 
 ![Sign-in](getting_started_sign-in.png)
 
-[Learn more about user accounts](services/users.md)
+When you sign in, mzmine claims a license from your license pool and keeps it while you work. The
+license is returned automatically when you close mzmine, so you can use the same license on another
+computer afterward. If you need to work without an internet connection, claim an
+[offline (airplane mode) license](services/users.md#offline-use) beforehand.
+
+[Learn more about user accounts and licenses](services/users.md)
 
 ## Configure Preferences {#set-user-preferences}
 
