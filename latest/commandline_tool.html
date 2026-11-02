@@ -7172,9 +7172,29 @@ or can be a standardized batch file for an analytical method that is applied to 
 arguments to process all import files and to redirect all outputs to another directory. See examples below 
 for how to process all .mzML files in a folder and to redirect outputs to a new directory and base filename. </p>
 <h2 id="selecting-a-user">Selecting a user<a class="headerlink" href="#selecting-a-user" title="Permanent link">&para;</a></h2>
-<p>Running mzmine in CLI mode requires a <a href="services/users.html">user</a>. Either login via graphical-user interface (GUI) or via command-line argument <strong>-login</strong> (web browser support required) or via <strong>-login-console</strong>. 
-Then locate the user file in your system USER directory under /.mzmine/users/. The most recently active user is automatically selected for mzmine processing,
-but an .mzuser file can be passed in as command-line argument to <strong>-user</strong>.</p>
+<p>Running mzmine in CLI mode requires a <a href="services/users.html">user</a> with a valid license. There are
+three ways to provide one:</p>
+<ul>
+<li><strong>-cli-token "\&lt;TOKEN&gt;"</strong> (recommended for pipelines and servers): a token created in the
+  <a href="https://auth.mzio.io/realms/mzio/account/">mzio user account console</a> under <strong>CLI tokens</strong>. Every
+  run automatically claims a free license from your license pool, so parallel runs need one free
+  license each. See <a href="services/users.html#cli-tokens">CLI tokens for pipelines</a>.</li>
+<li><strong>-login</strong> (web browser support required): signs in interactively and stores the user on this
+  computer. The most recently active user is then automatically selected for mzmine processing.
+  Without <strong>-batch</strong>, mzmine closes again after the login.</li>
+<li><strong>-user "path/to/user.mzuser4"</strong>: uses a specific user file. Alternatively, provide only the user
+  name, e.g. <strong>-user testuser</strong>, to use <code>testuser.mzuser4</code> from your system USER directory under
+  /.mzmine/users/. This is mainly intended for
+  <a href="services/users.html#offline-use">offline (airplane mode) licenses</a>, which are bound to one computer
+  and do not require an internet connection.</li>
+</ul>
+<p>Use <strong>-list-users</strong> to print all users available on this computer together with their license state.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Legacy <code>.mzuser</code> files from older mzmine versions use a different format and are rejected. Log
+in again via the graphical user interface, <strong>-login</strong>, or <strong>-cli-token</strong> to create a new user
+file.</p>
+</div>
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
 <p>For command-line mode, the mzmine_console.exe is preferred as it will print the logging output to the console. </p>
 <p>An easy way to start mzmine with arguments is to create a shortcut to the mzmine.exe or the mzmine_console.exe, right-click, and define the target with additional arguments. This example runs mzmine in batch mode (headless), imports the specified batch file, overrides the memory management to <strong>none</strong> (which is the default), effectively using memory mapping to store and access spectral, centroid, and feature data from temporary files stored in the defined temp directory. By leaving out the <em>memory</em> or <em>temp</em> arguments, the values stored in the current <em>preferences</em> file will be used, or the default values if no <em>preferences</em> file was found.  </p>
@@ -7182,26 +7202,29 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
 <div class="highlight"><pre><span></span><code># login in browser
 "C:\Program Files\mzmine\mzmine_console.exe" -login
 
-# or in the terminal
-"C:\Program Files\mzmine\mzmine_console.exe" -login-console 
+# list all users available on this computer
+"C:\Program Files\mzmine\mzmine_console.exe" -list-users
+</code></pre></div></p>
+<p><strong>Run headless with a CLI token (no interactive login)</strong>
+<div class="highlight"><pre><span></span><code>"C:\Program Files\mzmine\mzmine_console.exe" -cli-token "TOKEN" -batch "D:\batch\my_batch_file.mzbatch" -input "D:\Data\*.mzML" -output "D:\Results\basename"
 </code></pre></div></p>
 <p><strong>Process all .mzML files in a folder by the provided batch file, redirect output files to results folder and use a base filename, various export modules add a specific suffix</strong>
-<div class="highlight"><pre><span></span><code>"C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser" -batch "D:\batch\my_batch_file.mzbatch" -input "D:\Data\*.mzML" -output "D:\Results\basename"
+<div class="highlight"><pre><span></span><code>"C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser4" -batch "D:\batch\my_batch_file.mzbatch" -input "D:\Data\*.mzML" -output "D:\Results\basename"
 </code></pre></div></p>
 <p><strong>Defining the temp folder, otherwise uses the one specified in local configuration</strong>
-<div class="highlight"><pre><span></span><code>"C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser" -batch "D:\batch\my_batch_file.mzbatch" -temp "D:\tmpmzmine"
+<div class="highlight"><pre><span></span><code>"C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser4" -batch "D:\batch\my_batch_file.mzbatch" -temp "D:\tmpmzmine"
 </code></pre></div></p>
 <p><strong>Start mzmine batch with memory mapping (DEFAULT)</strong>
-<div class="highlight"><pre><span></span><code>"C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser" -batch "D:\batch\my_batch_file.mzbatch" -memory none -temp "D:\tmpmzmine"
+<div class="highlight"><pre><span></span><code>"C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser4" -batch "D:\batch\my_batch_file.mzbatch" -memory none -temp "D:\tmpmzmine"
 </code></pre></div></p>
 <p><strong>Start mzmine batch on machines with enough memory (RAM) with -memory all</strong> this will disable memory mapping to temporary files. 
-<div class="highlight"><pre><span></span><code>"C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser" -batch "D:\batch\my_batch_file.mzbatch" -memory all -temp "D:\tmpmzmine"
+<div class="highlight"><pre><span></span><code>"C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser4" -batch "D:\batch\my_batch_file.mzbatch" -memory all -temp "D:\tmpmzmine"
 </code></pre></div></p>
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
 <p>If the app was installed to the <em>Applications</em> folder, run this command in the terminal to run a batch file:
-<div class="highlight"><pre><span></span><code>/Applications/mzmine.app/Contents/MacOS/mzmine -user "path/to/testuser.mzuser" -batch /path/to/batch_file.mzbatch
+<div class="highlight"><pre><span></span><code>/Applications/mzmine.app/Contents/MacOS/mzmine -user "path/to/testuser.mzuser4" -batch /path/to/batch_file.mzbatch
 </code></pre></div></p>
-<div class="highlight"><pre><span></span><code>/Applications/mzmine.app/Contents/MacOS/mzmine -user "path/to/testuser.mzuser" -batch /path/to/batch_file.mzbatch -input "/path/to/data/*.mzML"
+<div class="highlight"><pre><span></span><code>/Applications/mzmine.app/Contents/MacOS/mzmine -user "path/to/testuser.mzuser4" -batch /path/to/batch_file.mzbatch -input "/path/to/data/*.mzML"
 </code></pre></div>
 <h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
 <p>If mzmine was installed (see instructions) correctly, run the code below to start mzmine in GUI mode or CLI batch mode:
@@ -7209,8 +7232,12 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
 <span class="c1"># some older versions or bad installations may be in:</span>
 <span class="c1"># /opt/mzmine-linux-installer/bin/mzmine</span>
 </code></pre></div></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># login and run batch</span>
-/opt/mzmine/bin/mzmine<span class="w"> </span>-login-console<span class="w"> </span>-batch<span class="w"> </span>/path/to/batch_file.mzbatch
+<div class="highlight"><pre><span></span><code><span class="c1"># run headless with a CLI token</span>
+/opt/mzmine/bin/mzmine<span class="w"> </span>-cli-token<span class="w"> </span><span class="s2">"&lt;TOKEN&gt;"</span><span class="w"> </span>-batch<span class="w"> </span>/path/to/batch_file.mzbatch
+
+<span class="c1"># or login in the browser once, then run a batch</span>
+/opt/mzmine/bin/mzmine<span class="w"> </span>-login
+/opt/mzmine/bin/mzmine<span class="w"> </span>-batch<span class="w"> </span>/path/to/batch_file.mzbatch
 </code></pre></div>
 <h2 id="argument-table">Argument table<a class="headerlink" href="#argument-table" title="Permanent link">&para;</a></h2>
 <table>
@@ -7224,6 +7251,12 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
 </thead>
 <tbody>
 <tr>
+<td>-v and -version</td>
+<td>no argument</td>
+<td>show version</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
 <td>-h and -help</td>
 <td>no argument</td>
 <td>show help</td>
@@ -7231,20 +7264,20 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
 </tr>
 <tr>
 <td>-u and -user</td>
-<td>a path, e.g., "D:\myuser.mzuser"</td>
-<td>Path to an .mzuser file to login a user. This file is copied to the users directory. To obtain a user file, login in the mzmine graphical user interface (GUI) or command line interface (CLI). User files can be found in your system USER directory in /.mzmine/users/ after login. A user can be used in an offline environment for a certain duration.</td>
+<td>a path, e.g., "D:\myuser.mzuser4", or a user name, e.g., testuser</td>
+<td>Path to an .mzuser4 file to login a user. This file is copied to the users directory. Alternatively, provide only the user name to use that user from the users directory. To obtain a user file, login in the mzmine graphical user interface (GUI) or claim an <a href="services/users.html#offline-use">offline license</a> in the mzio user account console. User files can be found in your system USER directory in /.mzmine/users/ after login. Legacy .mzuser files from older mzmine versions are rejected, login again to create a new user file. Intended for offline (airplane mode) licenses; for online users prefer -cli-token to automatically claim and release licenses from the floating pool.</td>
 <td style="text-align: left;"></td>
+</tr>
+<tr>
+<td>-cli-token</td>
+<td>a token, e.g., "TOKEN"</td>
+<td>Login with a pregenerated token and automatically claim a license from the license pool for this run. Create the token in the <a href="https://auth.mzio.io/realms/mzio/account/mzio-CliTokens">mzio user account console</a> under <strong>CLI tokens</strong>. Intended for headless runs such as CI pipelines or cloud jobs. Parallel runs each claim their own license. See <a href="services/users.html#cli-tokens">CLI tokens</a>.</td>
+<td style="text-align: left;">4.11</td>
 </tr>
 <tr>
 <td>-login</td>
 <td>no argument</td>
-<td>Use the command-line to login to a user. This will open the login website in the system internet browser, if supported, or prompts an input for the user credentials into the console. After successful login, a user file will be copied to your system USER directory in /.mzmine/users/. And the current user will be saved to the configuration. The created user file can be accessed with the -user argument on the next startup.</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td>-login-console</td>
-<td>no argument</td>
-<td>Use the command-line to login to a user. This option prompts the user for username and password. After successful login, a user file will be copied to your system USER directory in /.mzmine/users/. And the current user will be saved to the configuration. The created user file can be accessed with the -user argument on the next startup.</td>
+<td>Use the command-line to login to a user. This will open the login website in the system internet browser, if supported. After successful login, a user file will be copied to your system USER directory in /.mzmine/users/. And the current user will be saved to the configuration. The created user file can be accessed with the -user argument on the next startup. Without -batch, mzmine closes again after the login.</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
@@ -7330,7 +7363,7 @@ but an .mzuser file can be passed in as command-line argument to <strong>-user</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="May 16, 2025 10:33:40 UTC">May 16, 2025 10:33:40</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 2, 2026 17:36:19 UTC">November 2, 2026 17:36:19</span>
   </span>
 
     
