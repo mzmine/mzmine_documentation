@@ -208,6 +208,8 @@ nav:
       - SIMSEF scheduler: module_docs/tools_simsef/simsef.md
       - Spectral library to feature list: module_docs/tools_spectral_library_to_feature_list/spectral_library_to_feature_list.md
       - Save current batch: module_docs/batch_autosave/autosave_batch.md
+      - Estimate parameters (wizard): module_docs/wizard_optimizer/wizard_estimate.md
+      - Optimize parameters (wizard): module_docs/wizard_optimizer/wizard_optimize.md
 
   - Additional resources:
       - Installation:
