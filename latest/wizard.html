@@ -959,6 +959,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#advanced-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced mode: parameter customization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#8-create-batch" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6598,6 +6609,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="module_docs/wizard_optimizer/wizard_estimate.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estimate parameters (wizard)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="module_docs/wizard_optimizer/wizard_optimize.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimize parameters (wizard)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -8033,6 +8100,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#advanced-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced mode: parameter customization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#8-create-batch" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8341,6 +8419,38 @@ produces reference libraries with options to filter and merge spectra.</p>
 <p>This workflow is only available for the sampling technique: <strong>GC-EI</strong> </p>
 </div>
 <p>Select the minimum number of signals in a deconvoluted spectrum</p>
+<h2 id="advanced-mode">Advanced mode: parameter customization<a class="headerlink" href="#advanced-mode" title="Permanent link">&para;</a></h2>
+<p>The wizard only exposes the most important parameters. All other module parameters are derived
+from them or use fixed defaults. <strong>Advanced mode</strong> lets you set any parameter of a module in the
+created batch directly from the wizard, so you don't have to edit the batch every time.</p>
+<p>Switch on <strong>Advanced mode</strong> in the wizard's tab header to show the <strong>Parameter Customization</strong> tab.
+The checkbox in the tab header turns the customization on or off. The overrides are only applied to
+the created batch when <strong>Advanced mode</strong> is on and the checkbox is checked.</p>
+<p>Switching off <strong>Advanced mode</strong> also unchecks the checkbox. Your overrides are kept, but they are no
+longer applied. To use them again, switch on <strong>Advanced mode</strong> and check the checkbox.</p>
+<p>To add an override:</p>
+<ol>
+<li>Select a module in <strong>Select Module</strong>. Use <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f">F</kbd></span> to search the module list.</li>
+<li>Select a parameter in <strong>Parameters</strong>.</li>
+<li>Set its value in the <strong>Parameter Editor</strong>.</li>
+<li>Choose in <strong>Apply to module occurrence</strong> whether the value is applied to the <strong>First</strong>, <strong>Last</strong>
+   or <strong>All</strong> batch steps that use this module. Some modules appear several times in a workflow,
+   e.g., the local minimum resolver for the retention time and the mobility dimension.</li>
+<li>Click <strong>Add</strong>.</li>
+</ol>
+<p>The <strong>Parameter Overrides</strong> table lists all overrides. Select one to change it with <strong>Override</strong>,
+or delete it with <strong>Remove</strong>. <strong>Clear All</strong> removes all overrides.</p>
+<p>When the batch is created, each override replaces the value that the wizard would otherwise
+set. Overrides for a module that is not part of the created batch are ignored.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><a href="module_docs/wizard_optimizer/wizard_estimate.html">Estimate</a> and
+<a href="module_docs/wizard_optimizer/wizard_optimize.html">Optimize</a> reset the Customization step and
+remove all overrides, including the ones you added. Afterwards, the step only contains their
+own overrides, if any, and <strong>Advanced mode</strong> is switched on only if there are overrides.</p>
+</div>
+<p>The overrides are saved with the wizard presets when the <em>Customization</em> part is selected for
+export.</p>
 <h2 id="8-create-batch">[8] Create Batch<a class="headerlink" href="#8-create-batch" title="Permanent link">&para;</a></h2>
 <p>Select on the "Create batch" button to open a batch queue. Each step in the batch queue can be modified via double click. Find more information how to modify a <a href="workflows/batch_processing/batch-processing.html">batch queue</a>.
 Click on "OK" to start the processing.
@@ -8379,7 +8489,7 @@ even better results. There are two ways to optimize the wizard workflow.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 2, 2026 10:44:47 UTC">November 2, 2026 10:44:47</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 2, 2026 11:13:40 UTC">November 2, 2026 11:13:40</span>
   </span>
 
     
