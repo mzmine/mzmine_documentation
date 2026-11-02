@@ -373,6 +373,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Licenses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Licenses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-organizations-commercial-customers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Organizations / Commercial Customers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#offline-use" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -380,6 +403,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7106,6 +7134,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Licenses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Licenses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-organizations-commercial-customers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Organizations / Commercial Customers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#offline-use" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7113,6 +7164,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7233,17 +7289,15 @@
 <h1 id="users-management">Users management<a class="headerlink" href="#users-management" title="Permanent link">&para;</a></h1>
 <h2 id="sign-up-registration">Sign up / Registration<a class="headerlink" href="#sign-up-registration" title="Permanent link">&para;</a></h2>
 <p>Users can sign in into an existing account or sign up (register) a new free account within seconds.
-The sign up is available
-directly in the mzmine <strong>Users</strong> menu (Manage users). If you experience any issues with the built-in
-webview, click the
-external browser button and sign up online. Briefly, the user needs to provide few details
+The sign up is available directly in the mzmine <strong>Users</strong> menu (Manage users). If you experience any issues with the built-in
+webview, click the external browser button and sign up online. Briefly, the user needs to provide few details
 including:</p>
 <ul>
 <li><strong>Username</strong>: Fixed identifier that cannot be changed</li>
 <li><strong>Define your use case</strong>: The intended use of this user profile, either <strong>commercial use</strong> or *
   <em>non-profit academic use</em>*</li>
-<li><strong>Email</strong>: Either an academic or company email address. It is important to use an
-  academic email address to gain a non-profit academic license</li>
+<li><strong>Email</strong>: Either an academic or company email address. It is required to use an
+  academic email address to gain a non-profit academic license.</li>
 <li><strong>Read and accept the <a href="https://mzio.io/general-terms-and-conditions/">Terms and Conditions</a></strong></li>
 </ul>
 <p>After clicking the register button, a verification email is sent to the provided address. This can
@@ -7258,20 +7312,24 @@ take a few minutes.</p>
    automatic validation.</li>
 </ol>
 <p><img alt="users_users.png" src="img/users_users.png" /></p>
-<h2 id="offline-use">Offline use<a class="headerlink" href="#offline-use" title="Permanent link">&para;</a></h2>
-<p>Sign in to your user in mzmine on a computer that is connected to the internet. Click on the menu
-<strong>User/Open users directory</strong> to open the file explorer at your systems user/.mzmine/.users
-directory.
-Copy the corresponding users (.mzuser files) to the new system into the same directory.
-Alternatively copy the files
-to the other system and drag-and-drop them into mzmine. The users will be installed.
-Finally, open the <strong>Users/User management</strong> and select the active user.</p>
+<h2 id="licenses">Licenses<a class="headerlink" href="#licenses" title="Permanent link">&para;</a></h2>
+<p>MZmine uses a <em>floating license pool</em> for distributing licenses. This requires an active internet connection as the license status is checked and synchronized regularly.</p>
+<p>The floating model allows for maximum flexibility - a user can freely transfer the license between different computers (i.e. between personal and lab computers). While mzmine is running, the license is locked to the running mzmine instance, after mzmine is closed the license is released again and can be used on a different computer.</p>
+<h3 id="for-organizations-commercial-customers">For Organizations / Commercial Customers<a class="headerlink" href="#for-organizations-commercial-customers" title="Permanent link">&para;</a></h3>
+<p>mzmine supports pooling of licenses across users of an organization, allowing for sharing of licenses between different employees. We plan to support central management of licenses as well as integration with established corporate identity providers, please contact us directly for details.</p>
+<h3 id="offline-use">Offline use<a class="headerlink" href="#offline-use" title="Permanent link">&para;</a></h3>
+<p>If no internet access is available, or a license should be permanently reserved for a single computer (i.e. in an automated pipeline), a license can be removed from the license pool and converted for offline use for a specified time.
+During this time, the license cannot be used by any other mzmine instance, so please use this feature carefully.
+A license can be converted to an offline License using two methods:</p>
+<ul>
+<li>Converting an existing license in the  the <strong>Users/User management</strong> section inside mzmine, by choosing <em>airplane mode</em> in the advanced options for the license (internet connection required).</li>
+<li>Claiming from the <a href="https://auth.mzio.io/realms/mzio/account/">mzio user account console</a></li>
+</ul>
+<p>Both methods will create an <code>.mzuser4</code> file containing the license information, that needs to be transferred to the computer running mzmine. Converting back to an online license is not supported, please make sure to set an appropriate timespan and securely store the license file. If you have any issues contact us directly.</p>
 <h2 id="user-account-console-changing-user-details">User account console - changing user details<a class="headerlink" href="#user-account-console-changing-user-details" title="Permanent link">&para;</a></h2>
 <p>Open the <a href="https://auth.mzio.io/realms/mzio/account/">mzio user account console</a> and sign in with
-your user
-credentials. Go to personal information to update any details. When changing the <strong>email</strong> the user
-is automatically
-logged out. On the next sign in, the user will receive another verification email to validate email
+your user credentials. Go to personal information to update any details. When changing the <strong>email</strong> the user
+is automatically logged out. On the next sign in, the user will receive another verification email to validate email
 address ownership.
 Revalidation of the email also triggers a revalidation of the <strong>non-profit academic license</strong>.</p>
 <p><img alt="mzio-user-console.png" src="img/mzio-user-console.png" /></p>
@@ -7318,17 +7376,11 @@ a few minutes.</p>
 </ol>
 <p><img alt="users_users.png" src="img/users_users.png" /></p>
 <h2 id="command-line-interface-cli">Command-line interface (CLI)<a class="headerlink" href="#command-line-interface-cli" title="Permanent link">&para;</a></h2>
-<p>Users can be logged in via command-line arguments to run mzmine in batch mode.
+<p>Using the command-line Users can be logged in via command-line arguments to run mzmine in batch mode.
 See <a href="../commandline_tool.html">CLI tools</a> for more information.</p>
 <p>The most important commands on Windows are:
 <div class="highlight"><pre><span></span><code># login in browser
 "C:\Program Files\mzmine\mzmine_console.exe" -login
-
-# login in the terminal console
-"C:\Program Files\mzmine\mzmine_console.exe" -login-console
-
-# list all users
-"C:\Program Files\mzmine\mzmine_console.exe" -list-users 
 </code></pre></div></p>
 <h2 id="alternative-sign-in-sign-up">Alternative Sign in / Sign up<a class="headerlink" href="#alternative-sign-in-sign-up" title="Permanent link">&para;</a></h2>
 <p>Alternatively users can register on the mzio.io
@@ -7336,9 +7388,7 @@ website <a href="https://auth.mzio.io/realms/mzio/account/">https://auth.mzio.io
 clicking on the <strong>Sign in</strong> button in the top right corner.
 Then follow the regular self-registration described above. Finally, users will need to sign in to
 the mzmine software. If the sign in website does not load in mzmine, click
-the <img alt="btn_tool.png" src="img/btn_tool.png" />. Set a proxy and retry with the login screen but if this fails
-try the alternative sign in by username and password directly. The mzmine CLI also provides the 
-<strong>-login-console</strong> argument for alternative sign in.</p>
+the <img alt="btn_tool.png" src="img/btn_tool.png" />.</p>
 <h2 id="mzmines-educational-non-profit-program">mzmine's educational non-profit program<a class="headerlink" href="#mzmines-educational-non-profit-program" title="Permanent link">&para;</a></h2>
 <p>During your registration in mzmine, you may enter an email address of your educational institution.
 This will grant automatic access to our academic non-profit program if your institution is already
@@ -7404,7 +7454,7 @@ license if your institution is still in our program. Otherwise, users are grante
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 25, 2025 10:09:50 UTC">November 25, 2025 10:09:50</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 23, 2026 15:32:23 UTC">October 23, 2026 15:32:23</span>
   </span>
 
     
@@ -7420,9 +7470,9 @@ license if your institution is still in our program. Otherwise, users are grante
     </span>
     <nav>
       
-        <a href="mailto:ansgar.korf@mzio.io">Ansgar Korf</a>, 
         <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
-        <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>
+        <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>, 
+        <a href="mailto:j.speckamp@52north.org">speckij</a>
     </nav>
   </span>
 
