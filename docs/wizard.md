@@ -26,7 +26,7 @@ setup.
 !!! danger
     The defaults are only suggestions and different acquisition methods and instruments produce
     different noise levels etc. The **raw data overview** and **aligned feature lists** are useful to
-    optimize these parameters.
+    optimize these parameters. 
 
 ## mzwizard parameter tabs
 
@@ -362,7 +362,10 @@ While the presets of the processing wizard will produce good results out of the 
 instrument types and combinations, it may be worth optimizing specific workflow steps to achieve 
 even better results. There are two ways to optimize the wizard workflow.
 
-1. By optimizing the parameters in the wizard steps.
+1. By optimizing the parameters in the wizard steps. The wizard can do this automatically:
+   [**Estimate**](module_docs/wizard_optimizer/wizard_estimate.md) derives the parameters from the
+   raw data in seconds to minutes, and [**Optimize**](module_docs/wizard_optimizer/wizard_optimize.md)
+   improves them further by running the wizard workflow repeatedly.
 2. By optimizing individual steps in the [created batch](#8-create-batch).
 
 A step-by-step approach is detailed in the 
