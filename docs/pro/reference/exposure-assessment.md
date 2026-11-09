@@ -9,7 +9,7 @@ This reference documents the `exposure` operation. See the [scientific-analysis 
 
 ## Inputs and prerequisites
 
-Exposure requires a completed native `quantification` result from the same scope; supplied measurements are not accepted. Required fields are non-empty unique `sample_ids`, `scenario`, and `reference`. Selected IDs must exist in that quantification result and can select only samples whose quantification role is `unassigned`, never calibrators or QC samples.
+Exposure requires a completed native `quantification` result from the same scope; supplied measurements are not accepted. Required fields are non-empty unique `sample_ids`, `scenario`, and `reference`. Selected IDs must exist in that quantification result and can select only samples whose quantification role is `unassigned`, never calibrators or QC samples. Quantification generates this role from membership in its `calibrators` and `qc_samples` lists; it is not an editable result field. Correct an erroneous sample assignment in the quantification request and rerun that calculation before using the result.
 
 ## Parameters and validation
 

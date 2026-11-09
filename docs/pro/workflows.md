@@ -6,8 +6,13 @@ with other detectors, such as UV/DAD data measured with LC-MS.
 
 !!! info
 
-    Availability depends on the services enabled for the signed-in mzmine user. The running
-    application's menus and parameter dialogs are authoritative for the installed version.
+    MRM and other-detector processing require the corresponding features to be enabled for your
+    account. If a workflow is missing, check the selected account in [Users management](../services/users.md).
+
+Before processing, confirm that the imported files contain the required MS and detector/transition
+data. See [supported formats](../data_conversion.md) and inspect the raw traces in mzmine. Choose
+only the detector wavelengths or transitions needed for the question, and preserve a project copy
+before replacing processed detector traces or correlations.
 
 ## DDA (UV/Other) {#dda-uv-other}
 
@@ -48,6 +53,14 @@ The workflow is designed around the MRM transition information, so prefer the
 [MRM aligner](../module_docs/align_mrm/mrm-aligner.md) after resolving. The MRM guide gives the full
 sequence, input expectations, and manual alternatives: [MRM workflow]
 (../workflows/mrmworkflow/mrm-workflow.md).
+
+## Inspect and save the results
+
+For UV/Other workflows, inspect the time shift and MS–detector assignments in the correlation
+dashboard, particularly where peaks overlap. For MRM, check the chosen quantifier transition and
+integrated chromatogram before exporting quantitative results. Save the project and the batch used
+for processing; mzassist can help with configuration and review through the
+[AI-assisted workflow](agent-assisted-mzmine.md).
 
 ---
 

@@ -1,13 +1,20 @@
-# Scientific analysis through the mzmine MCP local connector
+# Scientific analyses with mzassist {#scientific-analysis-through-the-mzmine-mcp-local-connector}
 
-The local connector can perform five bounded analyses on a reviewed, immutable snapshot of a selected feature table. This avoids changing measurements while an analysis is running and records the application version, snapshot revision, requested specification, and any upstream native result used as input.
+Use these analyses with a processed feature table to answer a specific analytical question.
+Ask mzassist to select the table, show the required inputs, and open the completed calculation in
+mzmine. Calculations use the approved data as they were when shared; changing the table requires
+a fresh sharing review.
 
-The running application returns the accepted input schema and result contract; use those for exact field names and options.
+| Your question | Guide | Prepare first |
+| --- | --- | --- |
+| What concentration does this response represent? | [Quantification](analysis/quantification.md) | Calibrators, concentrations/units, analyte rows, optional internal standards and independent QCs |
+| Which injections or features need a QC review? | [Batch diagnostics](analysis/batch-diagnostics.md) | One batch, injection order, roles, reference values and method-specific alerts |
+| How do conditions or time points differ? | [Study comparison](analysis/study-comparison.md) | Conditions, independent samples, repeats and any pairing/time/covariates |
+| Which features track the measured assay activity? | [Activity association](analysis/activity-association.md) | Matched assay values, independent samples, endpoint, dose and direction |
+| What does a quantified amount imply under this use scenario? | [Exposure calculation](analysis/exposure-calculation.md) | Native quantification, quantity basis, use rate, and a justified reference |
 
-!!! info "MCP-only workflow entry point"
-
-    In the reviewed build, these five workflows are initiated through the MCP local connector. Calculation
-    runs locally in mzmine, and results can be opened in mzmine's native result view.
+These five analyses are started through mzassist. Their calculations run locally in mzmine, where
+you can inspect and export the results. They supplement the existing mzmine processing modules.
 
 !!! warning
 
@@ -15,9 +22,9 @@ The running application returns the accepted input schema and result contract; u
 
 ## Shared rules
 
-You choose the feature rows and explicitly map opaque sample identifiers to their condition, independent unit, and, where relevant, time or pair. Technical repeats are aggregated within the declared independent unit. Missing, non-finite, negative, or invalid measurements remain missing; they are not changed to zero. Raw area is the normal default. Normalized values are used only when the chosen native normalized column is present.
+Choose the feature rows and samples for the question. For study comparisons and activity associations, identify the experimental conditions and independent samples, and distinguish repeat injections of the same sample from independent replicates. Study comparison can also use time and pairing information. Technical repeats are averaged for these two analyses; quantification and exposure calculations retain individual sample results. Missing, non-finite, negative, or invalid measurements remain missing; they are not changed to zero. Raw area is the normal default. Normalized values are used only when the chosen native normalized column is present.
 
-Results are bounded and paged. Large requests may need fewer feature rows or samples. An analysis is tied to its approved scope: downstream analyses can use only compatible prior native results from the same scope.
+Large result tables are shown in pages; ask for the remaining rows before treating the visible page as complete. Calculations that use a previous native result must use compatible data from the same sharing selection.
 
 ## Quantification
 
@@ -55,14 +62,15 @@ The result includes paired observations, correlation, confidence interval where 
 
 Exposure assessment converts a completed native quantification result into a transparent comparison with a stated reference value. It cannot use manually supplied measurements. Provide the scenario and its interpretation, any dilution/body-mass assumptions, a reference value with unit, source URL and version, and an explicit acknowledgement that the reference applies to the question.
 
-For every selected sample, the quantification role must be explicitly unassigned. Calibration and QC
-samples cannot be submitted as exposure samples; assign the role correctly in the quantification
-result before creating the exposure scope.
+Select study samples that were not designated as calibrators or QC samples in the quantification
+setup. mzmine derives these roles from the calibration and QC sample lists; there is no separate
+role-editing step in the result. If that setup was incorrect, correct it and rerun quantification.
+Actual calibrators and QC samples must not be used as exposure samples.
 
 The result reports eligible samples, the selected reference ratio, and whether the calculated value is above or at/below that selected reference. It excludes unavailable, flagged, unsupported-unit, or—in the absence of explicit acceptance—estimated values. A surrogate-reference-equivalent value stays labelled as an estimate. The comparison is not a safety assessment, regulatory determination, or toxicological conclusion.
 
 ## Next steps
 
-Open the returned feature row in mzmine to inspect chromatograms, spectra, annotations, and the native table. Export or share a result only after reviewing the concrete selection and destination. When an assumption, group mapping, calibration source, or reference applicability is uncertain, keep the analysis descriptive and resolve it before making a decision.
+Open important feature rows in mzmine to inspect chromatograms, spectra, annotations, and the native table. In the calculation result view, save the table (CSV) and calculation record (JSON) before ending the session. See [Save and reproduce your work](mzassist-saving.md). Resolve uncertain groups, calibration inputs, or reference applicability before interpreting a calculation.
 
 {{ git_page_authors }}
