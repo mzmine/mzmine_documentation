@@ -9,6 +9,18 @@
 The Correlation dashboard allows investigation of the results created by
 the [Correlate Ms features with other detectors](../uv_ms_other_aligner/uv_ms_other_aligner.md).
 
+## Inspect and change MS–UV assignments {#inspect-and-change-msuv-assignments}
+
+Use the Correlation dashboard to inspect or change assignments between MS features and UV/DAD or
+other detector features. Select an MS feature in the feature table, then compare its chromatogram
+with the assigned detector feature in the overlay. Inspect peak shape and retention time,
+particularly when several MS features overlap one detector peak.
+
+To change an assignment, select the intended detector feature and use **Define as correlated**.
+**Clear selected correlation** removes only the selected assignment; other assignments to the same
+MS feature remain. These controls change the correlations in the feature table. Save a project copy
+before changing assignments you may need to recover.
+
 ## Interface
 
 The interface is shown below:

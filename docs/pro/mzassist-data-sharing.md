@@ -35,6 +35,18 @@ Result sharing is separate from metadata sharing. Check the selected feature tab
 information before approving it. If the table, project, or relevant metadata changes, a new
 sharing review may be required so the assistant works from the correct data.
 
+## Add or correct sample metadata
+
+You can ask mzassist to add sample information or correct values in mzmine's Sample metadata table.
+For example, supply a missing sample role or explain which injections belong to the same sample.
+The assistant can edit shared columns and propose new columns for the selected files.
+
+Sharing permission alone does not authorize edits. If you delegate metadata completion, the assistant
+can apply the proposed changes after inspecting the before-and-after values. You can instead ask to
+review a proposal in chat or privately in mzmine before it is applied. Check inferred labels and
+replicate assignments against your sample records; a filename does not establish biological meaning.
+These changes affect Sample metadata, not the acquisition information recorded in the raw file.
+
 ## Pause, cancel, revoke, or disconnect
 
 | Action | Effect | When to use it |

@@ -25,6 +25,9 @@ These are examples of how to describe your goal, not commands that must be copie
 information that changes the method: acquisition type, polarity, ion mobility, sample roles, and
 whether your goal is feature discovery, annotation, quantification, or a comparison.
 
+Available tasks depend on your installed mzmine and mzassist versions and account features.
+The assistant checks what your running mzmine supports before preparing a task.
+
 ## Connect and choose what to share
 
 Open **mzassist → Agent activity** to check the connection and pending activities. Connecting does

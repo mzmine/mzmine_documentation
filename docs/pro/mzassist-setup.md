@@ -40,8 +40,9 @@ if the upload option has moved.
 
 1. Open **mzassist → Set up mzassist** and choose the ChatGPT / Codex setup option.
 2. Use the button to prepare the mzassist plugin. This makes the included package available to the
-   assistant's local plugin directory; it does not complete installation inside the assistant.
-3. Restart the assistant, open its plugin directory, and install **mzassist plugin**.
+   assistant's personal local marketplace; it does not complete installation inside the assistant.
+3. Restart the assistant. Open **Plugins → your personal local marketplace**, then install or update
+   **mzassist**.
 4. Start a new chat with the plugin enabled.
 
 This package includes the connection and workflow instructions together. If your assistant does

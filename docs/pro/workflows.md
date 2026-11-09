@@ -54,10 +54,12 @@ The workflow is designed around the MRM transition information, so prefer the
 sequence, input expectations, and manual alternatives: [MRM workflow]
 (../workflows/mrmworkflow/mrm-workflow.md).
 
-## Inspect and save the results
+## Review detector correlations and MRM quantifiers
 
 For UV/Other workflows, inspect the time shift and MS–detector assignments in the correlation
-dashboard, particularly where peaks overlap. For MRM, check the chosen quantifier transition and
+dashboard, particularly where peaks overlap. See
+[Inspect and change MS–UV assignments](../module_docs/uv/uv_correlation_dashboard/uv_correlation_dashboard.md#inspect-and-change-msuv-assignments)
+for the overlay and manual assignment controls. For MRM, check the chosen quantifier transition and
 integrated chromatogram before exporting quantitative results. Save the project and the batch used
 for processing; mzassist can help with configuration and review through the
 [AI-assisted workflow](agent-assisted-mzmine.md).
