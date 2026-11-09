@@ -25,12 +25,22 @@ different platform will not resolve that problem.
 ## Claude Desktop
 
 1. In mzmine, open **mzassist → Set up mzassist** and select **Claude Desktop**.
-2. Open the included connector installer and complete the installation in Claude Desktop.
-   This installs the connection to mzmine.
-3. Use the setup screen to locate `mzassist-plugin.zip`. In Claude's plugin management, choose the
-   option to upload a plugin and select that ZIP without extracting it. The plugin adds the mzassist
-   workflow instructions used by the assistant.
-4. Confirm that both the connection and plugin are enabled. Restart Claude Desktop and start a new chat.
+2. Click **Open connector installer** and complete the installation in Claude Desktop.
+   This installs the connection to mzmine. If the package does not open automatically, go to
+   **Claude Settings → Desktop app**, click **Manage** beside **Extensions**, then choose
+   **Advanced settings → Install extension** and select the `.mcpb` file supplied with mzmine.
+   Older Claude versions may have an **Extensions** item directly in Settings.
+3. Back in mzmine, click **Show plugin ZIP**. In Claude, open
+   **Customize → Plugins → Add → Upload plugin**, select `mzassist-plugin.zip` without extracting
+   it, and click **Upload**. When updating, choose **Replace** for the existing mzassist plugin.
+   The upload preview may use the internal name `mzmine`; the installed page is **mzassist plugin**.
+4. Check that the **mzassist** desktop extension and **mzassist plugin** are both enabled and
+   have the matching version. Restart Claude Desktop and start a new chat.
+
+![Claude's installed mzassist workflow plugin, version 0.12.17, with its switch enabled](img/mzassist/claude-plugin-installed.jpg)
+
+*The workflow plugin is a separate installation from the desktop connector. This example shows
+Claude Desktop 4.23118.0 with the plugin supplied in mzmine 4.11.*
 
 Claude's menu labels can change between versions. Use the help link in the mzmine setup screen or
 [Claude's plugin instructions](https://support.claude.com/en/articles/13837440-use-plugins-in-claude)
@@ -38,16 +48,17 @@ if the upload option has moved.
 
 ## ChatGPT desktop or Codex
 
-1. Open **mzassist → Set up mzassist** and choose the ChatGPT / Codex setup option.
-2. Use the button to prepare the mzassist plugin. This makes the included package available to the
-   assistant's personal local marketplace; it does not complete installation inside the assistant.
-3. Restart the assistant. Open **Plugins → your personal local marketplace**, then install or update
-   **mzassist**.
-4. Start a new chat with the plugin enabled.
+1. Open **mzassist → Set up mzassist** and choose **ChatGPT desktop / Work / Codex**.
+2. Click **Prepare plugin**. This makes the included package available to the assistant's
+   **Personal** plugin collection; it does not complete installation inside the assistant.
+3. Restart the assistant. Open **Plugins → Personal**, open **mzassist plugin**, and use **+**
+   to add it (or the update control if it is already installed).
+4. Start a new local Work or Codex chat with the plugin enabled.
 
 This package includes the connection and workflow instructions together. If your assistant does
 not offer local plugin installation, check its version and your organization's settings before
 continuing. Follow the setup instructions for the application you are actually using.
+See also [OpenAI's plugin installation guide](https://learn.chatgpt.com/docs/plugins).
 
 ## Check the connection
 
