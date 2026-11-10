@@ -1,29 +1,20 @@
-# Quantify selected features
+# Quantification {#quantify-selected-features}
 
-Use quantification to convert feature responses into concentrations using a stated calibration.
-Start with a processed feature table, identified calibration samples, and the feature rows you
-intend to quantify. Review the chromatograms and assignments before fitting a calibration.
+Quantification converts feature responses into concentrations using a stated calibration. Start with a processed feature table and review chromatograms and assignments for the features you want to quantify.
 
-## Prepare the calibration
+## What you need {#prepare-the-calibration}
 
-| Choice | What you need |
+| Calibration | Information needed |
 | --- | --- |
-| External calibration | The analyte feature row, calibrator samples, and their concentrations with units |
-| Internal-standard calibration | The analyte and internal-standard rows, calibrator concentrations, and the internal-standard concentration for each calibrator and unknown |
-| Surrogate-reference-equivalent calibration | A reference-standard row and calibration, plus a positive relative response factor and its source for each analyte |
+| External | Analyte feature row, calibrator samples, and concentrations with units |
+| Internal standard | Analyte and internal-standard rows, calibrator concentrations, and internal-standard concentration for each calibrator and unknown |
+| Surrogate-reference-equivalent | Reference-standard row and calibration, plus a positive relative response factor and its source for each analyte |
 
-Choose raw area, raw height, or an existing normalized measurement. Supply at least two distinct
-calibrator concentrations; a fitted line alone does not establish that the calibration is suitable.
-State the regression weighting (unweighted, 1/x, or 1/x²) and whether to fit or fix the intercept at
-zero. Zero-concentration points cannot be used with 1/x or 1/x² weighting.
+The response can be raw area, raw height, or an existing normalized measurement. The calibration needs at least two distinct concentrations. Regression can be unweighted, 1/x, or 1/x², with the intercept fitted or fixed at zero. mzassist helps you review these choices before calculating. Zero-concentration points cannot be used with 1/x or 1/x² weighting. A fitted line alone does not establish that a calibration is suitable.
 
-Prepare independent QC samples with expected concentrations if you want to assess their recovery.
-Keep calibrator and QC assignments separate from unknown samples. Explain exclusions and include any
-dilution, extraction volume, sample mass, or device count needed to express the final quantity.
-These are calculation inputs; a generic metadata column does not automatically configure calibration.
+Independent QC samples with expected concentrations can assess recovery. Calibrator and QC assignments must be distinct from unknowns. Exclusions and preparation details such as dilution, extraction volume, sample mass, or device count may be needed to express the final quantity. A generic metadata column does not automatically configure calibration. Internal-standard concentrations for unknowns must be supplied explicitly; mzmine does not substitute the calibrator amount.
 
-For example, you might prepare this **illustrative input table**, with your actual sample names and
-concentrations in place of the examples:
+For example, this **illustrative input table** shows the information for an external calibration:
 
 | Sample | Use | Concentration (µg/L) |
 | --- | --- | --- |
@@ -33,28 +24,19 @@ concentrations in place of the examples:
 | QC-check | Independent QC | 4 |
 | Unknown-1 | Unknown | Not supplied |
 
-## Ask mzassist
+## Calculate with mzassist {#ask-mzassist}
 
-> Quantify the selected analyte using external calibration and raw peak area. I will provide the
-> calibrator concentrations and QC assignment. Show me the sample mapping, regression choices,
-> units, and preparation corrections before calculating.
+1. Ask mzassist to quantify the selected features. For example:
 
-Approve result sharing, confirm the row and sample mapping, and resolve missing inputs before
-running. Internal-standard concentrations for unknowns must be supplied explicitly; mzmine does
-not substitute the amount used in a calibrator.
+    > Quantify the selected analyte using external calibration and raw peak area. Show me the sample mapping, regression choices, units, and preparation corrections before calculating.
 
-## Review and save the result
+2. mzassist checks the metadata you approved for sharing. Provide only the calibration, QC, and sample-preparation facts it still needs. If needed, sample metadata can also be edited under **Project → Sample metadata**; see [Sample metadata](../../module_docs/project_metadata/project_metadata.md).
+3. Confirm the proposed feature and sample mapping and calculation choices in chat, then ask mzassist to calculate and open the results.
+4. Inspect the calibration curve, residuals, back-calculated concentrations, excluded calibrators, QC results, and unknowns outside the calibrated range. Check dilution and unit conversions against the sample preparation. Missing or invalid results remain unavailable.
+5. Use **Save table (CSV)** and **Save calculation record (JSON)** in the result view. See [Save and reproduce your work](../mzassist-saving.md).
 
-Inspect the calibration curve, residuals and back-calculated concentrations, excluded calibrators,
-QC results, and unknowns outside the calibrated range. Check dilution and unit conversions against
-the sample preparation. Missing or invalid results remain unavailable.
+## Interpretation {#review-and-save-the-result}
 
-Quantification retains individual sample estimates; it does not automatically average technical
-replicates into independent samples. Surrogate-reference-equivalent values remain labelled as
-estimates. This calculation does not establish LOD/LOQ, compound identity, or method acceptance.
-
-Open the native result view and save both the CSV table and JSON calculation record. See
-[Save and reproduce your work](../mzassist-saving.md). To compare quantified results between
-conditions, continue with [Study comparisons](study-comparison.md) and state the independent samples.
+Quantification retains individual sample estimates; it does not automatically average technical replicates into independent samples. Surrogate-reference-equivalent values remain labelled as estimates. The calculation does not establish LOD/LOQ, compound identity, or method acceptance. To compare quantified results between conditions, see [Study comparison](study-comparison.md) and identify the independent samples.
 
 {{ git_page_authors }}

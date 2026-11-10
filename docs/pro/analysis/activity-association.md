@@ -1,44 +1,28 @@
-# Relate features to measured activity
+# Activity association {#relate-features-to-measured-activity}
 
-Use activity association to prioritize features whose abundance covaries with an assay measurement,
-for example across fractions. It identifies associations for follow-up; it does not identify an
-active compound or establish a biological mechanism.
+Activity association prioritizes features whose abundance covaries with an assay measurement, for example across fractions. An association is a lead for follow-up; it does not identify an active compound or establish a biological mechanism.
 
-## Prepare matched measurements
+## What you need {#prepare-matched-measurements}
 
-Map the assay measurements to the samples in the shared feature table. Supply the condition and
-independent-unit identifier for each sample. Use one assay endpoint, dose, context, and direction
-per analysis; split measurements from different assays or doses before calculating.
+Assay measurements must be mapped to samples in the shared feature table, with condition and independent unit identified for each sample. One analysis uses one assay endpoint, dose, context, and direction; measurements from different assays or doses need separate analyses.
 
-State whether higher or lower assay values mean greater activity. For example, a viability endpoint
-and an inhibition endpoint can have opposite directions. Use the endpoint's meaning in your assay,
-not just its numeric scale.
+The activity direction states whether higher or lower assay values mean greater activity. For example, viability and inhibition endpoints can have opposite directions. Choose raw area, height, an existing normalized measurement, or a compatible quantification result.
 
-Choose raw area, height, an existing normalized measurement, or a compatible quantification result.
-At least three independent units with both an assay and a feature measurement are needed for a
-correlation. Repeat measurements within a unit are averaged before pairing. Missing values do not
-become zero, and repeat injections do not increase the independent-unit count.
+At least three independent units with both assay and feature measurements are needed for a correlation. Repeat measurements within a unit are averaged before pairing. Missing values do not become zero, and repeat injections do not increase the independent-unit count. This calculation does not offer the study-comparison log2 transformation option.
 
-## Ask mzassist
+## Calculate with mzassist {#ask-mzassist}
 
-> Associate the selected feature measurements with this assay endpoint across the mapped samples.
-> Show the sample mapping, independent-unit counts, and activity direction. Explain whether Pearson
-> or Spearman correlation matches the question before calculating.
+1. Ask mzassist to associate feature measurements with the assay. For example:
 
-Check the mapping before running, particularly if one sample has multiple assay measurements.
-The current activity calculation does not offer the study-comparison log2 transformation option.
+    > Associate the selected feature measurements with this assay endpoint across the mapped samples. Show the sample mapping, independent-unit counts, and activity direction. Explain whether Pearson or Spearman correlation matches the question before calculating.
 
-## Interpret the ranking
+2. mzassist checks the metadata you approved for sharing. Provide only the assay, sample, and study-design facts it still needs. If needed, edit metadata under **Project → Sample metadata**; see [Sample metadata](../../module_docs/project_metadata/project_metadata.md).
+3. Confirm the proposed mapping and calculation in chat, particularly where a sample has multiple assay measurements. Ask mzassist to calculate and open the results.
+4. Inspect paired values, correlation, matched-unit count, and priority score. The score's sign follows the declared activity direction. Inspect observations and influential points, chromatograms, spectral evidence, and correlated or coeluting features before choosing candidates.
+5. Use **Save table (CSV)** and **Save calculation record (JSON)** in the result view, preserving the endpoint, dose, context, direction, mapping, and measurement choice. See [Save and reproduce your work](../mzassist-saving.md).
 
-The output includes the paired values, correlation, matched-unit count, and a priority score whose
-sign follows the declared activity direction. Changing that direction changes the interpretation
-of the ranking. Constant values or too few matched units do not yield a usable correlation.
+## Interpretation {#interpret-the-ranking}
 
-A confidence interval is available only for qualifying Pearson results; the calculation does not
-report a p value. Inspect the observations and influential points, chromatograms, spectral evidence,
-and correlated/coeluting features before choosing candidates for follow-up.
-
-Save the table and calculation record with the assay endpoint, dose, context, direction, sample
-mapping, and measurement choice. See [Save and reproduce your work](../mzassist-saving.md).
+Constant values or too few matched units do not yield a usable correlation. A confidence interval is available only for qualifying Pearson results; the calculation does not report a p value.
 
 {{ git_page_authors }}

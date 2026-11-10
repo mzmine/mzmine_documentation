@@ -22,10 +22,33 @@ laboratory's policy.
 
 ## Review a sharing request
 
-The assistant explains the information it needs. You can approve the request in chat where that
-option is offered, open the review in mzmine to inspect it, or keep the data private.
-For metadata, the native preview lets you select columns and inspect the values before sharing;
-a chat request can cover all current columns. Open the native review if you want a narrower selection.
+Start by describing your task in chat, for example: “Help me inspect the final feature table from
+the last processing run.” mzassist checks which tables are available and asks you to clarify if
+more than one could fit. When it needs metadata or measurements that you have not already approved
+for sharing, it prepares a request explaining the table or files and the information to be shared.
+
+Respond to that request in chat: approve it, decline it, or reply “Open the sharing review in mzmine
+so I can inspect it first.” mzassist opens that review for you. You do not need to select a feature
+table or find a sharing control in mzmine before asking for help.
+
+**Optional manual route:** a sharing entry appears in **mzassist → Agent activity** only after
+mzassist has prepared the request. While it is pending, select its row in the activity history.
+The details and available action for that row appear under **Selected activity**:
+
+- For a **Metadata sharing** row, click **Inspect metadata in mzmine** or **Review metadata sharing**,
+  according to the action shown. Select the columns you want to share and inspect their values.
+  **Share selected metadata** confirms that selection.
+- For a **Share results** row, click **Inspect in mzmine** or **Open review**. Check the feature
+  table and additional sharing choices, then use **Share results** to approve them.
+
+The selected row does not have to be the newest activity. The button follows the row you select
+and the request's state. After approval, the sharing entry offers a **Revoke** action instead of
+the pending review action. If a request is no longer available, ask mzassist in chat to prepare a
+new sharing request for the task. These are controls for individual requests, not permanent sharing
+preferences.
+
+A metadata approval in chat can cover all current columns. Use the mzmine preview when you want
+to select fewer columns or inspect their contents privately before deciding.
 
 Sample metadata describes your study. **Acquisition metadata** describes information recorded in
 file headers and is not edited by sample-metadata changes. Neither table establishes the study
@@ -49,12 +72,16 @@ These changes affect Sample metadata, not the acquisition information recorded i
 
 ## Pause, cancel, revoke, or disconnect
 
-| Action | Effect | When to use it |
+You can request a pause, cancellation or sharing revocation in chat. The manual controls below are in
+**mzassist → Agent activity** in mzmine.
+
+| What you want | In chat | Manual control and effect |
 | --- | --- | --- |
-| **Pause agent changes** | Blocks new agent changes and jobs. Previously shared results can still be read; submitted mzmine tasks keep running. | Inspect or edit the method yourself before continuing. |
-| Cancel a job | Requests that the selected task stop. Outputs already created are not rolled back. | Stop unwanted or incorrectly configured processing. |
-| Revoke sharing | Stops later access under that sharing decision. | Keep further metadata or result access private. |
-| Disable the local connection | Disconnects mzassist and clears sharing approvals and pending reviews. Submitted native processing may continue; connector-owned result-analysis tasks are canceled. | End the assistant's access to mzmine. |
+| Take over editing | “Pause agent changes while I inspect the method.” | Click **Pause agent changes**. New changes and jobs stop; already submitted mzmine tasks continue and previously shared results remain readable. Click **Resume agent changes** when ready. |
+| Stop processing | “Cancel the current processing job.” | Ask mzassist to cancel the specific job. Pausing or disconnecting is not a substitute for cancellation; completed outputs remain. |
+| End metadata sharing | “Revoke metadata sharing.” | Select the active **Metadata sharing** history row, then **Revoke metadata sharing** under **Selected activity**. |
+| End result sharing | “Stop sharing this feature table.” | Select its **Shared results** history row, then **Revoke sharing** under **Selected activity**. |
+| Disable local access | Use the mzmine control to turn off the bridge. | Click **Disconnect** to disable the local connection and clear sharing approvals and pending reviews. Submitted mzmine processing may continue; connection-owned result-analysis tasks are canceled. |
 
 After manual editing, resume agent changes when ready and ask the assistant to inspect the current
 method. Do not assume it can reuse a proposal made before your edits.
@@ -62,5 +89,8 @@ method. Do not assume it can reuse a proposal made before your edits.
 Revoking access or disconnecting cannot remove information already returned to a chat service.
 Follow that provider's controls for conversation history and retention. A local mzmine installation
 does not determine the provider's data-use policy.
+
+Continue with [Process your first dataset](mzassist-first-analysis.md), or ask mzassist to help
+[explore an existing result](mzassist-results.md).
 
 {{ git_page_authors }}

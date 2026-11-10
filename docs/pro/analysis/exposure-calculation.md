@@ -1,18 +1,12 @@
-# Calculate exposure from quantified results
+# Exposure calculation {#calculate-exposure-from-quantified-results}
 
-Use this calculation to convert a native quantification result into a stated exposure scenario and
-compare it with a reference value you supply. It records the arithmetic and assumptions; the result
-is not a toxicological assessment or a regulatory decision.
+Exposure calculation converts a completed quantification result into a stated exposure scenario and compares it with a reference value you supply. It records the arithmetic and assumptions; the result is not a toxicological assessment or regulatory decision.
 
-## Prepare the inputs
+## What you need {#prepare-the-inputs}
 
-First complete [quantification](quantification.md) in mzmine. Use that result from the same shared
-feature table; manually typed measurement values cannot replace the native quantification result.
-Select study samples that were not designated as calibrators or QC samples in quantification.
-mzmine derives those roles from the calibration/QC lists, so there is no role field to edit afterward.
-If the setup was wrong, correct it and repeat quantification before continuing.
+First complete [Quantification](quantification.md) in mzmine. Exposure calculation uses its result from the same shared feature table; manually typed measurement values cannot replace that result. Study samples must not have been designated as calibrators or QC samples in quantification. These roles derive from the calibration and QC lists; if the setup was wrong, correct it and repeat quantification.
 
-Match the use scenario to the basis of the quantified result:
+The use scenario must match the quantified basis:
 
 | Quantified basis | Scenario input |
 | --- | --- |
@@ -20,28 +14,21 @@ Match the use scenario to the basis of the quantified result:
 | Amount per mass of original sample | Sample mass used per day |
 | Concentration in measured solution | Solution volume used per day |
 
-Supply body mass when the reference is expressed per kilogram of body mass. Include relevant
-preparation/dilution assumptions, a description of the scenario, and the selected reference's value,
-unit, source, and version. Confirm that the reference applies to the question; mzassist does not
-establish that applicability for you.
+Body mass is needed when the reference is expressed per kilogram of body mass. Relevant preparation and dilution assumptions, the scenario description, and the reference value, unit, source, and version are also needed. Check that the reference applies to your question.
 
-## Ask mzassist
+## Calculate with mzassist {#ask-mzassist}
 
-> Use this completed quantification result for the stated use scenario. Show the eligible samples,
-> quantity basis, unit conversions, and reference source before calculating the comparison.
+1. Ask mzassist to use the completed quantification. For example:
 
-## Check the calculation
+    > Use this completed quantification result for the stated use scenario. Show the eligible samples, quantity basis, unit conversions, and reference source before calculating the comparison.
 
-As an **arithmetic illustration**, 2 ng/device used at 3 devices/day gives 6 ng/day.
-A hypothetical reference of 3 ng/day would give a ratio of 2. These numbers are not a recommended
-exposure scenario or reference value.
+2. mzassist checks the metadata you approved for sharing. Provide only the scenario, preparation, and reference facts it still needs.
+3. Confirm the proposed samples, conversions, reference, and calculation in chat. Ask mzassist to calculate and open the results.
+4. Inspect selected samples, converted quantities, units, assumptions, reference ratio, and unavailable or flagged values. Surrogate-reference-equivalent quantities remain estimates and require explicit acceptance before inclusion. Unsupported units, incompatible scenario inputs, or other flags can exclude a value from the comparison.
+5. Use **Save table (CSV)** and **Save calculation record (JSON)** in the result view, and preserve the reference source alongside them. See [Save and reproduce your work](../mzassist-saving.md).
 
-Inspect the selected samples, converted quantities, units, assumptions, reference ratio, and all
-unavailable/flagged values. Surrogate-reference-equivalent quantities remain estimates and require
-explicit acceptance before inclusion. Unsupported units, incompatible scenario inputs, or other
-flags can exclude a value from the comparison.
+## Interpretation {#check-the-calculation}
 
-Being above or below the supplied reference describes this calculation only. Preserve the native
-calculation record and the reference source alongside the exported table.
+As an **arithmetic illustration**, 2 ng/device used at 3 devices/day gives 6 ng/day. A hypothetical reference of 3 ng/day gives a ratio of 2. These numbers are not a recommended scenario or reference value. Being above or below the supplied reference describes this calculation only.
 
 {{ git_page_authors }}

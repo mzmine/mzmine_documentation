@@ -1,4 +1,4 @@
-# Build and improve a processing method
+# Build and improve a method {#build-and-improve-a-processing-method}
 
 mzassist works with the [processing wizard](../wizard.md) and mzmine's processing modules.
 Start by stating the analytical goal, acquisition type, polarity, ion mobility, and the output you
@@ -42,13 +42,19 @@ See [Optimize wizard parameters](../module_docs/wizard_optimizer/wizard_optimize
 
 ## Review and process
 
-Applying a proposed method changes settings; running the processing batch is a separate action.
-Check the final processing summary, especially the selected files and export destinations.
-If you asked mzassist to stop before processing, authorize the run only when the summary is correct.
+Review the method summary in chat, especially the selected files, annotation steps and export
+destinations. If you requested a review before processing, tell mzassist to start when you are
+satisfied. You do not need to open the batch editor to run the reviewed method.
 
-While the job runs, follow its status in chat or **Agent activity**. Avoid submitting the same job
-again just because a reply is delayed. If the method changes, request a new summary before running.
-For an interrupted batch, inspect the outputs already produced before choosing what to rerun.
+Ask “How is processing progressing?” for a status update, or open **mzassist → Agent activity**
+in mzmine to see the job. If processing is interrupted, ask mzassist to check what finished and
+explain how to continue; completed outputs may still be present.
+
+For an optional manual inspection, ask mzassist to open the method or batch review in mzmine.
+The normal editors are **mzwizard → Processing wizard** and **Project → Batch mode**. These are
+also described in the [processing wizard](../wizard.md) and
+[batch-processing guide](../workflows/batch_processing/batch-processing.md). After editing manually,
+tell mzassist what you changed so it can use the current settings.
 
 ## Spectral-library search and library generation
 

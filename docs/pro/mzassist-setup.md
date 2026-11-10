@@ -2,8 +2,9 @@
 
 :material-menu-open: **mzassist → Set up mzassist**
 
-mzassist lets an AI assistant work with mzmine on the same computer. Install mzmine first, then use
-its setup screen to add mzassist to your assistant.
+mzassist connects mzmine to Claude Desktop or a supported OpenAI desktop application on the same
+computer. After installing and opening mzmine, choose **mzassist → Set up mzassist** from its menu
+to install the connection and workflow plugin.
 
 ## Before you begin
 
@@ -26,14 +27,15 @@ different platform will not resolve that problem.
 
 1. In mzmine, open **mzassist → Set up mzassist** and select **Claude Desktop**.
 2. Click **Open connector installer** and complete the installation in Claude Desktop.
-   This installs the connection to mzmine. If the package does not open automatically, go to
-   **Claude Settings → Desktop app**, click **Manage** beside **Extensions**, then choose
-   **Advanced settings → Install extension** and select the `.mcpb` file supplied with mzmine.
+   This installs the connection to mzmine. If the package does not open automatically, click
+   **Show plugin ZIP** in the same mzmine setup window. The folder it opens contains both the
+   plugin ZIP and the connector installer (`.mcpb`). In **Claude Settings → Desktop app**, click
+   **Manage** beside **Extensions**, then choose **Advanced settings → Install extension** and
+   select that `.mcpb` file.
    Older Claude versions may have an **Extensions** item directly in Settings.
 3. Back in mzmine, click **Show plugin ZIP**. In Claude, open
    **Customize → Plugins → Add → Upload plugin**, select `mzassist-plugin.zip` without extracting
    it, and click **Upload**. When updating, choose **Replace** for the existing mzassist plugin.
-   The upload preview may use the internal name `mzmine`; the installed page is **mzassist plugin**.
 4. Check that the **mzassist** desktop extension and **mzassist plugin** are both enabled and
    have the matching version. Restart Claude Desktop and start a new chat.
 
@@ -71,13 +73,16 @@ If more than one mzmine window is running, choose the intended instance. A succe
 lets the assistant read the available tasks. You do not need to share sample metadata or results
 just to check the connection.
 
-Continue with [your first analysis](mzassist-first-analysis.md), or
-[explore an existing feature table](mzassist-results.md).
+Next, read [Data sharing and agent controls](mzassist-data-sharing.md). Then follow
+[Process your first dataset](mzassist-first-analysis.md), or
+[Explore and evaluate results](mzassist-results.md) for an existing project.
 
 ## Update mzassist
 
-Install the newer mzmine release from GitHub Releases, then reopen **Set up mzassist** and update
-the assistant using its included packages. Keep the connector and plugin from the same release.
+Install the newer mzmine release from
+[GitHub Releases](https://github.com/mzmine/mzmine/releases/latest), then open
+**mzassist → Set up mzassist** in mzmine and update the included packages in your desktop chat app.
+Keep the connector and plugin from the same release.
 For Claude, update both the connector and the plugin. Restart the assistant and start a new chat
 so it loads the updated tools and instructions.
 

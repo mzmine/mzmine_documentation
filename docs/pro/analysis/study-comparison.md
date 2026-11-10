@@ -1,16 +1,12 @@
-# Compare study conditions
+# Study comparison {#compare-study-conditions}
 
-Use a study comparison to summarize feature measurements across conditions or time points and,
-when the design supports it, calculate a specified statistical test. Begin with one shared feature
-table containing the samples to compare.
+A study comparison summarizes feature measurements across conditions or time points and can calculate a specified statistical test when the design supports it. Begin with one shared feature table containing the samples to compare.
 
-## Prepare the study design
+## What you need {#prepare-the-study-design}
 
-For every selected sample, identify its condition and independent experimental unit. Add time,
-pairing, or covariates when required by the question. An independent unit might be a biological
-specimen or a separately prepared experimental sample; it is not automatically each raw data file.
+The design identifies each sample's condition and independent experimental unit, plus time, pairing, or covariates when required by the question. An independent unit might be a biological specimen or a separately prepared experimental sample; it is not automatically each raw data file. A QC label or filename alone does not define the comparison.
 
-For example, two injections of the same control sample have one independent-unit identifier:
+This **illustrative mapping** shows two injections of the same control sample as one independent unit; it is not a recommended study size:
 
 | Injection | Condition | Independent unit |
 | --- | --- | --- |
@@ -20,41 +16,27 @@ For example, two injections of the same control sample have one independent-unit
 | T01-injection-1 | Treatment | T01 |
 | T02-injection-1 | Treatment | T02 |
 
-This is a mapping illustration, not a recommendation for study size. Prepare the actual design in
-[Sample metadata](../../module_docs/project_metadata/project_metadata.md), then confirm the mapping
-that mzassist will use. A QC label or filename alone does not define the comparison.
-
 ## Choose the measurement and analysis
 
-Choose raw area, height, existing normalized values, or a compatible native quantification result.
-Technical repeats are averaged within condition, time, and independent unit. Optional log2
-transformation happens before that averaging; nonpositive measurements then remain missing.
+Measurements can be raw area, height, existing normalized values, or a compatible quantification result. Technical repeats are averaged within condition, time, and independent unit. Optional log2 transformation happens before averaging; nonpositive measurements then remain missing.
 
-Start with descriptive output if the design is unresolved. Supported tests include Welch/Student
-t tests, Mann–Whitney, paired t, one-way ANOVA, covariate-adjusted linear models, subject
-random-intercept mixed models, and moderated tests. mzassist does not automatically establish
-which test or model is scientifically appropriate. Paired tests need complete pair mappings;
-independent tests need independent replicates, and ANOVA needs at least three conditions.
+Descriptive output is a useful start if the design is unresolved. Supported tests include Welch/Student t tests, Mann–Whitney, paired t, one-way ANOVA, covariate-adjusted linear models, subject random-intercept mixed models, and moderated tests. Review the assumptions with mzassist to decide whether a test or model fits your study. Paired tests need complete pair mappings, independent tests need independent replicates, and ANOVA needs at least three conditions.
 
-> Compare treatment with control using raw area. First show the sample mapping, how technical
-> repeats will be handled, and a descriptive summary. Explain the assumptions of a proposed test
-> before running it.
+## Calculate with mzassist
 
-## Review the comparison
+1. Ask mzassist to compare the conditions. For example:
 
-Inspect group summaries, independent-unit counts, missing measurements, effect estimates and
-confidence intervals where available, and the reported test status. A calculation may be unavailable
-for some features even when other features have valid results.
+    > Compare treatment with control using raw area. First show the sample mapping, how technical repeats will be handled, and a descriptive summary. Explain the assumptions of a proposed test before running it.
 
-Benjamini–Hochberg adjusted p values are calculated across the valid, testable features selected for
-that analysis before the results are paged. Selecting a shortlist first changes that family;
-separate analyses do not share one automatic correction.
+2. mzassist checks the metadata you approved for sharing. Provide only the study-design facts it still needs. If needed, edit metadata under **Project → Sample metadata**; see [Sample metadata](../../module_docs/project_metadata/project_metadata.md).
+3. Confirm the sample mapping, measurement, transformation, and analysis in chat. Ask mzassist to calculate and open the results.
+4. Inspect group summaries, independent-unit counts, missing measurements, effect estimates, confidence intervals where available, and test status. Some features may have unavailable calculations while others have valid results. Examine important feature rows in mzmine.
+5. Use **Save table (CSV)** and **Save calculation record (JSON)** in the result view, preserving the feature selection, design, transformation, test, and exclusions.
 
-There is no automatic imputation, model selection, random-slope fitting, serial residual-correlation
-model, small-sample mixed-model correction, or simultaneous confidence interval. Review the
-appropriateness of the model and the selected features before interpreting evidence of a difference.
+## Interpretation {#review-the-comparison}
 
-Open important feature rows in mzmine and save the result table and calculation record. Record the
-feature selection, design, transformation, test, and exclusions with the reported results.
+Benjamini–Hochberg adjusted p values are calculated across the valid, testable features selected for that analysis. Selecting a shortlist first changes that family; separate analyses do not share one automatic correction.
+
+There is no automatic imputation, model selection, random-slope fitting, serial residual-correlation model, small-sample mixed-model correction, or simultaneous confidence interval. Review the model and selected features before interpreting evidence of a difference.
 
 {{ git_page_authors }}

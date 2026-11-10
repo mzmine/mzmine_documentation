@@ -8,12 +8,16 @@ A chat history is useful context, but it does not replace these files.
 | Artifact | Purpose | How to preserve it |
 | --- | --- | --- |
 | mzmine project (`.mzmine`) | Feature tables, sample metadata, applied methods, and project data | Use **Project → Save project / Save project as** in mzmine. |
-| Wizard preset (`.mzmwizard`) | Reuse selected wizard settings | Ask mzassist to save the current wizard preset, or use the wizard's save controls. Recheck file selections and local paths when loading. |
-| Processing batch (`.mzbatch`) | Reuse the ordered modules and their settings | Save the actual batch from mzmine's batch editor; also inspect the applied methods of the resulting feature table. |
-| Scientific calculation table and record | Preserve results, supplied assumptions, and calculation details | In the native calculation result view, use **Save table (CSV)** and **Save calculation record (JSON)**. |
-| Reviewed shortlist/report | Preserve selected features and the review or comparison used for export | Complete the export, then check the files in the chosen folder. |
+| Wizard preset (`.mzmwizard`) | Reuse selected wizard settings | Ask mzassist to save the current wizard preset. For manual access, ask mzassist to open the applied method, then use **Presets → Save presets...** in that wizard tab. **mzwizard → Processing wizard** may open a new tab with different settings. Recheck file selections and local paths when loading. |
+| Processing batch (`.mzbatch`) | Reuse the ordered modules and their settings | Recover the batch from the completed feature table's applied methods using the path below, then save it as a `.mzbatch` file. |
+| Scientific calculation table and record | Preserve results, supplied assumptions, and calculation details | Ask mzassist to open the completed calculation in mzmine. In that result view, use **Save table (CSV)** and **Save calculation record (JSON)**. |
+| Reviewed shortlist/report | Preserve selected features and the review or comparison used for export | Ask mzassist to export the reviewed selection, then open the files it reports as completed. |
 
-See [Project handling](../module_docs/project_io/project_io.md) and
+To recover the method from a completed table, open the **Feature lists** tab in mzmine,
+right-click the table, then choose **Show feature list summary → Open in batch queue → Save**.
+This uses the table's recorded processing history. After saving, close the batch editor with **Cancel** to avoid starting another run. **Project → Batch mode** instead opens the
+current batch editor, which may contain a different method. See
+[Project handling](../module_docs/project_io/project_io.md) and
 [Batch processing](../workflows/batch_processing/batch-processing.md).
 A referencing project needs its raw files to remain accessible; a standalone project includes the
 raw data. Choose the appropriate project type before sharing or moving the analysis.
@@ -28,12 +32,15 @@ you finish editing.
 1. Confirm that the required jobs have finished and inspect the actual outputs.
 2. Save the project and method. Keep an unchanged source table when later comparisons depend on it.
 3. Export scientific calculation records and reviewed selections you need to retain.
-4. Record the mzmine version, relevant mzassist version, libraries/reference data, sample mappings,
-   units, exclusions, and the choices that affect interpretation.
+4. Ask mzassist for a methods summary including the software versions, libraries/reference data,
+   sample mappings, units, exclusions, and choices that affect interpretation. Check it against
+   the saved method and calculation records.
 
 Scientific analysis records and sharing approvals are held by the connection; saving a project does
-not replace exporting those calculation records. After disconnecting, expect to select the table
-and approve sharing again. Do not rely on an old chat's job identifier to reopen an analysis.
+not replace exporting those calculation records. After reconnecting, describe which analysis you
+want to continue. mzassist identifies the table and asks for sharing approval again before reading
+its results. Previously exported tables and calculation records remain your record
+of those completed analyses.
 
 ## Continue after interruption
 

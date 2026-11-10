@@ -1,23 +1,14 @@
-# Check an analytical batch
+# Batch diagnostics {#check-an-analytical-batch}
 
-Use batch diagnostics to inspect QC precision, reference mass and retention-time deviations,
-internal-standard responses, and possible carryover in one analytical batch. It describes the
-measurements to investigate; it does not correct data or accept/reject a batch for your laboratory.
+Batch diagnostics help you examine QC precision, reference mass and retention-time deviations, internal-standard responses, and possible carryover within one analytical batch. It highlights measurements to investigate; it does not correct data or accept or reject a batch for your laboratory.
 
-## Prepare the sequence
+## What you need {#prepare-the-sequence}
 
-Provide the injection order and confirm which injections belong to this batch. Distinguish samples,
-QCs, blanks, and standards. Check the order against the acquisition sequence; the order of rows in a
-feature table is not an injection sequence. Approve run-order sharing when requested.
+The injection order and batch membership are needed to interpret trends and carryover. Distinguish samples, QCs, blanks, and standards, and check the sequence against acquisition records: the display order of files does not establish their acquisition sequence. Carryover assessment requires the complete sequence and a blank immediately following the relevant injection; omitted injections cannot establish adjacency.
 
-For reference checks, identify the appropriate feature rows and supply expected m/z or retention
-time. For internal-standard response checks, confirm that the added amounts are comparable.
-Choose raw area/height or an existing normalized measurement deliberately.
+Reference checks need the relevant feature rows and expected m/z or retention time. Internal-standard response checks require comparable added amounts. Choose raw area, height, or an existing normalized measurement and provide method-specific alert criteria.
 
-Carryover assessment needs the complete sequence and a blank immediately following the relevant
-injection. A sequence with omitted injections cannot establish that adjacency.
-
-For example, this **illustrative sequence** supports inspection of the blank after Sample-1:
+This **illustrative sequence** supports inspection of the blank after Sample-1; it is not a recommended QC schedule or acceptance rule:
 
 | Injection order | Sample | Role |
 | --- | --- | --- |
@@ -28,27 +19,19 @@ For example, this **illustrative sequence** supports inspection of the blank aft
 | 5 | Sample-2 | Sample |
 | 6 | QC-3 | QC |
 
-Use your actual sequence and method-specific alert criteria. The example is not a recommended QC
-schedule or an acceptance rule.
+## Calculate with mzassist {#ask-mzassist}
 
-## Ask mzassist
+1. Ask mzassist to inspect the batch. For example:
 
-> Inspect this single batch using the complete injection order. Report QC precision and possible
-> carryover, and show which observations support each flag. Ask me for expected reference values or
-> alert thresholds if they are needed.
+    > Inspect this single batch using the complete injection order. Report QC precision and possible carryover, and show which observations support each flag. Ask me for expected reference values or alert thresholds if needed.
 
-## Interpret the output
+2. Let mzassist read approved existing metadata, including run order when requested. Supply missing sequence, reference, and threshold information. If needed, edit metadata under **Project → Sample metadata**; see [Sample metadata](../../module_docs/project_metadata/project_metadata.md).
+3. Confirm the proposed sequence, sample roles, measurement, and diagnostic choices in chat. Ask mzassist to calculate and open the results.
+4. Check which QC observations contribute to each statistic and inspect flagged chromatograms and reference assignments. Missing, estimated, or aggregated signals do not automatically count as detected QC observations.
+5. Use **Save table (CSV)** and **Save calculation record (JSON)** in the result view. See [Save and reproduce your work](../mzassist-saving.md).
 
-Check which QC observations contribute to each statistic. Missing, estimated, or aggregated signals
-do not automatically count as detected QC observations. Inspect flagged chromatograms and reference
-assignments before attributing a deviation to the instrument.
+## Interpretation {#interpret-the-output}
 
-A separate QC-drift request can describe abundance versus run order. It needs at least three usable
-QC injections and does not correct measurements. For a correction, configure the
-[Intensity normalizer](../../module_docs/norm_intensity/norm_intensity.md) separately and inspect the
-normalized output.
-
-Save the diagnostic table and calculation record, including the sequence and thresholds used.
-See [Save and reproduce your work](../mzassist-saving.md).
+A separate QC-drift request can describe abundance versus run order. It needs at least three usable QC injections and does not correct measurements. For correction, ask mzassist to help prepare a separate normalization step and inspect its output. The manual workflow is described in [Intensity normalizer](../../module_docs/norm_intensity/norm_intensity.md).
 
 {{ git_page_authors }}

@@ -203,12 +203,12 @@ nav:
   - AI-assisted mzmine:
       - Overview: pro/agent-assisted-mzmine.md
       - Set up mzassist: pro/mzassist-setup.md
-      - Process your first dataset: pro/mzassist-first-analysis.md
       - Data sharing and agent controls: pro/mzassist-data-sharing.md
+      - Process your first dataset: pro/mzassist-first-analysis.md
       - Build and improve a method: pro/mzassist-methods.md
       - Explore and evaluate results: pro/mzassist-results.md
       - Scientific analyses:
-          - Choose an analysis: pro/scientific-analysis.md
+          - Scientific analyses with mzassist: pro/scientific-analysis.md
           - Quantification: pro/analysis/quantification.md
           - Batch diagnostics: pro/analysis/batch-diagnostics.md
           - Study comparison: pro/analysis/study-comparison.md
