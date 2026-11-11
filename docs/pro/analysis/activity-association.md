@@ -10,6 +10,8 @@ The activity direction states whether higher or lower assay values mean greater 
 
 At least three independent units with both assay and feature measurements are needed for a correlation. Repeat measurements within a unit are averaged before pairing. Missing values do not become zero, and repeat injections do not increase the independent-unit count. This calculation does not offer the study-comparison log2 transformation option.
 
+By default, mzassist excludes **ESTIMATED** feature values and surrogate-reference-equivalent quantities from an activity association. You can explicitly request their inclusion when justified. Values marked invalid, excluded, or outside their calibration range remain unavailable.
+
 ## Calculate with mzassist {#ask-mzassist}
 
 1. Ask mzassist to associate feature measurements with the assay. For example:

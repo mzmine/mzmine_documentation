@@ -20,6 +20,8 @@ This **illustrative mapping** shows two injections of the same control sample as
 
 Measurements can be raw area, height, existing normalized values, or a compatible quantification result. Technical repeats are averaged within condition, time, and independent unit. Optional log2 transformation happens before averaging; nonpositive measurements then remain missing.
 
+By default, mzassist excludes **ESTIMATED** feature values and surrogate-reference-equivalent quantities from a study comparison. You can explicitly ask to include those estimates when that is appropriate for the question. Values marked invalid, excluded, or outside their calibration range remain unavailable either way.
+
 Descriptive output is a useful start if the design is unresolved. Supported tests include Welch/Student t tests, Mann–Whitney, paired t, one-way ANOVA, covariate-adjusted linear models, subject random-intercept mixed models, and moderated tests. Review the assumptions with mzassist to decide whether a test or model fits your study. Paired tests need complete pair mappings, independent tests need independent replicates, and ANOVA needs at least three conditions.
 
 ## Calculate with mzassist

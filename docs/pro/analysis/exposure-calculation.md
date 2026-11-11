@@ -14,7 +14,7 @@ The use scenario must match the quantified basis:
 | Amount per mass of original sample | Sample mass used per day |
 | Concentration in measured solution | Solution volume used per day |
 
-Body mass is needed when the reference is expressed per kilogram of body mass. Relevant preparation and dilution assumptions, the scenario description, and the reference value, unit, source, and version are also needed. Check that the reference applies to your question.
+Body mass is needed when the reference is expressed per kilogram of body mass. The scenario description and a reference value, unit, source URL, version, and confirmation that the reference applies to the scenario are also needed. mzassist accepts reference units of ng/day, µg/day, ng/kg/day, and µg/kg/day. Preparation and dilution corrections belong to the preceding [quantification setup](quantification.md#prepare-the-calibration), where the measured quantity is established.
 
 ## Calculate with mzassist {#ask-mzassist}
 
@@ -22,7 +22,7 @@ Body mass is needed when the reference is expressed per kilogram of body mass. R
 
     > Use this completed quantification result for the stated use scenario. Show the eligible samples, quantity basis, unit conversions, and reference source before calculating the comparison.
 
-2. mzassist checks the metadata you approved for sharing. Provide only the scenario, preparation, and reference facts it still needs.
+2. mzassist checks the completed quantification and the metadata you approved for sharing. Provide the scenario and reference facts it still needs. If sample-preparation corrections need changing, update and repeat quantification first.
 3. Confirm the proposed samples, conversions, reference, and calculation in chat. Ask mzassist to calculate and open the results.
 4. Inspect selected samples, converted quantities, units, assumptions, reference ratio, and unavailable or flagged values. Surrogate-reference-equivalent quantities remain estimates and require explicit acceptance before inclusion. Unsupported units, incompatible scenario inputs, or other flags can exclude a value from the comparison.
 5. Use **Save table (CSV)** and **Save calculation record (JSON)** in the result view, and preserve the reference source alongside them. See [Save and reproduce your work](../mzassist-saving.md).

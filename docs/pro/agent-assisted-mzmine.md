@@ -33,7 +33,9 @@ The assistant checks what your running mzmine supports before preparing a task.
 
 Open **mzassist → Agent activity** to check the connection and pending activities. Connecting does
 not start a processing job. The assistant can discover feature-table names and counts; sharing
-sample metadata or measured results requires a separate decision.
+sample metadata or measured results requires a separate decision. If the connection was turned off,
+click **Enable local connection** on this page. The **Enable local connection when mzmine starts**
+checkbox is selected by default.
 
 Use the file chooser in mzmine to keep file and folder paths out of the conversation. If you paste
 a path or sample information into chat, that text is visible to your assistant/provider.
@@ -50,7 +52,8 @@ approval in chat. You can approve or decline there. To inspect the contents priv
 “Open this sharing request in mzmine.” mzassist opens the pending review for you; you do not need
 to find a setting before making your request.
 
-In the native review, **Share acquisition metadata (file-header text)** starts unchecked. Header
+In the native review, **Share acquisition metadata (file-header text)** starts unchecked. A chat
+approval covers this summary when it is included in the request; it does not depend on that checkbox. Header
 text is not standardized and may contain names, paths, or other sensitive information. Missing or
 shortened fields do not establish that an instrument component is absent. See
 [Review a sharing request](mzassist-data-sharing.md#review-a-sharing-request) for the optional
@@ -88,8 +91,8 @@ be different processing stages for those same samples.
 
 Ask mzassist to explain why it selected a candidate and to open its chromatograms or spectra in
 mzmine. Compare peak shape, blanks, repeat measurements and annotation evidence before choosing
-features for follow-up. A library match supports an annotation; it does not confirm identity.
-See [Explore and evaluate results](mzassist-results.md).
+features for follow-up. See [Explore and evaluate results](mzassist-results.md), including
+the guidance on [interpreting measurements and annotations](mzassist-results.md#interpreting-results).
 
 mzassist can also rename or delete tables. Deletion removes the table from the current project;
 save a project copy before deleting anything you may need again.
@@ -104,17 +107,17 @@ the resulting normalized columns. A QC-drift diagnostic describes a trend; it do
 
 Searching a library compares features against existing reference spectra. Generating a library
 uses your own reference-standard measurements and a compound table. mzassist supports both tasks.
-A library-generation readiness check verifies the supplied setup; it does not create a library or
-confirm the identity of the standards. See [Library workflows](mzassist-methods.md#spectral-library-search-and-library-generation).
+See [Library workflows](mzassist-methods.md#spectral-library-search-and-library-generation) for the
+readiness check and the steps to generate and save a library.
 
 ## Limits and troubleshooting
 
 Use [Troubleshooting](mzassist-troubleshooting.md) for connection problems, missing setup files,
-changed reviews, or interrupted jobs. To take over editing, ask mzassist to pause or open
-**mzassist → Agent activity → Pause agent changes**. Submitted processing keeps running;
-ask mzassist to cancel the job if it must stop.
+changed reviews, or interrupted jobs. To take over editing, ask mzassist to pause, or open
+**mzassist → Agent activity** and click **Pause agent changes**. Submitted processing keeps
+running; ask mzassist to cancel the job if it must stop.
 
 Save the [project, method, and exported results](mzassist-saving.md) you need before ending the
-session. A chat response alone is not a saved mzmine analysis.
+session.
 
 {{ git_page_authors }}

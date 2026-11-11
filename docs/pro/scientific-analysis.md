@@ -50,7 +50,7 @@ calibration expresses an estimated quantity relative to a different reference co
 
 The guide explains what calibration information to provide, how to review the proposed fit with
 mzassist, and how to inspect the curve, independent QCs, dilution corrections and results outside
-the calibrated range. A fitted concentration does not establish identity, LOD/LOQ or method acceptance.
+the calibrated range.
 
 ## Batch diagnostics
 
@@ -59,8 +59,8 @@ retention-time deviations, internal-standard response and possible carryover. Th
 is needed to put each observation in context; a blank can support a carryover check only when its
 position after the relevant injection is known.
 
-Flags identify measurements for inspection using your method's criteria. They do not automatically
-accept a batch, prove instrument failure or correct drift.
+Flags identify measurements for inspection using your method's criteria. See the guide for
+interpreting those flags and the distinction between diagnostics and corrections.
 
 ## Study comparison
 
@@ -78,8 +78,8 @@ the family of tests. The guide describes the supported tests and their limits.
 activity across matched samples or fractions. The meaning of the assay endpoint matters: lower
 viability and higher inhibition can both represent greater activity.
 
-The result prioritizes associations for follow-up. Coeluting compounds or shared sample trends can
-produce associations, so a high ranking does not identify the active compound or establish causality.
+The guide explains how to interpret an association, including the effects of coeluting compounds
+and shared sample trends.
 
 ## Exposure calculation {#exposure-assessment}
 
@@ -87,8 +87,7 @@ produce associations, so a high ranking does not identify the active compound or
 and your stated use scenario to compare an estimated exposure with a supplied reference value.
 The guide explains quantity basis, unit conversions, eligible samples and the assumptions to review.
 
-The reference must be appropriate for the question. Being above or below it describes that particular
-calculation; it is not a safety assessment, regulatory determination or toxicological conclusion.
+The guide also explains how to choose an applicable reference and interpret the resulting ratio.
 
 ## Next steps
 

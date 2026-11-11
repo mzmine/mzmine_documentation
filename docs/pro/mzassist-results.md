@@ -51,7 +51,15 @@ Manual editing is optional: **Project → Sample metadata** opens the table in m
 A shortlist helps you choose candidates for closer inspection; it is not a count of everything
 detected in the experiment. If your goal is an inventory, state that when describing the task.
 An unavailable measurement means that no usable value is available for that sample and feature;
-it does not establish zero concentration or chemical absence.
+see [Interpreting results](#interpreting-results) before drawing a conclusion from it.
+
+## Interpreting results
+
+A feature is a measured ion signal; a compound group brings related features together. A library
+match or an ion relationship supports an annotation, while confirming a chemical identity requires
+appropriate reference evidence. An unavailable measurement is not zero concentration or proof of
+chemical absence. Use the peak shapes, detection status, MS/MS evidence and sample design to decide
+what the results support.
 
 ## Choose a calculation
 

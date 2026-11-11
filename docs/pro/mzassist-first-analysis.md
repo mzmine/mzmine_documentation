@@ -13,8 +13,8 @@ results belong to these files, rather than a general LC-MS method.
 
 Use [MassIVE dataset MSV000089249](https://doi.org/10.25345/C54B2X835),
 **GNPS_PA_M1_PA14_dataset_workshop_material**, deposited by Pierre-Marie Allard's group.
-The repository describes positive-mode UHPLC–Q Exactive Focus data from *Pseudomonas aeruginosa*
-M1 and PA14, with QC and media samples. The dataset is public and explicitly released under
+The dataset contains measurements from *Pseudomonas aeruginosa* M1 and PA14, with QC and media
+samples. It is public and explicitly released under
 **CC0 1.0 Universal** on its
 [dataset page](https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=58559b6eb6574233967ca1947ffb4029).
 No account is needed for these downloads.
@@ -36,8 +36,8 @@ select the **peak** collection, and download the four names above from **convert
 Select **metadata** for `metadata_PA.tsv`. You do not need the vendor raw files, the larger
 `ccms_peak` copies, or the complete dataset for this walkthrough.
 
-The subset gives you two sample conditions and two controls to inspect across approximately
-0–9 minutes. One injection per condition and one QC are insufficient for a replicated study
+The subset gives you two sample conditions and two controls to inspect.
+One injection per condition and one QC are insufficient for a replicated study
 comparison or a QC precision assessment. The media control is not a solvent blank, and this subset
 is not a complete injection sequence for assessing carryover.
 
@@ -68,22 +68,42 @@ signals. Optional manual inspection is under **Project → Sample metadata**.
 
 *The repository metadata covers the larger dataset; mzmine matches the rows for the four imported files.*
 
-The repository identifies the instrument as **Q Exactive Focus**, so use **Orbitrap**. Its mzML
-analyzer text is inconsistent and reports FT-ICR. mzassist can flag such a conflict; the acquisition
-record is the reason for the Orbitrap choice here.
+## Identify the acquisition
+
+Before giving mzassist the expected properties, ask:
+
+> What kind of data did we import? Inspect the polarity, instrument and analyzer information,
+> acquisition mode, ion mobility and retention-time range. Explain which properties the imported
+> files support, and flag missing or conflicting information. Check the linked MassIVE acquisition
+> record where the file headers are unclear.
+
+Compare the answer with the check below before accepting the method. This example contains a
+header discrepancy, so the acquisition record is needed to resolve the instrument choice.
+
+??? note "Check: expected dataset properties"
+
+    - **Separation and polarity:** positive-mode UHPLC–MS/MS.
+    - **Instrument/analyzer:** the [MassIVE acquisition record](https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=58559b6eb6574233967ca1947ffb4029)
+      identifies a **Q Exactive Focus**, so choose **Orbitrap**. The mzML analyzer text reports
+      **FT-ICR**, which conflicts with that record. An answer based only on that header needs correction.
+    - **Acquisition mode:** data-dependent MS/MS (**DDA**).
+    - **Ion mobility:** none in these files.
+    - **Retention-time range:** approximately **0–9 minutes** before parameter estimation.
+
+    Ask mzassist to explain and resolve any disagreement before it prepares the method.
 
 ## Prepare a simple method
 
 Tell mzassist:
 
-> These are positive-mode UHPLC–Orbitrap DDA files without ion mobility. Prepare feature detection
-> and alignment, estimate settings from all four files, and keep the result in mzmine. For this
+> Use the acquisition properties we just reviewed. Prepare feature detection and alignment,
+> estimate settings from all four files, and keep the result in mzmine. For this
 > exercise, omit library matching, lipid and formula annotation, spectral networking, normalization,
 > QC precision filtering, and external exports. Explain the remaining grouping steps and show the
 > final method before processing.
 
-Review the proposed method in chat. It should use all four files, positive polarity, no ion mobility,
-and the DDA workflow. The initial RT interval covers the full acquisition; estimation narrows it to
+Review the proposed method in chat. It should use all four files and the acquisition properties
+you checked above. The initial RT interval covers the full acquisition; estimation narrows it to
 the detected separation range. The verified run applied these values:
 
 | Setting | Applied value in this example |
@@ -113,11 +133,12 @@ You do not need to enter the values above by hand when following the mzassist ro
 Ask mzassist for a final summary of the files, settings, generated batch, and outputs. When it is
 correct, reply **“Run this batch.”** The result stays in mzmine; this method has no export destinations.
 
-In mzmine 4.11, this produces a 15-step batch covering detection, smoothing, peak resolution,
-isotope processing, alignment, gap filling, duplicate removal, correlation grouping, ion identity
-networking, and compound grouping. The last grouping steps remain even with **Apply spectral
+In mzmine 4.11, this produces a 15-step batch: data import, two mass-detection steps (MS1 and MS2),
+chromatogram building, smoothing, peak resolution, two isotope-processing steps, alignment,
+row filtering, gap filling, duplicate removal, correlation grouping, ion identity networking,
+and compound grouping. The last grouping steps remain even with **Apply spectral
 networking (FBMN/IIMN)** off: they group related ion signals, whereas that optional spectral-networking
-stage compares MS/MS spectra. Neither grouping alone establishes compound identity.
+stage compares MS/MS spectra.
 
 ![The 15-step workshop batch in mzmine](img/mzassist/workshop-batch-review-massive.jpg)
 
@@ -144,8 +165,8 @@ If mzassist needs measurements or plots to answer, review the separate
 [result-sharing request](mzassist-data-sharing.md#review-a-sharing-request). You can also keep the
 data private and inspect the table in mzmine yourself.
 
-The table may open in **Compounds** mode, which groups related ion features. Those groups are
-not confirmed chemical identifications. Ask mzassist to show the individual features, or use the
+The table may open in **Compounds** mode, which groups related ion features.
+Ask mzassist to show the individual features, or use the
 selector at the bottom of the open table to switch to **All feature rows**.
 
 ### Two features to explore
@@ -157,39 +178,39 @@ retention time** if your row IDs differ:
 > Compare their peak shapes, measurements and detection status across the four files. Explain any
 > gap-filled measurements and whether MS/MS is available.
 
-[![Two selected feature rows in the four-file workshop table](img/mzassist/workshop-feature-table-massive.jpg)](img/mzassist/workshop-feature-table-massive.jpg)
+[![Detail of the two example feature rows, showing ID, m/z, RT, area and height](img/mzassist/workshop-feature-table-detail.png)](img/mzassist/workshop-feature-table-massive.jpg)
 
-*The table is filtered to the two examples: rows 10246 and 10222. The complete result contains
-12,337 feature rows grouped into 4,311 compound rows. The four sample columns, from left to right,
-are M1, PA14, QC and media. Click the image to enlarge it.*
+*Detail of rows 10246 and 10222. The area and height columns here summarize each row; measurements
+for the individual samples are listed below. Click the image to open the full table screenshot.
+The complete result contains 12,337 feature rows grouped into 4,311 compound rows.*
 
 | Feature in this run | M1 peak height | PA14 peak height | QC peak height | Media |
 | --- | --- | --- | --- | --- |
 | m/z 300.1959, RT 4.07 min (row 10246) | 7.10 million, detected | 2.64 million, detected | 3.69 million, detected | No reported measurement |
-| m/z 503.2754, RT 4.02 min (row 10222) | 316,507, detected | No reported measurement | 55,984, estimated | No reported measurement |
+| m/z 503.2754, RT 4.02 min (row 10222) | 316,507, detected | No reported measurement | 55,984, **ESTIMATED** | No reported measurement |
 
-*Peak heights are in arbitrary intensity units. “Estimated” identifies a measurement recovered
+*Peak heights are in arbitrary intensity units. **ESTIMATED** identifies a measurement recovered
 during gap filling, rather than a peak independently found in the initial detection step.*
 
-![Processed trace of the stronger feature in the M1 sample](img/mzassist/workshop-trace-strong.png){ style="background: #111;" }
+![Processed trace of the stronger feature in the M1 sample](img/mzassist/workshop-trace-strong.png)
 
 *The stronger feature in M1, with an apex near 4.07 min. The early boundary, shoulder and tail are
 useful points to discuss with mzassist when assessing the integration. This row has MS/MS scans
-in M1, PA14 and QC. Its proposed [M+H]+ ion relationship does not identify the compound.*
+in M1, PA14 and QC.*
 
-![Processed trace of the weaker feature in the M1 sample](img/mzassist/workshop-trace-weak.png){ style="background: #111;" }
+![Processed trace of the weaker feature in the M1 sample](img/mzassist/workshop-trace-weak.png)
 
-*The weaker feature is detected in M1. No MS/MS scans were assigned to this row, so these plots
-alone cannot support a chemical identification.*
+*The weaker feature is detected in M1. No MS/MS scans were assigned to this row.*
 
-![Gap-filled trace of the weaker feature in the QC sample](img/mzassist/workshop-trace-estimated.png){ style="background: #111;" }
+![Gap-filled trace of the weaker feature in the QC sample](img/mzassist/workshop-trace-estimated.png)
 
-*The same row in QC is marked **estimated**. Its height is below the initial 140,000-unit detection
+*The same row in QC is marked **ESTIMATED**. Its height is below the initial 140,000-unit detection
 threshold; gap filling recovered a measurement at the expected location. Inspecting this trace
 helps you judge whether that estimate is useful for your question.*
 
-These are mzmine's **processed feature traces**, including the effects of smoothing and the selected
-peak boundaries. They are not full raw extracted-ion chromatograms. The plots use different intensity
+These plots show all points from mzmine's **processed feature traces**, redrawn on a light background
+for readability. They include the effects of smoothing and the selected peak boundaries;
+they are not full raw extracted-ion chromatograms. The plots use different intensity
 scales; use the values in the table to compare signal sizes. For a wider view of a boundary or nearby
 peak, ask mzassist to show the raw extracted-ion chromatogram around that retention time.
 
@@ -200,9 +221,8 @@ When reviewing a feature with mzassist, consider:
 - Is a similar signal present in the media control, and what does that imply for this sample?
 - Is MS/MS available, and does it support an annotation or only a feature for further investigation?
 
-No library matching was requested, so an unannotated feature is not a processing failure. A missing
-measurement is not zero concentration or proof of absence. Signals in M1 and PA14 are descriptive
-observations here; one injection from each condition cannot establish a reproducible biological difference.
+No library matching was requested, so an unannotated feature is expected. For the distinction between
+features, annotations and confirmed identities, see [Interpreting results](mzassist-results.md#interpreting-results).
 
 ## Save and continue
 
@@ -210,9 +230,13 @@ Ask mzassist to help preserve the project and the method actually used. To save 
 choose **Project → Save project as**, select a new filename, and choose **Standalone (large/flexible)**
 to include the four raw data files. Save the wizard preset separately if you want to reuse its settings.
 
-For the completed table's processing batch, open **Feature lists**, right-click the table, and choose
-**Show feature list summary → Open in batch queue → Save**. After saving the `.mzbatch` file, close
-that batch editor with **Cancel** to avoid starting another run.
+Recovering the completed table's processing batch replaces the current batch queue. If you need to
+keep the existing queue, open **Project → Batch mode** and click **Save** first. Then open
+**Feature lists**, right-click the completed table, choose **Show feature list summary**, and click
+**Open in batch queue**. Review any
+warning about methods that cannot be batch steps, then confirm **Overwriting batch?**. Check the
+restored steps and click **Save**. After saving the `.mzbatch` file, close that editor with **Cancel**
+to avoid starting another run.
 
 Reopen the project through **Project → Open project** and ask mzassist to check its four raw files,
 feature table and recorded methods. Follow [Save and reproduce your work](mzassist-saving.md) for

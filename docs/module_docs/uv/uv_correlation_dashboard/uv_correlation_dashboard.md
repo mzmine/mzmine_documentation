@@ -16,10 +16,15 @@ other detector features. Select an MS feature in the feature table, then compare
 with the assigned detector feature in the overlay. Inspect peak shape and retention time,
 particularly when several MS features overlap one detector peak.
 
-To change an assignment, select the intended detector feature and use **Define as correlated**.
-**Clear selected correlation** removes only the selected assignment; other assignments to the same
-MS feature remain. These controls change the correlations in the feature table. Save a project copy
-before changing assignments you may need to recover.
+To add an assignment, select the intended detector feature and click **Define as correlated**.
+Existing assignments are kept; **Already correlated** means that the selected pair is already linked.
+To replace an assignment, select the old detector feature and click **Clear selected correlation**,
+then select the replacement and click **Define as correlated**. Clearing removes only the selected
+assignment.
+
+Both actions affect the MS feature in the **currently selected raw data file**, rather than every
+sample in the feature-table row. Check that file before editing. Save a project copy before changing
+assignments you may need to recover.
 
 ## Interface
 
@@ -58,8 +63,8 @@ The additional controls are described below:
 3. **Filter MS features** sets the RT filter (**4**) of the feature table to the RT range of the
    currently selected other detector feature. This allows you to investigate all MS features that
    have their peak maximum in the RT range of the other detector feature.<br>
-   **Define as correlated** allows you to manually specify which feature should be marked as
-   correlated.<br>
+   **Define as correlated** adds a manual correlation for the selected MS feature and raw data file,
+   keeping its existing correlations.<br>
    **Clear selected correlation** removes the currently selected correlated feature from the
    selected MS feature. Note that there may be more than one correlated feature. This button only
    removes a single one.

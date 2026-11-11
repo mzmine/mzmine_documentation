@@ -7,12 +7,14 @@ Quantification converts feature responses into concentrations using a stated cal
 | Calibration | Information needed |
 | --- | --- |
 | External | Analyte feature row, calibrator samples, and concentrations with units |
-| Internal standard | Analyte and internal-standard rows, calibrator concentrations, and internal-standard concentration for each calibrator and unknown |
+| Internal standard | Analyte and internal-standard rows, calibrator concentrations, and internal-standard concentration for each calibrator, independent QC, and unknown |
 | Surrogate-reference-equivalent | Reference-standard row and calibration, plus a positive relative response factor and its source for each analyte |
 
 The response can be raw area, raw height, or an existing normalized measurement. The calibration needs at least two distinct concentrations. Regression can be unweighted, 1/x, or 1/x², with the intercept fitted or fixed at zero. mzassist helps you review these choices before calculating. Zero-concentration points cannot be used with 1/x or 1/x² weighting. A fitted line alone does not establish that a calibration is suitable.
 
-Independent QC samples with expected concentrations can assess recovery. Calibrator and QC assignments must be distinct from unknowns. Exclusions and preparation details such as dilution, extraction volume, sample mass, or device count may be needed to express the final quantity. A generic metadata column does not automatically configure calibration. Internal-standard concentrations for unknowns must be supplied explicitly; mzmine does not substitute the calibrator amount.
+Independent QC samples with expected concentrations can assess recovery. Calibrator and QC assignments must be distinct; every remaining sample is treated as an unknown. Exclusions and preparation details such as dilution, extraction volume, sample mass, or device count belong to this quantification setup when they are needed to express the final quantity. A generic metadata column does not automatically configure calibration. Internal-standard concentrations must be supplied for calibrators, independent QCs, and unknowns; mzmine does not substitute the calibrator amount.
+
+For the calibration and reported sample concentration, mzmine uses only detected or manually integrated measurements that are unflagged, finite, and non-negative. Gap-filled (**ESTIMATED**) responses are unavailable for calibrators, independent QCs, and unknowns. Other measurements can still be shown for inspection, but they are not used to fit the calibration or calculate a concentration.
 
 For example, this **illustrative input table** shows the information for an external calibration:
 

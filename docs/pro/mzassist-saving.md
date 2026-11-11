@@ -13,10 +13,13 @@ A chat history is useful context, but it does not replace these files.
 | Scientific calculation table and record | Preserve results, supplied assumptions, and calculation details | Ask mzassist to open the completed calculation in mzmine. In that result view, use **Save table (CSV)** and **Save calculation record (JSON)**. |
 | Reviewed shortlist/report | Preserve selected features and the review or comparison used for export | Ask mzassist to export the reviewed selection, then open the files it reports as completed. |
 
-To recover the method from a completed table, open the **Feature lists** tab in mzmine,
-right-click the table, then choose **Show feature list summary → Open in batch queue → Save**.
-This uses the table's recorded processing history. After saving, close the batch editor with **Cancel** to avoid starting another run. **Project → Batch mode** instead opens the
-current batch editor, which may contain a different method. See
+Recovering a table's method replaces the current batch queue. If you need to keep the existing queue,
+open **Project → Batch mode** and click **Save** first. Then open the **Feature lists** tab in mzmine,
+right-click the completed table, choose **Show feature list summary**, and click **Open in batch queue**.
+Review any warning about recorded methods that cannot be used as batch steps, then confirm
+**Overwriting batch?**. Check the restored steps and click **Save** to write the `.mzbatch` file.
+Close the editor with **Cancel** to avoid starting another run. **Project → Batch mode** now shows
+the restored queue. See
 [Project handling](../module_docs/project_io/project_io.md) and
 [Batch processing](../workflows/batch_processing/batch-processing.md).
 A referencing project needs its raw files to remain accessible; a standalone project includes the

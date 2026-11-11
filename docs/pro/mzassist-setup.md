@@ -26,15 +26,17 @@ different platform will not resolve that problem.
 ## Claude Desktop
 
 1. In mzmine, open **mzassist → Set up mzassist** and select **Claude Desktop**.
-2. Click **Open connector installer** and complete the installation in Claude Desktop.
-   This installs the connection to mzmine. If the package does not open automatically, click
+2. On macOS or Windows, click **Open connector installer** and complete the installation in Claude
+   Desktop. On Linux, click **Show connector** to reveal the `.mcpb` file, then import it manually
+   using the settings below. This installs the connection to mzmine.
+   If you need to locate the package, click
    **Show plugin ZIP** in the same mzmine setup window. The folder it opens contains both the
    plugin ZIP and the connector installer (`.mcpb`). In **Claude Settings → Desktop app**, click
    **Manage** beside **Extensions**, then choose **Advanced settings → Install extension** and
    select that `.mcpb` file.
    Older Claude versions may have an **Extensions** item directly in Settings.
 3. Back in mzmine, click **Show plugin ZIP**. In Claude, open
-   **Customize → Plugins → Add → Upload plugin**, select `mzassist-plugin.zip` without extracting
+   **Customize → Plugins → + Add → Upload plugin**, select `mzassist-plugin.zip` without extracting
    it, and click **Upload**. When updating, choose **Replace** for the existing mzassist plugin.
 4. Check that the **mzassist** desktop extension and **mzassist plugin** are both enabled and
    have the matching version. Restart Claude Desktop and start a new chat.
@@ -48,7 +50,10 @@ Claude's menu labels can change between versions. Use the help link in the mzmin
 [Claude's plugin instructions](https://support.claude.com/en/articles/13837440-use-plugins-in-claude)
 if the upload option has moved.
 
-## ChatGPT desktop or Codex
+## ChatGPT desktop / Work / Codex {#chatgpt-desktop-or-codex}
+
+[Work](https://learn.chatgpt.com/docs/get-started-with-work) is ChatGPT's mode for completing tasks
+with files and tools. For mzassist, use Work or Codex in the desktop app on the computer running mzmine.
 
 1. Open **mzassist → Set up mzassist** and choose **ChatGPT desktop / Work / Codex**.
 2. Click **Prepare plugin**. This makes the included package available to the assistant's
@@ -64,7 +69,8 @@ See also [OpenAI's plugin installation guide](https://learn.chatgpt.com/docs/plu
 
 ## Check the connection
 
-In mzmine, open **mzassist → Agent activity** and enable the local connection if it is off.
+The local connection is on by default. In mzmine, open **mzassist → Agent activity**; if it was
+disconnected, click **Enable local connection** in that tab.
 In a new assistant chat, ask:
 
 > Connect to mzmine and tell me which instance you connected to. Do not start an analysis yet.

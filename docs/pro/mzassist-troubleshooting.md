@@ -8,7 +8,7 @@ If mzmine itself cannot open the data or run the method, resolve that problem in
 | Symptom | What to check |
 | --- | --- |
 | No mzassist menu | Confirm the selected account in [Users management](../services/users.md). The connection requires an Academic, Pro, or Pro trial account and an mzmine installation that includes mzassist. |
-| The assistant cannot find mzmine | Keep both applications on the same computer. Open **mzassist → Agent activity → Enable local connection** in mzmine and confirm that the mzassist plugin/connector is enabled in your chat app. |
+| The assistant cannot find mzmine | Keep both applications on the same computer. Open **mzassist → Agent activity**, then click **Enable local connection**. Confirm that the mzassist plugin/connector is enabled in your chat app. If you previously disconnected, select **Enable local connection when mzmine starts** to restore the normal startup behavior. |
 | Several mzmine instances appear | Choose the instance containing the project you intend to use. |
 | The assistant still has old tools after an update | Update the included mzassist packages, restart the assistant, and start a new chat. |
 | A documented task is unavailable | Check the installed mzmine version and account access. Ask the assistant which tasks that installation supports; a failed documentation search is not an availability check. |
@@ -39,7 +39,7 @@ version, and setup message when asking for support. Do not substitute packages f
 | --- | --- |
 | The job is still running | Ask mzassist for progress, or open **mzassist → Agent activity** and select the processing entry. |
 | Nothing new starts after manual inspection | Tell mzassist you are ready to continue, or click **Resume agent changes** under **mzassist → Agent activity** if changes are paused. |
-| Processing continued after disconnecting | Submitted mzmine tasks can continue locally. Reconnect through **mzassist → Agent activity → Enable local connection**, then ask mzassist to cancel the specific job. |
+| Processing continued after disconnecting | Submitted mzmine tasks can continue locally. Open **mzassist → Agent activity**, click **Enable local connection**, then ask mzassist to cancel the specific job. |
 | A canceled job left tables behind | Ask mzassist what completed and how to continue. Cancellation does not remove outputs from completed steps. |
 | No file appears after choosing an export option | Confirm that export actually ran and finished. Check the destination and reported output files. |
 | A reviewed export fails after editing the table | Ask mzassist to use the updated table and show a new sharing/export review. |
