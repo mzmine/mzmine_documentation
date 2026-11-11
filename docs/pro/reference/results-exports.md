@@ -4,7 +4,9 @@ This reference explains reviewed result sharing and exports. See [agent-assisted
 
 ## Inputs and prerequisites
 
-`feature-table-management`, `result-features`, `result-compounds`, `result-selection-review`, `result-evaluation`, `result-grouping`, `result-batch-quality`, `feature-signal`, `batch-drift`, `result-chat-approval`, and `dashboard-navigation` use an approved feature-table scope. At most two feature tables can be actively shared (eight scopes are retained). Result export needs an existing output directory and an approved, current snapshot.
+`result-features`, `result-compounds`, `result-selection-review`, `result-evaluation`, `result-grouping`, `result-batch-quality`, `feature-signal`, `batch-drift`, `result-chat-approval`, and `dashboard-navigation` use an approved feature-table scope. At most two feature tables can be actively shared (eight scopes are retained). Result export needs an existing output directory and an approved, current snapshot.
+
+Feature-table listing, opening, renaming, and deleting use current project/table identity rather than a result-sharing scope. Listing exposes table names and counts. Sharing measured rows and evidence requires separate approval.
 
 ## Parameters and validation
 

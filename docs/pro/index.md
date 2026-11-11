@@ -1,28 +1,23 @@
 # mzmine Pro reference
 
-Use this reference for the additional workflows and features included in the mzio distribution of
-mzmine. It covers interactive use, batch processing, and assistance through the local MCP connector.
-The [general mzmine documentation](../index.md) also applies to the Community modules included in
-this distribution.
+mzmine Pro provides additional workflows for MRM data and detectors such as UV/DAD.
+This page helps you find those tools and their processing guides. For help from an AI assistant,
+start with [mzassist](agent-assisted-mzmine.md).
 
-!!! info "Version and availability"
+!!! info "Choose your mzmine version"
 
-    Use the website's version selector to read documentation for your mzmine release. Availability
-    depends on the installed application's menus, account services, and available connector
-    capabilities. When using a bundled knowledge pack, use the documentation snapshot supplied with
-    your build. A missing search result does not establish that a feature is unavailable.
+    Use the website's version selector to read the guide for your installed release.
+    Download installers and portable packages from [GitHub Releases](https://github.com/mzmine/mzmine/releases/latest).
 
 ## Workspaces and access {#workspaces-and-access}
 
-The **PRO (complete)** workspace brings the standard processing menus together with the additional
-**Other detectors** and **MRM** menus. Individual tools and workflow choices depend on the services
-available to the active user. Seeing the workspace name alone does not confirm access to every tool.
-Sign in and select the intended account in [Users management](../services/users.md) when a tool is
-missing or an operation reports that a service is required.
+The **PRO (complete)** workspace groups the standard processing menus with **Other detectors** and
+**MRM**. To use those additional workflows, the corresponding features must be enabled for your
+account. If a workflow is missing, check the selected account in [Users management](../services/users.md).
+Changing the workspace does not change your account's access.
 
-The MRM workflow and the other-detector workflow have separate service requirements. The local MCP
-connection requires an active Academic, Pro, or Pro trial account in the mzio build. Availability of a
-GUI module does not by itself mean that a chat agent can configure or execute that module.
+To use **mzassist**, sign in with an Academic, Pro, or Pro trial account, then open
+**mzassist → Set up mzassist**. Follow the [setup guide](mzassist-setup.md) to connect your assistant.
 
 ## Choose a workflow {#choose-a-workflow}
 
@@ -69,31 +64,24 @@ the [Pro workflow overview](workflows.md#mrm) for the wizard's acquisition restr
 
 ## Agent assistance and analysis {#agent-assistance-and-analysis}
 
-The general mzmine helper can explain any documented mzmine feature, including a GUI-only feature.
-Execution through the connector depends on what the running application actually exposes.
-
-The [agent guide](agent-assisted-mzmine.md) covers connection setup, private import, metadata,
-workflow configuration, estimation and optimization, review and execution, jobs, presets,
-navigation, feature-table management, result sharing, library searches, and exports.
-The [scientific-analysis reference](scientific-analysis.md) explains supported calculations and their
-assumptions. Normalization uses the native
+Use [mzassist](agent-assisted-mzmine.md) to ask about settings, build a processing method, or inspect
+results. The guide explains the tasks you can request and which steps to review in mzmine.
+[Scientific analyses](scientific-analysis.md) cover quantification, QC diagnostics, study comparisons,
+activity associations, and exposure calculations. For normalization, see the native
 [Intensity normalizer](../module_docs/norm_intensity/norm_intensity.md).
 
-Online services reached through mzconnect have their own account and data-sharing requirements.
-Public documentation or inclusion of a tool in a menu does not establish entitlement to an online
-service or transfer experimental data to it.
+If your workflow also uses mzconnect or another online service, follow that service's account and
+data-sharing instructions before submitting data.
 
 ## Documentation and citations {#documentation-and-citations}
 
-The helper searches the documentation snapshot bundled with its knowledge pack. Answers should
-identify the page and relevant section, with a link to that revision of the public documentation.
-The same material is available to the helper offline. An offline citation can still identify the
-document even when its web link cannot be opened.
+mzassist includes a local copy of the mzmine documentation. You can ask the assistant to cite the
+page supporting an explanation. Check the cited version when its instructions differ from your
+installation. Having documentation available locally does not make your AI assistant an offline
+service; its connection and data-handling requirements still apply.
 
-For questions about your installed build, the helper should distinguish documented behavior from
-the capabilities reported by that application. A recommendation or interpretation should explain
-its assumptions. Documentation does not replace checking experimental suitability or reviewing the
-actual processing outputs.
+When reporting an analysis, record the mzmine version and the method actually used. Follow the
+citation recommendations for the processing modules in your method.
 
 ---
 
