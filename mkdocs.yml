@@ -277,8 +277,6 @@ extra:
 hooks:
   # lets the version selector keep the reader on the same page, see the file
   - hooks/sitemap_root_url.py
-  # Keep agent implementation references available by URL, outside website search.
-  - hooks/implementation_reference_visibility.py
 
 plugins:
   - search
