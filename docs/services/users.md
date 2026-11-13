@@ -249,9 +249,16 @@ The most important commands on Windows are:
 # run headless with a CLI token
 "C:\Program Files\mzmine\mzmine_console.exe" -cli-token "<TOKEN>" -batch "D:\batch\my_batch.mzbatch"
 
+# end the run and return the license after at most 3 hours
+"C:\Program Files\mzmine\mzmine_console.exe" -cli-token "<TOKEN>" -batch "D:\batch\my_batch.mzbatch" -max-runtime 3h
+
 # use an offline license file
 "C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser4" -batch "D:\batch\my_batch.mzbatch"
 ```
+
+In command-line mode, mzmine returns the license when the batch finishes. Use
+[-max-runtime](../commandline_tool.md#max-runtime) to end the batch run, return the license, and 
+quit mzmine early after a maximum runtime.
 
 ### CLI tokens for pipelines {#cli-tokens}
 
@@ -270,6 +277,14 @@ Good to know:
 - A token stays valid until you revoke it or it is unused for 30 days. Revoke it in the account
   console under **Account security → Device activity** by signing out the session named
   `mzio pipeline / <name>`.
+
+!!! info "Limit the runtime of pipeline runs"
+    Add `-max-runtime` to end a CLI batch run after a maximum runtime, e.g., `-max-runtime 3h`. mzmine then
+    cancels all tasks, returns the license to the pool, and exits with exit code 124. This can be 
+    useful in pipelines or AWS lambda runs where the container has a maximum runtime/timeout; 
+    then set the mzmine -max-runtime a few minutes lower. Otherwise, mzmine may be force quit by 
+    the container which may hold on to the license for the remainder of its claim time. See
+    [Limiting the runtime](../commandline_tool.md#max-runtime).
 
 
 !!! warning
