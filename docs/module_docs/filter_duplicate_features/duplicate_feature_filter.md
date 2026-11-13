@@ -6,6 +6,12 @@
 
 This filter can help eliminate misaligned feature list rows after the gap-filling process. 
 
+!!! tip
+
+    For GC-EI data after spectral deconvolution, use the
+    [GC-EI duplicate row filter](../filter_duplicate_features_gc_ei/gc-ei-duplicate-filter.md). It
+    also compares the deconvoluted spectra and finds duplicates with different quantifier ions.
+
 It has three different **modes**:
 
 - **Old average (the old filter)**:
