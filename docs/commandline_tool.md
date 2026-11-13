@@ -32,6 +32,38 @@ Use **-list-users** to print all users available on this computer together with 
     in again via the graphical user interface, **-login**, or **-cli-token** to create a new user
     file.
 
+## Limiting the runtime {#max-runtime}
+
+Use **-max-runtime** together with **-batch** to end a batch run after a maximum runtime, for
+example to stay within the time limit of a job scheduler or a cloud job like AWS lambda. 
+When the time is reached, mzmine
+
+- cancels all running tasks,
+- returns the claimed license to the license pool
+- exits with exit code **124**.
+
+The runtime is measured from the start of mzmine, so the startup count towards it. 
+Provide a number with a unit **d** (days), **h** (hours), **m** (minutes), or **s** (seconds),
+for example `90s`, `45m`, `2h`, `1.5h`, or `1d`. Units can be combined, like `1h30m`, or
+`"1h 30m"` in quotes. A number without unit is read as seconds.
+An invalid value stops mzmine with an error message before any processing. Without **-batch**, the
+argument is ignored with a warning.
+
+| Exit code | Meaning                                       |
+|:----------|:----------------------------------------------|
+| 0         | the batch finished successfully               |
+| 1         | the batch failed or mzmine could not start it |
+| 124       | the maximum runtime was reached               |
+
+!!! warning
+    A run that reaches the maximum runtime is incomplete. Steps that did not finish, including
+    exports at the end of the batch, produce no results. Leave enough margin for your data.
+
+!!! tip
+    When a job scheduler (e.g., SLURM) or a cloud job enforces a time limit, set **-max-runtime** a
+    few minutes below that limit. A process that is killed from outside may not be able to return
+    its license, which then stays claimed until its claim expires.
+
 
 ## Windows
 
@@ -51,6 +83,11 @@ An easy way to start mzmine with arguments is to create a shortcut to the mzmine
 **Run headless with a CLI token (no interactive login)**
 ```
 "C:\Program Files\mzmine\mzmine_console.exe" -cli-token "TOKEN" -batch "D:\batch\my_batch_file.mzbatch" -input "D:\Data\*.mzML" -output "D:\Results\basename"
+```
+
+**End the run after at most 3 hours, cancel all tasks and return the license**
+```
+"C:\Program Files\mzmine\mzmine_console.exe" -cli-token "TOKEN" -batch "D:\batch\my_batch_file.mzbatch" -max-runtime 3h
 ```
 
 
@@ -97,6 +134,9 @@ If mzmine was installed (see instructions) correctly, run the code below to star
 # run headless with a CLI token
 /opt/mzmine/bin/mzmine -cli-token "<TOKEN>" -batch /path/to/batch_file.mzbatch
 
+# end the run after at most 3 h 50 min, e.g., within a 4 h job time limit
+/opt/mzmine/bin/mzmine -cli-token "<TOKEN>" -batch /path/to/batch_file.mzbatch -max-runtime 3h50m
+
 # or login in the browser once, then run a batch
 /opt/mzmine/bin/mzmine -login
 /opt/mzmine/bin/mzmine -batch /path/to/batch_file.mzbatch
@@ -113,6 +153,7 @@ If mzmine was installed (see instructions) correctly, run the code below to star
 | -login                     | no argument                                              | Use the command-line to login to a user. This will open the login website in the system internet browser, if supported. After successful login, a user file will be copied to your system USER directory in /.mzmine/users/. And the current user will be saved to the configuration. The created user file can be accessed with the -user argument on the next startup. Without -batch, mzmine closes again after the login.                                                                                                                                                      |                 |
 | -list-users                | no argument                                              | List all users available on this system. The users are read from the system USER directory /.mzmine/users/.                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                 |
 | -b and -batch              | a path, e.g., "D:\batch.mzbatch"                         | Path to batch file that will be run in command-line mode.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |                 |
+| -max-runtime               | a duration, e.g., 45m, 2h, 1.5h, 1h30m, 1d               | Only with -batch: maximum runtime of mzmine, measured from its start. When the time is reached, mzmine cancels all tasks, returns the claimed license to the license pool and exits with exit code 124. Provide a number with a unit d, h, m, or s. Units can be combined, e.g., 1h30m. A number without unit is read as seconds. See [Limiting the runtime](#max-runtime).                                                                                                                                                                                                       |                 |
 | -i and -input              | a txt file or glob pattern, e.g., "D:\Data\*.mzML"       | input data files. Either defined in a .txt text file with one file per line or by glob pattern matching. To match all .mzML files in a path: -i "D:\\Data\\\*.mzML"                                                                                                                                                                                                                                                                                                                                                                                                                  |                 |
 | -l and -libraries          | a txt file or glob pattern, e.g., "D:\Data\*.json"       | spectral library files. Either defined in a .txt text file with one file per line or by glob pattern matching. To match all .json or .mgf files in a path: -libraries "D:\\Data\\\*.json"                                                                                                                                                                                                                                                                                                                                                                                            |                 |
 | -o and -output             | An output path and base filename, e.g., "D:\basename"    | The base file name will be extended by default module names to export all files.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |                 |
