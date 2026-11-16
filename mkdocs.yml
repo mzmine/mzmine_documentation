@@ -200,9 +200,22 @@ nav:
       - Workflow optimization: workflows/optimization/workflow_optimization.md
       - Pro workflows: pro/workflows.md
 
-  - Agentic workflows:
-      - Agent-assisted mzmine: pro/agent-assisted-mzmine.md
-      - Scientific analysis: pro/scientific-analysis.md
+  - AI-assisted mzmine:
+      - Overview: pro/agent-assisted-mzmine.md
+      - Set up mzassist: pro/mzassist-setup.md
+      - Data sharing and agent controls: pro/mzassist-data-sharing.md
+      - Process your first dataset: pro/mzassist-first-analysis.md
+      - Build and improve a method: pro/mzassist-methods.md
+      - Explore and evaluate results: pro/mzassist-results.md
+      - Scientific analyses:
+          - Scientific analyses with mzassist: pro/scientific-analysis.md
+          - Quantification: pro/analysis/quantification.md
+          - Batch diagnostics: pro/analysis/batch-diagnostics.md
+          - Study comparison: pro/analysis/study-comparison.md
+          - Activity association: pro/analysis/activity-association.md
+          - Exposure calculation: pro/analysis/exposure-calculation.md
+      - Save and reproduce your work: pro/mzassist-saving.md
+      - Troubleshooting: pro/mzassist-troubleshooting.md
 
   - Tools:
       - SIMSEF scheduler: module_docs/tools_simsef/simsef.md

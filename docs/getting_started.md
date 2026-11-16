@@ -100,6 +100,12 @@ from the main menu or the mzmine landing page. The wizard guides you through ins
 selection, parameter configuration, and full workflow execution with minimal effort — ideal for
 standard LC-MS, LC-IMS-MS, GC-MS, and MS imaging datasets.
 
+## Work with an AI assistant
+
+Use [mzassist](pro/agent-assisted-mzmine.md) to connect your assistant to mzmine for help with
+processing methods and result review. Start with [Set up mzassist](pro/mzassist-setup.md), then
+follow the [public workshop example](pro/mzassist-first-analysis.md).
+
 ## Workflows
 
 Ready to process? Choose a workflow matching your instrument setup and analytical goals:
