@@ -3,7 +3,7 @@
 !!! info
     To process data from other detectors, the Other detector service of mzmine is required. This feature
     is included in the mzmine PRO subscription. Academic program and other users can reach out to
-    inquire [access options](https://mzio.io/#contact).
+    inquire [access options](https://mzio.io/contact).
 
 Commonly, a shift in the observed retention time is observed between the MS detector and other
 detectors due to different lengths in flow path.

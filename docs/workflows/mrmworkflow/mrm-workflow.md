@@ -3,7 +3,7 @@
 !!! warning
     To process multiple reaction monitoring (MRM) data, the MRM service of mzmine is required. This feature is
     included in the mzmine PRO subscription. Academic program and other users can reach out to inquire 
-    [access options](https://mzio.io/#contact). 
+    [access options](https://mzio.io/contact). 
 
 In contrast to HRMS data, MRM acquisitions are usually stored as chromatograms of specific transitions,
 e.g., _m_/_z_ 413 -> 96 instead of full spectra. This data format needs dedicated processing because

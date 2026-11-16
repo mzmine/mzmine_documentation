@@ -3,7 +3,7 @@
 !!! warning
     To process multiple reaction monitoring (MRM) data, the MRM service of mzmine is required. This feature is
     included in the mzmine PRO subscription. Academic program and other users can reach out to inquire
-    [access options](https://mzio.io/#contact).
+    [access options](https://mzio.io/contact).
 
 The MRM aligner offers feature alignment that is specific to the MRM workflow. This aligner allows the option to only align features that only contain the same MRMs (see [Only allow matches to same MRM](#only-allow-matches-to-same-mrm)).
 

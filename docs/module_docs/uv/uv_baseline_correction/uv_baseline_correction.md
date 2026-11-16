@@ -9,7 +9,7 @@
 
     To process data from other detectors, the Other detector service of mzmine is required. This feature
     is included in the mzmine PRO subscription. Academic program and other users can reach out to
-    inquire [access options](https://mzio.io/#contact).
+    inquire [access options](https://mzio.io/contact).
 
 Baseline correction is a useful tool to correct for large drifts in baseline during chromatographic
 separation. However, it can be tricky to optimize the baseline correction.
