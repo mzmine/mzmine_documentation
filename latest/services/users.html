@@ -7765,9 +7765,15 @@ mode. See <a href="../commandline_tool.html">CLI tools</a> for more information.
 # run headless with a CLI token
 "C:\Program Files\mzmine\mzmine_console.exe" -cli-token "&lt;TOKEN&gt;" -batch "D:\batch\my_batch.mzbatch"
 
+# end the run and return the license after at most 3 hours
+"C:\Program Files\mzmine\mzmine_console.exe" -cli-token "&lt;TOKEN&gt;" -batch "D:\batch\my_batch.mzbatch" -max-runtime 3h
+
 # use an offline license file
 "C:\Program Files\mzmine\mzmine_console.exe" -user "D:\user\testuser.mzuser4" -batch "D:\batch\my_batch.mzbatch"
 </code></pre></div>
+<p>In command-line mode, mzmine returns the license when the batch finishes. Use
+<a href="../commandline_tool.html#max-runtime">-max-runtime</a> to end the batch run, return the license, and 
+quit mzmine early after a maximum runtime.</p>
 <h3 id="cli-tokens">CLI tokens for pipelines<a class="headerlink" href="#cli-tokens" title="Permanent link">&para;</a></h3>
 <p>A <strong>CLI token</strong> (available since mzmine 4.11) lets headless mzmine runs (for example CI pipelines, cloud jobs or scheduled
 processing on a server) use your licenses without being tied to a fixed computer.</p>
@@ -7785,6 +7791,15 @@ processing on a server) use your licenses without being tied to a fixed computer
   console under <strong>Account security → Device activity</strong> by signing out the session named
   <code>mzio pipeline / &lt;name&gt;</code>.</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Limit the runtime of pipeline runs</p>
+<p>Add <code>-max-runtime</code> to end a CLI batch run after a maximum runtime, e.g., <code>-max-runtime 3h</code>. mzmine then
+cancels all tasks, returns the license to the pool, and exits with exit code 124. This can be 
+useful in pipelines or AWS lambda runs where the container has a maximum runtime/timeout; 
+then set the mzmine -max-runtime a few minutes lower. Otherwise, mzmine may be force quit by 
+the container which may hold on to the license for the remainder of its claim time. See
+<a href="../commandline_tool.html#max-runtime">Limiting the runtime</a>.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Anyone holding the token can use your licenses, treat it like a password, and put it in a secrets store.</p>
@@ -7920,7 +7935,7 @@ your email address again.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 2, 2026 17:36:19 UTC">November 2, 2026 17:36:19</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 13, 2026 22:10:36 UTC">November 13, 2026 22:10:36</span>
   </span>
 
     
