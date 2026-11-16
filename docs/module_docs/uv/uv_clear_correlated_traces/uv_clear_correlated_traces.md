@@ -4,7 +4,7 @@
 
     Processing data from other detectors requires the Other detector service of mzmine. This feature
     is included in the mzmine Pro subscription. Academic program and other users can inquire about
-    [access options](https://mzio.io/#contact).
+    [access options](https://mzio.io/contact).
 
 :material-menu-open: **Feature list methods → Other detectors → Clear correlated traces (Other detectors)**
 

@@ -4,7 +4,7 @@
 
     To process multiple reaction monitoring (MRM) data, the MRM service of mzmine is required. This feature is
     included in the mzmine PRO subscription. Academic program and other users can reach out to inquire
-    [access options](https://mzio.io/#contact).
+    [access options](https://mzio.io/contact).
 
 The Export MRMs to TSV module exports MRM transition measurements from an MRM feature list to a
 tab-separated (`.tsv`) or comma-separated (`.csv`) table. Run
