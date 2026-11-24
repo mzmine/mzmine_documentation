@@ -31,3 +31,5 @@ jobs:
       - name: Test Build
         run: |
           mkdocs build -s
+      - name: Check redirects for pre-versioning guide URLs
+        run: python .github/scripts/generate-legacy-redirects.py
