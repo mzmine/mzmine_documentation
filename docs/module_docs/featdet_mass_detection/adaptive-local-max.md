@@ -25,13 +25,6 @@ options of the data import. It only processes profile data.
     The detector is in beta. It was developed on time-of-flight (TOF) profile data, and the
     saturation handling was benchmarked on Agilent 6560 drift tube IMS data.
 
-## Recommended citations
-
-!!! info
-
-    When using mzmine for your work, please consider citing:<br>
-    Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.
-
 ---
 
 ## Parameters
@@ -67,10 +60,10 @@ The intensities and m/z values are always calculated from the raw, unsmoothed da
 
 !!! note
 
-    Smoothing moves the peak edges, and the asymmetry decision counts the points up to the
-    edges (see [Algorithm](#algorithm)). Turning smoothing on or off can therefore switch a peak
-    between the parabola and the weighted centroid and change its m/z slightly, even though the
-    m/z is calculated from the raw data in both cases.
+    Smoothing moves the peak edges. The m/z estimator only depends on the edges if a peak does
+    not drop below 10 % of its apex before an edge (see [Algorithm](#algorithm)), so turning
+    smoothing on or off rarely changes the m/z. It can change for overlapping peaks, whose valley
+    is split differently.
 
 #### Saturation threshold _(Optional)_
 
@@ -135,9 +128,14 @@ is used.
 2. **Weak peak → weighted centroid.** Peaks below 1 % of the base peak intensity of the spectrum
    always get the weighted centroid. Fits are unstable at low signal-to-noise, and the bias of the
    centroid is small there.
-3. **Asymmetric peak → apex parabola.** The detector counts the data points between the apex and
-   each edge (all points, including zero and low-intensity points). A peak is asymmetric if the
-   larger count is at least 1.5 × the smaller count, or if the apex lies on an edge.
+3. **Asymmetric peak → apex parabola.** The detector measures the width of each side of the peak
+   at 10 % of the apex height: from the apex position (vertex of the parabola through the apex and
+   its two neighbors) to the m/z where the raw profile drops below 10 %, interpolated linearly
+   between the two points around it. A peak is asymmetric if the wider side is at least 1.5 × the
+   narrower side, or if one side does not drop below 10 % before its edge (e.g., the apex lies on
+   an edge or the peak overlaps its neighbor). The low level catches TOF tails that only show at
+   the bottom of the peak, and the widths do not depend on how far the edges reach into the
+   baseline.
 4. **Otherwise → weighted centroid.** Linear intensity-weighted mean m/z of the points above 40 %
    of the apex, within a window that is symmetric around the apex (as many points on each side as
    the shorter side has).
@@ -152,11 +150,13 @@ outside the peak edges.
 
 ![Apex parabola of an asymmetric peak](adaptive-local-max-parabola.svg)
 
-_Bruker timsTOF profile spectrum (urine, MS1). The peak has 12 points to its left edge and 6 to its
-right edge, so it counts as asymmetric. The weighted centroid (dashed) is pulled into the tail to
-higher m/z. The parabola (orange) through the 5 apex points (blue) places the m/z at 310.2007, 1.2
-ppm below the weighted centroid. Most of the left points are low-intensity points down to the left
-edge: the decision counts points to the edges, not the visible tail._
+_Simulated TOF profile peak of caffeine [M+H]⁺ (m/z 195.0877) with a strong tail to higher m/z,
+sampled every 2.2 mDa. At 10 % of the apex (dotted line), the right side is about twice as wide as
+the left side, so the peak counts as asymmetric. The weighted centroid (dashed) uses all points
+above 40 % of the apex (horizontal dashed line), which includes several tail points on the right side. It is
+pulled into the tail and reports m/z 195.0898 (+11.2 ppm). The parabola (orange) through the 5 apex points (blue)
+reports m/z 195.0879 (+1.3 ppm). Both values were calculated by the detector with the default
+parameters._
 
 ### EMG fit of saturated peaks
 
