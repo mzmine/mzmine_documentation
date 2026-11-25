@@ -14,7 +14,7 @@
         <link rel="prev" href="mass-detection.html">
       
       
-        <link rel="next" href="FTMS-shoulder-peak-filter.html">
+        <link rel="next" href="adaptive-local-max.html">
       
       
         
@@ -1694,6 +1694,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adaptive-local-maximum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive local maximum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recursive-threshold" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1775,6 +1786,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="adaptive-local-max.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adaptive local maximum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -7652,6 +7691,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adaptive-local-maximum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive local maximum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recursive-threshold" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -7756,6 +7806,7 @@
 <li>Centroid </li>
 <li>Exact mass</li>
 <li>Local maxima</li>
+<li><a href="adaptive-local-max.html">Adaptive local maximum</a></li>
 <li>Recursive threshold</li>
 <li>Wavelet transform</li>
 <li>Auto</li>
@@ -7840,6 +7891,11 @@ intensities.</p>
    <strong>Intensity calculation</strong> setting.</p>
 </li>
 </ol>
+<h2 id="adaptive-local-maximum"><strong>Adaptive local maximum</strong><a class="headerlink" href="#adaptive-local-maximum" title="Permanent link">&para;</a></h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> This mass detector is suitable for profile (continuous) MS data.</p>
+<p>Same peak detection as <strong>Local maxima</strong>, but asymmetric and detector-saturated peaks get a fitted
+apex m/z instead of the weighted centroid. See
+<a href="adaptive-local-max.html">Adaptive local maximum mass detector</a>.</p>
 <h2 id="recursive-threshold"><strong>Recursive threshold</strong><a class="headerlink" href="#recursive-threshold" title="Permanent link">&para;</a></h2>
 <p>The algorithm finds all m/z ranges within the given limit in a recursive way. </p>
 <p>Initially, it looks at the whole range of data points. If the m/z width of this range is not within given limits, a minimum data point is found and used to split the range in two parts. The same algorithm is then applied recursively on each part. Recursion continues until all m/z ranges fitting into the given width limits are found. </p>
@@ -7877,7 +7933,7 @@ The size of the window used to calculated the wavelet signal. When the size of t
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> The Wavelet transform mass detector is particularly suitable for low-resolution and noisy data.</p>
 <h2 id="auto"><strong>Auto</strong><a class="headerlink" href="#auto" title="Permanent link">&para;</a></h2>
 <p>Auto mass detector recognizes if the spectrum is of profile or centroided data type and applies centroid or exact mass algorithms correspondingly.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:corinna.brungs@wwu.de'>corinnabrungs</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a>, <a href='mailto:tito.damiani93@gmail.com'>tdamiani</a></span></p>
 
 
 
@@ -7898,7 +7954,7 @@ The size of the window used to calculated the wavelet signal. When the size of t
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="September 17, 2026 07:17:22 UTC">September 17, 2026 07:17:22</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="October 26, 2026 12:26:52 UTC">October 26, 2026 12:26:52</span>
   </span>
 
     
@@ -7914,6 +7970,7 @@ The size of the window used to calculated the wavelet signal. When the size of t
     </span>
     <nav>
       
+        <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
         <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>, 
         <a href="mailto:corinna.brungs@wwu.de">corinnabrungs</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>, 
