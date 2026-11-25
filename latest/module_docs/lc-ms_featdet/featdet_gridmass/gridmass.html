@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -7760,7 +7760,7 @@
 </ul>
 <p>A putative trajectory of a probe is shown in the figure. All probes converging to the same feature provide an estimation of its <strong>boundaries</strong>. </p>
 <p>Consequently, different features represent different masses. </p>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> This procedure is highly sensitive and specific for smooth surfaces. However, given that in real chromatographic data a certain level of noise and artifacts are present, in MZmine additional criteria (such as possibility to choose time windows, additional smoothing, etc.) were implemented.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> This procedure is highly sensitive and specific for smooth surfaces. However, given that in real chromatographic data a certain level of noise and artifacts are present, in mzmine additional criteria (such as possibility to choose time windows, additional smoothing, etc.) were implemented.</p>
 <p>A summary of the algorithm is as follows:</p>
 <ol>
 <li>Ignore artifact spectra in time domain. In chromatography, it is typical to find a peak near the injection time, corresponding to metabolites that show no interaction with the column in the particular gradient. While this is not an artifact per se, given the myriad of signals present and the nature of the detector, the resulting peak is a strong source of artifacts that later affect analysis. To avoid this, the user may enter a list of time ranges to be ignored. The controlling parameter is ignore times whose format is time1-time2, time3-time4, … Alternatively, the user may crop these data before processing, for example using “Raw Data→Filtering→Data Set" and ignore setting this parameter. Therefore, this step is optional.</li>
@@ -7790,7 +7790,7 @@ combination rules.</p>
 <p>Ratio between features to be recognized as the same. This is highly useful to detect artifacts.</p>
 <h4 id="false-ignore-times"><strong>False+: Ignore times</strong><a class="headerlink" href="#false-ignore-times" title="Permanent link">&para;</a></h4>
 <p>Ranges of time to be ignored by the method. This can be avoided if the region is previously cleaned using the crop option. Format: timeA-timeB, timeC-timeD,...</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:jonas.luebke@mzio.io'>Jonas Lübke</a>, <a href='mailto:steffen.heuckeroth@mzio.io'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -7811,7 +7811,7 @@ combination rules.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="August 21, 2026 10:39:45 UTC">August 21, 2026 10:39:45</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 25, 2026 06:46:40 UTC">November 25, 2026 06:46:40</span>
   </span>
 
     
@@ -7827,6 +7827,7 @@ combination rules.</p>
     </span>
     <nav>
       
+        <a href="mailto:jonas.luebke@mzio.io">Jonas Lübke</a>, 
         <a href="mailto:steffen.heuckeroth@mzio.io">Steffen Heuckeroth</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
     </nav>

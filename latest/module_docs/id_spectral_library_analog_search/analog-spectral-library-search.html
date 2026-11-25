@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -8311,7 +8311,7 @@ library compounds across precursor mass shifts.</p>
 <h2 id="recommended-citations">Recommended citations<a class="headerlink" href="#recommended-citations" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>When using MZmine for your work, please consider citing:<br>
+<p>When using mzmine for your work, please consider citing:<br>
 Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry
 data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.</p>
 <p>When using MS2Deepscore, please also consider citing:<br>
@@ -8403,7 +8403,7 @@ a 100-signal threshold for intensity filtering, and 98% retained intensity.</p>
 dot product. Unlike the cosine algorithms, it does not restrict candidates by precursor mass during
 the main search. Direct precursor matches are skipped with a fixed tolerance of 15 ppm or 0.005 m/z.</p>
 <p>MS2 Deepscore is applicable to (IMS)-MS data with soft ionisation.</p>
-<p>For each stored MS2Deepscore analog match, MZmine also computes a modified-cosine fallback score
+<p>For each stored MS2Deepscore analog match, mzmine also computes a modified-cosine fallback score
 with the same 15 ppm or 0.005 m/z tolerance. This fallback score is used for mirror-plot style
 visualization, while the analog match list is sorted by the MS2Deepscore score.</p>
 <h4 id="ms2deepscore-model"><strong>MS2Deepscore model</strong><a class="headerlink" href="#ms2deepscore-model" title="Permanent link">&para;</a></h4>
@@ -8464,7 +8464,7 @@ the backing library entries together with selected feature rows in spectrum view
 <hr />
 <h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
 <ol>
-<li>MZmine loads imported library entries that contain precursor m/z values.</li>
+<li>mzmine loads imported library entries that contain precursor m/z values.</li>
 <li>Query fragment spectra are selected from each feature row according to the chosen algorithm.</li>
 <li>Direct precursor matches are skipped so the output focuses on analog candidates.</li>
 <li>The selected similarity algorithm scores each query-library pair.</li>
@@ -8473,7 +8473,7 @@ the backing library entries together with selected feature rows in spectrum view
 <li>Cosine results are sorted by cosine score. MS2Deepscore and DreaMS results are sorted by
    the ML score and also carry a modified-cosine fallback score for visualization.</li>
 </ol>
-<p><span class='git-page-authors git-authors'><a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
+<p><span class='git-page-authors git-authors'><a href='mailto:jonas.luebke@mzio.io'>Jonas Lübke</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a></span></p>
 
 
 
@@ -8494,7 +8494,7 @@ the backing library entries together with selected feature rows in spectrum view
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="May 31, 2026 17:26:29 UTC">May 31, 2026 17:26:29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 25, 2026 06:46:40 UTC">November 25, 2026 06:46:40</span>
   </span>
 
     
@@ -8505,11 +8505,12 @@ the backing library entries together with selected feature rows in spectrum view
   <span class="md-source-file__fact">
     <span class="md-icon" title="Contributors">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
       
     </span>
     <nav>
       
+        <a href="mailto:jonas.luebke@mzio.io">Jonas Lübke</a>, 
         <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>
     </nav>
   </span>

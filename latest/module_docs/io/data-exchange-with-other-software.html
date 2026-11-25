@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -8497,9 +8497,9 @@
 <h2 id="gnps-fbmniimn-export"><strong>GNPS-FBMN/IIMN export</strong><a class="headerlink" href="#gnps-fbmniimn-export" title="Permanent link">&para;</a></h2>
 <h3 id="description"><strong>Description</strong><a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span>  <strong>Feature list methods → Export feature lists → GNPS - feature based molecular networking</strong>.</p>
-<p>This module connects MZmine feature finding results to the <a href="https://gnps.ucsd.edu/">GNPS</a> workflows for <a href="https://ccms-ucsd.github.io/GNPSDocumentation/featurebasedmolecularnetworking/">Feature-based Molecular Networking (FBMN)</a> and <a href="https://ccms-ucsd.github.io/GNPSDocumentation/fbmn-iin">Ion Identity Molecular Networking (IIMN)</a>.</p>
+<p>This module connects mzmine feature finding results to the <a href="https://gnps.ucsd.edu/">GNPS</a> workflows for <a href="https://ccms-ucsd.github.io/GNPSDocumentation/featurebasedmolecularnetworking/">Feature-based Molecular Networking (FBMN)</a> and <a href="https://ccms-ucsd.github.io/GNPSDocumentation/fbmn-iin">Ion Identity Molecular Networking (IIMN)</a>.</p>
 <p><img alt="" src="gnps_export.png" /></p>
-<p>Using this module, the user can export the feature list needed for the manual submission to GNPS' feature based molecular networking (GNPS FBMN) or directly submit the job to the GNPS platform from MZmine. In both cases, two files are created:</p>
+<p>Using this module, the user can export the feature list needed for the manual submission to GNPS' feature based molecular networking (GNPS FBMN) or directly submit the job to the GNPS platform from mzmine. In both cases, two files are created:</p>
 <ol>
 <li>Quantification table (CSV file) which contains the features and their associated information (e.g., average m/z, retention time, and each feature's area or height).</li>
 <li>MS/MS spectral summary (.MGF file) which contains one representative MS/MS spectrum for each row in the feature list.</li>
@@ -8633,7 +8633,7 @@ easily uploaded into the <strong>Statistical Analysis</strong> tools of the <str
 <p>Prior to export, samples must be grouped by a sample metadata column that can be defined manually or better loaded from a metadata csv/tsv table file. (see <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12zM3 6h13v2H3zm0 7v-2h10v2zm0 5v-2h13v2z"/></svg></span> Project →  Sample metadata). Each group must contain at least 3 samples (raw data files).</p>
 </div>
 <h4 id="format-of-exported-csv-file"><strong>Format of exported CSV file</strong><a class="headerlink" href="#format-of-exported-csv-file" title="Permanent link">&para;</a></h4>
-<p>The exported file is formatted as shown below. Each feature is represented by its ID in the feature list, m/z value (formatted according to MZmine configuration), retention time value (formatted according to MZmine configuration), and the preferred identity (name).</p>
+<p>The exported file is formatted as shown below. Each feature is represented by its ID in the feature list, m/z value (formatted according to mzmine configuration), retention time value (formatted according to mzmine configuration), and the preferred identity (name).</p>
 <pre><code> "Sample","ko15","ko16","ko18","ko19","ko21","ko22","wt15","wt16","wt18","wt19","wt21","wt22"
  "Label","KO","KO","KO","KO","KO","KO","WT","WT","WT","WT","WT","WT"
  "1:258.110@13.4 (name1)",147887.53,451600.71,65290.38,56540.93,85146.33,162012.44,175177.08,82619.48,51951.61,69198.22,153273.47,98144.28
@@ -8653,8 +8653,8 @@ Please import sample metadata from csv/tsv files or define them manually.</p>
 <p><img alt="Metaboanalyst settings" src="metaboanalyst_settings.png" /></p>
 <p>For details about MetaboAnalyst functions and capabilities, please refer to their documentation.</p>
 <h2 id="tidymass"><strong>Tidymass</strong><a class="headerlink" href="#tidymass" title="Permanent link">&para;</a></h2>
-<p>Tidymass can import the csv feature table from MZmine, using <code>convert_mzmine2mass_dataset</code> function. For more details see <a href="https://www.tidymass.org/docs/chapter2/3-mass_dataset_other_tools/">Tidymass tutorial</a>.</p>
-<p><span class='git-page-authors git-authors'><a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:steffen.heuckeroth@gmx.de'>Steffen Heuckeroth</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
+<p>Tidymass can import the csv feature table from mzmine, using <code>convert_mzmine2mass_dataset</code> function. For more details see <a href="https://www.tidymass.org/docs/chapter2/3-mass_dataset_other_tools/">Tidymass tutorial</a>.</p>
+<p><span class='git-page-authors git-authors'><a href='mailto:jonas.luebke@mzio.io'>Jonas Lübke</a>, <a href='mailto:rschmid1789@gmail.com'>Robin Schmid</a>, <a href='mailto:mokshinaelena@ukr.net'>omokshyna</a></span></p>
 
 
 
@@ -8675,7 +8675,7 @@ Please import sample metadata from csv/tsv files or define them manually.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 25, 2025 10:29:24 UTC">November 25, 2025 10:29:24</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="November 25, 2026 06:46:40 UTC">November 25, 2026 06:46:40</span>
   </span>
 
     
@@ -8691,8 +8691,8 @@ Please import sample metadata from csv/tsv files or define them manually.</p>
     </span>
     <nav>
       
+        <a href="mailto:jonas.luebke@mzio.io">Jonas Lübke</a>, 
         <a href="mailto:rschmid1789@gmail.com">Robin Schmid</a>, 
-        <a href="mailto:steffen.heuckeroth@gmx.de">Steffen Heuckeroth</a>, 
         <a href="mailto:mokshinaelena@ukr.net">omokshyna</a>
     </nav>
   </span>
