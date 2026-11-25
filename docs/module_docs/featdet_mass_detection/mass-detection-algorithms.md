@@ -6,6 +6,7 @@ Mass detection can be done with the following six algorithms:
 - Centroid 
 - Exact mass
 - Local maxima
+- [Adaptive local maximum](adaptive-local-max.md)
 - Recursive threshold
 - Wavelet transform
 - Auto
@@ -108,6 +109,14 @@ intensities.
 
 5. **Output intensity** — Reported as peak height or valley-to-valley area depending on the
    **Intensity calculation** setting.
+
+## **Adaptive local maximum**
+
+:material-lightbulb: This mass detector is suitable for profile (continuous) MS data.
+
+Same peak detection as **Local maxima**, but asymmetric and detector-saturated peaks get a fitted
+apex m/z instead of the weighted centroid. See
+[Adaptive local maximum mass detector](adaptive-local-max.md).
 
 ## **Recursive threshold**
 

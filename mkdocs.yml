@@ -57,6 +57,7 @@ nav:
       - Mass detection:
           - Mass detection: module_docs/featdet_mass_detection/mass-detection.md
           - Mass detection algorithms: module_docs/featdet_mass_detection/mass-detection-algorithms.md
+          - Adaptive local maximum: module_docs/featdet_mass_detection/adaptive-local-max.md
           - FTMS shoulder peak finder: module_docs/featdet_mass_detection/FTMS-shoulder-peak-filter.md
           - Mass calibration: module_docs/featdet_mass_detection/mass-calibration.md
       - LC-MS feature detection:
