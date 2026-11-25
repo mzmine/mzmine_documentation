@@ -10,9 +10,9 @@ Detailed coding tutorials by Robin Schmid:
 
 ## **1. Define the role and functionality of your module**
 
-Each module in mzmine belongs to some module category (see [MZmine architecture](general_structure.md)). Before starting, try to define category, to which your module will belong - raw data processing, feature detection, visualization, etc.
+Each module in mzmine belongs to some module category (see [mzmine architecture](general_structure.md)). Before starting, try to define category, to which your module will belong - raw data processing, feature detection, visualization, etc.
 
-A good idea is to browse already existing modules. Currently, MZmine contains more than 100 modules, so there are high chances that one of the existing modules may carry similar functionality to the one you want to code. This can help you to create your own module. Assess the scale of the added functionality and how the new module can be integrated with the existing ones.
+A good idea is to browse already existing modules. Currently, mzmine contains more than 100 modules, so there are high chances that one of the existing modules may carry similar functionality to the one you want to code. This can help you to create your own module. Assess the scale of the added functionality and how the new module can be integrated with the existing ones.
 For example, if you'd like to add a new filter for the feature list rows, the best option might be not to create a new module but to add the new option as a parameter to the already existing Feature list rows filter.
 
 ## **2. Create a new branch locally for your changes**
@@ -80,7 +80,7 @@ Prepare a description for your module that will go into the documentation. Creat
 
 ## **12. Push to the remote branch and create a pull request**
 
-After you coded and tested your module, you can push your changes to the remote branch and create a pull request. After your pull request will be reviewed by one of the main contributors. There might be some comments that you'll have to address. After that, your module will be merged into the master branch and become a part of MZmine!
+After you coded and tested your module, you can push your changes to the remote branch and create a pull request. After your pull request will be reviewed by one of the main contributors. There might be some comments that you'll have to address. After that, your module will be merged into the master branch and become a part of mzmine!
 
 [//]: # (TODO Add more details here)
 

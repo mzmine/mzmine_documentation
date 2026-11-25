@@ -8,11 +8,11 @@
 
 :material-menu-open:  **Feature list methods → Export feature lists → GNPS - feature based molecular networking**.
 
-This module connects MZmine feature finding results to the [GNPS](https://gnps.ucsd.edu/) workflows for [Feature-based Molecular Networking (FBMN)](https://ccms-ucsd.github.io/GNPSDocumentation/featurebasedmolecularnetworking/) and [Ion Identity Molecular Networking (IIMN)](https://ccms-ucsd.github.io/GNPSDocumentation/fbmn-iin).
+This module connects mzmine feature finding results to the [GNPS](https://gnps.ucsd.edu/) workflows for [Feature-based Molecular Networking (FBMN)](https://ccms-ucsd.github.io/GNPSDocumentation/featurebasedmolecularnetworking/) and [Ion Identity Molecular Networking (IIMN)](https://ccms-ucsd.github.io/GNPSDocumentation/fbmn-iin).
 
 ![](gnps_export.png)
 
-Using this module, the user can export the feature list needed for the manual submission to GNPS' feature based molecular networking (GNPS FBMN) or directly submit the job to the GNPS platform from MZmine. In both cases, two files are created:
+Using this module, the user can export the feature list needed for the manual submission to GNPS' feature based molecular networking (GNPS FBMN) or directly submit the job to the GNPS platform from mzmine. In both cases, two files are created:
 
 1. Quantification table (CSV file) which contains the features and their associated information (e.g., average m/z, retention time, and each feature's area or height).
 2. MS/MS spectral summary (.MGF file) which contains one representative MS/MS spectrum for each row in the feature list.
@@ -201,7 +201,7 @@ easily uploaded into the **Statistical Analysis** tools of the **MetaboAnalyst**
 
 #### **Format of exported CSV file**
 
-The exported file is formatted as shown below. Each feature is represented by its ID in the feature list, m/z value (formatted according to MZmine configuration), retention time value (formatted according to MZmine configuration), and the preferred identity (name).
+The exported file is formatted as shown below. Each feature is represented by its ID in the feature list, m/z value (formatted according to mzmine configuration), retention time value (formatted according to mzmine configuration), and the preferred identity (name).
 
      "Sample","ko15","ko16","ko18","ko19","ko21","ko22","wt15","wt16","wt18","wt19","wt21","wt22"
      "Label","KO","KO","KO","KO","KO","KO","WT","WT","WT","WT","WT","WT"
@@ -233,6 +233,6 @@ For details about MetaboAnalyst functions and capabilities, please refer to thei
 
 ## **Tidymass**
 
-Tidymass can import the csv feature table from MZmine, using `convert_mzmine2mass_dataset` function. For more details see [Tidymass tutorial](https://www.tidymass.org/docs/chapter2/3-mass_dataset_other_tools/).
+Tidymass can import the csv feature table from mzmine, using `convert_mzmine2mass_dataset` function. For more details see [Tidymass tutorial](https://www.tidymass.org/docs/chapter2/3-mass_dataset_other_tools/).
 
 {{ git_page_authors }}

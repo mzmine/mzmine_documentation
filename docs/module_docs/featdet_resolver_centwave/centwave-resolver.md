@@ -17,7 +17,7 @@ The Wavelets detector employs **Bioconductor's XCMS package for R** [[2]](#refer
     source("http://bioconductor.org/biocLite.R")
     biocLite("xcms")
 
-To run R from MZmine the Rserve package [[3]](#references) must be installed in R, so also run the following R command:
+To run R from mzmine the Rserve package [[3]](#references) must be installed in R, so also run the following R command:
 
     install.packages("Rserve")
 

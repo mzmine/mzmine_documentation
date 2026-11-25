@@ -124,7 +124,7 @@ This module can support two different matching strategies:
 
 * **Universal Calibrant Library (UCL)** include a collection of ions often found in mass spectrometry experiments. The module has two different lists in positive (+ve) and negative (-ve) ionization modes to be chosen by the user.
 
-    Universal calibrant lists are based on ***Keller et al. 2008 Analytica Chimica Acta 627:71-81*** and ***Hawkes et al. 2020 Limnology and Oceanography Methods 18:235-258***. MZmine includes both those libraries.
+    Universal calibrant lists are based on ***Keller et al. 2008 Analytica Chimica Acta 627:71-81*** and ***Hawkes et al. 2020 Limnology and Oceanography Methods 18:235-258***. mzmine includes both those libraries.
 
     Matching of detected ions against the UCL library is performed using m/z values alone independently where the ions are appearing along the chromatography and only m/z error tolerance will be needed.
 

@@ -7,7 +7,7 @@ again. This is a known issue and might be fixed in future JavaFX versions.
 
 ## mzmine does not start
 
-Maybe the MZmine configuration got corrupted (broke). Delete it and reinstall MZmine. The *
+Maybe the mzmine configuration got corrupted (broke). Delete it and reinstall mzmine. The *
 *.mzmine.conf** file can be found in the user folder and might be hidden. On Windows, activate "
 Show hidden items" in the Explorer/View menu.
 
@@ -15,7 +15,7 @@ Show hidden items" in the Explorer/View menu.
 
 An illegal character might exist in the mzML file. When converting the raw data files to mzML, the
 path of the file is added to the resulting mzML file. The path may contain characters that are not
-parsed correctly by MZmine.
+parsed correctly by mzmine.
 
 Solution: Reconvert the file and place the input and output directory to a path with only Roman
 characters.
@@ -53,7 +53,7 @@ that this is just a warning.
 
 ## Reporting issues
 
-Report issues on the [MZmine GitHub](https://github.com/mzmine/mzmine3/issues), providing all
+Report issues on the [mzmine GitHub](https://github.com/mzmine/mzmine3/issues), providing all
 information to reproduce the issue.
 
 **This might include**

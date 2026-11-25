@@ -2,7 +2,7 @@
 
 Besides the interactive [GUI](../../main-window-overview.md), mzmine allows the user to run processing workflows in an 
 automated manner using the "batch mode". Entire processing pipelines (including data import/export) 
-can be run with few clicks, or even through the command-line application. This makes MZmine suitable
+can be run with few clicks, or even through the command-line application. This makes mzmine suitable
 to be integrated into automated data analysis pipelines (e.g., QC systems).
 
 Batch files (XML format) are essentially lists of tasks run by mzmine one after another. Any of the 

@@ -35,7 +35,7 @@ and compound identifiers separate from regular spectral-library annotations.
 
 !!! info
 
-    When using MZmine for your work, please consider citing:<br>
+    When using mzmine for your work, please consider citing:<br>
     Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry
     data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.
 
@@ -180,7 +180,7 @@ the main search. Direct precursor matches are skipped with a fixed tolerance of 
 
 MS2 Deepscore is applicable to (IMS)-MS data with soft ionisation.
 
-For each stored MS2Deepscore analog match, MZmine also computes a modified-cosine fallback score
+For each stored MS2Deepscore analog match, mzmine also computes a modified-cosine fallback score
 with the same 15 ppm or 0.005 m/z tolerance. This fallback score is used for mirror-plot style
 visualization, while the analog match list is sorted by the MS2Deepscore score.
 
@@ -271,7 +271,7 @@ the backing library entries together with selected feature rows in spectrum view
 
 ## Algorithm {#algorithm}
 
-1. MZmine loads imported library entries that contain precursor m/z values.
+1. mzmine loads imported library entries that contain precursor m/z values.
 2. Query fragment spectra are selected from each feature row according to the chosen algorithm.
 3. Direct precursor matches are skipped so the output focuses on analog candidates.
 4. The selected similarity algorithm scores each query-library pair.

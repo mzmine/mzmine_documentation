@@ -24,7 +24,7 @@ A putative trajectory of a probe is shown in the figure. All probes converging t
 
 Consequently, different features represent different masses. 
 
-:material-lightbulb: This procedure is highly sensitive and specific for smooth surfaces. However, given that in real chromatographic data a certain level of noise and artifacts are present, in MZmine additional criteria (such as possibility to choose time windows, additional smoothing, etc.) were implemented.
+:material-lightbulb: This procedure is highly sensitive and specific for smooth surfaces. However, given that in real chromatographic data a certain level of noise and artifacts are present, in mzmine additional criteria (such as possibility to choose time windows, additional smoothing, etc.) were implemented.
 
 A summary of the algorithm is as follows:
 

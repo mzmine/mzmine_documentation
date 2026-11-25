@@ -45,7 +45,7 @@
 
 ## Code formatter
 
-The code formatter is important for contributions to the main version of MZmine and each java file
+The code formatter is important for contributions to the main version of mzmine and each java file
 should contain the license header.
 
 1. Import the style format from `mzmine-intellij-code-formater.xml`

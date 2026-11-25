@@ -6,7 +6,7 @@
 
 This module merges mobility scans in each **single ion mobility data file** at the same retention time to a summed frame spectrum.
 
-The merged frame spectrum is used if a *.mzML file is imported. The merged frame spectrum is required to gain access to MZmine's LC-MS
+The merged frame spectrum is used if a *.mzML file is imported. The merged frame spectrum is required to gain access to mzmine's LC-MS
 functionality. 
 
 :material-exclamation-thick: This step uses the centroided and thresholded data produced by

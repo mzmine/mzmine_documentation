@@ -8,7 +8,7 @@ This module can scan acquired MS-Data for an isotope pattern of a specified **el
 
 The isotope pattern of this element combination will be calculated and compared to your MS-Data. The result is a new feature list containing just the isotope features. The features will have an **isotope rating**, comparing the found features to the calculated isotope pattern giving the user the option to manually evaluate the results. 
 
-Additionally, the features will also be assigned to an isotope combination. Furthermore, the isotope features will be registered as an isotope pattern in MZmine so modules like Sum formula prediction can use the results to compare them to the calculated isotope pattern of predicted sum formulas.
+Additionally, the features will also be assigned to an isotope combination. Furthermore, the isotope features will be registered as an isotope pattern in mzmine so modules like Sum formula prediction can use the results to compare them to the calculated isotope pattern of predicted sum formulas.
 
 In the resulting feature table, the monoisotopic mass (lowest) will be referred to as "Parent".
 

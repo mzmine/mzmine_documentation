@@ -6,7 +6,7 @@ The modules described in this section can be found in :material-menu-open:  **Fe
 
 Accurate determination of CCS values requires a valid CCS calibration and molecule charge states to be detected. A CCS calibration can be either imported or created from internal reference.
 
-- **timsTOF** raw data can be recalibrated using data analysis and imported in MZmine. The
+- **timsTOF** raw data can be recalibrated using data analysis and imported in mzmine. The
   recalibrated data will be used by default. (see [Calculating CCS values](#calculating-ccs-values))
 - **mzML** raw data requires the determination of a calibration function from the raw data (e.g. as
   detected features) or as import from an external file. (see 
