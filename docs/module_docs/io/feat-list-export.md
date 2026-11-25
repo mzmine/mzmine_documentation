@@ -40,7 +40,7 @@ Allows user to export only those rows that have associated MS/MS data or are ann
 
 This module is a legacy module from MZmine2 and, similarly to the previously described module,
 exports the contents of the feature list(s) into a csv file, which can later be processed by MS
-Excel or other tools. The produced CSV files cannot be imported back to MZmine. Missing values such
+Excel or other tools. The produced CSV files cannot be imported back to mzmine. Missing values such
 as heights and areas of undetected features are exported as 0.
 
 ### **Parameters**
@@ -179,7 +179,7 @@ If selected, the features with unknown identity will also be exported to the mzT
 :material-menu-open: **Feature list methods → Export feature list → SQL database**
 
 This module allows direct export of the feature lists into MySQL or PostgreSQL database servers. If
-you would like to use another database then please add its JDBC driver (jar file) to the MZmine lib/
+you would like to use another database then please add its JDBC driver (jar file) to the mzmine lib/
 folder.
 
 ### **Parameters**
@@ -200,7 +200,7 @@ Name of the table, into which data will be exported.
 
 #### **Export columns**
 
-The mapping between the database table columns (“Table column”) and MZmine data types (“Export data
+The mapping between the database table columns (“Table column”) and mzmine data types (“Export data
 type”). For some data types an additional value (“Export value”) must be specified, such as for the
 “Constant value” type.
 

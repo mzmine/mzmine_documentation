@@ -41,7 +41,7 @@ For more information, see _Fundamentals of Traveling Wave Ion Mobility Spectrome
 
 Altough mainly used for TIMS, the term **"accumulation"** refers to the pack of ions gathered at the head of the IM device prior to the release and separation in the IM cell. 
 
-As explained [above](#background), since the accumulation-separation cycle typically last ~100 ms, multiple MS spectra (referred to as **"mobility scans"** in MZmine) are acquired during each cycle. 
+As explained [above](#background), since the accumulation-separation cycle typically last ~100 ms, multiple MS spectra (referred to as **"mobility scans"** in mzmine) are acquired during each cycle.
 
 **Frame** is the set of **mobility scans** collected during each IM separation. A frame can be seen as the IM separation of a single accumulation, along which multiple MS spectra are collected. Several frames are contained within one LC peak. Thus, the **frame number** are a natural unit to measure chromatographic RT. 
 

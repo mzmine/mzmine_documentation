@@ -9,7 +9,7 @@ the [GNPS](https://ccms-ucsd.github.io/GNPSDocumentation/) staff. We highly appr
 - SIRIUS
 
 
-## Libraries we use in MZmine
+## Libraries we use in mzmine
 <!-- markdown-link-check-disable -->
 - [Apache XML Graphics](https://xmlgraphics.apache.org/commons/) - EPS image export
 - [Chemistry Development Kit](http://cdk.sourceforge.net) - Isotope pattern and molecular calculations

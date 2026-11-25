@@ -57,7 +57,7 @@ where $d$ is the chosen metric.
 
 ![Linkage methods](linkage-methods.png)
 
-### **MZmine GC: Specific considerations**
+### **mzmine GC: Specific considerations**
 
 To obtain a **distance matrix** between all pairs of observations:
 

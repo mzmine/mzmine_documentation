@@ -9,7 +9,7 @@ or, for one annotated feature row:
 :material-menu-open: right-click a row in the feature table and choose **Identification -> Compute transformation products (BioTransformer 3)**
 
 The BioTransformer 3.0 module predicts possible transformation products for compounds that are
-already annotated with a structure. MZmine sends the educt SMILES string to an external
+already annotated with a structure. mzmine sends the educt SMILES string to an external
 BioTransformer 3 `.jar`, imports the generated CSV file, calculates product ions from the selected
 ion library, and adds matching products as compound annotations to feature list rows.
 
@@ -20,11 +20,11 @@ products in the same feature list.
 
 !!! warning
 
-    BioTransformer 3.0 is not bundled with MZmine. Download the BioTransformer `.jar` from the
+    BioTransformer 3.0 is not bundled with mzmine. Download the BioTransformer `.jar` from the
     [BioTransformer 3.0 jar downloads](https://bitbucket.org/wishartlab/biotransformer3.0jar/downloads/)
     or the [BioTransformer download page](https://biotransformer.ca/download), and keep the
-    extracted BioTransformer files together in one folder. MZmine runs the selected jar via
-    `java -jar`, so the `java` command must be available to MZmine.
+    extracted BioTransformer files together in one folder. mzmine runs the selected jar via
+    `java -jar`, so the `java` command must be available to mzmine.
 
 !!! tip
 
@@ -36,7 +36,7 @@ products in the same feature list.
 
 !!! info
 
-    When using MZmine for your work, please consider citing:<br>
+    When using mzmine for your work, please consider citing:<br>
     Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry
     data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.
 
@@ -89,7 +89,7 @@ Maximum m/z difference for matching predicted product ions to feature list rows.
 #### **Ion library**
 
 Ion types used to calculate product m/z values from the predicted neutral products. The default is
-the MZmine main ion library for both positive and negative polarity.
+the mzmine main ion library for both positive and negative polarity.
 
 #### **Filter parameters** _(Optional)_
 
@@ -135,7 +135,7 @@ Extra matching and annotation-ranking options.
 
 ### Selecting educts
 
-In the full feature-list workflow, MZmine scans the selected feature list and looks for rows that
+In the full feature-list workflow, mzmine scans the selected feature list and looks for rows that
 pass the optional educt filters and contain a usable SMILES structure. The selected annotation is:
 
 1. the first spectral library match, if the SMILES source allows spectral library annotations and
@@ -146,7 +146,7 @@ pass the optional educt filters and contain a usable SMILES structure. The selec
 Rows without a usable structure are skipped. Identical canonical SMILES strings are predicted only
 once per feature list.
 
-In the single-row workflow, MZmine uses the selected row's first spectral library match with a
+In the single-row workflow, mzmine uses the selected row's first spectral library match with a
 structure, or the first compound database annotation with a structure if no spectral library match
 is available.
 
@@ -157,14 +157,14 @@ is available.
 
 ### Running BioTransformer
 
-For each selected educt SMILES, MZmine creates a temporary CSV file and runs BioTransformer in
+For each selected educt SMILES, mzmine creates a temporary CSV file and runs BioTransformer in
 prediction mode:
 
 ```text
 java -jar BioTransformer3.0.jar -k pred -b <transformation type> -s <iterations> -ismi <SMILES> -ocsv <temporary CSV>
 ```
 
-The BioTransformer result CSV is imported as compound database annotations. MZmine reads the
+The BioTransformer result CSV is imported as compound database annotations. mzmine reads the
 product formula, SMILES, InChI, InChIKey, reaction, enzyme information, ALogP, and metabolite ID
 columns when present. Product names are prefixed with the educt compound name.
 

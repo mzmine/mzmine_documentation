@@ -1,11 +1,11 @@
-# MZmine module overview
+# mzmine module overview
 
-## List of MZmine modules
+## List of mzmine modules
 
-List of MZmine modules extracted on: 2022/12/01
+List of mzmine modules extracted on: 2022/12/01
 
 Please note that some contributors might not be correctly reflected due to reformatting and
-refactoring. Use git-blame at the [MZmine code repository](https://github.com/mzmine/mzmine3) for a
+refactoring. Use git-blame at the [mzmine code repository](https://github.com/mzmine/mzmine3) for a
 more detailed insight.
 
 | name                                                       | description                                                                                                                                                                                                                                                                                                                                            | main class         | sub class                  | contributors                                                                                                                         | path                                                                                                                                               |

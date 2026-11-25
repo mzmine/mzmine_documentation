@@ -123,7 +123,7 @@ _Optional parameter_
 
 If selected, only results that fit the required isotope pattern similarity score will be returned. 
 
-Several modules in MZmine offer the option the compare the isotope patterns of peaks and assign a score (percentage) of similarity to them. 
+Several modules in mzmine offer the option the compare the isotope patterns of peaks and assign a score (percentage) of similarity to them.
 
 Until MZmine version 2.2, the CDK (Chemistry Development Kit) library was used to perform this operation. An improved algorithm, introduced in MZmine 3, is described below. The **similarity of two isotope patterns** is determined as follows:
 

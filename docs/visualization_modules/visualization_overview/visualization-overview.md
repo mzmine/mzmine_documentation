@@ -1,6 +1,6 @@
 # **Visualization modules**
 
- MZmine provides a rangle of interactive visualization tools for analysis of raw and processed data. JFreeChart library is used for majority of plots. Most of the generated plots are interactive.
+ mzmine provides a rangle of interactive visualization tools for analysis of raw and processed data. JFreeChart library is used for majority of plots. Most of the generated plots are interactive.
 
 The following **functions** are available:
 

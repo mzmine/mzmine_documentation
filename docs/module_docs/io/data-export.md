@@ -4,7 +4,7 @@
 
 :material-menu-open: **Export scans - Spectra/mass list to mgf, txt, msp and mzML export**
 
-This module exports scans or mass lists. MZmine allows several types of data export:
+This module exports scans or mass lists. mzmine allows several types of data export:
 
 - to *.mzML,
 - to *.netCDF,

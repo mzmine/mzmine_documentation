@@ -73,7 +73,7 @@ The `latest` version is published automatically by the **Auto Deploy** workflow 
 `mike serve` only reads the local `gh-pages` branch and never pushes. Do not run
 `mkdocs gh-deploy`, it would replace the whole versioned site with a single unversioned build.
 
-## Contribute to the MZmine documentation
+## Contribute to the mzmine documentation
 
 **1. Make a GitHub Account**
 
