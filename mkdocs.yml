@@ -186,6 +186,7 @@ nav:
           - Additional tools: visualization_modules/processed_additional/processed_additional.md
       - Massvoltammogram: visualization_modules/massvoltammogram/massvoltammogram.md
       - Statistics dashboard: visualization_modules/statistics_dashboard/statistics_dashboard.md
+      - Integration dashboard: visualization_modules/integration_dashboard/integration_dashboard.md
       - Multi detector visualizer: module_docs/uv/uv_multi_detector_visualizer/uv_multi_detector_visualizer.md
       - Correlation dashboard: module_docs/uv/uv_correlation_dashboard/uv_correlation_dashboard.md
 

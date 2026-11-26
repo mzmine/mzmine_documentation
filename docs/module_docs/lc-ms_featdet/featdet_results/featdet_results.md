@@ -164,7 +164,7 @@ Enter the following query to match specific lipid matches:
 
 !!! tip
 
-    Manual integration was moved to the Integration dashboard that can be opened from the 
+    Manual integration was moved to the [Integration dashboard](../../../visualization_modules/integration_dashboard/integration_dashboard.md) that can be opened from the 
     quick module access (CTRL + F or hit double shift). The integration dashboard can also 
     be opened by right click on a feature list and then **Integration dashboard**.
 
