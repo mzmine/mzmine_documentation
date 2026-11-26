@@ -11,8 +11,8 @@ The dashboard can be opened in several ways:
 
 - Right click on a feature list in the main window → **Show integration dashboard**.
 - **Visualization → Feature list → Dashboards → Integration dashboard**.
-- From the quick module access (++ctrl+f++ or double ++shift++), searching for _Integration
-  dashboard_.
+- From the quick module access (++ctrl+f++ / ++cmd+f++ or double ++shift++), searching for
+  _Integration dashboard_.
 
 The dashboard opens for one feature list. There is no parameter dialog; when opened from the menu,
 the feature list selected in the main window is used.
@@ -23,16 +23,21 @@ the feature list selected in the main window is used.
     processing modules, the dashboard does not create a new feature list. If you want to keep the
     original integration, duplicate the feature list or save the project before you start.
 
-## Recommended citations
-
-!!! info
-
-    When using mzmine for your work, please consider citing:<br>
-    Schmid R., Heuckeroth S., Korf A., et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3, Nature Biotechnology (2023), doi:10.1038/s41587-023-01690-2.
-
 ---
 
 ## Layout
+
+![Integration dashboard overview](integration_dashboard_overview.png)
+
+1. Number of columns and rows of the plot grid
+2. Page navigation through the raw data files
+3. Display options of the plots
+4. Chromatogram plot of one raw data file, with the file name as title
+5. Integration buttons of this plot (see [Manual integration](#manual-integration))
+6. Feature table, select a row to show its chromatograms
+7. Synchronize integration across files
+8. Sort order of the plots
+9. Apply the smoothing of the feature list to the chromatograms
 
 The dashboard is split into two parts:
 
@@ -115,13 +120,19 @@ option to integrate on the same type of data as the automatic feature detection.
 Each plot has its own integration controls. In the dashboard, the buttons only show icons; hover
 over a button to see its name.
 
-| Button             | Shortcut                       | Description                                                                 |
-|--------------------|--------------------------------|-----------------------------------------------------------------------------|
-| **Set left**       | ++ctrl++ + left click          | Sets the left boundary (start retention time) of the integration.          |
-| **Set right**      | ++ctrl+shift++ + left click    | Sets the right boundary (end retention time) of the integration.           |
-| **Finish feature** | ++alt++ + left click           | Integrates the chromatogram between the boundaries and saves the feature.  |
-| **Abort feature**  |                                | Discards the current boundaries without changing the feature.              |
-| **Edit feature**   |                                | Loads the boundaries of the selected feature so they can be adjusted.      |
+![Integration buttons](integration_dashboard_buttons.png)
+
+| Button                                             | Windows / Linux                    | macOS                                     | Description                                                                |
+|----------------------------------------------------|------------------------------------|-------------------------------------------|----------------------------------------------------------------------------|
+| :material-arrow-left: **Set left**                 | ++ctrl++ + left click              | ++ctrl++ (⌃) + click                      | Sets the left boundary (start retention time) of the integration.          |
+| :material-arrow-right: **Set right**               | ++ctrl+shift++ + left click        | ++ctrl+shift++ (⌃⇧) + click               | Sets the right boundary (end retention time) of the integration.           |
+| :material-check-circle-outline: **Finish feature** | ++alt++ + left click               | ++option++ (⌥) + click                    | Integrates the chromatogram between the boundaries and saves the feature.  |
+| :material-close-circle-outline: **Abort feature**  |                                    |                                           | Discards the current boundaries without changing the feature.              |
+| :material-pencil-box-outline: **Edit feature**     |                                    |                                           | Loads the boundaries of the selected feature so they can be adjusted.      |
+
+!!! note "macOS"
+
+    On macOS, the integration shortcuts use the **Control** key (⌃), not the Command key (⌘).
 
 After pressing **Set left** or **Set right**, a regular left click in the plot sets the respective
 boundary. The keyboard shortcuts set the boundaries directly without pressing a button first. To
